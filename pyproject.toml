@@ -3,19 +3,25 @@ name = "cafe-recomendation"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "east-right",email = "wkfl1125@naver.com"}
+    {name = "east-right", email = "wkfl1125@naver.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10" # 💡 집(3.10)과 회사(3.11)를 모두 품을 수 있는 조건
 dependencies = [
-    "pandas (>=3.0.3,<4.0.0)",
-    "requests (>=2.34.2,<3.0.0)",
-    "python-dotenv (>=1.2.2,<2.0.0)"
+    "pandas>=2.2.3,<3.0.0",  # 💡 3.10과 3.11 양쪽에서 모두 잘 돌아가는 황금 버전 범위
+    "requests>=2.34.2,<3.0.0",
+    "python-dotenv>=1.2.2,<2.0.0",
+    "selenium (>=4.44.0,<5.0.0)",
+    "webdriver-manager (>=4.1.1,<5.0.0)",
+    "undetected-chromedriver (>=3.5.5,<4.0.0)"
 ]
 
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^7.2.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-package-mode = false
