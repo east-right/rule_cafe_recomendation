@@ -1,0 +1,25 @@
+[project]
+name = "cafe-recomendation"
+version = "0.1.0"
+description = "카페 추천 시스템 프로젝트"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "east-right", email = "wkfl1125@naver.com"}
+]
+dependencies = [
+    "pandas>=2.2.3,<3.0.0",
+    "requests>=2.34.2,<3.0.0",
+    "python-dotenv>=1.2.2,<2.0.0",
+    "selenium>=4.44.0,<5.0.0",
+    "webdriver-manager>=4.1.1,<5.0.0",
+    "undetected-chromedriver>=3.5.5,<4.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+]
+
+[tool.uv]
+package = false
