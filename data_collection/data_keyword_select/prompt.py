@@ -10,3 +10,26 @@ Rules:
  
 Output format:
 ["question1", "question2", "question3"]"""
+
+RULE_GENERATION_SYSTEM_PROMPT = """You are an expert that generates cafe recommendation rule metadata.
+ 
+Given a Korean cafe recommendation question, seed keywords, and available keywords by type,
+generate a JSON object with exactly 3 fields.
+ 
+Rules:
+1. title: Short Korean label for this rule (2-6 chars, e.g. "공부", "데이트", "반려동물")
+2. description: 1-2 Korean sentences describing what kind of cafe this rule targets. Used for semantic search.
+3. keywords: List of keywords selected ONLY from the provided available keywords.
+   - Must include all seed keywords
+   - Add other relevant keywords from the available list
+   - 3 to 8 keywords total
+   - Do NOT invent keywords not in the list
+ 
+Output ONLY valid JSON. No other text.
+ 
+Example output:
+{
+  "title": "공부",
+  "description": "조용하고 집중하기 좋은 환경을 원하는 카공족을 위한 카페를 추천합니다.",
+  "keywords": ["조용한 카페", "콘센트_잘 구비되어있다", "카공", "한적한 분위기"]
+}"""
