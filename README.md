@@ -14,17 +14,15 @@
 ---
 
 ## 2. 현 상황 아키텍처
-<img width="778" height="892" alt="soar 아키텍처 현황" src="https://github.com/user-attachments/assets/1d146415-7ddb-42d8-8e26-d3a6896af052" />
+<img width="1424" height="564" alt="image" src="https://github.com/user-attachments/assets/f18c3301-787f-4d8f-87a7-68f7fc12daa8" />
 
-1. 질문이 들어오면 `select_keyword`에서 질문과 관련이 높은 키워드 선택
-2. 선택된 키워드에 해당하는 soar 추천 rule 선택
-
-   2.1 만약 키워드에 해당하는 rule이 존재하지 않으면 LLM을 활용하여 새로운 rule 생성
-4. rule을 사용한 추천 결과가 하나가 아니라면(교착 상태)면 LLM을 활용하여 추가적인 rule 생성
-5. 추천 결과가 반환이 되었을 때 최종 result에 카페명 저장
-
-   4.1. 만약 result에 저장된 결과가 2개가 아니라면 추천된 매장 제외 재추천 실행
-7. 추천 매장이 두 개면 종료
+1. 질문이 들어오면 유효성 검증
+2. 키워드 선택 sLLM에게 Rule 선택 요청
+  - 모든 룰을 제시하기 보단 Rag를 활용하여 관련성 높은 Rule만 제시
+  - 만약 선택이 가능한 Rule이 없다면 LLM을 활용하여 신규 룰 생성
+3. Soar를 활용하여 Rule-base 추천을 진행
+   - 교착상태(Impass)에 들어가면 LLM을 활용하여 추가 룰 업데이트
+4. 최종 선택된 매장의 정보를 활용하여 최종 추천 답변 생성
 ---
 
 ## 3. 고도화 목표(기술 스택)
@@ -33,7 +31,7 @@
 
    1.1. 매장의 정보를 요약한 데이터 베이스 구축(mysql, postgreSQL)
 
-   1.2. opensearch를 사용한 최종 답변 rag 시스템 구축(opensearch, bm25, bgem3)
+   1.2. opensearch를 사용한 rag 시스템 구축(opensearch, bm25, bgem3)
 3. 멀티턴 시스템 구축
 
    2.1. Redis를 활용하여 각 세션별 대화 내용 캐싱(Redis)
@@ -54,5 +52,6 @@
 9. MVP 데모 화면 구축(strimlit, React(선택 확률 낮음))
 ---
 ## 4. WBS																													
-<img width="1452" height="301" alt="image" src="https://github.com/user-attachments/assets/e3b08238-678b-4df7-af2b-a1052f229cb6" />
+<img width="1450" height="463" alt="image" src="https://github.com/user-attachments/assets/729b771a-2159-4cff-ab3f-8d48c3092b5f" />
+
 
