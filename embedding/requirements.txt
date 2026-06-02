@@ -1,0 +1,6 @@
+FlagEmbedding
+accelerate
+huggingface_hub
+sentencepiece
+numpy
+transformers==4.45.0
