@@ -33,3 +33,12 @@ Example output:
   "description": "조용하고 집중하기 좋은 환경을 원하는 카공족을 위한 카페를 추천합니다.",
   "keywords": ["조용한 카페", "콘센트_잘 구비되어있다", "카공", "한적한 분위기"]
 }"""
+
+MULTI_RULE_DESCRIPTION_PROMPT = """You are an expert at writing Korean cafe recommendation rule descriptions.
+ 
+Given a question and combined keywords from multiple rule categories, write a short 1-2 sentence Korean description that captures the combined intent.
+ 
+Rules:
+1. Description should reflect ALL the combined conditions
+2. Write in natural Korean
+3. Output ONLY the description text, nothing else"""
