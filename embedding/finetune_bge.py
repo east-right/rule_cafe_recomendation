@@ -13,6 +13,7 @@ import os
 import random
 from pathlib import Path
 from dotenv import load_dotenv
+from sklearn.model_selection import train_test_split
 from FlagEmbedding.finetune.embedder.encoder_only.base import (
     EncoderOnlyEmbedderRunner,
     EncoderOnlyEmbedderDataArguments,
@@ -48,27 +49,35 @@ SEED         = 42
 # ──────────────────────────────────────────────────────────────
 
 
+from sklearn.model_selection import train_test_split
+
 def split_and_convert(query_pos_path, train_path, test_path):
     with open(query_pos_path, encoding="utf-8") as f:
         data = json.load(f)
 
-    # 재현성을 위한 시드 고정
-    random.seed(SEED)
-    random.shuffle(data)
+    rule_path = Path(__file__).resolve().parents[1] / "data" / "rule_metadata_merged.json"
+    with open(rule_path, encoding="utf-8") as f:
+        rule_data = json.load(f)
+    title_to_conf = {r["title"]: r.get("confidence", "")
+                     for r in rule_data["unique_rules"]}
 
-    split      = int(len(data) * TRAIN_RATIO)
-    train_data = data[:split]
-    test_data  = data[split:]
+    labels = [title_to_conf.get(d["title"], "") for d in data]
+
+    train_data, test_data = train_test_split(
+        data,
+        test_size=1 - TRAIN_RATIO,
+        stratify=labels,
+        random_state=SEED,
+    )
 
     print(f"  전체: {len(data)}개 → train: {len(train_data)}개 / test: {len(test_data)}개")
 
-    # test 저장
     with open(test_path, "w", encoding="utf-8") as f:
         json.dump(test_data, f, ensure_ascii=False, indent=2)
     print(f"  test 저장 → {test_path}")
 
-    # train → jsonl 변환
     descriptions = [d["pos"] for d in train_data]
+    random.seed(SEED)
     with open(train_path, "w", encoding="utf-8") as f:
         for i, d in enumerate(train_data):
             neg_idx = random.choice([j for j in range(len(descriptions)) if j != i])
@@ -78,7 +87,6 @@ def split_and_convert(query_pos_path, train_path, test_path):
                 "neg":   [descriptions[neg_idx]],
             }
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
-
     print(f"  train jsonl 저장 → {train_path}")
 
 
