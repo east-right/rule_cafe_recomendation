@@ -23,6 +23,7 @@ dependencies = [
     "sentence-transformers>=5.5.1",
     "hdbscan>=0.8.43",
     "umap-learn>=0.5.12",
+    "opensearch-py>=3.2.0",
 ]
 
 [dependency-groups]

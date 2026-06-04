@@ -1,0 +1,32 @@
+model_name: "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
+output_dir: "models/exaone-7.8b"
+hf_repo: "east-right/cafe-keyword-selection-exaone-7.8b"
+
+# LoRA
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# 학습
+epochs: 3
+batch_size: 2
+grad_accum: 8
+learning_rate: 2e-4
+warmup_ratio: 0.05
+max_seq_length: 2048
+weight_decay: 0.01
+
+# 양자화
+load_in_4bit: false
+
+# 저장
+save_steps: 100
+logging_steps: 10
