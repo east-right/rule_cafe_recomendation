@@ -9,7 +9,8 @@ from pathlib import Path
 
 import yaml
 from datasets import Dataset
-from trl import SFTTrainer, TrainingArguments
+from transformers import TrainingArguments
+from trl import SFTTrainer
 from unsloth import FastLanguageModel
 from unsloth.chat_templates import get_chat_template
 
@@ -51,10 +52,9 @@ def main():
         model_name=config["model_name"],
         max_seq_length=config["max_seq_length"],
         load_in_4bit=config["load_in_4bit"],
-        dtype=None,  # auto
+        dtype=None,
     )
 
-    # chat template 적용
     tokenizer = get_chat_template(tokenizer, chat_template="auto")
 
     # ── LoRA 설정 ─────────────────────────────────────────
@@ -93,7 +93,7 @@ def main():
         logging_steps=config["logging_steps"],
         save_steps=config["save_steps"],
         save_total_limit=2,
-        evaluation_strategy="epoch",
+        eval_strategy="epoch",
         load_best_model_at_end=True,
         report_to="none",
         seed=42,
@@ -105,8 +105,6 @@ def main():
         tokenizer=tokenizer,
         train_dataset=train_dataset,
         eval_dataset=test_dataset,
-        dataset_text_field=None,
-        dataset_kwargs={"skip_prepare_dataset": False},
         max_seq_length=config["max_seq_length"],
         args=training_args,
     )
