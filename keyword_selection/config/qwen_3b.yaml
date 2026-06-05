@@ -1,6 +1,6 @@
-model_name: "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
-output_dir: "models/exaone-7.8b"
-hf_repo: "east-right/cafe-keyword-selection-exaone-7.8b"
+model_name: "unsloth/Qwen2.5-3B-Instruct"
+output_dir: "models/qwen-3b"
+hf_repo: "east-right/cafe-keyword-selection-qwen-3b"
 
 # LoRA
 lora_r: 16
@@ -17,15 +17,15 @@ target_modules:
 
 # 학습
 epochs: 3
-batch_size: 2
-grad_accum: 8
+batch_size: 4
+grad_accum: 4
 learning_rate: 2e-4
 warmup_ratio: 0.05
 max_seq_length: 2048
 weight_decay: 0.01
 
 # 양자화
-load_in_4bit: false
+load_in_4bit: true
 
 # 저장
 save_steps: 100

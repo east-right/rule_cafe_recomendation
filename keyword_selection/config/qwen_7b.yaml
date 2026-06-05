@@ -1,4 +1,4 @@
-model_name: "Qwen/Qwen2.5-7B-Instruct"
+model_name: "unsloth/Qwen2.5-7B-Instruct"
 output_dir: "models/qwen-7b"
 hf_repo: "east-right/cafe-keyword-selection-qwen-7b"
 
@@ -17,15 +17,15 @@ target_modules:
 
 # 학습
 epochs: 3
-batch_size: 2
-grad_accum: 8
+batch_size: 4
+grad_accum: 4
 learning_rate: 2e-4
 warmup_ratio: 0.05
 max_seq_length: 2048
 weight_decay: 0.01
 
 # 양자화
-load_in_4bit: false
+load_in_4bit: true
 
 # 저장
 save_steps: 100

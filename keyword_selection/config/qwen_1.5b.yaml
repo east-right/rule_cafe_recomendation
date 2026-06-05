@@ -1,6 +1,6 @@
-model_name: "LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct"
-output_dir: "models/exaone-2.4b"
-hf_repo: "east-right/cafe-keyword-selection-exaone-2.4b"
+model_name: "unsloth/Qwen2.5-1.5B-Instruct"
+output_dir: "models/qwen-1.5b"
+hf_repo: "east-right/cafe-keyword-selection-qwen-1.5b"
 
 # LoRA
 lora_r: 16
@@ -25,7 +25,7 @@ max_seq_length: 2048
 weight_decay: 0.01
 
 # 양자화
-load_in_4bit: false
+load_in_4bit: true
 
 # 저장
 save_steps: 100

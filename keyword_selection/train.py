@@ -1,7 +1,9 @@
 """
 sLLM 파인튜닝 스크립트 (Unsloth)
-Usage: python train.py --config config/exaone_2.4b.yaml
+Usage: python train.py --config config/qwen_3b.yaml
 """
+
+import unsloth  # noqa: F401 - must be imported first
 
 import argparse
 import json
@@ -14,7 +16,7 @@ from trl import SFTTrainer
 from unsloth import FastLanguageModel
 from unsloth.chat_templates import get_chat_template
 
-from prompt import SYSTEM_PROMPT, format_for_training
+from prompt import format_for_training
 
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
@@ -27,15 +29,21 @@ def load_config(config_path: str) -> dict:
         return yaml.safe_load(f)
 
 
-def load_dataset(path: Path) -> Dataset:
+def load_dataset(path: Path, tokenizer) -> Dataset:
     with open(path, encoding="utf-8") as f:
         data = [json.loads(line) for line in f]
 
-    formatted = [
-        format_for_training(d["query"], d["candidates"], d["answer"])
-        for d in data
-    ]
-    return Dataset.from_list(formatted)
+    texts = []
+    for d in data:
+        record = format_for_training(d["query"], d["candidates"], d["answer"])
+        text = tokenizer.apply_chat_template(
+            record["messages"],
+            tokenize=False,
+            add_generation_prompt=False,
+        )
+        texts.append({"text": text})
+
+    return Dataset.from_list(texts)
 
 
 def main():
@@ -55,7 +63,7 @@ def main():
         dtype=None,
     )
 
-    tokenizer = get_chat_template(tokenizer, chat_template="auto")
+    tokenizer = get_chat_template(tokenizer, chat_template="qwen-2.5")
 
     # ── LoRA 설정 ─────────────────────────────────────────
     model = FastLanguageModel.get_peft_model(
@@ -71,8 +79,8 @@ def main():
 
     # ── 데이터 로드 ───────────────────────────────────────
     print("[INFO] 데이터 로드 중...")
-    train_dataset = load_dataset(TRAIN_PATH)
-    test_dataset = load_dataset(TEST_PATH)
+    train_dataset = load_dataset(TRAIN_PATH, tokenizer)
+    test_dataset = load_dataset(TEST_PATH, tokenizer)
     print(f"  train: {len(train_dataset)}개 | test: {len(test_dataset)}개")
 
     # ── 학습 설정 ─────────────────────────────────────────
@@ -84,17 +92,19 @@ def main():
         num_train_epochs=config["epochs"],
         per_device_train_batch_size=config["batch_size"],
         gradient_accumulation_steps=config["grad_accum"],
-        learning_rate=config["learning_rate"],
+        learning_rate=float(config["learning_rate"]),
         warmup_ratio=config["warmup_ratio"],
         weight_decay=config["weight_decay"],
         lr_scheduler_type="cosine",
-        fp16=not config["load_in_4bit"],
-        bf16=False,
+        fp16=False,
+        bf16=True,
         logging_steps=config["logging_steps"],
-        save_steps=config["save_steps"],
+        save_strategy="epoch",
         save_total_limit=2,
         eval_strategy="epoch",
         load_best_model_at_end=True,
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
         report_to="none",
         seed=42,
     )
@@ -105,6 +115,7 @@ def main():
         tokenizer=tokenizer,
         train_dataset=train_dataset,
         eval_dataset=test_dataset,
+        dataset_text_field="text",
         max_seq_length=config["max_seq_length"],
         args=training_args,
     )
