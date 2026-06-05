@@ -24,24 +24,24 @@ sLLM (파인튜닝) → 정답 rule title 또는 "none"
 ```
 keyword_selection/
 ├── config/
-│   ├── exaone_2.4b.yaml        # EXAONE-3.5-2.4B 학습 설정
-│   ├── exaone_7.8b.yaml        # EXAONE-3.5-7.8B 학습 설정
-│   └── qwen_7b.yaml            # Qwen2.5-7B 학습 설정
+│   ├── qwen_1.5b.yaml              # Qwen2.5-1.5B 학습 설정
+│   ├── qwen_3b.yaml                # Qwen2.5-3B 학습 설정
+│   └── qwen_7b.yaml                # Qwen2.5-7B 학습 설정
 ├── data/
 │   ├── finetune_keyword_selection.jsonl  # 전체 파인튜닝 데이터 (1136개)
-│   ├── train.jsonl             # 학습 데이터 (1021개)
-│   └── test.jsonl              # 평가 데이터 (115개)
-├── compare_search.py           # Brute-force vs KNN 검색 방식 비교
-├── evaluate.py                 # 파인튜닝 모델 평가
-├── generate_finetune_data.py   # 파인튜닝 데이터 생성
-├── indexing.py                 # OpenSearch rule 인덱싱
-├── prompt.py                   # sLLM instruction 템플릿
-├── search.py                   # OpenSearch KNN 검색
-├── setup.sh                    # RunPod 환경 설정 및 학습 실행
-├── split_data.py               # train/test 분할
-├── train.py                    # Unsloth SFT 학습 스크립트
-├── upload.py                   # HuggingFace 업로드
-└── pyproject.toml              # 파인튜닝 전용 의존성
+│   ├── train.jsonl                 # 학습 데이터 (1021개)
+│   └── test.jsonl                  # 평가 데이터 (115개)
+├── compare_search.py               # Brute-force vs KNN 검색 방식 비교
+├── evaluate.py                     # 파인튜닝 모델 평가
+├── generate_finetune_data.py       # 파인튜닝 데이터 생성
+├── indexing.py                     # OpenSearch rule 인덱싱
+├── prompt.py                       # sLLM instruction 템플릿
+├── search.py                       # OpenSearch KNN 검색
+├── setup.sh                        # RunPod 환경 설정 및 학습 실행
+├── split_data.py                   # train/test 분할
+├── train.py                        # Unsloth SFT 학습 스크립트
+├── upload.py                       # HuggingFace 업로드
+└── pyproject.toml                  # 파인튜닝 전용 의존성
 ```
 
 ---
@@ -114,23 +114,30 @@ python keyword_selection/split_data.py
 
 ---
 
-## 모델 선정 계획
+## 모델 선정
 
-파인튜닝 후 성능 비교를 통해 최종 모델 선정 예정
+### 후보 모델
+EXAONE-3.5 (LG AI Research)와 Qwen2.5 (Alibaba) 두 계열을 검토했으나, **EXAONE은 Unsloth 미지원**으로 인해 Qwen2.5로 결정. EXAONE은 추후 TRL+PEFT 방식으로 별도 실험 예정.
 
-```
-1단계: EXAONE-3.5-2.4B vs EXAONE-3.5-7.8B → 사이즈 영향 확인
-2단계: EXAONE-7.8B vs Qwen2.5-7B → 한국어 특화 vs 범용 비교
-3단계: 최종 모델 선정
-```
+Qwen2.5 계열에서 1.5B / 3B / 7B 세 가지 사이즈를 비교하여 최적 모델 선정.
+
+### 파인튜닝 패키지: Unsloth
+TRL+PEFT, LLaMA-Factory, Unsloth 세 가지를 검토한 결과 **Unsloth 채택**.
+
+- **TRL+PEFT**: 가장 정통적인 방식이나 속도/메모리 최적화 없음
+- **LLaMA-Factory**: 편의성은 높으나 커스텀 데이터 형식 적용이 번거로움
+- **Unsloth**: TRL 기반이면서 커널 최적화로 학습 속도 2배, 메모리 60% 절약. RunPod 비용 최적화에 유리
+
+### 학습 방식: QLoRA
+배치 크기 축소로 LoRA도 가능했으나, 동일 VRAM(RTX 4090 24GB)에서 더 큰 배치로 안정적인 학습이 가능한 QLoRA(4bit) 선택. 선택형 단순 task 특성상 4bit 양자화로 인한 성능 손실이 제한적일 것으로 판단.
 
 ---
 
 ## 파인튜닝
 
 ### 환경
-- **프레임워크:** Unsloth (TRL 기반, 2배 빠른 학습 + 60% 메모리 절약)
-- **방식:** LoRA (QLoRA 불필요 - RTX 4090 24GB VRAM으로 충분)
+- **프레임워크:** Unsloth (TRL 기반)
+- **방식:** QLoRA (4bit 양자화, 기울기 누적 적용)
 - **GPU:** RTX 4090 1x (RunPod)
 
 ### RunPod 실행
@@ -138,39 +145,41 @@ python keyword_selection/split_data.py
 git clone -b feat/keyword-selection https://github.com/east-right/cafe_recomendation.git /workspace/cafe_recomendation
 cd /workspace/cafe_recomendation
 echo "HUGGINGFACE_TOKEN_WRITE=your_token" > .env
-bash keyword_selection/setup.sh
+cd keyword_selection
+uv sync
+uv run python train.py --config config/qwen_1.5b.yaml
 ```
-
-세 모델 순서대로 자동 학습 (예상 소요시간: 2.5~4시간)
 
 ---
 
-## 평가
+## 평가 결과
 
 ```bash
-python keyword_selection/evaluate.py --config config/exaone_2.4b.yaml
+python keyword_selection/evaluate.py --config config/qwen_1.5b.yaml
 ```
 
-### 평가 지표
-- **전체 Accuracy**: 전체 정확도
-- **match Accuracy**: 정답 있는 케이스 정확도
-- **none Accuracy**: 정답 없는 케이스 정확도
+| 모델 | 전체 Accuracy | match Accuracy | none Accuracy | 평균 추론 시간 |
+|---|---|---|---|---|
+| Qwen2.5-1.5B | **0.4870** | **0.5189** | **0.1111** | **0.2937s** |
+| Qwen2.5-3B | 0.4609 | 0.5000 | 0.0000 | 0.3752s |
+| Qwen2.5-7B | 0.4609 | 0.5000 | 0.0000 | 0.3150s |
 
-> 학습 완료 후 결과 업데이트 예정
+→ 모델 크기가 커져도 성능 향상 없음. **Qwen2.5-1.5B 채택.**
+
+### 성능이 낮은 이유
+현재 학습 데이터(1021개)의 품질 문제로 판단. 구체적으로:
+- `finetune_embd_query_pos.json` 기반으로 생성한 데이터라 질문-rule 매핑의 다양성이 부족
+- none 케이스 83개(7.3%)로 fallback 학습이 부족
+- 향후 데이터 보강 및 재학습을 통해 성능 개선 예정
 
 ---
 
-## HuggingFace 업로드
+## HuggingFace
 
-```bash
-python keyword_selection/upload.py --config config/exaone_2.4b.yaml
-```
-
-| 모델 | HuggingFace repo |
+| 항목 | 링크 |
 |---|---|
-| EXAONE 2.4B | east-right/cafe-keyword-selection-exaone-2.4b |
-| EXAONE 7.8B | east-right/cafe-keyword-selection-exaone-7.8b |
-| Qwen 7B | east-right/cafe-keyword-selection-qwen-7b |
+| 키워드 선택 모델 (1.5B) | east-right/cafe-keyword-selection-qwen-1.5b |
+| 임베딩 모델 | east-right/bge-m3-cafe-finetuned |
 
 ---
 
