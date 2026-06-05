@@ -1,10 +1,13 @@
 """
 sLLM 키워드 선택 모델 평가 스크립트
-Usage: python evaluate.py --config config/exaone_2.4b.yaml
+Usage: python evaluate.py --config config/qwen_1.5b.yaml
 """
+
+import unsloth  # noqa: F401 - must be imported first
 
 import argparse
 import json
+import time
 from pathlib import Path
 
 import yaml
@@ -30,7 +33,7 @@ def generate_answer(
     model,
     tokenizer,
     max_new_tokens: int = 32,
-) -> str:
+) -> tuple[str, float]:
     user_prompt = build_user_prompt(query, candidates)
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
@@ -44,6 +47,7 @@ def generate_answer(
         return_tensors="pt",
     ).to(model.device)
 
+    start = time.time()
     output_ids = model.generate(
         input_ids,
         max_new_tokens=max_new_tokens,
@@ -51,11 +55,11 @@ def generate_answer(
         temperature=1.0,
         repetition_penalty=1.1,
     )
+    elapsed = time.time() - start
 
-    # 입력 부분 제거 후 디코딩
     generated = output_ids[0][input_ids.shape[-1]:]
     answer = tokenizer.decode(generated, skip_special_tokens=True).strip()
-    return answer
+    return answer, elapsed
 
 
 def main():
@@ -74,7 +78,7 @@ def main():
         load_in_4bit=config["load_in_4bit"],
         dtype=None,
     )
-    tokenizer = get_chat_template(tokenizer, chat_template="auto")
+    tokenizer = get_chat_template(tokenizer, chat_template="qwen-2.5")
     FastLanguageModel.for_inference(model)
 
     # ── 데이터 로드 ───────────────────────────────────────
@@ -89,15 +93,16 @@ def main():
     none_correct = 0
     match_total = 0
     match_correct = 0
-
+    inference_times = []
     results = []
 
     print("[INFO] 평가 중...")
     for d in tqdm(test_data):
-        pred = generate_answer(d["query"], d["candidates"], model, tokenizer)
+        pred, elapsed = generate_answer(d["query"], d["candidates"], model, tokenizer)
         label = d["answer"]
         is_correct = pred == label
 
+        inference_times.append(elapsed)
         total += 1
         if is_correct:
             correct += 1
@@ -116,12 +121,15 @@ def main():
             "answer": label,
             "pred": pred,
             "correct": is_correct,
+            "inference_time": round(elapsed, 4),
         })
 
     # ── 결과 출력 ─────────────────────────────────────────
     accuracy = correct / total
     none_accuracy = none_correct / none_total if none_total > 0 else 0
     match_accuracy = match_correct / match_total if match_total > 0 else 0
+    avg_time = sum(inference_times) / len(inference_times)
+    total_time = sum(inference_times)
 
     print(f"\n{'='*50}")
     print(f"모델: {config['model_name']}")
@@ -129,6 +137,9 @@ def main():
     print(f"전체 Accuracy:  {accuracy:.4f} ({correct}/{total})")
     print(f"match Accuracy: {match_accuracy:.4f} ({match_correct}/{match_total})")
     print(f"none Accuracy:  {none_accuracy:.4f} ({none_correct}/{none_total})")
+    print(f"{'='*50}")
+    print(f"평균 추론 시간: {avg_time:.4f}s / 건")
+    print(f"전체 추론 시간: {total_time:.2f}s ({len(test_data)}건)")
     print(f"{'='*50}")
 
     # ── 오답 샘플 출력 ────────────────────────────────────
@@ -148,6 +159,8 @@ def main():
             "accuracy": accuracy,
             "match_accuracy": match_accuracy,
             "none_accuracy": none_accuracy,
+            "avg_inference_time": round(avg_time, 4),
+            "total_inference_time": round(total_time, 2),
             "total": total,
             "correct": correct,
             "details": results,

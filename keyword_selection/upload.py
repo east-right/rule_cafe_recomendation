@@ -1,7 +1,9 @@
 """
-파인튜닝된 모델 허깅페이스 업로드 스크립트
-Usage: python upload.py --config config/exaone_2.4b.yaml
+파인튜닝된 모델 + 데이터 허깅페이스 업로드 스크립트
+Usage: python upload.py --config config/qwen_1.5b.yaml
 """
+
+import unsloth  # noqa: F401 - must be imported first
 
 import argparse
 import os
@@ -45,14 +47,32 @@ def main():
         load_in_4bit=config["load_in_4bit"],
         dtype=None,
     )
-    tokenizer = get_chat_template(tokenizer, chat_template="auto")
+    tokenizer = get_chat_template(tokenizer, chat_template="qwen-2.5")
 
-    # ── 허깅페이스 업로드 ─────────────────────────────────
-    print(f"[INFO] 허깅페이스 업로드 중: {hf_repo}")
+    # ── 모델 업로드 ───────────────────────────────────────
+    print(f"[INFO] 모델 업로드 중: {hf_repo}")
     model.push_to_hub(hf_repo, token=HF_TOKEN, private=True)
     tokenizer.push_to_hub(hf_repo, token=HF_TOKEN, private=True)
+    print("[INFO] 모델 업로드 완료")
 
-    print(f"[INFO] 업로드 완료: https://huggingface.co/{hf_repo}")
+    # ── 데이터 업로드 ─────────────────────────────────────
+    api = HfApi(token=HF_TOKEN)
+    data_dir = ROOT / "data"
+
+    for filename in ["train.jsonl", "test.jsonl", "finetune_keyword_selection.jsonl"]:
+        file_path = data_dir / filename
+        if file_path.exists():
+            print(f"[INFO] 데이터 업로드 중: {filename}")
+            api.upload_file(
+                path_or_fileobj=str(file_path),
+                path_in_repo=f"data/{filename}",
+                repo_id=hf_repo,
+                repo_type="model",
+                token=HF_TOKEN,
+            )
+            print(f"[INFO] {filename} 업로드 완료")
+
+    print(f"\n[INFO] 전체 업로드 완료: https://huggingface.co/{hf_repo}")
 
 
 if __name__ == "__main__":
