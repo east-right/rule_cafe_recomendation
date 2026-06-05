@@ -1,6 +1,6 @@
 """
 sLLM 파인튜닝 스크립트 (Unsloth)
-Usage: python train.py --config config/qwen_3b.yaml
+Usage: python train.py --config config/qwen_1.5b.yaml
 """
 
 import unsloth  # noqa: F401 - must be imported first
@@ -11,10 +11,10 @@ from pathlib import Path
 
 import yaml
 from datasets import Dataset
-from transformers import TrainingArguments
-from trl import SFTTrainer
-from unsloth import FastLanguageModel
+from unsloth import FastLanguageModel, is_bfloat16_supported
 from unsloth.chat_templates import get_chat_template
+from trl import SFTTrainer
+from transformers import TrainingArguments
 
 from prompt import format_for_training
 
@@ -83,33 +83,15 @@ def main():
     test_dataset = load_dataset(TEST_PATH, tokenizer)
     print(f"  train: {len(train_dataset)}개 | test: {len(test_dataset)}개")
 
+    # 샘플 확인
+    print("\n[SAMPLE] 학습 데이터 첫 번째 샘플:")
+    print(train_dataset[0]["text"])
+    print("="*60)
+
     # ── 학습 설정 ─────────────────────────────────────────
     output_dir = ROOT / config["output_dir"]
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    training_args = TrainingArguments(
-        output_dir=str(output_dir),
-        num_train_epochs=config["epochs"],
-        per_device_train_batch_size=config["batch_size"],
-        gradient_accumulation_steps=config["grad_accum"],
-        learning_rate=float(config["learning_rate"]),
-        warmup_ratio=config["warmup_ratio"],
-        weight_decay=config["weight_decay"],
-        lr_scheduler_type="cosine",
-        fp16=False,
-        bf16=True,
-        logging_steps=config["logging_steps"],
-        save_strategy="epoch",
-        save_total_limit=2,
-        eval_strategy="epoch",
-        load_best_model_at_end=True,
-        metric_for_best_model="eval_loss",
-        greater_is_better=False,
-        report_to="none",
-        seed=42,
-    )
-
-    # ── 학습 ──────────────────────────────────────────────
     trainer = SFTTrainer(
         model=model,
         tokenizer=tokenizer,
@@ -117,7 +99,28 @@ def main():
         eval_dataset=test_dataset,
         dataset_text_field="text",
         max_seq_length=config["max_seq_length"],
-        args=training_args,
+        dataset_num_proc=2,
+        args=TrainingArguments(
+            output_dir=str(output_dir),
+            num_train_epochs=config["epochs"],
+            per_device_train_batch_size=config["batch_size"],
+            gradient_accumulation_steps=config["grad_accum"],
+            learning_rate=float(config["learning_rate"]),
+            warmup_ratio=config["warmup_ratio"],
+            weight_decay=config["weight_decay"],
+            lr_scheduler_type="cosine",
+            fp16=not is_bfloat16_supported(),
+            bf16=is_bfloat16_supported(),
+            logging_steps=config["logging_steps"],
+            save_strategy="no",
+
+            eval_strategy="epoch",
+            load_best_model_at_end=False,
+
+
+            report_to="none",
+            seed=42,
+        ),
     )
 
     print("[INFO] 학습 시작!")
