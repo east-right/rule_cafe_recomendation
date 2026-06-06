@@ -1,0 +1,18 @@
+[project]
+name = "cafe-keyword-selection"
+version = "0.1.0"
+description = "카페 추천 시스템 키워드 선택 모델 파인튜닝"
+requires-python = ">=3.10"
+dependencies = [
+    "unsloth>=2024.12.0",
+    "trl>=0.12.0",
+    "transformers>=4.46.0",
+    "datasets>=3.0.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.2.2",
+    "huggingface-hub>=0.26.0",
+    "tqdm>=4.67.3",
+]
+ 
+[tool.uv]
+package = false
