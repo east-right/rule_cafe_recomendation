@@ -1,0 +1,600 @@
+{"question": "단체 모임이나 회의할 수 있는 공간이 있으면서 디저트가 맛있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "디저트 카페", "non_menu_keywords": ["단체 모임", "회의실"]}
+{"question": "선선한 날씨에 맞는 인테리어도 좋고 BGM 선곡이 잘되어 있는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "선선한 날씨", "non_menu_keywords": ["BGM선곡", "인테리어_좋다"]}
+{"question": "아늑한 분위기와 소파자리가 괜찮은 곳 중에서 포도주스가 맛있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "포도주스", "non_menu_keywords": ["아늑한 카페", "소파자리_나름 괜찮다"]}
+{"question": "버터샌드를 먹으면서 조용하게 독서하기 좋고 시간 보내기에도 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "버터샌드", "non_menu_keywords": ["시간 보내기 좋은 곳", "조용한 독서 공간"]}
+{"question": "골목에 위치한 감성카페 중에서 테이블 간격이 넉넉한 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "골목 카페", "non_menu_keywords": ["테이블_간격 여유롭다", "감성카페"]}
+{"question": "서울대 근처에 입이 호강하는 맛있는 메뉴가 있고 자녀와 함께 가기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "서울대 카페", "non_menu_keywords": ["입이 호강하다", "자녀"]}
+{"question": "넓은 공간에 칸막이 좌석이 잘 나누어진 곳에서 레몬티 마시기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "레몬티", "non_menu_keywords": ["넓은 공간", "칸막이 좌석_개별공간이 나누어져 있다"]}
+{"question": "포토존이 잘 되어 있고 커피향이 좋은데 자리도 넉넉한 카페 있을까?", "type": "menu-complex", "menu_keyword": "포토존", "non_menu_keywords": ["커피향", "자리_생각보다 많다"]}
+{"question": "빠름빠름한 분위기에 하루종일 머물 수 있으면서 자리도 넉넉한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "빠름빠름", "non_menu_keywords": ["하루종일 할 수 있는 것", "자리_넉넉하다"]}
+{"question": "사진 찍기 좋은 맛집 카페 중에서 주차도 편리한 곳 어디 있을까?", "type": "menu-complex", "menu_keyword": "사진찍기", "non_menu_keywords": ["맛집", "주차_좋다"]}
+{"question": "황치즈그릭요거트 같은 특별한 메뉴가 있고 내부 인테리어 구조가 독특한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "황치즈그릭요거트", "non_menu_keywords": ["특별한 메뉴", "내부 인테리어_구조가 독특하다"]}
+{"question": "학생들이 평온한 시간을 보내기 좋은 가게 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "평온한 시간", "non_menu_keywords": ["가게", "학생"]}
+{"question": "음악 감상하기 좋고 매장도 깔끔한 곳에서 분들이랑 편히 갈 만한 카페 있을까?", "type": "menu-complex", "menu_keyword": "분들", "non_menu_keywords": ["음악 감상", "매장_깔끔하다"]}
+{"question": "벚꽃 구경하면서 홈카페 느낌으로 밥 대신 먹는 거 즐길 수 있는 곳 알려줘.", "type": "menu-complex", "menu_keyword": "밥대신 먹는거", "non_menu_keywords": ["벚꽃", "홈카페"]}
+{"question": "서울대 근처에서 책과 커피 모두 즐길 수 있는 가게 추천해줘.", "type": "menu-complex", "menu_keyword": "서울대 카페", "non_menu_keywords": ["책과 커피", "가게"]}
+{"question": "늦은 시간에도 가기 좋고 지브리 감성 물씬 나는 오렌지아인슈패너 파는 카페 있을까?", "type": "menu-complex", "menu_keyword": "오렌지아인슈패너", "non_menu_keywords": ["늦은 시간 카페", "지브리 감성"]}
+{"question": "복장이 청결한 아지트 같은 곳에서 딸기젤라또 맛볼 수 있는 카페 찾아줘.", "type": "menu-complex", "menu_keyword": "딸기젤라또", "non_menu_keywords": ["복장_청결하다", "아지트"]}
+{"question": "한적한 뷰가 매력적인 곳에서 바게트 같이 먹기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "바게트", "non_menu_keywords": ["뷰_한적하다", "매력"]}
+{"question": "혼자 커피 마시기 좋고 조용한 자리 넉넉한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "혼자 커피", "non_menu_keywords": ["조용한 카페", "자리"]}
+{"question": "조용하고 쾌적한 키즈카페 중에서 트러플머쉬룸수프볼 메뉴 있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "트러플머쉬룸수프볼", "non_menu_keywords": ["키즈카페", "조용하고 쾌적한"]}
+{"question": "잔잔한 분위기에서 가끔 방문하기 좋고 에코라이프 실천하기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "잔잔한 분위기", "non_menu_keywords": ["가끔 방문", "에코라이프를 실천하기 좋은곳"]}
+{"question": "신림카페 중에 떡갈비버거 맛있고 창가자리가 잘 되어 있는 곳 추천해줄래?", "type": "menu-complex", "menu_keyword": "떡갈비버거", "non_menu_keywords": ["신림카페", "창가자리_잘 되어있다"]}
+{"question": "시원한 분위기에서 아이패드 쓰기 편한 매장 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "시원한 분위기", "non_menu_keywords": ["아이패드", "매장"]}
+{"question": "쌀쌀한 날에 학교 근처에서 귀여운 분위기의 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "쌀쌀한 날", "non_menu_keywords": ["학교 카페", "귀여운 카페"]}
+{"question": "여자친구랑 가기 좋은 넓직한 공간에 예쁜 컵이 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "여자친구", "non_menu_keywords": ["카페_넓직하다", "컵_이쁘다"]}
+{"question": "조각케이크랑 가벼운 식사 할 수 있고 지하 공간이 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "조각케이크", "non_menu_keywords": ["가벼운 식사", "지하 공간_좋다"]}
+{"question": "잔잔한 분위기에서 꽃도 예쁘고 딸기라떼 맛있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "딸기라떼", "non_menu_keywords": ["꽃_예쁘다", "잔잔한 분위기"]}
+{"question": "도림천 근처에 이야기 나누기 좋고 창가자리가 잘 되어 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "이야기", "non_menu_keywords": ["도림천", "창가자리_잘 되어있다"]}
+{"question": "나만 알고 싶은 칸막이 좌석으로 개별 공간 잘 나누어져 있고 빠른 서비스 받는 카페 있을까?", "type": "menu-complex", "menu_keyword": "나만 알고 싶은 카페", "non_menu_keywords": ["칸막이 좌석_개별공간이 나누어져 있다", "빠르다"]}
+{"question": "테라스가 시원한 분위기의 가게에서 크로칸슈 맛볼 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "크로칸슈", "non_menu_keywords": ["테라스_시원하다", "가게"]}
+{"question": "저녁 외식하기 좋은, 개방감 있는 내부 인테리어가 돋보이는 회의실 있는 카페 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "회의실", "non_menu_keywords": ["저녁 외식", "내부 인테리어_개방감 있다"]}
+{"question": "좌석이 널널하고 분위기가 좋은 곳에서 모카 맛있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "모카", "non_menu_keywords": ["좌석_널널하다", "좋은 분위기"]}
+{"question": "멋진 인테리어에 간단한 식사로 페퍼로니식빵 먹을 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "페퍼로니식빵", "non_menu_keywords": ["카페 인테리어_멋지다", "간단한 식사"]}
+{"question": "인절미빙수가 맛있고 깔끔한 인테리어를 가진 맛집 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "인절미빙수", "non_menu_keywords": ["맛집", "카페 인테리어_깔끔하다"]}
+{"question": "건물이 예쁘고 테이블도 넓은 조아요 카페 어디 괜찮을까?", "type": "menu-complex", "menu_keyword": "조아요", "non_menu_keywords": ["건물_이쁘다", "테이블_넓다"]}
+{"question": "음악 선곡이 좋은, 작업하기 편한 방문 추천 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "음악선곡", "non_menu_keywords": ["방문 추천", "작업하기 좋은 카페"]}
+{"question": "인테리어 좋아서 조용히 독서하기 좋은 널널한 좌석 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "조용한 독서 공간", "non_menu_keywords": ["인테리어_좋다", "좌석_널널하다"]}
+{"question": "3층에 테라스가 시원한 곳이라 자주 이용하는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "3층", "non_menu_keywords": ["테라스_시원하다", "자주 이용하는 카페"]}
+{"question": "간판이 눈에 띄고 폭풍수다 가능하지만 공부하기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "공부하기 좋은 카페", "non_menu_keywords": ["간판", "폭풍수다"]}
+{"question": "레몬차 마시면서 독서도 하고 흡연실 있는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "레몬차", "non_menu_keywords": ["독서", "흡연실_있다"]}
+{"question": "회사 근처에 줄서서 먹을 만큼 특별한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "줄서서 먹기", "non_menu_keywords": ["회사 근처", "특별한 카페"]}
+{"question": "카페가 커서 좋고 양모로 만든 키링도 있는 두바이초콜릿 맛집 알려줄래?", "type": "menu-complex", "menu_keyword": "두바이초콜릿", "non_menu_keywords": ["카페_커서 좋다", "양모로 만든 키링"]}
+{"question": "벽에 보드게임도 있고 행복한 분위기에서 프라페 마실 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "프라페", "non_menu_keywords": ["벽_보드게임이 있다", "행복한 분위기"]}
+{"question": "더운 오후에 모양도 예쁜 샤케라또 맛볼 수 있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "샤케라또", "non_menu_keywords": ["모양", "더운 오후"]}
+{"question": "집 근처 이디야 말고 믹스커피 맛있는 카페 있으면 추천해줘.", "type": "menu-complex", "menu_keyword": "믹스커피", "non_menu_keywords": ["집근처 카페", "이디야"]}
+{"question": "차분하면서도 행복한 분위기에 카페 비주얼 좋은 곳 어디 있을까?", "type": "menu-complex", "menu_keyword": "차분한 분위기", "non_menu_keywords": ["행복한 분위기", "카페 비주얼"]}
+{"question": "친절하고 가게도 이쁜데 한 끼 식사까지 할 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "친절한 카페", "non_menu_keywords": ["한끼식사", "가게_이쁘다"]}
+{"question": "서울대 근처에 가성비 좋고 위린이도 부담 없이 우유슬러시 즐길 만한 카페 있을까?", "type": "menu-complex", "menu_keyword": "우유슬러시", "non_menu_keywords": ["위린이", "서울대 카페_가성비 좋다"]}
+{"question": "게임카페면서 토피넛라떼 맛있고 아늑한 분위기 있는 곳 알려줘.", "type": "menu-complex", "menu_keyword": "토피넛라떼", "non_menu_keywords": ["게임카페", "아늑한 카페"]}
+{"question": "탁 트인 공간에서 함께 애플시나몬케이크 먹기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "애플시나몬케이크", "non_menu_keywords": ["탁 트인", "함께 할 생각"]}
+{"question": "벽이 멋지고 세모디 분위기에서 수다 떨기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "벽", "non_menu_keywords": ["세모디", "수다떨기"]}
+{"question": "넓고 쾌적한 공간에 친환경 빨대를 쓰고 인테리어 예쁜 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "넓고 쾌적한 공간", "non_menu_keywords": ["빨대_친환경적이다", "카페 인테리어_예쁘다"]}
+{"question": "빈티지하면서도 넓직한 특별한 카페 어디 있는지 알려줘.", "type": "menu-complex", "menu_keyword": "특별한 카페", "non_menu_keywords": ["카페 인테리어_빈티지하다", "카페_넓직하다"]}
+{"question": "레몬차 맛있고 화장실 가까우면서 내부가 넓직한 카페 있을까?", "type": "menu-complex", "menu_keyword": "레몬차", "non_menu_keywords": ["화장실_가깝다", "내부 인테리어_넓직하다"]}
+{"question": "2층 좌석도 있고 매징하며 매장이 귀여운 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "2층 좌석", "non_menu_keywords": ["매징", "매장_귀엽다"]}
+{"question": "케이크 맛있고 테이크아웃 박스도 이쁜 빽다방 중 가장 큰 곳 알려줄래?", "type": "menu-complex", "menu_keyword": "케이크", "non_menu_keywords": ["테이크아웃_이쁘다", "빽다방_가장 크다"]}
+{"question": "치즈프라페 맛있고 벚꽃 구경하며 테라스가 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "치즈프라페", "non_menu_keywords": ["테라스_예쁘다", "벚꽃"]}
+{"question": "점심 메뉴 맛있고 사장님이 친절하며 간식도 잘 나오는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "점심", "non_menu_keywords": ["사장님", "간식"]}
+{"question": "관악 지역에 힙하고 조용한 음악 나오는 카페 어디 좋은 곳 있을까?", "type": "menu-complex", "menu_keyword": "힙한 카페", "non_menu_keywords": ["관악지역", "조용한 음악"]}
+{"question": "잠봉샌드위치 위생 잘 관리되고 함께 가기 좋은 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "잠봉샌드위치", "non_menu_keywords": ["위생", "함께"]}
+{"question": "식기류가 잘 구비되어 있고 인테리어가 아기자기하고 예쁜 카페 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "식기류", "non_menu_keywords": ["내부 인테리어_인테리어가 멋지다", "인테리어_아기자기하고 예쁘다"]}
+{"question": "단맛을 좋아하는데 사장님이 친절하고 쾌적한 층으로 된 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "단맛 선호", "non_menu_keywords": ["층_쾌적하다", "사장님"]}
+{"question": "선물을 사기 좋은 고급지고 깔끔한 내부 인테리어의 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "선물", "non_menu_keywords": ["내부 인테리어_고급진", "카페 인테리어_깔끔하다"]}
+{"question": "허니버터칩 메뉴가 있고 에코라이프 실천하기 좋으면서 시설도 깨끗한 카페 있을까?", "type": "menu-complex", "menu_keyword": "허니버터칩", "non_menu_keywords": ["에코라이프를 실천하기 좋은곳", "시설_깨끗하다"]}
+{"question": "회사 근처에 인절미빙수 맛있고 단체 좌석 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "인절미빙수", "non_menu_keywords": ["회사 근처", "단체 좌석"]}
+{"question": "고르곤졸라피자 메뉴가 있고 아이패드 사용 가능한 단체 모임하기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "고르곤졸라피자", "non_menu_keywords": ["단체 모임", "아이패드"]}
+{"question": "바닥 상태가 좋고 따뜻하고 즐거운 분위기 많이 느껴지는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "바닥", "non_menu_keywords": ["따뜻한 분위기_많다", "즐거운 분위기"]}
+{"question": "컴포즈나 이디야에서 망고케이크 메뉴가 맛있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "망고케이크", "non_menu_keywords": ["컴포즈", "이디야"]}
+{"question": "카페 비주얼이 멋지고 세모디 느낌 나면서 지인 모임하기 좋은 곳 있니?", "type": "menu-complex", "menu_keyword": "카페 비주얼", "non_menu_keywords": ["세모디", "지인 모임"]}
+{"question": "엄마들 모임하기 좋고 인테리어도 예쁘며 재미있는 경험할 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "엄마들 모임", "non_menu_keywords": ["카페 인테리어_좋다", "재미있는 경험"]}
+{"question": "버터바 맛있는 디저트도 있고 2층에 넓은 공간 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "버터바", "non_menu_keywords": ["디저트", "2층 카페_넓다"]}
+{"question": "페퍼민트티 마시면서 숲뷰도 즐기고 꽃도 볼 수 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "페퍼민트티", "non_menu_keywords": ["숲뷰", "꽃"]}
+{"question": "좌석 간격 넓고 테이블도 넓어서 하루종일 앉아서 시간 보내기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "좌석 간격", "non_menu_keywords": ["테이블_넓다", "하루종일 할 수 있는 것"]}
+{"question": "치즈프라페 마시면서 카페 인테리어가 톡톡 튀고 지브리 감성 느껴지는 곳 있을까?", "type": "menu-complex", "menu_keyword": "치즈프라페", "non_menu_keywords": ["카페 인테리어_톡톡 튀다", "지브리 감성"]}
+{"question": "신림역 근처에서 케사디야도 맛있고 여유로운 분위기인 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "케사디야", "non_menu_keywords": ["신림역 카페", "여유로운 분위기"]}
+{"question": "매장 공간이 넓고 인테리어 소품이 아기자기하고 예쁜 시간 때우기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "매장 공간", "non_menu_keywords": ["시간 때우기 좋은 카페", "인테리어 소품_아기자기 하고 예쁘다"]}
+{"question": "청포도주스 맛있고 건물 로비층에 천고가 높은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "청포도주스", "non_menu_keywords": ["건물 로비층_천고가 높다", "맛있고 좋다"]}
+{"question": "베이글칩 맛있고 넓직한 카페에 테이블 2개 있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "베이글칩", "non_menu_keywords": ["카페_넓직하다", "테이블_2개 있다"]}
+{"question": "데이트 장소로 키즈카페인데 귀여움 가득한 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "데이트 장소", "non_menu_keywords": ["키즈카페", "귀여움"]}
+{"question": "스카치크림블랙 맛있고 독서실 분위기에 달달한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "스카치크림블랙", "non_menu_keywords": ["독서실", "달달한 카페"]}
+{"question": "전철이나 버스타기 전 집근처에 창가자리 잘 되어있는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "전철이나 버스타기전", "non_menu_keywords": ["집근처 카페", "창가자리_잘 되어있다"]}
+{"question": "버스타기 전에 하나로마트 근처에서 바나나푸딩 더 시원하게 먹을 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "바나나푸딩", "non_menu_keywords": ["하나로마트_더 시원하다", "버스타기"]}
+{"question": "아기 데리고 가기 좋은 지하 공간이 좋은 빵집 겸 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "아기", "non_menu_keywords": ["지하 공간_좋다", "빵집"]}
+{"question": "삭막한 동네인데 식물 인테리어 좋고 벽지가 예쁜 카페 있을까?", "type": "menu-complex", "menu_keyword": "벽지", "non_menu_keywords": ["식물 인테리어_좋다", "삭막한 동네"]}
+{"question": "단골카페인데 보틀케이크 맛있고 저렴한 커피 파는 곳 추천해줘.", "type": "menu-complex", "menu_keyword": "보틀케이크", "non_menu_keywords": ["단골카페", "저렴한 커피"]}
+{"question": "퀄리티 좋은 게임카페 중에 충전 시설도 잘 되어있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "퀄리티", "non_menu_keywords": ["충전_있다", "게임카페"]}
+{"question": "따릉이 타고 가기 편하고 공유 자리 넓은 보드게임카페 추천해줘.", "type": "menu-complex", "menu_keyword": "보드게임카페", "non_menu_keywords": ["공유 자리_넓다", "따릉이"]}
+{"question": "신림역 근처에 카페 비주얼 예쁜 매장 소개해줄 수 있어?", "type": "menu-complex", "menu_keyword": "매장", "non_menu_keywords": ["카페 비주얼", "신림역 카페"]}
+{"question": "홈카페 느낌 나면서 커피 깨끗하고 건조기 사이즈 큰 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "홈카페", "non_menu_keywords": ["커피_깨끗하다", "건조기_사이즈가 크다"]}
+{"question": "청결한 매장에 창가자리 좋은 바질치킨파니니 파는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "바질치킨파니니", "non_menu_keywords": ["청결한 매장_좋다", "창가자리"]}
+{"question": "나초도 맛있고 간단한 식사 하기 좋으면서 카페 공간이 좋은 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "나초", "non_menu_keywords": ["간단한 식사", "카페 공간_좋다"]}
+{"question": "크루아상 메뉴도 있고 혼자 작업하기 편하며 내부 인테리어가 아늑한 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "크루아상", "non_menu_keywords": ["혼자 작업", "내부 인테리어_아늑하다"]}
+{"question": "대학동에서 힐링할 수 있고 전철이나 버스 타기 전에 들르기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "대학동 카페", "non_menu_keywords": ["힐링 카페", "전철이나 버스타기전"]}
+{"question": "관악지역에서 흑임자바스크치즈케이크 맛볼 수 있고 배려가 느껴지는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "흑임자바스크치즈케이크", "non_menu_keywords": ["배려", "관악지역"]}
+{"question": "체리케이크도 있고 혼자 커피 마시기 좋으며 휴지통에 영수증 더미가 넘쳐나지 않는 카페 있을까?", "type": "menu-complex", "menu_keyword": "체리케이크", "non_menu_keywords": ["혼자 커피", "휴지통_영수증더미가 넘쳐있지 않다"]}
+{"question": "더운 날에 카페가 커서 쾌적하고 휴지통에 영수증 더미가 없어서 깔끔한 곳 추천해줄래?", "type": "menu-complex", "menu_keyword": "더위", "non_menu_keywords": ["카페_커서 좋다", "휴지통_영수증더미가 넘쳐있지 않다"]}
+{"question": "가나슈케이크 먹으면서 음악 감상하기 좋고 건물이 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "가나슈케이크", "non_menu_keywords": ["음악 감상", "건물_이쁘다"]}
+{"question": "삭막한 동네에 사랑방 같은 편안함과 눈을 편안하게 해주는 인테리어가 있는 카페 알려줘.", "type": "menu-complex", "menu_keyword": "삭막한 동네", "non_menu_keywords": ["사랑방", "카페 인테리어_눈을 편안하게 한다"]}
+{"question": "반미세트 메뉴도 있고 가성비 좋으면서 입이 호강하는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "반미세트", "non_menu_keywords": ["가성비 카페", "입이 호강하다"]}
+{"question": "에놀라톤 메뉴가 있고 넓고 깨끗한 분위기뿐만 아니라 건물도 예쁜 카페 있을까?", "type": "menu-complex", "menu_keyword": "에놀라톤", "non_menu_keywords": ["넓고 깨끗한 분위기", "건물_이쁘다"]}
+{"question": "이디야 중에서 인스타카페로 유명한 가게 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "이디야", "non_menu_keywords": ["인스타카페", "가게"]}
+{"question": "버스타기 편한 기분좋은 장소 중 인테리어가 아늑한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "기분좋은 장소", "non_menu_keywords": ["버스타기", "인테리어_아늑한 분위기"]}
+{"question": "작업하기 좋은 야외 좌석이 있고 맛있는 빵집도 겸한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "작업", "non_menu_keywords": ["맛있는 빵집", "야외 좌석_좋다"]}
+{"question": "시끄러운 분위기인데 좌석도 있고 컵이 예쁜 카페 있을까?", "type": "menu-complex", "menu_keyword": "시끄러운 분위기", "non_menu_keywords": ["좌석_있다", "컵_이쁘다"]}
+{"question": "창가자리가 편한 데다가 이벤트도 자주 하는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "창가자리", "non_menu_keywords": ["이벤트", "좌석_편하다"]}
+{"question": "창가자리 있고 키즈카페에 홀더도 있는 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "창가자리", "non_menu_keywords": ["키즈카페", "홀더"]}
+{"question": "자몽우유 맛있고 가게도 넓으면서 뷰가 한적한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "자몽우유", "non_menu_keywords": ["가게_넓다", "뷰_한적하다"]}
+{"question": "편안한 분위기에 싸고 빠른 서비스, 인테리어가 감각적인 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "편안한 카페", "non_menu_keywords": ["싸고 빠르다", "인테리어_감각적이다"]}
+{"question": "공부할 공간이 잘 마련되어 있고 함께 가기 좋은 매장 있을까?", "type": "menu-complex", "menu_keyword": "매장", "non_menu_keywords": ["공부할 공간", "함께"]}
+{"question": "쉬어가기 좋으면서 커피가 깨끗하고 통유리라서 넓은 시야감이 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "쉬어가기", "non_menu_keywords": ["커피_깨끗하다", "통유리 카페_넓은 시야감이 있다"]}
+{"question": "에코라이프 실천하기 좋은 최애 카페 중에 공방도 이쁘게 꾸며진 곳 있을까 추천해줘?", "type": "menu-complex", "menu_keyword": "에코라이프를 실천하기 좋은곳", "non_menu_keywords": ["최애 카페", "공방_이쁘다"]}
+{"question": "연남라떼 맛볼 수 있으면서 포토존도 이쁘고 자리도 넓은 카페 알려줄 수 있어?", "type": "menu-complex", "menu_keyword": "연남라떼", "non_menu_keywords": ["포토존_이쁘게 꾸며져 있다", "자리_넓다"]}
+{"question": "상큼한 맛이 있는 음료를 파는 할로윈 테마에 귀여운 아이들이 있는 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "상큼한 맛", "non_menu_keywords": ["귀여운 아이들", "할로윈 테마"]}
+{"question": "여자친구랑 가기 좋은 신림에 실내 공간 깔끔하고 넓은 카페 어디 있어?", "type": "menu-complex", "menu_keyword": "여자친구", "non_menu_keywords": ["실내공간_깔끔하다", "신림카페_넓다"]}
+{"question": "조각케이크 맛있고 2층에 공부나 일하기 좋은 곳에 에코라이프도 실천 가능한 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "조각케이크", "non_menu_keywords": ["2층 카페_공부하거나 일하기 좋다", "에코라이프를 실천하기 좋은곳"]}
+{"question": "테이크아웃도 가능하고 간식도 팔면서 아늑한 분위기의 카페 있을까?", "type": "menu-complex", "menu_keyword": "테이크아웃", "non_menu_keywords": ["아늑한 카페", "간식"]}
+{"question": "에그마요반미 파는 작고 아기자기한 빵집이나 가게 추천해줄래?", "type": "menu-complex", "menu_keyword": "에그마요반미", "non_menu_keywords": ["가게", "작은 빵집"]}
+{"question": "미숫가루라떼랑 조용한 내부 인테리어에 공부하기 좋은 카페 알려줘!", "type": "menu-complex", "menu_keyword": "미숫가루라떼", "non_menu_keywords": ["공부하기 좋은 카페", "내부 인테리어_조용하다"]}
+{"question": "포장 가능하고 에어컨 빵빵한 시원한 키즈카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "포장", "non_menu_keywords": ["키즈카페", "에어컨_시원하다"]}
+{"question": "구디 쪽에 24시간 운영하고 텀블러 사용하기 좋은 신림 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "구디 쪽", "non_menu_keywords": ["신림카페_24시간 운영", "텀블러_좋다"]}
+{"question": "신림역 근처에서 땅콩과자 맛있고 만남의 장소로 좋은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "땅콩과자", "non_menu_keywords": ["만남의 장소", "신림역 카페"]}
+{"question": "시장 볼 때 들르기 좋은 커피 애호가의 아지트 같은 카페 있을까?", "type": "menu-complex", "menu_keyword": "시장볼때", "non_menu_keywords": ["커피 애호가", "아지트"]}
+{"question": "탁 트인 공간에 테이크아웃 친환경 용기 사용하는 인스타카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "탁 트인", "non_menu_keywords": ["테이크아웃_친환경 용기 사용", "인스타카페"]}
+{"question": "밀크쉐이크 마시면서 버스 타기 편한 홀더도 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "밀크쉐이크", "non_menu_keywords": ["홀더", "버스타기"]}
+{"question": "1층에 위치하고 인테리어가 아늑하면서 크리스마스 분위기 물씬 나는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "1층 카페", "non_menu_keywords": ["인테리어_아늑한 분위기", "크리스마스 분위기"]}
+{"question": "샤케라또 맛있고 카페 인테리어가 눈을 편안하게 하면서 충전도 가능한 곳 알려줄래?", "type": "menu-complex", "menu_keyword": "샤케라또", "non_menu_keywords": ["카페 인테리어_눈을 편안하게 한다", "충전_있다"]}
+{"question": "대학동에 규모 크고 요거트 덕후가 좋아할 쿠앤크버블티 파는 카페 어디야?", "type": "menu-complex", "menu_keyword": "쿠앤크버블티", "non_menu_keywords": ["대학동 카페_규모가 크다", "요거트 덕후"]}
+{"question": "망고빙수 먹으면서 좌석 편하고 즐거운 분위기 느낄 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "망고빙수", "non_menu_keywords": ["좌석_편하다", "즐거운 분위기"]}
+{"question": "얼그레이초코케이크 간식으로 맛있고 점포가 깨끗한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "얼그레이초코케이크", "non_menu_keywords": ["간식", "점포_깨끗하다"]}
+{"question": "조용히 대화하기 좋고 좌석 편해서 집중하기 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "조용한 대화", "non_menu_keywords": ["좌석_편하다", "집중하기"]}
+{"question": "맛도 좋고 좌석도 많은 카페 있으면 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "맛있고 좋다", "non_menu_keywords": ["카페 공간_앉을 곳이 많다", "좌석_많다"]}
+{"question": "메론크림소다 맛있고 2층에 넓고 쾌적해서 공부나 일하기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "메론크림소다", "non_menu_keywords": ["2층 카페_공부하거나 일하기 좋다", "넓고 쾌적한 공간"]}
+{"question": "소이라떼 마시면서 친구랑 대화도 잘 되고 독서실 분위기인 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "소이라떼", "non_menu_keywords": ["독서실", "친구와 대화하기"]}
+{"question": "스누피 콜라보 커피 마시기 좋고 1인 카페에 포토존도 예쁘게 꾸며진 곳 알려줄래?", "type": "menu-complex", "menu_keyword": "스누피 콜라보 커피", "non_menu_keywords": ["1인 카페", "포토존_이쁘게 꾸며져 있다"]}
+{"question": "인스타 감성 카페 중에 포켓볼도 있고 독서실처럼 조용한 곳 있을까?", "type": "menu-complex", "menu_keyword": "인스타카페", "non_menu_keywords": ["포켓볼_있다", "독서실"]}
+{"question": "땅콩과자 맛있고 주차가 바로 옆에 가능하며 가게가 답답하지 않은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "땅콩과자", "non_menu_keywords": ["주차_바로 옆이다", "가게_답답하지 않다"]}
+{"question": "애견동반 가능하고 테이블도 힐링되는 분위기의 매장자리 괜찮은 카페 있을까?", "type": "menu-complex", "menu_keyword": "매장자리", "non_menu_keywords": ["애견동반 카페", "테이블_힐링되는 곳이다"]}
+{"question": "김밥도 먹을 수 있고 독서실처럼 넓직한 내부 인테리어가 좋은 카페 어디야?", "type": "menu-complex", "menu_keyword": "김밥", "non_menu_keywords": ["독서실", "내부 인테리어_넓직하다"]}
+{"question": "토스트 먹으면서 카페 느낌도 좋고 미술활동하기 좋은 공간 있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "토스트", "non_menu_keywords": ["카페 느낌", "미술활동"]}
+{"question": "딸기빽스치노 맛있고 공간도 넓고 예쁘면서 가성비 좋은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "딸기빽스치노", "non_menu_keywords": ["카페 공간_넓고 예쁘다", "가성비 카페"]}
+{"question": "양모로 만든 키링도 팔고 에어컨 시원하게 틀어주면서 투썸처럼 넓은 카페 있으면 추천해줄래?", "type": "menu-complex", "menu_keyword": "양모로 만든 키링", "non_menu_keywords": ["에어컨_시원하다", "투썸_넓다"]}
+{"question": "전철이나 버스타기 전에 마자그란 맛있게 마실 수 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "마자그란", "non_menu_keywords": ["전철이나 버스타기전", "맛"]}
+{"question": "친구랑 대화하기 좋고 다트도 할 수 있는 조용한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "조용한 카페", "non_menu_keywords": ["다트", "친구와 대화하기"]}
+{"question": "사이즈가 다양하고 매장 자리가 꽤 많으면서 식기류도 예쁜 카페 있을까?", "type": "menu-complex", "menu_keyword": "사이즈", "non_menu_keywords": ["매장자리_꽤 있다", "식기류_예쁘다"]}
+{"question": "자몽에이드 맛있고 내부 인테리어가 멋지면서 뷰도 좋은 카페 알려줘.", "type": "menu-complex", "menu_keyword": "자몽에이드", "non_menu_keywords": ["내부 인테리어", "뷰"]}
+{"question": "층고가 높아서 인테리어가 특별하고 집중하기 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "특별한 카페", "non_menu_keywords": ["집중하기 좋은 카페", "인테리어_층고가 높다"]}
+{"question": "백향과요거트스무디 마시면서 혼자만의 시간 보내기 좋은 부부가 가기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "백향과요거트스무디", "non_menu_keywords": ["혼자만의 시간", "부부"]}
+{"question": "자리 넉넉하고 포켓볼도 있어서 기분 좋게 놀 수 있는 장소 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "기분좋은 장소", "non_menu_keywords": ["자리_넉넉하다", "포켓볼_있다"]}
+{"question": "눈꽃빙수 맛있고 가게도 이쁜 게임카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "눈꽃빙수", "non_menu_keywords": ["게임카페", "가게_이쁘다"]}
+{"question": "우유케이크 먹으면서 간단한 식사도 할 수 있고 공방 분위기 예쁜 카페 알려줘.", "type": "menu-complex", "menu_keyword": "우유케이크", "non_menu_keywords": ["간단한 식사", "공방_이쁘다"]}
+{"question": "서울대 근처에서 블루문에이드 맛있고 가성비 좋으면서 행복한 분위기의 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "블루문에이드", "non_menu_keywords": ["서울대 카페_가성비 좋다", "행복한 분위기"]}
+{"question": "고시촌에서 작업하기 좋은 방문 추천 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "방문 추천", "non_menu_keywords": ["고시촌", "작업"]}
+{"question": "노트북 작업하기 좋고 바깥 풍경이 멋진 카페 분위기 좋은 곳 알려줄래?", "type": "menu-complex", "menu_keyword": "카페 분위기", "non_menu_keywords": ["노트북 작업", "바깥 풍경"]}
+{"question": "고시촌에 브라우니 맛있고 홀더가 예쁜 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "브라우니", "non_menu_keywords": ["고시촌", "홀더_예쁘다"]}
+{"question": "율무차 마시면서 재미있는 경험 할 수 있는 게임카페 있을까?", "type": "menu-complex", "menu_keyword": "율무차", "non_menu_keywords": ["재미있는 경험", "게임카페"]}
+{"question": "프라푸치노 퀄리티 좋고 음악 분위기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "프라푸치노", "non_menu_keywords": ["퀄리티", "음악 분위기"]}
+{"question": "오픈런 해야 하는 딸기빽스치노 맛있고 인테리어 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "딸기빽스치노", "non_menu_keywords": ["오픈런", "인테리어_좋다"]}
+{"question": "딥라떼랑 고소한 빵 같이 먹기 좋고 따뜻한 분위기 많은 카페 알려줘.", "type": "menu-complex", "menu_keyword": "딥라떼", "non_menu_keywords": ["고소한 빵", "따뜻한 분위기_많다"]}
+{"question": "궁전다방에서 자리 편하고 선물하기 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "자리", "non_menu_keywords": ["궁전다방", "선물"]}
+{"question": "난곡 할리스 중에 콘센트가 굉장히 많고 제로웨이스트 실천하는 카페 어디야?", "type": "menu-complex", "menu_keyword": "난곡 할리스", "non_menu_keywords": ["콘센트_굉장히 많다", "제로웨이스트 카페"]}
+{"question": "식사 대용으로 먹을 수 있으면서 내가 최애하는 좋은 카페 좀 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "식사 대용", "non_menu_keywords": ["최애 카페", "좋은 카페"]}
+{"question": "햄치즈샌드위치를 맛볼 수 있고 좌석이 다양한 이디야 넓은 매장 추천해줄래?", "type": "menu-complex", "menu_keyword": "햄치즈샌드위치", "non_menu_keywords": ["좌석_다양하다", "이디야_넓다"]}
+{"question": "더위를 식히기 좋고 내부 인테리어가 크면서 편안한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "더위", "non_menu_keywords": ["내부 인테리어_크다", "편안한 카페"]}
+{"question": "연유라떼 맛있고 테이블 두 개 이상 있어서 이야기 나누기 좋은 카페 알려줘.", "type": "menu-complex", "menu_keyword": "연유라떼", "non_menu_keywords": ["테이블_2개 있다", "이야기"]}
+{"question": "에어컨 빵빵하고 트러플머쉬룸수프볼 맛있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "트러플머쉬룸수프볼", "non_menu_keywords": ["에어컨", "맛"]}
+{"question": "땅콩크림라떼 맛있고 야외 좌석이 많으면서 아기자기하고 예쁜 인테리어 카페 있을까?", "type": "menu-complex", "menu_keyword": "땅콩크림라떼", "non_menu_keywords": ["야외 좌석_많다", "인테리어_아기자기하고 예쁘다"]}
+{"question": "오렌지아인슈패너 마실 수 있고 벽지 디자인 예쁘면서 공간이 넓은 층수 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "오렌지아인슈패너", "non_menu_keywords": ["벽지", "층수_공간이 넓다"]}
+{"question": "더운 날에 맞고 카페 인테리어 멋지고 앉을 곳 많은 공간 좋은 카페 어디야?", "type": "menu-complex", "menu_keyword": "더운 날", "non_menu_keywords": ["카페 인테리어_멋지다", "카페 공간_앉을 곳이 많다"]}
+{"question": "단팥크림빵이 맛있고 부부가 커피랑 같이 먹기 좋은 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "단팥크림빵", "non_menu_keywords": ["부부", "커피랑 먹기"]}
+{"question": "재미있는 경험할 수 있고 애견 동반 가능하면서 게임카페 느낌 나는 곳 있을까?", "type": "menu-complex", "menu_keyword": "재미있는 경험", "non_menu_keywords": ["애견동반 카페", "게임카페"]}
+{"question": "건물 로비층에 천고가 높고 인테리어가 멋진 곳에서 포토존이 잘 되어 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "포토존", "non_menu_keywords": ["건물 로비층_천고가 높다", "내부 인테리어_인테리어가 멋지다"]}
+{"question": "애견동반이 가능하고 아지트로 좋은 방문 의향 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "방문 의향", "non_menu_keywords": ["애견동반", "아지트"]}
+{"question": "매장에서 간식도 먹으면서 재미있는 경험할 수 있는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "재미있는 경험", "non_menu_keywords": ["간식", "매장"]}
+{"question": "대학동에 규모가 크고 조용하고 쾌적한 분위기에서 블러커피 맛볼 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "블러커피", "non_menu_keywords": ["조용하고 쾌적한", "대학동 카페_규모가 크다"]}
+{"question": "직원들이 친절하고 실내공간이 편안한 곳에서 롱블랙 맛있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "롱블랙", "non_menu_keywords": ["직원들", "실내공간"]}
+{"question": "세모디와 캘린더 같은 느낌의 카페 추천해주실 수 있어요?", "type": "menu-complex", "menu_keyword": "카페 느낌", "non_menu_keywords": ["세모디", "캘린더"]}
+{"question": "선선한 날씨에 상큼한 맛 음료도 있고 좌석 간격 넓은 카페 어딘지 알려줄래?", "type": "menu-complex", "menu_keyword": "선선한 날씨", "non_menu_keywords": ["상큼한 맛", "좌석 간격_넓다"]}
+{"question": "조용한 음악 틀어주고 커피 마니아랑 함께할 생각 있는 분들에게 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "조용한 음악", "non_menu_keywords": ["커피 마니아", "함께 할 생각"]}
+{"question": "단체 모임 하기 좋은 조용한 내부 인테리어에 에그스크램블 맛있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "에그스크램블", "non_menu_keywords": ["단체 모임", "내부 인테리어_조용하다"]}
+{"question": "건조기 사이즈 크고 콘센트 자리 있는 곳에서 누네띠네스콘 파는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "누네띠네스콘", "non_menu_keywords": ["건조기_사이즈가 크다", "자리_콘센트가 있다"]}
+{"question": "골목 카페 중에서 카페 컨셉이 독특하고 내부 인테리어가 개방감 있는 곳 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "골목 카페", "non_menu_keywords": ["카페 컨셉", "내부 인테리어_개방감 있다"]}
+{"question": "딥라떼 맛있고 화장실도 깔끔하며 좌석 간격이 넓은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "딥라떼", "non_menu_keywords": ["화장실_깔끔하다", "좌석 간격_넓다"]}
+{"question": "바스크치즈케이크가 싸고 빠르게 나오는 빈티지 분위기 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "바스크치즈케이크", "non_menu_keywords": ["싸고 빠르다", "빈티지 분위기"]}
+{"question": "망고스무디 맛있고 귀여우면서 카페 인테리어도 예쁘게 잘 되어 있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "망고스무디", "non_menu_keywords": ["귀여움", "카페 인테리어_예쁘게 잘 되어 있다"]}
+{"question": "저렴한 커피 마실 수 있고 테이크아웃이 예쁘며 매장 자리도 꽤 많은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "저렴한 커피", "non_menu_keywords": ["테이크아웃_이쁘다", "매장자리_꽤 있다"]}
+{"question": "플레이버요거트 파는 곳 중에서 카페 인테리어가 멋지고 깔끔한 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "플레이버요거트", "non_menu_keywords": ["카페 인테리어_멋지다", "카페 인테리어_깔끔하다"]}
+{"question": "미숫가루라떼 맛있고 좌석도 다양하며 직원 복장이 청결한 카페 있을까?", "type": "menu-complex", "menu_keyword": "미숫가루라떼", "non_menu_keywords": ["좌석_다양하다", "복장_청결하다"]}
+{"question": "시금치치아바타 맛볼 수 있고 숨은 카페면서 카공족에게 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "시금치치아바타", "non_menu_keywords": ["숨은 카페", "카공족"]}
+{"question": "우유슬러시 파는 공부하기 좋은 카페 중에 홀더도 잘 갖춰진 곳 추천해줘.", "type": "menu-complex", "menu_keyword": "우유슬러시", "non_menu_keywords": ["공부하기 좋은 카페", "홀더"]}
+{"question": "할로윈 테마에 맞춘 화장실이 깨끗하게 잘 관리되고 이용하기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "할로윈 테마", "non_menu_keywords": ["화장실_깨끗하게 잘 관리되어 있다", "이용하기 좋은 카페"]}
+{"question": "우유빙수 먹으면서 크리스마스 분위기 느낄 수 있고 좌석도 널널한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "우유빙수", "non_menu_keywords": ["크리스마스 분위기", "좌석_널널하다"]}
+{"question": "여자친구랑 가기 좋은 혼자도 편안하게 쉴 수 있고 인테리어가 맘에 드는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "혼자", "non_menu_keywords": ["카페 인테리어_맘에 든다", "여자친구"]}
+{"question": "따뜻한 분위기에 회의실도 있는데 담배냄새 안 나는 카페 있을까?", "type": "menu-complex", "menu_keyword": "담배냄새", "non_menu_keywords": ["따뜻한 분위기", "회의실"]}
+{"question": "개인 작업하기 좋고 소파자리도 나름 괜찮은 데서 카페모카 맛있는 곳 알려줘.", "type": "menu-complex", "menu_keyword": "카페모카", "non_menu_keywords": ["소파자리_나름 괜찮다", "개인작업_있다"]}
+{"question": "운동 후 방문하기 좋고 공부할 공간이 있으면서 창문뷰가 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "운동 후 방문", "non_menu_keywords": ["공부할 공간", "창문뷰_좋다"]}
+{"question": "크리스마스 분위기 속에서 문화생활도 즐길 수 있는 기분 좋은 장소 추천해줄래?", "type": "menu-complex", "menu_keyword": "기분좋은 장소", "non_menu_keywords": ["크리스마스 분위기", "문화생활"]}
+{"question": "신림에 넓고 조명 분위기가 눈 편안한 단체 모임 가능한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "단체 모임", "non_menu_keywords": ["신림카페_넓다", "조명 분위기_눈이 편하다"]}
+{"question": "콜드브루원액이 맛있고 재방문하고 싶은 맛집 같은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "콜드브루원액", "non_menu_keywords": ["재방문", "맛집"]}
+{"question": "가게가 따뜻하고 공유 자리도 넓은 옥수수크림라떼 맛있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "옥수수크림라떼", "non_menu_keywords": ["가게_따뜻하다", "공유 자리_넓다"]}
+{"question": "블랙앤화이트 인테리어에 코스터도 예쁜 에그타르트 맛집 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "에그타르트", "non_menu_keywords": ["블랙앤화이트 인테리어", "코스터_예쁘다"]}
+{"question": "카라멜팝콘 메뉴도 맛있고 청량한 분위기에 이디야 중에서 넓은 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "카라멜팝콘", "non_menu_keywords": ["청량한 분위기", "이디야_넓다"]}
+{"question": "홀더 메뉴가 있고 지하철역에서 가까우면서 모던한 분위기의 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "홀더", "non_menu_keywords": ["지하철역_가깝다", "모던한 분위기"]}
+{"question": "입문자도 편하게 갈 수 있고 포포 캐릭터가 있는 공유 자리 넓은 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "입문자", "non_menu_keywords": ["포포 캐릭터", "공유 자리_넓다"]}
+{"question": "흑임자라떼 마시면서 주변 경치도 좋고 회의실도 마련된 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "흑임자라떼", "non_menu_keywords": ["주변 경치", "회의실"]}
+{"question": "아지트 카페 찾는데 야외 좌석이 예쁘고 인테리어는 빈티지한 곳 있을까?", "type": "menu-complex", "menu_keyword": "아지트 카페", "non_menu_keywords": ["야외 좌석_예쁘다", "카페 인테리어_빈티지하다"]}
+{"question": "ABC주스 맛있고 크리스마스 분위기가 물씬 나는 가게 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "ABC주스", "non_menu_keywords": ["가게", "크리스마스 분위기"]}
+{"question": "에스프레소 맛집 가게 중에서 진짜 추천할 만한 곳 알려줘.", "type": "menu-complex", "menu_keyword": "에스프레소", "non_menu_keywords": ["추천", "가게"]}
+{"question": "딸기피치요거놀라빙수 메뉴 있고 단체 좌석도 넓직하며 내부 인테리어 깔끔한 카페 있을까?", "type": "menu-complex", "menu_keyword": "딸기피치요거놀라빙수", "non_menu_keywords": ["단체 좌석", "내부 인테리어_넓직하다"]}
+{"question": "얼그레이밀크티 시키고 안에서 편하게 주문할 수 있으면서 평온한 시간을 보낼 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "얼그레이밀크티", "non_menu_keywords": ["안에서 주문하는 것", "평온한 시간"]}
+{"question": "매장홀이 넓고 깨끗하며 예쁜 분위기인 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "매장홀", "non_menu_keywords": ["넓고 깨끗한 분위기", "카페_예쁘다"]}
+{"question": "아포가토 맛있고 테이블 2개 있는 혼자만의 시간 보내기 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "아포가토", "non_menu_keywords": ["테이블_2개 있다", "혼자만의 시간"]}
+{"question": "치아바타 맛도 좋고 데이트하기 좋으면서 게임카페도 함께 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "치아바타", "non_menu_keywords": ["데이트 장소", "게임카페"]}
+{"question": "에그타르트 맛있고 실내 공간 깔끔하며 위생 관리 잘 되는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "에그타르트", "non_menu_keywords": ["실내공간_깔끔하다", "위생"]}
+{"question": "좌석 편안하고 조용하며 커피가 깔끔한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "좌석", "non_menu_keywords": ["조용한 카페", "커피_깨끗하다"]}
+{"question": "혼자 노트북 하면서 포켓볼도 할 수 있고 분위기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "혼자 노트북", "non_menu_keywords": ["포켓볼_있다", "카페 분위기"]}
+{"question": "개방감 좋고 인테리어 편안하며 에어컨 잘 나오는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "개방감", "non_menu_keywords": ["카페 인테리어_편안하다", "에어컨"]}
+{"question": "달고나라떼 맛있고 내부 인테리어 아늑하며 컵도 예쁜 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "달고나라떼", "non_menu_keywords": ["내부 인테리어_아늑하다", "컵_이쁘다"]}
+{"question": "자몽우유 맛있고 카페 공간 예쁘고 깔끔하며 조용하고 쾌적한 곳 있을까?", "type": "menu-complex", "menu_keyword": "자몽우유", "non_menu_keywords": ["카페 공간_예쁘고 깔끔하다", "조용하고 쾌적한"]}
+{"question": "간식 맛있고 분위기 좋으면서 시간 때우기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "간식", "non_menu_keywords": ["카페 분위기", "시간 때우기 좋은 카페"]}
+{"question": "층수가 적당하고 벽에 보드게임 있고 홀더도 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "층수", "non_menu_keywords": ["벽_보드게임이 있다", "홀더_예쁘다"]}
+{"question": "생일 기념으로 조용한 독서 공간이 있으면서 집중하기 좋은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "집중하기 좋은 카페", "non_menu_keywords": ["생일 기념", "조용한 독서 공간"]}
+{"question": "눈치 주는 분위기면서 간단한 식사가 가능하고 키오스크가 빨라서 편한 카페 있을까?", "type": "menu-complex", "menu_keyword": "눈치 주는 분위기", "non_menu_keywords": ["간단한 식사", "키오스크_빠르다"]}
+{"question": "밤마들렌 맛있고 싸면서 빠르고, 지하 공간이 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "밤마들렌", "non_menu_keywords": ["싸고 빠르다", "지하 공간_좋다"]}
+{"question": "베이커리가 맛있고 넓고 깨끗한 분위기에 지하 공간도 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "베이커리", "non_menu_keywords": ["넓고 깨끗한 분위기", "지하 공간"]}
+{"question": "디카페인아메리카노를 판다면 편안한 분위기에 테이크아웃 시 친환경 용기 사용하는 카페 있을까?", "type": "menu-complex", "menu_keyword": "디카페인아메리카노", "non_menu_keywords": ["편안한 카페", "테이크아웃_친환경 용기 사용"]}
+{"question": "생일 기념하기 좋고 내부 인테리어가 아늑한데 떡갈비버거가 맛있는 카페 알려줘.", "type": "menu-complex", "menu_keyword": "떡갈비버거", "non_menu_keywords": ["생일 기념", "내부 인테리어_아늑하다"]}
+{"question": "블루문에이드 마시면서 재미있는 경험도 할 수 있고 사이즈도 만족스러운 카페 있을까?", "type": "menu-complex", "menu_keyword": "블루문에이드", "non_menu_keywords": ["재미있는 경험", "사이즈"]}
+{"question": "천국 같은 느낌에 화장실 이용에 불편함 없고 일기 쓰기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "천국", "non_menu_keywords": ["화장실_이용에 불편함이 없다", "일기"]}
+{"question": "호지차라떼 맛있고 점포가 깨끗하며 넓고 쾌적한 공간을 가진 카페 있을까?", "type": "menu-complex", "menu_keyword": "호지차라떼", "non_menu_keywords": ["점포_깨끗하다", "넓고 쾌적한 공간"]}
+{"question": "더위 날리기 좋은 빈티지 분위기에 야외 좌석이 예쁜 카페 어디 있는지 알려줘.", "type": "menu-complex", "menu_keyword": "더위", "non_menu_keywords": ["빈티지 분위기", "야외 좌석_예쁘다"]}
+{"question": "커피스콘 맛있고 테라스에서 시원하게 앉을 수 있는 테이블 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "커피스콘", "non_menu_keywords": ["테이블", "테라스_시원하다"]}
+{"question": "기분 좋은 경험할 수 있고 화장실도 깨끗하게 잘 관리된, 수다 떨기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "기분좋은 경험", "non_menu_keywords": ["화장실_깨끗하게 잘 관리되어 있다", "수다"]}
+{"question": "저녁 외식으로 혼자 노트북 작업하면서 콘센트가 굉장히 많은 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "저녁 외식", "non_menu_keywords": ["혼자 노트북", "콘센트_굉장히 많다"]}
+{"question": "궁전다방 느낌 나면서 우유 옵션도 다양하게 선택할 수 있는 디카페인라떼 맛집 있을까?", "type": "menu-complex", "menu_keyword": "디카페인라떼", "non_menu_keywords": ["우유옵션", "궁전다방"]}
+{"question": "샌드위치 맛있고 아기 데려가도 포근한 분위기의 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "샌드위치", "non_menu_keywords": ["포근한 분위기", "아기"]}
+{"question": "레드벨벳케이크 싸고 빠르게 즐길 수 있고 카공하기 좋은 카페 추천 좀 해줘!", "type": "menu-complex", "menu_keyword": "레드벨벳케이크", "non_menu_keywords": ["싸고 빠르다", "카공"]}
+{"question": "따릉이 타고 가기 편하고 매일 마시기 좋은 음악 감상 가능한 카페 있을까?", "type": "menu-complex", "menu_keyword": "음악 감상", "non_menu_keywords": ["따릉이", "매일 마시기 좋은 카페"]}
+{"question": "선선한 날씨에 맞는 상큼한 맛 초코우유 맛집 카페 어디가 좋을까?", "type": "menu-complex", "menu_keyword": "초코우유", "non_menu_keywords": ["선선한 날씨", "상큼한 맛"]}
+{"question": "넓은 공간에 최고 인테리어로 아늑한 분위기 느낄 수 있는 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "넓은 공간", "non_menu_keywords": ["최고", "인테리어_아늑한 분위기"]}
+{"question": "조명 분위기가 좋고 매장에 큰 테이블 있으면서 넓은 개방감까지 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "조명 분위기", "non_menu_keywords": ["매장_큰 테이블이 있다", "넓은 개방감_좋다"]}
+{"question": "저렴한 커피 마시면서 문화생활도 즐기고 매장 이용이 편한 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "저렴한 커피", "non_menu_keywords": ["문화생활", "매장 이용"]}
+{"question": "혼자 가서 편안하게 쉴 수 있고 고소한 빵도 맛있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "편안한 카페", "non_menu_keywords": ["혼자 먹기", "고소한 빵"]}
+{"question": "층별로 나뉘어 있고 까페가 깔끔해서 편안한 분위기 느낄 수 있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "층", "non_menu_keywords": ["편안한 카페", "까페_깔끔하다"]}
+{"question": "고즈넉하고 깔끔한 분위기에 아지트 같은 느낌이 드는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "고즈넉한 분위기", "non_menu_keywords": ["깔끔한 분위기", "아지트"]}
+{"question": "버스타기 편하고 시설이 깨끗하면서 투썸처럼 넓은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "버스타기", "non_menu_keywords": ["시설_깨끗하다", "투썸_넓다"]}
+{"question": "대기 시간이랑 사이즈 배려가 잘 되어 있는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "대기", "non_menu_keywords": ["사이즈", "배려"]}
+{"question": "밥 대신 먹을 수 있고 하루종일 머물 수 있으며 3층이 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "밥대신 먹는거", "non_menu_keywords": ["하루종일 할 수 있는 것", "3층_있다"]}
+{"question": "죠리퐁쉐이크 얼음 낭낭하게 나오고 인테리어 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "죠리퐁쉐이크", "non_menu_keywords": ["얼음 낭낭", "인테리어_좋다"]}
+{"question": "위치가 좋고 아늑해서 편하게 쉴 수 있는 카페 느낌 좋은 곳 어디야?", "type": "menu-complex", "menu_keyword": "위치", "non_menu_keywords": ["아늑한 카페_편하다", "카페 느낌"]}
+{"question": "고시촌 근처 주말에 가기 좋고 상영도 가능한 카페 있을까?", "type": "menu-complex", "menu_keyword": "주말 카페", "non_menu_keywords": ["고시촌", "상영"]}
+{"question": "시나몬크루아상 맛있고 귀여운 분위기에 음료도 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "시나몬크루아상", "non_menu_keywords": ["귀여운 카페", "음료"]}
+{"question": "아름다운 풍경 볼 수 있으면서 대기도 적고 앉을 자리 많은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "아름다운 풍경", "non_menu_keywords": ["대기", "카페 공간_앉을 곳이 많다"]}
+{"question": "매징 메뉴가 맛있고 넓은 공간이라 편한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "매징", "non_menu_keywords": ["넓은 공간_좋다", "카페 공간"]}
+{"question": "얼그레이밀크티 메뉴가 있고 3층에 이벤트도 하는 카페 알려줄 수 있어?", "type": "menu-complex", "menu_keyword": "얼그레이밀크티", "non_menu_keywords": ["이벤트", "3층_있다"]}
+{"question": "친절한 직원에 간판도 멋져서 사진 찍기 좋은 카페 어디 추천해줘?", "type": "menu-complex", "menu_keyword": "친절한 카페", "non_menu_keywords": ["간판", "사진찍기"]}
+{"question": "안락한 분위기에 테이크아웃 용기도 예쁘고 직원들도 친절한 카페 있을까?", "type": "menu-complex", "menu_keyword": "안락한 분위기", "non_menu_keywords": ["테이크아웃_이쁘다", "직원들"]}
+{"question": "허니버터칩 파는 작은 가게 감성에 여유로운 분위기 느낄 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "허니버터칩", "non_menu_keywords": ["작은가게 감성", "여유로운 분위기"]}
+{"question": "창문뷰가 멋지고 여자친구랑 가기 좋은 특별한 메뉴 있는 카페 어디야?", "type": "menu-complex", "menu_keyword": "창문뷰", "non_menu_keywords": ["특별한 메뉴", "여자친구"]}
+{"question": "요거트 덕후인 내가 가기 좋은 점포가 깨끗하고 매장 내부가 감각적으로 변한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "요거트 덕후", "non_menu_keywords": ["점포_깨끗하다", "매장 내부_감각적으로 변했다"]}
+{"question": "코스터도 예쁘고 대화하기 좋으며 폭풍수다 떨기 좋은 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "코스터", "non_menu_keywords": ["대화하기 좋은 카페", "폭풍수다"]}
+{"question": "미숫가루라떼도 맛있고 테이크아웃할 때 친환경 용기를 사용하는 편안히 쉴 수 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "미숫가루라떼", "non_menu_keywords": ["테이크아웃_친환경 용기 사용", "편안한 휴식"]}
+{"question": "프라이빗 공간에서 이야기하기 좋고 창문뷰가 멋진 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "프라이빗 공간", "non_menu_keywords": ["이야기", "창문뷰_좋다"]}
+{"question": "코스터도 멋지고 좌석이 다양하면서 테이블에서 힐링할 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "코스터", "non_menu_keywords": ["좌석_다양하다", "테이블_힐링되는 곳이다"]}
+{"question": "사장님이 직접 운영하시고 카페 공간이 넓고 예쁜 고급 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "사장님", "non_menu_keywords": ["카페 공간_넓고 예쁘다", "고급 카페"]}
+{"question": "홈카페 분위기 나는 아늑한 인테리어에 상큼한 맛 음료가 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "홈카페", "non_menu_keywords": ["카페 인테리어_아늑하다", "상큼한 맛"]}
+{"question": "백억커피 마시면서 생일 기념하기 좋은 프라이빗 공간 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "백억커피", "non_menu_keywords": ["프라이빗 공간_용도 좋다", "생일 기념"]}
+{"question": "건물 로비층에 있고 커피 마니아들이 좋아하는 숲속 카페 알려줄 수 있어?", "type": "menu-complex", "menu_keyword": "건물 로비층", "non_menu_keywords": ["커피 마니아", "숲속 카페"]}
+{"question": "싸고 빠르면서 혼자 책 읽기 좋고 인테리어 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "싸고 빠르다", "non_menu_keywords": ["혼자 책읽기", "카페 인테리어_예쁘다"]}
+{"question": "유자마들렌 맛있고 야외 좌석 많으면서 에어컨도 시원한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "유자마들렌", "non_menu_keywords": ["야외 좌석_많다", "에어컨_시원하다"]}
+{"question": "산책하기 좋고 책 읽기 좋은 위치에 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "위치", "non_menu_keywords": ["산책", "책읽기 좋은 카페"]}
+{"question": "다트도 할 수 있고 숲뷰가 멋진 카페 방문 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "방문 추천", "non_menu_keywords": ["다트", "숲뷰"]}
+{"question": "운동 후 방문하기 좋고 식물 인테리어가 멋진 카페 느낌 어떤 곳 있을까?", "type": "menu-complex", "menu_keyword": "카페 느낌", "non_menu_keywords": ["운동 후 방문", "식물 인테리어_좋다"]}
+{"question": "아이들 활동하기 좋은 곳 중에 커피 한잔하면서 버스타기 편한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "아이들 활동", "non_menu_keywords": ["커피 한잔", "버스타기"]}
+{"question": "라떼아트가 예쁘고 가족 모임하기 좋으면서 BGM 선곡이 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "라떼아트", "non_menu_keywords": ["가족 모임", "BGM선곡"]}
+{"question": "텀블러 가져가도 되고 한적한 분위기에 청결한 매장인 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "텀블러", "non_menu_keywords": ["한적한 분위기", "청결한 매장_좋다"]}
+{"question": "투썸처럼 넓고 벽지 인테리어도 멋진 얼그레이초코케이크 맛있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "얼그레이초코케이크", "non_menu_keywords": ["투썸_넓다", "벽지"]}
+{"question": "레몬딸기에이드도 맛있고 브런치 메뉴에 청결한 매장이 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "레몬딸기에이드", "non_menu_keywords": ["브런치", "청결한 매장"]}
+{"question": "스타벅스 같은 곳 중에서 화장실이 가까워서 편한 등 관련 메뉴 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "등", "non_menu_keywords": ["스타벅스", "화장실_가깝다"]}
+{"question": "카우쿠키 먹으면서 힐링할 수 있고 넓은 공간이 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "카우쿠키", "non_menu_keywords": ["힐링 공간", "넓은 공간_좋다"]}
+{"question": "트리 모양이 있고 충전 가능하며 내부 인테리어 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "트리", "non_menu_keywords": ["충전", "내부 인테리어_예쁘다"]}
+{"question": "관악지역에서 더위를 식히면서 페타치즈감자샐러드도 맛볼 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "페타치즈감자샐러드", "non_menu_keywords": ["관악지역", "더위"]}
+{"question": "넓고 깨끗한 분위기에 1인 카페로 좋은 청사과요거트 맛집 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "청사과요거트", "non_menu_keywords": ["넓고 깨끗한 분위기", "1인 카페"]}
+{"question": "더위를 피하면서 예쁘게 꾸며진 포토존에서 인형도 볼 수 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "인형", "non_menu_keywords": ["더위", "포토존_이쁘게 꾸며져 있다"]}
+{"question": "궁전다방 느낌이 나고 혼자 공부하기 좋은 곳에서 슈톨렌 파는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "슈톨렌", "non_menu_keywords": ["궁전다방", "혼자 공부하기"]}
+{"question": "직원들이 친절하고 주차가 바로 옆인 곳에서 민트초코라떼 맛있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "민트초코라떼", "non_menu_keywords": ["직원들", "주차_바로 옆이다"]}
+{"question": "혼자 커피 마시면서 수다떨기 좋은 재미있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "수다떨기", "non_menu_keywords": ["혼자 커피", "마셔보는 재미"]}
+{"question": "휴식 취하기 좋고 갬성 있는 분위기에서 행사 때 구입하기 좋은 메뉴가 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "행사때 구입하기 좋은 것", "non_menu_keywords": ["휴식", "갬성 카페"]}
+{"question": "답답하지 않고 음악 감상하기 좋은 가게에서 바게트 맛있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "바게트", "non_menu_keywords": ["가게_답답하지 않다", "음악 감상"]}
+{"question": "인테리어 예쁘고 골목 속에서 편안한 분위기의 과카몰리 메뉴 있는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "과카몰리", "non_menu_keywords": ["인테리어_예쁘다", "골목 카페_편안하다"]}
+{"question": "애견동반 가능하고 아늑한 인테리어인 곳에서 녹차 잘하는 카페 있을까?", "type": "menu-complex", "menu_keyword": "녹차", "non_menu_keywords": ["애견동반 카페", "카페 인테리어_아늑하다"]}
+{"question": "해장 음료도 맛있고 내부 인테리어에 예쁜 홀더가 있는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "해장 음료", "non_menu_keywords": ["내부 인테리어", "홀더_예쁘다"]}
+{"question": "문화생활 즐기기 좋고 주차도 편한 인스타카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "인스타카페", "non_menu_keywords": ["문화생활", "주차_좋다"]}
+{"question": "혼자 가서 커피향 가득하고 인테리어 예쁜 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "혼자", "non_menu_keywords": ["커피향", "카페 인테리어_예쁘다"]}
+{"question": "좌석이 많고 가나슈케이크 같은 특별한 메뉴가 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "가나슈케이크", "non_menu_keywords": ["좌석_많다", "특별한 메뉴"]}
+{"question": "버스타기 편하고 카페 분위기가 좋은 그린티 맛집 추천해줘.", "type": "menu-complex", "menu_keyword": "그린티", "non_menu_keywords": ["카페 분위기", "버스타기"]}
+{"question": "요거트 덕후를 위한 킹덤빙수 같은 슬러시 형태 메뉴 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "킹덤빙수", "non_menu_keywords": ["요거트 덕후", "슬러시 형태"]}
+{"question": "오픈한 스타벅스 중에서 안에서 주문하면서 주변 경치도 볼 수 있는 곳 있어?", "type": "menu-complex", "menu_keyword": "주변 경치", "non_menu_keywords": ["안에서 주문하는 것", "오픈한 스타벅스"]}
+{"question": "야외 좌석이 좋고 충전도 가능한 쌀치즈케이크 맛집 알려줄래?", "type": "menu-complex", "menu_keyword": "쌀치즈케이크", "non_menu_keywords": ["야외 좌석_좋다", "충전_있다"]}
+{"question": "빈티지 분위기에서 함께 생일 기념하기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "생일 기념", "non_menu_keywords": ["함께", "빈티지 분위기"]}
+{"question": "작업하기 좋고 생각보다 자리가 많은 고소한 빵 맛집 있을까?", "type": "menu-complex", "menu_keyword": "고소한 빵", "non_menu_keywords": ["작업하기 좋은 카페", "자리_생각보다 많다"]}
+{"question": "카라멜마끼야또 맛있고 테이블도 쾌적하면서 바깥 풍경이 좋은 카페 있어요?", "type": "menu-complex", "menu_keyword": "카라멜마끼야또", "non_menu_keywords": ["테이블_쾌적하다", "바깥 풍경"]}
+{"question": "사람이 많아도 생각보다 자리가 많고 콘센트가 자리마다 잘 되어 있는 카페 추천해줄래요?", "type": "menu-complex", "menu_keyword": "사람들", "non_menu_keywords": ["자리_생각보다 많다", "콘센트_자리마다 잘 되어 있다"]}
+{"question": "친환경 빨대 사용하고 커피 맛도 좋은 좋은 카페 어디 있을까요?", "type": "menu-complex", "menu_keyword": "좋은 카페", "non_menu_keywords": ["빨대_친환경적이다", "커피"]}
+{"question": "작은 빵집인데 들어오면 좌석도 편하고 매력적인 카페 추천해줘요.", "type": "menu-complex", "menu_keyword": "매력", "non_menu_keywords": ["작은 빵집", "좌석_들어왔다"]}
+{"question": "혼자만의 시간 보내기 좋은 시원한 테라스가 있고 땅콩과자 맛있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "땅콩과자", "non_menu_keywords": ["혼자만의 시간", "테라스_시원하다"]}
+{"question": "쉐이크 맛있고 카페 비주얼도 좋으면서 즐거운 분위기 있는 곳 알려줄래요?", "type": "menu-complex", "menu_keyword": "쉐이크", "non_menu_keywords": ["카페 비주얼", "즐거운 분위기"]}
+{"question": "바노피파이랑 슬러시 형태의 음료가 있고 빵집 느낌 나는 카페 추천해 주세요.", "type": "menu-complex", "menu_keyword": "바노피파이", "non_menu_keywords": ["슬러시 형태", "빵집"]}
+{"question": "친구랑 만날 때 시원한 테라스가 있는 가게 추천해줄 수 있을까요?", "type": "menu-complex", "menu_keyword": "친구와의 만남", "non_menu_keywords": ["테라스_시원하다", "가게"]}
+{"question": "앤틱 분위기면서 숲속에 있고 혼자 공부하기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "앤틱 분위기", "non_menu_keywords": ["숲속 카페", "혼자 공부하기"]}
+{"question": "리코타치즈샐러드도 맛있고 내부 인테리어가 개방감 있으면서 스타벅스 같은 느낌 나는 곳 있을까요?", "type": "menu-complex", "menu_keyword": "리코타치즈샐러드", "non_menu_keywords": ["내부 인테리어_개방감 있다", "스타벅스"]}
+{"question": "맛있고 좋은 빵집 중에서 화장실도 깨끗하게 잘 관리되어 있는 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "빵집", "non_menu_keywords": ["맛있고 좋다", "화장실_깨끗하게 잘 관리되어 있다"]}
+{"question": "애견동반 가능하고 지하철역 가까운 작업하기 좋은 카페 알려줘.", "type": "menu-complex", "menu_keyword": "작업", "non_menu_keywords": ["애견동반", "지하철역_가깝다"]}
+{"question": "자몽차가 맛있고 카페 공간이 좋으면서 지하 공간도 멋진 곳 있을까?", "type": "menu-complex", "menu_keyword": "자몽차", "non_menu_keywords": ["카페 공간_좋다", "지하 공간_좋다"]}
+{"question": "만남의 장소로 좋고 매장 자리가 꽤 있는 이용하기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "이용하기 좋은 카페", "non_menu_keywords": ["만남의 장소", "매장자리_꽤 있다"]}
+{"question": "다락방 느낌 나면서 자녀와 함께 다트도 즐길 수 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "다락방 느낌", "non_menu_keywords": ["자녀", "다트"]}
+{"question": "바질닭가슴살파니니 메뉴가 있고 아기자기한 분위기에 혼자 커피 마시기 좋은 카페 알려줘.", "type": "menu-complex", "menu_keyword": "바질닭가슴살파니니", "non_menu_keywords": ["카페_아기자기하다", "혼자 커피"]}
+{"question": "갬성 카페 중에서 충전하기 좋고 가족 모임에도 적합한 곳 있을까?", "type": "menu-complex", "menu_keyword": "갬성 카페", "non_menu_keywords": ["충전", "가족 모임"]}
+{"question": "아이스크림 메뉴가 있고 매장에 큰 테이블이 있으며 친절한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "아이스크림", "non_menu_keywords": ["매장_큰 테이블이 있다", "친절한 카페"]}
+{"question": "자색고구마라떼가 맛있고 바깥 풍경이 멋지며 넓은 공간을 가진 카페 있을까?", "type": "menu-complex", "menu_keyword": "자색고구마라떼", "non_menu_keywords": ["바깥 풍경", "넓은 공간"]}
+{"question": "더운 날에 건조기가 있고 야외 좌석도 마련된 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "건조기", "non_menu_keywords": ["야외 좌석_있다", "더운 날"]}
+{"question": "부부가 자주 가고 싶은 멋진 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "부부", "non_menu_keywords": ["자주 가고 싶은 카페", "멋진 카페"]}
+{"question": "개방감 좋고 따릉이 타고 수다 떨기 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "개방감", "non_menu_keywords": ["따릉이", "수다떨기"]}
+{"question": "차분한 분위기에 고급진 인테리어와 여유로운 분위기 느낄 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "차분한 분위기", "non_menu_keywords": ["내부 인테리어_고급진", "여유로운 분위기"]}
+{"question": "버스타고 가기 편하면서 좌석이 널널하고 창가 자리 있는 카페 어디야?", "type": "menu-complex", "menu_keyword": "버스타기", "non_menu_keywords": ["좌석_널널하다", "창가자리"]}
+{"question": "옥수수크림라떼 맛있고 친구와 대화하기 좋으면서 자리가 생각보다 많은 카페 알려줘.", "type": "menu-complex", "menu_keyword": "옥수수크림라떼", "non_menu_keywords": ["친구와 대화하기", "자리_생각보다 많다"]}
+{"question": "초코쉐이크 맛있고 갬성 넘치면서 시간 보내기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "초코쉐이크", "non_menu_keywords": ["갬성 카페", "시간 보내기 좋은 곳"]}
+{"question": "통밀빵이 맛있고 매장의 개방감도 좋으며 자리가 넉넉한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "통밀빵", "non_menu_keywords": ["매장_개방감이 있다", "자리_넉넉하다"]}
+{"question": "미숫가루스무디 마시기 좋고 내부가 조용하면서 테이블도 쾌적한 카페 있을까?", "type": "menu-complex", "menu_keyword": "미숫가루스무디", "non_menu_keywords": ["내부 인테리어_조용하다", "테이블_쾌적하다"]}
+{"question": "탁 트여있는 느낌에 숲속에 있고 테라스가 예쁜 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "탁 트여있는 느낌", "non_menu_keywords": ["숲속 카페", "테라스_예쁘다"]}
+{"question": "치킨너겟도 있고 복장이 청결하며 점포가 깨끗한 카페 어디야?", "type": "menu-complex", "menu_keyword": "치킨너겟", "non_menu_keywords": ["복장_청결하다", "점포_깨끗하다"]}
+{"question": "이야기 나누기 좋고 콘센트가 엄청 많은 카페 중에서 느낌 좋은 곳 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "이야기", "non_menu_keywords": ["콘센트_굉장히 많다", "카페 느낌"]}
+{"question": "혼자 가기 좋은 벽에 보드게임이 있는 모양 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "모양", "non_menu_keywords": ["혼자", "벽_보드게임이 있다"]}
+{"question": "포포 캐릭터가 있고 까눌레가 맛있는 집중하기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "까눌레", "non_menu_keywords": ["포포 캐릭터", "집중하기 좋은 카페"]}
+{"question": "운동 후 쉬어가기 좋은 스터디카페 느낌 나는 곳 있을까?", "type": "menu-complex", "menu_keyword": "운동 후 방문", "non_menu_keywords": ["스터디카페_좋다", "쉬어가기"]}
+{"question": "벽지가 예쁘고 친환경 빨대를 사용하는 꽃이 잘 꾸며진 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "벽지", "non_menu_keywords": ["빨대_친환경적이다", "꽃_예쁘다"]}
+{"question": "지하 공간이 멋지고 코코넛커피스무디가 있는 재미있는 경험 할 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "코코넛커피스무디", "non_menu_keywords": ["지하 공간_좋다", "재미있는 경험"]}
+{"question": "책과 커피가 잘 어울리고 루프탑 뷰가 좋은 조아요 카페 있어?", "type": "menu-complex", "menu_keyword": "조아요", "non_menu_keywords": ["책과 커피", "루프탑_좋다"]}
+{"question": "직원들이 친절하고 혼자 공부하기 편하며 반려동물도 데려갈 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "직원들", "non_menu_keywords": ["혼자 공부하기", "반려동물 동반"]}
+{"question": "작은가게 감성에 힙하면서 다트도 즐길 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "다트", "non_menu_keywords": ["작은가게 감성", "힙한 카페"]}
+{"question": "저녁 외식하기 좋고 팝콘치킨 메뉴에 아늑한 인테리어가 돋보이는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "팝콘치킨", "non_menu_keywords": ["저녁 외식", "카페 인테리어_아늑하다"]}
+{"question": "가끔 방문할 수 있으면서 좋은 공간인 최애 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "최애 카페", "non_menu_keywords": ["가끔 방문", "좋은 공간"]}
+{"question": "여자친구랑 가기 좋은 벽지가 귀여운 치즈프라페 맛집 있을까?", "type": "menu-complex", "menu_keyword": "치즈프라페", "non_menu_keywords": ["벽지_귀엽다", "여자친구"]}
+{"question": "층고가 높고 인테리어가 멋진, 만남의 장소로 좋은 느낌의 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "좋은 느낌의 카페", "non_menu_keywords": ["인테리어_층고가 높다", "만남의 장소"]}
+{"question": "24시간 운영하고 키즈카페도 함께 있는 앙버터크로플 맛집 추천해줘.", "type": "menu-complex", "menu_keyword": "앙버터크로플", "non_menu_keywords": ["24시간 카페", "키즈카페"]}
+{"question": "콘센트도 있고 좌석이 넓고 편안한 벽 인테리어 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "벽", "non_menu_keywords": ["콘센트_있다", "좌석_넓고 편하다"]}
+{"question": "건조기 시설도 있으면서 카페 분위기도 예쁜 곳 추천해줄래?", "type": "menu-complex", "menu_keyword": "건조기", "non_menu_keywords": ["카페 분위기", "예쁜 카페"]}
+{"question": "테이블이 쾌적하고 모양도 좋은 조용한 대화하기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "조용한 대화", "non_menu_keywords": ["테이블_쾌적하다", "모양"]}
+{"question": "애견동반 가능하고 인테리어도 좋은 로얄밀크티쉐이크 맛집 알려줘.", "type": "menu-complex", "menu_keyword": "로얄밀크티쉐이크", "non_menu_keywords": ["애견동반 카페", "인테리어_좋다"]}
+{"question": "집근처에 테이블 간격이 여유로운 가게형 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "집근처 카페", "non_menu_keywords": ["테이블_간격 여유롭다", "가게"]}
+{"question": "산책 후에 가기 좋고 이벤트도 활발한 담배냄새 없는 카페 있나?", "type": "menu-complex", "menu_keyword": "담배냄새", "non_menu_keywords": ["산책", "이벤트"]}
+{"question": "안락한 분위기에 등 받침대도 편해서 혼자 노트북 하기 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "안락한 분위기", "non_menu_keywords": ["등_좋다", "혼자 노트북"]}
+{"question": "예쁘고 테라스도 시원한 데다가 직원들이 친절한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "예쁜 카페", "non_menu_keywords": ["친절한 카페", "테라스_시원하다"]}
+{"question": "딸기젤라또 맛있고 카페 공간도 예쁜 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "딸기젤라또", "non_menu_keywords": ["카페_예쁘다", "카페 공간"]}
+{"question": "따릉이 타고 가기 좋고 흡연실도 있으며 좌석 들어오기 편한 카페 있을까?", "type": "menu-complex", "menu_keyword": "따릉이", "non_menu_keywords": ["흡연실_있다", "좌석_들어왔다"]}
+{"question": "보냉팩 잘 챙겨주고 인테리어 감각적인 카페 비주얼 좋은 데 알려줘.", "type": "menu-complex", "menu_keyword": "보냉팩", "non_menu_keywords": ["카페 비주얼", "인테리어_감각적이다"]}
+{"question": "타임을 즐기면서 책읽기 좋고 책과 커피 같이 할 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "타임", "non_menu_keywords": ["책읽기 좋은 카페", "책과 커피"]}
+{"question": "팥절미쉐이크 맛있고 위생도 신경 쓰는 오픈런 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "팥절미쉐이크", "non_menu_keywords": ["오픈런", "위생"]}
+{"question": "도림천 근처에 운동 후 오픈런으로 방문하기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "도림천", "non_menu_keywords": ["오픈런", "운동 후 방문"]}
+{"question": "햇살 좋은 데다 층마다 쾌적하고 배달도 되는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "햇살 좋은 카페", "non_menu_keywords": ["층_쾌적하다", "배달"]}
+{"question": "오레오쿠키 혼자 먹기 좋고 달달한 음료 함께 즐길 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "오레오쿠키", "non_menu_keywords": ["혼자 먹기", "달달한 카페"]}
+{"question": "홀더도 잘 갖춰져 있고 건물 로비층 천고가 높은 반지 만들기 카페 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "반지 만들기", "non_menu_keywords": ["홀더", "건물 로비층_천고가 높다"]}
+{"question": "매장이 깔끔하고 달달한 메뉴가 있는 반려동물 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "반려동물 카페", "non_menu_keywords": ["매장_깔끔하다", "달달한 카페"]}
+{"question": "공방이 이쁘고 탁 트인 느낌에 저렴한 커피 마실 수 있는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "탁 트여있는 느낌", "non_menu_keywords": ["저렴한 커피", "공방_이쁘다"]}
+{"question": "재즈 음악 흐르고 내부 인테리어 구조가 독특한 아담한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "아담한 카페", "non_menu_keywords": ["재즈 음악", "내부 인테리어_구조가 독특하다"]}
+{"question": "점심도 먹을 수 있고 디저트가 맛있는 아지트 같은 카페 있을까?", "type": "menu-complex", "menu_keyword": "점심", "non_menu_keywords": ["디저트 카페", "아지트"]}
+{"question": "메이플넛브레드 맛있고 시원한 분위기와 통유리 카페 알려줄 수 있어?", "type": "menu-complex", "menu_keyword": "메이플넛브레드", "non_menu_keywords": ["시원한 분위기", "통유리 카페"]}
+{"question": "짱구 스티커 이벤트도 하고 모던한 분위기의 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "짱구 스티커", "non_menu_keywords": ["이벤트", "모던한 분위기"]}
+{"question": "청량한 분위기에 데이트 장소로도 좋고 자주 가고 싶은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "청량한 분위기", "non_menu_keywords": ["데이트 장소", "자주 가고 싶은 카페"]}
+{"question": "창가자리가 아기자기하고 예쁘며 테이블도 힐링되는 곳 카페 있을까?", "type": "menu-complex", "menu_keyword": "창가자리", "non_menu_keywords": ["인테리어_아기자기하고 예쁘다", "테이블_힐링되는 곳이다"]}
+{"question": "색감이 예쁘고 탁 트인 공간에서 누텔라와플 즐길 수 있는 카페 알려줘.", "type": "menu-complex", "menu_keyword": "누텔라와플", "non_menu_keywords": ["색감", "탁 트인"]}
+{"question": "행복한 분위기에 넓고 깨끗하고 상쾌한 느낌까지 있는 카페 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "행복한 분위기", "non_menu_keywords": ["넓고 깨끗한 분위기", "상쾌한 분위기"]}
+{"question": "집중하기 좋으면서 즐거운 분위기의 자주 이용하는 카페가 있을까?", "type": "menu-complex", "menu_keyword": "집중하기", "non_menu_keywords": ["즐거운 분위기", "자주 이용하는 카페"]}
+{"question": "아이스크림바닐라라떼 맛있고 내부 인테리어가 멋진 힐링 공간 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "아이스크림바닐라라떼", "non_menu_keywords": ["내부 인테리어_인테리어가 멋지다", "힐링 공간"]}
+{"question": "까눌레가 맛있고 컴포즈 느낌에 야외 좌석도 예쁜 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "까눌레", "non_menu_keywords": ["컴포즈", "야외 좌석_예쁘다"]}
+{"question": "백향과요거트스무디 마시기 좋은 전철이나 버스 타기 전 들르기 좋은 야외 좌석 많은 카페 있어?", "type": "menu-complex", "menu_keyword": "백향과요거트스무디", "non_menu_keywords": ["전철이나 버스타기전", "야외 좌석_많다"]}
+{"question": "빽다방 중에 지브리 감성 풍기고 건조기 사이즈 큰 곳 있으면 추천해줘.", "type": "menu-complex", "menu_keyword": "빽다방", "non_menu_keywords": ["지브리 감성", "건조기_사이즈가 크다"]}
+{"question": "팥라떼 맛있고 야외 좌석 예쁘면서 늦은 시간까지 영업하는 카페 있을까?", "type": "menu-complex", "menu_keyword": "팥라떼", "non_menu_keywords": ["야외 좌석_예쁘다", "늦은 시간 카페"]}
+{"question": "좋은 분위기에 좌석 넓고 편안해서 운동 후 가기 좋은 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "좋은 분위기", "non_menu_keywords": ["좌석_넓고 편하다", "운동 후 방문"]}
+{"question": "안쪽 자리 편하고 휴지통에 영수증 더미 안 넘쳐나면서 빵집인 곳 추천해줘.", "type": "menu-complex", "menu_keyword": "안쪽 자리", "non_menu_keywords": ["휴지통_영수증더미가 넘쳐있지 않다", "빵집"]}
+{"question": "공방 컨셉에 위생 잘 지켜지고 층수가 넓은 공간 있는 카페 있어?", "type": "menu-complex", "menu_keyword": "공방", "non_menu_keywords": ["위생", "층수_공간이 넓다"]}
+{"question": "브라우니도 맛있고 궁전다방 분위기에 대기 시간도 적은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "브라우니", "non_menu_keywords": ["궁전다방", "대기"]}
+{"question": "위스키가 있고 잔잔한 분위기에 테이블 간격이 넓은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "위스키", "non_menu_keywords": ["잔잔한 분위기", "테이블_간격이 떨어져있다"]}
+{"question": "카페모카가 맛있고 콘센트가 굉장히 많은 커피 애호가들을 위한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "카페모카", "non_menu_keywords": ["콘센트_굉장히 많다", "커피 애호가"]}
+{"question": "간식도 맛있고 삭막한 동네에서 작업하기 좋은 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "간식", "non_menu_keywords": ["작업하기 좋은 카페", "삭막한 동네"]}
+{"question": "얼음이 낭낭한 밀크티라떼랑 통유리로 넓은 시야감 있는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "밀크티라떼", "non_menu_keywords": ["얼음 낭낭", "통유리 카페_넓은 시야감이 있다"]}
+{"question": "편안한 분위기에 화장실이 잘 되어 있는 홈카페 스타일 카페 있을까?", "type": "menu-complex", "menu_keyword": "편안한 분위기", "non_menu_keywords": ["화장실_있다", "홈카페"]}
+{"question": "아이스크림 맛있고 매장 홀이 넓으며 화장실도 깨끗하게 관리되는 카페 알려줘.", "type": "menu-complex", "menu_keyword": "아이스크림", "non_menu_keywords": ["매장홀_넓다", "화장실_깨끗하게 잘 유지하다"]}
+{"question": "앤틱한 분위기에 재즈 음악이 흐르고 복장도 청결해야 하는 카페 있어?", "type": "menu-complex", "menu_keyword": "앤틱 분위기", "non_menu_keywords": ["재즈 음악", "복장_청결하다"]}
+{"question": "힐링할 수 있으면서 루프탑 좋고 게임카페도 함께 있는 곳 추천해줄래?", "type": "menu-complex", "menu_keyword": "힐링", "non_menu_keywords": ["루프탑_좋다", "게임카페_있다"]}
+{"question": "초코빵 맛있고 코스터가 예쁘며 가족 모임하기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "초코빵", "non_menu_keywords": ["코스터_예쁘다", "가족 모임_예쁘다"]}
+{"question": "인테리어 소품도 예쁘고 책과 커피 즐기기 좋은, 테이블 다닥다닥 안 붙어있는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "인테리어 소품", "non_menu_keywords": ["책과 커피", "테이블_다닥다닥이지 않다"]}
+{"question": "계란후라이 맛있고 에어컨 시원한 데다가 포토존까지 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "계란후라이", "non_menu_keywords": ["포토존", "에어컨_시원하다"]}
+{"question": "고시촌에 내부 인테리어 고급지고 양모로 만든 키링 같은 소품 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "고시촌", "non_menu_keywords": ["내부 인테리어_고급진", "양모로 만든 키링"]}
+{"question": "새우튀김이 맛있고 재즈 음악 흐르며 디자인 깔끔한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "새우튀김", "non_menu_keywords": ["디자인_깔끔하다", "재즈 음악"]}
+{"question": "팥빙수도 맛있고 이쁜 컵에 음료도 다양한 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "팥빙수", "non_menu_keywords": ["컵_이쁘다", "음료"]}
+{"question": "음악 분위기 좋고 통유리로 넓은 시야감 느끼면서 조용하게 휴식 취할 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "음악 분위기", "non_menu_keywords": ["통유리 카페_넓은 시야감이 있다", "조용하게 휴식을 즐기기"]}
+{"question": "과일크로플 맛있고 카페 인테리어도 맘에 들며 바깥 풍경 멋진 곳 추천해줘.", "type": "menu-complex", "menu_keyword": "과일크로플", "non_menu_keywords": ["카페 인테리어_맘에 든다", "바깥 풍경"]}
+{"question": "말차글레이즈드도넛 혼자 먹기 좋고 신림카페 중에 넓은 곳 어디 있을까?", "type": "menu-complex", "menu_keyword": "말차글레이즈드도넛", "non_menu_keywords": ["혼자 먹기", "신림카페_넓다"]}
+{"question": "에브리데이주스 마시면서 폭풍수다 떨기 좋고 휴식하기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "에브리데이주스", "non_menu_keywords": ["폭풍수다", "휴식"]}
+{"question": "커피밀크쉐이크 맛있고 따릉이 타고 가기 편하며 위생도 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "커피밀크쉐이크", "non_menu_keywords": ["따릉이", "위생"]}
+{"question": "자녀를 위해 학교 근처에 배려심 있는 분위기의 카페 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "자녀", "non_menu_keywords": ["학교 카페", "배려"]}
+{"question": "신림에서 층고가 높고 시원한 테라스가 있는 디저트 카페 어디가 좋을까?", "type": "menu-complex", "menu_keyword": "신림 디저트", "non_menu_keywords": ["인테리어_층고가 높다", "테라스_시원하다"]}
+{"question": "상큼한 맛도 있고 인테리어 예쁜 머무르기 좋은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "머무르기 좋은 카페", "non_menu_keywords": ["상큼한 맛", "인테리어_예쁘다"]}
+{"question": "에놀라톤에서 휴지통이 깨끗하고 친환경 빨대 쓰는 곳 있을까?", "type": "menu-complex", "menu_keyword": "에놀라톤", "non_menu_keywords": ["휴지통_영수증더미가 넘쳐있지 않다", "빨대_친환경적이다"]}
+{"question": "혼자 노트북 하기 좋고 식기류 예쁜 슈크림커피쉐이크 맛집 알려줄래?", "type": "menu-complex", "menu_keyword": "슈크림커피쉐이크", "non_menu_keywords": ["혼자 노트북", "식기류_예쁘다"]}
+{"question": "우롱티 마시면서 아늑하고 편안한 분위기에 배경음악 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "우롱티", "non_menu_keywords": ["아늑한 카페_편하다", "배경음악"]}
+{"question": "지브리 감성 가득한 전체 카페 중 동교라떼 맛집 있으면 추천해줘!", "type": "menu-complex", "menu_keyword": "동교라떼", "non_menu_keywords": ["지브리 감성", "전체 카페"]}
+{"question": "카페 비주얼도 좋고 쾌적한 공간에 게임도 가능한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "쾌적한 공간", "non_menu_keywords": ["카페 비주얼", "게임카페"]}
+{"question": "스타벅스처럼 외관 멋지고 따뜻한 분위기 많은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "외관", "non_menu_keywords": ["스타벅스", "따뜻한 분위기_많다"]}
+{"question": "스카치크림블랙 맛있고 좌석이 좋으며 좌석 간격 넓은 카페 어디가 좋을까?", "type": "menu-complex", "menu_keyword": "스카치크림블랙", "non_menu_keywords": ["좌석_좋다", "좌석 간격_넓다"]}
+{"question": "쌍화차도 맛있고 따뜻한 분위기가 많이 느껴지는 대학동에 규모 큰 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "쌍화차", "non_menu_keywords": ["따뜻한 분위기_많다", "대학동 카페_규모가 크다"]}
+{"question": "산책하기 좋고 간판이 눈에 띄는 오트밀크티 맛집 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "오트밀크티", "non_menu_keywords": ["산책", "간판"]}
+{"question": "사이즈 선택이 다양하고 예쁜 코스터에 화장실도 잘 되어 있는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "사이즈", "non_menu_keywords": ["코스터_예쁘다", "화장실_있다"]}
+{"question": "힐링 공간 같고 민초파도 좋아할 만한 오곡쉐이크 맛집 카페 있을까?", "type": "menu-complex", "menu_keyword": "오곡쉐이크", "non_menu_keywords": ["힐링 공간", "민초파"]}
+{"question": "층수가 많고 공간이 넓어서 공부할 공간으로 좋은 맛집 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "공부할 공간", "non_menu_keywords": ["층수_공간이 넓다", "맛집"]}
+{"question": "에놀라톤 메뉴도 있고 즐거운 분위기에 건물이 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "에놀라톤", "non_menu_keywords": ["즐거운 분위기", "건물_이쁘다"]}
+{"question": "칸막이 좌석으로 개별 공간이 나누어져 있고 게임카페인 집중하기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "집중하기 좋은 카페", "non_menu_keywords": ["칸막이 좌석_개별공간이 나누어져 있다", "게임카페"]}
+{"question": "지인 모임하기에 좌석이 넉넉하고 2층으로 넓은 카페 어디가 좋을까?", "type": "menu-complex", "menu_keyword": "지인 모임", "non_menu_keywords": ["좌석_넉넉하다", "2층 카페_넓다"]}
+{"question": "혼자서 평온한 시간을 보내기 좋고 꽃도 예쁜 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "평온한 시간", "non_menu_keywords": ["꽃_예쁘다", "혼자 카페"]}
+{"question": "초코치즈케이크가 맛있고 색감도 예쁘며 내부 인테리어가 고급진 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "초코치즈케이크", "non_menu_keywords": ["색감", "내부 인테리어_고급진"]}
+{"question": "공유 자리도 있고 배려가 잘 되어 있어서 행사 때 구입하기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "공유 자리", "non_menu_keywords": ["배려", "행사때 구입하기 좋은 것"]}
+{"question": "과일크로플 맛있고 조명이 눈이 편안해서 기분 좋은 경험할 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "과일크로플", "non_menu_keywords": ["조명 분위기_눈이 편하다", "기분좋은 경험"]}
+{"question": "핫도그 맛있고 건물이 예쁘면서 인테리어가 눈을 편안하게 하는 카페 있을까?", "type": "menu-complex", "menu_keyword": "핫도그", "non_menu_keywords": ["건물_이쁘다", "카페 인테리어_눈을 편안하게 한다"]}
+{"question": "타르트 맛있고 좌석 넉넉하면서 귀여운 분위기의 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "타르트", "non_menu_keywords": ["좌석_넉넉하다", "귀여움"]}
+{"question": "가성비 좋고 화장실 깨끗하게 관리되면서 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "가성비 카페", "non_menu_keywords": ["화장실_깨끗하게 잘 관리되어 있다", "예쁜 카페"]}
+{"question": "얼음 낭낭하고 민초파가 혼자 작업하기 좋은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "얼음 낭낭", "non_menu_keywords": ["민초파", "혼자 작업"]}
+{"question": "떡갈비버거 맛있고 함께 가기 좋으면서 간판이 인상적인 카페 있을까?", "type": "menu-complex", "menu_keyword": "떡갈비버거", "non_menu_keywords": ["함께", "간판"]}
+{"question": "말차글레이즈드도넛 맛있고 야외 좌석 넓은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "말차글레이즈드도넛", "non_menu_keywords": ["야외 좌석_있다", "자리_넓다"]}
+{"question": "피스타치오빽스치노 맛있고 지인 모임 하기 좋은 신림역 근처 카페 있을까?", "type": "menu-complex", "menu_keyword": "피스타치오빽스치노", "non_menu_keywords": ["지인 모임", "신림역 카페"]}
+{"question": "2층 좌석 있고 혼자 작업하기 편한 스타벅스 같은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "2층 좌석", "non_menu_keywords": ["혼자 작업", "스타벅스"]}
+{"question": "시즌 느낌 나면서 매장 자리가 꽤 있고 맛도 좋은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "시즌 느낌", "non_menu_keywords": ["매장자리_꽤 있다", "맛"]}
+{"question": "2층에 위치하고 문화생활 즐기기 좋은 깨끗한 인테리어의 카페 있어?", "type": "menu-complex", "menu_keyword": "2층 카페", "non_menu_keywords": ["문화생활", "내부 인테리어_깨끗하다"]}
+{"question": "작고 귀여운데 인테리어가 멋지고 생각보다 자리가 많은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "작고 귀여운 카페", "non_menu_keywords": ["내부 인테리어_인테리어가 멋지다", "자리_생각보다 많다"]}
+{"question": "스콘 맛있고 카페가 커서 편안한 최고의 장소 추천해줄래?", "type": "menu-complex", "menu_keyword": "스콘", "non_menu_keywords": ["카페_커서 좋다", "최고"]}
+{"question": "시장 볼 때 들르기 좋은 테이크아웃 컵이 예쁜 갬성 카페 알려줄 수 있어?", "type": "menu-complex", "menu_keyword": "시장볼때", "non_menu_keywords": ["테이크아웃_이쁘다", "갬성 카페"]}
+{"question": "아기자기한 분위기에서 혼자 커피 마시며 휴식하기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "아기자기한 분위기", "non_menu_keywords": ["혼자 커피", "휴식"]}
+{"question": "대기하는 동안 양모로 만든 키링 모양이 예쁜 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "대기", "non_menu_keywords": ["양모로 만든 키링", "모양"]}
+{"question": "건강식 메뉴에 매장 자리가 꽤 있고 지브리 감성 느껴지는 카페 어디 있니?", "type": "menu-complex", "menu_keyword": "건강식", "non_menu_keywords": ["매장자리_꽤 있다", "지브리 감성"]}
+{"question": "매일 마시기 좋고 수다 떨기 편한 예쁜 코스터 있는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "매일 마시기 좋은 카페", "non_menu_keywords": ["수다", "코스터_예쁘다"]}
+{"question": "스타벅스 중에서 만남의 장소로도 좋고 상큼한 맛이 있는 매장 있어?", "type": "menu-complex", "menu_keyword": "스타벅스", "non_menu_keywords": ["만남의 장소", "상큼한 맛"]}
+{"question": "작고 귀여운 카페 중에서 쿠키밀크쉐이크 맛있고 주차가 바로 옆에 가능한 곳 있나요?", "type": "menu-complex", "menu_keyword": "쿠키밀크쉐이크", "non_menu_keywords": ["작고 귀여운 카페", "주차_바로 옆이다"]}
+{"question": "저녁 외식하기 좋은 포토존도 멋진 키오스크 운영하는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "키오스크", "non_menu_keywords": ["저녁 외식", "포토존_좋다"]}
+{"question": "매장 건물이 멋지고 코스터 디자인 예쁜 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "건물", "non_menu_keywords": ["매징", "코스터_예쁘다"]}
+{"question": "생딸기크림치즈와플 맛있고 화장실 이용에 불편함 없으며 개인 작업 공간도 있는 카페 알려줘.", "type": "menu-complex", "menu_keyword": "생딸기크림치즈와플", "non_menu_keywords": ["화장실_이용에 불편함이 없다", "개인작업_있다"]}
+{"question": "간단한 식사 가능하고 다트도 할 수 있는 홍차우유 맛집 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "홍차우유", "non_menu_keywords": ["간단한 식사", "다트_있다"]}
+{"question": "운치 있는 분위기에 재방문 의사 생길 만한 캘린더도 잘 되어 있는 카페 있나요?", "type": "menu-complex", "menu_keyword": "재방문 의사", "non_menu_keywords": ["캘린더", "운치있다"]}
+{"question": "입문자도 편하게 즐길 수 있는 생쑥찰떡에 카페 공간 좋은 곳 추천해줄래?", "type": "menu-complex", "menu_keyword": "생쑥찰떡", "non_menu_keywords": ["입문자", "카페 공간"]}
+{"question": "편안한 분위기에 디자인 깔끔하고 레몬마들렌 맛있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "레몬마들렌", "non_menu_keywords": ["편안한 카페", "디자인_깔끔하다"]}
+{"question": "신림에 24시간 운영하는 자주 이용하는 빵집 겸 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "자주 이용하는 카페", "non_menu_keywords": ["빵집", "신림카페_24시간 운영"]}
+{"question": "즐거운 분위기 속에서 와플 맛있고 화장실도 깨끗한 카페 어디인지 알려줄래?", "type": "menu-complex", "menu_keyword": "와플", "non_menu_keywords": ["즐거운 분위기", "화장실_깨끗하다"]}
+{"question": "딸기빙수 맛있고 포토존도 잘 되어 있으며 내부 인테리어가 깨끗한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "딸기빙수", "non_menu_keywords": ["포토존", "내부 인테리어_깨끗하다"]}
+{"question": "아포가토 메뉴가 좋고 자리도 넓어서 추천할 만한 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "아포가토", "non_menu_keywords": ["추천", "자리_넓다"]}
+{"question": "신림역 근처에 가게가 깔끔하고 예쁜 카페 있으면 추천해줘.", "type": "menu-complex", "menu_keyword": "신림역 카페", "non_menu_keywords": ["가게_깔끔하다", "예쁜 카페"]}
+{"question": "마카롱도 맛있고 뷰가 좋은 디저트 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "마카롱", "non_menu_keywords": ["뷰", "디저트"]}
+{"question": "커피도 맛있고 작은 빵집 느낌에 따뜻한 분위기인 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "커피", "non_menu_keywords": ["작은 빵집", "따뜻한 분위기"]}
+{"question": "초콜릿땅콩과자 파는 감각적으로 변한 스터디카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "초콜릿땅콩과자", "non_menu_keywords": ["스터디카페", "매장 내부_감각적으로 변했다"]}
+{"question": "팝콘치킨 먹으면서 노트북 작업하기 좋고 관악지역에 쾌적한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "팝콘치킨", "non_menu_keywords": ["노트북 작업", "관악지역_쾌적하다"]}
+{"question": "입구가 멋지고 2층 카페가 넓으면서 상큼한 맛도 있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "입구", "non_menu_keywords": ["2층 카페_넓다", "상큼한 맛"]}
+{"question": "반려동물 동반 가능하고 애견동반 부부들이 가기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "반려동물 동반", "non_menu_keywords": ["애견동반", "부부"]}
+{"question": "인절미빙수 맛있고 신림카페 중 24시간 운영하면서 맛있는 빵집도 있는 곳 있을까?", "type": "menu-complex", "menu_keyword": "인절미빙수", "non_menu_keywords": ["신림카페_24시간 운영", "맛있는 빵집"]}
+{"question": "복숭아케이크 맛있고 혼자 작업하기 좋은 오픈런 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "복숭아케이크", "non_menu_keywords": ["혼자 작업", "오픈런"]}
+{"question": "색감 예쁘고 버스타기 편하며 편안한 휴식 가능한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "색감", "non_menu_keywords": ["버스타기", "편안한 휴식"]}
+{"question": "킹덤빙수 맛있고 음료도 다양하며 테이블 넓은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "킹덤빙수", "non_menu_keywords": ["음료", "테이블_넓다"]}
+{"question": "가족 모임하기 좋고 인테리어가 강추인 만족스러운 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "강추", "non_menu_keywords": ["가족 모임", "카페 인테리어_만족스럽다"]}
+{"question": "유자마들렌 맛있고 창가자리랑 좌석 간격 넓은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "유자마들렌", "non_menu_keywords": ["창가자리", "좌석 간격_넓다"]}
+{"question": "딸기요거트스무디 맛있고 좌석 간격 넓으며 홀더도 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "딸기요거트스무디", "non_menu_keywords": ["좌석 간격_넓다", "홀더"]}
+{"question": "배려심 깊고 숲뷰 보면서 레몬티 마실 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "레몬티", "non_menu_keywords": ["배려", "숲뷰"]}
+{"question": "치즈깜파뉴 맛있고 작은 빵집 느낌에 매장 크고 깔끔한 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "치즈깜파뉴", "non_menu_keywords": ["작은 빵집", "매장_크고 깔끔하다"]}
+{"question": "궁전다방 분위기에 충전도 편한 조아요 메뉴 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "조아요", "non_menu_keywords": ["궁전다방", "충전"]}
+{"question": "입구 넓고 자리 넉넉하며 화장실 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "입구", "non_menu_keywords": ["자리_넉넉하다", "화장실_있다"]}
+{"question": "청결한 매장에 내부 인테리어가 예쁘고 벽지가 멋진 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "청결한 매장", "non_menu_keywords": ["내부 인테리어_예쁘다", "벽지"]}
+{"question": "아인슈패너 맛집으로 내부 인테리어가 개방감 있고 좌석이 넓고 편한 곳 있을까?", "type": "menu-complex", "menu_keyword": "아인슈패너", "non_menu_keywords": ["내부 인테리어_개방감 있다", "좌석_넓고 편하다"]}
+{"question": "지하 공간에서 이벤트나 상영 같은 프로그램도 함께 하는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "지하 공간", "non_menu_keywords": ["이벤트", "상영"]}
+{"question": "24시간 운영하면서 카페 공간이 깨끗하고 넓은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "24시간 카페", "non_menu_keywords": ["카페 공간_깨끗하다", "넓은 공간_좋다"]}
+{"question": "오레오쿠키 맛있고 인테리어 소품이 아기자기하고 예쁘면서 내부가 넓직한 카페 알려줘.", "type": "menu-complex", "menu_keyword": "오레오쿠키", "non_menu_keywords": ["인테리어 소품_아기자기 하고 예쁘다", "내부 인테리어_넓직하다"]}
+{"question": "오픈런으로 구경하는 재미가 있으면서 커피도 맛있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "구경하는 재미", "non_menu_keywords": ["오픈런", "커피"]}
+{"question": "운동 후 쉬어가기 좋은 지하 공간이 잘 되어 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "쉬어가기", "non_menu_keywords": ["지하 공간_좋다", "운동 후 방문"]}
+{"question": "위치도 좋고 카페 공간이 아기자기하고 깔끔한 곳에서 이야기 나누기 좋은 카페 알려줘.", "type": "menu-complex", "menu_keyword": "이야기", "non_menu_keywords": ["위치", "카페 공간_아기자기 깔끔하다"]}
+{"question": "시나몬크루아상이 맛있고 책과 커피 즐기기 좋으며 재방문하고 싶은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "시나몬크루아상", "non_menu_keywords": ["책과 커피", "재방문"]}
+{"question": "좌석 간격 넓고 조명 분위기가 눈이 편한 곳에 양모로 만든 키링 같은 소품이 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "좌석 간격", "non_menu_keywords": ["조명 분위기_눈이 편하다", "양모로 만든 키링"]}
+{"question": "골목에 있으면서 층수가 높고 공간이 넓은 곳에서 아이스아메리카노 마실 수 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "아이스아메리카노", "non_menu_keywords": ["층수_공간이 넓다", "골목 카페"]}
+{"question": "보드게임도 할 수 있고 오늘의 명언 스티커 같은 재미도 있는 곳에서 페퍼민트티 마실 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "페퍼민트티", "non_menu_keywords": ["오늘의 명언 스티커", "보드게임카페"]}
+{"question": "건물 로비층에 천고가 높고 단골들이 자주 가는 음악 감상하기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "음악 감상", "non_menu_keywords": ["단골카페", "건물 로비층_천고가 높다"]}
+{"question": "콘센트가 있는 자리에서 혼자 일기 쓰거나 책 읽기 좋은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "일기", "non_menu_keywords": ["자리_콘센트가 있다", "혼자 책읽기"]}
+{"question": "벽이 인상적이고 좌석도 넓고 편한 조용한 분위기의 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "벽", "non_menu_keywords": ["좌석_넓고 편하다", "조용한 카페"]}
+{"question": "좌석 간격 넓고 지브리 감성 가득한 곳에서 건강주스 마실 수 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "건강주스", "non_menu_keywords": ["좌석 간격_넓다", "지브리 감성"]}
+{"question": "신림에 있으면서 멀티탭이 잘 구비되어 있고 상영도 하는 카페 있을까?", "type": "menu-complex", "menu_keyword": "멀티탭", "non_menu_keywords": ["신림카페", "상영"]}
+{"question": "초코우유랑 디저트 맛있고 스터디하기 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "초코우유", "non_menu_keywords": ["디저트", "스터디카페"]}
+{"question": "가족 모임하기에 좌석도 충분하고 달달한 메뉴가 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "달달한 카페", "non_menu_keywords": ["가족 모임", "좌석_있다"]}
+{"question": "칸막이 좌석으로 개별 공간이 나누어져 있고 마셔보는 재미가 있는 스무디 카페 알려줄 수 있어?", "type": "menu-complex", "menu_keyword": "스무디", "non_menu_keywords": ["칸막이 좌석_개별공간이 나누어져 있다", "마셔보는 재미"]}
+{"question": "신림에서 디저트도 맛있고 공부할 수 있을 만큼 조용하고 쾌적한 공간이 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "신림 디저트", "non_menu_keywords": ["공부할 공간", "조용하고 쾌적한"]}
+{"question": "두부치아바타샌드위치 맛있으면서 탁 트인 분위기에 큰 테이블이 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "두부치아바타샌드위치", "non_menu_keywords": ["탁 트인", "매장_큰 테이블이 있다"]}
+{"question": "조용한 음악이 흐르고 인테리어도 맘에 들면서 따뜻한 느낌의 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "조용한 음악", "non_menu_keywords": ["카페 인테리어_맘에 든다", "가게_따뜻하다"]}
+{"question": "라즈베리파이 메뉴가 있고 편안하면서 좌석도 넉넉한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "라즈베리파이", "non_menu_keywords": ["편안한 카페", "좌석_넉넉하다"]}
+{"question": "입문자도 부담 없이 만남을 갖고 조용하게 휴식하기 좋은 장소가 있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "입문자", "non_menu_keywords": ["만남의 장소", "조용하게 휴식을 즐기기"]}
+{"question": "삭막한 동네에 있으면서 룸카페 컨셉인 곳 중 괜찮은 카페 있을까?", "type": "menu-complex", "menu_keyword": "룸카페", "non_menu_keywords": ["카페 컨셉", "삭막한 동네"]}
+{"question": "매장 자리가 넓고 깨끗한 감성카페 어디 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "매장자리", "non_menu_keywords": ["감성카페", "넓고 깨끗한 분위기"]}
+{"question": "기분 좋고 공부하기 좋은 분위기의 분들이 자주 가는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "분들", "non_menu_keywords": ["기분 좋은", "공부하기 좋은 카페"]}
+{"question": "함께 가기 좋은 기분 좋은 카페 중 인테리어가 독특하게 어우러진 곳 추천해줘.", "type": "menu-complex", "menu_keyword": "함께", "non_menu_keywords": ["카페 인테리어_어우러져 독특하다", "기분 좋은"]}
+{"question": "상영도 하고 커피 애호가들이 좋아할 만한 장소가 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "장소", "non_menu_keywords": ["상영", "커피 애호가"]}
+{"question": "사진 찍기 좋은 카페 중에 짱구 스티커도 있고 화장실 이용에 불편함 없는 곳 있을까 추천해줘?", "type": "menu-complex", "menu_keyword": "사진 찍기 좋은 카페", "non_menu_keywords": ["짱구 스티커", "화장실_이용에 불편함이 없다"]}
+{"question": "애견동반 가능하면서 매일 마시기 좋고 이용하기 편한 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "애견동반", "non_menu_keywords": ["매일 마시기 좋은 카페", "이용하기 좋은 카페"]}
+{"question": "쌍화차가 맛있고 코스터도 예쁘며 야외 좌석에 앉을 수 있는 테이블 있는 카페 알려줘.", "type": "menu-complex", "menu_keyword": "쌍화차", "non_menu_keywords": ["코스터_예쁘다", "야외 좌석_앉을 수 있는 테이블이 있다"]}
+{"question": "망고빙수가 맛있고 귀여운 아이들이 자주 오는 지하 공간 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "망고빙수", "non_menu_keywords": ["귀여운 아이들", "지하 공간"]}
+{"question": "빠르게 주문할 수 있으면서 매장 개방감 좋고 카페 공간도 좋은 곳 추천해 줄래?", "type": "menu-complex", "menu_keyword": "빠르다", "non_menu_keywords": ["매장_개방감이 있다", "카페 공간_좋다"]}
+{"question": "토스트 메뉴가 있고 애견동반 가능하며 운치 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "토스트", "non_menu_keywords": ["애견동반 카페", "운치있다"]}
+{"question": "자주 가고 싶어지는 최고급 블랙앤화이트 인테리어 카페 있을까 알려줘.", "type": "menu-complex", "menu_keyword": "자주 가고 싶은 카페", "non_menu_keywords": ["최고", "블랙앤화이트 인테리어"]}
+{"question": "크리스마스 분위기 나고 테라스가 시원하며 고급스러운 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "크리스마스 분위기", "non_menu_keywords": ["테라스_시원하다", "고급 카페"]}
+{"question": "라떼아트가 예쁘고 카페 공간에 앉을 자리 많아서 혼자 카공하기 좋은 곳 있을까?", "type": "menu-complex", "menu_keyword": "라떼아트", "non_menu_keywords": ["카페 공간_앉을 곳이 많다", "혼자 카공"]}
+{"question": "자주 방문하기 좋은 좌석 많고 공유 자리 넓은 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "자주 방문", "non_menu_keywords": ["좌석_많다", "공유 자리_넓다"]}
+{"question": "학교 카페 분위기에 포켓볼 게임기도 있으면 재밌을 것 같은데 그런 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "포켓볼 게임기", "non_menu_keywords": ["카페 컨셉", "학교 카페"]}
+{"question": "투썸처럼 넓고 사랑방 같은 편안한 분위기에서 딸기빽스치노 맛볼 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "딸기빽스치노", "non_menu_keywords": ["투썸_넓다", "사랑방"]}
+{"question": "민초파도 좋아할 만하고 잔잔한 분위기에 모양도 예쁜 메뉴가 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "모양", "non_menu_keywords": ["민초파", "잔잔한 분위기"]}
+{"question": "매징 느낌에 벽지가 귀여워서 구경하는 재미가 쏠쏠한 그런 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "구경하는 재미", "non_menu_keywords": ["매징", "벽지_귀엽다"]}
+{"question": "깔끔한 까페인데 빵집도 같이 있어서 연남라떼랑 잘 어울리는 곳 알려줄래?", "type": "menu-complex", "menu_keyword": "연남라떼", "non_menu_keywords": ["빵집", "까페_깔끔하다"]}
+{"question": "난곡 할리스처럼 공유 자리 넓고 기분 좋은 분위기의 카페 있을까?", "type": "menu-complex", "menu_keyword": "난곡 할리스", "non_menu_keywords": ["공유 자리_넓다", "기분 좋은"]}
+{"question": "입문자도 편하게 갈 수 있는 멋진 카페 중에 꽃 장식이 예쁜 곳 추천해줘.", "type": "menu-complex", "menu_keyword": "꽃", "non_menu_keywords": ["멋진 카페", "입문자"]}
+{"question": "예쁘고 얼음 낭낭하게 감자빵이 맛있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "감자빵", "non_menu_keywords": ["카페_예쁘다", "얼음 낭낭"]}
+{"question": "포포 캐릭터가 귀엽고 멀티탭도 많아서 피자 먹기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "피자", "non_menu_keywords": ["포포 캐릭터", "멀티탭_많다"]}
+{"question": "매력적인 생초콜릿라떼에 톡톡 튀는 인테리어가 돋보이는 카페 있을까?", "type": "menu-complex", "menu_keyword": "생초콜릿라떼", "non_menu_keywords": ["매력", "카페 인테리어_톡톡 튀다"]}
+{"question": "깨끗하고 인테리어 좋은 카페 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "카페", "non_menu_keywords": ["카페 공간_깨끗하다", "인테리어_좋다"]}
+{"question": "공부하기 좋고 집중할 수 있는 매장 공간 있는 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "매장 공간", "non_menu_keywords": ["공부할 공간", "집중하기 좋은 카페"]}
+{"question": "좌석 넉넉하고 냄새 좋은 작고 귀여운 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "냄새", "non_menu_keywords": ["좌석_넉넉하다", "작고 귀여운 카페"]}
+{"question": "창가자리가 잘 되어 있고 초코바스크치즈케이크 먹으면서 수다 떨기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "초코바스크치즈케이크", "non_menu_keywords": ["수다", "창가자리_잘 되어있다"]}
+{"question": "따뜻한 가게 분위기에 디저트가 맛있는 예쁜 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "예쁜 카페", "non_menu_keywords": ["디저트", "가게_따뜻하다"]}
+{"question": "고즈넉하고 깔끔한 인테리어에 달달한 메뉴 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "고즈넉한 분위기", "non_menu_keywords": ["카페 인테리어_깔끔하다", "달달한 카페"]}
+{"question": "화장실 깔끔하고 짱구 스티커 있는 스터디카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "스터디카페", "non_menu_keywords": ["화장실_깔끔하다", "짱구 스티커"]}
+{"question": "매장 홀이 넓은 작은 빵집 스타일 다크초콜릿치즈케이크 맛집 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "다크초콜릿치즈케이크", "non_menu_keywords": ["작은 빵집", "매장홀_넓다"]}
+{"question": "가끔 방문하기 좋은 예쁘고 깔끔한 카페에서 얼그레이마들렌 먹기 좋은 곳 있을까?", "type": "menu-complex", "menu_keyword": "얼그레이마들렌", "non_menu_keywords": ["가끔 방문", "카페 공간_예쁘고 깔끔하다"]}
+{"question": "내부 인테리어가 아늑하고 작업하기 좋은 천국 같은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "천국", "non_menu_keywords": ["작업", "내부 인테리어_아늑하다"]}
+{"question": "요거트 덕후인 제가 선선한 날씨에 편안한 공간에서 쉬기 좋은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "요거트 덕후", "non_menu_keywords": ["선선한 날씨", "편안한 공간"]}
+{"question": "복숭아케이크 맛있고 시간 보내기 좋으면서 주차도 편한 카페 있으면 알려줘.", "type": "menu-complex", "menu_keyword": "복숭아케이크", "non_menu_keywords": ["시간 보내기 좋은 곳", "주차_좋다"]}
+{"question": "고시촌 근처에 상큼한 맛 나는 김밥 파는 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "김밥", "non_menu_keywords": ["고시촌", "상큼한 맛"]}
+{"question": "팥인절미빙수 맛있고 보드게임할 수 있는 인테리어 큰 카페 있을까?", "type": "menu-complex", "menu_keyword": "팥인절미빙수", "non_menu_keywords": ["보드게임카페", "내부 인테리어_크다"]}
+{"question": "색감 예쁘고 건조기 사이즈 큰 디저트 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "디저트 카페", "non_menu_keywords": ["색감", "건조기_사이즈가 크다"]}
+{"question": "아이스크림와플 먹으면서 상영도 보고 인테리어 멋진 카페 어딨는지 알려줄래?", "type": "menu-complex", "menu_keyword": "아이스크림와플", "non_menu_keywords": ["상영", "인테리어_멋지다"]}
+{"question": "하루종일 있어도 좋고 넓은 공간에 초코스콘 맛있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "초코스콘", "non_menu_keywords": ["하루종일 할 수 있는 것", "넓은 공간_좋다"]}
+{"question": "혼자 먹기 편하고 좌석 넓으며 작은가게 감성 느껴지는 카페 있을까?", "type": "menu-complex", "menu_keyword": "혼자 먹기", "non_menu_keywords": ["좌석_넓고 편하다", "작은가게 감성"]}
+{"question": "우유빙수 맛있고 가게가 따뜻하며 좌석도 있는 곳 추천해줘.", "type": "menu-complex", "menu_keyword": "우유빙수", "non_menu_keywords": ["가게_따뜻하다", "좌석_있다"]}
+{"question": "마스무디 맛있고 갬성 가득하며 넓고 쾌적한 공간인 카페 알려줄 수 있어?", "type": "menu-complex", "menu_keyword": "마스무디", "non_menu_keywords": ["갬성 카페", "넓고 쾌적한 공간"]}
+{"question": "난곡 할리스처럼 넓고 쾌적한 공간에 넓고 깨끗한 분위기의 카페 추천해줄 수 있을까?", "type": "menu-complex", "menu_keyword": "넓고 깨끗한 분위기", "non_menu_keywords": ["넓고 쾌적한 공간", "난곡 할리스"]}
+{"question": "부모님 모시고 가기 좋은, 가게가 이쁘고 단골이 될만한 카페 있으면 알려줘.", "type": "menu-complex", "menu_keyword": "부모님", "non_menu_keywords": ["단골카페", "가게_이쁘다"]}
+{"question": "작업하면서 집중하기 좋은 곳 중에 반하다라떼가 맛있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "반하다라떼", "non_menu_keywords": ["작업", "집중하기 좋은 카페"]}
+{"question": "신림역 근처에서 커피랑 먹기 좋고 여유로운 분위기의 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "신림역 카페", "non_menu_keywords": ["커피랑 먹기", "여유로운 분위기"]}
+{"question": "따릉이 타고 가기 편하고 미감이 좋으면서 대화하기 좋은 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "미감 좋은", "non_menu_keywords": ["대화하기 좋은 카페", "따릉이"]}
+{"question": "지브리 감성이 느껴지고 인테리어가 힙하고 멋진 궁전다방 같은 카페 있을까?", "type": "menu-complex", "menu_keyword": "지브리 감성", "non_menu_keywords": ["인테리어_힙하고 멋지다", "궁전다방"]}
+{"question": "할로윈 테마로 꾸며진 특별한 카페에서 초콜릿크럼블푸딩 맛볼 수 있는 곳 추천해줘.", "type": "menu-complex", "menu_keyword": "초콜릿크럼블푸딩", "non_menu_keywords": ["특별한 카페", "할로윈 테마"]}
+{"question": "따릉이 타고 가기 좋고 창문뷰가 좋은 곳에서 블루베리베이글 맛있는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "블루베리베이글", "non_menu_keywords": ["따릉이", "창문뷰_좋다"]}
+{"question": "저녁 외식하기 좋은 특별한 메뉴로 과카몰리 파는 카페 있을까?", "type": "menu-complex", "menu_keyword": "과카몰리", "non_menu_keywords": ["특별한 메뉴", "저녁 외식"]}
+{"question": "자몽우유가 맛있고 식기류도 예쁘고 내부 인테리어가 멋진 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "자몽우유", "non_menu_keywords": ["식기류_예쁘다", "내부 인테리어_인테리어가 멋지다"]}
+{"question": "간판이 예쁘고 매장이 귀여운 컴포즈 스타일 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "간판", "non_menu_keywords": ["매장_귀엽다", "컴포즈"]}
+{"question": "부부가 운영하는 단골카페면서 사장님이 친절한 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "부부", "non_menu_keywords": ["단골카페", "사장님"]}
+{"question": "혼자 공부하기 좋고 화장실이 가까우며 테라스가 예쁜 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "혼자 공부하기", "non_menu_keywords": ["화장실_가깝다", "테라스_예쁘다"]}
+{"question": "핫초코 맛있고 테라스가 예쁘며 공방도 함께 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "핫초코", "non_menu_keywords": ["테라스_예쁘다", "공방_이쁘다"]}
+{"question": "팝콘 사이즈가 다양하고 재방문하고 싶은 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "팝콘", "non_menu_keywords": ["사이즈", "재방문"]}
+{"question": "인테리어 소품 감각적이고 단체 좌석이 깔끔하며 친구와 대화하기 좋은 카페 어디야?", "type": "menu-complex", "menu_keyword": "인테리어 소품", "non_menu_keywords": ["단체 좌석_감각적이고 깔끔하다", "친구와 대화하기"]}
+{"question": "모카가 맛있고 하나로마트보다 더 시원하며 맛있는 빵집이랑 가까운 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "모카", "non_menu_keywords": ["하나로마트_더 시원하다", "맛있는 빵집"]}
+{"question": "도쿄롤 맛있고 넓고 쾌적한 공간에 일기 쓰기 좋은 카페 어디 있지?", "type": "menu-complex", "menu_keyword": "도쿄롤", "non_menu_keywords": ["넓고 쾌적한 공간", "일기"]}
+{"question": "더위를 피하기 좋고 인스타카페 느낌 나면서 수다 떨기 좋은 곳 추천해줘!", "type": "menu-complex", "menu_keyword": "인스타카페", "non_menu_keywords": ["더위", "수다"]}
+{"question": "바질치킨파니니가 맛있고 맛있는 빵집 근처에서 카공하기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "바질치킨파니니", "non_menu_keywords": ["맛있는 빵집", "카공"]}
+{"question": "이디야에서 작업하기 좋고 카페가 아담한 곳 있을까?", "type": "menu-complex", "menu_keyword": "작업", "non_menu_keywords": ["이디야", "카페_아담하다"]}
+{"question": "벽지가 멋지고 지인 모임하기 좋은 매장 공간 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "매장 공간", "non_menu_keywords": ["지인 모임", "벽지"]}
+{"question": "집근처에 충전도 되고 더운 날 가기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "집근처 카페", "non_menu_keywords": ["충전_있다", "더운 날"]}
+{"question": "가격이 괜찮으면서 한적하고 벽에 보드게임이 있는 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "가격", "non_menu_keywords": ["한적한 카페", "벽_보드게임이 있다"]}
+{"question": "수다 떨기 좋은 디저트 메뉴로 흑임자빙수 맛있는 곳 알려줄래?", "type": "menu-complex", "menu_keyword": "흑임자빙수", "non_menu_keywords": ["수다떨기", "디저트"]}
+{"question": "혼자 가기 좋은 내부 인테리어 고급진 체리케이크 카페 있나?", "type": "menu-complex", "menu_keyword": "체리케이크", "non_menu_keywords": ["혼자 카페", "내부 인테리어_고급진"]}
+{"question": "내부 인테리어가 조용하고 힙한 블랙화이트 느낌의 게임카페 추천해줘.", "type": "menu-complex", "menu_keyword": "게임카페", "non_menu_keywords": ["내부 인테리어_조용하다", "매장_힙한 블랙화이트 느낌이다"]}
+{"question": "다락방 느낌 나면서 배려가 느껴지고 테이크아웃도 예쁜 카페 있을까?", "type": "menu-complex", "menu_keyword": "다락방 느낌", "non_menu_keywords": ["배려", "테이크아웃_이쁘다"]}
+{"question": "귀여운 카페 중에 야외 좌석이 좋고 분위기가 최고인 곳 알려줄 수 있어?", "type": "menu-complex", "menu_keyword": "귀여운 카페", "non_menu_keywords": ["야외 좌석_좋다", "최고"]}
+{"question": "혼자 가기 좋은 인테리어 소품이 멋진 시오빵 파는 카페 있을까?", "type": "menu-complex", "menu_keyword": "시오빵", "non_menu_keywords": ["인테리어 소품", "혼자 카페"]}
+{"question": "아담하고 매징한 분위기에서 시간 때우기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "시간 때우기 좋은 카페", "non_menu_keywords": ["카페_아담하다", "매징"]}
+{"question": "자녀와 함께 가기 좋은, 이쁘고 커피 애호가들이 추천하는 가게 알려줄래?", "type": "menu-complex", "menu_keyword": "자녀", "non_menu_keywords": ["가게_이쁘다", "커피 애호가"]}
+{"question": "에코라이프를 실천할 수 있으면서 정감 있는 곳에서 트러플머쉬룸수프볼 맛볼 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "트러플머쉬룸수프볼", "non_menu_keywords": ["에코라이프를 실천하기 좋은곳", "정감 있는 카페"]}
+{"question": "자주 가고 싶을 정도로 좋은 장소에 있는 숲속 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "숲속 카페", "non_menu_keywords": ["자주 가고 싶은 카페", "장소"]}
+{"question": "세모디처럼 세련된 분위기의 장소에서 분위기 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "세련된 분위기", "non_menu_keywords": ["장소", "세모디"]}
+{"question": "따뜻한 느낌에 넓고 쾌적한 공간에서 반려동물과 함께 갈 수 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "넓고 쾌적한 공간", "non_menu_keywords": ["가게_따뜻하다", "반려동물 동반"]}
+{"question": "실내 공간이 깔끔하고 조아요 하는 힐링 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "힐링 카페", "non_menu_keywords": ["조아요", "실내공간_깔끔하다"]}
+{"question": "양모로 만든 키링 판매하고, 아침에 칸막이 좌석으로 개별 공간이 나누어져 있는 카페 있을까?", "type": "menu-complex", "menu_keyword": "양모로 만든 키링", "non_menu_keywords": ["칸막이 좌석_개별공간이 나누어져 있다", "아침"]}
+{"question": "식기류가 예쁘고 신림에서 죠리퐁쉐이크 맛볼 수 있는 디저트 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "죠리퐁쉐이크", "non_menu_keywords": ["식기류_예쁘다", "신림 디저트"]}
+{"question": "빠름빠름하면서 일기 쓰기 좋고 아늑하고 편한 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "빠름빠름", "non_menu_keywords": ["일기", "아늑한 카페_편하다"]}
+{"question": "관악지역에서 행사 때 구입하기 좋은 큐브라떼 맛있는 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "큐브라떼", "non_menu_keywords": ["행사때 구입하기 좋은 것", "관악지역"]}
+{"question": "반려동물 동반 가능하고 음악 선곡이 좋은 등 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "음악선곡", "non_menu_keywords": ["반려동물 동반", "등_좋다"]}
+{"question": "숲뷰에 콘센트가 굉장히 많고 카페 공간도 좋은 곳 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "숲뷰", "non_menu_keywords": ["콘센트_굉장히 많다", "카페 공간_좋다"]}
+{"question": "에어컨 빵빵하고 오트밀크티가 맛있는 아늑한 카페 있나요?", "type": "menu-complex", "menu_keyword": "오트밀크티", "non_menu_keywords": ["에어컨", "아늑한 카페"]}
+{"question": "유치원 근처에 딸기라떼가 맛있고 포근한 분위기의 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "딸기라떼", "non_menu_keywords": ["유치원", "포근한 분위기"]}
+{"question": "블루포트 서울대학교점 같이 에어컨 잘 나오고 한적한 뷰 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "블루포트 서울대학교점", "non_menu_keywords": ["에어컨", "뷰_한적하다"]}
+{"question": "혼자 카공하기 좋은 곳 중에 망고치즈빙수 맛있고 홀더가 예쁜 카페 추천해줘!", "type": "menu-complex", "menu_keyword": "망고치즈빙수", "non_menu_keywords": ["혼자 카공", "홀더_예쁘다"]}
+{"question": "플랫화이트 맛있고 내부 인테리어가 쉬어가기 좋으면서 즐거운 분위기인 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "플랫화이트", "non_menu_keywords": ["내부 인테리어_쉬어가기 좋다", "즐거운 분위기"]}
+{"question": "코코넛커피스무디와 간단한 식사가 가능하고 야외 좌석이 많은 카페 추천해줄래?", "type": "menu-complex", "menu_keyword": "코코넛커피스무디", "non_menu_keywords": ["간단한 식사", "야외 좌석_많다"]}
+{"question": "신림역 근처에 매징 메뉴 있고 내부 인테리어 좋은 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "매징", "non_menu_keywords": ["신림역 카페", "내부 인테리어"]}
+{"question": "아기자기한 분위기에 야외 좌석이 많고 머무르기 좋은 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "아기자기한 분위기", "non_menu_keywords": ["야외 좌석_많다", "머무르기 좋은 카페"]}
+{"question": "더위를 식힐 수 있는 메론크림소다가 맛있는 귀여운 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "메론크림소다", "non_menu_keywords": ["귀여운 카페", "더위"]}
+{"question": "즐거운 분위기에 텀블러도 좋고 궁전다방 느낌 나는 카페 알려줄래?", "type": "menu-complex", "menu_keyword": "즐거운 분위기", "non_menu_keywords": ["텀블러_좋다", "궁전다방"]}
+{"question": "다트도 즐길 수 있고 24시간에 홀더까지 완비된 카페 있을까?", "type": "menu-complex", "menu_keyword": "다트", "non_menu_keywords": ["24시간 카페", "홀더"]}
+{"question": "입이 호강하는 팥절미쉐이크가 맛있고 건조기 사이즈도 큰 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "팥절미쉐이크", "non_menu_keywords": ["입이 호강하다", "건조기_사이즈가 크다"]}
+{"question": "코코넛커피스무디가 맛있고 넓은 공간에 인테리어가 멋진 카페 어디 있을까?", "type": "menu-complex", "menu_keyword": "코코넛커피스무디", "non_menu_keywords": ["넓은 공간", "카페 인테리어"]}
+{"question": "주차 편리하고 투썸처럼 넓고 아기자기 깔끔한 카페 추천해줄 수 있어?", "type": "menu-complex", "menu_keyword": "주차", "non_menu_keywords": ["투썸_넓다", "카페 공간_아기자기 깔끔하다"]}
+{"question": "유자에이드가 맛있고 텀블러 사용하기 좋으며 커피랑 같이 먹기 좋은 카페 있을까?", "type": "menu-complex", "menu_keyword": "유자에이드", "non_menu_keywords": ["텀블러_좋다", "커피랑 먹기"]}
+{"question": "버터갈릭감자가 맛있고 선물하기 좋으면서 편안한 공간인 카페 어디야?", "type": "menu-complex", "menu_keyword": "버터갈릭감자", "non_menu_keywords": ["선물", "편안한 공간"]}
+{"question": "독서실 같은 매력적인 공간에 포토존이 예쁘게 꾸며진 카페 추천해줘.", "type": "menu-complex", "menu_keyword": "독서실", "non_menu_keywords": ["매력", "포토존_이쁘게 꾸며져 있다"]}
