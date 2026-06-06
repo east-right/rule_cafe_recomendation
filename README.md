@@ -14,45 +14,43 @@
 ---
 
 ## 2. 현 상황 아키텍처
-<img width="778" height="892" alt="soar 아키텍처 현황" src="https://github.com/user-attachments/assets/1d146415-7ddb-42d8-8e26-d3a6896af052" />
+<img width="1424" height="564" alt="image" src="https://github.com/user-attachments/assets/f18c3301-787f-4d8f-87a7-68f7fc12daa8" />
 
-1. 질문이 들어오면 `select_keyword`에서 질문과 관련이 높은 키워드 선택
-2. 선택된 키워드에 해당하는 soar 추천 rule 선택
-
-   2.1 만약 키워드에 해당하는 rule이 존재하지 않으면 LLM을 활용하여 새로운 rule 생성
-4. rule을 사용한 추천 결과가 하나가 아니라면(교착 상태)면 LLM을 활용하여 추가적인 rule 생성
-5. 추천 결과가 반환이 되었을 때 최종 result에 카페명 저장
-
-   4.1. 만약 result에 저장된 결과가 2개가 아니라면 추천된 매장 제외 재추천 실행
-7. 추천 매장이 두 개면 종료
+1. 질문이 들어오면 유효성 검증
+2. 키워드 선택 sLLM에게 Rule 선택 요청
+  - 모든 룰을 제시하기 보단 Rag를 활용하여 관련성 높은 Rule만 제시
+  - 만약 선택이 가능한 Rule이 없다면 LLM을 활용하여 신규 룰 생성
+3. Soar를 활용하여 Rule-base 추천을 진행
+   - 교착상태(Impass)에 들어가면 LLM을 활용하여 추가 룰 업데이트
+4. 최종 선택된 매장의 정보를 활용하여 최종 추천 답변 생성
 ---
 
 ## 3. 고도화 목표(기술 스택)
-### 3.1 시스템 재정비 및 오케스트레이션 기능 추가
-1. 최종 답변 모델 생성및 추가(openapi)
+3.1 데이터 생성  
 
-   1.1. 매장의 정보를 요약한 데이터 베이스 구축(mysql, postgreSQL)
+    3.1.1 카페 리뷰 데이터 수집  
+    3.1.2 카페 Item 데이터 구축(UMAP, HBSCAN, TF-IDF)  
+    3.1.3 임베딩 모델 파인튜닝 데이터 구축  
+    3.1.4 키워드 선택 모델 파인튜닝 데이터 구축  
+    3.1.5 최종 답변 모델 - 매장 정보 데이터 구축  
+3.2 모델 파인튜닝 및 파이프라인 구축  
 
-   1.2. opensearch를 사용한 최종 답변 rag 시스템 구축(opensearch, bm25, bgem3)
-3. 멀티턴 시스템 구축
+    3.2.1 오픈소스 모델 기반 임베딩 모델 파인튜닝(BGE-M3)  
+    3.2.2 오픈소스 모델 기반 키워드 선택 sLLM 파인튜닝  
+    3.2.3 질문 유효성 검증 모델 파인튜닝(RoBerta)  
+    3.2.4 Soar 추천 시스템 구축  
+    3.2.5 최종 답변 파이프 라인 구축  
+3.3 백엔드 엔지니어  
 
-   2.1. Redis를 활용하여 각 세션별 대화 내용 캐싱(Redis)
-
-   2.2. 만약 대화 내용을 장기 메모리로도 관리한다면 Mem0(맴제로) 혹은 S3 고려
-
-### 3.2 모델 파이프라인 최적화 및 서빙
-3. 오픈소스 모델 기반 키워드 선택 sLLM 파인튜닝(PEFT, Huggingface)
-
-   3.1 파인튜닝용 데이터 증강(openapi)
-5. 모델 파인튜닝 실험 및 로깅(Mlflow)
-6. 파인튜닝된 모델 vLLM 기반 BentoML 서빙 인프라 구축(BentoML)
-
-### 3.3 백엔드 엔지니어
-6. fastapi+python을 활용한 백엔드 구축(fastapi)
-7. 기능별 레포지토리 정의
-8. langfuze를 활용한 LLMops(langfuze)
-9. MVP 데모 화면 구축(strimlit, React(선택 확률 낮음))
+    3.3.1 fastapi+python을 활용한 백엔드 구축      
+    3.3.2 파인튜닝 모델 vLLM 기반 서빙 인프라 구축     
+    3.3.3 Redis 세션별 채팅 캐싱  
+    3.3.4 Mem0를 활용한 유저 메모리 캐싱  
+    3.3.5 langfuze를 활용한 LLMops  
+    3.3.6 MVP 데모 화면 구축  
+    3.3.7 기능별 레포지토리 정의  
 ---
 ## 4. WBS																													
-<img width="1452" height="301" alt="image" src="https://github.com/user-attachments/assets/e3b08238-678b-4df7-af2b-a1052f229cb6" />
+<img width="1450" height="463" alt="image" src="https://github.com/user-attachments/assets/729b771a-2159-4cff-ab3f-8d48c3092b5f" />
+
 
