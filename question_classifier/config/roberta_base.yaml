@@ -1,0 +1,15 @@
+model_name: "klue/roberta-base"
+output_dir: "models/roberta-base"
+hf_repo: "east-right/cafe-question-classifier-roberta-base"
+
+# 학습
+epochs: 5
+batch_size: 32
+learning_rate: 2e-5
+warmup_ratio: 0.1
+weight_decay: 0.01
+max_seq_length: 128
+
+# 설정
+num_labels: 4
+logging_steps: 10
