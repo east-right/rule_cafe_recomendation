@@ -22,9 +22,9 @@ ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
 
 # ── 경로 설정 ──────────────────────────────────────────────
-MARKET_ITEM_PATH = ROOT / "data" / "market_item.csv"
-VALID_QUESTIONS_PATH = ROOT / "data" / "valid_questions.json"
-OUTPUT_PATH = ROOT / "question_classifier" / "data" / "menu_complex.jsonl"
+MARKET_ITEM_PATH = ROOT / "data_augment" / "data" / "market_item.csv"
+VALID_QUESTIONS_PATH = ROOT / "data_augment" / "data" / "valid_questions.json"
+OUTPUT_PATH = ROOT / "question_classifier" / "data_augment" / "data" / "menu_complex.jsonl"
 
 # ── 상수 ──────────────────────────────────────────────────
 TARGET_COUNT = 600

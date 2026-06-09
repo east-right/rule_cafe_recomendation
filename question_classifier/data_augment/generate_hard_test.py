@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
 
 # ── 경로 설정 ──────────────────────────────────────────────
-OUTPUT_PATH = ROOT / "question_classifier" / "data" / "hard_test.jsonl"
+OUTPUT_PATH = ROOT / "question_classifier" / "data_augment" / "data" / "hard_test.jsonl"
 
 # ── 상수 ──────────────────────────────────────────────────
 PER_CLASS = 75

@@ -115,3 +115,41 @@ HARD_TEST_TEMPLATES = {
 
 def build_hard_test_prompt(class_name: str, count: int) -> str:
     return HARD_TEST_TEMPLATES[class_name].format(count=count)
+
+
+# ── 데이터 Augmentation용 ─────────────────────────────────
+
+AUGMENT_SYSTEM = """당신은 한국어 텍스트 스타일 변환 전문가입니다.
+주어진 카페 추천 질문을 다양한 스타일로 변환하세요.
+
+변환 스타일:
+1. 극단적 구어체/반말: "어디야", "없나", "알려줘"
+2. 줄임말/신조어 사용: "아아"(아이스아메리카노), "뜨아"(뜨거운 아메리카노), "카공"(카페공부)
+3. 불완전한 짧은 문장: "콘센트 있는 카페", "조용한데 없나"
+4. 감탄사/이모티콘 포함: "ㅠㅠ", "ㅋㅋ", "~"
+5. 영어 혼용: "wifi 빵빵한 카페", "study하기 좋은 곳"
+
+규칙:
+- 원래 질문의 의도(클래스)는 반드시 유지해야 합니다
+- 자연스러운 한국어여야 합니다
+- 변환된 질문만 출력하고 번호를 포함하세요 (예: 1. 질문내용)
+- 각 스타일을 골고루 사용하세요"""
+
+
+def build_augment_prompt(questions: list[str], count_per_question: int) -> str:
+    questions_str = "\n".join(f"{i+1}. {q}" for i, q in enumerate(questions))
+    n = len(questions)
+    return f"""다음 질문들을 각각 {count_per_question}개씩 다양한 스타일로 변환해주세요.
+
+원본 질문들:
+{questions_str}
+
+각 질문마다 [원본N] 태그로 구분하여 출력하세요.
+예시:
+[원본1]
+1. 변환된 질문
+2. 변환된 질문
+
+[원본2]
+1. 변환된 질문
+..."""
