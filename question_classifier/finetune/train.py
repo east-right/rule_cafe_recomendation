@@ -23,7 +23,7 @@ from transformers import (
 
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
-TRAINVAL_PATH = ROOT / "data" / "trainval.jsonl"
+TRAINVAL_PATH = ROOT.parent / "data_augment" / "data" / "trainval.jsonl"
 
 # ── 라벨 매핑 ─────────────────────────────────────────────
 ID2LABEL = {0: "non-menu", 1: "menu-only", 2: "menu-complex", 3: "invalid"}

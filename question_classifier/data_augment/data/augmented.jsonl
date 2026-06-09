@@ -1,0 +1,1025 @@
+{"question": "편하게 얘기하면서 시간 보내기 좋은 카페 어디야? 알려줘ㅋㅋ", "label": 0, "original": "편하게 이야기 나누며 시간 보내기 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "편히 이야기 할 수 있는 카페 어디 있지", "label": 0, "original": "편하게 이야기 나누며 시간 보내기 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "조명 은은하고 편안한 카페 추천 좀 ㅠㅠ", "label": 0, "original": "조명도 은은하고 편안한 느낌의 카페 알려줘", "augmented": true}
+{"question": "조명 감성 좋고 편안한 vibe 카페 알려줘~", "label": 0, "original": "조명도 은은하고 편안한 느낌의 카페 알려줘", "augmented": true}
+{"question": "은은조명에 편안한 느낌 카페 어디야?", "label": 0, "original": "조명도 은은하고 편안한 느낌의 카페 알려줘", "augmented": true}
+{"question": "조용하구 아늑한 카페 있음?", "label": 0, "original": "조용하고 아늑한 카페 어디 있을까요?", "augmented": true}
+{"question": "아늑하고 조용한 카페 어디야", "label": 0, "original": "조용하고 아늑한 카페 어디 있을까요?", "augmented": true}
+{"question": "조용하고 아늑한 곳 없나", "label": 0, "original": "조용하고 아늑한 카페 어디 있을까요?", "augmented": true}
+{"question": "감성 가득~ 야외좌석도 많고 카공하기 좋은 카페 알려줘!", "label": 0, "original": "감성 가득한 분위기에 야외 좌석도 많은, 작업하기 좋은 카페 알려주세요.", "augmented": true}
+{"question": "야외도 있고 분위기 넘 좋은 카페 작업하기 딱인 데 없음? ㅋㅋ", "label": 0, "original": "감성 가득한 분위기에 야외 좌석도 많은, 작업하기 좋은 카페 알려주세요.", "augmented": true}
+{"question": "감성 충만, 야외 좌석 빵빵한 카페 추천해 주세요~", "label": 0, "original": "감성 가득한 분위기에 야외 좌석도 많은, 작업하기 좋은 카페 알려주세요.", "augmented": true}
+{"question": "조용하고 독서하기 딱 좋은, 지하철역 근처 카페 추천해주세요 ㅠㅠ", "label": 0, "original": "조용하고 독서하기 좋은 분위기에 지하철역 근처에 위치한 카페 추천해 주세요.", "augmented": true}
+{"question": "Quiet하고 reading하기 좋은 카페, 지하철역 근처에 어딨냐?", "label": 0, "original": "조용하고 독서하기 좋은 분위기에 지하철역 근처에 위치한 카페 추천해 주세요.", "augmented": true}
+{"question": "지하철역 근처, 독서하기 좋은 조용한 카페 어디야?", "label": 0, "original": "조용하고 독서하기 좋은 분위기에 지하철역 근처에 위치한 카페 추천해 주세요.", "augmented": true}
+{"question": "대화하기 좋은 이디야 어디야? 알려줘~", "label": 0, "original": "대화하기 좋은 분위기의 이디야 매장 추천해 주세요.", "augmented": true}
+{"question": "이디야 중에 대화하기 딱 좋은 곳 있나? 카공하기도 편한 데로!", "label": 0, "original": "대화하기 좋은 분위기의 이디야 매장 추천해 주세요.", "augmented": true}
+{"question": "대화하기 좋은 이디야 매장, 추천 좀!", "label": 0, "original": "대화하기 좋은 분위기의 이디야 매장 추천해 주세요.", "augmented": true}
+{"question": "창밖 뷰 짱인 카페 있음? 추천해줘용 ㅋㅋ", "label": 0, "original": "창밖 전망이 잘 보이는 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "전망 끝내주는 카페 있나? 알려줄 수 있어?", "label": 0, "original": "창밖 전망이 잘 보이는 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "밖에 경치 잘 보이는 카페 찾아줘 ㅠㅠ", "label": 0, "original": "창밖 전망이 잘 보이는 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "안쪽 구조 특별한 카페? 어디야?", "label": 0, "original": "안쪽 구조가 남다른 카페가 궁금한데 알려줄래?", "augmented": true}
+{"question": "독특한 인테리어 안쪽 구조 카페 궁금해", "label": 0, "original": "안쪽 구조가 남다른 카페가 궁금한데 알려줄래?", "augmented": true}
+{"question": "안쪽 구조가 남다른 카페 있나? 알려줘!", "label": 0, "original": "안쪽 구조가 남다른 카페가 궁금한데 알려줄래?", "augmented": true}
+{"question": "에코 라이프 즐기기 좋은 카페 어디야? ㅠㅠ 궁금함~", "label": 0, "original": "에코 라이프를 즐기기 좋은 카페가 있을까요?", "augmented": true}
+{"question": "친환경 카페 있나? 좀 추천해줘~", "label": 0, "original": "에코 라이프를 즐기기 좋은 카페가 있을까요?", "augmented": true}
+{"question": "에코 라이프 테마 카페 있음? 알려줘 ㅋㅋ", "label": 0, "original": "에코 라이프를 즐기기 좋은 카페가 있을까요?", "augmented": true}
+{"question": "편하게 쉬기 좋은 카페 어디야? wifi 빵빵했으면 좋겠다~", "label": 0, "original": "편안하게 쉴 수 있는 카페 추천해 주세요.", "augmented": true}
+{"question": "편안한 분위기에 쉴 수 있는 카페 추천해줘!", "label": 0, "original": "편안하게 쉴 수 있는 카페 추천해 주세요.", "augmented": true}
+{"question": "쉬기 좋은데, 조용하고 편한 카페 좀 알려줘!", "label": 0, "original": "편안하게 쉴 수 있는 카페 추천해 주세요.", "augmented": true}
+{"question": "힐링 제대로 되는 아지트 같은 카페 어딘지 알려줘~", "label": 0, "original": "힐링하기 좋은 아지트 같은 카페 알아요?", "augmented": true}
+{"question": "힐링 짱인 카페 어디임? ㅋㅋ 아지트 느낌이면 굿굿", "label": 0, "original": "힐링하기 좋은 아지트 같은 카페 알아요?", "augmented": true}
+{"question": "힐링 카페 아지트 있나? 좀 알려줘봐", "label": 0, "original": "힐링하기 좋은 아지트 같은 카페 알아요?", "augmented": true}
+{"question": "밖에 앉을 수 있는 작고 감성 카페 어디야?", "label": 0, "original": "작고 감성적인 분위기에서 밖에 앉을 수 있는 카페 어디 있을까?", "augmented": true}
+{"question": "밖 자리 있는 감성 소형 카페 혹시 어디임?", "label": 0, "original": "작고 감성적인 분위기에서 밖에 앉을 수 있는 카페 어디 있을까?", "augmented": true}
+{"question": "감성적이고 밖 자리 있는 카페 찾음. 어디?", "label": 0, "original": "작고 감성적인 분위기에서 밖에 앉을 수 있는 카페 어디 있을까?", "augmented": true}
+{"question": "음료 맛있고 지하에 조용한 카페 어디 있냐?", "label": 0, "original": "음료가 맛있고 지하에 있는 조용한 카페 어디가 있을까요?", "augmented": true}
+{"question": "지하 조용한 카페, 음료 괜찮은 데 없나?", "label": 0, "original": "음료가 맛있고 지하에 있는 조용한 카페 어디가 있을까요?", "augmented": true}
+{"question": "맛 음료, 지하, 조용 카페 어디?", "label": 0, "original": "음료가 맛있고 지하에 있는 조용한 카페 어디가 있을까요?", "augmented": true}
+{"question": "짱구 테마 귀여운 인테리어 카페 추천 좀 ㅋㅋ", "label": 0, "original": "짱구 테마의 귀여운 인테리어 카페 추천 부탁해.", "augmented": true}
+{"question": "짱구 카페 완전 귀여움! 그런 데 아는 사람?", "label": 0, "original": "짱구 테마의 귀여운 인테리어 카페 추천 부탁해.", "augmented": true}
+{"question": "짱구 인테리어 카페 짱 귀여운 데 알려줘~", "label": 0, "original": "짱구 테마의 귀여운 인테리어 카페 추천 부탁해.", "augmented": true}
+{"question": "친환경 분위기에 전망까지 끝내주는 카페 혹시 알아?", "label": 0, "original": "친환경적인 분위기에 전망까지 좋은 카페를 알고 싶어요.", "augmented": true}
+{"question": "전망 좋고 친환경 vibe 빡센 카페 있으면 추천 좀!", "label": 0, "original": "친환경적인 분위기에 전망까지 좋은 카페를 알고 싶어요.", "augmented": true}
+{"question": "전망갑, 친환경 카페 어디인지 궁금해 ㅠㅠ", "label": 0, "original": "친환경적인 분위기에 전망까지 좋은 카페를 알고 싶어요.", "augmented": true}
+{"question": "공간 널널한 카페 어디야? 알려줘 봐~", "label": 0, "original": "공간이 여유 있는 카페 어디 있을까?", "augmented": true}
+{"question": "공간 여유 카페 있으면 추천 좀 ㅠㅠ", "label": 0, "original": "공간이 여유 있는 카페 어디 있을까?", "augmented": true}
+{"question": "공간 ample한 곳 있나? 꼭 알려줘!", "label": 0, "original": "공간이 여유 있는 카페 어디 있을까?", "augmented": true}
+{"question": "블랙앤화이트 인테리어에 커피값 착한 곳 있을까? ㅋㅋ", "label": 0, "original": "블랙앤화이트 느낌 나는 인테리어에 커피값 저렴한 카페 추천 부탁해요.", "augmented": true}
+{"question": "블랙&화이트 vibe에 가성비 갑 카페 추천 plz~", "label": 0, "original": "블랙앤화이트 느낌 나는 인테리어에 커피값 저렴한 카페 추천 부탁해요.", "augmented": true}
+{"question": "블랙앤화이트 느낌 카페 + 저렴커피 있는 곳 어디임?", "label": 0, "original": "블랙앤화이트 느낌 나는 인테리어에 커피값 저렴한 카페 추천 부탁해요.", "augmented": true}
+{"question": "텀블러 가져가도 되는 카페 있나?", "label": 0, "original": "텀블러 가져가도 괜찮은 카페 추천 좀 해주세요.", "augmented": true}
+{"question": "텀블러 허용 카페 좀 알려줘~", "label": 0, "original": "텀블러 가져가도 괜찮은 카페 추천 좀 해주세요.", "augmented": true}
+{"question": "텀블러 ok인 곳 어디야?", "label": 0, "original": "텀블러 가져가도 괜찮은 카페 추천 좀 해주세요.", "augmented": true}
+{"question": "쉴 수 있고 대형 건조기까지? 그런 카페 어디인지 아는 사람?", "label": 0, "original": "쉴 수 있는 분위기에 대형 건조기를 갖춘 카페 어디 있을까요?", "augmented": true}
+{"question": "쉴 분위기 + 건조기 큰 거 갖춘 카페 있나요? ㅠㅠ", "label": 0, "original": "쉴 수 있는 분위기에 대형 건조기를 갖춘 카페 어디 있을까요?", "augmented": true}
+{"question": "쉬면서 대형 건조기 쓸 수 있는 카페? 정보 좀~", "label": 0, "original": "쉴 수 있는 분위기에 대형 건조기를 갖춘 카페 어디 있을까요?", "augmented": true}
+{"question": "넓고 벽지 인테리어 예쁜 카페 어디임?", "label": 0, "original": "가게가 넓고 벽지 인테리어가 예쁜 카페 어디 있을까요?", "augmented": true}
+{"question": "가게 널찍하고 벽지 디자인 짱인 카페 추천해줘~", "label": 0, "original": "가게가 넓고 벽지 인테리어가 예쁜 카페 어디 있을까요?", "augmented": true}
+{"question": "가게 wide하고 벽지 vibe 좋은 곳 어디야?", "label": 0, "original": "가게가 넓고 벽지 인테리어가 예쁜 카페 어디 있을까요?", "augmented": true}
+{"question": "케이크랑 디저트 맛있는 카페 어디야? 알려줘~", "label": 0, "original": "맛있는 케이크나 디저트를 먹을 수 있는 카페 알려주세요.", "augmented": true}
+{"question": "케이크 먹을 수 있는 조용한 카페 있나?", "label": 0, "original": "맛있는 케이크나 디저트를 먹을 수 있는 카페 알려주세요.", "augmented": true}
+{"question": "친구랑 겜하면서 놀기 좋은 카페 알려줘 ㅋㅋ", "label": 0, "original": "친구랑 게임 하면서 놀기 좋은 카페 알려 줄래?", "augmented": true}
+{"question": "게임하멍 놀기 딱 좋은 카공 카페 있냥?", "label": 0, "original": "친구랑 게임 하면서 놀기 좋은 카페 알려 줄래?", "augmented": true}
+{"question": "겜 하면서 편하게 놀 수 있는 카페 없나 ㅠㅠ", "label": 0, "original": "친구랑 게임 하면서 놀기 좋은 카페 알려 줄래?", "augmented": true}
+{"question": "2층 있는 조용한 카페 있어?", "label": 0, "original": "2층 공간이 있는 조용한 카페 추천해 주세요.", "augmented": true}
+{"question": "조용한 2층 카페 추천해줘", "label": 0, "original": "2층 공간이 있는 조용한 카페 추천해 주세요.", "augmented": true}
+{"question": "2층 공간 조용한 카페 어디임?", "label": 0, "original": "2층 공간이 있는 조용한 카페 추천해 주세요.", "augmented": true}
+{"question": "2층 위치한 분위기 쩌는 카페 어디임? ㅎㅎ", "label": 0, "original": "2층에 위치한 분위기 좋은 카페 어디가 괜찮을까요?", "augmented": true}
+{"question": "2층에 있는 뭔가 느낌 좋은 카페 있나~?", "label": 0, "original": "2층에 위치한 분위기 좋은 카페 어디가 괜찮을까요?", "augmented": true}
+{"question": "2층인 감성 카페 어디야? 알려줘요 ㅠㅠ", "label": 0, "original": "2층에 위치한 분위기 좋은 카페 어디가 괜찮을까요?", "augmented": true}
+{"question": "여럿이 모이기 좋은 카페 뭐 있냐?", "label": 0, "original": "여럿이 모이기 좋은 카페 있나요?", "augmented": true}
+{"question": "단체로 가기 좋은 카페 있으면 알려줘~", "label": 0, "original": "여럿이 모이기 좋은 카페 있나요?", "augmented": true}
+{"question": "친구들이랑 같이 가기 좋은 카페 어디 있나? wifi 빵빵한 데면 좋겠다!", "label": 0, "original": "여럿이 모이기 좋은 카페 있나요?", "augmented": true}
+{"question": "좀 독특한 메뉴 파는 카페 어디임? 알려줘~", "label": 0, "original": "일반적이지 않은 메뉴가 유명한 카페를 알고 싶어요.", "augmented": true}
+{"question": "일반적 아님 메뉴 맛집 카페 추천 ㄱㄱ", "label": 0, "original": "일반적이지 않은 메뉴가 유명한 카페를 알고 싶어요.", "augmented": true}
+{"question": "별난 메뉴로 유명한 데 있나?", "label": 0, "original": "일반적이지 않은 메뉴가 유명한 카페를 알고 싶어요.", "augmented": true}
+{"question": "반려동물이랑 같이 갈 수 있는 카페 있나? 알려줘 ㅠㅠ", "label": 0, "original": "반려동물과 함께 갈 수 있는 카페 추천해 주세요.", "augmented": true}
+{"question": "펫프렌들리 카페 추천 좀!", "label": 0, "original": "반려동물과 함께 갈 수 있는 카페 추천해 주세요.", "augmented": true}
+{"question": "강아지 데리고 갈 수 있는 카페 어디야?", "label": 0, "original": "반려동물과 함께 갈 수 있는 카페 추천해 주세요.", "augmented": true}
+{"question": "스타벅스 말고 분위기 좋은 카페 어디?", "label": 0, "original": "분위기 좋은 카페 중에 스타벅스 말고 추천해줄 만한 곳 있나요?", "augmented": true}
+{"question": "분위기만 좋은 스타벅스 아닌 카페 추천", "label": 0, "original": "분위기 좋은 카페 중에 스타벅스 말고 추천해줄 만한 곳 있나요?", "augmented": true}
+{"question": "스벅 빼고 분위기 좋은 곳 있나?", "label": 0, "original": "분위기 좋은 카페 중에 스타벅스 말고 추천해줄 만한 곳 있나요?", "augmented": true}
+{"question": "아담하고 귀염뽀짝한 카페 어디가 좋아? ㅋㅋ", "label": 0, "original": "아담하고 귀여운 느낌 들 수 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "작고 귀여운 느낌 나는 카페 어디임~?", "label": 0, "original": "아담하고 귀여운 느낌 들 수 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "완전 아담하고 귀여운 카페 좀 알려줘!", "label": 0, "original": "아담하고 귀여운 느낌 들 수 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "지하에 있고 분위기 좋은 카페 있을까?", "label": 0, "original": "지하에 위치한 분위기 좋은 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "지하층에 위치한 분위기 갑 카페 추천해줘~", "label": 0, "original": "지하에 위치한 분위기 좋은 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "underground에 있는 분위기 좋은 카페 있나?", "label": 0, "original": "지하에 위치한 분위기 좋은 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "고급져 보이고 천장 엄청 높은 로비층 디저트 카페 어디야?", "label": 0, "original": "고급스러운 분위기에 천장이 높은 로비층에 위치한 디저트 카페 추천해 주실 수 있나요?", "augmented": true}
+{"question": "천장 쩌는 로비층 디저트 카페 중에 고급 분위기 나는 데 있나? 알려줘~", "label": 0, "original": "고급스러운 분위기에 천장이 높은 로비층에 위치한 디저트 카페 추천해 주실 수 있나요?", "augmented": true}
+{"question": "천장 높고 고급 분위기 로비 디저트 카페 추천 좀ㅠㅠ", "label": 0, "original": "고급스러운 분위기에 천장이 높은 로비층에 위치한 디저트 카페 추천해 주실 수 있나요?", "augmented": true}
+{"question": "카페 초보자도 무리 없이 가는 곳 추천해줘~", "label": 0, "original": "카페 초보자도 편하게 갈 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "카페 처음 가보는 사람도 편한 곳 어디임? 알려줘 ㅋㅋ", "label": 0, "original": "카페 초보자도 편하게 갈 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "초보자용 카페 조용하고 편한 곳 있나?", "label": 0, "original": "카페 초보자도 편하게 갈 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "분위기 끝내줘서 사진 잘 나오는 카페 추천해줘~", "label": 0, "original": "분위기 좋아서 사진 잘 나오는 카페 추천 부탁해!", "augmented": true}
+{"question": "사진 쩔게 잘 나오는 분위기 좋은 카페 어디야?", "label": 0, "original": "분위기 좋아서 사진 잘 나오는 카페 추천 부탁해!", "augmented": true}
+{"question": "분위기 좋아서 인생샷 건지는 카페 좀 알려줘 ㅠㅠ", "label": 0, "original": "분위기 좋아서 사진 잘 나오는 카페 추천 부탁해!", "augmented": true}
+{"question": "조용하고 분위기 좋은 카페 있으면 추천해줘~", "label": 0, "original": "조용하고 분위기 좋은 카페 추천해 주세요.", "augmented": true}
+{"question": "조용하고 분위기 있는 카페 찾는데 어디 있을까?", "label": 0, "original": "조용하고 분위기 좋은 카페 추천해 주세요.", "augmented": true}
+{"question": "조용한데 분위기 좋은 카페~~ 없나?", "label": 0, "original": "조용하고 분위기 좋은 카페 추천해 주세요.", "augmented": true}
+{"question": "신림역 근처에 조용하고 아늑한 카페 어디야? 알려줘ㅠㅠ", "label": 0, "original": "신림역 근처 카페 중에 조용하고 아늑한 곳 알려주세요.", "augmented": true}
+{"question": "신림역 주변 조용하고 아늑한 곳 카페 어디임? wifi 빵빵하면 최고!", "label": 0, "original": "신림역 근처 카페 중에 조용하고 아늑한 곳 알려주세요.", "augmented": true}
+{"question": "신림역 근처 조용하고 분위기 좋은 아늑한 카페 추천해줄래?", "label": 0, "original": "신림역 근처 카페 중에 조용하고 아늑한 곳 알려주세요.", "augmented": true}
+{"question": "편하게 얘기할 수 있는 조용한 카페 있냐? 알려줘.", "label": 0, "original": "편안하게 대화하기 좋은 조용한 카페 추천 부탁해요.", "augmented": true}
+{"question": "조용하고 편안해서 대화하기 딱 좋은 카페 어디임? ㅋㅋ", "label": 0, "original": "편안하게 대화하기 좋은 조용한 카페 추천 부탁해요.", "augmented": true}
+{"question": "대화하기 좋은 조용한데 카페 어디 없나?", "label": 0, "original": "편안하게 대화하기 좋은 조용한 카페 추천 부탁해요.", "augmented": true}
+{"question": "신림역 근처 넓고 편안한, 친구들이랑 모임하기 딱 좋은 카페 있냐? ㅋ", "label": 0, "original": "신림역 근처에 넓고 편안해서 친구들이랑 모이기 좋은 분위기 좋은 카페 있을까?", "augmented": true}
+{"question": "신림역 근처 넓고 편안한 분위기 좋은 카페 어디있음? 같이 가자~", "label": 0, "original": "신림역 근처에 넓고 편안해서 친구들이랑 모이기 좋은 분위기 좋은 카페 있을까?", "augmented": true}
+{"question": "유치원 근처, 화장실 깨끗한 카페 있나? 추천해줘!", "label": 0, "original": "유치원 근처 화장실이 깨끗한 카페 있으면 추천 부탁해요.", "augmented": true}
+{"question": "유치원 근처에 화장실 청결한 카페 어디 있을까?", "label": 0, "original": "유치원 근처 화장실이 깨끗한 카페 있으면 추천 부탁해요.", "augmented": true}
+{"question": "유치원 근처 깨끗한 화장실 있는 카페 알려줘ㅠㅠ", "label": 0, "original": "유치원 근처 화장실이 깨끗한 카페 있으면 추천 부탁해요.", "augmented": true}
+{"question": "차 한잔하며 분위기 즐길 수 있는 카페 어디야? ㅋㅋ", "label": 0, "original": "차 한잔 하면서 분위기 즐길 수 있는 카페 알려주세요.", "augmented": true}
+{"question": "분위기 있으면서 커피 마시기 좋은 카페 추천 좀!", "label": 0, "original": "차 한잔 하면서 분위기 즐길 수 있는 카페 알려주세요.", "augmented": true}
+{"question": "한 잔 차 마시면서 vibe 느낄 수 있는 카페 있음? 알려줘~", "label": 0, "original": "차 한잔 하면서 분위기 즐길 수 있는 카페 알려주세요.", "augmented": true}
+{"question": "조용하고 아늑한 작은 빵집 어디 있음? ㅠㅠ", "label": 0, "original": "조용하고 아늑한 작은 빵집 어디 있을까?", "augmented": true}
+{"question": "아늑하고 조용한 빵집 딱 작은 곳 있음?", "label": 0, "original": "조용하고 아늑한 작은 빵집 어디 있을까?", "augmented": true}
+{"question": "조용한데 아늑한 작은 빵집 추천 좀! wifi 빵빵하면 좋고~", "label": 0, "original": "조용하고 아늑한 작은 빵집 어디 있을까?", "augmented": true}
+{"question": "분위기 좋은 데 중에 다시 가고 싶은 카페 있으면 알려줘~", "label": 0, "original": "분위기 좋은 곳 중에서 다시 가고 싶은 카페 추천해줄래?", "augmented": true}
+{"question": "분위기 굿굿! 또 가고 싶은 카페 어디임? 완전 궁금 ㅋㅋ", "label": 0, "original": "분위기 좋은 곳 중에서 다시 가고 싶은 카페 추천해줄래?", "augmented": true}
+{"question": "분위기 좋은 카페 다시 가고 싶은 곳 있음?", "label": 0, "original": "분위기 좋은 곳 중에서 다시 가고 싶은 카페 추천해줄래?", "augmented": true}
+{"question": "야외 테이블 있나? 어디임? 알려줘", "label": 0, "original": "야외 테이블이 마련된 카페 어디에 있을까요?", "augmented": true}
+{"question": "야외 테이블 있는 카페 어디에 있을까? 완전 궁금 ㅠㅠ", "label": 0, "original": "야외 테이블이 마련된 카페 어디에 있을까요?", "augmented": true}
+{"question": "밖에 테이블 있는 카페 있으면 알려 줘~", "label": 0, "original": "야외 테이블이 마련된 카페 어디에 있을까요?", "augmented": true}
+{"question": "편안한 카페 있어?", "label": 0, "original": "편안한 느낌의 카페를 찾고 있는데, 어떤 데가 괜찮을까요?", "augmented": true}
+{"question": "편안한 느낌 카페 찾고 있는데 괜찮은 데 알려줘!", "label": 0, "original": "편안한 느낌의 카페를 찾고 있는데, 어떤 데가 괜찮을까요?", "augmented": true}
+{"question": "편안한 거 좋아. 추천 좀.", "label": 0, "original": "편안한 느낌의 카페를 찾고 있는데, 어떤 데가 괜찮을까요?", "augmented": true}
+{"question": "편안하면서 신나는 분위기 카페 어디야? ㅋ 완전 궁금해~", "label": 0, "original": "편안하면서도 신나는 분위기의 카페 알려주세요.", "augmented": true}
+{"question": "편안+신나는 카페 알려줄래? ㅋㅋ 기대된다!", "label": 0, "original": "편안하면서도 신나는 분위기의 카페 알려주세요.", "augmented": true}
+{"question": "편안하면서 신나는 그런 카페 있나?", "label": 0, "original": "편안하면서도 신나는 분위기의 카페 알려주세요.", "augmented": true}
+{"question": "게임할 수 있는 재밌는 카페 어디임? ㅠㅠ", "label": 0, "original": "게임 즐길 수 있는 재미있는 카페 어디 있을까요?", "augmented": true}
+{"question": "게임도 되고 즐길 수 있는 카페 알려줘~", "label": 0, "original": "게임 즐길 수 있는 재미있는 카페 어디 있을까요?", "augmented": true}
+{"question": "게임 즐길 수 있는 곳 어디야? 대박!", "label": 0, "original": "게임 즐길 수 있는 재미있는 카페 어디 있을까요?", "augmented": true}
+{"question": "근처에 주차 편한 카페 어디야? 알려줘~", "label": 0, "original": "근처에 주차하기 편한 카페 어디 있나요?", "augmented": true}
+{"question": "주차 가능 카페? 가까운 데로 추천해줘", "label": 0, "original": "근처에 주차하기 편한 카페 어디 있나요?", "augmented": true}
+{"question": "분위기 좋은데 접근성 짱인 카페 좀 알려줘 ㅠㅠ", "label": 0, "original": "분위기 좋은 카페 중에서 접근성이 좋은 곳 추천해 줄래?", "augmented": true}
+{"question": "분위기 good! 접근성 best인 카페 어딨냐? ㅋㅋ", "label": 0, "original": "분위기 좋은 카페 중에서 접근성이 좋은 곳 추천해 줄래?", "augmented": true}
+{"question": "분위기 좋고 접근성 좋은 카페 어디임? 추천 좀!", "label": 0, "original": "분위기 좋은 카페 중에서 접근성이 좋은 곳 추천해 줄래?", "augmented": true}
+{"question": "늦게까지 하는 조용한 카페 있을까? 알려줘 ㅠㅠ", "label": 0, "original": "늦은 시간까지 영업하는 조용한 카페 추천 부탁해요.", "augmented": true}
+{"question": "늦은시간에 영업하는 조용한 카페 있나?", "label": 0, "original": "늦은 시간까지 영업하는 조용한 카페 추천 부탁해요.", "augmented": true}
+{"question": "늦게까지 조용한 카페? 어디야?", "label": 0, "original": "늦은 시간까지 영업하는 조용한 카페 추천 부탁해요.", "augmented": true}
+{"question": "편안한 음악 나오는 카페 있나? 딱 그거 찾음!", "label": 0, "original": "편안한 음악이 흐르는 카페 어디 있을까요?", "augmented": true}
+{"question": "편안한 음악 빵빵한 카페 어디 있을까욤~ ㅋㅋ", "label": 0, "original": "편안한 음악이 흐르는 카페 어디 있을까요?", "augmented": true}
+{"question": "음악 편안한 카페 어디 있나요?", "label": 0, "original": "편안한 음악이 흐르는 카페 어디 있을까요?", "augmented": true}
+{"question": "가격 대비 커피 퀄 짱인 카페 좀 알려줘 ㅜㅜ", "label": 0, "original": "가격 대비 만족스러운 커피를 맛볼 수 있는 카페 추천 부탁해요.", "augmented": true}
+{"question": "커피 맛있고 가격 착한 카페 추천해 줄래?", "label": 0, "original": "가격 대비 만족스러운 커피를 맛볼 수 있는 카페 추천 부탁해요.", "augmented": true}
+{"question": "가성비 갑 커피 마실 수 있는 카페 있을까?", "label": 0, "original": "가격 대비 만족스러운 커피를 맛볼 수 있는 카페 추천 부탁해요.", "augmented": true}
+{"question": "자리 진짜 많은 카페 어디야? 알려줘봐", "label": 0, "original": "자리 많이 있는 카페 추천해 주실 수 있나요?", "augmented": true}
+{"question": "자리 많이 있는 카페 ㄱㄱ? 추천 좀~", "label": 0, "original": "자리 많이 있는 카페 추천해 주실 수 있나요?", "augmented": true}
+{"question": "자리 많고 넓은 곳 어디야? 콘센트도 있으면 굿", "label": 0, "original": "자리 많이 있는 카페 추천해 주실 수 있나요?", "augmented": true}
+{"question": "인테리어 특이한 카페 어디임? 궁금해 ㅋㅋ", "label": 0, "original": "특별한 인테리어 덕분에 눈길 끄는 카페가 어디인지 알고 싶어요.", "augmented": true}
+{"question": "눈길 확 가는 인테리어 카페 뭔지 알려줘~", "label": 0, "original": "특별한 인테리어 덕분에 눈길 끄는 카페가 어디인지 알고 싶어요.", "augmented": true}
+{"question": "특별한 인테리어 때문에 애정가는 카페 있어?", "label": 0, "original": "특별한 인테리어 덕분에 눈길 끄는 카페가 어디인지 알고 싶어요.", "augmented": true}
+{"question": "숲 속 조용한 카페 어디야? ㅠㅠ", "label": 0, "original": "숲이 우거진 조용한 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "숲 우거진 데 조용한 카페 있나?", "label": 0, "original": "숲이 우거진 조용한 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "나무 많고 조용한 카페 추천 가능?", "label": 0, "original": "숲이 우거진 조용한 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "분위기 좋고 깔끔한 카페 중 달달한 메뉴 있는 곳?", "label": 0, "original": "분위기 좋고 깔끔하게 꾸며진 카페 중에 달콤한 곳 있나요?", "augmented": true}
+{"question": "감성풍 깔끔한 데 달콤한 거 있나? 알려줘~", "label": 0, "original": "분위기 좋고 깔끔하게 꾸며진 카페 중에 달콤한 곳 있나요?", "augmented": true}
+{"question": "분위기 깔끔한 카페에 달콤한 음료 파는 데 있어?", "label": 0, "original": "분위기 좋고 깔끔하게 꾸며진 카페 중에 달콤한 곳 있나요?", "augmented": true}
+{"question": "특별한 인테리어 색깔 뽐내는 카페 어딘지 알려줘", "label": 0, "original": "특별한 인테리어 색상이 매력적인 카페 소개해 주세요.", "augmented": true}
+{"question": "인테리어 색상이 매력 터지는 카페 있냐?", "label": 0, "original": "특별한 인테리어 색상이 매력적인 카페 소개해 주세요.", "augmented": true}
+{"question": "컬러풀한 인테리어 자랑하는 카페 소개해줄래?", "label": 0, "original": "특별한 인테리어 색상이 매력적인 카페 소개해 주세요.", "augmented": true}
+{"question": "숲속에 앉을 데 많고 편한 카페 어디야? 알려줘!", "label": 0, "original": "숲속에서 편안히 앉을 수 있는 자리가 많은 카페 추천 부탁해요.", "augmented": true}
+{"question": "숲속 감성 존버 가능한 카페 있냐? 추천 좀~", "label": 0, "original": "숲속에서 편안히 앉을 수 있는 자리가 많은 카페 추천 부탁해요.", "augmented": true}
+{"question": "숲속 편안한 자리, 많은 카페 없나?", "label": 0, "original": "숲속에서 편안히 앉을 수 있는 자리가 많은 카페 추천 부탁해요.", "augmented": true}
+{"question": "소규모 지인 모임하기 딱 좋은 카페 어디임?", "label": 0, "original": "소규모 지인 모임하기에 적합한 카페 어디 있나요?", "augmented": true}
+{"question": "조그만 모임하기 좋은 카페 있음? 알려줘 ㅎㅎ", "label": 0, "original": "소규모 지인 모임하기에 적합한 카페 어디 있나요?", "augmented": true}
+{"question": "작게 모이기 좋은 카공 카페 어디야?", "label": 0, "original": "소규모 지인 모임하기에 적합한 카페 어디 있나요?", "augmented": true}
+{"question": "오래 앉아도 좋은 분위기 카페, 어디임?", "label": 0, "original": "오래 앉아 있기 좋은 분위기의 카페 알려줄 수 있나요?", "augmented": true}
+{"question": "오래 버틸 수 있는 카페 추천해줭~", "label": 0, "original": "오래 앉아 있기 좋은 분위기의 카페 알려줄 수 있나요?", "augmented": true}
+{"question": "오래 있어도 부담 없는 카페 있냐?", "label": 0, "original": "오래 앉아 있기 좋은 분위기의 카페 알려줄 수 있나요?", "augmented": true}
+{"question": "눈 편안, 사장님 정성 느껴지는 카페 ~ㅠㅠ 추천해줘!", "label": 0, "original": "눈을 편안하게 해주는 인테리어와 사장님의 정성이 느껴지는 카페 추천 부탁드려요.", "augmented": true}
+{"question": "인테리어 감성 폭발 + 사장님 사랑 넘치는 카페 어디냐ㅋㅋ", "label": 0, "original": "눈을 편안하게 해주는 인테리어와 사장님의 정성이 느껴지는 카페 추천 부탁드려요.", "augmented": true}
+{"question": "눈도 힐링되고, 사장님 열정 뿜뿜인 카페 있냐?", "label": 0, "original": "눈을 편안하게 해주는 인테리어와 사장님의 정성이 느껴지는 카페 추천 부탁드려요.", "augmented": true}
+{"question": "긴장 풀리는 완전 아늑한 카페 어디임? ㅠㅠ", "label": 0, "original": "긴장을 풀 수 있는 아늑한 카페 추천 부탁해", "augmented": true}
+{"question": "스트레스 싹 날리는 카페 추천 좀~", "label": 0, "original": "긴장을 풀 수 있는 아늑한 카페 추천 부탁해", "augmented": true}
+{"question": "마음 편해지는 그루브한 카페, 알려줘!", "label": 0, "original": "긴장을 풀 수 있는 아늑한 카페 추천 부탁해", "augmented": true}
+{"question": "분위기 깔끔하고 편안하게 시간 보내기 좋은 카페 어디야? 알려줘~", "label": 0, "original": "분위기가 깔끔하면서 편안하게 시간을 보낼 수 있는 카페 추천해 주실래요?", "augmented": true}
+{"question": "깔끔하고 조용한데 편하게 쉴 수 있는 카페 있나? 추천 좀 ㅎㅎ", "label": 0, "original": "분위기가 깔끔하면서 편안하게 시간을 보낼 수 있는 카페 추천해 주실래요?", "augmented": true}
+{"question": "편안하고 깔끔한 분위기, 카페 추천 ㄱㄱ", "label": 0, "original": "분위기가 깔끔하면서 편안하게 시간을 보낼 수 있는 카페 추천해 주실래요?", "augmented": true}
+{"question": "벽지 넘 귀엽고 감성 충만한 숨은 카페 있을까? 알려줘 ㅋㅋ", "label": 0, "original": "귀여운 벽지로 꾸며진 숨겨진 카페 추천해 줄래?", "augmented": true}
+{"question": "숨겨진 인테리어 깡패 카페 뭐 없나? 귀여운 데로만~", "label": 0, "original": "귀여운 벽지로 꾸며진 숨겨진 카페 추천해 줄래?", "augmented": true}
+{"question": "캐귀여운 벽지로 꾸민 카페, 어디 있냐? 추천 좀!", "label": 0, "original": "귀여운 벽지로 꾸며진 숨겨진 카페 추천해 줄래?", "augmented": true}
+{"question": "청결하고 편안한 카페 어디 괜찮음?", "label": 0, "original": "편안하고 청결한 분위기를 가진 카페 어디가 괜찮아요?", "augmented": true}
+{"question": "편안함+청결한 분위기 카페 뭐 추천됨?", "label": 0, "original": "편안하고 청결한 분위기를 가진 카페 어디가 괜찮아요?", "augmented": true}
+{"question": "깔끔하고 편안한 분위기 카페 있긴 함?", "label": 0, "original": "편안하고 청결한 분위기를 가진 카페 어디가 괜찮아요?", "augmented": true}
+{"question": "편안한 분위기 카페 어디 있음? ㅠㅠ 추천 좀 해줘~", "label": 0, "original": "편안한 분위기에 가기 쉬운 카페 어디 있을까요?", "augmented": true}
+{"question": "편한 분위기 있고 가기 쉬운 카페 어디냐? ㅋㅋ 알려줘~", "label": 0, "original": "편안한 분위기에 가기 쉬운 카페 어디 있을까요?", "augmented": true}
+{"question": "편안한 거 좋아하는데 가까운 데 카페 있나~?", "label": 0, "original": "편안한 분위기에 가기 쉬운 카페 어디 있을까요?", "augmented": true}
+{"question": "제로웨이스트 컨셉에 가격 부담 없는, 자리 널널한 카페 추천 좀 해줄래?", "label": 0, "original": "제로웨이스트 컨셉에 가격도 부담 없는, 자리 간격 넉넉한 카페 추천해 줄 수 있을까요?", "augmented": true}
+{"question": "가격 괜찮고 공간도 넉넉하고, 제로웨이스트 카페 어디 있냐?", "label": 0, "original": "제로웨이스트 컨셉에 가격도 부담 없는, 자리 간격 넉넉한 카페 추천해 줄 수 있을까요?", "augmented": true}
+{"question": "zero waste 컨셉에 cost도 쏘쏘, 자리도 빵빵한 카페 어디임?", "label": 0, "original": "제로웨이스트 컨셉에 가격도 부담 없는, 자리 간격 넉넉한 카페 추천해 줄 수 있을까요?", "augmented": true}
+{"question": "귀여운 인테리어 예쁜 카페 어디 있어? 알려줘~", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "인테리어 깜찍한 카페 좀 추천해줘!", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "인테리어 완전 귀염뽀짝 카페 있을까? ㅋㅋ", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "ㅇㅣ쁘고 귀여운 카페 어디임? 알려줘 :)", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "인테리어 깡패인 카페 아는 사람?", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "귀여미 뿜뿜하는 카페 추천 좀~", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "귀여운 느낌 인테리어 예쁜 카페 어디?", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "인테리어 귀여운 카페 있나?", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "예쁜 카페, 귀여운 느낌?", "label": 0, "original": "귀여운 느낌 나는 인테리어 예쁜 카페 알려줘.", "augmented": true}
+{"question": "충전 가능 카페 어디 없나 ㅠㅠ?", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "폰 충전할 수 있는 카페 있음? 알려줘~", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "충전 되는 카페 찾아요!", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "충전 존 있는 카페 있나요?", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "충전 OK인 카페 있음?", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "충전 가능한 카페 찾고 있음~", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "충전할 수 있는 곳 있는 카페 있냐?", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "충전 되는 카페 어디임?", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "충전 가능한 카페 어디?", "label": 0, "original": "충전할 수 있는 곳 있는 카페 있나요?", "augmented": true}
+{"question": "분위기 좋은 카페 중 좌석 종류 많은 곳 추천해줘~", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "여러 타입 좌석 있는 분위기 좋은 카페 어디?", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "좌석 다양하고 분위기 짱인 카페 있나?", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "좌석 여러가지 있는 분위기 좋은 카페 추천!", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "분위기 좋고 좌석 다양한 곳 어디?", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "다양한 좌석과 분위기 좋은 카페 알려줘~", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "좌석 여러 개 있는 분위기 좋은 카페?", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "여러 좌석 있는 카페, 분위기 좋음?", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "분위기 좋은 곳, 좌석 다양한 카페?", "label": 0, "original": "분위기 좋은 곳 중 좌석이 여러 종류인 카페를 추천해 주세요.", "augmented": true}
+{"question": "어디 특별한 느낌 나는 카페 있을까? 궁금해~", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별함 느껴지는 카페 있으면 추천 좀! ㅋㅋ", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별한 감성 가득한 카페 어디임? 알려줘ㅠㅠ", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별 분위기 있는 카페 찾고 있어요~", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별한 카페 알고싶음!", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별함 가득한 카페 어디인가요?", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별한 느낌 카페 궁금?", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별한 카페 있어?", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별함 느껴지는 카페 어디?", "label": 0, "original": "특별함을 느낄 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "특별한 분위기 있는 카페 어디가 좋아? 알려줘~", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "분위기 완전 남다른 카페 추천해줘! ㅋㅋ", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "특별한 분위기 뿜뿜 카페 어디임?", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "special한 분위기 카페 어디임?", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "특별한 분위기 vibe 있는 카페 추천해줘~", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "특별한 분위기 있는 카페, 알려주세요!", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "특별한 분위기 카페?", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "분위기 남다른 카페 어디?", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "특별한 분위기 있는 카페 어디가 좋아?", "label": 0, "original": "특별한 분위기가 있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "커피 맛 진짜 좋은 데 어디 있어? 알려줘봐!", "label": 0, "original": "커피 맛이 정말 좋은 카페 추천해 줄 수 있어요?", "augmented": true}
+{"question": "커피 맛 좋은 곳 있나? 완전 궁금해~", "label": 0, "original": "커피 맛이 정말 좋은 카페 추천해 줄 수 있어요?", "augmented": true}
+{"question": "인테리어 쩌는 멋진 카페 있냐? 알려줘봐 ㅋㅋ", "label": 0, "original": "멋지고 깔끔한 분위기의 카페 중에서 인테리어가 인상적인 곳 있나요?", "augmented": true}
+{"question": "멋진 분위기 깔끔한 카페 중에 인상적인 곳 있음?", "label": 0, "original": "멋지고 깔끔한 분위기의 카페 중에서 인테리어가 인상적인 곳 있나요?", "augmented": true}
+{"question": "멋지고 깔끔한데 인테리어도 굿인 카페 좀 추천해줘~", "label": 0, "original": "멋지고 깔끔한 분위기의 카페 중에서 인테리어가 인상적인 곳 있나요?", "augmented": true}
+{"question": "신림 근처 상큼 디저트 맛집 카페 누가 아는 데?", "label": 0, "original": "신림 근처에서 상큼한 디저트가 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "신림 한복판에 디저트 맛있는 카페 어디 있을까?", "label": 0, "original": "신림 근처에서 상큼한 디저트가 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "신림 근처 상큼한 디저트 파는 카페 있나?", "label": 0, "original": "신림 근처에서 상큼한 디저트가 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "플레이하기 좋은 보드게임 카페 중 야외 자리 예쁜 데 있어?", "label": 0, "original": "분위기 좋은 보드게임 카페 중에 야외 자리가 예쁜 곳 아는 곳 있나요?", "augmented": true}
+{"question": "보드게임 카페 분위기 좋은 데, 야외 자리 괜찮은 곳 있나?", "label": 0, "original": "분위기 좋은 보드게임 카페 중에 야외 자리가 예쁜 곳 아는 곳 있나요?", "augmented": true}
+{"question": "야외 자리 예쁜 보드게임 카페 알고 싶다~", "label": 0, "original": "분위기 좋은 보드게임 카페 중에 야외 자리가 예쁜 곳 아는 곳 있나요?", "augmented": true}
+{"question": "혼자 노트북 작업하기 좋은 조용한 카페 어디임?", "label": 0, "original": "혼자서 노트북 쓰기 편한 조용한 카페 알려주세요.", "augmented": true}
+{"question": "조용하게 혼자 노트북 쓰기 편한 곳 알려줘ㅠㅠ", "label": 0, "original": "혼자서 노트북 쓰기 편한 조용한 카페 알려주세요.", "augmented": true}
+{"question": "노트북 쓰기 편한 조용한 카페 찾고 있어ㅋㅋ", "label": 0, "original": "혼자서 노트북 쓰기 편한 조용한 카페 알려주세요.", "augmented": true}
+{"question": "컴포즈 같은 편안하고 아늑한 카페 어디야? 알려줘~", "label": 0, "original": "편안하고 아늑한 카페 컴포즈 같은 곳 어디야?", "augmented": true}
+{"question": "편안하고 아늑한 카페 컴포즈 스타일로 괜찮은 데 있나?", "label": 0, "original": "편안하고 아늑한 카페 컴포즈 같은 곳 어디야?", "augmented": true}
+{"question": "편안해 보이는, 아늑한 카페 어디 없나?", "label": 0, "original": "편안하고 아늑한 카페 컴포즈 같은 곳 어디야?", "augmented": true}
+{"question": "사람 없고 조용한 카페 추천 좀 해줘 ㅠㅠ", "label": 0, "original": "사람 적고 평화로운 카페 추천해 주세요.", "augmented": true}
+{"question": "적은 사람, 평화로운 카페 어디임? 알려줘~", "label": 0, "original": "사람 적고 평화로운 카페 추천해 주세요.", "augmented": true}
+{"question": "사람 적고 평화로운, 조용한 카페 있냐?", "label": 0, "original": "사람 적고 평화로운 카페 추천해 주세요.", "augmented": true}
+{"question": "다락방 느낌 나고 자리마다 충전 가능한 단골 카페 어디야? 알려줘 ㅋㅋ", "label": 0, "original": "편안한 다락방 느낌 나면서 자리마다 충전할 수 있는 곳이 있는 단골 카페 어디가 있을까?", "augmented": true}
+{"question": "편안한 다락방 스타일에 충전기 다 있는 단골 카페 아는 곳 없나?", "label": 0, "original": "편안한 다락방 느낌 나면서 자리마다 충전할 수 있는 곳이 있는 단골 카페 어디가 있을까?", "augmented": true}
+{"question": "다락방+충전 다 되는 단골 카페 있을까?", "label": 0, "original": "편안한 다락방 느낌 나면서 자리마다 충전할 수 있는 곳이 있는 단골 카페 어디가 있을까?", "augmented": true}
+{"question": "감성 폭발하는 공간에서 커피 마시고 싶은데 추천해줘 ㅠㅠ", "label": 0, "original": "감성적인 공간에서 커피 마시고 싶은데 추천 부탁해!", "augmented": true}
+{"question": "감성 가득한 카페에서 커피 한 잔 하고 싶어~ 어디 있을까?", "label": 0, "original": "감성적인 공간에서 커피 마시고 싶은데 추천 부탁해!", "augmented": true}
+{"question": "감성적인 곳 커피맛집 추천 부탁해요~", "label": 0, "original": "감성적인 공간에서 커피 마시고 싶은데 추천 부탁해!", "augmented": true}
+{"question": "분위기 좋고 층 많은 카페 있나? 넓고 수다 떨기 딱 좋은 곳 ㅋㅋ", "label": 0, "original": "분위기 있으면서도 층수가 많아 공간이 넓고, 수다 떨기 딱 좋은 카페 추천 부탁해요.", "augmented": true}
+{"question": "층 많고 공간 넓은, 수다하기 좋은 카페 어디임? 추천 좀~", "label": 0, "original": "분위기 있으면서도 층수가 많아 공간이 넓고, 수다 떨기 딱 좋은 카페 추천 부탁해요.", "augmented": true}
+{"question": "분위기 있고 층수 많은 카페 추천해줘! 수다용으로 딱!", "label": 0, "original": "분위기 있으면서도 층수가 많아 공간이 넓고, 수다 떨기 딱 좋은 카페 추천 부탁해요.", "augmented": true}
+{"question": "커피 말고 색다른 음료 마실만한 곳 어디야? 알려줘~", "label": 1, "original": "커피 대신 색다른 음료를 맛볼 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "커피말고 다른 거 마실 수 있는 카페 어디 좀 알려줘ㅋㅋ", "label": 1, "original": "커피 대신 색다른 음료를 맛볼 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "커피 빼고 특별한 음료 있는 데 있나? 추천좀!", "label": 1, "original": "커피 대신 색다른 음료를 맛볼 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "아이아 사이즈 빵빵한 카페 어디임? 알려줘~", "label": 1, "original": "아이스 아메리카노 사이즈가 큰 카페 알려 주세요.", "augmented": true}
+{"question": "아아 큰 거 파는 카페 좀 알려줘ㅋㅋ", "label": 1, "original": "아이스 아메리카노 사이즈가 큰 카페 알려 주세요.", "augmented": true}
+{"question": "아이스 아메 뚱뚱한 사이즈 있나? 알려줘", "label": 1, "original": "아이스 아메리카노 사이즈가 큰 카페 알려 주세요.", "augmented": true}
+{"question": "달콤한 쿠키 맛집 카페 없나?", "label": 1, "original": "달콤한 쿠키가 유명한 카페 추천해 주세요.", "augmented": true}
+{"question": "쿠키 맛있기로 유명한 카페 어디임?", "label": 1, "original": "달콤한 쿠키가 유명한 카페 추천해 주세요.", "augmented": true}
+{"question": "쿠키가 진짜 달고 맛난 곳 있음?", "label": 1, "original": "달콤한 쿠키가 유명한 카페 추천해 주세요.", "augmented": true}
+{"question": "그린티 존맛 카페 어디야? ㅠㅠ 추천 좀~", "label": 1, "original": "그린티 메뉴가 인기 많은 카페 어디야?", "augmented": true}
+{"question": "green tea 메뉴 핫한 데 어디냐?", "label": 1, "original": "그린티 메뉴가 인기 많은 카페 어디야?", "augmented": true}
+{"question": "그린티 잘하는 카페 있으면 알려줘용ㅋㅋ", "label": 1, "original": "그린티 메뉴가 인기 많은 카페 어디야?", "augmented": true}
+{"question": "마스무디 진짜 맛있는 카페 어디임?", "label": 1, "original": "마스무디 맛집 같은 카페 어디 있나요?", "augmented": true}
+{"question": "마스무디 맛집 같은 곳 있나? 알려줘~", "label": 1, "original": "마스무디 맛집 같은 카페 어디 있나요?", "augmented": true}
+{"question": "마스무디 최강 맛집 카페 어디야? study하기 좋은 곳이면 굿!", "label": 1, "original": "마스무디 맛집 같은 카페 어디 있나요?", "augmented": true}
+{"question": "바닐라라떼 꼭 마셔야 하는 카페 어디야? 알려줘~", "label": 1, "original": "바닐라라떼를 꼭 맛봐야 하는 카페 알려줘.", "augmented": true}
+{"question": "바닐라라떼 쩌는 곳 있음? 꼭 가보고 싶어 ㅋㅋ", "label": 1, "original": "바닐라라떼를 꼭 맛봐야 하는 카페 알려줘.", "augmented": true}
+{"question": "바닐라라떼 맛있는 데 있나? 추천 좀 ㅠㅠ", "label": 1, "original": "바닐라라떼를 꼭 맛봐야 하는 카페 알려줘.", "augmented": true}
+{"question": "햄치즈샌드 맛집 좀 알려줘 ㅋㅋ", "label": 1, "original": "햄치즈샌드위치가 정말 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "햄치즈샌드위치 개쩌는 카페 없나? 카공도 되고", "label": 1, "original": "햄치즈샌드위치가 정말 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "햄치즈샌드 맛있는데 어디임? 꼭 가보고 싶음", "label": 1, "original": "햄치즈샌드위치가 정말 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "밀크티 맛있는 곳? 있으면 추천해줘요", "label": 1, "original": "맛있는 밀크티를 마실 수 있는 곳 어디 있을까요?", "augmented": true}
+{"question": "밀크티 진짜 맛난 곳 어디임? 알려주세요~", "label": 1, "original": "맛있는 밀크티를 마실 수 있는 곳 어디 있을까요?", "augmented": true}
+{"question": "맛있는 밀크티 마실 데 있나? ㅠㅠ 추천 부탁", "label": 1, "original": "맛있는 밀크티를 마실 수 있는 곳 어디 있을까요?", "augmented": true}
+{"question": "오레오케이크 맛집 좀 알려주세요~", "label": 1, "original": "오레오 케이크 맛집 추천해줄 수 있나요?", "augmented": true}
+{"question": "오레오케이크 존맛 카페 있을까? 알려줘 ㅎㅎ", "label": 1, "original": "오레오 케이크 맛집 추천해줄 수 있나요?", "augmented": true}
+{"question": "오레오케이크 맛집 어딘지 아는 사람? 꼭 가보고 싶음!", "label": 1, "original": "오레오 케이크 맛집 추천해줄 수 있나요?", "augmented": true}
+{"question": "가격 대비 샌드위치 괜찮은 카페 있나? 정보 좀~", "label": 1, "original": "가격 대비 만족스러운 샌드위치 파는 카페 있으면 알려주세요.", "augmented": true}
+{"question": "가성비 좋은 샌드위치 파는 곳 어디임? 알려줘 ㅋㅋ", "label": 1, "original": "가격 대비 만족스러운 샌드위치 파는 카페 있으면 알려주세요.", "augmented": true}
+{"question": "샌드위치 싸고 맛있는 카페 있으면 소개 좀 ㅠㅠ", "label": 1, "original": "가격 대비 만족스러운 샌드위치 파는 카페 있으면 알려주세요.", "augmented": true}
+{"question": "상태 좋은 블루베리 요거트 케이크 파는 데 어디야? 알려줘ㅠㅠ", "label": 1, "original": "상태 좋은 블루베리 요거트 케이크 파는 곳 어디 있을까요?", "augmented": true}
+{"question": "블루베리 요거트 케이크 맛있게 파는 카페 뭐있음? 아아랑 먹고 싶어~", "label": 1, "original": "상태 좋은 블루베리 요거트 케이크 파는 곳 어디 있을까요?", "augmented": true}
+{"question": "블루베리 요거트 케이크 있나? 맛있고 상태 좋은 곳 찜해줘", "label": 1, "original": "상태 좋은 블루베리 요거트 케이크 파는 곳 어디 있을까요?", "augmented": true}
+{"question": "마카롱 짱 맛있는 카페 어디임? 알려줘ㅋㅋ", "label": 1, "original": "마카롱이 특히 맛있는 카페 알려주세요.", "augmented": true}
+{"question": "마카롱 존맛집 있는 카페 좀 추천해줘 아아 마시면서 카공하구 싶다", "label": 1, "original": "마카롱이 특히 맛있는 카페 알려주세요.", "augmented": true}
+{"question": "마카롱 특히 맛있는데 조용한 카페 있나?", "label": 1, "original": "마카롱이 특히 맛있는 카페 알려주세요.", "augmented": true}
+{"question": "위스키 풍미 푸딩 먹을 수 있는 곳 알아? 있음 알려줘ㅠㅠ", "label": 1, "original": "위스키 풍미가 느껴지는 푸딩 먹을 수 있는 곳 알아?", "augmented": true}
+{"question": "위스키 느낌 나는 푸딩 파는 카페 어디야? 좀 특이한 곳으로~", "label": 1, "original": "위스키 풍미가 느껴지는 푸딩 먹을 수 있는 곳 알아?", "augmented": true}
+{"question": "위스키풍 푸딩 있는 데 조용하고 깔끔한 곳 없나?", "label": 1, "original": "위스키 풍미가 느껴지는 푸딩 먹을 수 있는 곳 알아?", "augmented": true}
+{"question": "크루키 맛집 카페 어디야? 여기 없나?", "label": 1, "original": "크루키 맛집으로 유명한 카페가 어디야?", "augmented": true}
+{"question": "크루키 넘 맛있는 데 알려줘! 이번에 뜨아랑 같이 가고파~", "label": 1, "original": "크루키 맛집으로 유명한 카페가 어디야?", "augmented": true}
+{"question": "크루키 맛 있기로 유명한 카페 있나? study하기 좋은 곳이면 굿", "label": 1, "original": "크루키 맛집으로 유명한 카페가 어디야?", "augmented": true}
+{"question": "맛있는 블러커피 마실 수 있는 데 어디야? 알려줘~", "label": 1, "original": "맛있는 블러커피를 마실 수 있는 곳 어디야?", "augmented": true}
+{"question": "블랙커피 완전 맛있는 카페 어디임? wifi 빵빵했으면 좋겠다", "label": 1, "original": "맛있는 블러커피를 마실 수 있는 곳 어디야?", "augmented": true}
+{"question": "블러커피 제대로 하는 데 조용하고 카공하기 좋은 곳 있나?", "label": 1, "original": "맛있는 블러커피를 마실 수 있는 곳 어디야?", "augmented": true}
+{"question": "녹차 케이크 개꿀 맛나는 카페 어디임? 알려줘봐", "label": 1, "original": "녹차 케이크가 정말 맛있는 카페 어디인지 알려 주세요.", "augmented": true}
+{"question": "녹차 케이크 존맛 카페 있음? 찐맛집 좀 알려줘요~", "label": 1, "original": "녹차 케이크가 정말 맛있는 카페 어디인지 알려 주세요.", "augmented": true}
+{"question": "녹차케이크 맛집 어디?ㅠㅠ 조용한데 없나?", "label": 1, "original": "녹차 케이크가 정말 맛있는 카페 어디인지 알려 주세요.", "augmented": true}
+{"question": "딸기 젤라또 땡기는 카페 어디야? ㅋㅋ 알려줘~", "label": 1, "original": "딸기 젤라또가 인기 많은 카페 알려주세요.", "augmented": true}
+{"question": "딸젤맛집으로 카공하기 좋은 곳 있음? 추천좀 ㅎ", "label": 1, "original": "딸기 젤라또가 인기 많은 카페 알려주세요.", "augmented": true}
+{"question": "딸기 젤라또 인기 많고 맛있는 카페 어디인지 궁금함!", "label": 1, "original": "딸기 젤라또가 인기 많은 카페 알려주세요.", "augmented": true}
+{"question": "향긋한 얼그레이 마들렌 파는 데 어디야? 알려줘", "label": 1, "original": "향긋한 얼그레이 마들렌을 파는 곳 어디일까?", "augmented": true}
+{"question": "얼그레이 마들렌 존맛 카페 어딘가~? ㅠㅠ 좀 알려줘", "label": 1, "original": "향긋한 얼그레이 마들렌을 파는 곳 어디일까?", "augmented": true}
+{"question": "얼그레이 마들렌 맛집 있으면 말해줘요! wifi 빵빵하면 더 좋아", "label": 1, "original": "향긋한 얼그레이 마들렌을 파는 곳 어디일까?", "augmented": true}
+{"question": "커피 향 진짜 좋은 데 스콘도 맛있는 카페 어디임? 알라줘~", "label": 1, "original": "커피 향이 진하고 스콘이 맛있는 카페 있나요?", "augmented": true}
+{"question": "커피 짱 맛있고 스콘 굳인 카페 있을까? ㅋㅋ 알려줘봐", "label": 1, "original": "커피 향이 진하고 스콘이 맛있는 카페 있나요?", "augmented": true}
+{"question": "커피 진하고 스콘 맛난 곳 어디? study하기 좋은 곳이면 굿!", "label": 1, "original": "커피 향이 진하고 스콘이 맛있는 카페 있나요?", "augmented": true}
+{"question": "가격 대비 디카페인 아아 맛있는 카페 어디 있을까? ㅠㅠ 알려줘", "label": 1, "original": "가격 대비 만족스러운 디카페인 아메리카노를 즐길 수 있는 카페가 있을까요?", "augmented": true}
+{"question": "디카페인 아메리카노 가성비 좋은 카페 있음? 추천 좀 ㅎ", "label": 1, "original": "가격 대비 만족스러운 디카페인 아메리카노를 즐길 수 있는 카페가 있을까요?", "augmented": true}
+{"question": "가성비짱 디카페인 아아 즐길 수 있는 카페 어디야? wifi 빵빵한 곳이면 굿!", "label": 1, "original": "가격 대비 만족스러운 디카페인 아메리카노를 즐길 수 있는 카페가 있을까요?", "augmented": true}
+{"question": "수박주스 진짜 맛있는 데 어디야?", "label": 1, "original": "수박주스가 특히 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "수박주스 맛집 카페 아는 사람?", "label": 1, "original": "수박주스가 특히 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "수박주스 쩌는 카페 있나?", "label": 1, "original": "수박주스가 특히 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "킹덤빙수 먹을 수 있는 근처 카페 있어요? ㅋㅋ", "label": 1, "original": "킹덤빙수를 맛볼 수 있는 근처 카페 있어요?", "augmented": true}
+{"question": "킹덤빙수 파는 카페 어디있나 ㅠㅠ", "label": 1, "original": "킹덤빙수를 맛볼 수 있는 근처 카페 있어요?", "augmented": true}
+{"question": "킹덤빙수 맛집 카페 추천 좀~", "label": 1, "original": "킹덤빙수를 맛볼 수 있는 근처 카페 있어요?", "augmented": true}
+{"question": "자몽차 잘하는 카페 있나?", "label": 1, "original": "자몽차 잘하는 카페 있을까?", "augmented": true}
+{"question": "자몽차 맛집 어디?", "label": 1, "original": "자몽차 잘하는 카페 있을까?", "augmented": true}
+{"question": "자몽차 짱인 데 없나?", "label": 1, "original": "자몽차 잘하는 카페 있을까?", "augmented": true}
+{"question": "달지 않은 자몽주스 마실 수 있는 카페 어디야? ㅠㅠ", "label": 1, "original": "달지 않은 자몽주스를 마실 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "자몽주스 달지 않은 거 파는 카페 있나?", "label": 1, "original": "달지 않은 자몽주스를 마실 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "덜 달고 맛있는 자몽주스 카페 궁금~", "label": 1, "original": "달지 않은 자몽주스를 마실 수 있는 카페가 궁금해요.", "augmented": true}
+{"question": "복숭아 케이크 완전 맛있는 곳 어딨지? ㅋ", "label": 1, "original": "복숭아 케이크 진짜 맛있는 곳 어디 있나요?", "augmented": true}
+{"question": "복숭아 케이크 맛집 카페 알려줘~", "label": 1, "original": "복숭아 케이크 진짜 맛있는 곳 어디 있나요?", "augmented": true}
+{"question": "복숭아 케이크 존맛집 어디임?", "label": 1, "original": "복숭아 케이크 진짜 맛있는 곳 어디 있나요?", "augmented": true}
+{"question": "팝콘 맛 짱인 카페 어디임? 알려줘봐~", "label": 1, "original": "팝콘 맛이 좋은 카페 좀 알려주세요!", "augmented": true}
+{"question": "팝콘맛 좋은 카페 있으면 추천좀 ㅋ", "label": 1, "original": "팝콘 맛이 좋은 카페 좀 알려주세요!", "augmented": true}
+{"question": "팝콘 맛 최고인 데 있나?", "label": 1, "original": "팝콘 맛이 좋은 카페 좀 알려주세요!", "augmented": true}
+{"question": "우유케익 맛집 카페 좀 추천해줘 ㅠㅠ", "label": 1, "original": "우유 케이크 맛집으로 소문난 카페 좀 추천해 주세요.", "augmented": true}
+{"question": "우유케익 잘하는 카페 알려줄래? 완전 맛집 찾음 ㅋㅋ", "label": 1, "original": "우유 케이크 맛집으로 소문난 카페 좀 추천해 주세요.", "augmented": true}
+{"question": "우유케익 맛집 카페 어딘가요? 추천 플리즈~", "label": 1, "original": "우유 케이크 맛집으로 소문난 카페 좀 추천해 주세요.", "augmented": true}
+{"question": "위스키푸딩 대박이었던 카페 알려줘봐~", "label": 1, "original": "위스키푸딩이 인상 깊었던 카페가 궁금해요.", "augmented": true}
+{"question": "위스키푸딩 존맛 카페 어디임? 알려줘ㅠㅠ", "label": 1, "original": "위스키푸딩이 인상 깊었던 카페가 궁금해요.", "augmented": true}
+{"question": "위스키푸딩 기억에 남는 카페 있으면 추천 좀!", "label": 1, "original": "위스키푸딩이 인상 깊었던 카페가 궁금해요.", "augmented": true}
+{"question": "레몬파운드 녹는 맛 카페 어디야? 알려 줘 ㅎㅎ", "label": 1, "original": "입에서 녹는 레몬 파운드가 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "입에서 사르르 녹는 레몬파운드 맛집 카페 있나?", "label": 1, "original": "입에서 녹는 레몬 파운드가 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "레몬파운드 진짜 맛있는 카페 추천 좀 ㅠㅠ", "label": 1, "original": "입에서 녹는 레몬 파운드가 맛있는 카페 추천해 주세요.", "augmented": true}
+{"question": "휘낭시에 유명한 카페 어디임? 알려줘봐~", "label": 1, "original": "휘낭시에가 유명한 카페 어디 있을까?", "augmented": true}
+{"question": "휘낭시에 맛집 카페 있으면 추천 좀 ㅋㅋ", "label": 1, "original": "휘낭시에가 유명한 카페 어디 있을까?", "augmented": true}
+{"question": "휘낭시에 존맛 카페 어디? 있으면 알려줘!", "label": 1, "original": "휘낭시에가 유명한 카페 어디 있을까?", "augmented": true}
+{"question": "에그샌드위치 담백하고 맛난 데 어디야? 알려줘!", "label": 1, "original": "담백한 에그샌드위치 맛있는 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "담백한 에그샌드위치 파는 카페 좀 추천해줘~ ㅋㅋ", "label": 1, "original": "담백한 에그샌드위치 맛있는 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "에그샌 샌드위치 맛집 카페 있나? 꿀맛인 데 알려줘", "label": 1, "original": "담백한 에그샌드위치 맛있는 카페 추천해 줄 수 있나요?", "augmented": true}
+{"question": "녹차라떼 진하고 쩌는 데 어디임? ㅋㅋ 알려줘~", "label": 1, "original": "녹차라떼가 진하고 맛있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "진한 녹차라떼 파는 카페 찾고 있음. 괜찮은데 없나?", "label": 1, "original": "녹차라떼가 진하고 맛있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "녹차라떼 엄청 진하고 맛있는 카페 좀 추천 부탁! ㅠㅠ", "label": 1, "original": "녹차라떼가 진하고 맛있는 카페 어디가 좋을까요?", "augmented": true}
+{"question": "바질치킨파니니 추천하는 카페 좀 알려줘", "label": 1, "original": "바질치킨파니니 추천해주는 카페 좀 알려줄래?", "augmented": true}
+{"question": "바질치킨파니니 맛있는 곳 있음? 카페 추천해", "label": 1, "original": "바질치킨파니니 추천해주는 카페 좀 알려줄래?", "augmented": true}
+{"question": "바질치킨파니니 잘하는 카페 있나? 정보 좀 줘~", "label": 1, "original": "바질치킨파니니 추천해주는 카페 좀 알려줄래?", "augmented": true}
+{"question": "고소한 미트파이 파는 카페 어디임? 알려줘", "label": 1, "original": "맛있는 미트파이를 파는 카페를 알고 싶어요.", "augmented": true}
+{"question": "맛난 미트파이 먹을 수 있는 카페 좀 추천해줘~", "label": 1, "original": "맛있는 미트파이를 파는 카페를 알고 싶어요.", "augmented": true}
+{"question": "미트파이 맛있는 곳 알고 싶어 ㅋㅋ 카페 알려주라", "label": 1, "original": "맛있는 미트파이를 파는 카페를 알고 싶어요.", "augmented": true}
+{"question": "바나나푸딩 맛있는 카페 좀 알려주라! ㅠㅠ", "label": 1, "original": "바나나푸딩 먹으러 갈만한 카페 좀 알려줘", "augmented": true}
+{"question": "바나나푸딩 먹으러 괜찮은 카페 어디야? 추천 좀~", "label": 1, "original": "바나나푸딩 먹으러 갈만한 카페 좀 알려줘", "augmented": true}
+{"question": "바나나푸딩 파는 카페 찾고 있음. 있음? 알려줘!", "label": 1, "original": "바나나푸딩 먹으러 갈만한 카페 좀 알려줘", "augmented": true}
+{"question": "페퍼로니 토핑 식빵 파는 카페 어디야? 알려줘~", "label": 1, "original": "페퍼로니 토핑이 들어간 식빵 맛집 카페 추천 부탁해요.", "augmented": true}
+{"question": "페퍼로니 식빵 먹을 수 있는 카페 있나? 완전 궁금함ㅋㅋ", "label": 1, "original": "페퍼로니 토핑이 들어간 식빵 맛집 카페 추천 부탁해요.", "augmented": true}
+{"question": "페퍼로니 토핑 식빵인 맛집 카페 추천 좀~", "label": 1, "original": "페퍼로니 토핑이 들어간 식빵 맛집 카페 추천 부탁해요.", "augmented": true}
+{"question": "흑임자 바스크치즈케이크 맛집 카페 어디임? ㅠㅠ", "label": 1, "original": "진짜 흑임자 바스크 치즈케이크 맛볼 수 있는 카페 알려 주세요.", "augmented": true}
+{"question": "흑임자 바스크치즈 맛난 곳 알려주라!", "label": 1, "original": "진짜 흑임자 바스크 치즈케이크 맛볼 수 있는 카페 알려 주세요.", "augmented": true}
+{"question": "흑임자 바스크 치즈케이크 진짜 맛보려면 어디 가야돼?", "label": 1, "original": "진짜 흑임자 바스크 치즈케이크 맛볼 수 있는 카페 알려 주세요.", "augmented": true}
+{"question": "망고 케이크 맛집?", "label": 1, "original": "망고 케이크 맛집을 알고 싶어요.", "augmented": true}
+{"question": "망고케익 맛있는 곳 없나", "label": 1, "original": "망고 케이크 맛집을 알고 싶어요.", "augmented": true}
+{"question": "망고 케이크 잘하는 카페 알려줘", "label": 1, "original": "망고 케이크 맛집을 알고 싶어요.", "augmented": true}
+{"question": "팝콘 특히 맛있는 카페 알려줘 ㅋㅋ", "label": 1, "original": "팝콘이 특별히 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "팝콘 대박인 카페 어디임? 정말 궁금해~~", "label": 1, "original": "팝콘이 특별히 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "팝콘 맛집 카페, 딱 하나만 알려줘ㅠㅠ", "label": 1, "original": "팝콘이 특별히 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "코코넛커피스무디 맛집 카페 어디야? wifi 빵빵하면 굿!", "label": 1, "original": "코코넛커피스무디가 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "코코넛 커피 스무디 맛있는 카공하기 좋은 곳 좀 알려줘~", "label": 1, "original": "코코넛커피스무디가 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "코코넛 커피 스무디 맛집 어디 있을까? study하기 좋은 카페면 최고!", "label": 1, "original": "코코넛커피스무디가 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "오레오 케이크 존맛인 카페 어디야? 알려줘 ㅋㅋ", "label": 1, "original": "오레오 케이크 맛있게 만드는 카페 추천 부탁해요.", "augmented": true}
+{"question": "오레오 케이크 개맛집 카페 있음? 추천 좀~", "label": 1, "original": "오레오 케이크 맛있게 만드는 카페 추천 부탁해요.", "augmented": true}
+{"question": "오레오 케이크 맛난데, 카페 있나?", "label": 1, "original": "오레오 케이크 맛있게 만드는 카페 추천 부탁해요.", "augmented": true}
+{"question": "과일주스 겁나 맛있는 카페 있으면 찐으로 알려줘 ㅠㅠ", "label": 1, "original": "과일주스가 정말 맛있는 카페 있으면 알려주세요.", "augmented": true}
+{"question": "과일주스 아아 맛있는 카페 어디임? 알려줭~", "label": 1, "original": "과일주스가 정말 맛있는 카페 있으면 알려주세요.", "augmented": true}
+{"question": "과일주스 맛있는 카페, 있음?", "label": 1, "original": "과일주스가 정말 맛있는 카페 있으면 알려주세요.", "augmented": true}
+{"question": "스콘 맛있는 카페 어디임? 커피도 good인 곳~", "label": 1, "original": "스콘이 맛있는 카페 어디 있을까요? 커피도 좋은 곳이면 좋겠어요.", "augmented": true}
+{"question": "스콘 맛집 카페 있으면, 커피 맛도 좋은 데 알려줘 ㅋㅋ", "label": 1, "original": "스콘이 맛있는 카페 어디 있을까요? 커피도 좋은 곳이면 좋겠어요.", "augmented": true}
+{"question": "스콘 존맛 카페 어디야? 커피도 괜찮은 곳이면 굿!", "label": 1, "original": "스콘이 맛있는 카페 어디 있을까요? 커피도 좋은 곳이면 좋겠어요.", "augmented": true}
+{"question": "맛있는 팝콘 파는 카페 어디임? 궁금해~", "label": 1, "original": "맛있는 팝콘 파는 카페 어디 있을까요?", "augmented": true}
+{"question": "팝콘 맛집 카페 알려줘 ㅠㅠ", "label": 1, "original": "맛있는 팝콘 파는 카페 어디 있을까요?", "augmented": true}
+{"question": "팝콘 파는 카페, 어디 있을까?", "label": 1, "original": "맛있는 팝콘 파는 카페 어디 있을까요?", "augmented": true}
+{"question": "아메리카노 맛있는 카페 어디야? wifi 빵빵했음 좋겠음~", "label": 1, "original": "아메리카노 맛있는 카페 어디 있어?", "augmented": true}
+{"question": "뜨아 맛집 카페 있으면 추천해줘 ㅋㅋ", "label": 1, "original": "아메리카노 맛있는 카페 어디 있어?", "augmented": true}
+{"question": "아메리카노 맛있고 조용한 카페 어디임?", "label": 1, "original": "아메리카노 맛있는 카페 어디 있어?", "augmented": true}
+{"question": "마스무디 존맛집 어디야? 알려줘~", "label": 1, "original": "마스무디가 정말 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "마스무디 맛있어서 카공하기 좋은 카페 없나?", "label": 1, "original": "마스무디가 정말 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "마스무디 맛집 카페 있? ㅋㅋ", "label": 1, "original": "마스무디가 정말 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "크로크무슈 맛집 카페 어디야? ㅋㅋ", "label": 1, "original": "크로크무슈 맛집 카페 있어?", "augmented": true}
+{"question": "크로크무슈 파는 카페 있나? 좀 알려줘~", "label": 1, "original": "크로크무슈 맛집 카페 있어?", "augmented": true}
+{"question": "크로크무슈 맛있는데 카공하기 좋은 데 추천!", "label": 1, "original": "크로크무슈 맛집 카페 있어?", "augmented": true}
+{"question": "달콤한 망고스무디 먹을 데 없나? ㅠㅠ", "label": 1, "original": "달콤한 망고스무디를 먹을 수 있는 곳 있을까요?", "augmented": true}
+{"question": "망고스무디 있는 카페 좀 알려줘 ㅋㅋ", "label": 1, "original": "달콤한 망고스무디를 먹을 수 있는 곳 있을까요?", "augmented": true}
+{"question": "망고스무디 맛집 카페 어디임? 카공도 가능하면 굿~", "label": 1, "original": "달콤한 망고스무디를 먹을 수 있는 곳 있을까요?", "augmented": true}
+{"question": "자두크림라떼 인기 많은 카페 있냐?", "label": 1, "original": "자두크림라떼가 인기 있는 카페 소개해 줄 수 있어요?", "augmented": true}
+{"question": "자두크림라떼 맛집 있는지 궁금해요~", "label": 1, "original": "자두크림라떼가 인기 있는 카페 소개해 줄 수 있어요?", "augmented": true}
+{"question": "자두크림라떼 파는 카페 추천 좀 해줘 ㅋㅋ", "label": 1, "original": "자두크림라떼가 인기 있는 카페 소개해 줄 수 있어요?", "augmented": true}
+{"question": "신선한 샐러드 팜 카페 추천해줘 ㅠㅠ", "label": 1, "original": "신선하고 퀄리티 좋은 샐러드 파는 카페 추천해 주세요.", "augmented": true}
+{"question": "퀄리티 좋은 샐러드 파는 조용하고 wifi 빵빵한 카페 있냐?", "label": 1, "original": "신선하고 퀄리티 좋은 샐러드 파는 카페 추천해 주세요.", "augmented": true}
+{"question": "샐러드 맛집 카공하기 좋은 카페 어디임?", "label": 1, "original": "신선하고 퀄리티 좋은 샐러드 파는 카페 추천해 주세요.", "augmented": true}
+{"question": "망고스무디 ㄱㄱ할만한 카페 있냐? 알려줘~", "label": 1, "original": "망고스무디가 정말 맛있는 카페 추천해 주실 분?", "augmented": true}
+{"question": "망고스무디 진짜 맛있는 데 어디야? ㅋㅋ", "label": 1, "original": "망고스무디가 정말 맛있는 카페 추천해 주실 분?", "augmented": true}
+{"question": "망고스무디 맛집 뭐 없나?", "label": 1, "original": "망고스무디가 정말 맛있는 카페 추천해 주실 분?", "augmented": true}
+{"question": "요깅밀크티 맛있는 카페 추천 좀 ㅠㅠ", "label": 1, "original": "요깅밀크티 추천해줄 만한 카페 있나요?", "augmented": true}
+{"question": "요깅밀크티 맛집 아는 사람? 카공하기 좋음 좋겠다!", "label": 1, "original": "요깅밀크티 추천해줄 만한 카페 있나요?", "augmented": true}
+{"question": "요깅밀크티 제대로 하는 카페 어디임? 알려줘~", "label": 1, "original": "요깅밀크티 추천해줄 만한 카페 있나요?", "augmented": true}
+{"question": "맛있는 쿠키 파는 근처 카페?", "label": 1, "original": "맛있는 쿠키를 파는 근처 카페 어디 있을까?", "augmented": true}
+{"question": "쿠키 쩌는 카페 없나?", "label": 1, "original": "맛있는 쿠키를 파는 근처 카페 어디 있을까?", "augmented": true}
+{"question": "쿠키 맛집근처? 알려줘", "label": 1, "original": "맛있는 쿠키를 파는 근처 카페 어디 있을까?", "augmented": true}
+{"question": "유자차 완전 맛있는 카페 좀 추천해줘요~ ㅠㅠ", "label": 1, "original": "유자차가 특히 맛있는 곳 찾고 있는데 추천 부탁해요.", "augmented": true}
+{"question": "유자차 맛집 어디임? 너무 궁금해 ㅋㅋ", "label": 1, "original": "유자차가 특히 맛있는 곳 찾고 있는데 추천 부탁해요.", "augmented": true}
+{"question": "유자차 특히 맛난 곳 있으면 알려줘용~", "label": 1, "original": "유자차가 특히 맛있는 곳 찾고 있는데 추천 부탁해요.", "augmented": true}
+{"question": "마카롱 쩌는 카페 뭐임? 알려줘~", "label": 1, "original": "마카롱이 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "마카롱 맛난 카페 어디 있음? ㅠㅠ", "label": 1, "original": "마카롱이 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "마카롱 맛집 카페 추천 좀! wifi 빵빵한 곳이면 감사!", "label": 1, "original": "마카롱이 맛있는 카페 어디 있을까요?", "augmented": true}
+{"question": "맛있는 생과일 주스 파는 카페 어디야? 알려줘봐~", "label": 1, "original": "맛있는 생과일 주스 파는 카페 어디 있을까요?", "augmented": true}
+{"question": "생과일 주스 맛집 카페 찾아봐야겠다! 그런 데 있음?", "label": 1, "original": "맛있는 생과일 주스 파는 카페 어디 있을까요?", "augmented": true}
+{"question": "생과일 주스 존맛 카페 있나? ㅠㅠ", "label": 1, "original": "맛있는 생과일 주스 파는 카페 어디 있을까요?", "augmented": true}
+{"question": "부담 없이 즐길 수 있는 쌀치즈케이크 파는 곳 있냐?", "label": 1, "original": "부담 없이 즐길 수 있는 쌀치즈케이크 파는 곳 있나요?", "augmented": true}
+{"question": "부담X 쌀치즈케이크 맛집 카페 있나? 아아랑 같이 먹고 싶어~", "label": 1, "original": "부담 없이 즐길 수 있는 쌀치즈케이크 파는 곳 있나요?", "augmented": true}
+{"question": "쌀치즈케이크 부담 無, 맛있는 카페 좀 알려줘!", "label": 1, "original": "부담 없이 즐길 수 있는 쌀치즈케이크 파는 곳 있나요?", "augmented": true}
+{"question": "진한 시나몬 향 빵 있는 카페 어디야?", "label": 1, "original": "진한 시나몬 향이 매력적인 빵을 맛볼 수 있는 카페 알려 줄래요?", "augmented": true}
+{"question": "시나몬 향 쩌는 빵 파는 곳 없나?", "label": 1, "original": "진한 시나몬 향이 매력적인 빵을 맛볼 수 있는 카페 알려 줄래요?", "augmented": true}
+{"question": "시나몬 향 빵 맛집 카페 빨리 알 수 있나 ㅋㅋ", "label": 1, "original": "진한 시나몬 향이 매력적인 빵을 맛볼 수 있는 카페 알려 줄래요?", "augmented": true}
+{"question": "유자에이드 맛있는 카페 추천 좀 ㅠㅠ", "label": 1, "original": "유자에이드가 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "유자에이드 잘하는 카페 어디야~?", "label": 1, "original": "유자에이드가 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "유자에이드 맛집 카공하기 좋은 곳 있음?", "label": 1, "original": "유자에이드가 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "페퍼로니 식빵 인기 많은 곳 어디야?", "label": 1, "original": "페퍼로니 식빵 메뉴가 인기 있는 카페 어디 있을까요?", "augmented": true}
+{"question": "페퍼로니 식빵 메뉴 있는 카페 어딜까?", "label": 1, "original": "페퍼로니 식빵 메뉴가 인기 있는 카페 어디 있을까요?", "augmented": true}
+{"question": "페퍼로니 식빵 맛있는 카페 wifi 빵빵한 데 알려줘!", "label": 1, "original": "페퍼로니 식빵 메뉴가 인기 있는 카페 어디 있을까요?", "augmented": true}
+{"question": "가성비 좋은 팝콘치킨 어디야? 양 많고 맛있는데 없나? 알려줘!", "label": 1, "original": "가성비 좋고 양도 넉넉한 팝콘치킨 맛집 어디 있을까요?", "augmented": true}
+{"question": "팝콘치킨 가성비 굳인 곳 어디임? 양 왕창 주는 곳 찾음ㅋㅋ", "label": 1, "original": "가성비 좋고 양도 넉넉한 팝콘치킨 맛집 어디 있을까요?", "augmented": true}
+{"question": "팝콘치킨 맛집, 가성비 좋고 양도 넉넉한데 어디?", "label": 1, "original": "가성비 좋고 양도 넉넉한 팝콘치킨 맛집 어디 있을까요?", "augmented": true}
+{"question": "크렘브륄레 디저트 갑인 곳 어디임? ㄱㄱ", "label": 1, "original": "크렘브륄레 디저트가 인기 있는 곳 어디야?", "augmented": true}
+{"question": "크렘브륄레 맛집 좀 알려줘 ㅠㅠ 존맛인 데 없나?", "label": 1, "original": "크렘브륄레 디저트가 인기 있는 곳 어디야?", "augmented": true}
+{"question": "크렘브륄레 인기 폭발인 데 어디 있어?", "label": 1, "original": "크렘브륄레 디저트가 인기 있는 곳 어디야?", "augmented": true}
+{"question": "에스프레소 진한 곳 추천해줘요~", "label": 1, "original": "진한 에스프레소를 즐길 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "진한 에스프레소 마실만한 곳 어디야? ㅋㅋ", "label": 1, "original": "진한 에스프레소를 즐길 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "진한 espresso 즐길 수 있는 곳 추천 바람 ㅎㅎ", "label": 1, "original": "진한 에스프레소를 즐길 수 있는 곳 추천해 주세요.", "augmented": true}
+{"question": "망고요거트 존맛인 카페 어디야? 알려줘!", "label": 1, "original": "망고요거트가 특히 맛있는 곳 어디야?", "augmented": true}
+{"question": "망고요거트 especially 맛있는 곳 있음? ㅠㅠ", "label": 1, "original": "망고요거트가 특히 맛있는 곳 어디야?", "augmented": true}
+{"question": "망고요거트 맛집, 조용하고 분위기 좋은 데 없나?", "label": 1, "original": "망고요거트가 특히 맛있는 곳 어디야?", "augmented": true}
+{"question": "딸기+요거트 스무디 맛집 어디임? 카공도 좋은 데여?", "label": 1, "original": "딸기와 요거트를 활용한 스무디 맛집 있나요?", "augmented": true}
+{"question": "딸기요거트 스무디 맛있는 곳 OMG 알려줘 ㅋㅋ", "label": 1, "original": "딸기와 요거트를 활용한 스무디 맛집 있나요?", "augmented": true}
+{"question": "스무디 맛집, 딸기랑 요거트 조합 짱인 곳 찾아요!", "label": 1, "original": "딸기와 요거트를 활용한 스무디 맛집 있나요?", "augmented": true}
+{"question": "자몽티 맛있는 카페 어디야? 알려줘~", "label": 1, "original": "자몽티가 맛있는 카페 추천해 줄래?", "augmented": true}
+{"question": "자몽티 존맛인 카페 있으면 ㄱㄱ 추천좀 ㅋ", "label": 1, "original": "자몽티가 맛있는 카페 추천해 줄래?", "augmented": true}
+{"question": "자몽티 맛집 카페 없나?", "label": 1, "original": "자몽티가 맛있는 카페 추천해 줄래?", "augmented": true}
+{"question": "스모어쿠키 가성비 갑인 카페 어디임? ㅋㅋ", "label": 1, "original": "스모어쿠키가 가성비 좋은 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "가성비 좋은 스모어쿠키 카페 알려줄 수 있어?", "label": 1, "original": "스모어쿠키가 가성비 좋은 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "스모어쿠키 싸고 맛있는 카페 있나?", "label": 1, "original": "스모어쿠키가 가성비 좋은 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "수박주스 진짜 맛있는 데 알려줘 ㅠㅠ", "label": 1, "original": "수박주스 진짜 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "수박주스 맛집 카페 어딨음?", "label": 1, "original": "수박주스 진짜 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "꿀맛 수박주스 파는 곳좀 추천해~", "label": 1, "original": "수박주스 진짜 맛있는 카페 추천해 줄 수 있어?", "augmented": true}
+{"question": "위스키 맛 푸딩 인기 많은 카페 추천해줘~", "label": 1, "original": "위스키 맛 푸딩이 인기 있는 카페 좀 추천해 주세요.", "augmented": true}
+{"question": "위스키맛 푸딩 존맛인 카페 어디야? 알려줘 ㅋㅋ", "label": 1, "original": "위스키 맛 푸딩이 인기 있는 카페 좀 추천해 주세요.", "augmented": true}
+{"question": "위스키 푸딩 맛집 카페 있나?", "label": 1, "original": "위스키 맛 푸딩이 인기 있는 카페 좀 추천해 주세요.", "augmented": true}
+{"question": "맛있는 ABC주스 파는 카페 추천 좀 ㅠㅠ", "label": 1, "original": "맛있는 ABC주스 파는 카페 추천해 주세요.", "augmented": true}
+{"question": "ABC주스 맛집, wifi 빵빵한 카페 있을까?", "label": 1, "original": "맛있는 ABC주스 파는 카페 추천해 주세요.", "augmented": true}
+{"question": "ABC주스 맛있게 파는 카페 어디야?", "label": 1, "original": "맛있는 ABC주스 파는 카페 추천해 주세요.", "augmented": true}
+{"question": "상큼한 유자차 잘하는 카페 어디야? 알려줘~", "label": 1, "original": "상큼한 유자차 잘하는 카페 어디 있을까요?", "augmented": true}
+{"question": "유자차 맛집 카페 있으면 추천좀! 완전 궁금해 ㅋㅋ", "label": 1, "original": "상큼한 유자차 잘하는 카페 어디 있을까요?", "augmented": true}
+{"question": "유자차 조타~ 그런 데 없나? ㅠㅠ", "label": 1, "original": "상큼한 유자차 잘하는 카페 어디 있을까요?", "augmented": true}
+{"question": "쌀식빵 맛있는 카페 알고 싶음 ㅋ 어디임?", "label": 1, "original": "쌀식빵이 맛있는 카페를 알고 싶어요.", "augmented": true}
+{"question": "쌀식빵 맛집 카페 좀 알려줘 ㅠㅠ 카공하다 먹고 싶어", "label": 1, "original": "쌀식빵이 맛있는 카페를 알고 싶어요.", "augmented": true}
+{"question": "쌀식빵 존맛나는 카페 어디? 알려주라~", "label": 1, "original": "쌀식빵이 맛있는 카페를 알고 싶어요.", "augmented": true}
+{"question": "레몬에이드 짱 맛있는 카페 어디임? ㅎㅎ", "label": 1, "original": "레몬에이드가 특히 맛있는 카페 어디 있어?", "augmented": true}
+{"question": "레몬에이드 대박 맛있는 곳 없나? ㅋㅋ", "label": 1, "original": "레몬에이드가 특히 맛있는 카페 어디 있어?", "augmented": true}
+{"question": "레몬에이드 파는 카페 있나? 갑자기 땡김 ㅠㅠ", "label": 1, "original": "레몬에이드가 특히 맛있는 카페 어디 있어?", "augmented": true}
+{"question": "바나나푸딩 맛있는 카페 어디야? 알려줘~", "label": 1, "original": "달콤한 바나나푸딩 파는 카페 있을까?", "augmented": true}
+{"question": "달달한 바나나푸딩 파는 곳 좀...ㅠㅠ 어디임?", "label": 1, "original": "달콤한 바나나푸딩 파는 카페 있을까?", "augmented": true}
+{"question": "바나나푸딩 존맛 카페 있나? 카공하기 딱인 곳~", "label": 1, "original": "달콤한 바나나푸딩 파는 카페 있을까?", "augmented": true}
+{"question": "딸기 젤라또 달고나~ 어디서 먹어? ㅋㅋ", "label": 1, "original": "달콤한 딸기 젤라또 맛볼 수 있는 카페 어디 있을까요?", "augmented": true}
+{"question": "딸기 젤라또 맛보는 카페 있음? 알려줘 ㅠㅠ", "label": 1, "original": "달콤한 딸기 젤라또 맛볼 수 있는 카페 어디 있을까요?", "augmented": true}
+{"question": "달달한 딸기 젤라또 파는 카페 어디? wifi 빵빵한 데로~", "label": 1, "original": "달콤한 딸기 젤라또 맛볼 수 있는 카페 어디 있을까요?", "augmented": true}
+{"question": "주먹밥 맛있는 카페 어디야? 알려줘~", "label": 1, "original": "주먹밥 메뉴가 인기 있는 카페 있으면 소개해 주세요.", "augmented": true}
+{"question": "주먹밥 존맛 카페 좀 추천해줘! ㅋㅋ", "label": 1, "original": "주먹밥 메뉴가 인기 있는 카페 있으면 소개해 주세요.", "augmented": true}
+{"question": "주먹밥 메뉴 인기 많은 데 없나?", "label": 1, "original": "주먹밥 메뉴가 인기 있는 카페 있으면 소개해 주세요.", "augmented": true}
+{"question": "부드러운 우유케잌 유명한 카페 어디임? ㅠㅠ", "label": 1, "original": "부드러운 우유 케이크가 유명한 카페 알려 주세요.", "augmented": true}
+{"question": "우유케잌 맛집 카페 추천해줘 ㅎㅎ", "label": 1, "original": "부드러운 우유 케이크가 유명한 카페 알려 주세요.", "augmented": true}
+{"question": "부드럽고 달달한 우유케잌 있는 카페 찾고 있는데 어디임?", "label": 1, "original": "부드러운 우유 케이크가 유명한 카페 알려 주세요.", "augmented": true}
+{"question": "쿠키 맛있는 카페 찾음. 어디가 좋을까?", "label": 1, "original": "쿠키가 맛있는 카페를 찾고 있는데 어디가 좋을까요?", "augmented": true}
+{"question": "쿠키 존맛 카공하기 좋은 카페 있나?", "label": 1, "original": "쿠키가 맛있는 카페를 찾고 있는데 어디가 좋을까요?", "augmented": true}
+{"question": "쿠키 꿀맛 나는 카페 뭐 있지? 알려줘~", "label": 1, "original": "쿠키가 맛있는 카페를 찾고 있는데 어디가 좋을까요?", "augmented": true}
+{"question": "유자차 맛집 카페 어디임? ㅋㅋ", "label": 1, "original": "유자차가 맛있는 곳 어디 있을까?", "augmented": true}
+{"question": "유자차 맛있는데 있음 알려줘ㅠㅠ", "label": 1, "original": "유자차가 맛있는 곳 어디 있을까?", "augmented": true}
+{"question": "유자차 파는 곳, 조용하고 좋음 어디야?", "label": 1, "original": "유자차가 맛있는 곳 어디 있을까?", "augmented": true}
+{"question": "소금빵 좋아하는데, 특색 있는 카페 어딨냐?", "label": 1, "original": "소금빵 좋아하는데, 특색 있는 카페 있나요?", "augmented": true}
+{"question": "소금빵 맛집 카페 좀 알려줘 ㅎㅎ", "label": 1, "original": "소금빵 좋아하는데, 특색 있는 카페 있나요?", "augmented": true}
+{"question": "소금빵 있는 cool한 카페 어디 있음?", "label": 1, "original": "소금빵 좋아하는데, 특색 있는 카페 있나요?", "augmented": true}
+{"question": "야, 헤이즐넛젤라또 먹으면서 밖 풍경 좋은데 벽지도 귀여운 카페 어디야? 알려줘~", "label": 2, "original": "헤이즐넛젤라또 먹으면서 바깥 풍경도 좋고 벽지가 귀여운 카페 추천해줄래?", "augmented": true}
+{"question": "헤이즐넛젤라또 존맛에 창밖 뷰 좋은 그런 카페 아아~ 벽지 완전 꿀이네, 추천 좀!", "label": 2, "original": "헤이즐넛젤라또 먹으면서 바깥 풍경도 좋고 벽지가 귀여운 카페 추천해줄래?", "augmented": true}
+{"question": "헤이즐넛젤라또 먹는 중에 바깥 풍경 딱 좋은, 벽지 귀여운 카페 없나?", "label": 2, "original": "헤이즐넛젤라또 먹으면서 바깥 풍경도 좋고 벽지가 귀여운 카페 추천해줄래?", "augmented": true}
+{"question": "마스무디 개맛있고 다트도 치면서 다락방 같은 카페 있음? 알려줘 ㅋㅋ", "label": 2, "original": "마스무디 맛있고 다트도 즐길 수 있는 다락방 느낌 나는 카페 알려줘.", "augmented": true}
+{"question": "마스무디 맛집 + 다트 가능 + 다락방 vibe 카페 추천 pls~", "label": 2, "original": "마스무디 맛있고 다트도 즐길 수 있는 다락방 느낌 나는 카페 알려줘.", "augmented": true}
+{"question": "마스무디 굿, 다트 가능, 다락방 느낌 카공하기 좋은 곳 어디?", "label": 2, "original": "마스무디 맛있고 다트도 즐길 수 있는 다락방 느낌 나는 카페 알려줘.", "augmented": true}
+{"question": "그릴드치킨샌드위치 맛집, 쾌적하고 재방문각인 층 있는 카페 어디임?", "label": 2, "original": "그릴드치킨샌드위치가 맛있고 쾌적한 층으로 재방문하기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "그릴드치킨샌드위치 맛있고 층도 편한 카페 없나? ㅠㅠ", "label": 2, "original": "그릴드치킨샌드위치가 맛있고 쾌적한 층으로 재방문하기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "그릴드치킨샌드 샌드 위치 굿, 쾌적한 공간에서 또 가고 싶은 곳", "label": 2, "original": "그릴드치킨샌드위치가 맛있고 쾌적한 층으로 재방문하기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "피자 존맛이고 인테리어도 멋짐, 재즈 음악 빵빵한 카페 어디야?", "label": 2, "original": "피자 맛있고 내부 인테리어도 멋지면서 재즈 음악 흘러나오는 카페 추천해줘.", "augmented": true}
+{"question": "피자 맛있고 내부 인테리어 짱임~ 재즈 음악 깔리는 카페 추천해줘 ㅋㅋ", "label": 2, "original": "피자 맛있고 내부 인테리어도 멋지면서 재즈 음악 흘러나오는 카페 추천해줘.", "augmented": true}
+{"question": "피자 먹으면서 재즈 음악 듣기 좋은 멋진 카페 찾고 있어요~", "label": 2, "original": "피자 맛있고 내부 인테리어도 멋지면서 재즈 음악 흘러나오는 카페 추천해줘.", "augmented": true}
+{"question": "마끼아또 마시기 좋은 넓고 따뜻한 분위기 카페 어디? 알려줘~", "label": 2, "original": "마끼아또 마시기 좋은 넓고 따뜻한 분위기의 카페 추천해줄래?", "augmented": true}
+{"question": "마끼아또는 뜨아로, 넓고 분위기 짱인 카페 추천 좀 ㅎ", "label": 2, "original": "마끼아또 마시기 좋은 넓고 따뜻한 분위기의 카페 추천해줄래?", "augmented": true}
+{"question": "마끼아또 뜨아 마실 수 있고 넓고 따뜻한 분위기의 카페 있나? study하기 좋은 곳~", "label": 2, "original": "마끼아또 마시기 좋은 넓고 따뜻한 분위기의 카페 추천해줄래?", "augmented": true}
+{"question": "카푸치노 맛있고 공간 깔끔한데 컴포즈 큰 데 어디야? 알려줘~", "label": 2, "original": "카푸치노 맛있고 실내 공간 깔끔하며 컴포즈 매장 넓은 곳 추천해줄래?", "augmented": true}
+{"question": "카푸치노 맛있고 실내 쾌적한, 컴포즈 넓은 매장 있으면 추천해줘 ㅋㅋ", "label": 2, "original": "카푸치노 맛있고 실내 공간 깔끔하며 컴포즈 매장 넓은 곳 추천해줄래?", "augmented": true}
+{"question": "컴포즈 매장 넓으면서 카푸치노 맛집 있을까? 깔끔한 실내면 좋고!", "label": 2, "original": "카푸치노 맛있고 실내 공간 깔끔하며 컴포즈 매장 넓은 곳 추천해줄래?", "augmented": true}
+{"question": "치즈대파베이글 먹으면서 애들이랑 가도 되고 숲뷰 쩌는 카페 없나? ㅠㅠ", "label": 2, "original": "치즈대파베이글 먹으면서 자녀랑 갈 수 있고 숲뷰 좋은 카페 있을까?", "augmented": true}
+{"question": "치즈대파베이글 + 숲뷰 카페 아아 마시며 가족이랑 갈 수 있는 데 알려줘~", "label": 2, "original": "치즈대파베이글 먹으면서 자녀랑 갈 수 있고 숲뷰 좋은 카페 있을까?", "augmented": true}
+{"question": "치즈대파베이글 먹으면서 자녀랑 갈 수 있고 뷰 good한 카페 어디임?", "label": 2, "original": "치즈대파베이글 먹으면서 자녀랑 갈 수 있고 숲뷰 좋은 카페 있을까?", "augmented": true}
+{"question": "숨은 카페 중 꽃 예쁘고 두부치아바타 샌드위치 짱 맛있는 곳 있냐?", "label": 2, "original": "숨은 카페 중에서 꽃도 예쁘고 두부치아바타샌드위치 맛있는 곳 추천해줄 수 있어?", "augmented": true}
+{"question": "꽃도 예쁘고 두부치아바타샌드위치 맛집인 숨은 카페 추천해 줘요~ ㅎㅎ", "label": 2, "original": "숨은 카페 중에서 꽃도 예쁘고 두부치아바타샌드위치 맛있는 곳 추천해줄 수 있어?", "augmented": true}
+{"question": "숨은 카페에서 플라워 뷰 good, 두부치아바타샌드 맛난 곳 있을까?", "label": 2, "original": "숨은 카페 중에서 꽃도 예쁘고 두부치아바타샌드위치 맛있는 곳 추천해줄 수 있어?", "augmented": true}
+{"question": "혼자 카공하면서 팥인절미빙수 먹고 재밌는 경험 가능한 카페 어디냐~", "label": 2, "original": "혼자 카공하면서 팥인절미빙수 먹을 수 있고 재미있는 경험 할 수 있는 카페 있을까?", "augmented": true}
+{"question": "혼자 study하면서 팥인절미빙수 먹을 수 있고 재미난 곳 있으면 추천해 줘 ㅋㅋ", "label": 2, "original": "혼자 카공하면서 팥인절미빙수 먹을 수 있고 재미있는 경험 할 수 있는 카페 있을까?", "augmented": true}
+{"question": "팥인절미빙수 먹으면서 혼자 카공 가능한 재밌는 카페 없나?", "label": 2, "original": "혼자 카공하면서 팥인절미빙수 먹을 수 있고 재미있는 경험 할 수 있는 카페 있을까?", "augmented": true}
+{"question": "콜드브루연유라떼 마시면서 가족 모임하기 좋고 야외 좌석 많은 예쁜 곳 있어?", "label": 2, "original": "콜드브루연유라떼 마시면서 가족 모임하기 좋고 야외 좌석이 많은 예쁜 카페 추천해줘.", "augmented": true}
+{"question": "콜드브루연유라떼 ㄱㄱ 가족이랑 모임하기 좋은 야외 자리 많은 카페 알려줘~", "label": 2, "original": "콜드브루연유라떼 마시면서 가족 모임하기 좋고 야외 좌석이 많은 예쁜 카페 추천해줘.", "augmented": true}
+{"question": "가족 모임에 딱! 콜드브루연유라떼 마시고 야외 좌석 쩌는 예쁜 카페 있냐?", "label": 2, "original": "콜드브루연유라떼 마시면서 가족 모임하기 좋고 야외 좌석이 많은 예쁜 카페 추천해줘.", "augmented": true}
+{"question": "디카페인 콜드브루 맛있고 좌석 많고 따뜻한 카페 어디야? 알려줘~", "label": 2, "original": "디카페인콜드브루 맛있고 가게가 따뜻하며 좌석이 많은 카페 어디 있을까?", "augmented": true}
+{"question": "디카페인 콜드브루 쩌는 곳, 자리 많고 분위기 따숩고 어디임? ㄱㄱ", "label": 2, "original": "디카페인콜드브루 맛있고 가게가 따뜻하며 좌석이 많은 카페 어디 있을까?", "augmented": true}
+{"question": "디카페인 콜드브루 맛집, 따뜻하고 좌석도 넉넉한 카페~", "label": 2, "original": "디카페인콜드브루 맛있고 가게가 따뜻하며 좌석이 많은 카페 어디 있을까?", "augmented": true}
+{"question": "초코페이스트리 맛집 있고 테이크아웃 친환경 용기 쓰는 예쁜 카페 어디임?", "label": 2, "original": "초코페이스트리가 맛있으면서 테이크아웃 친환경 용기도 사용하고 인테리어 소품이 아기자기하고 예쁜 카페 어디 있을까?", "augmented": true}
+{"question": "초코페이스트리가 넘 맛있고 테이크아웃 친환경 용기 쓰면서 인테리어 귀여운 카페 추천해줘~", "label": 2, "original": "초코페이스트리가 맛있으면서 테이크아웃 친환경 용기도 사용하고 인테리어 소품이 아기자기하고 예쁜 카페 어디 있을까?", "augmented": true}
+{"question": "초코페 맛있고 친환경 용기 쓰는 아기자기한 카페(테이크아웃도 가능)?", "label": 2, "original": "초코페이스트리가 맛있으면서 테이크아웃 친환경 용기도 사용하고 인테리어 소품이 아기자기하고 예쁜 카페 어디 있을까?", "augmented": true}
+{"question": "아메리카노 마시면서 수다 떨기 좋은 인테리어 멋진 카페 추천해 줘 ㅋㅋ", "label": 2, "original": "아메리카노 마시면서 폭풍수다 떨기 좋은 내부 인테리어 멋진 카페 추천해줘.", "augmented": true}
+{"question": "아아 마시면서 폭풍수다 가능한 인테리어 쩌는 카페 어딨나?", "label": 2, "original": "아메리카노 마시면서 폭풍수다 떨기 좋은 내부 인테리어 멋진 카페 추천해줘.", "augmented": true}
+{"question": "아메리카노 먹고 수다 떨기 좋은 인테리어 빵빵한 카페~", "label": 2, "original": "아메리카노 마시면서 폭풍수다 떨기 좋은 내부 인테리어 멋진 카페 추천해줘.", "augmented": true}
+{"question": "얼음 낭낭하고 독서실 느낌 조용한 곳에서 소이라떼 마실 수 있는 곳 알려줘 ㅠㅠ", "label": 2, "original": "얼음이 낭낭하고 독서실 같은 조용한 분위기에서 소이라떼 마실 수 있는 곳 알려줄래?", "augmented": true}
+{"question": "아이스 많고 조용한 독서실 같은 분위기에서 소이라떼 가능? 위치 좀~", "label": 2, "original": "얼음이 낭낭하고 독서실 같은 조용한 분위기에서 소이라떼 마실 수 있는 곳 알려줄래?", "augmented": true}
+{"question": "얼음 듬뿍 소이라떼 먹으면서 조용하게 쉴 수 있는 곳 있나?", "label": 2, "original": "얼음이 낭낭하고 독서실 같은 조용한 분위기에서 소이라떼 마실 수 있는 곳 알려줄래?", "augmented": true}
+{"question": "일기 쓰기 좋아, 운치있는 분위기에 율무차 맛있는 카페 추천 좀~", "label": 2, "original": "일기 쓰기 좋은 운치 있는 분위기에 율무차 맛있는 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "율무차 쩌는 운치 있는 분위기에서 일기 쓰기 좋은 카페 있냐?", "label": 2, "original": "일기 쓰기 좋은 운치 있는 분위기에 율무차 맛있는 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "아늑하고 분위기 끝내주는 데서 율무차 마시며 일기 쓰기 할만한 카페?", "label": 2, "original": "일기 쓰기 좋은 운치 있는 분위기에 율무차 맛있는 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "투썸 레몬파운드 맛있는 데, 매장 예쁜 데 있으면 어디야? 알려줘~", "label": 2, "original": "투썸에서 레몬파운드 맛있고 매장이 예쁜 곳 있으면 알려줄래?", "augmented": true}
+{"question": "투썸에서 레몬파운드 존맛인데, 인테리어 감성 있는 곳 있나? 있으면 추천 좀 ㅋㅋ", "label": 2, "original": "투썸에서 레몬파운드 맛있고 매장이 예쁜 곳 있으면 알려줄래?", "augmented": true}
+{"question": "투썸 레몬파운드 맛집 + 예쁜 카페 있나?", "label": 2, "original": "투썸에서 레몬파운드 맛있고 매장이 예쁜 곳 있으면 알려줄래?", "augmented": true}
+{"question": "메론크림소다 마시면서 화장실 가까운 특별카페 어디있음? 알려줘 ㅎㅎ", "label": 2, "original": "메론크림소다 마시면서 화장실도 가까운 특별한 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "메크소다 마시면서 화장실 딱 가까운 카페 추천해줘!", "label": 2, "original": "메론크림소다 마시면서 화장실도 가까운 특별한 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "메론크림소다 마시고 화장실 쩌는 가까운 곳 있나?", "label": 2, "original": "메론크림소다 마시면서 화장실도 가까운 특별한 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "자리 많고 바베큐치킨도그 먹기 딱 좋은 카페 있음?", "label": 2, "original": "자리 넉넉하고 간식으로 바베큐치킨도그 먹기 좋은 카페 있을까?", "augmented": true}
+{"question": "바베큐치킨도그 간식 가능, 자리 넉넉 카페 어디 없나?", "label": 2, "original": "자리 넉넉하고 간식으로 바베큐치킨도그 먹기 좋은 카페 있을까?", "augmented": true}
+{"question": "자리 넉넉, 간식 바베큐치킨도그 먹기 좋은 곳?", "label": 2, "original": "자리 넉넉하고 간식으로 바베큐치킨도그 먹기 좋은 카페 있을까?", "augmented": true}
+{"question": "아침에 리코타치즈샐러드 먹기 좋고 천고 높은 로비층 카페 어디임?", "label": 2, "original": "아침에 리코타치즈샐러드 먹기 좋고 천고가 높은 건물 로비층에 있는 카페 추천해줄래?", "augmented": true}
+{"question": "리코타치즈샐러드 아침메뉴로 좋은 데, 천고 높은 빌딩 로비층 카페 알려줘!", "label": 2, "original": "아침에 리코타치즈샐러드 먹기 좋고 천고가 높은 건물 로비층에 있는 카페 추천해줄래?", "augmented": true}
+{"question": "아침 먹기 좋은 리코타치즈샐러드 + 천고 높은 건물 로비층 카페 추천~", "label": 2, "original": "아침에 리코타치즈샐러드 먹기 좋고 천고가 높은 건물 로비층에 있는 카페 추천해줄래?", "augmented": true}
+{"question": "미숫가루스무디 존맛에 편안한 인테리어 카페 장소 어디야? ㅠㅠ", "label": 2, "original": "미숫가루스무디 맛있고 인테리어가 편안한 카페 장소 어디 있을까?", "augmented": true}
+{"question": "미숫가루스무디 맛집 + 편안한 인테리어 카페 추천 좀 ㅋㅋ", "label": 2, "original": "미숫가루스무디 맛있고 인테리어가 편안한 카페 장소 어디 있을까?", "augmented": true}
+{"question": "미숫가루스무디 맛있고 인테리어 편한 카페 어디임? wifi 빵빵하면 최고!", "label": 2, "original": "미숫가루스무디 맛있고 인테리어가 편안한 카페 장소 어디 있을까?", "augmented": true}
+{"question": "콜드브루라떼 마시면서 인테리어 특이하고 대기 짧은 데 어디야? 알려줘~", "label": 2, "original": "콜드브루라떼 마시면서 인테리어가 독특하게 어우러지고 대기 시간이 길지 않은 카페 추천해줄래?", "augmented": true}
+{"question": "콜브라 마시면서 인테리어 존예고 웨이팅 적은 카페 있음? ㄱㄱ", "label": 2, "original": "콜드브루라떼 마시면서 인테리어가 독특하게 어우러지고 대기 시간이 길지 않은 카페 추천해줄래?", "augmented": true}
+{"question": "콜드브루라떼랑 인테리어 독특한데 대기 길지 않은 카페 찾음.", "label": 2, "original": "콜드브루라떼 마시면서 인테리어가 독특하게 어우러지고 대기 시간이 길지 않은 카페 추천해줄래?", "augmented": true}
+{"question": "와, 콜드브루라떼 마시면서 인테리어 완전 독특하고 대기 시간 짧은 카페 있나요? ㅠㅠ", "label": 2, "original": "콜드브루라떼 마시면서 인테리어가 독특하게 어우러지고 대기 시간이 길지 않은 카페 추천해줄래?", "augmented": true}
+{"question": "Recommend me a cafe with cold brew latte, unique interior, and short waiting time, pls!", "label": 2, "original": "콜드브루라떼 마시면서 인테리어가 독특하게 어우러지고 대기 시간이 길지 않은 카페 추천해줄래?", "augmented": true}
+{"question": "디카페인 아아랑 간식 먹기 좋은 데 인테리어 튀는 곳 있냐?", "label": 2, "original": "디카페인아메리카노랑 간식 먹기 좋고 카페 인테리어가 톡톡 튀는 곳 있나?", "augmented": true}
+{"question": "디카페인아아 + 간식 조합 좋은데 인테리어 펑키한 카페 어디? ㅋ", "label": 2, "original": "디카페인아메리카노랑 간식 먹기 좋고 카페 인테리어가 톡톡 튀는 곳 있나?", "augmented": true}
+{"question": "디카페인 아메리카노랑 간식 먹기 딱 좋은 인테리어 톡톡 튀는 곳 찾음.", "label": 2, "original": "디카페인아메리카노랑 간식 먹기 좋고 카페 인테리어가 톡톡 튀는 곳 있나?", "augmented": true}
+{"question": "오~ 디카페인 아메리카노랑 간식 먹기 좋은데 인테리어도 완전 튀는 카페 없나? ^^", "label": 2, "original": "디카페인아메리카노랑 간식 먹기 좋고 카페 인테리어가 톡톡 튀는 곳 있나?", "augmented": true}
+{"question": "Any cafe with decaf americano and snacks, cool interior popping out?", "label": 2, "original": "디카페인아메리카노랑 간식 먹기 좋고 카페 인테리어가 톡톡 튀는 곳 있나?", "augmented": true}
+{"question": "둘이 가기 편하고 무화과깜파뉴 테이크아웃 이쁘게 되는 곳 어디임? 알려줘!", "label": 2, "original": "둘이서 가기 좋고 테이크아웃이 이쁘게 가능한 무화과깜파뉴 파는 카페 추천해줘.", "augmented": true}
+{"question": "2명 카공하기 좋은 무화과깜파뉴 이쁜 테이크아웃 가능한 카페 찾음 ㅎ", "label": 2, "original": "둘이서 가기 좋고 테이크아웃이 이쁘게 가능한 무화과깜파뉴 파는 카페 추천해줘.", "augmented": true}
+{"question": "둘이서 가기 좋고 무화과 깜파뉴 예쁘게 포장 가능한 카페 있음?", "label": 2, "original": "둘이서 가기 좋고 테이크아웃이 이쁘게 가능한 무화과깜파뉴 파는 카페 추천해줘.", "augmented": true}
+{"question": "와~ 무화과 깜파뉴 테이크아웃 예쁘고 둘이 가기 좋은 곳 있을까용? ㅋㅋ", "label": 2, "original": "둘이서 가기 좋고 테이크아웃이 이쁘게 가능한 무화과깜파뉴 파는 카페 추천해줘.", "augmented": true}
+{"question": "Recommend cute takeout fig campagne cafe for two, pls!", "label": 2, "original": "둘이서 가기 좋고 테이크아웃이 이쁘게 가능한 무화과깜파뉴 파는 카페 추천해줘.", "augmented": true}
+{"question": "위스키 맛있고 좌석 널찍하고 인테리어 감각적인 곳 어디야? 알려줘~", "label": 2, "original": "위스키 맛있고 좌석 널찍하며 인테리어 감각적인 곳 있으면 추천해줘.", "augmented": true}
+{"question": "위스키 맛있고 넓은 좌석에 감각적인 인테리어인 곳 있음? ㄱㄱ", "label": 2, "original": "위스키 맛있고 좌석 널찍하며 인테리어 감각적인 곳 있으면 추천해줘.", "augmented": true}
+{"question": "위스키 잘하는 데 좌석 넓고 인테리어 감성 좋은 곳 찾음.", "label": 2, "original": "위스키 맛있고 좌석 널찍하며 인테리어 감각적인 곳 있으면 추천해줘.", "augmented": true}
+{"question": "헐, 위스키 맛있고 좌석 널찍하며 인테리어 감각적인 카페 없나? ㅠㅠ", "label": 2, "original": "위스키 맛있고 좌석 널찍하며 인테리어 감각적인 곳 있으면 추천해줘.", "augmented": true}
+{"question": "Got a bar with good whiskey, spacious seats, and stylish interior?", "label": 2, "original": "위스키 맛있고 좌석 널찍하며 인테리어 감각적인 곳 있으면 추천해줘.", "augmented": true}
+{"question": "페타치즈감자샐러드 먹고 공간 넓고 예쁜 데 고소한 빵도 있는 카페 어디임? 알려줘!", "label": 2, "original": "페타치즈감자샐러드 먹을 수 있으면서 카페 공간 넓고 예쁘고 고소한 빵도 있는 그런 카페 있을까 알려줘?", "augmented": true}
+{"question": "페타치즈감자샐러드+빵 존맛에 공간 넓고 예쁜 카페 찾음~", "label": 2, "original": "페타치즈감자샐러드 먹을 수 있으면서 카페 공간 넓고 예쁘고 고소한 빵도 있는 그런 카페 있을까 알려줘?", "augmented": true}
+{"question": "페타치즈감자샐러드 먹을 수 있고 넓고 예쁘고 빵 고소한 카페 있음?", "label": 2, "original": "페타치즈감자샐러드 먹을 수 있으면서 카페 공간 넓고 예쁘고 고소한 빵도 있는 그런 카페 있을까 알려줘?", "augmented": true}
+{"question": "와~ 페타치즈감자샐러드도 먹고 넓고 예쁜 데 빵도 찐한 그런 카페 없을까? ㅋㅋ", "label": 2, "original": "페타치즈감자샐러드 먹을 수 있으면서 카페 공간 넓고 예쁘고 고소한 빵도 있는 그런 카페 있을까 알려줘?", "augmented": true}
+{"question": "Any cafe with feta cheese potato salad, spacious & pretty space plus savory bread?", "label": 2, "original": "페타치즈감자샐러드 먹을 수 있으면서 카페 공간 넓고 예쁘고 고소한 빵도 있는 그런 카페 있을까 알려줘?", "augmented": true}
+{"question": "미숫가루라떼 있냐? 캘린더도 있고 조용한데 알려줘~", "label": 2, "original": "미숫가루라떼 있고 캘린더가 있어서 한적한 분위기의 카페 있을까?", "augmented": true}
+{"question": "미숫라떼 파는 카페에 캘린더도 있고 한적한 곳 찾아ㅋㅋ", "label": 2, "original": "미숫가루라떼 있고 캘린더가 있어서 한적한 분위기의 카페 있을까?", "augmented": true}
+{"question": "미숫가루라떼랑 캘린더 있는 카페, 분위기 조용한 데 없나?", "label": 2, "original": "미숫가루라떼 있고 캘린더가 있어서 한적한 분위기의 카페 있을까?", "augmented": true}
+{"question": "스타벅스 느낌 나고 숲뷰 쩌는 데, 약과쿠키 메뉴 있는 카페 있냐?", "label": 2, "original": "스타벅스 느낌이 나면서 숲뷰가 멋진 약과쿠키 메뉴 있는 카페 있을까?", "augmented": true}
+{"question": "숲뷰 멋지고 약과쿠키 파는 스타벅스 같은 카페 알려줘 ㅠㅠ", "label": 2, "original": "스타벅스 느낌이 나면서 숲뷰가 멋진 약과쿠키 메뉴 있는 카페 있을까?", "augmented": true}
+{"question": "스타벅스 vibe + 숲뷰 + 약과쿠키 있는 카페 추천 좀~", "label": 2, "original": "스타벅스 느낌이 나면서 숲뷰가 멋진 약과쿠키 메뉴 있는 카페 있을까?", "augmented": true}
+{"question": "카라멜마키아토 먹고 콘센트 자리 있는 아지트 카페 없나?", "label": 2, "original": "카라멜마키아토 즐길 수 있고 아지트로 좋으며 콘센트 자리도 있는 카페 추천해줘.", "augmented": true}
+{"question": "카마먹을 수 있는 콘센트 잘 된 아지트 카페 추천해줘, 부탁 ㅋㅋ", "label": 2, "original": "카라멜마키아토 즐길 수 있고 아지트로 좋으며 콘센트 자리도 있는 카페 추천해줘.", "augmented": true}
+{"question": "카라멜마키아토 즐기고 콘센트 자리 있는 카페, 아지트로 굿인 데 알려줘~", "label": 2, "original": "카라멜마키아토 즐길 수 있고 아지트로 좋으며 콘센트 자리도 있는 카페 추천해줘.", "augmented": true}
+{"question": "페퍼민트티 맛있고 자리 많아서 편한 카페 어디야? ㅠㅠ", "label": 2, "original": "페퍼민트티 마시기 좋고 카페 공간에 앉을 곳 많아서 들어왔다 편한 곳 있을까?", "augmented": true}
+{"question": "페퍼민트티 마시기 좋은데, 앉을 자리 널널한 카페 추천해줘~", "label": 2, "original": "페퍼민트티 마시기 좋고 카페 공간에 앉을 곳 많아서 들어왔다 편한 곳 있을까?", "augmented": true}
+{"question": "페퍼민티티 좋은 카페, 자리 많음? 들어가서 편한 곳 찾아~", "label": 2, "original": "페퍼민트티 마시기 좋고 카페 공간에 앉을 곳 많아서 들어왔다 편한 곳 있을까?", "augmented": true}
+{"question": "콜드브루연유라떼 맛있고 테이블 간격 넉넉, 깨끗한 카페 알려줘~", "label": 2, "original": "콜드브루연유라떼가 맛있고 테이블 간격도 넉넉하며 시설이 깨끗한 카페 알려줘.", "augmented": true}
+{"question": "연유 콜드브루 맛집, 테이블 거리 넓고 시설 깔끔한 곳 어딨어?", "label": 2, "original": "콜드브루연유라떼가 맛있고 테이블 간격도 넉넉하며 시설이 깨끗한 카페 알려줘.", "augmented": true}
+{"question": "콜드브루연유라떼 맛깔나고 테이블 간격 빵빵, clean한 카페 추천!", "label": 2, "original": "콜드브루연유라떼가 맛있고 테이블 간격도 넉넉하며 시설이 깨끗한 카페 알려줘.", "augmented": true}
+{"question": "청량한 분위기에 친절한 서비스 있는 자몽우유 맛집 카페 어디야?", "label": 2, "original": "청량한 분위기에 친절한 서비스가 인상적인데 자몽우유 맛있는 카페 어디 있을까?", "augmented": true}
+{"question": "자몽우유 짱 맛있는 카페, 청량한 분위기에 서비스 굿인 곳 있음?", "label": 2, "original": "청량한 분위기에 친절한 서비스가 인상적인데 자몽우유 맛있는 카페 어디 있을까?", "augmented": true}
+{"question": "자몽우유 맛있고 분위기 청량, 서비스 친절한 카페 어디?", "label": 2, "original": "청량한 분위기에 친절한 서비스가 인상적인데 자몽우유 맛있는 카페 어디 있을까?", "augmented": true}
+{"question": "치킨너겟 메뉴 있고 자리마다 콘센트 있는 예쁜 식기 카페 있을까?", "label": 2, "original": "치킨너겟 메뉴 있고 자리마다 콘센트도 있어서 식기류 예쁜 카페 추천해줄래?", "augmented": true}
+{"question": "치킨너겟+콘센트 빵빵, 식기도 예쁜 카페 추천 좀 ㅎ", "label": 2, "original": "치킨너겟 메뉴 있고 자리마다 콘센트도 있어서 식기류 예쁜 카페 추천해줄래?", "augmented": true}
+{"question": "치킨너겟 있냐? 자리마다 콘센트도 있고 식기 예쁜데 있나?", "label": 2, "original": "치킨너겟 메뉴 있고 자리마다 콘센트도 있어서 식기류 예쁜 카페 추천해줄래?", "augmented": true}
+{"question": "더울 때 토피넛라떼 마시기 좋은 조용한 골목 카페 어디?", "label": 2, "original": "더울 때 토피넛라떼 마시기 편안한 골목 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "뜨아 토피넛라떼 휘뚜루마뚜루 마실만한 골목 카페 있으려나?", "label": 2, "original": "더울 때 토피넛라떼 마시기 편안한 골목 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "토피넛라떼 먹기 편한 골목 카페 찾고 있어~", "label": 2, "original": "더울 때 토피넛라떼 마시기 편안한 골목 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "감각적인 인테리어에 치즈프라페 맛있는 하루종일 머무는 카페 어디야?", "label": 2, "original": "감각적인 인테리어에 치즈프라페가 맛있는, 하루종일 머물러도 좋은 카페 있을까?", "augmented": true}
+{"question": "치즈프라페 존맛! 인테리어 깡패라 하루종일 앉아도 좋은 카페 없나?", "label": 2, "original": "감각적인 인테리어에 치즈프라페가 맛있는, 하루종일 머물러도 좋은 카페 있을까?", "augmented": true}
+{"question": "치즈프라페 맛집, 인테리어도 쩌는 하루종일 누워있어도 좋은 카페 알려줘 ㅋ", "label": 2, "original": "감각적인 인테리어에 치즈프라페가 맛있는, 하루종일 머물러도 좋은 카페 있을까?", "augmented": true}
+{"question": "좌석도 많고 친구랑 대화하기 좋은 분위기에서 마스카포네케이크 맛있는 카페 있냐?", "label": 2, "original": "좌석도 있고 친구랑 대화하기 좋은 분위기에서 마스카포네케이크 맛있는 카페 있을까?", "augmented": true}
+{"question": "마스카포네케이크 맛있고 좌석 넉넉, 친구랑 수다 떨기 딱인 카페 어디임?", "label": 2, "original": "좌석도 있고 친구랑 대화하기 좋은 분위기에서 마스카포네케이크 맛있는 카페 있을까?", "augmented": true}
+{"question": "대화하기 좋은 분위기에 마스카포네케이크 존맛 카페 어디인지 궁금해~", "label": 2, "original": "좌석도 있고 친구랑 대화하기 좋은 분위기에서 마스카포네케이크 맛있는 카페 있을까?", "augmented": true}
+{"question": "테이블 넓고 인테리어 좋은 데서 바스크치즈케이크 먹을 데 없냐?", "label": 2, "original": "테이블도 넓고 인테리어가 좋은 곳에서 바스크치즈케이크 먹을 수 있는 카페 있을까?", "augmented": true}
+{"question": "테이블도 넓고 인테리어 깡패인 데서 바스크치즈케이크 먹고 싶은데 어디임? ㅋㅋ", "label": 2, "original": "테이블도 넓고 인테리어가 좋은 곳에서 바스크치즈케이크 먹을 수 있는 카페 있을까?", "augmented": true}
+{"question": "넓은 테이블, 인테리어 굿, 바스크치즈케이크 가능 카페?", "label": 2, "original": "테이블도 넓고 인테리어가 좋은 곳에서 바스크치즈케이크 먹을 수 있는 카페 있을까?", "augmented": true}
+{"question": "더위 식히고 간단히 먹으면서 에스프레소 딱 맛있는 카페 추천 좀 해줘~", "label": 2, "original": "더위도 식히고 간단한 식사도 할 수 있는 에스프레소 맛있는 카페 추천해줘.", "augmented": true}
+{"question": "시원하고 밥도 되고, 에스프레소 존맛인 카페 어디임? 알려줘 ㅠㅠ", "label": 2, "original": "더위도 식히고 간단한 식사도 할 수 있는 에스프레소 맛있는 카페 추천해줘.", "augmented": true}
+{"question": "에스프레소 맛있고 더위 쫙 날리는 간단 식사 OK 카페 있나?", "label": 2, "original": "더위도 식히고 간단한 식사도 할 수 있는 에스프레소 맛있는 카페 추천해줘.", "augmented": true}
+{"question": "카라멜팝콘 먹고 음악 분위기 좋은데, 카페 크고 편한 곳 있냐?", "label": 2, "original": "카라멜팝콘 먹으며 음악 분위기도 좋고 카페가 커서 편한 곳 있을까?", "augmented": true}
+{"question": "분위기 쩌는 음악에 카라멜팝콘 먹으면서 편히 쉴 카페 어딨음? ㅋㅋ", "label": 2, "original": "카라멜팝콘 먹으며 음악 분위기도 좋고 카페가 커서 편한 곳 있을까?", "augmented": true}
+{"question": "카라멜팝콘 먹으면서 음악 좋고 넓은 카페 찾아줘~", "label": 2, "original": "카라멜팝콘 먹으며 음악 분위기도 좋고 카페가 커서 편한 곳 있을까?", "augmented": true}
+{"question": "망고치즈빙수 존맛에 좌석 넉넉하고 행복한 분위기 카페 어디야?", "label": 2, "original": "망고치즈빙수 맛있고 행복한 분위기에서 좌석도 넉넉한 카페 추천해줄래?", "augmented": true}
+{"question": "망고치즈빙수 맛나고 좌석 많으면서 분위기 해피한 데 알려줘 ㅠㅠ", "label": 2, "original": "망고치즈빙수 맛있고 행복한 분위기에서 좌석도 넉넉한 카페 추천해줄래?", "augmented": true}
+{"question": "행복한 분위기, 넓은 좌석, 망고치즈빙수 있는 카페?", "label": 2, "original": "망고치즈빙수 맛있고 행복한 분위기에서 좌석도 넉넉한 카페 추천해줄래?", "augmented": true}
+{"question": "페퍼로니계란빵 있구 테라스 예쁜 거, 음료도 맛있는 카페 추천 좀~", "label": 2, "original": "페퍼로니계란빵 있고 테라스 예쁘면서 음료도 맛있는 카페 추천해줘.", "augmented": true}
+{"question": "테라스 예뻐서 페퍼로니계란빵 먹고 음료도 짱인 카페 어디임? 알려줘 ㅋㅋ", "label": 2, "original": "페퍼로니계란빵 있고 테라스 예쁘면서 음료도 맛있는 카페 추천해줘.", "augmented": true}
+{"question": "페퍼로니계란빵 있고 테라스 예쁘고 음료 맛집 카페 어디 있을까?", "label": 2, "original": "페퍼로니계란빵 있고 테라스 예쁘면서 음료도 맛있는 카페 추천해줘.", "augmented": true}
+{"question": "화장실 잘 돼 있구 독서실 느낌에 앙버터크로플 먹기 딱 좋은 카페 어디냐? 알려줘~", "label": 2, "original": "화장실 잘 되어 있고 독서실 같은 분위기에서 앙버터크로플 먹기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "콘센트 빵빵하고 조용해서 카공하기 좋은데 앙버터크로플 맛집 카페 아아~ 있나?", "label": 2, "original": "화장실 잘 되어 있고 독서실 같은 분위기에서 앙버터크로플 먹기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "ㅠㅠ 화장실 깔끔하고 독서실 분위기에 앙버터크로플 맛집 카페 어디 있을까 ㅋㅋ", "label": 2, "original": "화장실 잘 되어 있고 독서실 같은 분위기에서 앙버터크로플 먹기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "골목 안쪽에 힐링되는 레몬에이드 잘하는 카페 있없음? 좀 찾아줘~", "label": 2, "original": "골목에 있으면서 힐링할 수 있는 레몬에이드 잘하는 카페 있을까?", "augmented": true}
+{"question": "레모네이드 맛집 카페, 골목길에 숨어있는 그런데 혹시 있냐? ㅋㅋ", "label": 2, "original": "골목에 있으면서 힐링할 수 있는 레몬에이드 잘하는 카페 있을까?", "augmented": true}
+{"question": "골목 힐링 스팟! 레몬에이드 끝내주는 데 아님? 빨리 알려줘 ㅠㅠ", "label": 2, "original": "골목에 있으면서 힐링할 수 있는 레몬에이드 잘하는 카페 있을까?", "augmented": true}
+{"question": "신림에 모카커피 존맛이고 인테리어 쩌는 디저트 카페 어디임? 알려줘~", "label": 2, "original": "신림에서 모카커피 맛있고 인테리어 좋은 디저트 카페 알려줄래?", "augmented": true}
+{"question": "모카커피 맛 보장, 인테리어도 갑인 신림 디저트 카페 아아~ 찾고 있어", "label": 2, "original": "신림에서 모카커피 맛있고 인테리어 좋은 디저트 카페 알려줄래?", "augmented": true}
+{"question": "신림 신상 카페, 모카 맛있고 인테리어 감성 폭발하는 곳 있냐 ㅋㅋ", "label": 2, "original": "신림에서 모카커피 맛있고 인테리어 좋은 디저트 카페 알려줄래?", "augmented": true}
+{"question": "자몽차 마시기 굿굿! 층고 높고 넓고 쾌적한 그런 카페 어디임? 빨리~", "label": 2, "original": "자몽차 마시기 좋고 층고가 높으며 넓고 쾌적한 공간을 가진 카페 어디 있을까?", "augmented": true}
+{"question": "널찍한 공간에 자몽차 먹기 좋은 카페, 층고도 쩌는 그런 데 있음?", "label": 2, "original": "자몽차 마시기 좋고 층고가 높으며 넓고 쾌적한 공간을 가진 카페 어디 있을까?", "augmented": true}
+{"question": "자몽차 짱이구 층고 훌륭하고 넓은 카페 어디? study하기 딱 좋아서 알려줘!", "label": 2, "original": "자몽차 마시기 좋고 층고가 높으며 넓고 쾌적한 공간을 가진 카페 어디 있을까?", "augmented": true}
+{"question": "크로와플 맛있고 빈티지 분위기 낭낭한 넓은 카페 어디냐? 찾아줘~", "label": 2, "original": "크로와플 맛있고 빈티지 분위기에 가게가 넓은 카페 어디 있을까?", "augmented": true}
+{"question": "빈티지 감성에 크로와플 맛집, 공간도 넓고 좋은 카페 아아~ 있긴 함?", "label": 2, "original": "크로와플 맛있고 빈티지 분위기에 가게가 넓은 카페 어디 있을까?", "augmented": true}
+{"question": "크로와플 쩌는 데, 빈티지 분위기에 가게도 넓은 그런 카페 있냐 ㅋㅋ wifi 빵빵하면 좋고~", "label": 2, "original": "크로와플 맛있고 빈티지 분위기에 가게가 넓은 카페 어디 있을까?", "augmented": true}
+{"question": "도림천 근처에 허니버터칩 메뉴 있는 카페 어디야? 알려줘~", "label": 2, "original": "도림천 근처에 머무르기 좋은 카페 중에 허니버터칩 메뉴 있는 곳 추천해줘.", "augmented": true}
+{"question": "도림천 존버 가능 카페 중에 허니버터칩 메뉴 파는 곳 있냐? 추천좀 ㅋㅋ", "label": 2, "original": "도림천 근처에 머무르기 좋은 카페 중에 허니버터칩 메뉴 있는 곳 추천해줘.", "augmented": true}
+{"question": "도림천 근처 허니버터칩 있음? 머무르기 좋은 카페 찾아줘", "label": 2, "original": "도림천 근처에 머무르기 좋은 카페 중에 허니버터칩 메뉴 있는 곳 추천해줘.", "augmented": true}
+{"question": "마자그란 맛있고 위치 좋은 카페 어딘지 좀 알려줄래~? ㅠㅠ", "label": 2, "original": "마자그란 음료 맛있고 좋은 장소에 위치한 카페 알려줄래?", "augmented": true}
+{"question": "마자그란 음료 짱 좋은 카페 어디임? 알려줘 ㅋㅋ", "label": 2, "original": "마자그란 음료 맛있고 좋은 장소에 위치한 카페 알려줄래?", "augmented": true}
+{"question": "마자그란 맛집, 위치 깡패 카페 어디에요?", "label": 2, "original": "마자그란 음료 맛있고 좋은 장소에 위치한 카페 알려줄래?", "augmented": true}
+{"question": "난곡 할리스 근처 바질닭가슴살파니니 있고 BGM 좋은 카페 있음?", "label": 2, "original": "난곡 할리스 근처에서 바질닭가슴살파니니 메뉴도 좋고 BGM 선곡이 좋은 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "난곡 할리스 부근에 바질닭가슴살파니니 메뉴도 괜찮고, BGM 괜찮은 카페 추천해", "label": 2, "original": "난곡 할리스 근처에서 바질닭가슴살파니니 메뉴도 좋고 BGM 선곡이 좋은 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "난곡 할리스 근처에 바질닭가슴살파니니 팔고 음악 좋은 카페 어디야?", "label": 2, "original": "난곡 할리스 근처에서 바질닭가슴살파니니 메뉴도 좋고 BGM 선곡이 좋은 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "인테리어 멋지고 크고 젤라또 맛있는 카페 어디야? 알려줘~", "label": 2, "original": "내부 인테리어가 멋지고 크면서 젤라또도 맛있는 카페 추천해줄래?", "augmented": true}
+{"question": "내부 감각적이고 넓고 젤라또 짱 맛있는 카페 추천좀 ㅋㅋ", "label": 2, "original": "내부 인테리어가 멋지고 크면서 젤라또도 맛있는 카페 추천해줄래?", "augmented": true}
+{"question": "인테리어 예쁜데 크고 젤라또도 맛난 카페 있음?", "label": 2, "original": "내부 인테리어가 멋지고 크면서 젤라또도 맛있는 카페 추천해줄래?", "augmented": true}
+{"question": "딸기케이크 맛있고 힐링되는 분위기에 감각적 인테리어 카페 어디임? ㅠㅠ", "label": 2, "original": "딸기케이크 맛있고 힐링 되는 분위기에 매장 내부 감각적으로 변한 카페 있을까?", "augmented": true}
+{"question": "딸기케이크 굿, 힐링되는 분위기, 내부 감각적 카페 추천해줘~", "label": 2, "original": "딸기케이크 맛있고 힐링 되는 분위기에 매장 내부 감각적으로 변한 카페 있을까?", "augmented": true}
+{"question": "딸기케이크 맛집이면서 분위기 좋고 인테리어도 센스 있는 카페 있을까?", "label": 2, "original": "딸기케이크 맛있고 힐링 되는 분위기에 매장 내부 감각적으로 변한 카페 있을까?", "augmented": true}
+{"question": "지인들이랑 모임하기 딱 좋은 데 있나? 깔끔하고 죠리퐁쉐이크 맛있는데로 알려줘~", "label": 2, "original": "지인 모임하기 좋고 깔끔한 분위기면서 죠리퐁쉐이크가 맛있는 카페 알려줘.", "augmented": true}
+{"question": "지인모임하기 좋은 깔끔한 카페에 죠리퐁쉐이크 아아 맛집 어디임? 공유 좀 ㅋㅋ", "label": 2, "original": "지인 모임하기 좋고 깔끔한 분위기면서 죠리퐁쉐이크가 맛있는 카페 알려줘.", "augmented": true}
+{"question": "모임하기 좋은 깔끔한 데, 죠리퐁쉐이크 맛나는 카페 어디일까?", "label": 2, "original": "지인 모임하기 좋고 깔끔한 분위기면서 죠리퐁쉐이크가 맛있는 카페 알려줘.", "augmented": true}
+{"question": "와~ 지인 모임할 깔끔한 분위기 카페 중 죠리퐁쉐이크 맛집 있으면 알려줘 ㅠㅠ", "label": 2, "original": "지인 모임하기 좋고 깔끔한 분위기면서 죠리퐁쉐이크가 맛있는 카페 알려줘.", "augmented": true}
+{"question": "Is there a clean cafe good for gathering with friends and with yummy Jolly Pong Shake?", "label": 2, "original": "지인 모임하기 좋고 깔끔한 분위기면서 죠리퐁쉐이크가 맛있는 카페 알려줘.", "augmented": true}
+{"question": "카페브륄레라떼 맛난 데 넓고 혼자 가기 좋은 곳 없냐?", "label": 2, "original": "카페브륄레라떼 맛있는 데 넓직하고 혼자 가기 좋은 카페 있으면 알려줄래?", "augmented": true}
+{"question": "브륄렛라떼 홀짝이고 혼카하기 좋은 넓은 카페 어디야? 알려줘~", "label": 2, "original": "카페브륄레라떼 맛있는 데 넓직하고 혼자 가기 좋은 카페 있으면 알려줄래?", "augmented": true}
+{"question": "혼자 가기 편하고 카페브륄레라떼 맛난 데 찾는다", "label": 2, "original": "카페브륄레라떼 맛있는 데 넓직하고 혼자 가기 좋은 카페 있으면 알려줄래?", "augmented": true}
+{"question": "ㅠㅠ 카페브륄레라떼 맛있고 넓은 혼자 가기 좋은 카페 있을까?", "label": 2, "original": "카페브륄레라떼 맛있는 데 넓직하고 혼자 가기 좋은 카페 있으면 알려줄래?", "augmented": true}
+{"question": "Any spacious cafe with delicious cafe brulee latte perfect for solo visit?", "label": 2, "original": "카페브륄레라떼 맛있는 데 넓직하고 혼자 가기 좋은 카페 있으면 알려줄래?", "augmented": true}
+{"question": "바게트 맛 좋고 넓고 깨끗한, 위치 좋은 카페 어디임?", "label": 2, "original": "바게트 맛있는 넓고 깨끗한 분위기에 위치도 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "바게뜨 맛있는 깔끔하고 널찍한 카페 어디 있나? 추천해줘~", "label": 2, "original": "바게트 맛있는 넓고 깨끗한 분위기에 위치도 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "넓고 깨끗한 바게트 맛집 카페 위치 좋은 곳 알고 싶음", "label": 2, "original": "바게트 맛있는 넓고 깨끗한 분위기에 위치도 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "오~ 바게트 맛있고 깨끗 넓은 분위기 위치도 좋은 카페 있으면 추천 ㅋㅋ", "label": 2, "original": "바게트 맛있는 넓고 깨끗한 분위기에 위치도 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "Where can I find a spacious, clean cafe with good baguette and great location?", "label": 2, "original": "바게트 맛있는 넓고 깨끗한 분위기에 위치도 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "난곡 할리스 근처에 두바이초콜릿 파는 아기 데려가기 좋은 카페 없나?", "label": 2, "original": "난곡 할리스 근처에 두바이초콜릿 있고 아기 데리고 가기 좋은 카페 있을까?", "augmented": true}
+{"question": "난곡 할리스 근처에 두바이초콜릿 있고 애기랑 가기 좋은 카페 알려줘~", "label": 2, "original": "난곡 할리스 근처에 두바이초콜릿 있고 아기 데리고 가기 좋은 카페 있을까?", "augmented": true}
+{"question": "난곡 할리스 근처 두바이초콜릿 있는 아기 데리고 가기 좋은 카페 찾음", "label": 2, "original": "난곡 할리스 근처에 두바이초콜릿 있고 아기 데리고 가기 좋은 카페 있을까?", "augmented": true}
+{"question": "ㅠㅠ 난곡 할리스 근처 두바이초콜릿 파는 아기랑 가기 좋은 카페 있으면 알려줘~", "label": 2, "original": "난곡 할리스 근처에 두바이초콜릿 있고 아기 데리고 가기 좋은 카페 있을까?", "augmented": true}
+{"question": "Any baby-friendly cafe near Nangok Hollys with Dubai chocolate?", "label": 2, "original": "난곡 할리스 근처에 두바이초콜릿 있고 아기 데리고 가기 좋은 카페 있을까?", "augmented": true}
+{"question": "프레첼 맛있고 인테리어 넓어서 책읽기 좋은 카페 추천해줘!", "label": 2, "original": "프레첼도 맛있고 내부 인테리어 넓직해서 책 읽기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "프레첼 맛나고 책읽기 좋은 널찍한 카페 어디임? 알려줘~", "label": 2, "original": "프레첼도 맛있고 내부 인테리어 넓직해서 책 읽기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "프레첼도 맛있고 내부 넓은 책 읽기 좋은 카페 찾고 있음", "label": 2, "original": "프레첼도 맛있고 내부 인테리어 넓직해서 책 읽기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "와~ 프레첼도 맛있고 인테리어 넓은 책읽기 좋은 카페 있을까? ㅋㅋ", "label": 2, "original": "프레첼도 맛있고 내부 인테리어 넓직해서 책 읽기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "Recommend a cafe with tasty pretzels and wide interior for reading books!", "label": 2, "original": "프레첼도 맛있고 내부 인테리어 넓직해서 책 읽기 좋은 카페 추천해줘.", "augmented": true}
+{"question": "블루문에이드랑 경치 좋은 멋진 인테리어 카페 어디야?", "label": 2, "original": "블루문에이드와 함께 주변 경치 좋고 카페 인테리어 멋진 곳 있을까?", "augmented": true}
+{"question": "블루문에이드랑 뷰 존맛이고 인테리어 쩌는 카페 있으면 추천 좀~", "label": 2, "original": "블루문에이드와 함께 주변 경치 좋고 카페 인테리어 멋진 곳 있을까?", "augmented": true}
+{"question": "블루문에이드, 주변 풍경 굿, 인테리어 멋진 카페 있나?", "label": 2, "original": "블루문에이드와 함께 주변 경치 좋고 카페 인테리어 멋진 곳 있을까?", "augmented": true}
+{"question": "고구마브륄레 존맛이고 감각적인 인테리어에 조용한 카페 추천해줘~", "label": 2, "original": "고구마브륄레도 맛있고 인테리어가 감각적이면서 조용하게 휴식할 수 있는 카페 추천해줄래?", "augmented": true}
+{"question": "고구마브륄레 맛있고 조용히 쉴 수 있는 감성 카페 어디 없나?", "label": 2, "original": "고구마브륄레도 맛있고 인테리어가 감각적이면서 조용하게 휴식할 수 있는 카페 추천해줄래?", "augmented": true}
+{"question": "고구마브륄레랑 조용한 공간, 인테리어 예쁜데 알려줘 ㅋㅋ", "label": 2, "original": "고구마브륄레도 맛있고 인테리어가 감각적이면서 조용하게 휴식할 수 있는 카페 추천해줄래?", "augmented": true}
+{"question": "선선한 날, 저렴한 커피, 카라멜라떼 맛집 어디?", "label": 2, "original": "선선한 날씨에 저렴한 커피도 마실 수 있으면서 카라멜라떼가 맛있는 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "저렴하고 괜찮은 커피, 카라멜라떼 맛난 카페 있나?", "label": 2, "original": "선선한 날씨에 저렴한 커피도 마실 수 있으면서 카라멜라떼가 맛있는 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "선선할 때 가성비 좋은 카라멜라떼 카페 추천!", "label": 2, "original": "선선한 날씨에 저렴한 커피도 마실 수 있으면서 카라멜라떼가 맛있는 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "프라푸치노 마시면서 힙한 인테리어, 음악 감상 가능한 카페 어디야?", "label": 2, "original": "프라푸치노 마시면서 힙하고 멋진 인테리어에 음악 감상도 가능한 카페 알려줄 수 있어?", "augmented": true}
+{"question": "프라푸치노랑 힙한 분위기, 음악도 좋은 카페 알려줘 ㅠㅠ", "label": 2, "original": "프라푸치노 마시면서 힙하고 멋진 인테리어에 음악 감상도 가능한 카페 알려줄 수 있어?", "augmented": true}
+{"question": "프라푸치노, 힙하고 멋진 인테리어, 음악 가능한 카페 추천~", "label": 2, "original": "프라푸치노 마시면서 힙하고 멋진 인테리어에 음악 감상도 가능한 카페 알려줄 수 있어?", "augmented": true}
+{"question": "파이 맛있고 깔끔한 지하 카페 어디 있지?", "label": 2, "original": "파이가 맛있고 깔끔한 분위기의 지하 공간이 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "파이 존맛이고 분위기 깔끔한 지하 카페 있나?", "label": 2, "original": "파이가 맛있고 깔끔한 분위기의 지하 공간이 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "깔끔한 지하 공간, 파이 맛집 카페 알려줘!", "label": 2, "original": "파이가 맛있고 깔끔한 분위기의 지하 공간이 좋은 카페 어디 있을까?", "augmented": true}
+{"question": "아몬드크림커피 맛있고 공간 넓고 예쁜데 BGM도 좋은데 어디야? 알려줘~", "label": 2, "original": "아몬드크림커피 맛있으면서 카페 공간 넓고 예쁘고 BGM 선곡 좋은 곳 알려줘.", "augmented": true}
+{"question": "아몬드크림커피 존맛이고 넓고 이쁜 카페, BGM 끝내주는 곳 있음?", "label": 2, "original": "아몬드크림커피 맛있으면서 카페 공간 넓고 예쁘고 BGM 선곡 좋은 곳 알려줘.", "augmented": true}
+{"question": "아몬드 크림 커피 맛있는 곳, 넓고 예쁜 공간에 좋은 BGM 들리는 곳 추천 ㄱㄱ", "label": 2, "original": "아몬드크림커피 맛있으면서 카페 공간 넓고 예쁘고 BGM 선곡 좋은 곳 알려줘.", "augmented": true}
+{"question": "조용하고 2층 있는 곳에서 땅콩크림라떼 먹을 수 있는 카페 없어? 알려줘ㅠㅠ", "label": 2, "original": "조용하고 2층 공간 있는 곳에서 땅콩크림라떼 맛볼 수 있는 카페 알려줄래?", "augmented": true}
+{"question": "땅콩크림라떼 파는 2층 공간 조용한 카페 어디 있음?", "label": 2, "original": "조용하고 2층 공간 있는 곳에서 땅콩크림라떼 맛볼 수 있는 카페 알려줄래?", "augmented": true}
+{"question": "조용한데 2층도 있고, 땅콩크림라떼 맛집 카페 좀 알려줄래? ㅋㅋ", "label": 2, "original": "조용하고 2층 공간 있는 곳에서 땅콩크림라떼 맛볼 수 있는 카페 알려줄래?", "augmented": true}
+{"question": "프레첼 맛있고 브런치, 미술활동 둘 다 가능한 카페 추천해줘~", "label": 2, "original": "프레첼 맛있고 브런치랑 미술활동도 할 수 있는 카페 추천해줘!", "augmented": true}
+{"question": "프레첼 존맛, 브런치랑 미술활동도 가능한 곳 어디야? 알려줘!", "label": 2, "original": "프레첼 맛있고 브런치랑 미술활동도 할 수 있는 카페 추천해줘!", "augmented": true}
+{"question": "프레첼 맛난곳, 브런치랑 미술활동 가능한 카페 있나?", "label": 2, "original": "프레첼 맛있고 브런치랑 미술활동도 할 수 있는 카페 추천해줘!", "augmented": true}
+{"question": "애플크럼블 맛있고 아기자기한 인테리어에 야외좌석 있는 카페 찾는다~ 알려줘!", "label": 2, "original": "애플크럼블 맛있고 인테리어가 아기자기하면서 야외 좌석도 있는 카페 알려줘.", "augmented": true}
+{"question": "애플크럼블 맛집, 인테리어 예쁘고 야외 좌석도 있는 카페 어딨냐? 알려줘ㅠㅠ", "label": 2, "original": "애플크럼블 맛있고 인테리어가 아기자기하면서 야외 좌석도 있는 카페 알려줘.", "augmented": true}
+{"question": "애플크럼블 맛있고 아기자기+야외좌석 있는 카페 어디?", "label": 2, "original": "애플크럼블 맛있고 인테리어가 아기자기하면서 야외 좌석도 있는 카페 알려줘.", "augmented": true}
+{"question": "숲뷰에 인스타 감성 가득, 샐러드 잘하는 카페 추천 좀 해줘~ wifi 빵빵한 곳이면 굿!", "label": 2, "original": "숲뷰에 인스타 감성 가득한 곳에서 샐러드 잘하는 카페 추천해줄래?", "augmented": true}
+{"question": "숲뷰 최고! 인스타 감성 충만한데 샐러드도 맛있는 카페 어디임?", "label": 2, "original": "숲뷰에 인스타 감성 가득한 곳에서 샐러드 잘하는 카페 추천해줄래?", "augmented": true}
+{"question": "숲뷰, 인스타 감성, 샐러드 맛집 카페 있어? study하기 좋은 곳이면 더 좋고~", "label": 2, "original": "숲뷰에 인스타 감성 가득한 곳에서 샐러드 잘하는 카페 추천해줄래?", "augmented": true}
+{"question": "기분 좋은 분위기에 핸드드립 커피 내리는 컴포즈 넓은 카페 어디야? 알려줘~", "label": 2, "original": "기분 좋은 분위기에 핸드드립 커피 내리는 컴포즈 매장이 넓은 카페 있을까 알려줄래?", "augmented": true}
+{"question": "기분 짱인 분위기 뽐내는 핸드드립 커피 컴포즈 매장 넓은 데 있냐? ㅋㅋ", "label": 2, "original": "기분 좋은 분위기에 핸드드립 커피 내리는 컴포즈 매장이 넓은 카페 있을까 알려줄래?", "augmented": true}
+{"question": "컴포즈, 넓고 분위기 좋은 곳에 핸드드립 커피 내리는 데 있나?", "label": 2, "original": "기분 좋은 분위기에 핸드드립 커피 내리는 컴포즈 매장이 넓은 카페 있을까 알려줄래?", "augmented": true}
+{"question": "와~ 기분 좋아지는 분위기 핸드드립 커피! 컴포즈 중 넓은 카페 있으면 알려줘ㅠㅠ", "label": 2, "original": "기분 좋은 분위기에 핸드드립 커피 내리는 컴포즈 매장이 넓은 카페 있을까 알려줄래?", "augmented": true}
+{"question": "넓고 분위기 좋은 Compose cafe? Hand drip coffee good place 있나?", "label": 2, "original": "기분 좋은 분위기에 핸드드립 커피 내리는 컴포즈 매장이 넓은 카페 있을까 알려줄래?", "augmented": true}
+{"question": "Compose place wide, mood nice, hand drip coffee 내리는 곳 좀 알려줘~", "label": 2, "original": "기분 좋은 분위기에 핸드드립 커피 내리는 컴포즈 매장이 넓은 카페 있을까 알려줄래?", "augmented": true}
+{"question": "단골카페에서 커피랑 티라미수 먹을 수 있는 데 없나? 알려줘~", "label": 2, "original": "단골카페로 커피 한잔하면서 티라미수도 맛볼 수 있는 곳 있으면 알려줘.", "augmented": true}
+{"question": "커피 한잔 하면서 티라미수 먹는 단골카페 있냐? 있어? ㅋ", "label": 2, "original": "단골카페로 커피 한잔하면서 티라미수도 맛볼 수 있는 곳 있으면 알려줘.", "augmented": true}
+{"question": "티라미수랑 커피 같이 하는 단골카페 어디에?", "label": 2, "original": "단골카페로 커피 한잔하면서 티라미수도 맛볼 수 있는 곳 있으면 알려줘.", "augmented": true}
+{"question": "단골카페에서 커피+티라미수라니! 완전 꿀 조합~ 알려줘ㅠㅠ", "label": 2, "original": "단골카페로 커피 한잔하면서 티라미수도 맛볼 수 있는 곳 있으면 알려줘.", "augmented": true}
+{"question": "A regular cafe with coffee + tiramisu, any 추천?", "label": 2, "original": "단골카페로 커피 한잔하면서 티라미수도 맛볼 수 있는 곳 있으면 알려줘.", "augmented": true}
+{"question": "coffee + tiramisu 맛있고 단골로 가기 좋은 곳 있어?", "label": 2, "original": "단골카페로 커피 한잔하면서 티라미수도 맛볼 수 있는 곳 있으면 알려줘.", "augmented": true}
+{"question": "신림에 24시간 하는 브라운라떼 맛집인 책 읽기 좋은 카페 있냐? 알려줘~", "label": 2, "original": "신림에 24시간 운영하고 브라운라떼 맛있는 책 읽기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "신림 24시간 오픈, 브라운라떼 맛난 데, 책 읽기 딱 좋은 카페 없음? ㅋㅋ", "label": 2, "original": "신림에 24시간 운영하고 브라운라떼 맛있는 책 읽기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "신림, 24시간 카페, 브라운라떼 맛있고 조용히 책 읽기 좋은 곳?", "label": 2, "original": "신림에 24시간 운영하고 브라운라떼 맛있는 책 읽기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "신림 24시 브라운라떼 대박~ 책 읽기 딱~인 곳 알려줘ㅠㅠ", "label": 2, "original": "신림에 24시간 운영하고 브라운라떼 맛있는 책 읽기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "24h open cafe in 신림, brown latte 맛집 & study-friendly place 있어?", "label": 2, "original": "신림에 24시간 운영하고 브라운라떼 맛있는 책 읽기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "신림, 24시, 브라운라떼 맛있고 책읽기 좋은 카페 어디?", "label": 2, "original": "신림에 24시간 운영하고 브라운라떼 맛있는 책 읽기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "관악 넓고 쾌적한 데서 콘치즈크로플 먹기 좋은 카페 어디야? 알려줘~", "label": 2, "original": "관악지역에 쾌적하고 가게가 넓은 데서 콘치즈크로플 먹기 좋은 카페 알려줘.", "augmented": true}
+{"question": "관악지역 콘치즈크로플 먹기 좋은 넓고 깔끔한 카페 있냐? ㅋ", "label": 2, "original": "관악지역에 쾌적하고 가게가 넓은 데서 콘치즈크로플 먹기 좋은 카페 알려줘.", "augmented": true}
+{"question": "콘치즈크로플 먹기 좋은 관악지역 넓은 카페?", "label": 2, "original": "관악지역에 쾌적하고 가게가 넓은 데서 콘치즈크로플 먹기 좋은 카페 알려줘.", "augmented": true}
+{"question": "와~ 관악에 콘치즈크로플 굿! 넓고 쾌적한 곳 있음 꼭 알려줘ㅠㅠ", "label": 2, "original": "관악지역에 쾌적하고 가게가 넓은 데서 콘치즈크로플 먹기 좋은 카페 알려줘.", "augmented": true}
+{"question": "Gwanak area, wide & comfy cafe for 콘치즈크로플 먹기 좋은 spot 있나?", "label": 2, "original": "관악지역에 쾌적하고 가게가 넓은 데서 콘치즈크로플 먹기 좋은 카페 알려줘.", "augmented": true}
+{"question": "관악, 넓고 쾌적한 데서 콘치즈크로플 맛집 어디?", "label": 2, "original": "관악지역에 쾌적하고 가게가 넓은 데서 콘치즈크로플 먹기 좋은 카페 알려줘.", "augmented": true}
+{"question": "단호박라떼 마시면서 한 끼도 든든하고 뷰 좋은 한적한 카페 어디야? 추천해줘~", "label": 2, "original": "단호박라떼 마시면서 한끼 식사로도 든든하고 뷰가 한적한 카페 어디 있을까 추천해줄래?", "augmented": true}
+{"question": "단호박라떼 마시면서 밥도 되고 뷰 짱 한적한 카페 있어? 알려줘 ㅋ", "label": 2, "original": "단호박라떼 마시면서 한끼 식사로도 든든하고 뷰가 한적한 카페 어디 있을까 추천해줄래?", "augmented": true}
+{"question": "단호박라떼 + 든든한 식사 + 한적 뷰 좋은 카페 어디?", "label": 2, "original": "단호박라떼 마시면서 한끼 식사로도 든든하고 뷰가 한적한 카페 어디 있을까 추천해줄래?", "augmented": true}
+{"question": "단호박라떼 한 잔에 밥까지 완벽! 뷰 좋은 한적한 카페 있으면 추천해줘ㅠㅠ", "label": 2, "original": "단호박라떼 마시면서 한끼 식사로도 든든하고 뷰가 한적한 카페 어디 있을까 추천해줄래?", "augmented": true}
+{"question": "Where can I have pumpkin latte + full meal + peaceful view cafe? 추천좀~", "label": 2, "original": "단호박라떼 마시면서 한끼 식사로도 든든하고 뷰가 한적한 카페 어디 있을까 추천해줄래?", "augmented": true}
+{"question": "단호박라떼 먹으면서 든든한 식사도 되는 뷰 좋은 카페 어디?", "label": 2, "original": "단호박라떼 마시면서 한끼 식사로도 든든하고 뷰가 한적한 카페 어디 있을까 추천해줄래?", "augmented": true}
+{"question": "죠리퐁초코 진짜 맛있고, 분위기 좋고, 음악 빵빵한 카페 어디야? 알려줘~", "label": 2, "original": "죠리퐁초코 맛있으면서 편안한 휴식과 음악 분위기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "죠리퐁초코 먹으면서 편안하게 쉴 수 있는 그런 카페 있나? 음악도 짱이었으면!", "label": 2, "original": "죠리퐁초코 맛있으면서 편안한 휴식과 음악 분위기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "죠리퐁초코 맛집 + 편안한 휴식 + 음악 좋은 곳 있으면 추천해줘 ㅎㅎ", "label": 2, "original": "죠리퐁초코 맛있으면서 편안한 휴식과 음악 분위기 좋은 카페 알려줄래?", "augmented": true}
+{"question": "치폴레미트크랩샌드위치 먹으면서 친구랑 수다 떨기 딱 좋은 2층 카공카페 없나? ㅋㅋ", "label": 2, "original": "치폴레미트크랩샌드위치 먹으면서 친구랑 대화하기 좋은 2층 카페 어디 있을까?", "augmented": true}
+{"question": "2층에 위치한, 치폴레미트크랩샌드 먹을 수 있고 친구랑 수다 가능한 카페 어디임?", "label": 2, "original": "치폴레미트크랩샌드위치 먹으면서 친구랑 대화하기 좋은 2층 카페 어디 있을까?", "augmented": true}
+{"question": "2층, 치폴샌드 먹으면서 친구랑 이야기 가능한 카페 어디임? 알려줘~", "label": 2, "original": "치폴레미트크랩샌드위치 먹으면서 친구랑 대화하기 좋은 2층 카페 어디 있을까?", "augmented": true}
+{"question": "자리 많고 통유리 카페, 미숫가루스무디 맛집 어디야? ㅠㅠ", "label": 2, "original": "자리 생각보다 많고 통유리로 된 카페에서 미숫가루스무디 맛있는 곳 추천해줘.", "augmented": true}
+{"question": "미숫가루스무디 존맛인 통유리 카페, 자리 널럴한 곳 있어서 추천 좀 해주라~", "label": 2, "original": "자리 생각보다 많고 통유리로 된 카페에서 미숫가루스무디 맛있는 곳 추천해줘.", "augmented": true}
+{"question": "자리 많고 통유리인 카페에서 미숫가루스무디 맛있는 곳 있을까?", "label": 2, "original": "자리 생각보다 많고 통유리로 된 카페에서 미숫가루스무디 맛있는 곳 추천해줘.", "augmented": true}
+{"question": "아바라떼 맛있고 위린이도 부담 없는 갬성 있는 카페 어디임? ㅠㅠ", "label": 2, "original": "아이스바닐라라떼 맛있고 위린이도 편하게 갈 수 있는 갬성 카페 있을까?", "augmented": true}
+{"question": "아이스바닐라라떼 짱이고 위린이도 편한 그런 스터디하기 좋은 카페 있나?", "label": 2, "original": "아이스바닐라라떼 맛있고 위린이도 편하게 갈 수 있는 갬성 카페 있을까?", "augmented": true}
+{"question": "아아 맛있고, 초보도 편한 갬성 카페 좀 알려줘~~", "label": 2, "original": "아이스바닐라라떼 맛있고 위린이도 편하게 갈 수 있는 갬성 카페 있을까?", "augmented": true}
+{"question": "선물하기 좋은 맛있는 모밀 메뉴 있는 데, 직원들 완전 친절한 카페 추천 좀~", "label": 2, "original": "선물로 좋은 모밀 메뉴 있고 직원들 친절한 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "모밀 메뉴 있어서 선물용으로 좋은 곳, 친절한 직원 있는 카페 어디임?", "label": 2, "original": "선물로 좋은 모밀 메뉴 있고 직원들 친절한 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "모밀 메뉴 선물하기 딱이고, 직원분들 친절한 카페 있을까?", "label": 2, "original": "선물로 좋은 모밀 메뉴 있고 직원들 친절한 카페 추천해줄 수 있어?", "augmented": true}
+{"question": "책 읽기 좋은 분위기에 예쁜 매장에 크로크무슈 파는 카페 어디야? 알려줘~", "label": 2, "original": "책 읽기 좋은 분위기에 매장도 예쁜 곳에서 크로크무슈 먹을 수 있는 카페 있을까?", "augmented": true}
+{"question": "크로크무슈 먹으면서 책 볼만한 예쁜 카페 있나?", "label": 2, "original": "책 읽기 좋은 분위기에 매장도 예쁜 곳에서 크로크무슈 먹을 수 있는 카페 있을까?", "augmented": true}
+{"question": "와 근데, 책 읽기 딱 좋은 분위기 + 예쁜 인테리어에 크로크무슈도 맛있는 카페 어디야? ㅠㅠ", "label": 2, "original": "책 읽기 좋은 분위기에 매장도 예쁜 곳에서 크로크무슈 먹을 수 있는 카페 있을까?", "augmented": true}
+{"question": "관악에 멕시칸풀드포크나초 먹을 수 있는 아기자기하고 깔끔한 카페 추천해줘!", "label": 2, "original": "멕시칸풀드포크나초 먹을 수 있고 관악지역에 아기자기 깔끔한 공간 있는 카페 추천해줘.", "augmented": true}
+{"question": "멕시칸풀드포크나초 있는데 관악 깔끔한 공간 카공하기 좋은 곳 없어?", "label": 2, "original": "멕시칸풀드포크나초 먹을 수 있고 관악지역에 아기자기 깔끔한 공간 있는 카페 추천해줘.", "augmented": true}
+{"question": "멕시칸풀드포크나초 있구 관악 깔끔하고 아기자기한 카페 어디임? 알려줘 ㅋㅋ", "label": 2, "original": "멕시칸풀드포크나초 먹을 수 있고 관악지역에 아기자기 깔끔한 공간 있는 카페 추천해줘.", "augmented": true}
+{"question": "모카커피 퀄리티 장난 아니고 입 호강하는 그런 카페 어디임?", "label": 2, "original": "모카커피 퀄리티 좋은데 입이 호강하는 그런 카페 어디 있을까?", "augmented": true}
+{"question": "모카커피 맛 좋고 입 호강 각인 카페 추천 좀~", "label": 2, "original": "모카커피 퀄리티 좋은데 입이 호강하는 그런 카페 어디 있을까?", "augmented": true}
+{"question": "모카커피 good 퀄리티에 입이 호강하는 카페 어디야? wifi 빵빵한 곳이면 굿!", "label": 2, "original": "모카커피 퀄리티 좋은데 입이 호강하는 그런 카페 어디 있을까?", "augmented": true}
+{"question": "페퍼로니계란빵 맛있으면서 인테리어 예쁜 혼자 가기 딱 좋은 카페 어디임?", "label": 2, "original": "페퍼로니계란빵 맛있고 인테리어도 예뻐서 혼자 가기 좋은 카페 어디인지 알려줘.", "augmented": true}
+{"question": "혼카(혼자 카페)하기 좋은 페퍼로니계란빵 맛집 카페 알려줘~", "label": 2, "original": "페퍼로니계란빵 맛있고 인테리어도 예뻐서 혼자 가기 좋은 카페 어디인지 알려줘.", "augmented": true}
+{"question": "페퍼로니계란빵 맛나고 인테리어 예쁜 혼자 가기 좋은 카페 있을까? ㅠㅠ", "label": 2, "original": "페퍼로니계란빵 맛있고 인테리어도 예뻐서 혼자 가기 좋은 카페 어디인지 알려줘.", "augmented": true}
+{"question": "딸기요거트스무디 넘 맛있고 공간도 아기자기 깔끔하며 분위기 좋은 카페 어디임?", "label": 2, "original": "딸기요거트스무디 맛있고 카페 공간 아기자기 깔끔하며 즐거운 분위기인 곳 있을까?", "augmented": true}
+{"question": "딸기요거트스무디 맛집에 아기자기 깔끔한 분위기 카페 추천해줘~", "label": 2, "original": "딸기요거트스무디 맛있고 카페 공간 아기자기 깔끔하며 즐거운 분위기인 곳 있을까?", "augmented": true}
+{"question": "딸기요거트스무디 맛있고 즐거운 분위기 깔끔한 카페 어디야? study하기 좋은 곳이면 딱!", "label": 2, "original": "딸기요거트스무디 맛있고 카페 공간 아기자기 깔끔하며 즐거운 분위기인 곳 있을까?", "augmented": true}
+{"question": "영업 언제까지임? 알려줘~", "label": 3, "original": "영업시간 언제까지야?", "augmented": true}
+{"question": "영업시간 몇 시까지야? ㅠㅠ", "label": 3, "original": "영업시간 언제까지야?", "augmented": true}
+{"question": "영업시간 끝나는 시간 알려줄 수 있어?", "label": 3, "original": "영업시간 언제까지야?", "augmented": true}
+{"question": "내일 지하철 몇 시에 끝나나?", "label": 3, "original": "내일 지하철 몇 시에 끊겨?", "augmented": true}
+{"question": "내일 지하철 끊기는 시간 알려줘 ㅋㅋ", "label": 3, "original": "내일 지하철 몇 시에 끊겨?", "augmented": true}
+{"question": "내일 지하철 끊기는 타임이 몇 시임?", "label": 3, "original": "내일 지하철 몇 시에 끊겨?", "augmented": true}
+{"question": "편의점 인기 간식 뭐임?", "label": 3, "original": "편의점에서 인기 있는 간식 뭐야?", "augmented": true}
+{"question": "편의점 간식 중에 제일 인기 있는 거?", "label": 3, "original": "편의점에서 인기 있는 간식 뭐야?", "augmented": true}
+{"question": "편의점 간식 추천 좀 해줘~", "label": 3, "original": "편의점에서 인기 있는 간식 뭐야?", "augmented": true}
+{"question": "집 앞 편의점 위치 알려줄래?", "label": 3, "original": "집 앞 편의점 위치 알려줄래?", "augmented": true}
+{"question": "집 앞 편의점 어디야? 알려줘 ㅠㅠ", "label": 3, "original": "집 앞 편의점 위치 알려줄래?", "augmented": true}
+{"question": "집 앞 편의점 위치 좀 알려주삼~", "label": 3, "original": "집 앞 편의점 위치 알려줄래?", "augmented": true}
+{"question": "맛있는 중식당 어디야? 추천 좀!", "label": 3, "original": "맛있는 중식당 어디가 좋아?", "augmented": true}
+{"question": "맛난 중식당 어디가 좋아? 알려줘욥~", "label": 3, "original": "맛있는 중식당 어디가 좋아?", "augmented": true}
+{"question": "맛있는 중식당 추천 좀 해줘 ㅋㅋ", "label": 3, "original": "맛있는 중식당 어디가 좋아?", "augmented": true}
+{"question": "예약은 어떻게 해야 돼? 알려줘!", "label": 3, "original": "예약은 어떻게 해야 하나?", "augmented": true}
+{"question": "예약 어떻게 해? 꿀팁 있나?", "label": 3, "original": "예약은 어떻게 해야 하나?", "augmented": true}
+{"question": "예약 방법? 완전 궁금함 ㅋㅋ", "label": 3, "original": "예약은 어떻게 해야 하나?", "augmented": true}
+{"question": "주차장 있어? 따로 있나 확인 좀~", "label": 3, "original": "주차장은 따로 있나요?", "augmented": true}
+{"question": "주차장 따로 있나? 알려줘ㅠㅠ", "label": 3, "original": "주차장은 따로 있나요?", "augmented": true}
+{"question": "주차장 어디임? 있으면 좋겠다~", "label": 3, "original": "주차장은 따로 있나요?", "augmented": true}
+{"question": "요즘 인기 편의점 어디야? 아아 사러 갈 건데", "label": 3, "original": "요즘 인기 있는 편의점 어디야?", "augmented": true}
+{"question": "요즘 뜨는 편의점 좀 알려줘~ 카공할 때 간식 사려고", "label": 3, "original": "요즘 인기 있는 편의점 어디야?", "augmented": true}
+{"question": "인기 편의점 위치 좀! 근처에 있나?", "label": 3, "original": "요즘 인기 있는 편의점 어디야?", "augmented": true}
+{"question": "주차 얼마나 가능해? 요금도 알려줘~", "label": 3, "original": "주차는 얼마나 해? 주차 요금도 알려줘", "augmented": true}
+{"question": "주차 시간, 요금 어떻게 됨? 궁금해ㅠ", "label": 3, "original": "주차는 얼마나 해? 주차 요금도 알려줘", "augmented": true}
+{"question": "주차 오래 해도 돼? 돈 얼마야?", "label": 3, "original": "주차는 얼마나 해? 주차 요금도 알려줘", "augmented": true}
+{"question": "카페 영업시간 몇 시부터? 몇 시까지임?", "label": 3, "original": "카페 영업시간 몇 시부터 몇 시까지야?", "augmented": true}
+{"question": "카페 오픈, 마감시간 알려줄래? study하기 좋아서~", "label": 3, "original": "카페 영업시간 몇 시부터 몇 시까지야?", "augmented": true}
+{"question": "영업시간 궁금해~ wifi 빵빵하면 좋겠다!", "label": 3, "original": "카페 영업시간 몇 시부터 몇 시까지야?", "augmented": true}
+{"question": "요즘 인기 있는 마트 어디야?", "label": 3, "original": "요즘 인기 있는 마트 어디야?", "augmented": true}
+{"question": "요즘 인기 마트 어디임? 알려줘~ ㅋㅋ", "label": 3, "original": "요즘 인기 있는 마트 어디야?", "augmented": true}
+{"question": "인기 마트 어디임? 아는 사람?", "label": 3, "original": "요즘 인기 있는 마트 어디야?", "augmented": true}
+{"question": "요즘 인기 마트 있나? 어디임?", "label": 3, "original": "요즘 인기 있는 마트 어디야?", "augmented": true}
+{"question": "동네에 술집 중에 조용한 데 추천해줄래?", "label": 3, "original": "동네에 술집 중에 조용한 데 추천해줄래?", "augmented": true}
+{"question": "동네 조용한 술집 있으면 추천 좀 해봐 ㅠㅠ", "label": 3, "original": "동네에 술집 중에 조용한 데 추천해줄래?", "augmented": true}
+{"question": "조용한 술집 ㄱㄱ? 추천해줘~", "label": 3, "original": "동네에 술집 중에 조용한 데 추천해줄래?", "augmented": true}
+{"question": "술집 중 조용한 데 어디임? 알려줘", "label": 3, "original": "동네에 술집 중에 조용한 데 추천해줄래?", "augmented": true}
+{"question": "오늘 날씨 진짜 추운가?", "label": 3, "original": "오늘 날씨 진짜 추운가?", "augmented": true}
+{"question": "오늘 날씨 완전 춥냐? ㅠㅠ", "label": 3, "original": "오늘 날씨 진짜 추운가?", "augmented": true}
+{"question": "오늘 날씨 시베리아급임? ㅋㅋ", "label": 3, "original": "오늘 날씨 진짜 추운가?", "augmented": true}
+{"question": "오늘 진짜 춥나?", "label": 3, "original": "오늘 날씨 진짜 추운가?", "augmented": true}
+{"question": "출근길 교통 상황 좀 알려줘.", "label": 3, "original": "출근길 교통 상황 좀 알려줘.", "augmented": true}
+{"question": "출근길 교통 어때? 막힘 있나? 알려줘~", "label": 3, "original": "출근길 교통 상황 좀 알려줘.", "augmented": true}
+{"question": "출근길 교통 상황 ㅈㄴ 궁금함", "label": 3, "original": "출근길 교통 상황 좀 알려줘.", "augmented": true}
+{"question": "출근길 상황 좀 알려줘", "label": 3, "original": "출근길 교통 상황 좀 알려줘.", "augmented": true}
+{"question": "요즘 인기 영화 뭐야?", "label": 3, "original": "요즘 인기 영화 뭐야?", "augmented": true}
+{"question": "요즘 핫한 영화 뭐임? ㅋㅋ", "label": 3, "original": "요즘 인기 영화 뭐야?", "augmented": true}
+{"question": "인기영화 뭐 있냐? 추천좀~", "label": 3, "original": "요즘 인기 영화 뭐야?", "augmented": true}
+{"question": "요즘 인기영화 뭐임?", "label": 3, "original": "요즘 인기 영화 뭐야?", "augmented": true}
+{"question": "영화 좀 추천해줘봐~", "label": 3, "original": "영화 추천 좀 해줄래?", "augmented": true}
+{"question": "이번에 볼만한 영화 뭐 없나? 알려줘 ㅋㅋ", "label": 3, "original": "영화 추천 좀 해줄래?", "augmented": true}
+{"question": "추천 영화 있으면 딱 말해줘! ㅠㅠ", "label": 3, "original": "영화 추천 좀 해줄래?", "augmented": true}
+{"question": "동네 헬스장 괜찮은데 있음?", "label": 3, "original": "동네 헬스장 괜찮은 곳 있나?", "augmented": true}
+{"question": "헬스장 카공 가능하고 괜찮은 곳 있냐?", "label": 3, "original": "동네 헬스장 괜찮은 곳 있나?", "augmented": true}
+{"question": "근처 헬스장 괜찮은 곳 뭐 있음?", "label": 3, "original": "동네 헬스장 괜찮은 곳 있나?", "augmented": true}
+{"question": "서울 근처 마트 추천해줘ㅠㅠ", "label": 3, "original": "서울 근처 마트 추천해줘", "augmented": true}
+{"question": "서울 가까운 마트 어디 괜찮아? 알려줘~", "label": 3, "original": "서울 근처 마트 추천해줘", "augmented": true}
+{"question": "근처 마트 맛나고 좋은 곳 없나?", "label": 3, "original": "서울 근처 마트 추천해줘", "augmented": true}
+{"question": "서울 가성비 짱인 술집 있나? 알려줘 ㅋㅋ", "label": 3, "original": "서울에 가성비 좋은 술집 추천해줘", "augmented": true}
+{"question": "술집 추천 좀 해줄래? 가성비 좋은 곳으로!", "label": 3, "original": "서울에 가성비 좋은 술집 추천해줘", "augmented": true}
+{"question": "가성비 술집 서울 근처에 진짜 있냐? ㅠㅠ", "label": 3, "original": "서울에 가성비 좋은 술집 추천해줘", "augmented": true}
+{"question": "예약은 어떻게 해야 돼? 알려줘~", "label": 3, "original": "예약은 어떻게 해야 해?", "augmented": true}
+{"question": "예약하는 법 좀 알려줘봐 ㅋㅋ", "label": 3, "original": "예약은 어떻게 해야 해?", "augmented": true}
+{"question": "예약방법 딱 간단히 알려줄래?", "label": 3, "original": "예약은 어떻게 해야 해?", "augmented": true}
+{"question": "이번 주 날씨 어디야? 좀 알려줘봐~", "label": 3, "original": "이번 주 날씨 좀 알려줘", "augmented": true}
+{"question": "이번주 날씨 어때? 알려줘ㅠㅠ", "label": 3, "original": "이번 주 날씨 좀 알려줘", "augmented": true}
+{"question": "이번 주 날씨 좀 알려줘 ㅋㅋ", "label": 3, "original": "이번 주 날씨 좀 알려줘", "augmented": true}
+{"question": "집 근처 괜찮은 술집 어디임? 알려줘ㅠ", "label": 3, "original": "집 근처 괜찮은 술집 어디 있어?", "augmented": true}
+{"question": "집 근처 술집 어디 있나? 알람줘~", "label": 3, "original": "집 근처 괜찮은 술집 어디 있어?", "augmented": true}
+{"question": "집 근처 괜춘한 술집 있으면 찔러줘", "label": 3, "original": "집 근처 괜찮은 술집 어디 있어?", "augmented": true}
+{"question": "집에서 김치찌개 맛있게 끓이는법 있음?", "label": 3, "original": "집에서 맛있는 김치찌개 어떻게 끓여?", "augmented": true}
+{"question": "김치찌개 맛있게 끓이는 법 알려줘~", "label": 3, "original": "집에서 맛있는 김치찌개 어떻게 끓여?", "augmented": true}
+{"question": "집 김치찌개 끓이는법 좀 알려줘ㅠㅠ", "label": 3, "original": "집에서 맛있는 김치찌개 어떻게 끓여?", "augmented": true}
+{"question": "이 카페 몇 시에 닫음? 알려줘ㅋㅋ", "label": 3, "original": "이 카페 몇 시에 문 닫아?", "augmented": true}
+{"question": "이 카페 문 닫는 시간 알려줄래?", "label": 3, "original": "이 카페 몇 시에 문 닫아?", "augmented": true}
+{"question": "카페 몇 시 문 닫냐? 좀 알려줘", "label": 3, "original": "이 카페 몇 시에 문 닫아?", "augmented": true}
+{"question": "맛있는 김치찌개 레시피 알려줘ㅠㅠ", "label": 3, "original": "맛있는 김치찌개 레시피 알려줄래?", "augmented": true}
+{"question": "김치찌개 레시피 좀 찔러줄래?", "label": 3, "original": "맛있는 김치찌개 레시피 알려줄래?", "augmented": true}
+{"question": "맛난 김치찌개 만드는법 알려줘~", "label": 3, "original": "맛있는 김치찌개 레시피 알려줄래?", "augmented": true}
+{"question": "우리 집 근처 마트 어디야? 알려줘 ㅋ", "label": 3, "original": "집 주변 마트 위치 좀 알려줘", "augmented": true}
+{"question": "집앞 마트 위치 좀 알려줘~", "label": 3, "original": "집 주변 마트 위치 좀 알려줘", "augmented": true}
+{"question": "집 주변 마트 위치? 좀 알려줘 ㅠㅠ", "label": 3, "original": "집 주변 마트 위치 좀 알려줘", "augmented": true}
+{"question": "근처 편의점 위치 좀 알려줄래? 땡큐~", "label": 3, "original": "근처 편의점 위치 알려줄래?", "augmented": true}
+{"question": "편의점 어디에 있나? 알려줘 ㅋㅋ", "label": 3, "original": "근처 편의점 위치 알려줄래?", "augmented": true}
+{"question": "주변 편의점 위치? 궁금함 ㅎㅎ", "label": 3, "original": "근처 편의점 위치 알려줄래?", "augmented": true}
+{"question": "분위기 좋은 노래방 어디야? 추천 좀!", "label": 3, "original": "분위기 좋은 노래방 추천해줄래?", "augmented": true}
+{"question": "분위기 쩌는 노래방 알려줄래?", "label": 3, "original": "분위기 좋은 노래방 추천해줄래?", "augmented": true}
+{"question": "노래방 분위기 좋은 곳 있나? 추천 부탁 ㅠㅠ", "label": 3, "original": "분위기 좋은 노래방 추천해줄래?", "augmented": true}
+{"question": "예약 어떻게 해? 알려줘좀~", "label": 3, "original": "예약하려면 어떻게 해야 해?", "augmented": true}
+{"question": "예약하려면 뭐 해야 해? 궁금해ㅋㅋ", "label": 3, "original": "예약하려면 어떻게 해야 해?", "augmented": true}
+{"question": "예약 방법? 알려줘 ㅠㅠ", "label": 3, "original": "예약하려면 어떻게 해야 해?", "augmented": true}
+{"question": "노래방 갈 만한 곳 어디야? 좀 알려줘", "label": 3, "original": "노래방 갈 만한 곳 알려줘", "augmented": true}
+{"question": "노래방 괜찮은 곳 있나? 추천 좀 ㅎ", "label": 3, "original": "노래방 갈 만한 곳 알려줘", "augmented": true}
+{"question": "갈만한 노래방 알려줄래? 부탁해~", "label": 3, "original": "노래방 갈 만한 곳 알려줘", "augmented": true}
+{"question": "여기 카페 와이파이 비번 뭐임? 알려줘 ㅋㅋ", "label": 3, "original": "여기 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "카페 wifi 비번 좀 알려주라~", "label": 3, "original": "여기 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "와이파이 비밀번호? 뭐야?", "label": 3, "original": "여기 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "요즘 대박 인기 영화 뭐 있냐? ㅋㅋ", "label": 3, "original": "요즘 인기 있는 영화 뭐 있어?", "augmented": true}
+{"question": "요새 뜨는 무비 뭐임?", "label": 3, "original": "요즘 인기 있는 영화 뭐 있어?", "augmented": true}
+{"question": "요즘 인기 영화 있나?", "label": 3, "original": "요즘 인기 있는 영화 뭐 있어?", "augmented": true}
+{"question": "배달 맛집 어디야? 추천해 줘 ㅠㅠ", "label": 3, "original": "배달 음식 맛집 추천해줘", "augmented": true}
+{"question": "배달 음식 맛집 추천 좀 ㅋㅋ", "label": 3, "original": "배달 음식 맛집 추천해줘", "augmented": true}
+{"question": "배달 맛집 알려줘~", "label": 3, "original": "배달 음식 맛집 추천해줘", "augmented": true}
+{"question": "동네 술집 중에 괜찮은 데 없나? 추천 좀", "label": 3, "original": "동네 맛집 중에 술집 추천해줄 수 있어?", "augmented": true}
+{"question": "술집 어디 좋아? 동네 맛집으로~", "label": 3, "original": "동네 맛집 중에 술집 추천해줄 수 있어?", "augmented": true}
+{"question": "동네 맛집 술집 뭐 있어?", "label": 3, "original": "동네 맛집 중에 술집 추천해줄 수 있어?", "augmented": true}
+{"question": "청소 업체 잘하는 곳 있냐? 추천 좀", "label": 3, "original": "청소 잘하는 업체 추천해줘", "augmented": true}
+{"question": "청소 잘하는 업체 어디야? 알려줘~", "label": 3, "original": "청소 잘하는 업체 추천해줘", "augmented": true}
+{"question": "청소 업체 좋은 데 추천해줘 ㅋㅋ", "label": 3, "original": "청소 잘하는 업체 추천해줘", "augmented": true}
+{"question": "노래방 어디야? 가까운 데 없나? 알려줘~", "label": 3, "original": "노래방 가고 싶은데 가까운 데 알려줘", "augmented": true}
+{"question": "노래방 가고 싶은데 걍 가까운 데 있냐? ㅋㅋ", "label": 3, "original": "노래방 가고 싶은데 가까운 데 알려줘", "augmented": true}
+{"question": "가까운 노래방 어디야?ㅠㅠ 알려줘", "label": 3, "original": "노래방 가고 싶은데 가까운 데 알려줘", "augmented": true}
+{"question": "카페에 댕댕이랑 고냥이 데려가도 돼?", "label": 3, "original": "카페에서 반려동물 출입 가능한가?", "augmented": true}
+{"question": "카페에서 펫 출입 가능함? 알려줘~", "label": 3, "original": "카페에서 반려동물 출입 가능한가?", "augmented": true}
+{"question": "반려동물 카페 출입 ok야?", "label": 3, "original": "카페에서 반려동물 출입 가능한가?", "augmented": true}
+{"question": "지하철 몇 번 타?", "label": 3, "original": "지하철 몇 번 타야 해?", "augmented": true}
+{"question": "몇 호선 타야 해? 알려줘~", "label": 3, "original": "지하철 몇 번 타야 해?", "augmented": true}
+{"question": "지하철 번호 뭐임?", "label": 3, "original": "지하철 몇 번 타야 해?", "augmented": true}
+{"question": "이 카페 wifi 비번 뭐임? 알려줘ㅠ", "label": 3, "original": "이 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "여기 와이파이 pw 좀 줘~", "label": 3, "original": "이 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "카페 와이파이 비밀번호 알려줘 ㅋㅋ", "label": 3, "original": "이 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "마트 어디 제일 큼? 알려줘!", "label": 3, "original": "마트 어디가 제일 커?", "augmented": true}
+{"question": "가장 큰 마트 어디냐 ㅋㅋ", "label": 3, "original": "마트 어디가 제일 커?", "augmented": true}
+{"question": "마트 중에 가장 big한 곳 있음?", "label": 3, "original": "마트 어디가 제일 커?", "augmented": true}
+{"question": "오늘 주식 시장 어때? 완전 망한 거 아니야?", "label": 3, "original": "오늘 주식 시장 어때?", "augmented": true}
+{"question": "오늘 주식 시장 상황 대박임? 아아 살까?", "label": 3, "original": "오늘 주식 시장 어때?", "augmented": true}
+{"question": "주식 오늘 어때? 상승? 하락?", "label": 3, "original": "오늘 주식 시장 어때?", "augmented": true}
+{"question": "예약 없이 바로 앉을 수 있음?", "label": 3, "original": "예약 없이도 바로 앉을 수 있을까?", "augmented": true}
+{"question": "예약 ㄴㄴ인데 자리 바로 있나?", "label": 3, "original": "예약 없이도 바로 앉을 수 있을까?", "augmented": true}
+{"question": "예약 없이 앉기 가능함?", "label": 3, "original": "예약 없이도 바로 앉을 수 있을까?", "augmented": true}
+{"question": "지하철 몇 호선 타야 돼? 알려줘", "label": 3, "original": "지하철 몇 호선 타야 돼?", "augmented": true}
+{"question": "지하철 몇 호선임?", "label": 3, "original": "지하철 몇 호선 타야 돼?", "augmented": true}
+{"question": "지하철 라인 번호 뭔지?", "label": 3, "original": "지하철 몇 호선 타야 돼?", "augmented": true}
+{"question": "노래방 좋은 데 어디 없냐? ㅠㅠ", "label": 3, "original": "노래방 좋은 데 없어?", "augmented": true}
+{"question": "좋은 노래방 갑자기 땡기는데 어디? ㅋㅋ", "label": 3, "original": "노래방 좋은 데 없어?", "augmented": true}
+{"question": "노래방 꿀잼인 곳 있음?", "label": 3, "original": "노래방 좋은 데 없어?", "augmented": true}
+{"question": "오늘 지하철 진짜 많이 막혀? ㅠㅠ", "label": 3, "original": "오늘 지하철 많이 막혀?", "augmented": true}
+{"question": "오늘 지하철 완전 정체임?", "label": 3, "original": "오늘 지하철 많이 막혀?", "augmented": true}
+{"question": "지하철 오늘 막힘?", "label": 3, "original": "오늘 지하철 많이 막혀?", "augmented": true}
+{"question": "마트 중에 제일 싼 데 어디야?", "label": 3, "original": "마트 중에서 제일 싼 곳 알려줘.", "augmented": true}
+{"question": "마트 중에 젤 싼 데 알려줘 ㅋㅋ", "label": 3, "original": "마트 중에서 제일 싼 곳 알려줘.", "augmented": true}
+{"question": "싼 마트 혹시 있어?", "label": 3, "original": "마트 중에서 제일 싼 곳 알려줘.", "augmented": true}
+{"question": "동네 마트 영업시간 댓 아는 사람 없나?", "label": 3, "original": "동네 마트 영업시간 아는 데 있어?", "augmented": true}
+{"question": "마트 영업시간 좀 알려줄래?", "label": 3, "original": "동네 마트 영업시간 아는 데 있어?", "augmented": true}
+{"question": "동네 마트 언제까지 함?", "label": 3, "original": "동네 마트 영업시간 아는 데 있어?", "augmented": true}
+{"question": "오늘 미세먼지 어떤가요? ㅠㅠ", "label": 3, "original": "오늘 미세먼지 심한가?", "augmented": true}
+{"question": "와 오늘 미세먼지 엄청 심한가요? ㅜㅜ", "label": 3, "original": "오늘 미세먼지 심한가?", "augmented": true}
+{"question": "오늘 먼지 심한가~", "label": 3, "original": "오늘 미세먼지 심한가?", "augmented": true}
+{"question": "카페 영업시간 어떻게 되지? ㅋㅋ", "label": 3, "original": "카페 영업시간이 어떻게 돼?", "augmented": true}
+{"question": "카페 언제까지 열어?", "label": 3, "original": "카페 영업시간이 어떻게 돼?", "augmented": true}
+{"question": "카페 영업시간 알 수 있을까?", "label": 3, "original": "카페 영업시간이 어떻게 돼?", "augmented": true}
+{"question": "술집 어디 괜찮은 곳 있음? 알려줘~", "label": 3, "original": "술집 어디가 괜찮아?", "augmented": true}
+{"question": "괜찮은 술집 어디야?", "label": 3, "original": "술집 어디가 괜찮아?", "augmented": true}
+{"question": "맛있는 술집 좀 추천해 줘 ㅠㅠ", "label": 3, "original": "술집 어디가 괜찮아?", "augmented": true}
+{"question": "예약하려면 어떻게 해? 알려줘 ㅋㅋ", "label": 3, "original": "예약하려면 어떻게 해야 돼?", "augmented": true}
+{"question": "예약은 어떻게 하는 거임? 알려줘 ㅠㅠ", "label": 3, "original": "예약하려면 어떻게 해야 돼?", "augmented": true}
+{"question": "예약 방법 좀 알려줘", "label": 3, "original": "예약하려면 어떻게 해야 돼?", "augmented": true}
+{"question": "이 카페 영업시간 좀 알려줘~ ㅠㅠ", "label": 3, "original": "이 카페 영업시간 좀 알려줘", "augmented": true}
+{"question": "카페 운영시간 뭔지 궁금해", "label": 3, "original": "이 카페 영업시간 좀 알려줘", "augmented": true}
+{"question": "여기 영업시간 언제임?", "label": 3, "original": "이 카페 영업시간 좀 알려줘", "augmented": true}
+{"question": "근처 피트니스 센터 추천해줘! ㅋ", "label": 3, "original": "근처 피트니스 센터 추천해줘", "augmented": true}
+{"question": "주변 헬스장 어디 있어?", "label": 3, "original": "근처 피트니스 센터 추천해줘", "augmented": true}
+{"question": "가까운 피트니스 센터 어디야?", "label": 3, "original": "근처 피트니스 센터 추천해줘", "augmented": true}
+{"question": "맛있는 김치찌개 레시피 좀 알려줘 ㅠㅠ", "label": 3, "original": "맛있는 김치찌개 레시피 알려줄래?", "augmented": true}
+{"question": "김치찌개 맛있게 만드는 법 알려줘~", "label": 3, "original": "맛있는 김치찌개 레시피 알려줄래?", "augmented": true}
+{"question": "김치찌개 레시피 어떻게 돼?", "label": 3, "original": "맛있는 김치찌개 레시피 알려줄래?", "augmented": true}
+{"question": "여기 카드 결제 돼? 알려줘 ㅋㅋ", "label": 3, "original": "여기 카드 결제 가능해?", "augmented": true}
+{"question": "카드 결제 가능해?", "label": 3, "original": "여기 카드 결제 가능해?", "augmented": true}
+{"question": "카드 결제 되나?", "label": 3, "original": "여기 카드 결제 가능해?", "augmented": true}
+{"question": "피자 어디서 시켜? 잘하는 데 없나?", "label": 3, "original": "피자 배달 잘하는 곳 있어?", "augmented": true}
+{"question": "피자배달 좀 잘하는 곳 있어? 알려줘~", "label": 3, "original": "피자 배달 잘하는 곳 있어?", "augmented": true}
+{"question": "피자 배달 잘하는 데 찾고 있어ㅠㅠ", "label": 3, "original": "피자 배달 잘하는 곳 있어?", "augmented": true}
+{"question": "마트 할인행사 하는 데 있나? 찐득한 거 알려줘ㅋㅋ", "label": 3, "original": "마트 할인 행사 하는 곳 있어?", "augmented": true}
+{"question": "마트에서 할인 중인 곳 있으면 추천 좀~", "label": 3, "original": "마트 할인 행사 하는 곳 있어?", "augmented": true}
+{"question": "마트 할인행사 하는 데 있냐? 세일중?", "label": 3, "original": "마트 할인 행사 하는 곳 있어?", "augmented": true}
+{"question": "여기 카페 와이파이 pw 뭐야?", "label": 3, "original": "이 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "이 카페 wifi 비번 알려줘ㅠㅠ", "label": 3, "original": "이 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "와이파이 비밀번호 있음? 갑자기 필요해!", "label": 3, "original": "이 카페 와이파이 비밀번호 뭐야?", "augmented": true}
+{"question": "요즘 주식 시장 어때? 폭락임?ㅋㅋ", "label": 3, "original": "요즘 주식 시장은 어때?", "augmented": true}
+{"question": "주식 market 지금 상황 어때~", "label": 3, "original": "요즘 주식 시장은 어때?", "augmented": true}
+{"question": "지금 주식 시세 좀 알려줘ㅠ", "label": 3, "original": "요즘 주식 시장은 어때?", "augmented": true}
+{"question": "테이크아웃 가능함? 근처에 어디 있나?", "label": 3, "original": "테이크아웃 가능한 곳 있어?", "augmented": true}
+{"question": "테이크아웃 되는 카페 찾는 중~", "label": 3, "original": "테이크아웃 가능한 곳 있어?", "augmented": true}
+{"question": "Takeout 가능한 곳 있음? 알려줘!", "label": 3, "original": "테이크아웃 가능한 곳 있어?", "augmented": true}
+{"question": "근처 노래방 어디야? 추천 좀 알려줘!", "label": 3, "original": "근처 노래방 추천해줄래?", "augmented": true}
+{"question": "근처 노래방 맛집 추천해줘 ㅋㅋ", "label": 3, "original": "근처 노래방 추천해줄래?", "augmented": true}
+{"question": "노래방 근처에 어디 있지? 좀 알려줘~", "label": 3, "original": "근처 노래방 추천해줄래?", "augmented": true}
+{"question": "매장 좌석 몇 개임? 알려줄래?", "label": 3, "original": "매장 내 좌석 수가 몇 개인가요?", "augmented": true}
+{"question": "좌석 수 몇 개인지 알려줘 ㅠㅠ", "label": 3, "original": "매장 내 좌석 수가 몇 개인가요?", "augmented": true}
+{"question": "여기 매장 좌석 수 궁금해!", "label": 3, "original": "매장 내 좌석 수가 몇 개인가요?", "augmented": true}
+{"question": "집 근처 노래방 어디 좋아?", "label": 3, "original": "집 근처 노래방 어디가 좋아?", "augmented": true}
+{"question": "집 근처 노래방 몇 군데 알려줘~", "label": 3, "original": "집 근처 노래방 어디가 좋아?", "augmented": true}
+{"question": "근처 노래방 추천? 집에서 가까운 곳", "label": 3, "original": "집 근처 노래방 어디가 좋아?", "augmented": true}
+{"question": "근처 노래방 중 인기 많은 곳 있나용? ㅋㅋ", "label": 3, "original": "근처 노래방 중에 인기 많은 곳 알려줘", "augmented": true}
+{"question": "인기 많은 노래방 근처에 어디 있어? ㅠㅠ", "label": 3, "original": "근처 노래방 중에 인기 많은 곳 알려줘", "augmented": true}
+{"question": "인기 폭발인 근처 노래방 알려줘~", "label": 3, "original": "근처 노래방 중에 인기 많은 곳 알려줘", "augmented": true}
+{"question": "집 근처 마트 어디가 제일 가까워? 알려줘~", "label": 3, "original": "집 근처 마트 어디가 가까운지 알려줘", "augmented": true}
+{"question": "집 근처 마트 근데 어디임? 좀 가깝고~", "label": 3, "original": "집 근처 마트 어디가 가까운지 알려줘", "augmented": true}
+{"question": "집 근처에 가까운 마트 있어? 어디야?", "label": 3, "original": "집 근처 마트 어디가 가까운지 알려줘", "augmented": true}
+{"question": "야, 술집 중에 분위기 좋은 데 어디야? 알려줘 ㅋㅋ", "label": 3, "original": "술집 중에 분위기 좋은 곳 추천해줘", "augmented": true}
+{"question": "술집 분위기 짱인 곳 좀 추천해줘ㅠㅠ", "label": 3, "original": "술집 중에 분위기 좋은 곳 추천해줘", "augmented": true}
+{"question": "분위기 괜찮은 술집 어디 있음?", "label": 3, "original": "술집 중에 분위기 좋은 곳 추천해줘", "augmented": true}
+{"question": "이 카페 예약하는 거 어떻게 함? 알려줘~", "label": 3, "original": "이 카페 예약은 어떻게 해?", "augmented": true}
+{"question": "카페 예약법 좀 알려줄래? ㅋㅋ", "label": 3, "original": "이 카페 예약은 어떻게 해?", "augmented": true}
+{"question": "이 카페 예약은? 방법 있나?", "label": 3, "original": "이 카페 예약은 어떻게 해?", "augmented": true}
+{"question": "동네 중식당 맛집 어디가 꿀이야? 카공할 때도 좋은 곳?", "label": 3, "original": "동네 맛집 중식당 어디가 좋아?", "augmented": true}
+{"question": "맛집 중식당 어디가 맛있어? 아아 마시면서 먹기 좋은데~", "label": 3, "original": "동네 맛집 중식당 어디가 좋아?", "augmented": true}
+{"question": "동네 중식당 중에서 추천 좀 해봐 ㅋㅋ", "label": 3, "original": "동네 맛집 중식당 어디가 좋아?", "augmented": true}
+{"question": "주변 헬스장 어디가 괜찮아? wifi 빵빵한 데 있음?", "label": 3, "original": "주변에 헬스장 어디가 좋아?", "augmented": true}
+{"question": "동네 헬스장 중에 추천 좀! 뜨아 먹고 운동할 만한 곳?", "label": 3, "original": "주변에 헬스장 어디가 좋아?", "augmented": true}
+{"question": "헬스장 어디가 좋아? 조용하고 시설 좋은 데 있나?", "label": 3, "original": "주변에 헬스장 어디가 좋아?", "augmented": true}
+{"question": "오늘 미세먼지 심함? 밖에 나가도 됨? ㅠㅠ", "label": 3, "original": "오늘 미세먼지 심한가?", "augmented": true}
+{"question": "미세먼지 쩌는 날인가? 오늘 외출 굿?", "label": 3, "original": "오늘 미세먼지 심한가?", "augmented": true}
+{"question": "오늘 미세먼지 어때? study하기 좋은 공기임?", "label": 3, "original": "오늘 미세먼지 심한가?", "augmented": true}
+{"question": "우리 동네 미용실 어디가 좋아? 알려줘봐!", "label": 3, "original": "동네 미용실 어디가 괜찮아?", "augmented": true}
+{"question": "요즘 머리 하는 데 중에 꿀잼 미용실 있나요? 추천좀!", "label": 3, "original": "동네 미용실 어디가 괜찮아?", "augmented": true}
+{"question": "동네에 괜춘한 미용실, 콘센트 빵빵한 곳 없나?", "label": 3, "original": "동네 미용실 어디가 괜찮아?", "augmented": true}
+{"question": "요즘 주식 시장 완전 쩌는지 알려줘;", "label": 3, "original": "요즘 주식 시장 어때?", "augmented": true}
+{"question": "주식 장이 요즘 또 어때? 대박임?", "label": 3, "original": "요즘 주식 시장 어때?", "augmented": true}
+{"question": "주식 시장 분위기 짱 조용한데, 앞으로 괜찮을까?", "label": 3, "original": "요즘 주식 시장 어때?", "augmented": true}
+{"question": "노래방 어디가 짱인가요? ㅋㅋ 추천해줘~", "label": 3, "original": "노래방 추천 좀 해줘.", "augmented": true}
+{"question": "노래방 감성 좋은 데 어디 있어? ㅠㅠ 알려줘!", "label": 3, "original": "노래방 추천 좀 해줘.", "augmented": true}
+{"question": "노래 불러도 시끄럽지 않은 노래방, 아는 사람?", "label": 3, "original": "노래방 추천 좀 해줘.", "augmented": true}
+{"question": "주식 전망 완전 궁금한데, 어떻게 될 것 같아? ㅎㅎ", "label": 3, "original": "주식 시장 전망 어떻게 될까?", "augmented": true}
+{"question": "주식 시장 앞으로 갈 방향 좀 알려주실래요~?", "label": 3, "original": "주식 시장 전망 어떻게 될까?", "augmented": true}
+{"question": "주식 시장 전망, 전문가들은 뭐래? 대충 감은 잡히나?", "label": 3, "original": "주식 시장 전망 어떻게 될까?", "augmented": true}
+{"question": "지하철 몇 호선 타야 하는지 알려줘 ㅋㅋ", "label": 3, "original": "지하철 몇 호선 타야 해?", "augmented": true}
+{"question": "subway 몇 호선 타야 해? 완전 모르겠음 ㅠㅠ", "label": 3, "original": "지하철 몇 호선 타야 해?", "augmented": true}
+{"question": "지하철 라인 몇 번 타야 할까? study하기 좋은 라인 있음?", "label": 3, "original": "지하철 몇 호선 타야 해?", "augmented": true}
+{"question": "강남 술집 어디야? 알려줘~", "label": 3, "original": "서울 강남 술집 추천해줘", "augmented": true}
+{"question": "강남 술집 중에 괜찮은 데 없나? ㅋㅋ", "label": 3, "original": "서울 강남 술집 추천해줘", "augmented": true}
+{"question": "서울 강남에 술집 추천 좀 해줄래?", "label": 3, "original": "서울 강남 술집 추천해줘", "augmented": true}
+{"question": "동네 조용한 술집 좀 알려줘 ㅠㅠ", "label": 3, "original": "동네 술집 중에 조용한 데 추천해줄래?", "augmented": true}
+{"question": "조용한 술집 동네에 어디 있음? 카공도 가능?", "label": 3, "original": "동네 술집 중에 조용한 데 추천해줄래?", "augmented": true}
+{"question": "와 술집 조용한 데 어디 없나?", "label": 3, "original": "동네 술집 중에 조용한 데 추천해줄래?", "augmented": true}
+{"question": "카페 예약 어떻게 해?", "label": 3, "original": "카페 예약하려면 어떻게 해야 해?", "augmented": true}
+{"question": "예약하려면 뭐 해야 돼?", "label": 3, "original": "카페 예약하려면 어떻게 해야 해?", "augmented": true}
+{"question": "카페 예약 방법 알려줘~", "label": 3, "original": "카페 예약하려면 어떻게 해야 해?", "augmented": true}
+{"question": "노래방 저렴한 데 어디야? ㅋㅋ", "label": 3, "original": "노래방 중에 저렴한 데 어디야?", "augmented": true}
+{"question": "노래방 중에 cheap한 곳 있을까?", "label": 3, "original": "노래방 중에 저렴한 데 어디야?", "augmented": true}
+{"question": "노래방 가고 싶은데 가격 착한 데 추천 좀~", "label": 3, "original": "노래방 중에 저렴한 데 어디야?", "augmented": true}
+{"question": "치킨 배달 잘 되는 곳 있냐?", "label": 3, "original": "치킨 배달 잘되는 곳 추천해줘", "augmented": true}
+{"question": "배달 빠른 치킨집 어디야? 알려줘~", "label": 3, "original": "치킨 배달 잘되는 곳 추천해줘", "augmented": true}
+{"question": "치킨 배달 쩌는 데 추천해줘 ㅠㅠ", "label": 3, "original": "치킨 배달 잘되는 곳 추천해줘", "augmented": true}

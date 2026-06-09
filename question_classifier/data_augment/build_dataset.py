@@ -12,11 +12,14 @@ from pathlib import Path
 
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT / "question_classifier" / "data_augment" / "data"
+
 VALID_QUESTIONS_PATH = ROOT / "data" / "valid_questions.json"
-MENU_COMPLEX_PATH = ROOT / "question_classifier" / "data" / "menu_complex.jsonl"
-INVALID_PATH = ROOT / "question_classifier" / "data" / "invalid.jsonl"
-TRAINVAL_PATH = ROOT / "question_classifier" / "data" / "trainval.jsonl"
-TEST_PATH = ROOT / "question_classifier" / "data" / "test.jsonl"
+MENU_COMPLEX_PATH = DATA_DIR / "menu_complex.jsonl"
+INVALID_PATH = DATA_DIR / "invalid.jsonl"
+TRAINVAL_PATH = DATA_DIR / "trainval.jsonl"
+AUGMENTED_PATH = DATA_DIR / "augmented.jsonl"
+TEST_PATH = DATA_DIR / "test.jsonl"
 
 # ── 상수 ──────────────────────────────────────────────────
 NON_MENU_SAMPLE = 600
@@ -93,6 +96,14 @@ def main():
         trainval, test = split_test(class_data)
         trainval_data.extend(trainval)
         test_data.extend(test)
+
+    # augmented 데이터 trainval에 추가
+    if AUGMENTED_PATH.exists():
+        with open(AUGMENTED_PATH, encoding="utf-8") as f:
+            augmented = [json.loads(line) for line in f]
+        aug_data = [{"question": d["question"], "label": d["label"]} for d in augmented]
+        trainval_data.extend(aug_data)
+        print(f"  augmented: {len(aug_data)}개 추가")
 
     random.shuffle(trainval_data)
     random.shuffle(test_data)

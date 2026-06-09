@@ -17,8 +17,8 @@ from tqdm import tqdm
 
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
-TEST_PATH = ROOT / "data" / "test.jsonl"
-HARD_TEST_PATH = ROOT / "data" / "hard_test.jsonl"
+TEST_PATH = ROOT.parent / "data_augment" / "data" / "test.jsonl"
+HARD_TEST_PATH = ROOT.parent / "data_augment" / "data" / "hard_test.jsonl"
 
 ID2LABEL = {0: "non-menu", 1: "menu-only", 2: "menu-complex", 3: "invalid"}
 
