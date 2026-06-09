@@ -22,6 +22,7 @@ from transformers import (
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
 TRAIN_PATH = ROOT / "data" / "train.jsonl"
+VAL_PATH = ROOT / "data" / "val.jsonl"
 TEST_PATH = ROOT / "data" / "test.jsonl"
 
 # ── 라벨 매핑 ─────────────────────────────────────────────
@@ -78,8 +79,9 @@ def main():
     # ── 데이터 로드 & 토크나이징 ──────────────────────────
     print("[INFO] 데이터 로드 중...")
     train_dataset = load_dataset(TRAIN_PATH)
+    val_dataset = load_dataset(VAL_PATH)
     test_dataset = load_dataset(TEST_PATH)
-    print(f"  train: {len(train_dataset)}개 | test: {len(test_dataset)}개")
+    print(f"  train: {len(train_dataset)}개 | val: {len(val_dataset)}개 | test: {len(test_dataset)}개")
 
     train_dataset = train_dataset.map(
         lambda x: tokenize(x, tokenizer, config["max_seq_length"]),
@@ -117,7 +119,7 @@ def main():
         model=model,
         args=training_args,
         train_dataset=train_dataset,
-        eval_dataset=test_dataset,
+        eval_dataset=val_dataset,
         processing_class=tokenizer,
         compute_metrics=compute_metrics,
     )

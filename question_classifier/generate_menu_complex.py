@@ -35,8 +35,10 @@ NON_MENU_SAMPLE_SIZE = 2
 
 def load_menu_keywords() -> list[str]:
     df = pd.read_csv(MARKET_ITEM_PATH)
-    keywords = df['최종_키워드'].dropna().apply(lambda x: x.split('_')[0]).unique().tolist()
-    print(f"[INFO] 메뉴 키워드: {len(keywords)}개")
+    # MENU 타입만 필터링
+    menu_df = df[df['키워드타입'] == 'MENU']
+    keywords = menu_df['최종_키워드'].dropna().apply(lambda x: x.split('_')[0]).unique().tolist()
+    print(f"[INFO] 실제 메뉴 키워드: {len(keywords)}개")
     return keywords
 
 
@@ -57,11 +59,8 @@ def load_non_menu_keywords() -> list[str]:
 
 def generate_batch(
     client: OpenAI,
-    batch: list[dict],  # [{"menu": ..., "non_menu": [...]}, ...]
+    batch: list[dict],
 ) -> list[str | None]:
-    """배치로 여러 질문 한번에 생성"""
-
-    # 배치 프롬프트 구성
     batch_user_prompt = ""
     for i, item in enumerate(batch, 1):
         batch_user_prompt += f"{i}. {build_menu_complex_prompt(item['menu'], item['non_menu'])}\n\n"
@@ -80,20 +79,17 @@ def generate_batch(
         )
         content = response.choices[0].message.content.strip()
 
-        # 파싱: "1. 질문" 형식에서 질문만 추출
         results = []
         for line in content.split("\n"):
             line = line.strip()
             if not line:
                 continue
-            # "1. ", "2. " 등 번호 제거
             for i in range(1, len(batch) + 1):
                 if line.startswith(f"{i}."):
                     question = line[len(f"{i}."):].strip()
                     results.append(question)
                     break
 
-        # 파싱 실패 시 None로 채우기
         while len(results) < len(batch):
             results.append(None)
 
@@ -112,7 +108,6 @@ def main():
     menu_keywords = load_menu_keywords()
     non_menu_keywords = load_non_menu_keywords()
 
-    # 배치 목록 생성
     batches = []
     batch = []
     for _ in range(TARGET_COUNT):
@@ -150,7 +145,9 @@ def main():
     print(f"[INFO] 저장 경로: {OUTPUT_PATH}")
     print(f"\n샘플 3개:")
     for r in generated[:3]:
-        print(f"  {r['question']}")
+        print(f"  질문: {r['question']}")
+        print(f"  메뉴: {r['menu_keyword']} | 비메뉴: {r['non_menu_keywords']}")
+        print()
 
 
 if __name__ == "__main__":
