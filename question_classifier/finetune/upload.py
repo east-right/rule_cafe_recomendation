@@ -13,7 +13,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 # ── 환경변수 로드 ───────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
-load_dotenv(ROOT.parent / ".env")
+load_dotenv(ROOT.parent.parent / ".env")
 
 HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN_WRITE")
 
