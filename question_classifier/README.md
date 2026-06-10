@@ -3,26 +3,16 @@
 카페 추천 시스템의 질문 유효성 검증 모델입니다.  
 사용자 질문을 4가지 클래스로 분류하여 적절한 처리 경로로 라우팅합니다.
 
-카페 추천 시스템 아키텍처에서 추천의 방식은 촐 3가지가 존재합니다.
-1. 비메뉴 관련 추천
-    - 해당 부분은 리뷰 데이터의 키워드를 활용하여 itent에 맞는 Rule에 기반해 추천합니다.
-2. 메뉴 관련 추천
-    - 해당 부분은 리뷰 데이터의 키워드를 활용하여 매장을 필터링 후 메뉴 전용 Rule에 기반해 추천합니다.
-3. 메뉴+비메뉴 관련 추천
-    - Rule은 비메뉴에 기반하여 추천하고 메뉴에 기반한 초기 매장 필터링을 거칩니다.
-4. Fallback
-    - 해당 질문이 들어오면 Fallback 시킵니다. 유효하지 않은 질문이라고 답변하도록 최종 모델에게 유도하는 prompt를 제공합니다.
-
 ---
 
 ## 분류 클래스
 
-| 클래스 | 설명 | 예시 |
+| 클래스 | 설명 | 처리 방향 |
 |---|---|---|
-| `non-menu` | 메뉴 외 속성 질문 | "조용하고 콘센트 있는 카페 추천해줘" |
-| `menu-only` | 메뉴만 묻는 질문 | "아메리카노 맛있는 카페 어디야?" |
-| `menu-complex` | 메뉴 + 비메뉴 복합 질문 | "아메리카노 맛있으면서 조용한 카페 추천해줘" |
-| `invalid` | 카페와 무관한 질문 | "북태평양 기단이 머무르는 기간은?" |
+| `non-menu` | 메뉴 외 속성 질문 | RAG → sLLM rule 선택 |
+| `menu-only` | 메뉴만 묻는 질문 | 메뉴 키워드 추출 → 매장 필터링 (미구현) |
+| `menu-complex` | 메뉴 + 비메뉴 복합 질문 | RAG → sLLM rule 선택 + 메뉴 필터링 (미구현) |
+| `invalid` | 카페와 무관한 질문 | fallback 처리 |
 
 ---
 
@@ -31,103 +21,142 @@
 ```
 question_classifier/
 ├── config/
-│   ├── roberta_base.yaml       # klue/roberta-base 학습 설정
-│   └── roberta_large.yaml      # klue/roberta-large 학습 설정 (미사용)
-├── data/
-│   ├── menu_complex.jsonl      # GPT-4.1-mini 생성 데이터 (600개)
-│   ├── invalid.jsonl           # KLUE-MRC 샘플링 데이터 (600개)
-│   ├── train.jsonl             # 학습 데이터 (2123개)
-│   └── test.jsonl              # 평가 데이터 (236개)
-├── build_dataset.py            # 전체 데이터 합치고 train/test 분할
-├── evaluate.py                 # 모델 평가
-├── generate_invalid.py         # KLUE-MRC에서 invalid 추출
-├── generate_menu_complex.py    # GPT로 menu-complex 생성
-├── prompt.py                   # GPT 생성용 / 파인튜닝용 프롬프트 관리
-├── train.py                    # RoBERTa 파인튜닝
-├── upload.py                   # HuggingFace 업로드
-└── pyproject.toml              # 파인튜닝 전용 의존성
+│   ├── roberta_base.yaml       # klue/roberta-base 설정
+│   ├── roberta_large.yaml      # klue/roberta-large 설정
+│   └── koelectra_base.yaml     # koelectra-base-v3 설정 (최종 선택)
+├── data_augment/               # 데이터 생성/증강
+│   ├── data/
+│   │   ├── menu_complex.jsonl  # GPT 생성 (600개)
+│   │   ├── invalid.jsonl       # GPT 생성 (600개)
+│   │   ├── augmented.jsonl     # 스타일 augmentation (1025개)
+│   │   ├── hard_test.jsonl     # Hard test 데이터 (300개)
+│   │   ├── trainval.jsonl      # 학습/검증 데이터 (3149개)
+│   │   └── test.jsonl          # 최종 평가 데이터 (235개)
+│   ├── build_dataset.py        # 전체 데이터 합치고 분할
+│   ├── generate_menu_complex.py
+│   ├── generate_invalid.py
+│   ├── generate_augmented.py
+│   ├── generate_hard_test.py
+│   └── prompt.py               # GPT 생성용 프롬프트 관리
+└── finetune/                   # 파인튜닝
+    ├── config/ → ../config/
+    ├── train.py
+    ├── evaluate.py
+    ├── evaluate_prefix.py
+    ├── upload.py
+    ├── predict.py
+    └── pyproject.toml
 ```
 
 ---
 
 ## 데이터 구축
 
-### 클래스별 데이터 소스
+### 클래스별 소스
 
 | 클래스 | 소스 | 개수 |
 |---|---|---|
 | `non-menu` | `valid_questions.json` (single+multi) 샘플링 | 600개 |
 | `menu-only` | `valid_questions.json` (menu) 전체 | 559개 |
 | `menu-complex` | GPT-4.1-mini 배치 생성 | 600개 |
-| `invalid` | KLUE-MRC 데이터셋 샘플링 | 600개 |
+| `invalid` | GPT-4.1-mini 배치 생성 | 600개 |
 
-### menu-complex 생성 방식
-`market_item.csv`의 메뉴 키워드(910개) + `valid_questions.json`의 비메뉴 키워드(462개)를 랜덤 조합하여 GPT-4.1-mini에게 자연스러운 질문 생성 요청. 배치당 10개씩 처리.
+### menu-complex 생성
+`market_item.csv`의 **MENU 타입** 키워드(438개) + `valid_questions.json`의 비메뉴 키워드(462개) 조합 → GPT 배치 생성 (10개/배치)
 
-```
-메뉴 키워드: 아메리카노
-비메뉴 키워드: 조용한 카페, 콘센트_있다
-→ "아메리카노 맛있으면서 조용하고 콘센트도 있는 카페 추천해줘"
-```
+> 주의: 초기 버전에서 `market_item.csv` 전체(MENU+ATMOSPHERE+TARGET+FACILITY)를 사용해 약 70%가 비메뉴 키워드로 생성되는 버그 발생 → `키워드타입 == 'MENU'` 필터링으로 수정
 
-### invalid 생성 방식
-KLUE-MRC(뉴스 기사 기반 한국어 QA) 데이터셋에서 카페와 무관한 질문 600개 랜덤 샘플링.
+### invalid 생성
+유형별 GPT 생성:
+- **유형1 (40%)**: 카페 외 업종 추천 ("식당 추천해줘", "술집 어디야")
+- **유형2 (35%)**: 카페 관련이지만 추천 불가 ("카페 몇시에 열어?", "와이파이 비번")
+- **유형3 (25%)**: 완전 무관 ("오늘 날씨 어때?", "영화 추천해줘")
 
-### train/test 분할
-클래스별 stratified 9:1 분할 (train: 2123개 / test: 236개)
+> 초기 버전에서 KLUE-MRC(뉴스 기사 기반) 사용 시 일상적 invalid 케이스 처리 불가 확인 → GPT 생성으로 전환
+
+### 스타일 Augmentation
+기존 trainval 데이터를 다양한 스타일로 변환 (클래스당 80개 샘플 x 3개 변환 = 1025개 추가):
+- 구어체/반말: "어디야", "없나", "알려줘ㅋㅋ"
+- 줄임말: "아아", "뜨아", "카공"
+- 불완전한 짧은 문장: "조용한데", "콘센트 있는 카페"
+- 감탄사/이모티콘: "ㅠㅠ", "~"
+- 영어 혼용: "wifi 빵빵한 카페"
+
+### Hard Test 데이터 (별도)
+분류하기 어려운 엣지 케이스 300개 (클래스당 75개):
+- 간접적 표현: "오래 앉아도 눈치 안 주는 곳"
+- 줄임말 메뉴: "아아 맛있는 카페"
+- 경계 케이스: "카페인데 공부하기 좋은 분위기인가?"
+
+### 데이터 분할
+클래스별 stratified 9:1 (trainval/test), trainval은 5-fold 교차검증
+
+| 구분 | 개수 |
+|---|---|
+| trainval | 3149개 (augmentation 포함) |
+| test | 235개 |
+| hard_test | 300개 (별도) |
 
 ---
 
 ## 모델 선정
 
-### 베이스 모델: klue/roberta-base
-- 한국어 특화 RoBERTa 모델
-- 텍스트 분류 태스크에 최적화된 구조 ([CLS] 토큰 → 분류 헤드)
-- `klue/roberta-large`도 검토했으나 디스크 용량 문제로 base로 확정
-- base 모델만으로도 충분한 성능 달성
+### 비교 실험
+
+| 모델 | 일반 Test Acc | Hard Test Acc | Hard Test F1 | 추론 시간 |
+|---|---|---|---|---|
+| klue/roberta-base (augmentation 전) | 0.9957 | 0.7233 | 0.7370 | 0.0076s |
+| klue/roberta-base (augmentation 후) | 0.9872 | 0.8000 | 0.8064 | 0.0134s |
+| **koelectra-base-v3 (최종)** | **0.9957** | **0.8000** | **0.8084** | **0.0066s** |
+
+→ koelectra가 일반 Test 성능, Hard Test F1, 추론 속도 모두 우수하여 최종 선택
 
 ### 파인튜닝 방식
-- **풀 파인튜닝** (LoRA/QLoRA 불필요 - 분류 헤드만 추가하는 경량 구조)
+- **풀 파인튜닝** (분류 헤드 추가, 경량 구조라 LoRA 불필요)
+- **5-Fold 교차검증**으로 데이터 robustness 검증
 - GPU: NVIDIA A40 (RunPod)
-- fp16 혼합 정밀도 학습
 
 ---
 
-## 학습 설정
+## 5-Fold 교차검증 결과 (koelectra-base-v3)
 
-```yaml
-model_name: "klue/roberta-base"
-epochs: 5
-batch_size: 32
-learning_rate: 2e-5
-max_seq_length: 128
-metric_for_best_model: f1_macro
-```
+| Fold | train_loss | val_loss | Accuracy | F1 |
+|---|---|---|---|---|
+| 1 | 0.2713 | 0.0284 | 0.9937 | 0.9937 |
+| 2 | 0.2991 | 0.0601 | 0.9810 | 0.9809 |
+| 3 | 0.3069 | 0.0811 | 0.9810 | 0.9810 |
+| 4 | 0.2905 | 0.0456 | 0.9905 | 0.9904 |
+| 5 | 0.2959 | 0.0515 | 0.9905 | 0.9905 |
+| **평균** | **0.2927** | **0.0533** | **0.9873 ± 0.0053** | **0.9873 ± 0.0053** |
+
+train_loss > val_loss → 오버피팅 없음 ✅
 
 ---
 
-## 평가 결과
+## 최종 평가 결과
 
 ```bash
-python question_classifier/evaluate.py --config question_classifier/config/roberta_base.yaml
+python evaluate.py --config ../config/koelectra_base.yaml
 ```
 
-| 지표 | 값 |
-|---|---|
-| 전체 Accuracy | **0.9788** |
-| F1 (macro) | **0.9790** |
-| 평균 추론 시간 | **0.0076s/건** |
+| 구분 | Accuracy | F1 (macro) | 평균 추론 시간 |
+|---|---|---|---|
+| 일반 Test (235개) | 0.9957 | 0.9956 | 0.0066s/건 |
+| Hard Test (300개) | 0.8000 | 0.8084 | 0.0066s/건 |
 
-### 클래스별 성능
+### 클래스별 성능 (Hard Test)
 
-| 클래스 | Precision | Recall | F1 | Support |
-|---|---|---|---|---|
-| non-menu | 0.97 | 0.95 | 0.96 | 60 |
-| menu-only | 0.98 | 1.00 | 0.99 | 56 |
-| menu-complex | 0.97 | 0.97 | 0.97 | 60 |
-| invalid | 1.00 | 1.00 | 1.00 | 60 |
+| 클래스 | Precision | Recall | F1 |
+|---|---|---|---|
+| non-menu | 0.58 | 0.87 | 0.70 |
+| menu-only | 0.98 | 0.80 | 0.88 |
+| menu-complex | 0.97 | 0.87 | 0.92 |
+| invalid | 0.83 | 0.67 | 0.74 |
 
-→ invalid 완벽 분류. non-menu/menu-complex 경계 케이스에서 소수 오분류 발생 (데이터 자체의 모호성).
+### 한계
+- 간접적 표현 ("오래 앉아도 눈치 안 주는 곳") → invalid 오분류
+- 줄임말 메뉴 ("아이스아메리카노 맛집") → 학습 데이터 미포함 시 오분류
+- 데이터 추가 보강 예정
 
 ---
 
@@ -135,7 +164,7 @@ python question_classifier/evaluate.py --config question_classifier/config/rober
 
 | 항목 | 링크 |
 |---|---|
-| 질문 분류 모델 | east-right/cafe-question-classifier-roberta-base (private) |
+| 질문 분류 모델 | east-right/cafe-question-classifier-koelectra-base (private) |
 
 ---
 
@@ -145,12 +174,12 @@ python question_classifier/evaluate.py --config question_classifier/config/rober
 git clone -b feat/question-classifier https://github.com/east-right/cafe_recomendation.git /workspace/cafe_recomendation
 cd /workspace/cafe_recomendation
 echo "HUGGINGFACE_TOKEN_WRITE=your_token" > .env
-cd question_classifier
+cd question_classifier/finetune
 uv sync
 source .venv/bin/activate
-python train.py --config config/roberta_base.yaml
-python evaluate.py --config config/roberta_base.yaml
-python upload.py --config config/roberta_base.yaml
+python train.py --config ../config/koelectra_base.yaml
+python evaluate.py --config ../config/koelectra_base.yaml
+python upload.py --config ../config/koelectra_base.yaml
 ```
 
 ---
