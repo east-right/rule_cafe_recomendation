@@ -19,10 +19,10 @@ from tqdm import tqdm
 
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
-HARD_TEST_PATH = ROOT / "data" / "hard_test.jsonl"
+HARD_TEST_PATH = ROOT.parent / "data_augment" / "data" / "hard_test.jsonl"
 
 ID2LABEL = {0: "non-menu", 1: "menu-only", 2: "menu-complex", 3: "invalid"}
-PREFIX = "카페 추천해주는데 "
+PREFIX = "카페 추천 원해! 안 원할 수도 있는데 "
 
 
 def load_config(config_path: str) -> dict:
