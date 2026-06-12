@@ -1,0 +1,600 @@
+{"question": "동네 근처 노래방 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "맛있는 고깃집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 편의점 위치 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에 분위기 좋은 곳 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네 마트 영업시간 아는 데 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "아이들 데리고 가기 좋은 키즈카페 말고 놀이방 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭔지 알아?", "type": "invalid", "invalid_type": 2}
+{"question": "근처 카페 주차 요금 얼마야?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 카페 예약 어떻게 해?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 이 카페 할인 행사 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 테이블 몇 개 있는지 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 미세먼지 농도 얼마나 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 투자 어떻게 시작하지?", "type": "invalid", "invalid_type": 3}
+{"question": "서울 지하철 몇 호선이 제일 빠르지?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 술집 괜찮은 데 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 편의점 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 중에 분위기 좋은 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "마트 할인 행사하는 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "가까운 맛집 소개해줘", "type": "invalid", "invalid_type": 1}
+{"question": "피자 배달 잘하는 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차비 얼마나 내야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "예약 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 영업시간 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "테이크아웃 가능한 곳 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "내일 비 올까?", "type": "invalid", "invalid_type": 3}
+{"question": "영화 추천 좀 해줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 시에 끊겨?", "type": "invalid", "invalid_type": 3}
+{"question": "동네에 괜찮은 술집 좀 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "서울에서 맛있는 편의점 도시락 파는 곳 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "강남에 노래방 좋은 데 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처에 대형 마트 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처에 맛집 식당 있으면 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "남대문 근처에 빵집 괜찮은 데 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 하면 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 주차장 비용이 얼마야?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 영업시간이 어떻게 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "여기서 테이크아웃 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시세 좀 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "서울 지하철 2호선 막차 언제야?", "type": "invalid", "invalid_type": 3}
+{"question": "주말에 보러 갈만한 영화 추천해줘", "type": "invalid", "invalid_type": 3}
+{"question": "간단한 김치찌개 레시피 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 맛집 중에 술집 추천해줄 수 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 노래방 있는 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "편의점 위치 좀 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "요즘 핫한 마사지샵 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 어디가 제일 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "주변 어린이집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "여기 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 요금은 얼마인지 알 수 있을까?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 예약은 어떻게 하면 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 오늘 몇 시에 열어?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페에 전기 콘센트 있나요?", "type": "invalid", "invalid_type": 2}
+{"question": "내일 비 올 확률 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 재밌는 영화 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 투자 어디가 좋아?", "type": "invalid", "invalid_type": 3}
+{"question": "서울에서 부산까지 어떻게 가는 게 편해?", "type": "invalid", "invalid_type": 3}
+{"question": "동네에 괜찮은 술집 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "가까운 노래방 알려줄 수 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "편의점 어디가 제일 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 마트 할인 행사 중인 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "분위기 좋은 백반집 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처 고기집 괜찮은 데 찾아줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 주차 요금 얼마나 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "카페에서 카드 결제 가능해?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 날씨 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 투자 어떻게 시작하지?", "type": "invalid", "invalid_type": 3}
+{"question": "출근길 교통 상황 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "동네 편의점 중에 24시간 영업하는 데 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "강남에 술집 어디가 괜찮아?", "type": "invalid", "invalid_type": 1}
+{"question": "서울에 있는 노래방 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "집 앞 마트 영업시간 좀 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 맛있는 치킨집 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "곧 개장하는 베이커리 카페 말고 다른 가게 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "저기 카페 주차비 얼마인지 알아?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 해야 하나?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 영업시간 언제까지인지 궁금해", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페에서 애완동물 데려가도 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "영화 '기생충' 줄거리 좀 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "서울에서 지하철 고장 났대?", "type": "invalid", "invalid_type": 3}
+{"question": "맛있는 김치찌개 레시피 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "근처 술집 중에 조용한 데 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "리뷰 좋은 노래방 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네 편의점 중 24시간 하는 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "서울 근처 마트 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "아이들 데리고 가기 좋은 놀이방 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "점심 먹을 만한 식당 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 카페 주차비는 얼마야?", "type": "invalid", "invalid_type": 2}
+{"question": "예약 어떻게 하면 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 몇 시에 문 닫아?", "type": "invalid", "invalid_type": 2}
+{"question": "테이블에 콘센트 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 날씨 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주 개봉하는 영화 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "주식시장 어떻게 됐어?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 호선 타야 해?", "type": "invalid", "invalid_type": 3}
+{"question": "동네에 괜찮은 술집 하나 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "서울 근처 노래방 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "편의점에서 뭐 살만한 거 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 세일하는 곳 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "강남 주변 맛집 좀 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처에 좋은 피트니스 센터 있을까?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 예약은 어떻게 해?", "type": "invalid", "invalid_type": 2}
+{"question": "주차비는 얼마 정도 내야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 영업시간 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 테이크아웃 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "내일 비 올 확률이 얼마나 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "오늘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 막차 몇 시야?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 편의점 어디가 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "추천할 만한 노래방 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 술집 중에 분위기 좋은 데 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "맛있는 치킨집 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 어디가 제일 커?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 피트니스 센터 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 주차 요금 얼마인지 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간이 어떻게 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "카페에서 반려동물 출입 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "영화 ‘기생충’ 언제 개봉했어?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 호선 타야 해?", "type": "invalid", "invalid_type": 3}
+{"question": "맛있는 김치찌개 레시피 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "근처 맛집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "술집 어디가 괜찮아?", "type": "invalid", "invalid_type": 1}
+{"question": "편의점 위치 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 좋은 데 없어?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 영업시간 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "치킨 배달 잘되는 곳 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차비 얼마나 내야 하지?", "type": "invalid", "invalid_type": 2}
+{"question": "예약 어떻게 해?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 카드 결제 가능해?", "type": "invalid", "invalid_type": 2}
+{"question": "영업시간 언제까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 미세먼지 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "최신 영화 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 주식 시장 상황 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 번 타야 해?", "type": "invalid", "invalid_type": 3}
+{"question": "집 근처 괜찮은 술집 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 노래방 추천해줄 수 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "요즘 인기 있는 마트 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "편의점에서 뭐 살만한 거 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "주변 맛집 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 피시방 찾아줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "주차할 곳 있나? 주차비는 얼마야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 예약은 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 영업시간 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 카드 결제 되나?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 비 올 확률 얼마야?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주말에 볼 만한 영화 추천해줘", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 지금 어떻지?", "type": "invalid", "invalid_type": 3}
+{"question": "집에서 쉽게 할 수 있는 요리 레시피 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "근처 편의점 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에서 조용한 곳 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 가고 싶은데 가까운 데 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "마트 영업시간 알려줄 수 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "분위기 좋은 맛집 좀 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 헤어샵 중 괜찮은 곳 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비번 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차장은 따로 있나요?", "type": "invalid", "invalid_type": 2}
+{"question": "예약 어떻게 하는지 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간 좀 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "음료 가격표를 볼 수 있을까?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 날씨 진짜 추운가?", "type": "invalid", "invalid_type": 3}
+{"question": "최신 영화 어떤 거 봐야 재밌어?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 어떻게 돌아가고 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 분마다 오지?", "type": "invalid", "invalid_type": 3}
+{"question": "동네에 술집 중에 조용한 데 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "편의점에서 간편하게 사먹을만한 음식 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "가까운 노래방 좀 알려줘.", "type": "invalid", "invalid_type": 1}
+{"question": "맛있는 중식당 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 중에 할인 많이 하는 곳 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "근처에 괜찮은 빵집 추천해줘.", "type": "invalid", "invalid_type": 1}
+{"question": "여기에 있는 카페 와이파이 비밀번호 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 주차비 얼마야?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간이 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "카드 결제 가능한 카페야?", "type": "invalid", "invalid_type": 2}
+{"question": "주식 시장 요즘 어떄?", "type": "invalid", "invalid_type": 3}
+{"question": "오늘 서울 교통 상황 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "내일 비 올 확률 알려줘.", "type": "invalid", "invalid_type": 3}
+{"question": "동네 술집 중에 조용한 데 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 편의점 어디가 제일 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 가고 싶은데 추천 좀 해줘", "type": "invalid", "invalid_type": 1}
+{"question": "주변 마트 영업시간 알려줄 수 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "맛집 말고 베이커리 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "동네 헬스장 괜찮은 곳 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "여기 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 주차비는 얼마인지 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "카드 결제 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 볼만한 영화 추천해줘", "type": "invalid", "invalid_type": 3}
+{"question": "집에서 간단하게 할 수 있는 운동 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "서울 지하철 막차 시간 언제야?", "type": "invalid", "invalid_type": 3}
+{"question": "집 근처 노래방 괜찮은 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에 조용한 데 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "가까운 편의점 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 중에 할인 많이 하는 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네 치킨집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "괜찮은 미용실 추천 좀 해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차장 있으면 비용 얼마나 해?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 예약 어떻게 해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간이 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 테이크아웃 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "내일 영화 개봉작 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "오늘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "서울에서 부산 가는 기차 시간 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "맛있는 김치찌개 레시피 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "주변에 노래방 어디 있지?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 맛있는 치킨집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에서 분위기 좋은 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "편의점 위치 좀 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "대형마트 어디가 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "동네 미용실 추천해줄 수 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "주차는 얼마나 해? 주차 요금도 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 해야 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 영업시간이 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페에서 반려동물 출입 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어떻게 됐어?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주말에 비 올까?", "type": "invalid", "invalid_type": 3}
+{"question": "애플 파이 만드는 법 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "서울역까지 가는 지하철 몇 번 타야 해?", "type": "invalid", "invalid_type": 3}
+{"question": "저녁에 가기 좋은 술집 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처 편의점 어디 있는지 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "시내 쪽 노래방 추천해 줄 수 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "주변에 마트 어디있는지 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "맛집 말고 헬스장 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 약국 위치 좀 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 하면 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 요금은 얼마야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 몇 시에 문 닫아?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 내에서 흡연 가능한 곳 있나?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 영화 개봉작 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 상황 좀 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 호선 타야 해?", "type": "invalid", "invalid_type": 3}
+{"question": "맛있는 김치찌개 요리법 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 노래방 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "가까운 편의점 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에 조용한 데 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 마트 영업시간이 어떻게 돼?", "type": "invalid", "invalid_type": 1}
+{"question": "맛있는 치킨집 찾아줘", "type": "invalid", "invalid_type": 1}
+{"question": "저녁에 갈 만한 고깃집 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 공간 있나 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 영업시간이 궁금해", "type": "invalid", "invalid_type": 2}
+{"question": "테이크아웃 가능한 곳 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어떻게 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주말 날씨 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "맛있는 김치찌개 레시피 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "서울에서 부산까지 KTX 시간표 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "근처 술집 중에서 조용한 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "서울 강남역 근처 편의점 위치 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "분위기 좋은 노래방 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처 마트 어디가 가까운지 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "광화문 쪽 맛집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "서울역 근처 꽃집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호가 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "여기에 주차 가능한가? 주차비는 얼마인지 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "카페 예약하려면 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간이 어떻게 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 카드 결제 가능한지 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 미세먼지 심한가?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주말에 비 올까?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 추천해줘", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 지금 어떤 상황이야?", "type": "invalid", "invalid_type": 3}
+{"question": "집 근처 노래방 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "서울 강남 술집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 편의점 위치 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "동네 마트 중 할인 많이 하는 곳 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "부산에서 맛있는 치킨집 추천할래?", "type": "invalid", "invalid_type": 1}
+{"question": "홍대 쪽 영화관 어디 괜찮아?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 주차 요금 있나요?", "type": "invalid", "invalid_type": 2}
+{"question": "영업시간 언제까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 카드 결제 되니?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 미세먼지 심한가?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 드라마 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 막차 몇 시야?", "type": "invalid", "invalid_type": 3}
+{"question": "맛있는 김치찌개 만드는 법 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "근처에 가성비 좋은 술집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "편의점 중에 24시간 영업하는 데 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 어디가 인기 있는지 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네 맛집으로 마트 근처에 좋은 데 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 치킨집 중에서 배달 잘 되는 곳 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "애견 동반 가능한 펫 카페 말고 고양이 카페 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 공간 있는 카페 어디야?", "type": "invalid", "invalid_type": 2}
+{"question": "예약 어떻게 해야 되는지 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간이 어떻게 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "카페에서 카드 결제 가능한지 궁금해", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 미세먼지 상태 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "내일 출근길 교통 상황 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 전망 어떻게 될까?", "type": "invalid", "invalid_type": 3}
+{"question": "집 근처 편의점 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "서울에 괜찮은 술집 좀 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "강남에 노래방 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 마트 영업시간 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "동네 맛집 중식당 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "부산에서 분위기 좋은 치킨집 추천해 줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "예약 어떻게 해야 하지?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 주차비 따로 내야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 이 카페 몇 시까지 영업해?", "type": "invalid", "invalid_type": 2}
+{"question": "카페에서 카드 결제 되나요?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 미세먼지 심해?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "내일 지하철 몇 시에 끊겨?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 투자 어떻게 시작해?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 편의점 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에서 조용한 데 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 노래방 자리 있는 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "마트 중에서 신선한 과일 파는 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "맛집 중에서 해산물 전문점 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "주변에 헬스장 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "여기 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 요금 얼마인지 알아?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "영업시간이 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 전화번호 좀 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 지하철 많이 막혀?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주말 영화 뭐 볼 만한 거 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "집에서 맛있는 김치찌개 어떻게 끓여?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 조용한 책방 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 맛있는 술집 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "편의점 어디가 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 잘하는 곳 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "주변에 마트 어디 있지?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 택시 잡기 좋은 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 주차 요금 얼마나 해?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 예약 어떻게 해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간 좀 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "테이블 몇 개인지 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 영화 뭐 재미있어?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 분 뒤에 와?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주 날씨 좀 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "근처 술집 중에 혼자 가기 좋은 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "편의점에서 간단하게 살 수 있는 간식 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 중에 저렴한 데 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "동네 마트 중에 신선한 야채 파는 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 맛있는 치킨집 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처 이발소 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "여기 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 주차비 얼마나 내야 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "예약 없이도 바로 앉을 수 있을까?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 영업시간 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페에 장애인 화장실 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 미세먼지 심한가?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주말에 개봉하는 영화 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 주식 시장 상황 어떻지?", "type": "invalid", "invalid_type": 3}
+{"question": "출근길 버스 몇 분마다 와?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 편의점 어디에 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에 조용한 데 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "가까운 노래방 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 어디가 제일 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "맛집 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "주변에 피트니스 센터 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 요금 얼마나 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 하지?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 영업시간 좀 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 배달 되나요?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 비 올까?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 어떻게 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "서울 지하철 몇 호선이 좋아?", "type": "invalid", "invalid_type": 3}
+{"question": "집 근처 노래방 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에 조용한 데 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "편의점에서 할인하는 상품 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 마트 어디가 싸?", "type": "invalid", "invalid_type": 1}
+{"question": "맛있는 중국집 있으면 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네 베이커리 추천 좀 해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 주차 요금 얼마나 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "영업시간 언제까지인지 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페에서 카드 결제 되니?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 지하철 몇 분 간격으로 와?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 어떻게 됐어?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "집에서 간단히 만들 수 있는 요리 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "동네 술집 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처 편의점 위치 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 노래방 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "마트 할인 행사 있는 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네 빵집 중에 괜찮은 데 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "운동할만한 헬스장 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 주차 요금 얼마나 해?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 예약하려면 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "여기에서 케이크 주문 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시세 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "서울 지하철 몇 시까지 운행해?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "감자탕 맛있게 끓이는 법 알려줘?", "type": "invalid", "invalid_type": 3}
+{"question": "저녁에 가기 좋은 술집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네에 괜찮은 편의점 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 노래방 중에 인기 많은 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "마트 중에서 할인 많이 하는 데 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "청소 잘하는 업체 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "맛있는 중식당 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 요금 얼마나 나와?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 카페 영업시간 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페에서 카드 결제 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "내일 비 올까?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 호선 타야 해?", "type": "invalid", "invalid_type": 3}
+{"question": "집 근처 괜찮은 술집 좀 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "요즘 인기 있는 편의점 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 추천해줄 수 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 중에서 제일 싼 곳 알려줘.", "type": "invalid", "invalid_type": 1}
+{"question": "주변에 맛있는 고깃집 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 뷔페 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "여기 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "주차비는 얼마인지 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 몇 시부터 몇 시까지 영업해?", "type": "invalid", "invalid_type": 2}
+{"question": "카드 결제 가능해?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 날씨 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 투자 어떻게 시작해?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 호선이 제일 빠른지 알려줘.", "type": "invalid", "invalid_type": 3}
+{"question": "동네 편의점 어디가 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "친구랑 갈 만한 노래방 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에서 조용한 데 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 마트 어디가 제일 커?", "type": "invalid", "invalid_type": 1}
+{"question": "회식할 만한 식당 있으면 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "배달 음식 맛집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "여기 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 주차비 얼마나 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 몇 시에 문 닫아?", "type": "invalid", "invalid_type": 2}
+{"question": "카드 결제 가능한지 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 비 올 확률이 얼마나 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "지금 버스 언제 와?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 상황 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "간단하게 만들 수 있는 요리 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "동네 맛집 중에서 술집 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 편의점 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 갈 만한 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "집 주변 마트 위치 좀 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네 중국집 중에 배달 잘 되는 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 마사지샵 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "카페에 주차비 얼마 내야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 카페 예약 어떻게 해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "음료 리필 가능한 카페 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 날씨 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 투자 어떻게 시작하지?", "type": "invalid", "invalid_type": 3}
+{"question": "출근길 교통 상황 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 편의점 어디에 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "분위기 좋은 술집 좀 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 노래방 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "마트 어디가 제일 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "맛있는 중국집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "주변에 배달 잘되는 피자집 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 주차 요금 얼마나 해?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 해야 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 이벤트 언제부터 시작해?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 날씨 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 영화 뭐야?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 상황 좀 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "출근길 교통 상황 알려줄래?", "type": "invalid", "invalid_type": 3}
+{"question": "근처 술집 중에 괜찮은 곳 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "편의점 어디가 제일 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 인기 많은 데 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "마트에서 신선한 채소 살 수 있는 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처 맛집 좀 추천해 줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 헬스장 위치 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "와이파이 비밀번호 좀 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 주차비는 얼마인지 알아?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 하면 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "영업시간 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "반려동물 데리고 가도 되나?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어떻게 될까?", "type": "invalid", "invalid_type": 3}
+{"question": "내일 비 올 확률이 얼마나 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 재미있는 영화 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 2호선 막차 언제야?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 괜찮은 치킨집 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "서울에 가성비 좋은 술집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "편의점에서 인기 있는 간식 뭐야?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처 노래방 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "마트에서 제일 저렴한 과일이 뭐야?", "type": "invalid", "invalid_type": 1}
+{"question": "인천 근처 맛집 추천해 줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 알려줄 수 있어?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 요금 얼마나 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "예약은 어떻게 하면 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 커피 몇 시부터 파는 거야?", "type": "invalid", "invalid_type": 2}
+{"question": "매장 내 좌석 수가 몇 개인가요?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 미세먼지 심한가?", "type": "invalid", "invalid_type": 3}
+{"question": "최신 영화 중에 뭐 재밌어?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 상황 알려줘", "type": "invalid", "invalid_type": 3}
+{"question": "서울역에서 강남역까지 지하철 몇 분 걸려?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 편의점 어디가 가까워?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에서 인기 많은 데 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 추천 좀 해줘", "type": "invalid", "invalid_type": 1}
+{"question": "마트 어디가 크고 싸?", "type": "invalid", "invalid_type": 1}
+{"question": "맛집 중에서 일본 음식 잘하는 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "베이커리 카페 말고 빵집 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 주차비 얼마나 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "와이파이 비밀번호 알려줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 예약 방법 좀 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페는 반려동물 입장 가능해?", "type": "invalid", "invalid_type": 2}
+{"question": "영업시간 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 미세먼지 심한가?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주말에 영화 뭐 볼 만한 거 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "주식 시장 어떻게 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "서울에서 강릉 가는 길 교통 상황 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "동네에 괜찮은 술집 좀 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 편의점 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 어디가 제일 시끄러워?", "type": "invalid", "invalid_type": 1}
+{"question": "마트에서 할인하는 식품 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "집 근처 맛있는 치킨집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "강남역 주변에 좋은 피시방 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "근처 카페 주차 요금 얼마나 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 예약 어떻게 하면 돼?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페 영업시간 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "커피 메뉴 중에서 어떤 게 제일 인기가 많아?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주식 시장 어떨까?", "type": "invalid", "invalid_type": 3}
+{"question": "내일 비 올 확률이 얼마나 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 인기 있는 영화 뭐 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "출근길 교통 혼잡 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "동네 근처 노래방 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "집 앞 편의점 위치 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "술집 중에서 조용한 데 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "마트 할인 행사 하는 곳 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "좋은 음식점 있으면 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "근처 애완동물 병원 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "근처 카페 주차비 얼마나 해?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "여기 카페 영업시간 몇 시부터 몇 시까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "카페 2인석 있나 확인해줄래?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 서울 날씨 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주말에 영화 뭐 볼만해?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 주식 시장은 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 호선 타야 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "술집 어디가 좋아?", "type": "invalid", "invalid_type": 1}
+{"question": "편의점 중에 가장 가까운 곳 알려줘", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 추천해줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "주변에 마트 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "맛집 아니라 빵집 추천해줘", "type": "invalid", "invalid_type": 1}
+{"question": "동네 미용실 어디가 괜찮아?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차 몇 시간 무료인지 알려줘", "type": "invalid", "invalid_type": 2}
+{"question": "카페 예약은 어떻게 해?", "type": "invalid", "invalid_type": 2}
+{"question": "영업시간 언제까지야?", "type": "invalid", "invalid_type": 2}
+{"question": "카페에서 반려동물 출입 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 주가 어떻게 돼?", "type": "invalid", "invalid_type": 3}
+{"question": "영화 추천 좀 해줘", "type": "invalid", "invalid_type": 3}
+{"question": "지하철 몇 분에 도착해?", "type": "invalid", "invalid_type": 3}
+{"question": "집에서 김치찌개 어떻게 끓여?", "type": "invalid", "invalid_type": 3}
+{"question": "동네에서 맛집 술집 어디 있어?", "type": "invalid", "invalid_type": 1}
+{"question": "근처 편의점 찾고 있는데 알려줄래?", "type": "invalid", "invalid_type": 1}
+{"question": "노래방 추천 좀 해줘.", "type": "invalid", "invalid_type": 1}
+{"question": "주변 마트 영업시간 알려줘.", "type": "invalid", "invalid_type": 1}
+{"question": "여기 근처 피시방 있나?", "type": "invalid", "invalid_type": 1}
+{"question": "맛집 중에 제일 유명한 한식당 어디야?", "type": "invalid", "invalid_type": 1}
+{"question": "이 카페 와이파이 비밀번호 뭐야?", "type": "invalid", "invalid_type": 2}
+{"question": "주차장 이용료는 얼마인지 알아?", "type": "invalid", "invalid_type": 2}
+{"question": "예약하려면 어떻게 해야 해?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 몇 시까지 영업해?", "type": "invalid", "invalid_type": 2}
+{"question": "이 카페에서 애완동물 출입 가능한가?", "type": "invalid", "invalid_type": 2}
+{"question": "오늘 날씨 진짜 안 좋네?", "type": "invalid", "invalid_type": 3}
+{"question": "이번 주 영화 중에 볼만한 거 있어?", "type": "invalid", "invalid_type": 3}
+{"question": "요즘 주식 시장 어때?", "type": "invalid", "invalid_type": 3}
+{"question": "출근길 교통 상황 좀 알려줘.", "type": "invalid", "invalid_type": 3}
