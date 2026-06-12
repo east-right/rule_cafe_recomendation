@@ -6,6 +6,7 @@ Usage: python evaluate.py --config config/roberta_base.yaml
 import argparse
 import json
 import time
+import os
 from pathlib import Path
 
 import numpy as np
@@ -14,11 +15,15 @@ from sklearn.metrics import accuracy_score, classification_report, f1_score
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
 from tqdm import tqdm
+from dotenv import load_dotenv
 
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
+load_dotenv(ROOT.parent.parent / ".env")
+
 TEST_PATH = ROOT.parent / "data_augment" / "data" / "test.jsonl"
 HARD_TEST_PATH = ROOT.parent / "data_augment" / "data" / "hard_test.jsonl"
+HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN_READ")
 
 ID2LABEL = {0: "non-menu", 1: "menu-only", 2: "menu-complex", 3: "invalid"}
 
@@ -118,14 +123,15 @@ def main():
     args = parser.parse_args()
 
     config = load_config(args.config)
-    model_path = ROOT / config["output_dir"] / "final"
+    # model_path = ROOT / config["output_dir"] / "final"
+    model_path = config["hf_repo"]  # HF에서 직접 로드
     print(f"[INFO] 모델 로드: {model_path}")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"[INFO] 디바이스: {device}")
 
-    tokenizer = AutoTokenizer.from_pretrained(str(model_path))
-    model = AutoModelForSequenceClassification.from_pretrained(str(model_path))
+    tokenizer = AutoTokenizer.from_pretrained(str(model_path), token=HF_TOKEN)
+    model = AutoModelForSequenceClassification.from_pretrained(str(model_path), token=HF_TOKEN)
     model.to(device)
     model.eval()
 
