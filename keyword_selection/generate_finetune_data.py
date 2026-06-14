@@ -36,7 +36,8 @@ OPENSEARCH_PASSWORD = os.getenv("OPENSEARCH_PASSWORD")
 HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN_READ")
 
 # ── 경로 설정 ──────────────────────────────────────────────
-QUESTION_PATH = ROOT / "data" / "finetune_embd_query_pos.json"
+# 이 부분만 수정
+QUESTION_PATH = ROOT / "keyword_selection" / "data" / "keyword_questions.jsonl"
 OUTPUT_PATH = ROOT / "keyword_selection" / "data" / "finetune_keyword_selection.jsonl"
 
 # ── 상수 ──────────────────────────────────────────────────
@@ -89,7 +90,7 @@ def main():
 
     print("데이터 로드 중...")
     with open(QUESTION_PATH, encoding="utf-8") as f:
-        questions = json.load(f)
+        questions = [json.loads(line) for line in f]
     print(f"  총 질문 수: {len(questions)}개")
 
     print("\nBGE 모델 로드 중...")
