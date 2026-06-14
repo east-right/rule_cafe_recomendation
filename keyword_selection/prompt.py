@@ -13,21 +13,13 @@ def build_user_prompt(query: str, candidates: list[dict]) -> str:
 
 
 def build_prompt(query: str, candidates: list[dict], answer: str | None = None) -> str | tuple[str, str]:
-    """
-    학습용: answer 있으면 (user_prompt, answer) 반환
-    추론용: answer 없으면 user_prompt만 반환
-    """
     user_prompt = build_user_prompt(query, candidates)
-
     if answer is not None:
         return user_prompt, answer
     return user_prompt
 
 
 def format_for_training(query: str, candidates: list[dict], answer: str) -> dict:
-    """
-    Unsloth SFTTrainer용 chat 형식 변환
-    """
     user_prompt, answer = build_prompt(query, candidates, answer)
     return {
         "messages": [
@@ -38,21 +30,23 @@ def format_for_training(query: str, candidates: list[dict], answer: str) -> dict
     }
 
 
-if __name__ == "__main__":
-    # 테스트
-    sample_candidates = [
-        {"rank": 1, "title": "카공족", "description": "공부나 작업하기 좋은 환경을 갖춘 카페를 추천합니다."},
-        {"rank": 2, "title": "넓은공간", "description": "조용한 분위기에서 넉넉한 공간을 갖춘 카페를 추천합니다."},
-        {"rank": 3, "title": "편안함", "description": "자리 넓고 편안한 분위기에서 휴식이나 대화를 즐기기에 좋은 카페를 추천합니다."},
-    ]
+# ── 질문 생성용 ───────────────────────────────────────────
 
-    result = format_for_training(
-        query="조용하고 콘센트 있는 카페 추천해줘",
-        candidates=sample_candidates,
-        answer="카공족",
-    )
+QUESTION_GEN_SYSTEM = """You are an expert at generating Korean cafe recommendation questions.
+Given a cafe rule title, generate diverse Korean questions that a user would ask to find that type of cafe.
 
-    for msg in result["messages"]:
-        print(f"[{msg['role']}]")
-        print(msg["content"])
-        print()
+Requirements:
+- Generate exactly the requested number of questions
+- Half should be colloquial/casual style, half should be formal/polite style
+- Colloquial style: short, casual, use abbreviations like "아아"(iced americano), "카공"(cafe study), emoticons like "ㅠㅠ", "~", incomplete sentences
+- Formal style: complete sentences, polite endings like "~해주세요", "~있을까요?", "~추천해 주세요"
+- Questions must ONLY be about the given title topic, do NOT mix with other cafe attributes
+- Output questions only with numbers (e.g., 1. question)"""
+
+
+def build_question_gen_prompt(title: str, count: int) -> str:
+    return f"""Generate {count} diverse Korean cafe recommendation questions for this rule title: "{title}"
+
+- {count // 2} colloquial/casual style questions
+- {count // 2} formal/polite style questions
+- Questions must strictly relate to "{title}" only"""

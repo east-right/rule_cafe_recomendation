@@ -1,10 +1,11 @@
 """
 파인튜닝 데이터 train/test 분할 스크립트
-9:1 비율로 분할
+title별 stratified 9:1 분할
 """
 
 import json
 import random
+from collections import defaultdict
 from pathlib import Path
 
 # ── 경로 설정 ──────────────────────────────────────────────
@@ -26,24 +27,21 @@ def main():
         data = [json.loads(line) for line in f]
     print(f"  전체 데이터: {len(data)}개")
 
-    # none/정답 비율 유지하면서 스플릿 (stratified)
-    match_data = [d for d in data if d["answer"] != "none"]
-    none_data = [d for d in data if d["answer"] == "none"]
+    # title별로 그룹핑
+    by_title = defaultdict(list)
+    for d in data:
+        by_title[d["answer"]].append(d)
 
-    print(f"  정답 있는 데이터: {len(match_data)}개")
-    print(f"  none 데이터: {len(none_data)}개")
+    print(f"  title 수: {len(by_title)}개 (none 포함)")
 
-    random.shuffle(match_data)
-    random.shuffle(none_data)
+    train_data, test_data = [], []
 
-    # 각각 9:1 분할
-    match_train_size = int(len(match_data) * TRAIN_RATIO)
-    none_train_size = int(len(none_data) * TRAIN_RATIO)
+    for title, items in by_title.items():
+        random.shuffle(items)
+        train_size = max(1, int(len(items) * TRAIN_RATIO))
+        train_data.extend(items[:train_size])
+        test_data.extend(items[train_size:])
 
-    train_data = match_data[:match_train_size] + none_data[:none_train_size]
-    test_data = match_data[match_train_size:] + none_data[none_train_size:]
-
-    # 섞기
     random.shuffle(train_data)
     random.shuffle(test_data)
 
@@ -56,11 +54,13 @@ def main():
         for d in test_data:
             f.write(json.dumps(d, ensure_ascii=False) + "\n")
 
+    # none 비율 확인
+    train_none = sum(1 for d in train_data if d["answer"] == "none")
+    test_none = sum(1 for d in test_data if d["answer"] == "none")
+
     print(f"\n완료!")
-    print(f"  train: {len(train_data)}개")
-    print(f"  test:  {len(test_data)}개")
-    print(f"  train none 비율: {sum(1 for d in train_data if d['answer'] == 'none') / len(train_data):.2%}")
-    print(f"  test  none 비율: {sum(1 for d in test_data if d['answer'] == 'none') / len(test_data):.2%}")
+    print(f"  train: {len(train_data)}개 (none: {train_none}개, {train_none/len(train_data):.2%})")
+    print(f"  test:  {len(test_data)}개 (none: {test_none}개, {test_none/len(test_data):.2%})")
 
 
 if __name__ == "__main__":
