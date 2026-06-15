@@ -1,0 +1,153 @@
+sp {elaborate*top-state*top-state
+   (state <s> ^superstate nil)
+-->
+   (<s> ^top-state <s>)
+}
+
+sp {elaborate*state*top-state
+   (state <s> ^superstate.top-state <ts>)
+-->
+   (<s> ^top-state <ts>)
+}
+
+sp {elaborate*state*item*down
+   (state <s> ^superstate.item <i>)
+-->
+   (<s> ^item <i>)
+}
+
+sp {apply*recommend-cafe*send-to-python
+   (state <s> ^operator <o>
+              ^io.output-link <ol>)
+   (<o> ^name recommend-cafe
+        ^cafe-name <c-name>)
+-->
+   (<ol> ^final-recommendation <c-name>)
+}
+
+sp {recommend*OPERATOR*넓은공간
+   (state <s> ^io.input-link <il>)
+   (<il> ^cafe <c>)
+   (<c> ^name <c-name> ^keyword << |카페_넓다| |매장_넓다| |넓은 공간| |매장_크고 넓다| |실내공간_넓다| >>)
+-->
+   (<s> ^operator <o> +)
+   (<o> ^name recommend-cafe ^cafe-name <c-name>)
+}
+
+sp {recommend*S1*judge*넓은공간
+   (state <s> ^operator <o1> +
+              ^operator <o2> +
+              ^io.input-link <il>)
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name> ^keyword |좌석_넉넉하다|)
+   (<c2> ^name <c2-name>)
+   - { (<c2> ^keyword |좌석_넉넉하다|) }
+-->
+   (<s> ^operator <o1> > <o2>)
+}
+
+sp {resolve*tie*S2*judge*넓은공간
+   (state <s> ^impasse <any-impasse>
+              ^superstate <s2>
+              ^item <o1> ^item <o2>
+              ^top-state <ts>)
+   (<s1> ^superstate nil)
+   (<s2> ^superstate <s1>)
+
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<ts> ^io.input-link <il>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name> ^keyword |매장_쾌적하다|)
+   (<c2> ^name <c2-name>)
+   - { (<c2> ^keyword |매장_쾌적하다|) }
+-->
+   (<s1> ^operator <o1> > <o2>)
+}
+
+sp {resolve*tie*S3*judge*넓은공간
+   (state <s> ^impasse <any-impasse>
+              ^superstate <s3>
+              ^item <o1> ^item <o2>
+              ^top-state <ts>)
+   (<s1> ^superstate nil)
+   (<s2> ^superstate <s1>)
+   (<s3> ^superstate <s2>)
+
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<ts> ^io.input-link <il>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name> ^keyword |좌석 간격_넓직하다|)
+   (<c2> ^name <c2-name>)
+   - { (<c2> ^keyword |좌석 간격_넓직하다|) }
+-->
+   (<s2> ^operator <o1> > <o2>)
+}
+
+sp {resolve*tie*S4*judge*넓은공간
+   (state <s> ^impasse <any-impasse>
+              ^superstate <s4>
+              ^item <o1> ^item <o2>
+              ^top-state <ts>)
+   (<s1> ^superstate nil)
+   (<s2> ^superstate <s1>)
+   (<s3> ^superstate <s2>)
+   (<s4> ^superstate <s3>)
+
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<ts> ^io.input-link <il>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name> ^keyword |편안한 분위기|)
+   (<c2> ^name <c2-name>)
+   - { (<c2> ^keyword |편안한 분위기|) }
+-->
+   (<s3> ^operator <o1> > <o2>)
+}
+
+sp {resolve*tie*S5*judge*넓은공간
+   (state <s> ^impasse <any-impasse>
+              ^superstate <s5>
+              ^item <o1> ^item <o2>
+              ^top-state <ts>)
+   (<s1> ^superstate nil)
+   (<s2> ^superstate <s1>)
+   (<s3> ^superstate <s2>)
+   (<s4> ^superstate <s3>)
+   (<s5> ^superstate <s4>)
+
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<ts> ^io.input-link <il>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name> ^keyword |조용한 카페|)
+   (<c2> ^name <c2-name>)
+   - { (<c2> ^keyword |조용한 카페|) }
+-->
+   (<s4> ^operator <o1> > <o2>)
+}
+
+sp {resolve*tie*S6*ask-llm*넓은공간
+   (state <s> ^impasse <any-impasse>
+              ^superstate <s6>
+              ^item <o1> ^item <o2>
+              ^top-state <ts>)
+   (<s1> ^superstate nil)
+   (<s2> ^superstate <s1>)
+   (<s3> ^superstate <s2>)
+   (<s4> ^superstate <s3>)
+   (<s5> ^superstate <s4>)
+   (<s6> ^superstate <s5>)
+
+   (<o1> ^cafe-name <c1-name>)
+   (<o2> ^cafe-name { <c2-name> <> <c1-name> })
+   (<ts> ^io.output-link <ol>)
+-->
+   (<ol> ^ask-llm <req>)
+   (<req> ^cand1 <c1-name>
+          ^cand2 <c2-name>
+          ^stopped-depth 6)
+}
