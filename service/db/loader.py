@@ -14,16 +14,24 @@ KEYWORDS_CSV = ROOT / "data" / "market_item.csv"
 
 
 def load_cafes() -> None:
+    # market_item.csv가 source of truth — 아이템이 있는 201개 매장만 적재
+    item_stores: set[str] = set()
+    with open(KEYWORDS_CSV, encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f):
+            if row["사업장명"]:
+                item_stores.add(row["사업장명"])
+
+    rows = []
     with open(CAFES_CSV, encoding="utf-8-sig") as f:
-        reader = csv.DictReader(f)
-        rows = [
-            (row["사업장명"], row["도로명주소"], row["상세영업상태명"])
-            for row in reader
-        ]
+        for row in csv.DictReader(f):
+            if row["사업장명"] in item_stores:
+                rows.append((row["사업장명"], row["도로명주소"], row["상세영업상태명"]))
 
     with get_connection() as conn:
+        conn.execute("DELETE FROM cafe_keywords")
+        conn.execute("DELETE FROM cafes")
         conn.executemany(
-            "INSERT OR IGNORE INTO cafes (name, address, status) VALUES (?, ?, ?)",
+            "INSERT INTO cafes (name, address, status) VALUES (?, ?, ?)",
             rows,
         )
     print(f"[INFO] cafes 적재 완료: {len(rows)}개")

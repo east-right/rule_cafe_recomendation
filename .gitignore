@@ -25,3 +25,7 @@ Desktop.ini
 
 CLAUDE.md
 *.db
+
+data/review_summary_batch_input.jsonl
+data/review_summary_batch_output.jsonl
+data/review_summary_batch_id.txt
