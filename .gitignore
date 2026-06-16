@@ -22,3 +22,6 @@ Desktop.ini
 
 .env
 .env.local
+
+CLAUDE.md
+*.db
