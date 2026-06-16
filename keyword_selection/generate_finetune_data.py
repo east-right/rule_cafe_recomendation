@@ -4,17 +4,12 @@ sLLM 파인튜닝 데이터 생성 스크립트
 입력: 사용자 질문 + OpenSearch로 검색한 10개 candidate rule (title + description)
 출력: 정답 rule title 또는 "none" (정답이 candidates에 없는 경우)
 
-저장 형식: JSONL
-{
-    "query": "질문",
-    "candidates": [
-        {"rank": 1, "title": "...", "description": "..."},
-        ...
-    ],
-    "answer": "정답 title" or "none"
-}
+Usage:
+  python generate_finetune_data.py --mode train
+  python generate_finetune_data.py --mode test
 """
 
+import argparse
 import json
 import os
 import random
@@ -36,9 +31,16 @@ OPENSEARCH_PASSWORD = os.getenv("OPENSEARCH_PASSWORD")
 HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN_READ")
 
 # ── 경로 설정 ──────────────────────────────────────────────
-# 이 부분만 수정
-QUESTION_PATH = ROOT / "keyword_selection" / "data" / "keyword_questions.jsonl"
-OUTPUT_PATH = ROOT / "keyword_selection" / "data" / "finetune_keyword_selection.jsonl"
+PATHS = {
+    "train": {
+        "input": ROOT / "keyword_selection" / "data" / "keyword_questions.jsonl",
+        "output": ROOT / "keyword_selection" / "data" / "finetune_keyword_selection.jsonl",
+    },
+    "test": {
+        "input": ROOT / "keyword_selection" / "data" / "test.jsonl",
+        "output": ROOT / "keyword_selection" / "data" / "test_with_candidates.jsonl",
+    },
+}
 
 # ── 상수 ──────────────────────────────────────────────────
 INDEX_NAME = "cafe_rules"
@@ -86,10 +88,18 @@ def search_candidates(
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", type=str, choices=["train", "test"], required=True)
+    args = parser.parse_args()
+
+    question_path = PATHS[args.mode]["input"]
+    output_path = PATHS[args.mode]["output"]
+
     random.seed(SEED)
 
+    print(f"[INFO] mode: {args.mode}")
     print("데이터 로드 중...")
-    with open(QUESTION_PATH, encoding="utf-8") as f:
+    with open(question_path, encoding="utf-8") as f:
         questions = [json.loads(line) for line in f]
     print(f"  총 질문 수: {len(questions)}개")
 
@@ -107,13 +117,13 @@ def main():
         show_progress_bar=True,
     )
 
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     count_match = 0
     count_none = 0
 
     print("\n파인튜닝 데이터 생성 중...")
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as out_f:
+    with open(output_path, "w", encoding="utf-8") as out_f:
         for i, q in enumerate(tqdm(questions)):
             candidates = search_candidates(
                 query_embeddings[i].tolist(),
@@ -122,7 +132,6 @@ def main():
 
             candidate_titles = [c["title"] for c in candidates]
 
-            # 정답이 candidates에 있으면 정답 title, 없으면 "none"
             if q["title"] in candidate_titles:
                 answer = q["title"]
                 count_match += 1
@@ -146,7 +155,7 @@ def main():
     print(f"  정답 있는 데이터: {count_match}개")
     print(f"  정답 없는 데이터 (none): {count_none}개")
     print(f"  총 생성: {count_match + count_none}개")
-    print(f"  저장 경로: {OUTPUT_PATH}")
+    print(f"  저장 경로: {output_path}")
 
 
 if __name__ == "__main__":

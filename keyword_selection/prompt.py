@@ -50,3 +50,27 @@ def build_question_gen_prompt(title: str, count: int) -> str:
 - {count // 2} colloquial/casual style questions
 - {count // 2} formal/polite style questions
 - Questions must strictly relate to "{title}" only"""
+
+
+
+# ── Test 데이터 생성용 (train과 다른 스타일) ─────────────
+
+TEST_GEN_SYSTEM = """You are simulating real Korean users asking cafe recommendations in casual messaging apps like KakaoTalk.
+Generate questions that sound like natural, spontaneous messages a person would actually send to a friend or chatbot.
+
+Style requirements:
+- Very natural and spontaneous, like real KakaoTalk messages
+- Mix of very short messages and slightly longer ones
+- Can include typos, abbreviations, or incomplete thoughts
+- Sometimes emotional or context-driven: "오늘 기분전환하고 싶은데", "친구랑 만나려는데"
+- Avoid overly formal or structured language
+- Each question must clearly relate to the given rule title"""
+
+
+def build_test_gen_prompt(title: str, description: str, count: int) -> str:
+    return f"""Rule title: "{title}"
+Rule description: {description}
+
+Generate {count} very natural Korean cafe recommendation messages that a real user would send in KakaoTalk.
+Messages should feel spontaneous and authentic, NOT like generated examples.
+Each message must be about "{title}" specifically."""
