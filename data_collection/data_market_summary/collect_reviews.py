@@ -94,16 +94,28 @@ def main():
                 "reviews": matched,
             }
         else:
-            no_match_stores.append(store)
+            # 키워드 매칭 실패 → 전체 리뷰를 fallback으로 사용
+            fallback = reviews[:20]
+            if fallback:
+                result[store] = {
+                    "entities": entities,
+                    "review_count": len(reviews),
+                    "matched_count": len(fallback),
+                    "reviews": fallback,
+                    "fallback": True,
+                }
+            else:
+                no_match_stores.append(store)
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
+    fallback_count = sum(1 for v in result.values() if v.get("fallback"))
     print(f"\n[결과]")
-    print(f"  매칭 성공: {len(result)}개 매장")
-    print(f"  매칭 실패 (리뷰에 키워드 없음): {len(no_match_stores)}개")
+    print(f"  총 매장: {len(result)}개 (키워드 매칭: {len(result) - fallback_count}개, fallback: {fallback_count}개)")
+    print(f"  리뷰 없어 제외: {len(no_match_stores)}개")
     if no_match_stores:
-        for s in no_match_stores[:5]:
+        for s in no_match_stores:
             print(f"    - {s}")
 
     # 샘플 출력
