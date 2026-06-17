@@ -46,7 +46,7 @@ def match_reviews(
     entities: list[str],
     reviews: list[str],
     min_match: int = 2,
-    max_reviews: int = 20,
+    max_reviews: int = 30,
 ) -> list[str]:
     """
     entity가 min_match개 이상 포함된 리뷰 우선 선택
@@ -95,7 +95,7 @@ def main():
             }
         else:
             # 키워드 매칭 실패 → 전체 리뷰를 fallback으로 사용
-            fallback = reviews[:20]
+            fallback = reviews[:30]
             if fallback:
                 result[store] = {
                     "entities": entities,
