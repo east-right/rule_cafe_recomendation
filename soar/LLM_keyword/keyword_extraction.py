@@ -1,5 +1,3 @@
-# soar/LLM_keyword/keyword_extraction.py
-
 import asyncio
 import json
 import os
@@ -52,15 +50,20 @@ def validate_result(result: dict, rule: dict) -> bool:
             print(f"[{rule['title']}] tiebreak_keyword 풀 이탈: {kw}")
             return False
 
-    if not (4 <= len(result.get("operator_keywords", [])) <= 5):
-        print(f"[{rule['title']}] operator_keywords 개수 오류: {len(result.get('operator_keywords', []))}")
-        return False
-
-    if not (4 <= len(result.get("tiebreak_keywords", [])) <= 5):
-        print(f"[{rule['title']}] tiebreak_keywords 개수 오류: {len(result.get('tiebreak_keywords', []))}")
+    if len(result.get("operator_keywords", [])) < 1:
+        print(f"[{rule['title']}] operator_keywords 비어있음")
         return False
 
     return True
+
+
+def make_single_keyword_rule(rule: dict) -> dict:
+    """키워드 1개짜리 rule은 LLM 없이 바로 생성"""
+    return {
+        "title": rule["title"],
+        "operator_keywords": rule["keywords"],
+        "tiebreak_keywords": []
+    }
 
 
 async def main():
@@ -68,7 +71,7 @@ async def main():
         data = json.load(f)
         rules = data["unique_rules"]
 
-    # title 기준 중복 처리 - keywords 합집합
+    # 중복 처리
     merged = {}
     for rule in rules:
         title = rule["title"]
@@ -84,18 +87,23 @@ async def main():
         rules.append(rule)
 
     print(f"중복 처리 후: {len(rules)}개 rule")
-    print(f"총 {len(rules)}개 rule 처리 시작")
-    
 
-    print(f"총 {len(rules)}개 rule 처리 시작")
-
-    tasks = [extract_keywords(rule) for rule in rules]
-    responses = await asyncio.gather(*tasks, return_exceptions=True)
+    # 키워드 1개면 LLM 스킵
+    single_rules = [r for r in rules if len(r["keywords"]) == 1]
+    llm_rules = [r for r in rules if len(r["keywords"]) > 1]
 
     results = []
-    failed = []
+    for rule in single_rules:
+        results.append(make_single_keyword_rule(rule))
 
-    for rule, response in zip(rules, responses):
+    print(f"단일 키워드 rule (LLM 스킵): {len(single_rules)}개")
+    print(f"총 {len(llm_rules)}개 rule LLM 처리 시작")
+
+    tasks = [extract_keywords(rule) for rule in llm_rules]
+    responses = await asyncio.gather(*tasks, return_exceptions=True)
+
+    failed = []
+    for rule, response in zip(llm_rules, responses):
         if isinstance(response, Exception):
             print(f"[{rule['title']}] 오류: {response}")
             failed.append(rule["title"])
