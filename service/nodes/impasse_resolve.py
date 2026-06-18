@@ -3,7 +3,8 @@ import sqlite3
 from pathlib import Path
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from langfuse.decorators import langfuse_context, observe
+from langfuse.openai import OpenAI
 
 from service.prompt import IMPASSE_SYSTEM, IMPASSE_USER
 from service.state import AgentState
@@ -40,6 +41,7 @@ def _load_keywords(cafe_names: list[str]) -> dict[str, list[str]]:
     return result
 
 
+@observe()
 def run(state: AgentState) -> AgentState:
     question = state["question"]
     rule_name = state["selected_rule"]
@@ -75,7 +77,13 @@ def run(state: AgentState) -> AgentState:
 
     new_kw = resp.choices[0].message.content.strip()
 
+    iteration = state.get("impasse_iterations", 0) + 1
+    langfuse_context.update_current_observation(
+        input={"question": question, "used_keywords": sorted(used), "available_keywords": available},
+        output=new_kw,
+        metadata={"iteration": iteration, "candidates": candidates},
+    )
     return {
         "tiebreak_keywords": tiebreak_keywords + [new_kw],
-        "impasse_iterations": state.get("impasse_iterations", 0) + 1,
+        "impasse_iterations": iteration,
     }

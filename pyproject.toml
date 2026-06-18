@@ -16,6 +16,7 @@ dependencies = [
     "transformers>=4.40.0",
     "accelerate>=0.20.0",
     "peft>=0.10.0",
+    "langfuse>=4.9.0",
 ]
 
 [dependency-groups]
