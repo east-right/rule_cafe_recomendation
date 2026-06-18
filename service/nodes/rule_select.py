@@ -11,7 +11,7 @@ from safetensors.torch import load_file, save_file
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from keyword_selection.search import get_client, load_model, search
-from keyword_selection.prompt import SYSTEM_PROMPT, build_user_prompt
+from service.prompt import RULE_SELECT_SYSTEM, build_rule_select_user
 from service.state import AgentState
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -100,8 +100,8 @@ def _retrieve(question: str) -> list[dict]:
 def _select_rule(question: str, candidates: list[dict]) -> str:
     model, tokenizer = _get_sllm()
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": build_user_prompt(question, candidates)},
+        {"role": "system", "content": RULE_SELECT_SYSTEM},
+        {"role": "user", "content": build_rule_select_user(question, candidates)},
     ]
     text = tokenizer.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=True
