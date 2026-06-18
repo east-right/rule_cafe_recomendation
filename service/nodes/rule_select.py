@@ -10,7 +10,7 @@ from peft import PeftModel
 from safetensors.torch import load_file, save_file
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from langfuse.decorators import langfuse_context, observe
+from langfuse import get_client as langfuse_client, observe
 
 from keyword_selection.search import get_client, load_model, search
 from service.prompt import RULE_SELECT_SYSTEM, build_rule_select_user
@@ -128,7 +128,7 @@ def run(state: AgentState) -> AgentState:
     selected = _select_rule(question, candidates)
 
     if selected == "none":
-        langfuse_context.update_current_observation(
+        langfuse_client().update_current_span(
             input=question,
             output="none",
             metadata={"candidates": candidates},
@@ -141,7 +141,7 @@ def run(state: AgentState) -> AgentState:
         }
 
     keywords = _load_rule_keywords().get(selected, {})
-    langfuse_context.update_current_observation(
+    langfuse_client().update_current_span(
         input=question,
         output=selected,
         metadata={
