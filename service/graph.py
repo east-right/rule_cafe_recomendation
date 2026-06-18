@@ -1,19 +1,37 @@
 from langgraph.graph import END, StateGraph
 
-from service.nodes import question_valid, rule_select, soar_recommend
+from service.nodes import impasse_resolve, question_valid, rule_select, soar_recommend
 from service.state import AgentState
+
+MAX_IMPASSE_ITER = 5
 
 
 def _route_question(state: AgentState) -> str:
     qt = state.get("question_type")
     if qt == "non-menu":
         return "rule_select"
-    # fallback / menu-only / menu-complex → 미구현, END
     return END
 
 
 def _route_rule_select(state: AgentState) -> str:
     if state.get("selected_rule") == "none" or not state.get("selected_rule"):
+        return END
+    return "soar_recommend"
+
+
+def _route_soar(state: AgentState) -> str:
+    result = state.get("soar_result") or {}
+    if (
+        result.get("type") == "impasse"
+        and state.get("impasse_iterations", 0) < MAX_IMPASSE_ITER
+        and not state.get("impasse_exhausted")
+    ):
+        return "impasse_resolve"
+    return END
+
+
+def _route_impasse_resolve(state: AgentState) -> str:
+    if state.get("impasse_exhausted"):
         return END
     return "soar_recommend"
 
@@ -24,6 +42,7 @@ def build_graph():
     graph.add_node("question_valid", question_valid.run)
     graph.add_node("rule_select", rule_select.run)
     graph.add_node("soar_recommend", soar_recommend.run)
+    graph.add_node("impasse_resolve", impasse_resolve.run)
 
     graph.set_entry_point("question_valid")
 
@@ -37,6 +56,15 @@ def build_graph():
         _route_rule_select,
         {"soar_recommend": "soar_recommend", END: END},
     )
-    graph.add_edge("soar_recommend", END)
+    graph.add_conditional_edges(
+        "soar_recommend",
+        _route_soar,
+        {"impasse_resolve": "impasse_resolve", END: END},
+    )
+    graph.add_conditional_edges(
+        "impasse_resolve",
+        _route_impasse_resolve,
+        {"soar_recommend": "soar_recommend", END: END},
+    )
 
     return graph.compile()
