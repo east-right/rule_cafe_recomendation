@@ -5,7 +5,7 @@ import tempfile
 from pathlib import Path
 
 from dotenv import load_dotenv
-from langfuse.decorators import langfuse_context, observe
+from langfuse import get_client, observe
 
 from service.state import AgentState
 
@@ -189,6 +189,8 @@ def _trace_tiebreak(
 # ── output-link 파싱 ───────────────────────────────────────────
 
 def _parse_output(output_link) -> dict:
+    if output_link is None:
+        return {"type": "no_output", "cafe": None, "candidates": []}
     result = {"type": "no_output", "cafe": None, "candidates": []}
     n = output_link.GetNumberChildren()
     for i in range(n):
@@ -253,7 +255,7 @@ def run(state: AgentState) -> AgentState:
     kernel.Shutdown()
     del kernel
 
-    langfuse_context.update_current_observation(
+    get_client().update_current_span(
         input={
             "title": title,
             "operator_keywords": operator_keywords,

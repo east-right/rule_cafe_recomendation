@@ -1,11 +1,13 @@
 import os
 import sqlite3
+import threading
 from pathlib import Path
 
 from dotenv import load_dotenv
-from langfuse.decorators import langfuse_context, observe
+from langfuse import get_client, observe
 from langfuse.openai import OpenAI
 
+from keyword_selection.search import INDEX_NAME, get_client as os_get_client
 from service.prompt import IMPASSE_SYSTEM, IMPASSE_USER
 from service.state import AgentState
 
@@ -17,6 +19,31 @@ DB_PATH = ROOT / "data" / "cafe.db"
 MAX_IMPASSE_ITER = 5
 
 _client: OpenAI | None = None
+
+_APPEND_SCRIPT = (
+    "if (ctx._source.tiebreak_keywords == null) {"
+    "  ctx._source.tiebreak_keywords = [params.kw]"
+    "} else if (!ctx._source.tiebreak_keywords.contains(params.kw)) {"
+    "  ctx._source.tiebreak_keywords.add(params.kw)"
+    "}"
+)
+
+
+def _update_os_tiebreak(title: str, keyword: str) -> None:
+    try:
+        os_get_client().update_by_query(
+            index=INDEX_NAME,
+            body={
+                "query": {"term": {"title": title}},
+                "script": {
+                    "source": _APPEND_SCRIPT,
+                    "lang": "painless",
+                    "params": {"kw": keyword},
+                },
+            },
+        )
+    except Exception:
+        pass
 
 
 def _get_client() -> OpenAI:
@@ -77,8 +104,12 @@ def run(state: AgentState) -> AgentState:
 
     new_kw = resp.choices[0].message.content.strip()
 
+    threading.Thread(
+        target=_update_os_tiebreak, args=(rule_name, new_kw), daemon=True
+    ).start()
+
     iteration = state.get("impasse_iterations", 0) + 1
-    langfuse_context.update_current_observation(
+    get_client().update_current_span(
         input={"question": question, "used_keywords": sorted(used), "available_keywords": available},
         output=new_kw,
         metadata={"iteration": iteration, "candidates": candidates},

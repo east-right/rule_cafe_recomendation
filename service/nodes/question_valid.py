@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 
 from dotenv import load_dotenv
-from langfuse.decorators import langfuse_context, observe
+from langfuse import get_client, observe
 from transformers import pipeline
 
 from service.state import AgentState
@@ -50,7 +50,7 @@ def run(state: AgentState) -> AgentState:
     question = state["question"]
 
     if not _is_korean_enough(question):
-        langfuse_context.update_current_observation(input=question, output="fallback")
+        get_client().update_current_span(input=question, output="fallback")
         return {"question_type": "fallback"}
 
     result = _get_classifier()(question)[0]
@@ -59,7 +59,7 @@ def run(state: AgentState) -> AgentState:
     if label == "invalid":
         label = "fallback"
 
-    langfuse_context.update_current_observation(
+    get_client().update_current_span(
         input=question,
         output=label,
         metadata={"score": result["score"]},
