@@ -10,6 +10,8 @@ from peft import PeftModel
 from safetensors.torch import load_file, save_file
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+from langfuse.decorators import langfuse_context, observe
+
 from keyword_selection.search import get_client, load_model, search
 from service.prompt import RULE_SELECT_SYSTEM, build_rule_select_user
 from service.state import AgentState
@@ -118,6 +120,7 @@ def _select_rule(question: str, candidates: list[dict]) -> str:
     return tokenizer.decode(generated, skip_special_tokens=True).strip()
 
 
+@observe()
 def run(state: AgentState) -> AgentState:
     question = state["question"]
 
@@ -125,6 +128,11 @@ def run(state: AgentState) -> AgentState:
     selected = _select_rule(question, candidates)
 
     if selected == "none":
+        langfuse_context.update_current_observation(
+            input=question,
+            output="none",
+            metadata={"candidates": candidates},
+        )
         return {
             "rule_candidates": candidates,
             "selected_rule": "none",
@@ -133,6 +141,15 @@ def run(state: AgentState) -> AgentState:
         }
 
     keywords = _load_rule_keywords().get(selected, {})
+    langfuse_context.update_current_observation(
+        input=question,
+        output=selected,
+        metadata={
+            "candidates": candidates,
+            "operator_keywords": keywords.get("operator_keywords", []),
+            "tiebreak_keywords": keywords.get("tiebreak_keywords", []),
+        },
+    )
     return {
         "rule_candidates": candidates,
         "selected_rule": selected,

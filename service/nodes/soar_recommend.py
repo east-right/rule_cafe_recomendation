@@ -5,6 +5,7 @@ import tempfile
 from pathlib import Path
 
 from dotenv import load_dotenv
+from langfuse.decorators import langfuse_context, observe
 
 from service.state import AgentState
 
@@ -212,6 +213,7 @@ def _parse_output(output_link) -> dict:
 
 # ── 노드 진입점 ────────────────────────────────────────────────
 
+@observe()
 def run(state: AgentState) -> AgentState:
     title = state["selected_rule"]
     operator_keywords = state["operator_keywords"]
@@ -251,4 +253,12 @@ def run(state: AgentState) -> AgentState:
     kernel.Shutdown()
     del kernel
 
+    langfuse_context.update_current_observation(
+        input={
+            "title": title,
+            "operator_keywords": operator_keywords,
+            "tiebreak_keywords": tiebreak_keywords,
+        },
+        output=soar_result,
+    )
     return {"soar_result": soar_result}
