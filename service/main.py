@@ -1,6 +1,8 @@
 import json
 import sys
 
+from langfuse import get_client
+
 from service.graph import build_graph
 
 _graph = None
@@ -14,7 +16,12 @@ def get_graph():
 
 
 def run(question: str) -> dict:
-    result = get_graph().invoke({"question": question})
+    lf = get_client()
+    with lf.start_as_current_observation(
+        name="cafe-recommend", as_type="agent", input=question
+    ):
+        result = get_graph().invoke({"question": question})
+        lf.update_current_span(output=result.get("soar_result"))
     return result
 
 

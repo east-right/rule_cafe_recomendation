@@ -12,7 +12,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from langfuse import get_client as langfuse_client, observe
 
-from keyword_selection.search import get_client, load_model, search
+from keyword_selection.search import INDEX_NAME, get_client, load_model, search
 from service.prompt import RULE_SELECT_SYSTEM, build_rule_select_user
 from service.state import AgentState
 
@@ -21,14 +21,12 @@ load_dotenv(ROOT / ".env")
 
 HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN_READ")
 SLLM_REPO = "east-right/cafe-keyword-selection-qwen-1.5b"
-SOAR_KEYWORDS_PATH = ROOT / "data" / "soar_rule_keywords.json"
 TOP_K = 10
 
 _embedding_model = None
 _os_client = None
 _sllm_model = None
 _sllm_tokenizer = None
-_rule_keywords: dict[str, dict] = {}
 
 
 def _get_retriever():
@@ -81,13 +79,17 @@ def _get_sllm():
     return _sllm_model, _sllm_tokenizer
 
 
-def _load_rule_keywords() -> dict[str, dict]:
-    global _rule_keywords
-    if not _rule_keywords:
-        with open(SOAR_KEYWORDS_PATH, encoding="utf-8") as f:
-            data = json.load(f)
-        _rule_keywords = {r["title"]: r for r in data}
-    return _rule_keywords
+def _fetch_keywords_from_os(title: str) -> dict:
+    _, client = _get_retriever()
+    res = client.search(
+        index=INDEX_NAME,
+        body={
+            "query": {"term": {"title": title}},
+            "_source": ["operator_keywords", "tiebreak_keywords"],
+        },
+    )
+    hits = res["hits"]["hits"]
+    return hits[0]["_source"] if hits else {}
 
 
 def _retrieve(question: str) -> list[dict]:
@@ -140,7 +142,7 @@ def run(state: AgentState) -> AgentState:
             "tiebreak_keywords": [],
         }
 
-    keywords = _load_rule_keywords().get(selected, {})
+    keywords = _fetch_keywords_from_os(selected)
     langfuse_client().update_current_span(
         input=question,
         output=selected,

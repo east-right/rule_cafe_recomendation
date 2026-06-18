@@ -31,7 +31,7 @@ _APPEND_SCRIPT = (
 
 def _update_os_tiebreak(title: str, keyword: str) -> None:
     try:
-        os_get_client().update_by_query(
+        res = os_get_client().update_by_query(
             index=INDEX_NAME,
             body={
                 "query": {"term": {"title": title}},
@@ -42,8 +42,9 @@ def _update_os_tiebreak(title: str, keyword: str) -> None:
                 },
             },
         )
-    except Exception:
-        pass
+        print(f"[OS update] title={title!r} keyword={keyword!r} updated={res.get('updated')} total={res.get('total')}")
+    except Exception as e:
+        print(f"[OS update error] {e}")
 
 
 def _get_client() -> OpenAI:
@@ -105,7 +106,7 @@ def run(state: AgentState) -> AgentState:
     new_kw = resp.choices[0].message.content.strip()
 
     threading.Thread(
-        target=_update_os_tiebreak, args=(rule_name, new_kw), daemon=True
+        target=_update_os_tiebreak, args=(rule_name, new_kw), daemon=False
     ).start()
 
     iteration = state.get("impasse_iterations", 0) + 1
