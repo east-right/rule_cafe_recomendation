@@ -15,6 +15,7 @@ dependencies = [
     "langgraph>=0.2.0",
     "transformers>=4.40.0",
     "accelerate>=0.20.0",
+    "peft>=0.10.0",
 ]
 
 [dependency-groups]

@@ -11,7 +11,7 @@ from service.state import AgentState
 ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
 
-SOAR_HOME = os.getenv("SOAR_HOME", str(ROOT / "soar" / "sml" / "Soar" / "out"))
+SOAR_HOME = os.getenv("SOAR_HOME") or str(ROOT / "soar" / "sml" / "Soar" / "out")
 DB_PATH = ROOT / "data" / "cafe.db"
 
 os.add_dll_directory(SOAR_HOME)
@@ -158,6 +158,33 @@ def _load_cafe_items() -> dict[str, list[str]]:
     return result
 
 
+# ── tiebreak 단계별 추적 ──────────────────────────────────────
+
+def _trace_tiebreak(
+    operator_keywords: list[str],
+    tiebreak_keywords: list[str],
+    cafe_items: dict[str, list[str]],
+) -> list[dict]:
+    op_set = set(operator_keywords)
+    candidates = {c for c, kws in cafe_items.items() if op_set & set(kws)}
+
+    traces = [{"step": "operator", "keyword": None, "remaining": sorted(candidates)}]
+
+    for i, tb_kw in enumerate(tiebreak_keywords, start=1):
+        filtered = {c for c in candidates if tb_kw in set(cafe_items.get(c, []))}
+        if len(filtered) == 1:
+            candidates = filtered
+            traces.append({"step": f"S{i}_resolved", "keyword": tb_kw, "remaining": sorted(candidates)})
+            break
+        elif len(filtered) > 1:
+            candidates = filtered
+            traces.append({"step": f"S{i}_narrowed", "keyword": tb_kw, "remaining": sorted(candidates)})
+        else:
+            traces.append({"step": f"S{i}_no_effect", "keyword": tb_kw, "remaining": sorted(candidates)})
+
+    return traces
+
+
 # ── output-link 파싱 ───────────────────────────────────────────
 
 def _parse_output(output_link) -> dict:
@@ -177,6 +204,9 @@ def _parse_output(output_link) -> dict:
                     req_wme = req_id.GetChild(j)
                     if req_wme.GetAttribute() in ("cand1", "cand2"):
                         result["candidates"].append(req_wme.GetValueAsString())
+
+    if result["type"] == "impasse":
+        result["candidates"] = list(dict.fromkeys(result["candidates"]))
     return result
 
 
@@ -189,6 +219,7 @@ def run(state: AgentState) -> AgentState:
 
     rule_str = _build_soar_rule(title, operator_keywords, tiebreak_keywords)
     cafe_items = _load_cafe_items()
+    tiebreak_trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, cafe_items)
 
     kernel = sml.Kernel.CreateKernelInNewThread()
     agent = kernel.CreateAgent("cafe-recommender")
@@ -215,6 +246,7 @@ def run(state: AgentState) -> AgentState:
     agent.RunSelfTilOutput()
 
     soar_result = _parse_output(agent.GetOutputLink())
+    soar_result["trace"] = tiebreak_trace
 
     kernel.Shutdown()
     del kernel
