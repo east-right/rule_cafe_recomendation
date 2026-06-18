@@ -1,9 +1,13 @@
 import json
 import os
+import tempfile
 from pathlib import Path
 
 import torch
 from dotenv import load_dotenv
+from huggingface_hub import hf_hub_download
+from peft import PeftModel
+from safetensors.torch import load_file, save_file
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from keyword_selection.search import get_client, load_model, search
@@ -34,16 +38,44 @@ def _get_retriever():
     return _embedding_model, _os_client
 
 
+BASE_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
+
+
+def _download_and_fix_adapter() -> str:
+    """Unsloth 저장 어댑터의 키 구조를 표준 PEFT로 변환해 임시 디렉토리에 저장."""
+    config_path = hf_hub_download(SLLM_REPO, "adapter_config.json", token=HF_TOKEN)
+    weights_path = hf_hub_download(SLLM_REPO, "adapter_model.safetensors", token=HF_TOKEN)
+
+    weights = load_file(weights_path)
+    # Unsloth: base_model.model.model.model.<path>
+    # PEFT 표준: base_model.model.<path>
+    fixed = {
+        k.replace("base_model.model.model.model.", "base_model.model."): v
+        for k, v in weights.items()
+    }
+
+    tmp = tempfile.mkdtemp()
+    save_file(fixed, os.path.join(tmp, "adapter_model.safetensors"))
+    with open(config_path) as f:
+        config = json.load(f)
+    with open(os.path.join(tmp, "adapter_config.json"), "w") as f:
+        json.dump(config, f)
+
+    return tmp
+
+
 def _get_sllm():
     global _sllm_model, _sllm_tokenizer
     if _sllm_model is None:
         _sllm_tokenizer = AutoTokenizer.from_pretrained(SLLM_REPO, token=HF_TOKEN)
-        _sllm_model = AutoModelForCausalLM.from_pretrained(
-            SLLM_REPO,
-            token=HF_TOKEN,
-            device_map="auto",
-            torch_dtype=torch.float16,
+        base = AutoModelForCausalLM.from_pretrained(
+            BASE_MODEL,
+            torch_dtype=torch.float32,
         )
+        adapter_dir = _download_and_fix_adapter()
+        _sllm_model = PeftModel.from_pretrained(base, adapter_dir)
+        _sllm_model = _sllm_model.to("cpu")
+        _sllm_model.eval()
     return _sllm_model, _sllm_tokenizer
 
 
@@ -74,7 +106,7 @@ def _select_rule(question: str, candidates: list[dict]) -> str:
     text = tokenizer.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=True
     )
-    inputs = tokenizer(text, return_tensors="pt").to(model.device)
+    inputs = tokenizer(text, return_tensors="pt").to("cpu")
     with torch.no_grad():
         output_ids = model.generate(
             **inputs,
