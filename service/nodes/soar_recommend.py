@@ -67,6 +67,18 @@ def _make_operator(op_ids: list[str]) -> str:
 """
 
 
+def _make_menu_operator() -> str:
+    return """sp {recommend-OPERATOR
+   (state <s> ^io.input-link <il>)
+   (<il> ^cafe <c>)
+   (<c> ^name <c-name> ^has-menu true)
+-->
+   (<s> ^operator <o> +)
+   (<o> ^name recommend-cafe ^cafe-name <c-name>)
+}
+"""
+
+
 def _make_s1_judge(kw_id: str) -> str:
     return f"""sp {{recommend-S1-judge
    (state <s> ^operator <o1> +
@@ -137,9 +149,9 @@ def _build_soar_rule(
     operator_keywords: list[str],
     tiebreak_keywords: list[str],
     kw_map: dict[str, str],
+    menu_mode: bool = False,
 ) -> str:
-    op_ids = [kw_map[kw] for kw in operator_keywords]
-    parts = [_BOILERPLATE, _make_operator(op_ids)]
+    parts = [_BOILERPLATE, _make_menu_operator() if menu_mode else _make_operator([kw_map[kw] for kw in operator_keywords])]
 
     if tiebreak_keywords:
         parts.append(_make_s1_judge(kw_map[tiebreak_keywords[0]]))
@@ -155,12 +167,21 @@ def _build_soar_rule(
 
 # ── SQLite 로드 ────────────────────────────────────────────────
 
-def _load_cafe_items() -> dict[str, list[str]]:
+def _load_cafe_items(menu_cafe_names: list[str] | None = None) -> dict[str, list[str]]:
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
-    rows = conn.execute(
-        "SELECT cafe_name, keyword FROM cafe_keywords WHERE sentiment = '긍정'"
-    ).fetchall()
+
+    if menu_cafe_names:
+        placeholders = ",".join("?" * len(menu_cafe_names))
+        rows = conn.execute(
+            f"SELECT cafe_name, keyword FROM cafe_keywords WHERE sentiment = '긍정' AND cafe_name IN ({placeholders})",
+            menu_cafe_names,
+        ).fetchall()
+    else:
+        rows = conn.execute(
+            "SELECT cafe_name, keyword FROM cafe_keywords WHERE sentiment = '긍정'"
+        ).fetchall()
+
     conn.close()
 
     result: dict[str, list[str]] = {}
@@ -236,19 +257,21 @@ def run(state: AgentState) -> AgentState:
     operator_keywords = state["operator_keywords"]
     tiebreak_keywords = state["tiebreak_keywords"]
 
+    menu_mode = bool(state.get("menu_cafe_names"))
     kw_map = _build_kw_map(operator_keywords, tiebreak_keywords)
-    rule_str = _build_soar_rule(operator_keywords, tiebreak_keywords, kw_map)
-    cafe_items = _load_cafe_items()
+    rule_str = _build_soar_rule(operator_keywords, tiebreak_keywords, kw_map, menu_mode=menu_mode)
+    cafe_items = _load_cafe_items(state.get("menu_cafe_names"))
     tiebreak_trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, cafe_items)
 
     kernel = sml.Kernel.CreateKernelInNewThread()
     agent = kernel.CreateAgent("cafe-recommender")
     input_link = agent.GetInputLink()
 
-    # 이전 프로젝트와 동일: 데이터 먼저 → Commit → 룰 로드 → Run
     for cafe_name, keywords in cafe_items.items():
         cafe_id = agent.CreateIdWME(input_link, "cafe")
         agent.CreateStringWME(cafe_id, "name", cafe_name)
+        if menu_mode:
+            agent.CreateStringWME(cafe_id, "has-menu", "true")
         for kw in keywords:
             if kw in kw_map:
                 agent.CreateStringWME(cafe_id, "keyword", kw_map[kw])
