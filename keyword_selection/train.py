@@ -21,7 +21,7 @@ from prompt import format_for_training
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
 TRAIN_PATH = ROOT / "data" / "train.jsonl"
-TEST_PATH = ROOT / "data" / "test.jsonl"
+VAL_PATH = ROOT / "data" / "val.jsonl"
 
 
 def load_config(config_path: str) -> dict:
@@ -80,7 +80,7 @@ def main():
     # ── 데이터 로드 ───────────────────────────────────────
     print("[INFO] 데이터 로드 중...")
     train_dataset = load_dataset(TRAIN_PATH, tokenizer)
-    test_dataset = load_dataset(TEST_PATH, tokenizer)
+    test_dataset = load_dataset(VAL_PATH, tokenizer)
     print(f"  train: {len(train_dataset)}개 | test: {len(test_dataset)}개")
 
     # 샘플 확인
