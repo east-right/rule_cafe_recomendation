@@ -1,17 +1,21 @@
 """
-파인튜닝 데이터 train/test 분할 스크립트
-9:1 비율로 분할
+파인튜닝 데이터 train/val 분할 스크립트
+title별 stratified 9:1 분할
+(test는 test_with_candidates.jsonl로 별도 관리)
+
+Usage: python split_data.py
 """
 
 import json
 import random
+from collections import defaultdict
 from pathlib import Path
 
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parents[1]
 INPUT_PATH = ROOT / "keyword_selection" / "data" / "finetune_keyword_selection.jsonl"
 TRAIN_PATH = ROOT / "keyword_selection" / "data" / "train.jsonl"
-TEST_PATH = ROOT / "keyword_selection" / "data" / "test.jsonl"
+VAL_PATH = ROOT / "keyword_selection" / "data" / "val.jsonl"
 
 # ── 설정 ──────────────────────────────────────────────────
 TRAIN_RATIO = 0.9
@@ -26,41 +30,39 @@ def main():
         data = [json.loads(line) for line in f]
     print(f"  전체 데이터: {len(data)}개")
 
-    # none/정답 비율 유지하면서 스플릿 (stratified)
-    match_data = [d for d in data if d["answer"] != "none"]
-    none_data = [d for d in data if d["answer"] == "none"]
+    # title별로 그룹핑 (answer 기준)
+    by_title = defaultdict(list)
+    for d in data:
+        by_title[d["answer"]].append(d)
 
-    print(f"  정답 있는 데이터: {len(match_data)}개")
-    print(f"  none 데이터: {len(none_data)}개")
+    print(f"  title 수: {len(by_title)}개 (none 포함)")
 
-    random.shuffle(match_data)
-    random.shuffle(none_data)
+    train_data, val_data = [], []
 
-    # 각각 9:1 분할
-    match_train_size = int(len(match_data) * TRAIN_RATIO)
-    none_train_size = int(len(none_data) * TRAIN_RATIO)
+    for title, items in by_title.items():
+        random.shuffle(items)
+        train_size = max(1, int(len(items) * TRAIN_RATIO))
+        train_data.extend(items[:train_size])
+        val_data.extend(items[train_size:])
 
-    train_data = match_data[:match_train_size] + none_data[:none_train_size]
-    test_data = match_data[match_train_size:] + none_data[none_train_size:]
-
-    # 섞기
     random.shuffle(train_data)
-    random.shuffle(test_data)
+    random.shuffle(val_data)
 
     # 저장
     with open(TRAIN_PATH, "w", encoding="utf-8") as f:
         for d in train_data:
             f.write(json.dumps(d, ensure_ascii=False) + "\n")
 
-    with open(TEST_PATH, "w", encoding="utf-8") as f:
-        for d in test_data:
+    with open(VAL_PATH, "w", encoding="utf-8") as f:
+        for d in val_data:
             f.write(json.dumps(d, ensure_ascii=False) + "\n")
 
+    train_none = sum(1 for d in train_data if d["answer"] == "none")
+    val_none = sum(1 for d in val_data if d["answer"] == "none")
+
     print(f"\n완료!")
-    print(f"  train: {len(train_data)}개")
-    print(f"  test:  {len(test_data)}개")
-    print(f"  train none 비율: {sum(1 for d in train_data if d['answer'] == 'none') / len(train_data):.2%}")
-    print(f"  test  none 비율: {sum(1 for d in test_data if d['answer'] == 'none') / len(test_data):.2%}")
+    print(f"  train: {len(train_data)}개 (none: {train_none}개, {train_none/len(train_data):.2%})")
+    print(f"  val:   {len(val_data)}개 (none: {val_none}개, {val_none/len(val_data):.2%})")
 
 
 if __name__ == "__main__":

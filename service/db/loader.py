@@ -14,18 +14,26 @@ KEYWORDS_CSV = ROOT / "data" / "market_item.csv"
 
 
 def load_cafes() -> None:
-    # market_item.csv가 source of truth — 아이템이 있는 201개 매장만 적재
-    item_stores: set[str] = set()
+    # item이 있는 매장만 적재 (market_item.csv 기준)
     with open(KEYWORDS_CSV, encoding="utf-8-sig") as f:
-        for row in csv.DictReader(f):
-            if row["사업장명"]:
-                item_stores.add(row["사업장명"])
+        item_stores = {row["사업장명"] for row in csv.DictReader(f) if row["사업장명"]}
 
-    rows = []
+    # 주소/영업상태는 restaurant 원본에서 조회
+    store_info: dict[str, tuple[str, str]] = {}
     with open(CAFES_CSV, encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
             if row["사업장명"] in item_stores:
-                rows.append((row["사업장명"], row["도로명주소"], row["상세영업상태명"]))
+                store_info[row["사업장명"]] = (row["도로명주소"], row["상세영업상태명"])
+
+    rows = [
+        (name, info[0], info[1])
+        for name, info in store_info.items()
+    ]
+
+    # item은 있지만 restaurant 목록에 없는 매장은 주소 없이 적재
+    missing = item_stores - store_info.keys()
+    for name in missing:
+        rows.append((name, None, None))
 
     with get_connection() as conn:
         conn.execute("DELETE FROM cafe_keywords")
@@ -34,7 +42,7 @@ def load_cafes() -> None:
             "INSERT INTO cafes (name, address, status) VALUES (?, ?, ?)",
             rows,
         )
-    print(f"[INFO] cafes 적재 완료: {len(rows)}개")
+    print(f"[INFO] cafes 적재 완료: {len(rows)}개 (주소 없는 매장: {len(missing)}개)")
 
 
 def load_keywords() -> None:
@@ -57,6 +65,9 @@ def load_keywords() -> None:
 
 if __name__ == "__main__":
     init_db()
+    with get_connection() as conn:
+        conn.execute("DELETE FROM cafe_keywords")
+        conn.execute("DELETE FROM cafes")
     load_cafes()
     load_keywords()
     print("[INFO] 전체 적재 완료")

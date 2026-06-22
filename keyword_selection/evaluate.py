@@ -19,7 +19,7 @@ from prompt import SYSTEM_PROMPT, build_user_prompt
 
 # ── 경로 설정 ──────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent
-TEST_PATH = ROOT / "data" / "test.jsonl"
+TEST_PATH = ROOT / "data" / "test_with_candidates.jsonl"
 
 
 def load_config(config_path: str) -> dict:
