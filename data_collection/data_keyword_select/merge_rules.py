@@ -125,6 +125,15 @@ def merge_rules(rules: list, title_map: dict, group_data: dict) -> list:
                     seen.add(kw)
                     all_keywords.append(kw)
 
+        # negative_keywords 합집합 (중복 제거)
+        all_neg_keywords = []
+        seen_neg = set()
+        for r in group_rules:
+            for kw in r.get("negative_keywords", []):
+                if kw not in seen_neg:
+                    seen_neg.add(kw)
+                    all_neg_keywords.append(kw)
+
         # merged_questions 전부 수집
         all_merged_q = []
         for r in group_rules:
@@ -134,14 +143,15 @@ def merge_rules(rules: list, title_map: dict, group_data: dict) -> list:
         primary = group_rules[0]
 
         merged.append({
-            "title":            rep,
-            "description":      primary["description"],
-            "keywords":         all_keywords,
-            "question":         primary["question"],
-            "merged_questions": all_merged_q,
-            "source_count":     len(group_rules),
-            "confidence":       conf_map.get(rep, "확신"),
-            "reason":           reason_map.get(rep, ""),
+            "title":             rep,
+            "description":       primary["description"],
+            "keywords":          all_keywords,
+            "negative_keywords": all_neg_keywords,
+            "question":          primary["question"],
+            "merged_questions":  all_merged_q,
+            "source_count":      len(group_rules),
+            "confidence":        conf_map.get(rep, "확신"),
+            "reason":            reason_map.get(rep, ""),
         })
 
     return merged

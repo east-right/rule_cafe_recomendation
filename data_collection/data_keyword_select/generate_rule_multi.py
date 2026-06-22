@@ -58,12 +58,38 @@ def get_kw_to_rule_keywords(rule_data: dict) -> dict:
     return kw_to_rule_keywords
 
 
+def get_kw_to_rule_negatives(rule_data: dict) -> dict:
+    """keyword → 해당 keyword가 속한 rule의 negative_keywords 합집합"""
+    kw_to_neg = {}
+    for rule in rule_data["unique_rules"]:
+        negs = rule.get("negative_keywords", [])
+        for kw in rule["keywords"]:
+            kw_to_neg.setdefault(kw, set()).update(negs)
+    return kw_to_neg
+
+
 def filter_coverable_multi(questions: list, single_keywords: set) -> list:
     multi = [q for q in questions if q["type"] == "multi"]
     return [
         q for q in multi
         if all(s["keyword"] in single_keywords for s in q["keywords"])
     ]
+
+
+def filter_multi_rules(rules: list) -> list:
+    """multi rule 후처리: title 3글자 이하 / single title 중복 / multi끼리 title 중복 제거.
+    single rule은 전부 유지."""
+    singles = [x for x in rules if x.get("confidence") != "multi"]
+    multis  = [x for x in rules if x.get("confidence") == "multi"]
+    single_titles = {x["title"] for x in singles}
+    kept, seen = [], set()
+    for m in multis:
+        t = m["title"]
+        if len(t) <= 3 or t in single_titles or t in seen:
+            continue
+        seen.add(t)
+        kept.append(m)
+    return singles + kept
 
 
 def build_combined_keywords(q: dict, kw_to_rule_keywords: dict) -> list:
@@ -76,29 +102,47 @@ def build_combined_keywords(q: dict, kw_to_rule_keywords: dict) -> list:
     return list(combined)
 
 
+def build_combined_negatives(q: dict, kw_to_rule_negatives: dict) -> list:
+    """seed_keywords가 속한 rule들의 negative_keywords 합집합"""
+    combined = set()
+    for s in q["keywords"]:
+        kw = s["keyword"]
+        if kw in kw_to_rule_negatives:
+            combined.update(kw_to_rule_negatives[kw])
+    return list(combined)
+
+
 # ── 유저 프롬프트 빌더 ────────────────────────────────────────
-def build_user_prompt(question: str, seed_keywords: list, combined_keywords: list) -> str:
+def build_user_prompt(question: str, seed_keywords: list,
+                      combined_keywords: list, combined_negatives: list) -> str:
     seed_str = "\n".join(
         f"- [{s['type']}] {s['keyword']}" for s in seed_keywords
     )
-    kw_context = ", ".join(combined_keywords)
+    pos_context = ", ".join(combined_keywords)
+    neg_context = ", ".join(combined_negatives) if combined_negatives else "(none)"
     return f"""Question: {question}
 
 Seed keywords (must be included if applicable):
 {seed_str}
 
-Available keywords (selected from related rules):
-{kw_context}
+Available keywords (긍정 = 갖춰야 할 특징, selected from related rules):
+{pos_context}
+
+Available negative keywords (부정 = 피해야 할 특징):
+{neg_context}
 
 Generate rule metadata JSON."""
 
 
 # ── 배치 요청 생성 ────────────────────────────────────────────
-def build_batch_requests(questions: list, kw_to_rule_keywords: dict) -> list:
+def build_batch_requests(questions: list, kw_to_rule_keywords: dict,
+                         kw_to_rule_negatives: dict) -> list:
     requests = []
     for i, q in enumerate(questions):
-        combined_kws = build_combined_keywords(q, kw_to_rule_keywords)
-        user_prompt  = build_user_prompt(q["question"], q["keywords"], combined_kws)
+        combined_kws  = build_combined_keywords(q, kw_to_rule_keywords)
+        combined_negs = build_combined_negatives(q, kw_to_rule_negatives)
+        user_prompt   = build_user_prompt(q["question"], q["keywords"],
+                                          combined_kws, combined_negs)
 
         requests.append({
             "custom_id": f"multi_{i}",
@@ -190,15 +234,16 @@ def parse_results(output_file_id: str) -> list:
             text   = row["response"]["body"]["choices"][0]["message"]["content"].strip()
             result = json.loads(text)
             results.append({
-                "title":            result.get("title", ""),
-                "description":      result.get("description", ""),
-                "keywords":         result.get("keywords", []),
-                "question":         meta.get("question", ""),
-                "seed_keywords":    meta.get("seed_keywords", []),
-                "merged_questions": [],
-                "source_count":     1,
-                "confidence":       "multi",
-                "reason":           "multi 질문 기반 조합 rule",
+                "title":             result.get("title", ""),
+                "description":       result.get("description", ""),
+                "keywords":          result.get("keywords", []),
+                "negative_keywords": result.get("negative_keywords", []),
+                "question":          meta.get("question", ""),
+                "seed_keywords":     meta.get("seed_keywords", []),
+                "merged_questions":  [],
+                "source_count":      1,
+                "confidence":        "multi",
+                "reason":            "multi 질문 기반 조합 rule",
             })
         except Exception as e:
             print(f"  ⚠️ 파싱 실패 [{cid}]: {e}")
@@ -218,8 +263,9 @@ def main():
     print("📂 데이터 로드 중...")
     questions, rule_data = load_data()
 
-    single_keywords     = get_single_keywords_set(rule_data)
-    kw_to_rule_keywords = get_kw_to_rule_keywords(rule_data)
+    single_keywords      = get_single_keywords_set(rule_data)
+    kw_to_rule_keywords  = get_kw_to_rule_keywords(rule_data)
+    kw_to_rule_negatives = get_kw_to_rule_negatives(rule_data)
 
     coverable = filter_coverable_multi(questions, single_keywords)
     print(f"  조합 가능한 multi 질문: {len(coverable)}개")
@@ -229,7 +275,7 @@ def main():
             batch_id = f.read().strip()
         print(f"🔄 기존 배치 재사용: {batch_id}")
     else:
-        requests = build_batch_requests(coverable, kw_to_rule_keywords)
+        requests = build_batch_requests(coverable, kw_to_rule_keywords, kw_to_rule_negatives)
         print(f"📋 총 {len(requests)}개 요청 생성")
         batch_id = submit_batch(requests)
 
@@ -238,8 +284,11 @@ def main():
 
     # 기존 rule_data에 추가
     rule_data["unique_rules"].extend(new_rules)
-    print(f"\n✅ multi rule {len(new_rules)}개 추가")
-    print(f"   전체 rule 수: {len(rule_data['unique_rules'])}개")
+    print(f"\n✅ multi rule {len(new_rules)}개 추가 (필터 전 전체 {len(rule_data['unique_rules'])}개)")
+
+    # 후처리 필터: 3글자 이하 / single title 중복 / multi끼리 중복 제거
+    rule_data["unique_rules"] = filter_multi_rules(rule_data["unique_rules"])
+    print(f"   필터 후 전체 rule 수: {len(rule_data['unique_rules'])}개")
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(rule_data, f, ensure_ascii=False, indent=2)
