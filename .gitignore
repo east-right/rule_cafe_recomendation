@@ -26,6 +26,10 @@ Desktop.ini
 CLAUDE.md
 *.db
 
+# Soar SML 바이너리 (로컬 설치 필요)
+soar/sml/
+
+# batch 결과물
 data/review_summary_batch_input.jsonl
 data/review_summary_batch_output.jsonl
 data/review_summary_batch_id.txt
