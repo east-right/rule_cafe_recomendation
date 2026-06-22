@@ -36,8 +36,10 @@ def load_cafes() -> None:
         rows.append((name, None, None))
 
     with get_connection() as conn:
+        conn.execute("DELETE FROM cafe_keywords")
+        conn.execute("DELETE FROM cafes")
         conn.executemany(
-            "INSERT OR IGNORE INTO cafes (name, address, status) VALUES (?, ?, ?)",
+            "INSERT INTO cafes (name, address, status) VALUES (?, ?, ?)",
             rows,
         )
     print(f"[INFO] cafes 적재 완료: {len(rows)}개 (주소 없는 매장: {len(missing)}개)")
