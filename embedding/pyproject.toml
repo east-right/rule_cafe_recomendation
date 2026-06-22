@@ -5,6 +5,7 @@ description = "임베딩 모델 파인튜닝 전용 서브 환경(Runpod A40)"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "torch==2.8.0",
     "accelerate",
     "huggingface_hub",
     "sentencepiece",
@@ -15,3 +16,11 @@ dependencies = [
     "transformers==4.44.2",
     "peft==0.13.0",
 ]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
