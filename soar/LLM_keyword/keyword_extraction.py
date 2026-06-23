@@ -1,6 +1,8 @@
 import asyncio
+import csv
 import json
 import os
+from collections import defaultdict
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -14,13 +16,44 @@ client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 DATA_PATH = Path("../../data/rule_metadata_merged.json")
 OUTPUT_PATH = Path("../../data/soar_rule_keywords.json")
+GENERIC_PATH = Path("../../data/generic_keywords.json")
+MARKET_PATH = Path("../../data/market_item.csv")
+
+# generic 키워드 → 매장 item의 긍정 descriptor 목록
+GENERIC = set(json.load(open(GENERIC_PATH, encoding="utf-8"))["generic"])
+GENERIC_DESCS: dict[str, list[str]] = defaultdict(list)
+with open(MARKET_PATH, encoding="utf-8-sig") as _f:
+    _seen = set()
+    for _r in csv.DictReader(_f):
+        _kw, _d = _r["키워드"], _r["대표descriptor"].strip()
+        if _kw in GENERIC and _d and _r["sentiment"] == "긍정" and (_kw, _d) not in _seen:
+            _seen.add((_kw, _d))
+            GENERIC_DESCS[_kw].append(f"{_kw}_{_d}")
+
+
+def expand_keywords(keywords: list[str]) -> list[str]:
+    """generic 키워드는 '키워드_descriptor' 후보들로 확장(cafe.db와 동일 형식),
+    나머지는 그대로. → operator/tiebreak가 매장 item과 매칭되는 형식으로 선택되게 함."""
+    pool: list[str] = []
+    for kw in keywords:
+        if kw in GENERIC and GENERIC_DESCS.get(kw):
+            pool.extend(GENERIC_DESCS[kw])
+        else:
+            pool.append(kw)
+    # 순서 보존 중복 제거
+    seen, out = set(), []
+    for k in pool:
+        if k not in seen:
+            seen.add(k)
+            out.append(k)
+    return out
 
 
 async def extract_keywords(rule: dict) -> dict:
     user_prompt = RULE_KEYWORD_EXTRACTION_USER.format(
         title=rule["title"],
         description=rule["description"],
-        keywords=rule["keywords"],
+        keywords=expand_keywords(rule["keywords"]),
     )
 
     response = await client.chat.completions.create(
@@ -39,8 +72,9 @@ async def extract_keywords(rule: dict) -> dict:
 
 def sanitize_result(result: dict, rule: dict) -> dict:
     """풀 이탈 키워드만 제거하고 나머지는 살린다. operator가 다 이탈하면
-    keywords 앞부분으로 fallback (통째로 버려 rule이 누락되는 것 방지)."""
-    keyword_pool = set(rule["keywords"])
+    확장 풀 앞부분으로 fallback (통째로 버려 rule이 누락되는 것 방지)."""
+    pool = expand_keywords(rule["keywords"])
+    keyword_pool = set(pool)
 
     ops = [kw for kw in result.get("operator_keywords", []) if kw in keyword_pool]
     tbs = [kw for kw in result.get("tiebreak_keywords", []) if kw in keyword_pool]
@@ -51,8 +85,8 @@ def sanitize_result(result: dict, rule: dict) -> dict:
         print(f"[{rule['title']}] 풀 이탈 키워드 제거: {dropped}")
 
     if not ops:
-        ops = rule["keywords"][:5]
-        print(f"[{rule['title']}] operator 전부 이탈 → keywords 앞 5개로 fallback")
+        ops = pool[:5]
+        print(f"[{rule['title']}] operator 전부 이탈 → 확장 풀 앞 5개로 fallback")
 
     return {
         "title": rule["title"],
@@ -62,10 +96,10 @@ def sanitize_result(result: dict, rule: dict) -> dict:
 
 
 def make_single_keyword_rule(rule: dict) -> dict:
-    """키워드 1개짜리 rule은 LLM 없이 바로 생성"""
+    """키워드 1개짜리 rule은 LLM 없이 바로 생성 (generic이면 descriptor 확장 적용)"""
     return {
         "title": rule["title"],
-        "operator_keywords": rule["keywords"],
+        "operator_keywords": expand_keywords(rule["keywords"]),
         "tiebreak_keywords": []
     }
 
