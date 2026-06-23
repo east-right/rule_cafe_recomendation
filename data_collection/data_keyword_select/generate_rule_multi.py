@@ -101,6 +101,30 @@ def _dedup_extend(base: list, extra: list) -> list:
     return out
 
 
+# 조합에서 변별력이 약한(흔한) 개념 — 이게 한쪽이면 single과 구별 안 됨
+GENERIC_CONCEPTS = {
+    "감성", "분위기", "인테리어", "힐링", "휴식", "여유", "청결", "청결 상태", "채광",
+    "조명", "소품", "아지트", "공간", "커피향", "차분함", "대화", "사진", "사진찍기",
+    "테이크아웃", "편안한 분위기", "편안함", "음악", "코지", "낭만", "카페", "맛", "향",
+    "힐링 카페", "편안한 공간",
+}
+
+
+def drop_weak_multi(rules: list) -> list:
+    """변별 개념(generic 제외)이 2개 미만인 multi(약한 조합) 제거.
+    single은 전부 유지."""
+    out = []
+    for x in rules:
+        if x.get("confidence") != "multi":
+            out.append(x)
+            continue
+        distinct = [s["keyword"] for s in x.get("seed_keywords", [])
+                    if s["keyword"] not in GENERIC_CONCEPTS]
+        if len(distinct) >= 2:
+            out.append(x)
+    return out
+
+
 def dedup_permutation_multi(rules: list) -> list:
     """seed 개념 집합이 같은 multi(순열 중복: 힐링독서=독서힐링)를 하나로 병합.
     대표는 먼저 나온 것, 나머지의 question/merged_questions/keywords를 대표로 흡수."""
@@ -328,6 +352,10 @@ def main():
     # 순열 중복 병합 (seed 개념 집합 동일 multi 통합)
     rule_data["unique_rules"] = dedup_permutation_multi(rule_data["unique_rules"])
     print(f"   순열중복 병합 후: {len(rule_data['unique_rules'])}개")
+
+    # 약한 조합 제거 (변별 개념 < 2)
+    rule_data["unique_rules"] = drop_weak_multi(rule_data["unique_rules"])
+    print(f"   약한조합 제거 후: {len(rule_data['unique_rules'])}개")
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(rule_data, f, ensure_ascii=False, indent=2)
