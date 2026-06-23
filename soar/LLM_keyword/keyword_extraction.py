@@ -37,24 +37,28 @@ async def extract_keywords(rule: dict) -> dict:
     return result
 
 
-def validate_result(result: dict, rule: dict) -> bool:
+def sanitize_result(result: dict, rule: dict) -> dict:
+    """풀 이탈 키워드만 제거하고 나머지는 살린다. operator가 다 이탈하면
+    keywords 앞부분으로 fallback (통째로 버려 rule이 누락되는 것 방지)."""
     keyword_pool = set(rule["keywords"])
 
-    for kw in result.get("operator_keywords", []):
-        if kw not in keyword_pool:
-            print(f"[{rule['title']}] operator_keyword 풀 이탈: {kw}")
-            return False
+    ops = [kw for kw in result.get("operator_keywords", []) if kw in keyword_pool]
+    tbs = [kw for kw in result.get("tiebreak_keywords", []) if kw in keyword_pool]
 
-    for kw in result.get("tiebreak_keywords", []):
-        if kw not in keyword_pool:
-            print(f"[{rule['title']}] tiebreak_keyword 풀 이탈: {kw}")
-            return False
+    dropped = [kw for kw in result.get("operator_keywords", []) + result.get("tiebreak_keywords", [])
+               if kw not in keyword_pool]
+    if dropped:
+        print(f"[{rule['title']}] 풀 이탈 키워드 제거: {dropped}")
 
-    if len(result.get("operator_keywords", [])) < 1:
-        print(f"[{rule['title']}] operator_keywords 비어있음")
-        return False
+    if not ops:
+        ops = rule["keywords"][:5]
+        print(f"[{rule['title']}] operator 전부 이탈 → keywords 앞 5개로 fallback")
 
-    return True
+    return {
+        "title": rule["title"],
+        "operator_keywords": ops,
+        "tiebreak_keywords": tbs,
+    }
 
 
 def make_single_keyword_rule(rule: dict) -> dict:
@@ -107,10 +111,8 @@ async def main():
         if isinstance(response, Exception):
             print(f"[{rule['title']}] 오류: {response}")
             failed.append(rule["title"])
-        elif validate_result(response, rule):
-            results.append(response)
         else:
-            failed.append(rule["title"])
+            results.append(sanitize_result(response, rule))
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
