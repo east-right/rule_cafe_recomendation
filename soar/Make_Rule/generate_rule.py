@@ -140,19 +140,28 @@ def generate_soar_rule(rule: dict) -> str:
 
 
 def main():
+    import sys
+
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         rules = json.load(f)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    for rule in rules:
-        title = rule["title"].replace(" ", "_")
-        soar_content = generate_soar_rule(rule)
-        output_path = OUTPUT_DIR / f"{title}.soar"
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write(soar_content)
+    # .soar는 추론 로직 시각화/검증용 참고 산출물이라 대표 1개만 생성한다.
+    # 인자로 title 지정 가능, 없으면 첫 rule.
+    target = sys.argv[1] if len(sys.argv) > 1 else rules[0]["title"]
+    rule = next((r for r in rules if r["title"] == target), None)
+    if rule is None:
+        print(f"[ERROR] '{target}' rule 없음. 사용 가능: {[r['title'] for r in rules[:5]]} ...")
+        return
 
-    print(f"완료: {len(rules)}개 .soar 파일 생성 → {OUTPUT_DIR}")
+    title = rule["title"].replace(" ", "_")
+    soar_content = generate_soar_rule(rule)
+    output_path = OUTPUT_DIR / f"{title}.soar"
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(soar_content)
+
+    print(f"완료: 대표 .soar 1개 생성 → {output_path}")
 
 
 if __name__ == "__main__":
