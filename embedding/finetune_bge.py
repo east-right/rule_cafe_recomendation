@@ -39,7 +39,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── 파인튜닝 설정 ──────────────────────────────────────────────
 MODEL_NAME   = "BAAI/bge-m3"
-EPOCHS       = 3
+EPOCHS       = 5
 BATCH_SIZE   = 16
 LR           = 1e-5
 MAX_LENGTH   = 512
