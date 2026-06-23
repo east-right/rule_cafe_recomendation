@@ -1,10 +1,10 @@
 import os
 import sqlite3
 import sys
-import tempfile
 from pathlib import Path
 
 from dotenv import load_dotenv
+from langfuse import get_client, observe
 
 from service.state import AgentState
 
@@ -49,9 +49,14 @@ sp {apply*recommend-cafe*send-to-python
 """
 
 
-def _make_operator(title: str, operator_keywords: list[str]) -> str:
-    kw_list = " ".join([f"|{kw}|" for kw in operator_keywords])
-    return f"""sp {{recommend*OPERATOR*{title}
+def _build_kw_map(operator_keywords: list[str], tiebreak_keywords: list[str]) -> dict[str, str]:
+    """한국어 키워드 → ASCII ID 매핑 (Soar 파서 인코딩 이슈 회피)."""
+    return {kw: f"kw{i}" for i, kw in enumerate(operator_keywords + tiebreak_keywords)}
+
+
+def _make_operator(op_ids: list[str]) -> str:
+    kw_list = " ".join(op_ids)
+    return f"""sp {{recommend-OPERATOR
    (state <s> ^io.input-link <il>)
    (<il> ^cafe <c>)
    (<c> ^name <c-name> ^keyword << {kw_list} >>)
@@ -62,56 +67,58 @@ def _make_operator(title: str, operator_keywords: list[str]) -> str:
 """
 
 
-def _make_s1_judge(title: str, keyword: str) -> str:
-    return f"""sp {{recommend*S1*judge*{title}
+def _make_s1_judge(kw_id: str) -> str:
+    return f"""sp {{recommend-S1-judge
    (state <s> ^operator <o1> +
               ^operator <o2> +
               ^io.input-link <il>)
    (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
    (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
    (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name> ^keyword |{keyword}|)
+   (<c1> ^name <c1-name> ^keyword {kw_id})
    (<c2> ^name <c2-name>)
-   - {{ (<c2> ^keyword |{keyword}|) }}
+   - {{ (<c2> ^keyword {kw_id}) }}
 -->
    (<s> ^operator <o1> > <o2>)
 }}
 """
 
 
-def _make_sn_judge(title: str, keyword: str, depth: int) -> str:
+def _make_sn_judge(kw_id: str, depth: int) -> str:
+    # fires in Soar's S{depth} (depth-1 levels deep from top state S1)
     chain = "".join(
         f"   (<s{i}> ^superstate nil)\n" if i == 1
         else f"   (<s{i}> ^superstate <s{i-1}>)\n"
-        for i in range(1, depth + 1)
+        for i in range(1, depth)  # s1..s{depth-1}
     )
-    return f"""sp {{resolve*tie*S{depth}*judge*{title}
+    return f"""sp {{resolve-tie-S{depth}-judge
    (state <s> ^impasse <any-impasse>
-              ^superstate <s{depth}>
+              ^superstate <s{depth-1}>
               ^item <o1> ^item <o2>
               ^top-state <ts>)
 {chain}   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
    (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
    (<ts> ^io.input-link <il>)
    (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name> ^keyword |{keyword}|)
+   (<c1> ^name <c1-name> ^keyword {kw_id})
    (<c2> ^name <c2-name>)
-   - {{ (<c2> ^keyword |{keyword}|) }}
+   - {{ (<c2> ^keyword {kw_id}) }}
 -->
-   (<s{depth-1}> ^operator <o1> > <o2>)
+   (<s1> ^operator <o1> > <o2>)
 }}
 """
 
 
-def _make_llm_fallback(title: str, depth: int) -> str:
+def _make_llm_fallback(depth: int) -> str:
+    # fires in Soar's S{depth} (depth-1 levels deep from top state S1)
     chain = "".join(
         f"   (<s{i}> ^superstate nil)\n" if i == 1
         else f"   (<s{i}> ^superstate <s{i-1}>)\n"
-        for i in range(1, depth + 1)
+        for i in range(1, depth)  # s1..s{depth-1}
     )
-    return f"""sp {{resolve*tie*S{depth}*ask-llm*{title}
+    return f"""sp {{resolve-tie-S{depth}-ask-llm
    (state <s> ^impasse <any-impasse>
-              ^superstate <s{depth}>
+              ^superstate <s{depth-1}>
               ^item <o1> ^item <o2>
               ^top-state <ts>)
 {chain}   (<o1> ^cafe-name <c1-name>)
@@ -126,19 +133,23 @@ def _make_llm_fallback(title: str, depth: int) -> str:
 """
 
 
-def _build_soar_rule(title: str, operator_keywords: list[str], tiebreak_keywords: list[str]) -> str:
-    safe_title = title.replace(" ", "_")
-    parts = [_BOILERPLATE, _make_operator(safe_title, operator_keywords)]
+def _build_soar_rule(
+    operator_keywords: list[str],
+    tiebreak_keywords: list[str],
+    kw_map: dict[str, str],
+) -> str:
+    op_ids = [kw_map[kw] for kw in operator_keywords]
+    parts = [_BOILERPLATE, _make_operator(op_ids)]
 
     if tiebreak_keywords:
-        parts.append(_make_s1_judge(safe_title, tiebreak_keywords[0]))
+        parts.append(_make_s1_judge(kw_map[tiebreak_keywords[0]]))
         for i, kw in enumerate(tiebreak_keywords[1:], start=2):
-            parts.append(_make_sn_judge(safe_title, kw, i))
+            parts.append(_make_sn_judge(kw_map[kw], i))
         llm_depth = len(tiebreak_keywords) + 1
     else:
         llm_depth = 1
 
-    parts.append(_make_llm_fallback(safe_title, llm_depth))
+    parts.append(_make_llm_fallback(llm_depth))
     return "\n".join(parts)
 
 
@@ -187,23 +198,30 @@ def _trace_tiebreak(
 
 # ── output-link 파싱 ───────────────────────────────────────────
 
-def _parse_output(output_link) -> dict:
+def _parse_output(agent) -> dict:
     result = {"type": "no_output", "cafe": None, "candidates": []}
-    n = output_link.GetNumberChildren()
-    for i in range(n):
-        wme = output_link.GetChild(i)
-        attr = wme.GetAttribute()
-        if attr == "final-recommendation":
-            result["type"] = "recommendation"
-            result["cafe"] = wme.GetValueAsString()
-        elif attr == "ask-llm":
+
+    output_link = agent.GetOutputLink()
+    if output_link is None:
+        return result
+
+    cafe_name = output_link.GetParameterValue("final-recommendation")
+    if cafe_name:
+        result["type"] = "recommendation"
+        result["cafe"] = cafe_name
+        return result
+
+    num_commands = agent.GetNumberCommands()
+    for i in range(num_commands):
+        command = agent.GetCommand(i)
+        if command.GetCommandName() == "ask-llm":
             result["type"] = "impasse"
-            if wme.IsIdentifier():
-                req_id = wme.ConvertToIdentifier()
-                for j in range(req_id.GetNumberChildren()):
-                    req_wme = req_id.GetChild(j)
-                    if req_wme.GetAttribute() in ("cand1", "cand2"):
-                        result["candidates"].append(req_wme.GetValueAsString())
+            cand1 = command.GetParameterValue("cand1")
+            cand2 = command.GetParameterValue("cand2")
+            if cand1:
+                result["candidates"].append(cand1)
+            if cand2:
+                result["candidates"].append(cand2)
 
     if result["type"] == "impasse":
         result["candidates"] = list(dict.fromkeys(result["candidates"]))
@@ -212,43 +230,45 @@ def _parse_output(output_link) -> dict:
 
 # ── 노드 진입점 ────────────────────────────────────────────────
 
+@observe()
 def run(state: AgentState) -> AgentState:
     title = state["selected_rule"]
     operator_keywords = state["operator_keywords"]
     tiebreak_keywords = state["tiebreak_keywords"]
 
-    rule_str = _build_soar_rule(title, operator_keywords, tiebreak_keywords)
+    kw_map = _build_kw_map(operator_keywords, tiebreak_keywords)
+    rule_str = _build_soar_rule(operator_keywords, tiebreak_keywords, kw_map)
     cafe_items = _load_cafe_items()
     tiebreak_trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, cafe_items)
 
     kernel = sml.Kernel.CreateKernelInNewThread()
     agent = kernel.CreateAgent("cafe-recommender")
-
-    with tempfile.NamedTemporaryFile(
-        mode="w", suffix=".soar", delete=False, encoding="utf-8"
-    ) as f:
-        f.write(rule_str)
-        temp_path = f.name
-
-    try:
-        agent.LoadProductions(temp_path)
-    finally:
-        os.unlink(temp_path)
-
     input_link = agent.GetInputLink()
+
+    # 이전 프로젝트와 동일: 데이터 먼저 → Commit → 룰 로드 → Run
     for cafe_name, keywords in cafe_items.items():
-        cafe_id = input_link.CreateIdWME("cafe")
-        cafe_id.CreateStringWME("name", cafe_name)
+        cafe_id = agent.CreateIdWME(input_link, "cafe")
+        agent.CreateStringWME(cafe_id, "name", cafe_name)
         for kw in keywords:
-            cafe_id.CreateStringWME("keyword", kw)
+            if kw in kw_map:
+                agent.CreateStringWME(cafe_id, "keyword", kw_map[kw])
 
     agent.Commit()
+    agent.ExecuteCommandLine(rule_str)
     agent.RunSelfTilOutput()
 
-    soar_result = _parse_output(agent.GetOutputLink())
+    soar_result = _parse_output(agent)
     soar_result["trace"] = tiebreak_trace
 
     kernel.Shutdown()
     del kernel
 
+    get_client().update_current_span(
+        input={
+            "title": title,
+            "operator_keywords": operator_keywords,
+            "tiebreak_keywords": tiebreak_keywords,
+        },
+        output=soar_result,
+    )
     return {"soar_result": soar_result}
