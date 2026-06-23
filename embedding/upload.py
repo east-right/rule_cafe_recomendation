@@ -71,14 +71,16 @@ tags:
 
 | 지표 | BGE-M3-ko (기준) | 파인튜닝 후 | 향상 |
 |------|:-:|:-:|:-:|
-| Recall@1 | 0.3017 | 0.5237 | **+0.2220 ↑** |
-| Recall@5 | 0.5387 | 0.8279 | **+0.2892 ↑** |
-| Recall@10 | 0.6284 | 0.9077 | **+0.2793 ↑** |
+| Recall@1 | 0.281 | 0.545 | **+0.264 ↑** |
+| Recall@5 | 0.519 | 0.822 | **+0.303 ↑** |
+| Recall@10 | 0.619 | 0.888 | **+0.269 ↑** |
+| Recall@20 | 0.679 | 0.962 | **+0.284 ↑** |
 
 ## 학습 데이터
 
 - 데이터셋: [{DATASET_REPO_ID}](https://huggingface.co/datasets/{DATASET_REPO_ID}) (private)
-- query-pos 쌍 2002개 → train 1601 / test 401 (stratified by confidence, seed=42)
+- query-pos 2002쌍 → confidence stratify 80/20 split (seed=42)
+- 메뉴-복합 증강(split 후 train/test 각각) + 하드 네거티브 7개/query
 
 ## 파인튜닝 설정
 
