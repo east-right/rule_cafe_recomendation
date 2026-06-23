@@ -67,23 +67,24 @@ tags:
 
 카페 추천 시스템의 Rule 검색 성능 향상을 위해 `BAAI/bge-m3`를 도메인 특화 파인튜닝한 모델입니다.
 
-## 성능
+## 성능 (test set, 검색 대상 rule 180개)
 
 | 지표 | BGE-M3-ko (기준) | 파인튜닝 후 | 향상 |
 |------|:-:|:-:|:-:|
-| Recall@1 | 0.364 | 0.5307 | **+0.1667 ↑** |
-| Recall@5 | 0.5307 | 0.8465 | **+0.3158 ↑** |
-| Recall@10 | 0.6272 | 0.9079 | **+0.2807 ↑** |
+| Recall@1 | 0.3017 | 0.5237 | **+0.2220 ↑** |
+| Recall@5 | 0.5387 | 0.8279 | **+0.2892 ↑** |
+| Recall@10 | 0.6284 | 0.9077 | **+0.2793 ↑** |
 
 ## 학습 데이터
 
 - 데이터셋: [{DATASET_REPO_ID}](https://huggingface.co/datasets/{DATASET_REPO_ID}) (private)
-- train: 908개 / test: 228개 (stratified split by confidence, seed=42)
+- query-pos 쌍 2002개 → train 1601 / test 401 (stratified by confidence, seed=42)
 
 ## 파인튜닝 설정
 
 - 베이스 모델: `BAAI/bge-m3`
-- Epoch: 3, Batch: 16, LR: 1e-5, Temperature: 0.02
+- Epoch: 5, Batch: 16, LR: 1e-5, Temperature: 0.02
+- 하드 네거티브 7개/query (train_group_size 8) — 베이스 모델로 채굴
 - GPU: NVIDIA A40, fp16
 """
     api.upload_file(

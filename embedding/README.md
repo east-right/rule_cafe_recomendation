@@ -26,13 +26,15 @@ SOAR 실행 → 매장 추천
 
 | 지표 | BGE-M3-ko (기준) | 파인튜닝 후 | 향상 |
 |------|:-:|:-:|:-:|
-| Recall@1 | 0.3509 | 0.5307 | **+0.1798 ↑** |
-| Recall@5 | 0.5395 | 0.8114 | **+0.2719 ↑** |
-| Recall@10 | 0.6184 | 0.8728 | **+0.2544 ↑** |
+| Recall@1 | 0.3017 | 0.5237 | **+0.2220 ↑** |
+| Recall@5 | 0.5387 | 0.8279 | **+0.2892 ↑** |
+| Recall@10 | 0.6284 | **0.9077** | **+0.2793 ↑** |
 
-- 평가 데이터: test set 228개 (전체 1136개의 20%)
+- 검색 대상: rule 180개 (single 97 + multi 83)
+- 평가 데이터: test set 401개 (전체 2002개의 20%)
 - 비교 모델: `dragonkue/BGE-m3-ko`
 - 파인튜닝 모델: HuggingFace에 업로드
+- 하드 네거티브 7개/query 채굴 적용 (v1 대비 Recall 향상)
 
 ---
 
@@ -57,14 +59,14 @@ embedding/
 ## 학습 데이터 구성
 
 ```
-data/rule_metadata_merged.json (313개 rule)
+data/rule_metadata_merged.json (180개 rule)
     ↓
 각 rule의 question + merged_questions → query
 각 rule의 description → positive
-랜덤 다른 rule description → negative (easy negative)
+베이스 모델로 채굴한 헷갈리는 rule description → hard negative (7개/query)
     ↓
-전체 1136개 query-pos-neg 쌍
-train: 908개 (80%) / test: 228개 (20%), seed=42
+전체 2002개 query-pos 쌍
+train: 1601개 (80%) / test: 401개 (20%), seed=42
 ```
 
 ---
@@ -74,7 +76,7 @@ train: 908개 (80%) / test: 228개 (20%), seed=42
 | 항목 | 값 |
 |------|-----|
 | 베이스 모델 | `BAAI/bge-m3` |
-| Epoch | 3 |
+| Epoch | 5 |
 | Batch Size | 16 |
 | Learning Rate | 1e-5 |
 | Temperature | 0.02 |
@@ -118,7 +120,14 @@ sentencepiece
 numpy
 ```
 
-## 피드백
-- 데이터 전처리 퀄리티가 떨어져 하드 네거티브 데이터셋 구축 사용 부적합
-    - 오히려 결과를 더 나쁘게 만들 위험 야기
-- 좋은 데이터셋으로 파인튜닝 시 dense 버전 보단 sparse 사용 예정
+## v2 변경점
+- 데이터 정규화(v2 market_item) 후 rule 셋 재생성 → 검색 대상 180개 (single 97 + multi 83)
+- multi rule 순열 중복 통합 + 약한 조합 제거로 검색 공간 sparse화 → Recall 상승
+- **하드 네거티브 채굴 적용** (v1에선 데이터 품질 문제로 보류했던 것):
+  베이스 모델로 query별 가장 헷갈리는 rule을 neg로 채굴(7개) → 미세 분리 학습
+  → Recall@10 0.87 → **0.91** 돌파
+
+## 남은 과제
+- rule description이 다소 generic("~분들을 위한 추천")해서 유의어 rule 간 1위 경쟁 발생
+  (R@1 0.52) → 최종 선택은 후속 sLLM 단계가 담당
+- 검색 검사: `inspect_retrieval.py`로 오답 케이스 확인 가능
