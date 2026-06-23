@@ -92,6 +92,41 @@ def filter_multi_rules(rules: list) -> list:
     return singles + kept
 
 
+def _dedup_extend(base: list, extra: list) -> list:
+    seen = set(base)
+    out = list(base)
+    for x in extra:
+        if x not in seen:
+            seen.add(x); out.append(x)
+    return out
+
+
+def dedup_permutation_multi(rules: list) -> list:
+    """seed 개념 집합이 같은 multi(순열 중복: 힐링독서=독서힐링)를 하나로 병합.
+    대표는 먼저 나온 것, 나머지의 question/merged_questions/keywords를 대표로 흡수."""
+    singles = [x for x in rules if x.get("confidence") != "multi"]
+    multis  = [x for x in rules if x.get("confidence") == "multi"]
+    groups, order = {}, []
+    for m in multis:
+        key = frozenset(s["keyword"] for s in m.get("seed_keywords", []))
+        if not key:
+            key = ("__title__", m["title"])   # seed 없으면 단독 유지
+        if key not in groups:
+            m.setdefault("merged_questions", [])
+            groups[key] = m
+            order.append(key)
+        else:
+            rep = groups[key]
+            extra = list(m.get("merged_questions", []))
+            if m.get("question"):
+                extra.append(m["question"])
+            rep["merged_questions"]  = _dedup_extend(rep["merged_questions"], extra)
+            rep["keywords"]          = _dedup_extend(rep.get("keywords", []), m.get("keywords", []))
+            rep["negative_keywords"] = _dedup_extend(rep.get("negative_keywords", []), m.get("negative_keywords", []))
+            rep["source_count"]      = rep.get("source_count", 1) + m.get("source_count", 1)
+    return singles + [groups[k] for k in order]
+
+
 def build_combined_keywords(q: dict, kw_to_rule_keywords: dict) -> list:
     """seed_keywords가 속한 rule들의 keywords 합집합"""
     combined = set()
@@ -289,6 +324,10 @@ def main():
     # 후처리 필터: 3글자 이하 / single title 중복 / multi끼리 중복 제거
     rule_data["unique_rules"] = filter_multi_rules(rule_data["unique_rules"])
     print(f"   필터 후 전체 rule 수: {len(rule_data['unique_rules'])}개")
+
+    # 순열 중복 병합 (seed 개념 집합 동일 multi 통합)
+    rule_data["unique_rules"] = dedup_permutation_multi(rule_data["unique_rules"])
+    print(f"   순열중복 병합 후: {len(rule_data['unique_rules'])}개")
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(rule_data, f, ensure_ascii=False, indent=2)

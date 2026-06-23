@@ -5470,7 +5470,9 @@
         "아늑함",
         "감성",
         "편안한 분위기",
-        "포토존"
+        "포토존",
+        "아름다움",
+        "청결"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -5494,47 +5496,10 @@
           "keyword": "리유저블컵"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "미감리유",
-      "description": "미감 스타일의 감성적이고 아름다운 인테리어를 갖추고 환경을 생각하는 리유저블컵을 사용하는 카페를 추천합니다.",
-      "keywords": [
-        "미감",
-        "카페",
-        "리유저블컵",
-        "아름다움",
-        "인테리어",
-        "감성",
-        "청결"
+      "merged_questions": [
+        "미감 스타일의 카페 중 환경 생각하는 리유저블컵 있는 곳 추천해 주세요."
       ],
-      "negative_keywords": [
-        "일회용컵",
-        "시끄럽다",
-        "사람 많다",
-        "흡연실",
-        "소음"
-      ],
-      "question": "미감 스타일의 카페 중 환경 생각하는 리유저블컵 있는 곳 추천해 주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "미감"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "카페"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "리유저블컵"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -5548,7 +5513,8 @@
         "조용한 카페",
         "한적한 분위기",
         "편안한 분위기",
-        "차분함"
+        "차분함",
+        "편안한 좌석"
       ],
       "negative_keywords": [
         "활기",
@@ -5572,47 +5538,10 @@
           "keyword": "식물"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "독서힐링",
-      "description": "식물이 가득하고 편안한 분위기에서 조용히 책을 읽으며 힐링할 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "독서실모드",
-        "힐링",
-        "식물",
-        "편안한 분위기",
-        "조용한 카페",
-        "편안한 좌석",
-        "한적한 분위기"
+      "merged_questions": [
+        "편안하게 쉬면서 책 읽기 좋은 식물 가득한 카페 있나요?"
       ],
-      "negative_keywords": [
-        "활기",
-        "음악",
-        "시끄럽다",
-        "사람 많다",
-        "소음"
-      ],
-      "question": "편안하게 쉬면서 책 읽기 좋은 식물 가득한 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "독서실모드"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "힐링"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "식물"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -5627,7 +5556,14 @@
         "편안한 분위기",
         "소파",
         "공간",
-        "카페"
+        "카페",
+        "개방감",
+        "인테리어",
+        "복층",
+        "통창",
+        "쉬는날없이운영",
+        "감성",
+        "소품"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -5647,79 +5583,11 @@
           "keyword": "구조"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "특이구조24시",
-      "description": "24시간 운영하며 내부 구조가 독특하고 개방감 있는 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "24시간",
-        "구조",
-        "개방감",
-        "인테리어",
-        "복층",
-        "통창",
-        "편안한 분위기"
+      "merged_questions": [
+        "언제 가도 열려 있으면서 내부 구조가 특이한 카페 있어?",
+        "24시간 영업하면서 내부 인테리어가 독창적인 카페 추천 부탁해."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "언제 가도 열려 있으면서 내부 구조가 특이한 카페 있어?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "24시간"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "구조"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "24시간인테리어",
-      "description": "24시간 영업하며 독창적인 내부 인테리어와 구조가 돋보이는 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "24시간",
-        "쉬는날없이운영",
-        "인테리어",
-        "구조",
-        "감성",
-        "아늑함",
-        "편안한 분위기",
-        "소품"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "24시간 영업하면서 내부 인테리어가 독창적인 카페 추천 부탁해.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "24시간"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "구조"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -5770,7 +5638,9 @@
         "힐링",
         "뷰",
         "야외",
-        "감성"
+        "감성",
+        "개방감",
+        "음료 트레이"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -5790,42 +5660,10 @@
           "keyword": "루프탑"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "루프탑음료",
-      "description": "루프탑에서 날씨 좋은 환경과 원하는 온도의 음료를 즐길 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "루프탑",
-        "커피음료온도조절",
-        "개방감",
-        "뷰",
-        "야외",
-        "편안한 분위기",
-        "음료 트레이"
+      "merged_questions": [
+        "루프탑에서 날씨도 좋고 내가 원하는 온도의 음료를 마실 수 있는 곳 있을까요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악"
-      ],
-      "question": "루프탑에서 날씨도 좋고 내가 원하는 온도의 음료를 마실 수 있는 곳 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "커피음료온도조절"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "루프탑"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -5840,14 +5678,20 @@
         "소품",
         "인테리어",
         "포토존",
-        "아지트"
+        "아지트",
+        "공간",
+        "전시공간",
+        "카페",
+        "공기",
+        "내부"
       ],
       "negative_keywords": [
         "흡연실",
         "담배냄새",
         "시끄럽다",
         "사람 많다",
-        "좁다"
+        "좁다",
+        "소음"
       ],
       "question": "향기로운 분위기와 다양한 피규어를 볼 수 있는 카페 추천해 주세요.",
       "seed_keywords": [
@@ -5860,114 +5704,12 @@
           "keyword": "피규어"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "피규어냄새",
-      "description": "특별한 냄새가 나면서 피규어가 많은 카페를 찾는 분들을 위한 규칙입니다. 독특한 향과 다양한 피규어 소품이 있는 아지트 같은 공간을 추천합니다.",
-      "keywords": [
-        "냄새",
-        "피규어",
-        "아지트",
-        "소품",
-        "감성",
-        "공간",
-        "인테리어"
+      "merged_questions": [
+        "특별한 냄새가 나는 곳에 피규어가 많은 카페 알려줄 수 있나요?",
+        "좋은 향기가 감도는 피규어들이 진열된 카페를 찾고 있어요.",
+        "향기로운 공기와 멋진 피규어 컬렉션이 있는 카페가 있나요?"
       ],
-      "negative_keywords": [
-        "흡연실",
-        "담배냄새",
-        "시끄럽다",
-        "사람 많다",
-        "좁다"
-      ],
-      "question": "특별한 냄새가 나는 곳에 피규어가 많은 카페 알려줄 수 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "냄새"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "피규어"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "향기피규어",
-      "description": "좋은 향기가 감도는 공간에서 다양한 피규어가 진열된 감성적인 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "냄새",
-        "피규어",
-        "향",
-        "감성",
-        "인테리어",
-        "전시공간",
-        "카페"
-      ],
-      "negative_keywords": [
-        "흡연실",
-        "시끄럽다",
-        "소음",
-        "사람 많다",
-        "담배냄새"
-      ],
-      "question": "좋은 향기가 감도는 피규어들이 진열된 카페를 찾고 있어요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "냄새"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "피규어"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "피규어향기",
-      "description": "향기로운 공기와 멋진 피규어 컬렉션이 조화를 이루는 감성적인 카페를 추천합니다.",
-      "keywords": [
-        "냄새",
-        "피규어",
-        "향",
-        "감성",
-        "인테리어",
-        "공기",
-        "소품",
-        "내부"
-      ],
-      "negative_keywords": [
-        "흡연실",
-        "담배냄새",
-        "시끄럽다",
-        "사람 많다",
-        "소음"
-      ],
-      "question": "향기로운 공기와 멋진 피규어 컬렉션이 있는 카페가 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "냄새"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "피규어"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 4,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -5982,7 +5724,8 @@
         "빠른 영업",
         "편안한 분위기",
         "대중교통",
-        "영업"
+        "영업",
+        "테이크아웃"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -6006,47 +5749,10 @@
           "keyword": "버스정류장"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "아침학생",
-      "description": "아침 시간에 버스정류장 근처에서 학생들이 편리하게 이용할 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "아침",
-        "학생",
-        "버스정류장",
-        "편리한 접근성",
-        "빠른 영업",
-        "테이크아웃",
-        "편안한 분위기"
+      "merged_questions": [
+        "학생들이 아침에 이용하기 좋은 버스정류장 근처 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악",
-        "흡연실"
-      ],
-      "question": "학생들이 아침에 이용하기 좋은 버스정류장 근처 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "아침"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "학생"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "버스정류장"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6061,14 +5767,19 @@
         "소품",
         "인테리어",
         "포토존",
-        "아지트"
+        "아지트",
+        "편안한 분위기",
+        "소파",
+        "단체석"
       ],
       "negative_keywords": [
         "사람 많다",
         "시끄럽다",
         "음악",
         "단체석",
-        "사람"
+        "사람",
+        "소음",
+        "담배냄새"
       ],
       "question": "친구랑 특별한 컨셉의 공간에서 피규어도 감상할 수 있는 카페 알려줘!",
       "seed_keywords": [
@@ -6085,48 +5796,10 @@
           "keyword": "피규어"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "친구모임",
-      "description": "피규어를 좋아하는 친구와 함께 방문하기 좋은 분위기 있고 편안한 카페를 추천합니다.",
-      "keywords": [
-        "컨셉",
-        "친구",
-        "피규어",
-        "편안한 분위기",
-        "소파",
-        "단체석",
-        "인테리어",
-        "포토존"
+      "merged_questions": [
+        "피규어 좋아하는 친구랑 함께 즐길 만한 분위기 좋은 카페 추천 부탁해."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악",
-        "담배냄새"
-      ],
-      "question": "피규어 좋아하는 친구랑 함께 즐길 만한 분위기 좋은 카페 추천 부탁해.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "컨셉"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "친구"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "피규어"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6161,43 +5834,10 @@
           "keyword": "화장실"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "작업화장실",
-      "description": "작업하기 편리하고 청결한 화장실이 구비된 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "작업",
-        "화장실",
-        "청결",
-        "편안한 분위기",
-        "조용한 카페",
-        "콘센트",
-        "카공"
+      "merged_questions": [
+        "작업하면서 자주 가도 불편하지 않은 화장실이 있는 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "흡연실",
-        "냄새",
-        "담배냄새"
-      ],
-      "question": "작업하면서 자주 가도 불편하지 않은 화장실이 있는 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "작업"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "화장실"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6283,14 +5923,19 @@
         "넓은 공간",
         "편안함",
         "유모차",
-        "아이"
+        "아이",
+        "단체석",
+        "단체모임",
+        "청결"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "좁다",
         "불편하다",
-        "일회용컵"
+        "일회용컵",
+        "복잡하다",
+        "냄새"
       ],
       "question": "가족들이 편안하게 머물 수 있는 적당한 온도의 카페 중에 리유저블컵을 사용하는 곳이 있을까요?",
       "seed_keywords": [
@@ -6307,88 +5952,11 @@
           "keyword": "리유저블컵"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "가족모임",
-      "description": "가족 모임에 적합하며 실내 온도가 쾌적하고 친환경적으로 리유저블컵을 사용하는 카페를 추천합니다.",
-      "keywords": [
-        "가족",
-        "온도",
-        "리유저블컵",
-        "편안한 분위기",
-        "단체석",
-        "넓은 공간",
-        "편안함",
-        "단체모임"
+      "merged_questions": [
+        "가족 모임에 적합하고 실내 온도가 편안한 곳 중에서, 친환경적으로 리유저블컵을 사용하는 카페가 있나요?",
+        "가족과 함께 가기 좋은 쾌적한 온도의 카페 중에서 리유저블컵을 사용하는 장소를 추천해 주실 수 있나요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "불편하다",
-        "일회용컵"
-      ],
-      "question": "가족 모임에 적합하고 실내 온도가 편안한 곳 중에서, 친환경적으로 리유저블컵을 사용하는 카페가 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "온도"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "가족"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "리유저블컵"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "가족온도",
-      "description": "가족 단위 방문객이 쾌적한 온도 환경에서 리유저블컵을 사용하는 카페를 추천합니다.",
-      "keywords": [
-        "가족",
-        "온도",
-        "리유저블컵",
-        "넓은 공간",
-        "편안한 분위기",
-        "아이",
-        "유모차",
-        "청결"
-      ],
-      "negative_keywords": [
-        "사람 많다",
-        "시끄럽다",
-        "좁다",
-        "복잡하다",
-        "냄새"
-      ],
-      "question": "가족과 함께 가기 좋은 쾌적한 온도의 카페 중에서 리유저블컵을 사용하는 장소를 추천해 주실 수 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "온도"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "가족"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "리유저블컵"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6403,14 +5971,18 @@
         "편안한 분위기",
         "조경",
         "아지트",
-        "운치"
+        "운치",
+        "힐링",
+        "코지",
+        "나무"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "흡연실",
-        "담배냄새"
+        "담배냄새",
+        "좁다"
       ],
       "question": "저녁에 가기 좋은 숲속 산장 분위기의 건물 카페 추천해 주실 수 있나요?",
       "seed_keywords": [
@@ -6427,48 +5999,10 @@
           "keyword": "건물"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "저녁휴식",
-      "description": "저녁 시간에 숲속 산장 스타일의 건물에서 편안하게 쉴 수 있는 분위기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "숲속산장",
-        "저녁",
-        "건물",
-        "편안한 분위기",
-        "힐링",
-        "낭만",
-        "코지",
-        "나무"
+      "merged_questions": [
+        "저녁에 편안하게 쉴 수 있는 숲속 산장 스타일 건물 카페 추천해 주실래요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "흡연실",
-        "담배냄새",
-        "좁다"
-      ],
-      "question": "저녁에 편안하게 쉴 수 있는 숲속 산장 스타일 건물 카페 추천해 주실래요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "숲속산장"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "저녁"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "건물"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6482,14 +6016,18 @@
         "인테리어",
         "통창",
         "공간",
-        "조용한 카페"
+        "조용한 카페",
+        "감성",
+        "사진찍기",
+        "운치"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "복잡하다",
         "혼잡하다",
-        "좁다"
+        "좁다",
+        "불편하다"
       ],
       "question": "창문이 많아서 자연광이 잘 들어오고, 전시 작품도 감상할 수 있는 카페 추천해 주세요.",
       "seed_keywords": [
@@ -6502,44 +6040,10 @@
           "keyword": "전시공간"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "예술감성",
-      "description": "자연광이 잘 들어오고 예술 전시 공간이 마련된 감성적인 카페를 찾는 분들을 위한 추천 규칙입니다.",
-      "keywords": [
-        "채광",
-        "전시공간",
-        "인테리어",
-        "아름다움",
-        "감성",
-        "사진찍기",
-        "운치",
-        "공간"
+      "merged_questions": [
+        "자연광이 멋지고 예술 전시가 함께 있는 카페 어디가 좋을까요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "복잡하다",
-        "좁다",
-        "불편하다"
-      ],
-      "question": "자연광이 멋지고 예술 전시가 함께 있는 카페 어디가 좋을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "채광"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "전시공간"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6589,14 +6093,17 @@
         "편리한 위치",
         "쉬는날없이운영",
         "카페",
-        "영업"
+        "영업",
+        "테이크아웃"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "좁다",
         "답답하다",
-        "혼잡하다"
+        "혼잡하다",
+        "지하",
+        "계단"
       ],
       "question": "24시간 영업하는 입구가 편리한 카페 추천해 주세요.",
       "seed_keywords": [
@@ -6609,43 +6116,10 @@
           "keyword": "입구"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "출입용이",
-      "description": "언제든지 쉽게 출입할 수 있고 24시간 운영하는 편리한 접근성의 카페를 추천합니다.",
-      "keywords": [
-        "24시간",
-        "입구",
-        "편리한 접근성",
-        "쉬는날없이운영",
-        "편리한 위치",
-        "테이크아웃",
-        "카페"
+      "merged_questions": [
+        "언제든지 갈 수 있는, 출입이 쉬운 카페 있나요?"
       ],
-      "negative_keywords": [
-        "지하",
-        "계단",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "언제든지 갈 수 있는, 출입이 쉬운 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "24시간"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "입구"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6695,14 +6169,18 @@
         "편안한 분위기",
         "힐링",
         "쉼",
-        "공기"
+        "공기",
+        "여유",
+        "공간",
+        "테라스"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "복잡하다",
         "좁다",
-        "답답하다"
+        "답답하다",
+        "혼잡하다"
       ],
       "question": "집 주변에 바깥에서 쉴 수 있는 카페 어디 있을까요?",
       "seed_keywords": [
@@ -6715,44 +6193,10 @@
           "keyword": "야외"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "야외집근처",
-      "description": "집 근처에 위치하며 야외 공간이 마련된 편안하고 여유로운 분위기의 카페를 추천합니다.",
-      "keywords": [
-        "집근처",
-        "야외",
-        "편안한 분위기",
-        "여유",
-        "공간",
-        "조경",
-        "테라스",
-        "자연"
+      "merged_questions": [
+        "야외 공간이 마련된 집 근처 카페 알려주세요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "혼잡하다",
-        "좁다",
-        "답답하다"
-      ],
-      "question": "야외 공간이 마련된 집 근처 카페 알려주세요.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "집근처"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "야외"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6767,14 +6211,17 @@
         "향",
         "청결 상태",
         "차분함",
-        "내부"
+        "내부",
+        "커피향",
+        "분위기"
       ],
       "negative_keywords": [
         "사람 많다",
         "시끄럽다",
         "소음",
         "담배냄새",
-        "냄새"
+        "냄새",
+        "좁다"
       ],
       "question": "기분 좋은 향이 나면서 에어컨 시설 좋은 카페 알고 싶어요.",
       "seed_keywords": [
@@ -6787,43 +6234,10 @@
           "keyword": "에어컨"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "시원향기",
-      "description": "시원한 에어컨이 가동되고 향기로운 분위기가 느껴지는 쾌적한 카페를 찾는 분들을 위한 추천 규칙입니다.",
-      "keywords": [
-        "에어컨",
-        "냄새",
-        "향",
-        "시원함",
-        "커피향",
-        "분위기",
-        "청결 상태"
+      "merged_questions": [
+        "시원한 에어컨과 함께 향기로운 분위기가 있는 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "담배냄새",
-        "좁다"
-      ],
-      "question": "시원한 에어컨과 함께 향기로운 분위기가 있는 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "냄새"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "에어컨"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6838,7 +6252,9 @@
         "소품",
         "인테리어",
         "음료",
-        "카페"
+        "카페",
+        "낭만",
+        "커피향"
       ],
       "negative_keywords": [
         "일회용컵",
@@ -6858,44 +6274,10 @@
           "keyword": "리유저블컵"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "빈티지리유저블",
-      "description": "빈티지 스타일의 감성적인 분위기와 환경을 생각하는 리유저블컵을 사용하는 카페를 추천합니다.",
-      "keywords": [
-        "빈티지",
-        "리유저블컵",
-        "감성",
-        "앤티크 가구",
-        "낭만",
-        "음료",
-        "커피향",
-        "인테리어"
+      "merged_questions": [
+        "빈티지 스타일 카페 중 환경을 생각하는 리유저블컵 쓴 곳 알려줄 수 있나요?"
       ],
-      "negative_keywords": [
-        "일회용컵",
-        "소음",
-        "사람",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "빈티지 스타일 카페 중 환경을 생각하는 리유저블컵 쓴 곳 알려줄 수 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "빈티지"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "리유저블컵"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -6910,7 +6292,8 @@
         "한적한 분위기",
         "콘센트",
         "좌석",
-        "와이파이"
+        "와이파이",
+        "소파"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -6930,44 +6313,10 @@
           "keyword": "게임기"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "작업게임",
-      "description": "작업하면서 게임기도 즐길 수 있는 편안하고 집중하기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "작업",
-        "게임기",
-        "편안한 분위기",
-        "카공",
-        "콘센트",
-        "한적한 분위기",
-        "소파",
-        "와이파이"
+      "merged_questions": [
+        "작업할 때 이용하기 편한 게임기가 있는 카페 어디가 있을까?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "작업할 때 이용하기 편한 게임기가 있는 카페 어디가 있을까?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "작업"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "게임기"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7017,14 +6366,19 @@
         "인테리어",
         "원데이클래스",
         "편안한 분위기",
-        "공간"
+        "공간",
+        "감성",
+        "아늑함",
+        "편리한 위치"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "냄새",
-        "음악"
+        "음악",
+        "흡연실",
+        "담배냄새"
       ],
       "question": "아름다운 인테리어에 쿠킹클래스도 할 수 있고, 쉬는 날 없이 문 여는 카페 추천해 주세요.",
       "seed_keywords": [
@@ -7041,125 +6395,12 @@
           "keyword": "쿠킹클래스룸"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "감성요리",
-      "description": "쉬는 날 없이 운영하며 감성적인 분위기와 요리 수업 공간이 있는 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "쉬는날없이운영",
-        "미감",
-        "쿠킹클래스룸",
-        "감성",
-        "아늑함",
-        "인테리어",
-        "편안한 분위기"
+      "merged_questions": [
+        "쉬는 날 없이 영업하고, 감성적인 분위기와 요리 수업 공간이 있는 카페 있나요?",
+        "편안한 분위기 속에서 쿠킹클래스도 가능한, 휴무 없이 운영하는 카페를 알려주세요.",
+        "연중무휴로 운영하며 멋진 인테리어와 요리 교실이 갖춰진 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "쉬는 날 없이 영업하고, 감성적인 분위기와 요리 수업 공간이 있는 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "미감"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "쉬는날없이운영"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "쿠킹클래스룸"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "쿠킹클래스",
-      "description": "편안한 분위기에서 쿠킹클래스를 진행할 수 있고 쉬는 날 없이 운영하는 카페를 추천합니다.",
-      "keywords": [
-        "미감",
-        "쉬는날없이운영",
-        "쿠킹클래스룸",
-        "편안한 분위기",
-        "아늑함",
-        "공간",
-        "편리한 위치"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "냄새",
-        "흡연실"
-      ],
-      "question": "편안한 분위기 속에서 쿠킹클래스도 가능한, 휴무 없이 운영하는 카페를 알려주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "미감"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "쉬는날없이운영"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "쿠킹클래스룸"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "무휴미감요리",
-      "description": "연중무휴로 운영하며 멋진 인테리어와 쿠킹클래스룸이 갖춰진 감성적인 분위기의 카페를 추천합니다.",
-      "keywords": [
-        "쉬는날없이운영",
-        "미감",
-        "쿠킹클래스룸",
-        "인테리어",
-        "감성",
-        "아늑함",
-        "편안한 분위기"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "흡연실",
-        "소음",
-        "냄새"
-      ],
-      "question": "연중무휴로 운영하며 멋진 인테리어와 요리 교실이 갖춰진 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "미감"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "쉬는날없이운영"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "쿠킹클래스룸"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 4,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7174,14 +6415,21 @@
         "쉬는날없이운영",
         "와이파이",
         "공부",
-        "콘센트"
+        "콘센트",
+        "조용한 카페",
+        "편안한 분위기",
+        "작업",
+        "소파",
+        "테이크아웃"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "흡연실",
-        "담배냄새"
+        "담배냄새",
+        "음악",
+        "사람"
       ],
       "question": "학교 근처에서 24시간 영업하는 카페 추천해 줄 수 있어?",
       "seed_keywords": [
@@ -7194,115 +6442,12 @@
           "keyword": "학교"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "야간학교",
-      "description": "학교 근처에서 밤에도 편리하게 이용할 수 있는 24시간 운영하는 카페를 추천합니다. 학생들이 편안한 분위기에서 공부하거나 휴식하기 좋은 공간입니다.",
-      "keywords": [
-        "24시간",
-        "학교",
-        "학생",
-        "편리한 접근성",
-        "조용한 카페",
-        "편안한 분위기",
-        "콘센트",
-        "공부"
+      "merged_questions": [
+        "밤에도 가기 좋은 학교 근처 카페 어디 있을까?",
+        "학교 다니는 학생들이 밤새 가기 좋은 카페가 있을까요?",
+        "학교 근처에 언제든지 갈 수 있는 카페 추천 부탁해."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "흡연실",
-        "담배냄새",
-        "소음"
-      ],
-      "question": "밤에도 가기 좋은 학교 근처 카페 어디 있을까?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "24시간"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "학교"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "야간학습",
-      "description": "학교 다니는 학생들이 밤새 공부하거나 작업하기 좋은 24시간 운영하는 조용하고 편안한 카페를 추천합니다.",
-      "keywords": [
-        "24시간",
-        "학교",
-        "조용한 카페",
-        "편안한 분위기",
-        "콘센트",
-        "공부",
-        "작업",
-        "소파"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악",
-        "사람"
-      ],
-      "question": "학교 다니는 학생들이 밤새 가기 좋은 카페가 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "24시간"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "학교"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "학교근처24시",
-      "description": "학교 근처에 위치하며 24시간 언제든지 이용할 수 있는 편리한 접근성의 카페를 추천합니다.",
-      "keywords": [
-        "24시간",
-        "학교",
-        "편리한 접근성",
-        "학생",
-        "테이크아웃",
-        "와이파이",
-        "공부",
-        "콘센트"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "학교 근처에 언제든지 갈 수 있는 카페 추천 부탁해.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "24시간"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "학교"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 4,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7316,14 +6461,18 @@
         "편안한 분위기",
         "조용한 카페",
         "힐링",
-        "편안한 좌석"
+        "편안한 좌석",
+        "아늑함",
+        "조용한 분위기",
+        "음료"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "혼잡하다",
-        "사람"
+        "사람",
+        "흡연실"
       ],
       "question": "저녁 시간에 느긋하게 쉴 수 있는 키오스크가 있는 카페 추천해 주세요.",
       "seed_keywords": [
@@ -7340,48 +6489,10 @@
           "keyword": "키오스크"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "저녁분위기",
-      "description": "저녁 시간에 여유롭고 편안한 분위기에서 키오스크로 주문할 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "저녁",
-        "여유",
-        "키오스크",
-        "편안한 분위기",
-        "아늑함",
-        "조용한 분위기",
-        "편안한 좌석",
-        "음료"
+      "merged_questions": [
+        "저녁에 분위기 좋은 곳에서 키오스크로 주문할 수 있는 카페 어디 있을까요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "혼잡하다",
-        "흡연실"
-      ],
-      "question": "저녁에 분위기 좋은 곳에서 키오스크로 주문할 수 있는 카페 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "여유"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "저녁"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "키오스크"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7396,14 +6507,18 @@
         "편안한 좌석",
         "편안한 공간",
         "음료",
-        "컵홀더"
+        "컵홀더",
+        "빠른 서비스",
+        "편리한 위치"
       ],
       "negative_keywords": [
         "활기",
         "사람 많다",
         "시끄럽다",
         "소음",
-        "복잡하다"
+        "복잡하다",
+        "혼잡하다",
+        "좁은 공간"
       ],
       "question": "편안한 분위기에 포장도 할 수 있는 카페 알려줘.",
       "seed_keywords": [
@@ -7416,43 +6531,10 @@
           "keyword": "테이크아웃"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "여유테이크아웃",
-      "description": "여유로운 분위기에서 편리하게 테이크아웃 서비스를 이용할 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "여유",
-        "테이크아웃",
-        "편안한 분위기",
-        "빠른 서비스",
-        "편리한 위치",
-        "음료",
-        "편안한 좌석"
+      "merged_questions": [
+        "여유로운 느낌 나면서 테이크아웃 서비스도 좋은 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "활기",
-        "사람 많다",
-        "시끄럽다",
-        "혼잡하다",
-        "좁은 공간"
-      ],
-      "question": "여유로운 느낌 나면서 테이크아웃 서비스도 좋은 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "여유"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "테이크아웃"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7507,7 +6589,9 @@
         "차분함",
         "아늑함",
         "콘센트_잘 구비되어있다",
-        "편안함"
+        "편안함",
+        "감성",
+        "한적한 분위기"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -7531,88 +6615,11 @@
           "keyword": "지하"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "공부감성",
-      "description": "지하에 위치하며 감성적이고 조용한 분위기에서 집중해서 공부하기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "지하",
-        "미감",
-        "공부",
-        "조용한 카페",
-        "감성",
-        "차분함",
-        "콘센트_잘 구비되어있다",
-        "한적한 분위기"
+      "merged_questions": [
+        "지하에 위치하고 감성적인 분위기가 있는 공부 카페 어디 있을까요?",
+        "지하 공간에 감성적인 느낌이 있는 공부 카페 추천 부탁드립니다."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "음악"
-      ],
-      "question": "지하에 위치하고 감성적인 분위기가 있는 공부 카페 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "미감"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "공부"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "지하"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "지하공부",
-      "description": "지하 공간에 위치하며 감성적이고 차분한 분위기에서 공부하기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "지하",
-        "공부",
-        "미감",
-        "감성",
-        "조용한 카페",
-        "차분함",
-        "콘센트_잘 구비되어있다",
-        "편안함"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "음악"
-      ],
-      "question": "지하 공간에 감성적인 느낌이 있는 공부 카페 추천 부탁드립니다.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "미감"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "공부"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "지하"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7625,14 +6632,17 @@
         "편리한 위치",
         "넓은 좌석",
         "편안한 분위기",
-        "청결"
+        "청결",
+        "청결 상태",
+        "넓은 공간"
       ],
       "negative_keywords": [
         "사람 많다",
         "시끄럽다",
         "복잡하다",
         "좁은 공간",
-        "불편하다"
+        "불편하다",
+        "좁다"
       ],
       "question": "주차 공간이 넉넉하고 바닥 상태가 좋은 카페 추천해 주세요.",
       "seed_keywords": [
@@ -7645,43 +6655,10 @@
           "keyword": "바닥"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "주차청결",
-      "description": "주차장이 잘 구비되어 있고 바닥이 깔끔하여 쾌적한 환경을 원하는 분들을 위한 카페입니다.",
-      "keywords": [
-        "주차장",
-        "바닥",
-        "청결",
-        "청결 상태",
-        "편안한 분위기",
-        "편리한 위치",
-        "넓은 공간"
+      "merged_questions": [
+        "주차 가능하고 바닥이 깔끔한 카페 좀 소개해 주세요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "복잡하다",
-        "불편하다"
-      ],
-      "question": "주차 가능하고 바닥이 깔끔한 카페 좀 소개해 주세요.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "주차장"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "바닥"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7696,7 +6673,8 @@
         "단체석",
         "편리한 접근성",
         "음료",
-        "매장"
+        "매장",
+        "편안한 분위기"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -7720,48 +6698,10 @@
           "keyword": "아이스박스"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "단체야간",
-      "description": "밤에도 이용 가능하며 단체 모임에 적합하고 아이스박스가 구비된 편리한 카페를 추천합니다.",
-      "keywords": [
-        "24시간",
-        "단체모임",
-        "아이스박스",
-        "단체석",
-        "넓은 공간",
-        "편리한 접근성",
-        "음료",
-        "편안한 분위기"
+      "merged_questions": [
+        "밤에도 이용 가능하고 단체 모임에 적합하며 아이스박스가 있는 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "음악",
-        "소음",
-        "흡연실"
-      ],
-      "question": "밤에도 이용 가능하고 단체 모임에 적합하며 아이스박스가 있는 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "24시간"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "단체모임"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "아이스박스"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7775,7 +6715,12 @@
         "아늑함",
         "인테리어",
         "감성",
-        "편안한 분위기"
+        "편안한 분위기",
+        "한적한 분위기",
+        "장식",
+        "운치",
+        "조용한 분위기",
+        "전시공간"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -7795,79 +6740,11 @@
           "keyword": "소품"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "차분함소품",
-      "description": "차분한 분위기에서 소품 구경을 즐길 수 있는 아늑하고 편안한 카페를 추천합니다.",
-      "keywords": [
-        "차분함",
-        "소품",
-        "편안한 분위기",
-        "한적한 분위기",
-        "인테리어",
-        "아늑함",
-        "장식",
-        "운치"
+      "merged_questions": [
+        "차분한 느낌이 들고 소품 구경도 할 수 있는 카페 알려주세요.",
+        "고요한 분위기면서도 다양한 소품들이 있는 장소 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "활기",
-        "소음",
-        "혼잡하다"
-      ],
-      "question": "차분한 느낌이 들고 소품 구경도 할 수 있는 카페 알려주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "차분함"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "소품"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "차분한소품",
-      "description": "고요하고 차분한 분위기에서 다양한 소품과 인테리어가 돋보이는 카페를 추천합니다.",
-      "keywords": [
-        "차분함",
-        "소품",
-        "인테리어",
-        "조용한 분위기",
-        "아늑함",
-        "편안한 분위기",
-        "전시공간"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "활기",
-        "소음",
-        "혼잡하다"
-      ],
-      "question": "고요한 분위기면서도 다양한 소품들이 있는 장소 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "차분함"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "소품"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -7918,7 +6795,9 @@
         "한적한 분위기",
         "편안한 분위기",
         "아늑함",
-        "독서"
+        "독서",
+        "차분함",
+        "책"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -7942,88 +6821,11 @@
           "keyword": "독서실 좌석"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "브런치감성",
-      "description": "조용하고 감성적인 분위기에서 브런치를 즐기며 독서실 좌석이 마련된 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "감성",
-        "브런치",
-        "독서실 좌석",
-        "조용한 카페",
-        "한적한 분위기",
-        "편안한 분위기",
-        "독서",
-        "차분함"
+      "merged_questions": [
+        "조용하고 분위기 좋은 곳에서 브런치와 함께 독서실 좌석이 있는 카페 알려 주세요.",
+        "브런치도 맛있고 감성적인 분위기에서 책 읽기 좋은 카페 어디 있을까요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "단체석",
-        "소음",
-        "복잡하다"
-      ],
-      "question": "조용하고 분위기 좋은 곳에서 브런치와 함께 독서실 좌석이 있는 카페 알려 주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "감성"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "브런치"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "독서실 좌석"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "감성독서",
-      "description": "감성적인 분위기에서 브런치를 즐기며 독서하기 좋은 조용하고 편안한 카페를 추천합니다.",
-      "keywords": [
-        "감성",
-        "브런치",
-        "독서실 좌석",
-        "한적한 분위기",
-        "편안한 분위기",
-        "책",
-        "아늑함",
-        "조용한 카페"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "단체석",
-        "소음",
-        "복잡하다"
-      ],
-      "question": "브런치도 맛있고 감성적인 분위기에서 책 읽기 좋은 카페 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "감성"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "브런치"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "독서실 좌석"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -8077,7 +6879,10 @@
         "낭만",
         "감성",
         "아름다움",
-        "티포트"
+        "티포트",
+        "인스타그래머블",
+        "포토존",
+        "소품"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -8097,44 +6902,10 @@
           "keyword": "차"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "감성사진",
-      "description": "차를 마시며 감성적인 사진을 찍기 좋은 분위기와 인테리어가 돋보이는 카페를 추천합니다.",
-      "keywords": [
-        "사진",
-        "차",
-        "감성",
-        "인스타그래머블",
-        "사진찍기",
-        "인테리어",
-        "포토존",
-        "소품"
+      "merged_questions": [
+        "차 마시면서 감성 사진 찍기 좋은 카페 알려주세요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "차 마시면서 감성 사진 찍기 좋은 카페 알려주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "사진"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "차"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -8149,7 +6920,9 @@
         "감성",
         "인테리어",
         "음료",
-        "소파"
+        "소파",
+        "인스타그래머블",
+        "차"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -8173,48 +6946,10 @@
           "keyword": "베이커리"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "힙티타임",
-      "description": "힙한 분위기에서 티타임을 즐기며 맛있는 빵도 함께 먹을 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "힙",
-        "티타임",
-        "베이커리",
-        "감성",
-        "인스타그래머블",
-        "차",
-        "음료",
-        "편안한 분위기"
+      "merged_questions": [
+        "힙한 느낌 나면서 티타임 하기 좋은 빵도 파는 카페 어디 있을까?"
       ],
-      "negative_keywords": [
-        "사람 많다",
-        "시끄럽다",
-        "소음",
-        "담배냄새",
-        "일회용컵"
-      ],
-      "question": "힙한 느낌 나면서 티타임 하기 좋은 빵도 파는 카페 어디 있을까?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "힙"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "티타임"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "베이커리"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -8265,14 +7000,19 @@
         "차",
         "음료",
         "여유",
-        "자연"
+        "자연",
+        "아름다움",
+        "힐링",
+        "휴식"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "혼잡하다",
-        "좁다"
+        "좁다",
+        "단체석",
+        "답답하다"
       ],
       "question": "조경이 아름다운 곳에서 티타임하기 좋은 카페 추천해 주세요. 보냉팩도 제공되는 곳이면 좋겠어요.",
       "seed_keywords": [
@@ -8289,88 +7029,11 @@
           "keyword": "보냉팩"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "티타임조경",
-      "description": "조경이 아름답고 티타임을 즐기기 좋은 편안한 분위기의 카페를 찾는 분들을 위한 추천입니다. 보냉팩 이용이 가능한 시설도 포함합니다.",
-      "keywords": [
-        "조경",
-        "티타임",
-        "보냉팩",
-        "편안한 분위기",
-        "차",
-        "아름다움",
-        "힐링",
-        "여유"
+      "merged_questions": [
+        "티타임 하기에 조경이 예쁜 카페를 찾고 있어요. 그리고 보냉팩도 이용 가능한 곳 있나요?",
+        "자연 경관이 뛰어난 카페 중에 티타임 하기 좋고 보냉팩 서비스까지 되는 곳 추천해 주세요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "혼잡하다",
-        "좁다"
-      ],
-      "question": "티타임 하기에 조경이 예쁜 카페를 찾고 있어요. 그리고 보냉팩도 이용 가능한 곳 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "조경"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "티타임"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "보냉팩"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "티타임뷰",
-      "description": "자연 경관이 뛰어나고 조경이 잘 된 공간에서 편안하게 티타임을 즐길 수 있으며, 보냉팩 서비스까지 제공하는 카페를 추천합니다.",
-      "keywords": [
-        "조경",
-        "티타임",
-        "보냉팩",
-        "자연",
-        "편안한 분위기",
-        "휴식",
-        "아름다움",
-        "힐링"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "단체석",
-        "좁다",
-        "답답하다"
-      ],
-      "question": "자연 경관이 뛰어난 카페 중에 티타임 하기 좋고 보냉팩 서비스까지 되는 곳 추천해 주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "조경"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "티타임"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "보냉팩"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -8385,13 +7048,18 @@
         "외관",
         "감성",
         "인스타그래머블",
-        "사진찍기"
+        "사진찍기",
+        "분위기",
+        "아름다움",
+        "포토존",
+        "조명"
       ],
       "negative_keywords": [
         "흡연실",
         "소음",
         "담배냄새",
-        "사람"
+        "사람",
+        "냄새"
       ],
       "question": "독특한 컨셉과 멋진 건물에서 즐길 수 있는 카페 알려주세요.",
       "seed_keywords": [
@@ -8404,73 +7072,11 @@
           "keyword": "건물"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "독창적분위기",
-      "description": "독특한 컨셉과 인상적인 건물 자체가 돋보이는 분위기 좋은 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "컨셉",
-        "건물",
-        "인테리어",
-        "외관",
-        "분위기",
-        "감성",
-        "아름다움",
-        "인스타그래머블"
+      "merged_questions": [
+        "분위기가 독창적이고 건물 자체가 인상적인 카페가 궁금해요.",
+        "특별한 콘셉트와 멋진 건축물이 있는 카페 어디가 좋을까요?"
       ],
-      "negative_keywords": [],
-      "question": "분위기가 독창적이고 건물 자체가 인상적인 카페가 궁금해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "컨셉"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "건물"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "컨셉카페",
-      "description": "특별한 콘셉트와 멋진 건축물이 돋보이는 감성적이고 인스타그래머블한 카페를 추천합니다.",
-      "keywords": [
-        "컨셉",
-        "건물",
-        "인테리어",
-        "외관",
-        "포토존",
-        "인스타그래머블",
-        "조명",
-        "감성"
-      ],
-      "negative_keywords": [
-        "흡연실",
-        "소음",
-        "냄새",
-        "담배냄새"
-      ],
-      "question": "특별한 콘셉트와 멋진 건축물이 있는 카페 어디가 좋을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "컨셉"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "건물"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -8668,14 +7274,19 @@
         "편안한 분위기",
         "음료",
         "맛",
-        "편리한 위치"
+        "편리한 위치",
+        "분위기",
+        "감성",
+        "코지",
+        "청결"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "담배냄새",
-        "단체석"
+        "단체석",
+        "일회용컵"
       ],
       "question": "데이트하면서 빵도 맛있게 먹을 수 있는 집 주변 카페 어디 있을까요?",
       "seed_keywords": [
@@ -8692,48 +7303,10 @@
           "keyword": "베이커리"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "집근처분위기",
-      "description": "집 근처에서 편안하고 분위기 좋은 베이커리 시설이 갖춰진 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "집근처",
-        "분위기",
-        "베이커리",
-        "편안한 분위기",
-        "감성",
-        "코지",
-        "음료",
-        "청결"
+      "merged_questions": [
+        "집 근처에 분위기 좋고 베이커리 시설이 있는 카페 알려줄 수 있어요?"
       ],
-      "negative_keywords": [
-        "사람 많다",
-        "시끄럽다",
-        "소음",
-        "담배냄새",
-        "일회용컵"
-      ],
-      "question": "집 근처에 분위기 좋고 베이커리 시설이 있는 카페 알려줄 수 있어요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "데이트"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "집근처"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "베이커리"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -8747,7 +7320,9 @@
         "편리한 접근성",
         "빠른 영업",
         "편안한 분위기",
-        "테이크아웃"
+        "테이크아웃",
+        "영업",
+        "쉬는날없이운영"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -8767,43 +7342,10 @@
           "keyword": "건조기"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "아침영업",
-      "description": "이른 아침부터 영업하며 건조기 시설을 갖춘 편리한 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "아침",
-        "영업",
-        "건조기",
-        "빠른 영업",
-        "편리한 접근성",
-        "쉬는날없이운영",
-        "편안한 분위기"
+      "merged_questions": [
+        "이른 아침에도 영업하고 건조기를 이용할 수 있는 카페 찾아줘."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "이른 아침에도 영업하고 건조기를 이용할 수 있는 카페 찾아줘.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "아침"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "건조기"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -8817,7 +7359,9 @@
         "편안한 분위기",
         "아늑함",
         "감성",
-        "디저트맛집"
+        "디저트맛집",
+        "맛",
+        "차분함"
       ],
       "negative_keywords": [
         "활기",
@@ -8841,48 +7385,10 @@
           "keyword": "바닥"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "코지브런치",
-      "description": "따뜻하고 아늑한 분위기의 바닥 깔린 카페에서 맛있는 브런치를 즐기고 싶은 분들을 위한 추천입니다.",
-      "keywords": [
-        "코지",
-        "브런치",
-        "바닥",
-        "편안한 분위기",
-        "아늑함",
-        "맛",
-        "디저트맛집",
-        "차분함"
+      "merged_questions": [
+        "따뜻한 분위기의 바닥 깔린 카페 중 브런치 메뉴가 맛있는 곳 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "활기",
-        "시끄럽다",
-        "사람 많다",
-        "단체석",
-        "음악"
-      ],
-      "question": "따뜻한 분위기의 바닥 깔린 카페 중 브런치 메뉴가 맛있는 곳 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "코지"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "브런치"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "바닥"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9080,7 +7586,12 @@
         "여유",
         "편안한 분위기",
         "공기",
-        "야외"
+        "야외",
+        "소파",
+        "편안함",
+        "접근성",
+        "매장 앞",
+        "차"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -9100,44 +7611,10 @@
           "keyword": "입구"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "운동후휴식",
-      "description": "운동이나 산책 후 입구 주변에서 편안하게 쉴 수 있는 분위기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "운동·산책",
-        "입구",
-        "편안한 분위기",
-        "소파",
-        "편안함",
-        "접근성",
-        "매장 앞",
-        "차"
+      "merged_questions": [
+        "운동 마치고 편하게 쉴 수 있는 입구 주변 카페 알려 주세요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "운동 마치고 편하게 쉴 수 있는 입구 주변 카페 알려 주세요.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "운동·산책"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "입구"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9187,7 +7664,11 @@
         "아늑함",
         "힐링",
         "낭만",
-        "공기"
+        "공기",
+        "조용한 카페",
+        "공간",
+        "조명",
+        "소파"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -9207,79 +7688,11 @@
           "keyword": "장소"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "음악감상",
-      "description": "음악을 편안하게 감상할 수 있는 분위기 좋은 장소를 찾는 분들을 위한 카페입니다.",
-      "keywords": [
-        "음악",
-        "장소",
-        "편안한 분위기",
-        "감성",
-        "아늑함",
-        "조용한 카페",
-        "힐링"
+      "merged_questions": [
+        "음악 감상하기 좋은 카페 장소 추천 부탁해요.",
+        "좋은 음악과 아늑한 공간을 갖춘 카페 어디인지 궁금해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "음악 감상하기 좋은 카페 장소 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "음악"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "장소"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "음악공간",
-      "description": "좋은 음악과 아늑한 공간을 갖추어 편안하게 쉴 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "음악",
-        "장소",
-        "아늑함",
-        "편안한 분위기",
-        "공간",
-        "감성",
-        "조명",
-        "소파"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "좋은 음악과 아늑한 공간을 갖춘 카페 어디인지 궁금해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "음악"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "장소"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9409,7 +7822,9 @@
         "조명",
         "아늑함",
         "인테리어",
-        "감성"
+        "감성",
+        "소품",
+        "운치"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -9429,79 +7844,11 @@
           "keyword": "친구"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "친구와낭만",
-      "description": "친구와 함께 낭만적이고 편안한 분위기에서 대화를 즐기기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "친구",
-        "낭만",
-        "편안한 분위기",
-        "대화",
-        "아늑함",
-        "조명",
-        "소품"
+      "merged_questions": [
+        "친구와 함께 분위기 좋은 카페 어디가 괜찮을까?",
+        "친구랑 가기 좋은 로맨틱한 느낌의 카페 추천 부탁해."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "음악",
-        "소음",
-        "흡연실"
-      ],
-      "question": "친구와 함께 분위기 좋은 카페 어디가 괜찮을까?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "낭만"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "친구"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "친구낭만",
-      "description": "친구와 함께 낭만적인 분위기에서 편안하게 대화하며 시간을 보내기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "친구",
-        "낭만",
-        "편안한 분위기",
-        "아늑함",
-        "조명",
-        "운치",
-        "대화",
-        "감성"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "음악",
-        "소음",
-        "흡연실"
-      ],
-      "question": "친구랑 가기 좋은 로맨틱한 느낌의 카페 추천 부탁해.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "낭만"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "친구"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9551,7 +7898,12 @@
         "아늑함",
         "음료",
         "테이블",
-        "조명"
+        "조명",
+        "개방감",
+        "공간",
+        "힐링",
+        "편안함",
+        "좌석"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -9571,79 +7923,11 @@
           "keyword": "매장 앞"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "음악과공간",
-      "description": "매장 앞 공간이 넓고 음악이 좋은 쾌적한 분위기의 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "매장 앞",
-        "음악",
-        "개방감",
-        "편안한 분위기",
-        "공간",
-        "힐링",
-        "아늑함"
+      "merged_questions": [
+        "매장 앞 공간이 넓고 음악도 좋은 카페 가르쳐 주세요.",
+        "음악이 흐르는 매장 앞 좌석이 편안한 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "매장 앞 공간이 넓고 음악도 좋은 카페 가르쳐 주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "음악"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "매장 앞"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "음악좌석",
-      "description": "음악이 흐르고 매장 앞에 편안한 좌석이 있는 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "음악",
-        "매장 앞",
-        "편안함",
-        "좌석",
-        "편안한 분위기",
-        "아늑함",
-        "테이블",
-        "공간"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "음악이 흐르는 매장 앞 좌석이 편안한 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "음악"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "매장 앞"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9658,12 +7942,16 @@
         "오전 8시부터 오픈",
         "편리한 접근성",
         "차분함",
-        "청결"
+        "청결",
+        "빠른 서비스",
+        "차"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
-        "소음"
+        "소음",
+        "흡연실",
+        "담배냄새"
       ],
       "question": "아침에 조용하고 분위기 좋은 직장인들이 많이 가는 카페 추천해 주세요.",
       "seed_keywords": [
@@ -9676,44 +7964,10 @@
           "keyword": "직장인"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "아침휴식",
-      "description": "직장인들이 아침 시간에 편안하게 쉴 수 있는 조용하고 쾌적한 분위기의 카페를 추천합니다.",
-      "keywords": [
-        "아침",
-        "직장인",
-        "편안한 분위기",
-        "조용한 카페",
-        "오전 8시부터 오픈",
-        "빠른 서비스",
-        "편리한 접근성",
-        "차"
+      "merged_questions": [
+        "직장인들이 아침 시간에 편하게 쉴 수 있는 카페가 어디 있을까요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "직장인들이 아침 시간에 편하게 쉴 수 있는 카페가 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "아침"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "직장인"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9727,7 +7981,10 @@
         "편의시설",
         "공기",
         "화장실",
-        "편안한 좌석"
+        "편안한 좌석",
+        "조용한 분위기",
+        "인테리어",
+        "공간"
       ],
       "negative_keywords": [
         "담배냄새",
@@ -9747,43 +8004,10 @@
           "keyword": "흡연실"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "깔끔흡연",
-      "description": "청결한 분위기와 흡연실이 잘 갖춰진 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "청결 상태",
-        "흡연실",
-        "편안한 분위기",
-        "편안한 좌석",
-        "조용한 분위기",
-        "인테리어",
-        "공간"
+      "merged_questions": [
+        "깔끔한 분위기에 흡연실까지 갖춘 곳 추천 부탁해."
       ],
-      "negative_keywords": [
-        "담배냄새",
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "좁다"
-      ],
-      "question": "깔끔한 분위기에 흡연실까지 갖춘 곳 추천 부탁해.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "청결 상태"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "흡연실"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9798,14 +8022,19 @@
         "여유",
         "편안함",
         "층",
-        "좌석"
+        "좌석",
+        "분위기",
+        "개방감",
+        "채광",
+        "창문"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "지하",
         "흡연실",
-        "소음"
+        "소음",
+        "담배냄새"
       ],
       "question": "주말에 3층 공간이 있는 카페 추천해 줄래?",
       "seed_keywords": [
@@ -9818,44 +8047,10 @@
           "keyword": "3층"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "주말분위기",
-      "description": "주말에 3층 구조로 되어 있고 분위기가 좋은 카페를 찾는 분들을 위한 추천 규칙입니다.",
-      "keywords": [
-        "주말",
-        "3층",
-        "카페",
-        "분위기",
-        "개방감",
-        "채광",
-        "창문",
-        "여유"
+      "merged_questions": [
+        "주말에 갈 만한 3층으로 된 분위기 좋은 카페 있나요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "담배냄새"
-      ],
-      "question": "주말에 갈 만한 3층으로 된 분위기 좋은 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "주말"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "3층"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9870,7 +8065,10 @@
         "편안한 좌석",
         "한적한 분위기",
         "책",
-        "독서"
+        "독서",
+        "혼자",
+        "콘센트",
+        "카공"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -9890,44 +8088,10 @@
           "keyword": "출근"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "출근집중",
-      "description": "출근길에 혼자 조용하고 집중하기 좋은 독서실 모드의 분위기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "출근",
-        "독서실모드",
-        "조용한 카페",
-        "혼자",
-        "한적한 분위기",
-        "편안한 좌석",
-        "콘센트",
-        "카공"
+      "merged_questions": [
+        "출근길에 혼자 집중할 수 있는 분위기 좋은 카페 알려줘."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악",
-        "단체석"
-      ],
-      "question": "출근길에 혼자 집중할 수 있는 분위기 좋은 카페 알려줘.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "독서실모드"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "출근"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -9942,14 +8106,17 @@
         "인테리어",
         "차",
         "감성",
-        "운치"
+        "운치",
+        "조용한 카페"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "좁다",
         "답답하다",
-        "혼잡하다"
+        "혼잡하다",
+        "소음",
+        "흡연실"
       ],
       "question": "아기자기한 소품이 있는 곳에서 차 마시기 좋은 카페 추천해 주세요.",
       "seed_keywords": [
@@ -9962,44 +8129,10 @@
           "keyword": "티타임"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "티타임소품",
-      "description": "조용한 분위기에서 티타임을 즐기며 다양한 소품과 인테리어를 감상할 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "티타임",
-        "소품",
-        "조용한 카페",
-        "편안한 분위기",
-        "인테리어",
-        "아늑함",
-        "차",
-        "감성"
+      "merged_questions": [
+        "조용히 티타임 보내면서 소품 감상하기 좋은 카페 어디가 좋을까요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "혼잡하다",
-        "흡연실"
-      ],
-      "question": "조용히 티타임 보내면서 소품 감상하기 좋은 카페 어디가 좋을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "소품"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "티타임"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10014,14 +8147,21 @@
         "인테리어",
         "음료",
         "빠른 서비스",
-        "아름다움"
+        "아름다움",
+        "편안한 공간",
+        "편리한 위치",
+        "카페",
+        "포장",
+        "인스타그래머블"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "좁다",
         "답답하다",
-        "혼잡하다"
+        "혼잡하다",
+        "흡연실",
+        "불편하다"
       ],
       "question": "분위기 좋은 카페 중에서 테이크아웃도 가능한 곳 추천해줄래?",
       "seed_keywords": [
@@ -10034,79 +8174,11 @@
           "keyword": "테이크아웃"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "테이크아웃",
-      "description": "편안한 분위기에서 테이크아웃 서비스를 제공하는 카페를 찾는 분들을 위한 추천 규칙입니다.",
-      "keywords": [
-        "컨셉",
-        "테이크아웃",
-        "편안한 분위기",
-        "편안한 공간",
-        "빠른 서비스",
-        "편리한 위치",
-        "음료",
-        "카페"
+      "merged_questions": [
+        "편안한 분위기에 테이크아웃 서비스가 있는 카페 어디 있을까요?",
+        "컨셉 있는 카페 중에서 포장 주문 가능한 데 알려 주세요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "흡연실",
-        "불편하다",
-        "좁다"
-      ],
-      "question": "편안한 분위기에 테이크아웃 서비스가 있는 카페 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "컨셉"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "테이크아웃"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "컨셉포장",
-      "description": "독특한 컨셉을 가진 카페 중에서 포장 주문이 가능한 편리한 카페를 추천합니다.",
-      "keywords": [
-        "컨셉",
-        "테이크아웃",
-        "포장",
-        "편리한 접근성",
-        "빠른 서비스",
-        "인스타그래머블",
-        "편안한 분위기"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "컨셉 있는 카페 중에서 포장 주문 가능한 데 알려 주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "컨셉"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "테이크아웃"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10120,7 +8192,9 @@
         "포토존",
         "아름다움",
         "인테리어",
-        "소품"
+        "소품",
+        "조명",
+        "분위기"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -10140,44 +8214,10 @@
           "keyword": "사진찍기"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "가성비사진",
-      "description": "가성비가 뛰어나면서 인생샷을 남기기 좋은 인스타그래머블한 카페를 추천합니다.",
-      "keywords": [
-        "가성비",
-        "사진찍기",
-        "인스타그래머블",
-        "포토존",
-        "인테리어",
-        "소품",
-        "조명",
-        "분위기"
+      "merged_questions": [
+        "가성비 뛰어나고 인생샷 남기기 좋은 카페 있나요?"
       ],
-      "negative_keywords": [
-        "사람 많다",
-        "시끄럽다",
-        "소음",
-        "담배냄새",
-        "흡연실"
-      ],
-      "question": "가성비 뛰어나고 인생샷 남기기 좋은 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "가성비"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "사진찍기"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10199,7 +8239,9 @@
         "사람 많다",
         "소음",
         "활기",
-        "음악"
+        "음악",
+        "복잡하다",
+        "혼잡하다"
       ],
       "question": "조용한 분위기에 야외 자리 있는 카페 추천해줄 수 있어?",
       "seed_keywords": [
@@ -10212,44 +8254,10 @@
           "keyword": "야외"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "차분야외",
-      "description": "분위기가 차분하고 야외 공간이 있는 편안한 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "차분함",
-        "야외",
-        "한적한 분위기",
-        "편안한 분위기",
-        "조용한 분위기",
-        "자연",
-        "테라스",
-        "운치"
+      "merged_questions": [
+        "분위기 차분하고 야외 공간 있는 카페 좀 알려줘."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "복잡하다",
-        "혼잡하다"
-      ],
-      "question": "분위기 차분하고 야외 공간 있는 카페 좀 알려줘.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "차분함"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "야외"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10263,7 +8271,8 @@
         "빠른 서비스",
         "테이크아웃",
         "편안한 분위기",
-        "접근성"
+        "접근성",
+        "포장"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -10283,43 +8292,10 @@
           "keyword": "음료 트레이"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "항상영업",
-      "description": "쉬는 날 없이 운영하며 음료 트레이가 잘 갖춰진 편리한 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "쉬는날없이운영",
-        "음료 트레이",
-        "편리한 위치",
-        "빠른 서비스",
-        "테이크아웃",
-        "포장",
-        "접근성"
+      "merged_questions": [
+        "항상 영업하는 카페 중에 음료 트레이가 잘 갖춰진 장소 알려주세요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "복잡하다",
-        "불편하다"
-      ],
-      "question": "항상 영업하는 카페 중에 음료 트레이가 잘 갖춰진 장소 알려주세요.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "쉬는날없이운영"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "음료 트레이"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10334,14 +8310,19 @@
         "어린이 놀이터",
         "가족",
         "테이블 간격",
-        "친구"
+        "친구",
+        "게임기",
+        "소파",
+        "보드게임"
       ],
       "negative_keywords": [
         "좁다",
         "좁은 공간",
         "불편하다",
         "사람 많다",
-        "시끄럽다"
+        "시끄럽다",
+        "계단",
+        "복잡하다"
       ],
       "question": "게임도 즐길 수 있고 유모차 들어갈 수 있는 카페 추천해 줄래?",
       "seed_keywords": [
@@ -10354,80 +8335,11 @@
           "keyword": "유모차"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "게임유모차",
-      "description": "유모차를 가지고 들어가기 편하며 게임을 즐길 수 있는 넓고 편안한 분위기의 카페를 추천합니다.",
-      "keywords": [
-        "게임",
-        "유모차",
-        "넓은 공간",
-        "편안한 분위기",
-        "테이블 간격",
-        "게임기",
-        "소파",
-        "친구"
+      "merged_questions": [
+        "유모차를 가지고 들어가기 편한 게임 가능한 카페 있나요?",
+        "유모차 이용 가능한 공간에서 게임도 즐길 수 있는 카페 알려주세요."
       ],
-      "negative_keywords": [
-        "좁다",
-        "좁은 공간",
-        "불편하다",
-        "계단",
-        "사람 많다"
-      ],
-      "question": "유모차를 가지고 들어가기 편한 게임 가능한 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "게임"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "유모차"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "가족게임",
-      "description": "유모차 이용이 가능하고 아이와 함께 게임을 즐길 수 있는 넓고 편안한 가족 친화적 카페를 추천합니다.",
-      "keywords": [
-        "게임",
-        "유모차",
-        "넓은 공간",
-        "편안한 분위기",
-        "어린이 놀이터",
-        "가족",
-        "보드게임",
-        "테이블 간격"
-      ],
-      "negative_keywords": [
-        "좁다",
-        "좁은 공간",
-        "사람 많다",
-        "시끄럽다",
-        "복잡하다"
-      ],
-      "question": "유모차 이용 가능한 공간에서 게임도 즐길 수 있는 카페 알려주세요.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "게임"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "유모차"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10511,14 +8423,18 @@
         "편안한 분위기",
         "빠른 서비스",
         "오전 8시부터 오픈",
-        "편리한 접근성"
+        "편리한 접근성",
+        "편안함",
+        "여유",
+        "좌석"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "담배냄새",
-        "흡연실"
+        "흡연실",
+        "음악"
       ],
       "question": "아침에 가기 좋은 단골로 삼을 만한 카페 중에 대기 좌석이 있는 곳 추천해줄 수 있어요?",
       "seed_keywords": [
@@ -10535,48 +8451,10 @@
           "keyword": "대기좌석"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "단골아침",
-      "description": "아침 시간대에 편안하게 대기할 수 있는 좌석이 마련되어 있어 단골로 자주 방문하기 좋은 카페를 추천합니다.",
-      "keywords": [
-        "아침",
-        "단골",
-        "대기좌석",
-        "편안한 분위기",
-        "오전 8시부터 오픈",
-        "편안함",
-        "여유",
-        "좌석"
+      "merged_questions": [
+        "단골로 자주 가려고 하는데 아침 시간대에 편하게 기다릴 수 있는 좌석이 마련된 카페 어디 있을까요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악",
-        "담배냄새"
-      ],
-      "question": "단골로 자주 가려고 하는데 아침 시간대에 편하게 기다릴 수 있는 좌석이 마련된 카페 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "아침"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "단골"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "대기좌석"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10591,14 +8469,17 @@
         "한적한 분위기",
         "넓은 공간",
         "편안한 분위기",
-        "책"
+        "책",
+        "아이",
+        "공부"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "음악",
-        "흡연실"
+        "흡연실",
+        "단체석"
       ],
       "question": "가족이 조용히 책 읽기 좋은 분위기의 카페 추천해 주세요.",
       "seed_keywords": [
@@ -10611,44 +8492,10 @@
           "keyword": "가족"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "가족공부",
-      "description": "아이들과 함께 조용히 공부할 수 있는 가족 단위 방문객을 위한 독서실 모드 카페를 추천합니다.",
-      "keywords": [
-        "독서실모드",
-        "가족",
-        "조용한 카페",
-        "아이",
-        "공부",
-        "편안한 분위기",
-        "한적한 분위기",
-        "편안한 좌석"
+      "merged_questions": [
+        "아이들과 함께 조용히 공부할 수 있는 카페를 알고 싶어요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악",
-        "단체석"
-      ],
-      "question": "아이들과 함께 조용히 공부할 수 있는 카페를 알고 싶어요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "독서실모드"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "가족"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10663,7 +8510,10 @@
         "조명",
         "편안한 분위기",
         "청결 상태",
-        "와이파이"
+        "와이파이",
+        "쉬는날없이운영",
+        "조용한 카페",
+        "콘센트"
       ],
       "negative_keywords": [
         "흡연실",
@@ -10683,44 +8533,10 @@
           "keyword": "건물"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "24시간영업",
-      "description": "건물 내에서 밤새 24시간 운영하는 카페를 찾는 분들을 위한 추천 규칙입니다. 편리한 접근성과 쾌적한 분위기를 갖춘 카페를 선호합니다.",
-      "keywords": [
-        "24시간",
-        "건물",
-        "쉬는날없이운영",
-        "편리한 접근성",
-        "조용한 카페",
-        "청결 상태",
-        "와이파이",
-        "콘센트"
+      "merged_questions": [
+        "건물 내에서 밤새 영업하는 카페를 추천해 주실래요?"
       ],
-      "negative_keywords": [
-        "흡연실",
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "담배냄새"
-      ],
-      "question": "건물 내에서 밤새 영업하는 카페를 추천해 주실래요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "24시간"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "건물"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10811,7 +8627,8 @@
         "활기",
         "편안한 분위기",
         "음료",
-        "테이크아웃 잔"
+        "테이크아웃 잔",
+        "편안함"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -10831,43 +8648,10 @@
           "keyword": "게임기"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "포장게임",
-      "description": "포장 서비스가 가능하며 게임기를 갖춘 편안하고 즐길 수 있는 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "테이크아웃",
-        "게임기",
-        "편안한 분위기",
-        "빠른 서비스",
-        "음료",
-        "편리한 위치",
-        "편안함"
+      "merged_questions": [
+        "포장도 가능하고 게임기도 있는 괜찮은 카페 찾아줘."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "포장도 가능하고 게임기도 있는 괜찮은 카페 찾아줘.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "테이크아웃"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "게임기"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -10956,14 +8740,17 @@
         "채광",
         "편안한 분위기",
         "공기",
-        "편리한 접근성"
+        "편리한 접근성",
+        "공간",
+        "영업"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "지하",
         "흡연실",
-        "소음"
+        "소음",
+        "음악"
       ],
       "question": "24시간 운영하면서 창문이 있는 카페 추천해 줄래?",
       "seed_keywords": [
@@ -10976,43 +8763,10 @@
           "keyword": "창문"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "24시간채광",
-      "description": "창문으로 자연광이 들어오고 24시간 운영하는 편안하고 개방감 있는 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "24시간",
-        "창문",
-        "개방감",
-        "채광",
-        "편안한 분위기",
-        "공간",
-        "영업"
+      "merged_questions": [
+        "창문으로 자연광 들어오는 24시간 영업하는 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "음악",
-        "소음",
-        "흡연실"
-      ],
-      "question": "창문으로 자연광 들어오는 24시간 영업하는 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "24시간"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "창문"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -11098,14 +8852,28 @@
         "인테리어",
         "조명",
         "사진찍기",
-        "힐링"
+        "힐링",
+        "조용한 카페",
+        "한적한 분위기",
+        "코지",
+        "공부",
+        "독서실모드",
+        "집중도",
+        "콘센트",
+        "1인 좌석",
+        "차분함",
+        "카페"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "흡연실",
-        "담배냄새"
+        "담배냄새",
+        "음악",
+        "활기",
+        "사람",
+        "24시간"
       ],
       "question": "고시촌 근처에서 분위기 좋은 카페 추천해 줄 수 있어?",
       "seed_keywords": [
@@ -11118,116 +8886,12 @@
           "keyword": "고시촌"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "고시촌조용",
-      "description": "고시촌 지역에서 조용하고 아늑한 분위기의 카페를 찾는 분들을 위한 추천입니다. 집중하기 좋고 편안한 공간을 제공합니다.",
-      "keywords": [
-        "영업",
-        "고시촌",
-        "조용한 카페",
-        "한적한 분위기",
-        "편안한 분위기",
-        "코지",
-        "공부",
-        "독서실모드"
+      "merged_questions": [
+        "조용하고 아늑한 고시촌 카페 어디 있을까요?",
+        "고시촌 쪽에서 편하게 공부할 수 있는 카페 알려주세요.",
+        "고시촌에서 분위기 좋으면서 문 연 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악",
-        "활기"
-      ],
-      "question": "조용하고 아늑한 고시촌 카페 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "영업"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "고시촌"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "고시촌공부",
-      "description": "고시촌 근처에서 조용하고 편안한 분위기에서 집중해서 공부할 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "영업",
-        "고시촌",
-        "조용한 카페",
-        "편안한 분위기",
-        "공부",
-        "집중도",
-        "콘센트",
-        "1인 좌석"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "음악",
-        "사람"
-      ],
-      "question": "고시촌 쪽에서 편하게 공부할 수 있는 카페 알려주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "영업"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "고시촌"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "고시촌영업",
-      "description": "고시촌 지역에서 영업 중이며 분위기 좋고 편안한 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "고시촌",
-        "영업",
-        "편안한 분위기",
-        "감성",
-        "인테리어",
-        "차분함",
-        "힐링",
-        "카페"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "흡연실",
-        "소음",
-        "24시간"
-      ],
-      "question": "고시촌에서 분위기 좋으면서 문 연 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "영업"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "고시촌"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 4,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -11358,13 +9022,15 @@
         "편안한 분위기",
         "가족",
         "매장 앞",
-        "청결"
+        "청결",
+        "매장"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "좁은 공간",
-        "불편하다"
+        "불편하다",
+        "흡연실"
       ],
       "question": "어린이도 편하게 놀 수 있는 아이스박스 있는 카페 어디 있을까요?",
       "seed_keywords": [
@@ -11377,44 +9043,10 @@
           "keyword": "아이스박스"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "아이간식",
-      "description": "아이스박스가 있어 아이 간식을 보관하기 좋고 아이와 함께 편안하게 시간을 보낼 수 있는 가족 친화적인 카페를 추천합니다.",
-      "keywords": [
-        "아이",
-        "아이스박스",
-        "가족",
-        "어린이 놀이터",
-        "넓은 공간",
-        "편안한 분위기",
-        "매장",
-        "청결"
+      "merged_questions": [
+        "아이스박스가 있어서 아이 간식 보관하기 좋은 카페 있나요?"
       ],
-      "negative_keywords": [
-        "흡연실",
-        "시끄럽다",
-        "사람 많다",
-        "좁은 공간",
-        "불편하다"
-      ],
-      "question": "아이스박스가 있어서 아이 간식 보관하기 좋은 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "아이"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "아이스박스"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -11503,14 +9135,17 @@
         "한적한 분위기",
         "카공",
         "편안한 분위기",
-        "콘센트_잘 구비되어있다"
+        "콘센트_잘 구비되어있다",
+        "집근처",
+        "편안한 좌석"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "음악",
         "소음",
-        "단체석"
+        "단체석",
+        "담배냄새"
       ],
       "question": "조용하면서 와이파이도 빠른 카페 어디 있을까요?",
       "seed_keywords": [
@@ -11523,43 +9158,10 @@
           "keyword": "와이파이"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "한적한와이파이",
-      "description": "한적하고 조용한 분위기에서 와이파이가 잘 되는 카페를 찾는 분들을 위한 추천 규칙입니다.",
-      "keywords": [
-        "사람",
-        "와이파이",
-        "한적한 분위기",
-        "조용한 카페",
-        "편안한 분위기",
-        "집근처",
-        "편안한 좌석"
+      "merged_questions": [
+        "한적하고 와이파이 잘 되는 카페 알려주실 수 있나요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "음악",
-        "소음",
-        "담배냄새"
-      ],
-      "question": "한적하고 와이파이 잘 되는 카페 알려주실 수 있나요?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "사람"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "와이파이"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -11574,7 +9176,13 @@
         "감성",
         "아름다움",
         "인테리어",
-        "음료"
+        "음료",
+        "청결",
+        "조경",
+        "자연",
+        "한적한 분위기",
+        "테이크아웃",
+        "학생"
       ],
       "negative_keywords": [
         "사람 많다",
@@ -11598,88 +9206,11 @@
           "keyword": "키오스크"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "학교공기",
-      "description": "학교 주변에 위치하며 공기가 좋고 키오스크 결제가 가능한 쾌적한 카페를 추천합니다.",
-      "keywords": [
-        "공기",
-        "학교",
-        "키오스크",
-        "편안한 분위기",
-        "청결",
-        "조경",
-        "자연",
-        "한적한 분위기"
+      "merged_questions": [
+        "공기 좋은 학교 주변 카페 중에서 키오스크 결제 가능한 곳 있을까요?",
+        "학교 주변에 공기가 맑고 키오스크 이용 가능한 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "사람 많다",
-        "시끄럽다",
-        "흡연실",
-        "담배냄새",
-        "좁다"
-      ],
-      "question": "공기 좋은 학교 주변 카페 중에서 키오스크 결제 가능한 곳 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "공기"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "학교"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "키오스크"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "학교주변",
-      "description": "학교 근처에 위치하며 공기가 맑고 키오스크가 구비된 편리한 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "학교",
-        "공기",
-        "키오스크",
-        "편안한 분위기",
-        "청결",
-        "음료",
-        "테이크아웃",
-        "학생"
-      ],
-      "negative_keywords": [
-        "사람 많다",
-        "시끄럽다",
-        "흡연실",
-        "담배냄새",
-        "좁다"
-      ],
-      "question": "학교 주변에 공기가 맑고 키오스크 이용 가능한 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "공기"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "학교"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "키오스크"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -11840,7 +9371,8 @@
         "편리한 위치",
         "청결",
         "휴지통",
-        "매장 앞"
+        "매장 앞",
+        "버스정류장"
       ],
       "negative_keywords": [
         "흡연실",
@@ -11860,37 +9392,10 @@
           "keyword": "화장실"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "편의시설",
-      "description": "화장실 시설이 잘 되어 있고 대중교통으로 접근하기 편리한 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "화장실",
-        "대중교통",
-        "편의시설",
-        "접근성",
-        "편리한 위치",
-        "버스정류장",
-        "매장 앞"
+      "merged_questions": [
+        "화장실 시설이 잘 되어 있고 대중교통으로 가기 편한 카페 추천 부탁해요."
       ],
-      "negative_keywords": [],
-      "question": "화장실 시설이 잘 되어 있고 대중교통으로 가기 편한 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "대중교통"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "화장실"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -11981,7 +9486,9 @@
         "콘센트_잘 구비되어있다",
         "한적한 분위기",
         "책",
-        "와이파이"
+        "와이파이",
+        "집중도",
+        "야외"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -12001,44 +9508,10 @@
           "keyword": "테라스"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "테라스공부",
-      "description": "테라스가 있어 야외에서 공부하기 편안하고 조용한 분위기의 카페를 추천합니다.",
-      "keywords": [
-        "공부",
-        "테라스",
-        "조용한 카페",
-        "한적한 분위기",
-        "콘센트_잘 구비되어있다",
-        "편안한 분위기",
-        "집중도",
-        "야외"
+      "merged_questions": [
+        "밖에서 공부하기 편한 테라스 카페 있나요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "혼잡하다",
-        "소음",
-        "흡연실"
-      ],
-      "question": "밖에서 공부하기 편한 테라스 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "공부"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "테라스"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -12053,14 +9526,18 @@
         "넓은 공간",
         "편리한 위치",
         "차",
-        "음료 트레이"
+        "음료 트레이",
+        "편의시설",
+        "향"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "좁다",
         "불편하다",
-        "혼잡하다"
+        "혼잡하다",
+        "흡연실",
+        "복잡하다"
       ],
       "question": "팝콘 냄새가 나는 카페 중에서 주차 공간도 넉넉하고 티포트를 제공하는 곳 추천해줄 수 있어?",
       "seed_keywords": [
@@ -12077,88 +9554,11 @@
           "keyword": "티포트"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "주차팝콘",
-      "description": "티포트가 준비되어 있고 팝콘 냄새가 감도는 분위기 좋은 카페 중 주차 시설이 잘 갖춰진 곳을 추천합니다.",
-      "keywords": [
-        "티포트",
-        "팝콘냄새",
-        "주차장",
-        "편의시설",
-        "편리한 위치",
-        "편안한 분위기",
-        "차",
-        "향"
+      "merged_questions": [
+        "티포트가 준비되어 있고, 팝콘 냄새가 감도는 카페 중에서 주차 시설도 좋은 곳 알려주세요.",
+        "팝콘 냄새가 나는 분위기의 카페 중 주차장까지 완비된 티포트 제공 카페 추천 부탁해요."
       ],
-      "negative_keywords": [
-        "사람 많다",
-        "시끄럽다",
-        "흡연실",
-        "혼잡하다",
-        "불편하다"
-      ],
-      "question": "티포트가 준비되어 있고, 팝콘 냄새가 감도는 카페 중에서 주차 시설도 좋은 곳 알려주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "팝콘냄새"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "주차장"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "티포트"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "주차장팝콘",
-      "description": "팝콘 냄새가 나는 독특한 분위기의 카페 중 주차장이 완비되어 있고 티포트를 제공하는 편리한 시설을 갖춘 카페를 추천합니다.",
-      "keywords": [
-        "팝콘냄새",
-        "주차장",
-        "티포트",
-        "편의시설",
-        "편리한 위치",
-        "편안한 분위기",
-        "차",
-        "음료 트레이"
-      ],
-      "negative_keywords": [
-        "사람 많다",
-        "시끄럽다",
-        "복잡하다",
-        "좁다",
-        "불편하다"
-      ],
-      "question": "팝콘 냄새가 나는 분위기의 카페 중 주차장까지 완비된 티포트 제공 카페 추천 부탁해요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "팝콘냄새"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "주차장"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "티포트"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -12244,14 +9644,18 @@
         "머그컵 손잡이",
         "편안함",
         "한적한 분위기",
-        "코지"
+        "코지",
+        "편안한 좌석",
+        "조용한 분위기"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "혼잡하다",
         "소음",
-        "답답하다"
+        "답답하다",
+        "사람",
+        "흡연실"
       ],
       "question": "24시간 문 열고 있으면서 편안한 분위기인 카페 추천해 줄 수 있어요?",
       "seed_keywords": [
@@ -12268,86 +9672,11 @@
           "keyword": "머그컵 손잡이"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "여유24시",
-      "description": "언제 방문해도 한적하고 여유로운 분위기에서 머그컵 손잡이를 사용할 수 있는 24시간 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "여유",
-        "24시간",
-        "머그컵 손잡이",
-        "한적한 분위기",
-        "편안한 분위기",
-        "편안한 좌석",
-        "조용한 분위기"
+      "merged_questions": [
+        "언제 가도 한적하고 머그컵 손잡이 있는 24시간 카페 어디 있을까요?",
+        "늦은 밤에도 여유롭게 머그컵 쓸 수 있는 장소 좀 알려 주세요."
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "혼잡하다",
-        "소음",
-        "사람"
-      ],
-      "question": "언제 가도 한적하고 머그컵 손잡이 있는 24시간 카페 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "여유"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "24시간"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "머그컵 손잡이"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "야간여유",
-      "description": "늦은 밤에도 여유로운 분위기에서 머그컵을 사용하며 편안하게 머무를 수 있는 24시간 카페를 추천합니다.",
-      "keywords": [
-        "여유",
-        "24시간",
-        "머그컵 손잡이",
-        "편안한 분위기",
-        "조용한 분위기",
-        "편안한 좌석",
-        "한적한 분위기"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "혼잡하다",
-        "소음",
-        "흡연실"
-      ],
-      "question": "늦은 밤에도 여유롭게 머그컵 쓸 수 있는 장소 좀 알려 주세요.",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "여유"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "24시간"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "머그컵 손잡이"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -12362,14 +9691,21 @@
         "편안한 공간",
         "카페",
         "여유",
-        "좌식층"
+        "좌식층",
+        "조용한 카페",
+        "청결 상태",
+        "콘센트_잘 구비되어있다",
+        "한적한 분위기",
+        "공부",
+        "차분함"
       ],
       "negative_keywords": [
         "시끄럽다",
         "사람 많다",
         "소음",
         "불편하다",
-        "복잡하다"
+        "복잡하다",
+        "흡연실"
       ],
       "question": "학생들이 편하게 쉴 수 있는 매트 깔린 카페 어디 있을까요?",
       "seed_keywords": [
@@ -12382,80 +9718,11 @@
           "keyword": "매트"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "학생매트",
-      "description": "매트가 구비되어 있어 학생들이 편안하게 공부할 수 있는 조용하고 쾌적한 카페를 추천합니다.",
-      "keywords": [
-        "학생",
-        "매트",
-        "조용한 카페",
-        "편안한 분위기",
-        "청결 상태",
-        "콘센트_잘 구비되어있다",
-        "한적한 분위기",
-        "공부"
+      "merged_questions": [
+        "공부하는 학생들에게 좋은 매트가 있는 카페 추천해 주세요.",
+        "학생들이 앉아서 공부하기 좋은 매트가 구비된 카페 있나요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "흡연실",
-        "불편하다"
-      ],
-      "question": "공부하는 학생들에게 좋은 매트가 있는 카페 추천해 주세요.",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "학생"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "매트"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "학생공부",
-      "description": "학생들이 매트가 구비된 편안한 공간에서 조용히 공부할 수 있는 카페를 추천합니다.",
-      "keywords": [
-        "학생",
-        "매트",
-        "조용한 카페",
-        "편안한 공간",
-        "공부",
-        "콘센트_잘 구비되어있다",
-        "차분함",
-        "한적한 분위기"
-      ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "소음",
-        "복잡하다",
-        "불편하다"
-      ],
-      "question": "학생들이 앉아서 공부하기 좋은 매트가 구비된 카페 있나요?",
-      "seed_keywords": [
-        {
-          "type": "TARGET",
-          "keyword": "학생"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "매트"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 3,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -12470,7 +9737,10 @@
         "채광",
         "감성",
         "한적한 분위기",
-        "인테리어"
+        "인테리어",
+        "화사한 차림",
+        "아늑함",
+        "공기"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -12490,44 +9760,10 @@
           "keyword": "아침"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "아침조명",
-      "description": "아침 시간에 방문하기 좋고 조명이 멋진 카페를 찾는 분들을 위한 추천 규칙입니다. 밝고 화사한 분위기에서 여유로운 아침을 즐길 수 있는 카페를 대상으로 합니다.",
-      "keywords": [
-        "조명",
-        "아침",
-        "채광",
-        "화사한 차림",
-        "편안한 분위기",
-        "아늑함",
-        "인테리어",
-        "공기"
+      "merged_questions": [
+        "아침 시간에 조명이 멋진 카페 어디 있을까요?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "아침 시간에 조명이 멋진 카페 어디 있을까요?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "조명"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "아침"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     },
@@ -12618,7 +9854,9 @@
         "공기",
         "채광",
         "음료",
-        "테이블 간격"
+        "테이블 간격",
+        "창문",
+        "테이크아웃"
       ],
       "negative_keywords": [
         "시끄럽다",
@@ -12642,48 +9880,10 @@
           "keyword": "아이스박스"
         }
       ],
-      "merged_questions": [],
-      "source_count": 1,
-      "confidence": "multi",
-      "reason": "multi 질문 기반 조합 rule"
-    },
-    {
-      "title": "학교개방감",
-      "description": "학교 근처에서 탁 트인 개방감이 느껴지고 아이스박스가 비치된 편안한 분위기의 카페를 찾는 분들을 위한 추천입니다.",
-      "keywords": [
-        "학교",
-        "개방감",
-        "아이스박스",
-        "편안한 분위기",
-        "창문",
-        "채광",
-        "테이크아웃",
-        "음료"
+      "merged_questions": [
+        "학교 주변에서 탁 트인 분위기에 아이스박스 비치된 카페 어디 있어?"
       ],
-      "negative_keywords": [
-        "시끄럽다",
-        "사람 많다",
-        "좁다",
-        "답답하다",
-        "혼잡하다"
-      ],
-      "question": "학교 주변에서 탁 트인 분위기에 아이스박스 비치된 카페 어디 있어?",
-      "seed_keywords": [
-        {
-          "type": "ATMOSPHERE",
-          "keyword": "개방감"
-        },
-        {
-          "type": "TARGET",
-          "keyword": "학교"
-        },
-        {
-          "type": "FACILITY",
-          "keyword": "아이스박스"
-        }
-      ],
-      "merged_questions": [],
-      "source_count": 1,
+      "source_count": 2,
       "confidence": "multi",
       "reason": "multi 질문 기반 조합 rule"
     }
