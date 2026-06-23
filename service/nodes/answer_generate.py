@@ -50,6 +50,10 @@ def _extract_effective_keywords(state: AgentState) -> list[str]:
 
 @observe()
 def stream(state: AgentState) -> Iterator[str]:
+    if state.get("question_type") in ("invalid", "fallback"):
+        yield "답변할 수 없는 내용입니다. 카페의 추천에 대한 답변할 수 있도록 질문을 해주세요."
+        return
+
     soar_result = state.get("soar_result") or {}
     cafe_name = soar_result.get("cafe")
 
