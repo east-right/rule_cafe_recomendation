@@ -1,6 +1,8 @@
 import asyncio
+import csv
 import json
 import os
+from collections import defaultdict
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -14,55 +16,114 @@ client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 DATA_PATH = Path("../../data/rule_metadata_merged.json")
 OUTPUT_PATH = Path("../../data/soar_rule_keywords.json")
+GENERIC_PATH = Path("../../data/generic_keywords.json")
+MARKET_PATH = Path("../../data/market_item.csv")
+
+# generic 키워드 → 매장 item의 긍정 descriptor 목록 + 부정 후보 (cafe.db와 동일 형식)
+GENERIC = set(json.load(open(GENERIC_PATH, encoding="utf-8"))["generic"])
+GENERIC_DESCS: dict[str, list[str]] = defaultdict(list)
+NEG_CANDIDATES: list[str] = []
+with open(MARKET_PATH, encoding="utf-8-sig") as _f:
+    _seen_pos, _seen_neg = set(), set()
+    for _r in csv.DictReader(_f):
+        _kw, _d, _senti = _r["키워드"], _r["대표descriptor"].strip(), _r["sentiment"]
+        if _senti == "긍정" and _kw in GENERIC and _d and (_kw, _d) not in _seen_pos:
+            _seen_pos.add((_kw, _d))
+            GENERIC_DESCS[_kw].append(f"{_kw}_{_d}")
+        if _senti == "부정":
+            _item = f"{_kw}_{_d}" if (_kw in GENERIC and _d) else _kw
+            if _item not in _seen_neg:
+                _seen_neg.add(_item)
+                NEG_CANDIDATES.append(_item)
+
+
+def expand_keywords(keywords: list[str]) -> list[str]:
+    """generic 키워드는 '키워드_descriptor' 후보들로 확장(cafe.db와 동일 형식),
+    나머지는 그대로. → operator/tiebreak가 매장 item과 매칭되는 형식으로 선택되게 함."""
+    pool: list[str] = []
+    for kw in keywords:
+        if kw in GENERIC and GENERIC_DESCS.get(kw):
+            pool.extend(GENERIC_DESCS[kw])
+        else:
+            pool.append(kw)
+    # 순서 보존 중복 제거
+    seen, out = set(), []
+    for k in pool:
+        if k not in seen:
+            seen.add(k)
+            out.append(k)
+    return out
+
+
+# 동시성 제한 (TPM 200k 초과 방지) + 429 백오프 재시도
+SEM = asyncio.Semaphore(6)
 
 
 async def extract_keywords(rule: dict) -> dict:
     user_prompt = RULE_KEYWORD_EXTRACTION_USER.format(
         title=rule["title"],
         description=rule["description"],
-        keywords=rule["keywords"],
+        keywords=expand_keywords(rule["keywords"]),
+        negative_candidates=NEG_CANDIDATES,
     )
 
-    response = await client.chat.completions.create(
-        model="gpt-4.1-mini",
-        messages=[
-            {"role": "system", "content": RULE_KEYWORD_EXTRACTION_SYSTEM},
-            {"role": "user", "content": user_prompt},
-        ],
-        temperature=0.0,
-        response_format={"type": "json_object"},
-    )
+    async with SEM:
+        for attempt in range(6):
+            try:
+                response = await client.chat.completions.create(
+                    model="gpt-4.1-mini",
+                    messages=[
+                        {"role": "system", "content": RULE_KEYWORD_EXTRACTION_SYSTEM},
+                        {"role": "user", "content": user_prompt},
+                    ],
+                    temperature=0.0,
+                    response_format={"type": "json_object"},
+                )
+                return json.loads(response.choices[0].message.content)
+            except Exception as e:
+                if "429" in str(e) and attempt < 5:
+                    await asyncio.sleep(2.0 * (attempt + 1))
+                    continue
+                raise
 
-    result = json.loads(response.choices[0].message.content)
-    return result
 
+def sanitize_result(result: dict, rule: dict) -> dict:
+    """풀 이탈 키워드만 제거하고 나머지는 살린다. operator가 다 이탈하면
+    확장 풀 앞부분으로 fallback (통째로 버려 rule이 누락되는 것 방지)."""
+    pool = expand_keywords(rule["keywords"])
+    keyword_pool = set(pool)
 
-def validate_result(result: dict, rule: dict) -> bool:
-    keyword_pool = set(rule["keywords"])
+    ops = [kw for kw in result.get("operator_keywords", []) if kw in keyword_pool]
+    tbs = [kw for kw in result.get("tiebreak_keywords", []) if kw in keyword_pool]
 
-    for kw in result.get("operator_keywords", []):
-        if kw not in keyword_pool:
-            print(f"[{rule['title']}] operator_keyword 풀 이탈: {kw}")
-            return False
+    dropped = [kw for kw in result.get("operator_keywords", []) + result.get("tiebreak_keywords", [])
+               if kw not in keyword_pool]
+    if dropped:
+        print(f"[{rule['title']}] 풀 이탈 키워드 제거: {dropped}")
 
-    for kw in result.get("tiebreak_keywords", []):
-        if kw not in keyword_pool:
-            print(f"[{rule['title']}] tiebreak_keyword 풀 이탈: {kw}")
-            return False
+    if not ops:
+        ops = pool[:5]
+        print(f"[{rule['title']}] operator 전부 이탈 → 확장 풀 앞 5개로 fallback")
 
-    if len(result.get("operator_keywords", [])) < 1:
-        print(f"[{rule['title']}] operator_keywords 비어있음")
-        return False
+    # 부정 키워드: 매장 부정 후보 안에서만, 최대 3개 (억지 선택 방지 → 빈 리스트 허용)
+    neg_pool = set(NEG_CANDIDATES)
+    negs = [kw for kw in result.get("negative_keywords", []) if kw in neg_pool][:3]
 
-    return True
+    return {
+        "title": rule["title"],
+        "operator_keywords": ops,
+        "tiebreak_keywords": tbs,
+        "negative_keywords": negs,
+    }
 
 
 def make_single_keyword_rule(rule: dict) -> dict:
-    """키워드 1개짜리 rule은 LLM 없이 바로 생성"""
+    """키워드 1개짜리 rule은 LLM 없이 바로 생성 (generic이면 descriptor 확장 적용)"""
     return {
         "title": rule["title"],
-        "operator_keywords": rule["keywords"],
-        "tiebreak_keywords": []
+        "operator_keywords": expand_keywords(rule["keywords"]),
+        "tiebreak_keywords": [],
+        "negative_keywords": []
     }
 
 
@@ -107,10 +168,8 @@ async def main():
         if isinstance(response, Exception):
             print(f"[{rule['title']}] 오류: {response}")
             failed.append(rule["title"])
-        elif validate_result(response, rule):
-            results.append(response)
         else:
-            failed.append(rule["title"])
+            results.append(sanitize_result(response, rule))
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)

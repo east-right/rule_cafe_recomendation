@@ -11,8 +11,10 @@ import random
 import os
 from openai import OpenAI
 from pathlib import Path
+from dotenv import load_dotenv
 from prompt import QUESTION_GENERATION_SYSTEM_PROMPT
 
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # ── 경로 설정 ──────────────────────────────────────────────────
@@ -33,14 +35,16 @@ POLL_INTERVAL         = 60
 
 
 # ── 데이터 로드 ───────────────────────────────────────────────
+# v2: market_item.csv 컬럼 category/키워드, 비메뉴(ATMOSPHERE/FACILITY/TARGET)만 존재.
+#     MENU 단일 질문은 생성하지 않음(메뉴는 런타임 별도 처리).
 def load_keywords(path: str) -> dict:
     df = pd.read_csv(path)
     keywords = {}
-    for ktype in ["ATMOSPHERE", "FACILITY", "TARGET", "MENU"]:
-        pos = (df[(df["키워드타입"] == ktype) & (df["sentiment"] == "긍정")]
-               ["최종_키워드"].dropna().unique().tolist())
-        neg = (df[(df["키워드타입"] == ktype) & (df["sentiment"] == "부정")]
-               ["최종_키워드"].dropna().unique().tolist())
+    for ktype in ["ATMOSPHERE", "FACILITY", "TARGET"]:
+        pos = (df[(df["category"] == ktype) & (df["sentiment"] == "긍정")]
+               ["키워드"].dropna().unique().tolist())
+        neg = (df[(df["category"] == ktype) & (df["sentiment"] == "부정")]
+               ["키워드"].dropna().unique().tolist())
         keywords[ktype] = {"긍정": pos, "부정": neg}
     return keywords
 
@@ -91,17 +95,7 @@ def build_batch_requests(keywords: dict) -> list:
             )
             requests.append(req)
 
-    # 2. MENU
-    for i, kw in enumerate(sample_kw(keywords, "MENU", n=MAX_KEYWORDS_PER_TYPE)):
-        cid = f"menu_{i}"
-        req = make_req(
-            cid,
-            user_prompt_single("MENU", kw, QUESTIONS_PER_PROMPT),
-            {"type": "menu", "keywords": [{"type": "MENU", "keyword": kw}]}
-        )
-        requests.append(req)
-
-    # 3. 복합
+    # 2. 복합 (비메뉴 타입 조합만. 메뉴 단일/메뉴-복합 질문은 여기서 생성하지 않음)
     type_combos = [
         ("ATMOSPHERE", "TARGET"),
         ("ATMOSPHERE", "FACILITY"),
