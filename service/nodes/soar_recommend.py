@@ -103,20 +103,24 @@ def _make_sn_judge(title: str, keyword: str, depth: int) -> str:
 """
 
 
-def _make_neg_worst(title: str, keyword: str, idx: int) -> str:
-    """부정 키워드를 가진 매장을 worst(<)로 표시 → 후순위.
-    페어 비교(o1>o2)는 부정 미보유 매장이 많을 때 선호가 폭증해 무한 impasse를
-    유발하므로 단항 worst 선호로 회피한다 (operator 단계 처리)."""
-    return f"""sp {{recommend*neg{idx}*{title}
-   (state <s> ^operator <o> +
-              ^io.input-link <il>)
-   (<o> ^name recommend-cafe ^cafe-name <c-name>)
-   (<il> ^cafe <c>)
-   (<c> ^name <c-name> ^keyword |{keyword}|)
--->
-   (<s> ^operator <o> <)
-}}
-"""
+def _filter_negative(
+    cafe_items: dict[str, list[str]],
+    operator_keywords: list[str],
+    negative_keywords: list[str],
+) -> dict[str, list[str]]:
+    """부정 매장을 후보에서 제거(후순위 효과). Soar 룰(worst/페어)이 추론을 깨뜨려
+    no_output/무한 impasse를 내므로, Soar 전에 파이썬으로 처리한다.
+    부정 없는 operator 후보가 하나라도 있으면 부정 보유 후보를 제거하고,
+    전부 부정이면 그대로 둔다(탈락이 아닌 후순위)."""
+    if not negative_keywords:
+        return cafe_items
+    op_set, neg_set = set(operator_keywords), set(negative_keywords)
+    op_cands = {c for c, kws in cafe_items.items() if op_set & set(kws)}
+    clean = {c for c in op_cands if not (neg_set & set(cafe_items[c]))}
+    if not clean:
+        return cafe_items
+    dirty = op_cands - clean
+    return {c: kws for c, kws in cafe_items.items() if c not in dirty}
 
 
 def _make_llm_fallback(title: str, depth: int) -> str:
@@ -152,9 +156,8 @@ def _build_soar_rule(
     negative_keywords = negative_keywords or []
     parts = [_BOILERPLATE, _make_operator(safe_title, operator_keywords)]
 
-    # negative: 부정 보유 매장을 worst로 (operator 단계, 단항 — 무한 impasse 회피)
-    for i, kw in enumerate(negative_keywords):
-        parts.append(_make_neg_worst(safe_title, kw, i))
+    # negative는 Soar 룰로 처리하지 않는다. worst/페어 모두 Soar 추론을 깨뜨려
+    # (no_output / 무한 impasse), 대신 run()에서 부정 매장을 후보 단계 필터로 거른다.
 
     # positive judge(impasse 단계) → LLM fallback
     depth = 0
@@ -172,8 +175,9 @@ def _build_soar_rule(
 def _load_cafe_items() -> dict[str, list[str]]:
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
+    # 긍정+부정 모두 로드 (negative 필터가 매장의 부정 키워드를 봐야 하므로)
     rows = conn.execute(
-        "SELECT cafe_name, keyword FROM cafe_keywords WHERE sentiment = '긍정'"
+        "SELECT cafe_name, keyword FROM cafe_keywords"
     ).fetchall()
     conn.close()
 
@@ -261,7 +265,9 @@ def run(state: AgentState) -> AgentState:
 
     rule_str = _build_soar_rule(title, operator_keywords, tiebreak_keywords, negative_keywords)
     cafe_items = _load_cafe_items()
+    # trace는 필터 전(neg narrowing 단계까지 보여줌, XAI), Soar input은 부정 매장 제거 후
     tiebreak_trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, negative_keywords, cafe_items)
+    cafe_items = _filter_negative(cafe_items, operator_keywords, negative_keywords)
 
     kernel = sml.Kernel.CreateKernelInNewThread()
     agent = kernel.CreateAgent("cafe-recommender")
