@@ -19,16 +19,22 @@ OUTPUT_PATH = Path("../../data/soar_rule_keywords.json")
 GENERIC_PATH = Path("../../data/generic_keywords.json")
 MARKET_PATH = Path("../../data/market_item.csv")
 
-# generic 키워드 → 매장 item의 긍정 descriptor 목록
+# generic 키워드 → 매장 item의 긍정 descriptor 목록 + 부정 후보 (cafe.db와 동일 형식)
 GENERIC = set(json.load(open(GENERIC_PATH, encoding="utf-8"))["generic"])
 GENERIC_DESCS: dict[str, list[str]] = defaultdict(list)
+NEG_CANDIDATES: list[str] = []
 with open(MARKET_PATH, encoding="utf-8-sig") as _f:
-    _seen = set()
+    _seen_pos, _seen_neg = set(), set()
     for _r in csv.DictReader(_f):
-        _kw, _d = _r["키워드"], _r["대표descriptor"].strip()
-        if _kw in GENERIC and _d and _r["sentiment"] == "긍정" and (_kw, _d) not in _seen:
-            _seen.add((_kw, _d))
+        _kw, _d, _senti = _r["키워드"], _r["대표descriptor"].strip(), _r["sentiment"]
+        if _senti == "긍정" and _kw in GENERIC and _d and (_kw, _d) not in _seen_pos:
+            _seen_pos.add((_kw, _d))
             GENERIC_DESCS[_kw].append(f"{_kw}_{_d}")
+        if _senti == "부정":
+            _item = f"{_kw}_{_d}" if (_kw in GENERIC and _d) else _kw
+            if _item not in _seen_neg:
+                _seen_neg.add(_item)
+                NEG_CANDIDATES.append(_item)
 
 
 def expand_keywords(keywords: list[str]) -> list[str]:
@@ -49,25 +55,36 @@ def expand_keywords(keywords: list[str]) -> list[str]:
     return out
 
 
+# 동시성 제한 (TPM 200k 초과 방지) + 429 백오프 재시도
+SEM = asyncio.Semaphore(6)
+
+
 async def extract_keywords(rule: dict) -> dict:
     user_prompt = RULE_KEYWORD_EXTRACTION_USER.format(
         title=rule["title"],
         description=rule["description"],
         keywords=expand_keywords(rule["keywords"]),
+        negative_candidates=NEG_CANDIDATES,
     )
 
-    response = await client.chat.completions.create(
-        model="gpt-4.1-mini",
-        messages=[
-            {"role": "system", "content": RULE_KEYWORD_EXTRACTION_SYSTEM},
-            {"role": "user", "content": user_prompt},
-        ],
-        temperature=0.0,
-        response_format={"type": "json_object"},
-    )
-
-    result = json.loads(response.choices[0].message.content)
-    return result
+    async with SEM:
+        for attempt in range(6):
+            try:
+                response = await client.chat.completions.create(
+                    model="gpt-4.1-mini",
+                    messages=[
+                        {"role": "system", "content": RULE_KEYWORD_EXTRACTION_SYSTEM},
+                        {"role": "user", "content": user_prompt},
+                    ],
+                    temperature=0.0,
+                    response_format={"type": "json_object"},
+                )
+                return json.loads(response.choices[0].message.content)
+            except Exception as e:
+                if "429" in str(e) and attempt < 5:
+                    await asyncio.sleep(2.0 * (attempt + 1))
+                    continue
+                raise
 
 
 def sanitize_result(result: dict, rule: dict) -> dict:
@@ -88,10 +105,15 @@ def sanitize_result(result: dict, rule: dict) -> dict:
         ops = pool[:5]
         print(f"[{rule['title']}] operator 전부 이탈 → 확장 풀 앞 5개로 fallback")
 
+    # 부정 키워드: 매장 부정 후보 안에서만, 최대 3개 (억지 선택 방지 → 빈 리스트 허용)
+    neg_pool = set(NEG_CANDIDATES)
+    negs = [kw for kw in result.get("negative_keywords", []) if kw in neg_pool][:3]
+
     return {
         "title": rule["title"],
         "operator_keywords": ops,
         "tiebreak_keywords": tbs,
+        "negative_keywords": negs,
     }
 
 
@@ -100,7 +122,8 @@ def make_single_keyword_rule(rule: dict) -> dict:
     return {
         "title": rule["title"],
         "operator_keywords": expand_keywords(rule["keywords"]),
-        "tiebreak_keywords": []
+        "tiebreak_keywords": [],
+        "negative_keywords": []
     }
 
 

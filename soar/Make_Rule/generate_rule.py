@@ -92,6 +92,52 @@ def make_sn_judge(title: str, keyword: str, depth: int) -> str:
 """
 
 
+def make_s1_neg_judge(title: str, keyword: str) -> str:
+    """operator 직후 첫 단계가 negative일 때 (부정 없는 매장 우선)."""
+    return f"""sp {{recommend*S1*neg*{title}
+   (state <s> ^operator <o1> +
+              ^operator <o2> +
+              ^io.input-link <il>)
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name>)
+   - {{ (<c1> ^keyword |{keyword}|) }}
+   (<c2> ^name <c2-name> ^keyword |{keyword}|)
+-->
+   (<s> ^operator <o1> > <o2>)
+}}
+"""
+
+
+def make_sn_neg_judge(title: str, keyword: str, depth: int) -> str:
+    """impasse 이후 단계의 negative judge (부정 없는 매장 우선)."""
+    superstate_chain = ""
+    for i in range(1, depth + 1):
+        if i == 1:
+            superstate_chain += f"   (<s{i}> ^superstate nil)\n"
+        else:
+            superstate_chain += f"   (<s{i}> ^superstate <s{i-1}>)\n"
+
+    return f"""sp {{resolve*tie*S{depth}*neg*{title}
+   (state <s> ^impasse <any-impasse>
+              ^superstate <s{depth}>
+              ^item <o1> ^item <o2>
+              ^top-state <ts>)
+{superstate_chain}
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<ts> ^io.input-link <il>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name>)
+   - {{ (<c1> ^keyword |{keyword}|) }}
+   (<c2> ^name <c2-name> ^keyword |{keyword}|)
+-->
+   (<s{depth-1}> ^operator <o1> > <o2>)
+}}
+"""
+
+
 def make_llm_fallback(title: str, depth: int) -> str:
     superstate_chain = ""
     for i in range(1, depth + 1):
@@ -122,19 +168,22 @@ def generate_soar_rule(rule: dict) -> str:
     title = rule["title"].replace(" ", "_")
     operator_keywords = rule["operator_keywords"]
     tiebreak_keywords = rule["tiebreak_keywords"]
+    negative_keywords = rule.get("negative_keywords", [])
 
-    parts = [BOILERPLATE]
-    parts.append(make_operator(title, operator_keywords))
+    parts = [BOILERPLATE, make_operator(title, operator_keywords)]
 
-    if tiebreak_keywords:
-        parts.append(make_s1_judge(title, tiebreak_keywords[0]))
-        for i, kw in enumerate(tiebreak_keywords[1:], start=2):
-            parts.append(make_sn_judge(title, kw, i))
-        llm_depth = len(tiebreak_keywords) + 1
-    else:
-        llm_depth = 1
+    # 순서: operator → negative judge(부정 없는 매장 우선) → positive judge(긍정 우열) → LLM
+    depth = 0
+    for kw in negative_keywords:
+        depth += 1
+        parts.append(make_s1_neg_judge(title, kw) if depth == 1
+                     else make_sn_neg_judge(title, kw, depth))
+    for kw in tiebreak_keywords:
+        depth += 1
+        parts.append(make_s1_judge(title, kw) if depth == 1
+                     else make_sn_judge(title, kw, depth))
 
-    parts.append(make_llm_fallback(title, llm_depth))
+    parts.append(make_llm_fallback(title, depth + 1))
 
     return "\n".join(parts)
 
