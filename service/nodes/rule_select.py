@@ -1,14 +1,9 @@
-import json
 import os
-import tempfile
 from pathlib import Path
 
-import torch
 from dotenv import load_dotenv
 from huggingface_hub import hf_hub_download
-from peft import PeftModel
-from safetensors.torch import load_file, save_file
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from llama_cpp import Llama
 
 from langfuse import get_client as langfuse_client, observe
 
@@ -21,12 +16,13 @@ load_dotenv(ROOT / ".env")
 
 HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN_READ")
 SLLM_REPO = "east-right/cafe-keyword-selection-qwen-1.5b"
+GGUF_FILENAME = "qwen1.5b-cafe-q8_0.gguf"
+LOCAL_GGUF = ROOT / "keyword_selection" / GGUF_FILENAME
 TOP_K = 10
 
 _embedding_model = None
 _os_client = None
-_sllm_model = None
-_sllm_tokenizer = None
+_sllm = None
 
 
 def _get_retriever():
@@ -38,45 +34,23 @@ def _get_retriever():
     return _embedding_model, _os_client
 
 
-BASE_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
+def _gguf_path() -> str:
+    """로컬 빌드 산출물이 있으면 사용, 없으면 HF에서 다운로드."""
+    if LOCAL_GGUF.exists():
+        return str(LOCAL_GGUF)
+    return hf_hub_download(SLLM_REPO, GGUF_FILENAME, token=HF_TOKEN)
 
 
-def _download_and_fix_adapter() -> str:
-    """Unsloth 저장 어댑터의 키 구조를 표준 PEFT로 변환해 임시 디렉토리에 저장."""
-    config_path = hf_hub_download(SLLM_REPO, "adapter_config.json", token=HF_TOKEN)
-    weights_path = hf_hub_download(SLLM_REPO, "adapter_model.safetensors", token=HF_TOKEN)
-
-    weights = load_file(weights_path)
-    # Unsloth: base_model.model.model.model.<path>
-    # PEFT 표준: base_model.model.<path>
-    fixed = {
-        k.replace("base_model.model.model.model.", "base_model.model."): v
-        for k, v in weights.items()
-    }
-
-    tmp = tempfile.mkdtemp()
-    save_file(fixed, os.path.join(tmp, "adapter_model.safetensors"))
-    with open(config_path) as f:
-        config = json.load(f)
-    with open(os.path.join(tmp, "adapter_config.json"), "w") as f:
-        json.dump(config, f)
-
-    return tmp
-
-
-def _get_sllm():
-    global _sllm_model, _sllm_tokenizer
-    if _sllm_model is None:
-        _sllm_tokenizer = AutoTokenizer.from_pretrained(SLLM_REPO, token=HF_TOKEN)
-        base = AutoModelForCausalLM.from_pretrained(
-            BASE_MODEL,
-            torch_dtype=torch.float32,
+def _get_sllm() -> Llama:
+    global _sllm
+    if _sllm is None:
+        _sllm = Llama(
+            model_path=_gguf_path(),
+            n_ctx=4096,
+            n_threads=os.cpu_count(),
+            verbose=False,
         )
-        adapter_dir = _download_and_fix_adapter()
-        _sllm_model = PeftModel.from_pretrained(base, adapter_dir)
-        _sllm_model = _sllm_model.to("cpu")
-        _sllm_model.eval()
-    return _sllm_model, _sllm_tokenizer
+    return _sllm
 
 
 def _fetch_keywords_from_os(title: str) -> dict:
@@ -102,24 +76,17 @@ def _retrieve(question: str) -> list[dict]:
 
 
 def _select_rule(question: str, candidates: list[dict]) -> str:
-    model, tokenizer = _get_sllm()
-    messages = [
-        {"role": "system", "content": RULE_SELECT_SYSTEM},
-        {"role": "user", "content": build_rule_select_user(question, candidates)},
-    ]
-    text = tokenizer.apply_chat_template(
-        messages, tokenize=False, add_generation_prompt=True
+    llm = _get_sllm()
+    resp = llm.create_chat_completion(
+        messages=[
+            {"role": "system", "content": RULE_SELECT_SYSTEM},
+            {"role": "user", "content": build_rule_select_user(question, candidates)},
+        ],
+        max_tokens=32,
+        temperature=0.0,
+        repeat_penalty=1.1,
     )
-    inputs = tokenizer(text, return_tensors="pt").to("cpu")
-    with torch.no_grad():
-        output_ids = model.generate(
-            **inputs,
-            max_new_tokens=32,
-            do_sample=False,
-            repetition_penalty=1.1,
-        )
-    generated = output_ids[0][inputs.input_ids.shape[1]:]
-    return tokenizer.decode(generated, skip_special_tokens=True).strip()
+    return resp["choices"][0]["message"]["content"].strip()
 
 
 @observe()
