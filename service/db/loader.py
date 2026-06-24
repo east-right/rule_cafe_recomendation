@@ -22,6 +22,7 @@ from schema import get_connection, init_db
 ROOT = Path(__file__).resolve().parents[2]
 CAFES_CSV = ROOT / "data" / "seoul_restaurants_shinline.csv"
 KEYWORDS_CSV = ROOT / "data" / "market_item.csv"
+MENU_CSV = ROOT / "data" / "menu_item.csv"
 GENERIC_PATH = ROOT / "data" / "generic_keywords.json"
 
 
@@ -88,6 +89,34 @@ def load_keywords() -> None:
     print(f"[INFO] cafe_keywords 적재 완료: {len(rows)}개 (generic 분리형 {n_generic}개)")
 
 
+def load_menus() -> None:
+    """menu_item.csv(v2) → menus(유니크 메뉴명) + cafe_menus(매장별).
+    약점여부 'Y'면 부정, 아니면 긍정. 같은 (매장,메뉴)는 부정 우선으로 유니크."""
+    with open(MENU_CSV, encoding="utf-8-sig") as f:
+        rows = [r for r in csv.DictReader(f) if r["사업장명"] and r["specific"]]
+
+    # menus: 유니크 메뉴명
+    unique_menus = sorted({r["specific"] for r in rows})
+
+    # cafe_menus: (매장, 메뉴) 유니크, 약점여부 Y면 부정
+    cafe_menu: dict[tuple, str] = {}
+    for r in rows:
+        key = (r["사업장명"], r["specific"])
+        senti = "부정" if r["약점여부"].strip() == "Y" else "긍정"
+        if key not in cafe_menu or senti == "부정":
+            cafe_menu[key] = senti
+
+    with get_connection() as conn:
+        conn.execute("DELETE FROM cafe_menus")
+        conn.execute("DELETE FROM menus")
+        conn.executemany("INSERT INTO menus (name) VALUES (?)", [(m,) for m in unique_menus])
+        conn.executemany(
+            "INSERT INTO cafe_menus (cafe_name, menu_name, sentiment) VALUES (?, ?, ?)",
+            [(c, m, s) for (c, m), s in cafe_menu.items()],
+        )
+    print(f"[INFO] menus 적재: {len(unique_menus)}개 (유니크) | cafe_menus 적재: {len(cafe_menu)}개")
+
+
 if __name__ == "__main__":
     init_db()
     if "--full" in sys.argv:
@@ -97,8 +126,10 @@ if __name__ == "__main__":
             conn.execute("DELETE FROM cafes")
         load_cafes()
         load_keywords()
+        load_menus()
         print("[INFO] 전체 적재 완료")
     else:
-        # 기본: cafe_keywords만 v2 재적재 (cafes/menus/review_summary 보존)
+        # 기본: cafe_keywords + 메뉴 v2 재적재 (cafes/review_summary 보존)
         load_keywords()
-        print("[INFO] cafe_keywords v2 재적재 완료 (cafes/menus 보존)")
+        load_menus()
+        print("[INFO] cafe_keywords + 메뉴 v2 재적재 완료 (cafes/review_summary 보존)")
