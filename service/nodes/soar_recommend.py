@@ -128,45 +128,18 @@ def _make_sn_judge(kw_id: str, depth: int) -> str:
 """
 
 
-def _make_s1_neg_judge(kw_id: str) -> str:
-    """operator 직후 첫 단계가 negative일 때: 부정 키워드 없는 매장 우선."""
-    return f"""sp {{recommend-S1-neg
-   (state <s> ^operator <o1> +
-              ^operator <o2> +
+def _make_neg_worst(kw_id: str) -> str:
+    """부정 키워드를 가진 매장을 worst(<)로 표시 → 후순위.
+    페어 비교(o1>o2)는 부정 미보유 매장이 많을 때 선호가 폭증해 무한 impasse를
+    유발하므로, 단항 worst 선호로 바꿔 회피한다 (operator 단계에서 처리)."""
+    return f"""sp {{recommend-neg-{kw_id}
+   (state <s> ^operator <o> +
               ^io.input-link <il>)
-   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
-   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
-   (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name>)
-   - {{ (<c1> ^keyword {kw_id}) }}
-   (<c2> ^name <c2-name> ^keyword {kw_id})
+   (<o> ^name recommend-cafe ^cafe-name <c-name>)
+   (<il> ^cafe <c>)
+   (<c> ^name <c-name> ^keyword {kw_id})
 -->
-   (<s> ^operator <o1> > <o2>)
-}}
-"""
-
-
-def _make_sn_neg_judge(kw_id: str, depth: int) -> str:
-    """impasse 이후 단계의 negative judge: 부정 키워드 없는 매장 우선."""
-    chain = "".join(
-        f"   (<s{i}> ^superstate nil)\n" if i == 1
-        else f"   (<s{i}> ^superstate <s{i-1}>)\n"
-        for i in range(1, depth)  # s1..s{depth-1}
-    )
-    return f"""sp {{resolve-tie-S{depth}-neg
-   (state <s> ^impasse <any-impasse>
-              ^superstate <s{depth-1}>
-              ^item <o1> ^item <o2>
-              ^top-state <ts>)
-{chain}   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
-   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
-   (<ts> ^io.input-link <il>)
-   (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name>)
-   - {{ (<c1> ^keyword {kw_id}) }}
-   (<c2> ^name <c2-name> ^keyword {kw_id})
--->
-   (<s1> ^operator <o1> > <o2>)
+   (<s> ^operator <o> <)
 }}
 """
 
@@ -209,12 +182,12 @@ def _build_soar_rule(
         else _make_operator([kw_map[kw] for kw in operator_keywords]),
     ]
 
-    # 순서: operator → negative judge(부정 없는 매장 우선) → positive judge → LLM fallback
-    depth = 0
+    # negative: 부정 보유 매장을 worst로 (operator 단계, 단항 — 무한 impasse 회피)
     for kw in negative_keywords:
-        depth += 1
-        kw_id = kw_map[kw]
-        parts.append(_make_s1_neg_judge(kw_id) if depth == 1 else _make_sn_neg_judge(kw_id, depth))
+        parts.append(_make_neg_worst(kw_map[kw]))
+
+    # positive judge(impasse 단계) → LLM fallback
+    depth = 0
     for kw in tiebreak_keywords:
         depth += 1
         kw_id = kw_map[kw]
