@@ -98,23 +98,37 @@ def load_menus() -> None:
     # menus: 유니크 메뉴명
     unique_menus = sorted({r["specific"] for r in rows})
 
-    # cafe_menus: (매장, 메뉴) 유니크, 약점여부 Y면 부정
-    cafe_menu: dict[tuple, str] = {}
+    # cafe_menus: (매장, 메뉴) 유니크. 약점여부 Y면 부정, 맛집score 포함
+    def _score(r: dict) -> float:
+        try:
+            return float(r["맛집score"]) if r["맛집score"] else 0.0
+        except ValueError:
+            return 0.0
+
+    cafe_menu: dict[tuple, tuple] = {}  # (cafe, menu) -> (sentiment, score)
     for r in rows:
         key = (r["사업장명"], r["specific"])
         senti = "부정" if r["약점여부"].strip() == "Y" else "긍정"
-        if key not in cafe_menu or senti == "부정":
-            cafe_menu[key] = senti
+        score = _score(r)
+        # 부정 우선 유지, 같은 key면 더 높은 score 채택
+        if key not in cafe_menu:
+            cafe_menu[key] = (senti, score)
+        else:
+            prev_senti, prev_score = cafe_menu[key]
+            cafe_menu[key] = (
+                "부정" if "부정" in (prev_senti, senti) else "긍정",
+                max(prev_score, score),
+            )
 
     with get_connection() as conn:
         conn.execute("DELETE FROM cafe_menus")
         conn.execute("DELETE FROM menus")
         conn.executemany("INSERT INTO menus (name) VALUES (?)", [(m,) for m in unique_menus])
         conn.executemany(
-            "INSERT INTO cafe_menus (cafe_name, menu_name, sentiment) VALUES (?, ?, ?)",
-            [(c, m, s) for (c, m), s in cafe_menu.items()],
+            "INSERT INTO cafe_menus (cafe_name, menu_name, sentiment, menu_score) VALUES (?, ?, ?, ?)",
+            [(c, m, s, sc) for (c, m), (s, sc) in cafe_menu.items()],
         )
-    print(f"[INFO] menus 적재: {len(unique_menus)}개 (유니크) | cafe_menus 적재: {len(cafe_menu)}개")
+    print(f"[INFO] menus 적재: {len(unique_menus)}개 (유니크) | cafe_menus 적재: {len(cafe_menu)}개 (맛집score 포함)")
 
 
 if __name__ == "__main__":
