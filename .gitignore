@@ -33,3 +33,7 @@ soar/sml/
 data/review_summary_batch_input.jsonl
 data/review_summary_batch_output.jsonl
 data/review_summary_batch_id.txt
+
+# sLLM gguf 산출물 (병합 모델 / 변환 gguf — 로컬 빌드 또는 HF에서 다운로드)
+keyword_selection/merged/
+keyword_selection/*.gguf
