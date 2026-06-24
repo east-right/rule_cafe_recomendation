@@ -296,6 +296,18 @@ def run(state: AgentState) -> AgentState:
     soar_result = _parse_output(agent.GetOutputLink())
     soar_result["trace"] = tiebreak_trace
 
+    # Soar 엔진이 결과를 못 낸 경우(no_output) 파이썬 trace로 fallback.
+    # rule별 후보 분포에 따라 Soar의 impasse 깊이와 룰 depth가 안 맞아 추천/impasse를
+    # 둘 다 못 만드는 케이스가 있어, trace가 산출한 결과를 채택한다.
+    if soar_result["type"] == "no_output" and tiebreak_trace:
+        remaining = tiebreak_trace[-1]["remaining"]
+        if len(remaining) == 1:
+            soar_result["type"] = "recommendation"
+            soar_result["cafe"] = remaining[0]
+        elif len(remaining) >= 2:
+            soar_result["type"] = "impasse"
+            soar_result["candidates"] = remaining[:2]
+
     kernel.Shutdown()
     del kernel
 
