@@ -103,6 +103,47 @@ def _make_sn_judge(title: str, keyword: str, depth: int) -> str:
 """
 
 
+def _make_s1_neg_judge(title: str, keyword: str) -> str:
+    return f"""sp {{recommend*S1*neg*{title}
+   (state <s> ^operator <o1> +
+              ^operator <o2> +
+              ^io.input-link <il>)
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name>)
+   - {{ (<c1> ^keyword |{keyword}|) }}
+   (<c2> ^name <c2-name> ^keyword |{keyword}|)
+-->
+   (<s> ^operator <o1> > <o2>)
+}}
+"""
+
+
+def _make_sn_neg_judge(title: str, keyword: str, depth: int) -> str:
+    chain = "".join(
+        f"   (<s{i}> ^superstate nil)\n" if i == 1
+        else f"   (<s{i}> ^superstate <s{i-1}>)\n"
+        for i in range(1, depth + 1)
+    )
+    return f"""sp {{resolve*tie*S{depth}*neg*{title}
+   (state <s> ^impasse <any-impasse>
+              ^superstate <s{depth}>
+              ^item <o1> ^item <o2>
+              ^top-state <ts>)
+{chain}   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<ts> ^io.input-link <il>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name>)
+   - {{ (<c1> ^keyword |{keyword}|) }}
+   (<c2> ^name <c2-name> ^keyword |{keyword}|)
+-->
+   (<s{depth-1}> ^operator <o1> > <o2>)
+}}
+"""
+
+
 def _make_llm_fallback(title: str, depth: int) -> str:
     chain = "".join(
         f"   (<s{i}> ^superstate nil)\n" if i == 1
@@ -126,19 +167,28 @@ def _make_llm_fallback(title: str, depth: int) -> str:
 """
 
 
-def _build_soar_rule(title: str, operator_keywords: list[str], tiebreak_keywords: list[str]) -> str:
+def _build_soar_rule(
+    title: str,
+    operator_keywords: list[str],
+    tiebreak_keywords: list[str],
+    negative_keywords: list[str] | None = None,
+) -> str:
     safe_title = title.replace(" ", "_")
+    negative_keywords = negative_keywords or []
     parts = [_BOILERPLATE, _make_operator(safe_title, operator_keywords)]
 
-    if tiebreak_keywords:
-        parts.append(_make_s1_judge(safe_title, tiebreak_keywords[0]))
-        for i, kw in enumerate(tiebreak_keywords[1:], start=2):
-            parts.append(_make_sn_judge(safe_title, kw, i))
-        llm_depth = len(tiebreak_keywords) + 1
-    else:
-        llm_depth = 1
+    # 순서: operator → negative judge(부정 없는 매장 우선) → positive judge → LLM fallback
+    depth = 0
+    for kw in negative_keywords:
+        depth += 1
+        parts.append(_make_s1_neg_judge(safe_title, kw) if depth == 1
+                     else _make_sn_neg_judge(safe_title, kw, depth))
+    for kw in tiebreak_keywords:
+        depth += 1
+        parts.append(_make_s1_judge(safe_title, kw) if depth == 1
+                     else _make_sn_judge(safe_title, kw, depth))
 
-    parts.append(_make_llm_fallback(safe_title, llm_depth))
+    parts.append(_make_llm_fallback(safe_title, depth + 1))
     return "\n".join(parts)
 
 
@@ -163,24 +213,40 @@ def _load_cafe_items() -> dict[str, list[str]]:
 def _trace_tiebreak(
     operator_keywords: list[str],
     tiebreak_keywords: list[str],
+    negative_keywords: list[str],
     cafe_items: dict[str, list[str]],
 ) -> list[dict]:
     op_set = set(operator_keywords)
     candidates = {c for c, kws in cafe_items.items() if op_set & set(kws)}
 
     traces = [{"step": "operator", "keyword": None, "remaining": sorted(candidates)}]
+    depth = 0
 
-    for i, tb_kw in enumerate(tiebreak_keywords, start=1):
+    # negative 먼저: 부정 없는 매장 우선 (부정 있는 매장은 후순위)
+    for neg_kw in negative_keywords:
+        depth += 1
+        clean = {c for c in candidates if neg_kw not in set(cafe_items.get(c, []))}
+        if 0 < len(clean) < len(candidates):
+            candidates = clean
+            traces.append({"step": f"S{depth}_neg_narrowed", "keyword": neg_kw, "remaining": sorted(candidates)})
+        else:
+            traces.append({"step": f"S{depth}_neg_no_effect", "keyword": neg_kw, "remaining": sorted(candidates)})
+        if len(candidates) == 1:
+            return traces
+
+    # positive: 긍정 세부로 우열
+    for tb_kw in tiebreak_keywords:
+        depth += 1
         filtered = {c for c in candidates if tb_kw in set(cafe_items.get(c, []))}
         if len(filtered) == 1:
             candidates = filtered
-            traces.append({"step": f"S{i}_resolved", "keyword": tb_kw, "remaining": sorted(candidates)})
+            traces.append({"step": f"S{depth}_resolved", "keyword": tb_kw, "remaining": sorted(candidates)})
             break
         elif len(filtered) > 1:
             candidates = filtered
-            traces.append({"step": f"S{i}_narrowed", "keyword": tb_kw, "remaining": sorted(candidates)})
+            traces.append({"step": f"S{depth}_narrowed", "keyword": tb_kw, "remaining": sorted(candidates)})
         else:
-            traces.append({"step": f"S{i}_no_effect", "keyword": tb_kw, "remaining": sorted(candidates)})
+            traces.append({"step": f"S{depth}_no_effect", "keyword": tb_kw, "remaining": sorted(candidates)})
 
     return traces
 
@@ -216,10 +282,11 @@ def run(state: AgentState) -> AgentState:
     title = state["selected_rule"]
     operator_keywords = state["operator_keywords"]
     tiebreak_keywords = state["tiebreak_keywords"]
+    negative_keywords = state.get("negative_keywords", []) or []
 
-    rule_str = _build_soar_rule(title, operator_keywords, tiebreak_keywords)
+    rule_str = _build_soar_rule(title, operator_keywords, tiebreak_keywords, negative_keywords)
     cafe_items = _load_cafe_items()
-    tiebreak_trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, cafe_items)
+    tiebreak_trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, negative_keywords, cafe_items)
 
     kernel = sml.Kernel.CreateKernelInNewThread()
     agent = kernel.CreateAgent("cafe-recommender")
