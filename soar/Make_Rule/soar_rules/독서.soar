@@ -34,36 +34,6 @@ sp {recommend*OPERATOR*독서
    (<o> ^name recommend-cafe ^cafe-name <c-name>)
 }
 
-sp {recommend*neg0*독서
-   (state <s> ^operator <o> +
-              ^io.input-link <il>)
-   (<o> ^name recommend-cafe ^cafe-name <c-name>)
-   (<il> ^cafe <c>)
-   (<c> ^name <c-name> ^keyword |음악_시끄럽다|)
--->
-   (<s> ^operator <o> <)
-}
-
-sp {recommend*neg1*독서
-   (state <s> ^operator <o> +
-              ^io.input-link <il>)
-   (<o> ^name recommend-cafe ^cafe-name <c-name>)
-   (<il> ^cafe <c>)
-   (<c> ^name <c-name> ^keyword |소음|)
--->
-   (<s> ^operator <o> <)
-}
-
-sp {recommend*neg2*독서
-   (state <s> ^operator <o> +
-              ^io.input-link <il>)
-   (<o> ^name recommend-cafe ^cafe-name <c-name>)
-   (<il> ^cafe <c>)
-   (<c> ^name <c-name> ^keyword |분위기_조용하지 않다|)
--->
-   (<s> ^operator <o> <)
-}
-
 sp {recommend*S1*judge*독서
    (state <s> ^operator <o1> +
               ^operator <o2> +
