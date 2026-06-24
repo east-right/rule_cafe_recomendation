@@ -92,48 +92,18 @@ def make_sn_judge(title: str, keyword: str, depth: int) -> str:
 """
 
 
-def make_s1_neg_judge(title: str, keyword: str) -> str:
-    """operator 직후 첫 단계가 negative일 때 (부정 없는 매장 우선)."""
-    return f"""sp {{recommend*S1*neg*{title}
-   (state <s> ^operator <o1> +
-              ^operator <o2> +
+def make_neg_worst(title: str, keyword: str, idx: int) -> str:
+    """부정 키워드를 가진 매장을 worst(<)로 표시 → 후순위.
+    페어 비교(o1>o2)는 부정 미보유 매장이 많을 때 선호가 폭증해 무한 impasse를
+    유발하므로 단항 worst 선호로 회피한다 (operator 단계 처리)."""
+    return f"""sp {{recommend*neg{idx}*{title}
+   (state <s> ^operator <o> +
               ^io.input-link <il>)
-   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
-   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
-   (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name>)
-   - {{ (<c1> ^keyword |{keyword}|) }}
-   (<c2> ^name <c2-name> ^keyword |{keyword}|)
+   (<o> ^name recommend-cafe ^cafe-name <c-name>)
+   (<il> ^cafe <c>)
+   (<c> ^name <c-name> ^keyword |{keyword}|)
 -->
-   (<s> ^operator <o1> > <o2>)
-}}
-"""
-
-
-def make_sn_neg_judge(title: str, keyword: str, depth: int) -> str:
-    """impasse 이후 단계의 negative judge (부정 없는 매장 우선)."""
-    superstate_chain = ""
-    for i in range(1, depth + 1):
-        if i == 1:
-            superstate_chain += f"   (<s{i}> ^superstate nil)\n"
-        else:
-            superstate_chain += f"   (<s{i}> ^superstate <s{i-1}>)\n"
-
-    return f"""sp {{resolve*tie*S{depth}*neg*{title}
-   (state <s> ^impasse <any-impasse>
-              ^superstate <s{depth}>
-              ^item <o1> ^item <o2>
-              ^top-state <ts>)
-{superstate_chain}
-   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
-   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
-   (<ts> ^io.input-link <il>)
-   (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name>)
-   - {{ (<c1> ^keyword |{keyword}|) }}
-   (<c2> ^name <c2-name> ^keyword |{keyword}|)
--->
-   (<s{depth-1}> ^operator <o1> > <o2>)
+   (<s> ^operator <o> <)
 }}
 """
 
@@ -172,12 +142,12 @@ def generate_soar_rule(rule: dict) -> str:
 
     parts = [BOILERPLATE, make_operator(title, operator_keywords)]
 
-    # 순서: operator → negative judge(부정 없는 매장 우선) → positive judge(긍정 우열) → LLM
+    # negative: 부정 보유 매장을 worst로 (operator 단계, 단항 — 무한 impasse 회피)
+    for i, kw in enumerate(negative_keywords):
+        parts.append(make_neg_worst(title, kw, i))
+
+    # positive judge(impasse 단계) → LLM fallback
     depth = 0
-    for kw in negative_keywords:
-        depth += 1
-        parts.append(make_s1_neg_judge(title, kw) if depth == 1
-                     else make_sn_neg_judge(title, kw, depth))
     for kw in tiebreak_keywords:
         depth += 1
         parts.append(make_s1_judge(title, kw) if depth == 1

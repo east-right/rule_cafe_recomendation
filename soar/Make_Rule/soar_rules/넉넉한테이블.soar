@@ -34,21 +34,51 @@ sp {recommend*OPERATOR*넉넉한테이블
    (<o> ^name recommend-cafe ^cafe-name <c-name>)
 }
 
-sp {recommend*S1*neg*넉넉한테이블
+sp {recommend*neg0*넉넉한테이블
+   (state <s> ^operator <o> +
+              ^io.input-link <il>)
+   (<o> ^name recommend-cafe ^cafe-name <c-name>)
+   (<il> ^cafe <c>)
+   (<c> ^name <c-name> ^keyword |테이블_좁다|)
+-->
+   (<s> ^operator <o> <)
+}
+
+sp {recommend*neg1*넉넉한테이블
+   (state <s> ^operator <o> +
+              ^io.input-link <il>)
+   (<o> ^name recommend-cafe ^cafe-name <c-name>)
+   (<il> ^cafe <c>)
+   (<c> ^name <c-name> ^keyword |테이블_자리 수가 적다|)
+-->
+   (<s> ^operator <o> <)
+}
+
+sp {recommend*neg2*넉넉한테이블
+   (state <s> ^operator <o> +
+              ^io.input-link <il>)
+   (<o> ^name recommend-cafe ^cafe-name <c-name>)
+   (<il> ^cafe <c>)
+   (<c> ^name <c-name> ^keyword |테이블_적다|)
+-->
+   (<s> ^operator <o> <)
+}
+
+sp {recommend*S1*judge*넉넉한테이블
    (state <s> ^operator <o1> +
               ^operator <o2> +
               ^io.input-link <il>)
    (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
    (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
    (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name>)
-   - { (<c1> ^keyword |테이블_좁다|) }
-   (<c2> ^name <c2-name> ^keyword |테이블_좁다|)
+   (<c1> ^name <c1-name> ^keyword |테이블_편안하다|)
+   (<c2> ^name <c2-name>)
+   - { (<c2> ^keyword |테이블_편안하다|) }
 -->
    (<s> ^operator <o1> > <o2>)
 }
 
-sp {resolve*tie*S2*neg*넉넉한테이블
+sp {resolve*tie*S2*judge*넉넉한테이블
    (state <s> ^impasse <any-impasse>
               ^superstate <s2>
               ^item <o1> ^item <o2>
@@ -60,14 +90,14 @@ sp {resolve*tie*S2*neg*넉넉한테이블
    (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
    (<ts> ^io.input-link <il>)
    (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name>)
-   - { (<c1> ^keyword |테이블_자리 수가 적다|) }
-   (<c2> ^name <c2-name> ^keyword |테이블_자리 수가 적다|)
+   (<c1> ^name <c1-name> ^keyword |좌석_편안하다|)
+   (<c2> ^name <c2-name>)
+   - { (<c2> ^keyword |좌석_편안하다|) }
 -->
    (<s1> ^operator <o1> > <o2>)
 }
 
-sp {resolve*tie*S3*neg*넉넉한테이블
+sp {resolve*tie*S3*judge*넉넉한테이블
    (state <s> ^impasse <any-impasse>
               ^superstate <s3>
               ^item <o1> ^item <o2>
@@ -80,9 +110,9 @@ sp {resolve*tie*S3*neg*넉넉한테이블
    (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
    (<ts> ^io.input-link <il>)
    (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name>)
-   - { (<c1> ^keyword |테이블_적다|) }
-   (<c2> ^name <c2-name> ^keyword |테이블_적다|)
+   (<c1> ^name <c1-name> ^keyword |공간_편안하다|)
+   (<c2> ^name <c2-name>)
+   - { (<c2> ^keyword |공간_편안하다|) }
 -->
    (<s2> ^operator <o1> > <o2>)
 }
@@ -101,14 +131,14 @@ sp {resolve*tie*S4*judge*넉넉한테이블
    (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
    (<ts> ^io.input-link <il>)
    (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name> ^keyword |테이블_편안하다|)
+   (<c1> ^name <c1-name> ^keyword |편안함|)
    (<c2> ^name <c2-name>)
-   - { (<c2> ^keyword |테이블_편안하다|) }
+   - { (<c2> ^keyword |편안함|) }
 -->
    (<s3> ^operator <o1> > <o2>)
 }
 
-sp {resolve*tie*S5*judge*넉넉한테이블
+sp {resolve*tie*S5*ask-llm*넉넉한테이블
    (state <s> ^impasse <any-impasse>
               ^superstate <s5>
               ^item <o1> ^item <o2>
@@ -119,78 +149,6 @@ sp {resolve*tie*S5*judge*넉넉한테이블
    (<s4> ^superstate <s3>)
    (<s5> ^superstate <s4>)
 
-   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
-   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
-   (<ts> ^io.input-link <il>)
-   (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name> ^keyword |좌석_편안하다|)
-   (<c2> ^name <c2-name>)
-   - { (<c2> ^keyword |좌석_편안하다|) }
--->
-   (<s4> ^operator <o1> > <o2>)
-}
-
-sp {resolve*tie*S6*judge*넉넉한테이블
-   (state <s> ^impasse <any-impasse>
-              ^superstate <s6>
-              ^item <o1> ^item <o2>
-              ^top-state <ts>)
-   (<s1> ^superstate nil)
-   (<s2> ^superstate <s1>)
-   (<s3> ^superstate <s2>)
-   (<s4> ^superstate <s3>)
-   (<s5> ^superstate <s4>)
-   (<s6> ^superstate <s5>)
-
-   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
-   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
-   (<ts> ^io.input-link <il>)
-   (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name> ^keyword |공간_편안하다|)
-   (<c2> ^name <c2-name>)
-   - { (<c2> ^keyword |공간_편안하다|) }
--->
-   (<s5> ^operator <o1> > <o2>)
-}
-
-sp {resolve*tie*S7*judge*넉넉한테이블
-   (state <s> ^impasse <any-impasse>
-              ^superstate <s7>
-              ^item <o1> ^item <o2>
-              ^top-state <ts>)
-   (<s1> ^superstate nil)
-   (<s2> ^superstate <s1>)
-   (<s3> ^superstate <s2>)
-   (<s4> ^superstate <s3>)
-   (<s5> ^superstate <s4>)
-   (<s6> ^superstate <s5>)
-   (<s7> ^superstate <s6>)
-
-   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
-   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
-   (<ts> ^io.input-link <il>)
-   (<il> ^cafe <c1> ^cafe <c2>)
-   (<c1> ^name <c1-name> ^keyword |편안함|)
-   (<c2> ^name <c2-name>)
-   - { (<c2> ^keyword |편안함|) }
--->
-   (<s6> ^operator <o1> > <o2>)
-}
-
-sp {resolve*tie*S8*ask-llm*넉넉한테이블
-   (state <s> ^impasse <any-impasse>
-              ^superstate <s8>
-              ^item <o1> ^item <o2>
-              ^top-state <ts>)
-   (<s1> ^superstate nil)
-   (<s2> ^superstate <s1>)
-   (<s3> ^superstate <s2>)
-   (<s4> ^superstate <s3>)
-   (<s5> ^superstate <s4>)
-   (<s6> ^superstate <s5>)
-   (<s7> ^superstate <s6>)
-   (<s8> ^superstate <s7>)
-
    (<o1> ^cafe-name <c1-name>)
    (<o2> ^cafe-name { <c2-name> <> <c1-name> })
    (<ts> ^io.output-link <ol>)
@@ -198,5 +156,5 @@ sp {resolve*tie*S8*ask-llm*넉넉한테이블
    (<ol> ^ask-llm <req>)
    (<req> ^cand1 <c1-name>
           ^cand2 <c2-name>
-          ^stopped-depth 8)
+          ^stopped-depth 5)
 }
