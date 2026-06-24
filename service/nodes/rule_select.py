@@ -85,7 +85,7 @@ def _fetch_keywords_from_os(title: str) -> dict:
         index=INDEX_NAME,
         body={
             "query": {"term": {"title": title}},
-            "_source": ["operator_keywords", "tiebreak_keywords"],
+            "_source": ["operator_keywords", "tiebreak_keywords", "negative_keywords"],
         },
     )
     hits = res["hits"]["hits"]
@@ -140,6 +140,7 @@ def run(state: AgentState) -> AgentState:
             "selected_rule": "none",
             "operator_keywords": [],
             "tiebreak_keywords": [],
+            "negative_keywords": [],
         }
 
     keywords = _fetch_keywords_from_os(selected)
@@ -157,4 +158,5 @@ def run(state: AgentState) -> AgentState:
         "selected_rule": selected,
         "operator_keywords": keywords.get("operator_keywords", []),
         "tiebreak_keywords": keywords.get("tiebreak_keywords", []),
+        "negative_keywords": keywords.get("negative_keywords", []),
     }

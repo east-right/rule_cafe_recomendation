@@ -49,9 +49,16 @@ sp {apply*recommend-cafe*send-to-python
 """
 
 
-def _build_kw_map(operator_keywords: list[str], tiebreak_keywords: list[str]) -> dict[str, str]:
-    """한국어 키워드 → ASCII ID 매핑 (Soar 파서 인코딩 이슈 회피)."""
-    return {kw: f"kw{i}" for i, kw in enumerate(operator_keywords + tiebreak_keywords)}
+def _build_kw_map(
+    operator_keywords: list[str],
+    tiebreak_keywords: list[str],
+    negative_keywords: list[str] | None = None,
+) -> dict[str, str]:
+    """한국어 키워드 → ASCII ID 매핑 (Soar 파서 인코딩 이슈 회피).
+    negative 키워드도 포함해 부정 judge가 ASCII id로 매칭되게 한다."""
+    negative_keywords = negative_keywords or []
+    all_kw = list(dict.fromkeys(operator_keywords + tiebreak_keywords + negative_keywords))
+    return {kw: f"kw{i}" for i, kw in enumerate(all_kw)}
 
 
 def _make_operator(op_ids: list[str]) -> str:
@@ -121,6 +128,49 @@ def _make_sn_judge(kw_id: str, depth: int) -> str:
 """
 
 
+def _make_s1_neg_judge(kw_id: str) -> str:
+    """operator 직후 첫 단계가 negative일 때: 부정 키워드 없는 매장 우선."""
+    return f"""sp {{recommend-S1-neg
+   (state <s> ^operator <o1> +
+              ^operator <o2> +
+              ^io.input-link <il>)
+   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name>)
+   - {{ (<c1> ^keyword {kw_id}) }}
+   (<c2> ^name <c2-name> ^keyword {kw_id})
+-->
+   (<s> ^operator <o1> > <o2>)
+}}
+"""
+
+
+def _make_sn_neg_judge(kw_id: str, depth: int) -> str:
+    """impasse 이후 단계의 negative judge: 부정 키워드 없는 매장 우선."""
+    chain = "".join(
+        f"   (<s{i}> ^superstate nil)\n" if i == 1
+        else f"   (<s{i}> ^superstate <s{i-1}>)\n"
+        for i in range(1, depth)  # s1..s{depth-1}
+    )
+    return f"""sp {{resolve-tie-S{depth}-neg
+   (state <s> ^impasse <any-impasse>
+              ^superstate <s{depth-1}>
+              ^item <o1> ^item <o2>
+              ^top-state <ts>)
+{chain}   (<o1> ^name recommend-cafe ^cafe-name <c1-name>)
+   (<o2> ^name recommend-cafe ^cafe-name <c2-name> <> <c1-name>)
+   (<ts> ^io.input-link <il>)
+   (<il> ^cafe <c1> ^cafe <c2>)
+   (<c1> ^name <c1-name>)
+   - {{ (<c1> ^keyword {kw_id}) }}
+   (<c2> ^name <c2-name> ^keyword {kw_id})
+-->
+   (<s1> ^operator <o1> > <o2>)
+}}
+"""
+
+
 def _make_llm_fallback(depth: int) -> str:
     # fires in Soar's S{depth} (depth-1 levels deep from top state S1)
     chain = "".join(
@@ -149,38 +199,47 @@ def _build_soar_rule(
     operator_keywords: list[str],
     tiebreak_keywords: list[str],
     kw_map: dict[str, str],
+    negative_keywords: list[str] | None = None,
     menu_mode: bool = False,
 ) -> str:
-    parts = [_BOILERPLATE, _make_menu_operator() if menu_mode else _make_operator([kw_map[kw] for kw in operator_keywords])]
+    negative_keywords = negative_keywords or []
+    parts = [
+        _BOILERPLATE,
+        _make_menu_operator() if menu_mode
+        else _make_operator([kw_map[kw] for kw in operator_keywords]),
+    ]
 
-    if tiebreak_keywords:
-        parts.append(_make_s1_judge(kw_map[tiebreak_keywords[0]]))
-        for i, kw in enumerate(tiebreak_keywords[1:], start=2):
-            parts.append(_make_sn_judge(kw_map[kw], i))
-        llm_depth = len(tiebreak_keywords) + 1
-    else:
-        llm_depth = 1
+    # 순서: operator → negative judge(부정 없는 매장 우선) → positive judge → LLM fallback
+    depth = 0
+    for kw in negative_keywords:
+        depth += 1
+        kw_id = kw_map[kw]
+        parts.append(_make_s1_neg_judge(kw_id) if depth == 1 else _make_sn_neg_judge(kw_id, depth))
+    for kw in tiebreak_keywords:
+        depth += 1
+        kw_id = kw_map[kw]
+        parts.append(_make_s1_judge(kw_id) if depth == 1 else _make_sn_judge(kw_id, depth))
 
-    parts.append(_make_llm_fallback(llm_depth))
+    parts.append(_make_llm_fallback(depth + 1))
     return "\n".join(parts)
 
 
 # ── SQLite 로드 ────────────────────────────────────────────────
 
 def _load_cafe_items(menu_cafe_names: list[str] | None = None) -> dict[str, list[str]]:
+    """매장별 키워드 로드. 긍정(operator/tiebreak 매칭)과 부정(negative judge 매칭)을
+    모두 가져온다 — kw_map에 있는 키워드만 Soar로 전달되므로 섞여도 무방하다."""
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
 
     if menu_cafe_names:
         placeholders = ",".join("?" * len(menu_cafe_names))
         rows = conn.execute(
-            f"SELECT cafe_name, keyword FROM cafe_keywords WHERE sentiment = '긍정' AND cafe_name IN ({placeholders})",
+            f"SELECT cafe_name, keyword FROM cafe_keywords WHERE cafe_name IN ({placeholders})",
             menu_cafe_names,
         ).fetchall()
     else:
-        rows = conn.execute(
-            "SELECT cafe_name, keyword FROM cafe_keywords WHERE sentiment = '긍정'"
-        ).fetchall()
+        rows = conn.execute("SELECT cafe_name, keyword FROM cafe_keywords").fetchall()
 
     conn.close()
 
@@ -195,24 +254,40 @@ def _load_cafe_items(menu_cafe_names: list[str] | None = None) -> dict[str, list
 def _trace_tiebreak(
     operator_keywords: list[str],
     tiebreak_keywords: list[str],
+    negative_keywords: list[str],
     cafe_items: dict[str, list[str]],
 ) -> list[dict]:
     op_set = set(operator_keywords)
     candidates = {c for c, kws in cafe_items.items() if op_set & set(kws)}
 
     traces = [{"step": "operator", "keyword": None, "remaining": sorted(candidates)}]
+    depth = 0
 
-    for i, tb_kw in enumerate(tiebreak_keywords, start=1):
+    # negative 먼저: 부정 없는 매장 우선
+    for neg_kw in negative_keywords:
+        depth += 1
+        clean = {c for c in candidates if neg_kw not in set(cafe_items.get(c, []))}
+        if 0 < len(clean) < len(candidates):
+            candidates = clean
+            traces.append({"step": f"S{depth}_neg_narrowed", "keyword": neg_kw, "remaining": sorted(candidates)})
+        else:
+            traces.append({"step": f"S{depth}_neg_no_effect", "keyword": neg_kw, "remaining": sorted(candidates)})
+        if len(candidates) == 1:
+            return traces
+
+    # positive: 긍정 세부로 우열
+    for tb_kw in tiebreak_keywords:
+        depth += 1
         filtered = {c for c in candidates if tb_kw in set(cafe_items.get(c, []))}
         if len(filtered) == 1:
             candidates = filtered
-            traces.append({"step": f"S{i}_resolved", "keyword": tb_kw, "remaining": sorted(candidates)})
+            traces.append({"step": f"S{depth}_resolved", "keyword": tb_kw, "remaining": sorted(candidates)})
             break
         elif len(filtered) > 1:
             candidates = filtered
-            traces.append({"step": f"S{i}_narrowed", "keyword": tb_kw, "remaining": sorted(candidates)})
+            traces.append({"step": f"S{depth}_narrowed", "keyword": tb_kw, "remaining": sorted(candidates)})
         else:
-            traces.append({"step": f"S{i}_no_effect", "keyword": tb_kw, "remaining": sorted(candidates)})
+            traces.append({"step": f"S{depth}_no_effect", "keyword": tb_kw, "remaining": sorted(candidates)})
 
     return traces
 
@@ -256,12 +331,16 @@ def run(state: AgentState) -> AgentState:
     title = state["selected_rule"]
     operator_keywords = state["operator_keywords"]
     tiebreak_keywords = state["tiebreak_keywords"]
+    negative_keywords = state.get("negative_keywords", []) or []
 
     menu_mode = bool(state.get("menu_cafe_names"))
-    kw_map = _build_kw_map(operator_keywords, tiebreak_keywords)
-    rule_str = _build_soar_rule(operator_keywords, tiebreak_keywords, kw_map, menu_mode=menu_mode)
+    kw_map = _build_kw_map(operator_keywords, tiebreak_keywords, negative_keywords)
+    rule_str = _build_soar_rule(
+        operator_keywords, tiebreak_keywords, kw_map,
+        negative_keywords=negative_keywords, menu_mode=menu_mode,
+    )
     cafe_items = _load_cafe_items(state.get("menu_cafe_names"))
-    tiebreak_trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, cafe_items)
+    tiebreak_trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, negative_keywords, cafe_items)
 
     kernel = sml.Kernel.CreateKernelInNewThread()
     agent = kernel.CreateAgent("cafe-recommender")
@@ -291,6 +370,7 @@ def run(state: AgentState) -> AgentState:
             "title": title,
             "operator_keywords": operator_keywords,
             "tiebreak_keywords": tiebreak_keywords,
+            "negative_keywords": negative_keywords,
         },
         output=soar_result,
     )
