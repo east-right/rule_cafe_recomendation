@@ -38,12 +38,16 @@ MERGE_THRESHOLD = 0.5   # keywords 겹침 비율 이상이면 같은 rule로 판
 
 # ── 데이터 로드 ───────────────────────────────────────────────
 def load_keyword_pool() -> dict:
-    """MENU 제외 3개 타입 긍정 키워드 로드"""
+    """MENU 제외 3개 타입 긍정/부정 키워드 로드 (v2: 컬럼 category/키워드)
+    pool[ktype] = {"긍정": [...], "부정": [...]}"""
     df = pd.read_csv(MARKET_ITEM_PATH)
     pool = {}
     for ktype in ["ATMOSPHERE", "FACILITY", "TARGET"]:
-        pool[ktype] = (df[(df["키워드타입"] == ktype) & (df["sentiment"] == "긍정")]
-                       ["최종_키워드"].dropna().unique().tolist())
+        sub = df[df["category"] == ktype]
+        pool[ktype] = {
+            "긍정": sub[sub["sentiment"] == "긍정"]["키워드"].dropna().unique().tolist(),
+            "부정": sub[sub["sentiment"] == "부정"]["키워드"].dropna().unique().tolist(),
+        }
     return pool
 
 
@@ -57,10 +61,13 @@ def load_single_questions() -> list:
 
 
 def build_keyword_context(pool: dict) -> str:
-    """ATMOSPHERE/FACILITY/TARGET 전체 키워드 컨텍스트 구성"""
+    """ATMOSPHERE/FACILITY/TARGET 긍정/부정 키워드 컨텍스트 구성"""
     lines = []
     for ktype in ["ATMOSPHERE", "FACILITY", "TARGET"]:
-        lines.append(f"[{ktype}]\n" + ", ".join(pool[ktype]))
+        lines.append(f"[{ktype} 긍정]\n" + ", ".join(pool[ktype]["긍정"]))
+        neg = pool[ktype]["부정"]
+        if neg:
+            lines.append(f"[{ktype} 부정]\n" + ", ".join(neg))
     return "\n\n".join(lines)
 
 
@@ -75,7 +82,7 @@ def build_user_prompt(question: str, seed_keywords: list, keyword_context: str) 
 Seed keywords (must be included if applicable):
 {seed_str if seed_str else "(none)"}
 
-Available keywords:
+Available keywords (긍정 = 갖춰야 할 특징, 부정 = 피해야 할 특징):
 {keyword_context}
 
 Generate rule metadata JSON."""
@@ -177,11 +184,12 @@ def parse_batch_results(output_file_id: str) -> list:
             text   = row["response"]["body"]["choices"][0]["message"]["content"].strip()
             result = json.loads(text)
             results.append({
-                "question":      meta.get("question", ""),
-                "seed_keywords": meta.get("seed_keywords", []),
-                "title":         result.get("title", ""),
-                "description":   result.get("description", ""),
-                "keywords":      result.get("keywords", []),
+                "question":          meta.get("question", ""),
+                "seed_keywords":     meta.get("seed_keywords", []),
+                "title":             result.get("title", ""),
+                "description":       result.get("description", ""),
+                "keywords":          result.get("keywords", []),
+                "negative_keywords": result.get("negative_keywords", []),
             })
         except Exception as e:
             print(f"  ⚠️ 파싱 실패 [{cid}]: {e}")
