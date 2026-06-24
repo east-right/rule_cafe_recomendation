@@ -92,20 +92,8 @@ def make_sn_judge(title: str, keyword: str, depth: int) -> str:
 """
 
 
-def make_neg_worst(title: str, keyword: str, idx: int) -> str:
-    """부정 키워드를 가진 매장을 worst(<)로 표시 → 후순위.
-    페어 비교(o1>o2)는 부정 미보유 매장이 많을 때 선호가 폭증해 무한 impasse를
-    유발하므로 단항 worst 선호로 회피한다 (operator 단계 처리)."""
-    return f"""sp {{recommend*neg{idx}*{title}
-   (state <s> ^operator <o> +
-              ^io.input-link <il>)
-   (<o> ^name recommend-cafe ^cafe-name <c-name>)
-   (<il> ^cafe <c>)
-   (<c> ^name <c-name> ^keyword |{keyword}|)
--->
-   (<s> ^operator <o> <)
-}}
-"""
+# negative는 Soar 룰로 표현하지 않는다. 실제 추론(soar_recommend.run)에서 부정 매장을
+# 후보 단계 필터(_filter_negative)로 거르므로, 참고용 .soar에는 operator/positive judge만 둔다.
 
 
 def make_llm_fallback(title: str, depth: int) -> str:
@@ -138,14 +126,10 @@ def generate_soar_rule(rule: dict) -> str:
     title = rule["title"].replace(" ", "_")
     operator_keywords = rule["operator_keywords"]
     tiebreak_keywords = rule["tiebreak_keywords"]
-    negative_keywords = rule.get("negative_keywords", [])
 
     parts = [BOILERPLATE, make_operator(title, operator_keywords)]
 
-    # negative: 부정 보유 매장을 worst로 (operator 단계, 단항 — 무한 impasse 회피)
-    for i, kw in enumerate(negative_keywords):
-        parts.append(make_neg_worst(title, kw, i))
-
+    # negative는 Soar 룰 아님 (run()의 _filter_negative가 후보 단계에서 처리)
     # positive judge(impasse 단계) → LLM fallback
     depth = 0
     for kw in tiebreak_keywords:
