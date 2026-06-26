@@ -51,20 +51,7 @@ ANSWER_USER = """[사용자 질문]
 위 정보를 바탕으로 사용자 질문에 답변해주세요."""
 
 
-# ── Rule Select ───────────────────────────────────────────────
-
-RULE_SELECT_SYSTEM = """You are a cafe recommendation rule selector.
-Given a user query and a list of candidate rules, return the title of the most appropriate rule.
-If no rule is appropriate, return "none".
-Return only the title. Do not include any explanation."""
-
-
-def build_rule_select_user(query: str, candidates: list[dict]) -> str:
-    candidate_str = "\n".join(
-        f"{c['rank']}. {c['title']} - {c['description']}"
-        for c in candidates
-    )
-    return f"[질문]\n{query}\n\n[후보]\n{candidate_str}"
+# ── Rule Select 프롬프트는 inference/prompt.py로 이동 (모델 서버 전용) ──
 
 
 # ── Impasse Resolve ────────────────────────────────────────────

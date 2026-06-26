@@ -1,61 +1,73 @@
 import os
 from pathlib import Path
 
+import httpx
 from dotenv import load_dotenv
-from huggingface_hub import hf_hub_download
-from llama_cpp import Llama
 
 from langfuse import get_client as langfuse_client, observe
 
-from keyword_selection.search import INDEX_NAME, get_client, load_model, search
-from service.prompt import RULE_SELECT_SYSTEM, build_rule_select_user
+from keyword_selection.search import INDEX_NAME, get_client
 from service.state import AgentState
 
 ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
 
-HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN_READ")
-SLLM_REPO = "east-right/cafe-keyword-selection-qwen-1.5b"
-GGUF_FILENAME = "qwen1.5b-cafe-q8_0.gguf"
-LOCAL_GGUF = ROOT / "keyword_selection" / GGUF_FILENAME
+# 모델 추론은 별도 서버(inference.server)가 담당. OpenSearch 검색만 여기서.
+MODEL_SERVER_URL = os.getenv("MODEL_SERVER_URL", "http://localhost:8001")
 TOP_K = 10
 
-_embedding_model = None
 _os_client = None
-_sllm = None
+_http: httpx.Client | None = None
 
 
-def _get_retriever():
-    global _embedding_model, _os_client
-    if _embedding_model is None:
-        _embedding_model = load_model()
+def _get_os():
+    global _os_client
     if _os_client is None:
         _os_client = get_client()
-    return _embedding_model, _os_client
+    return _os_client
 
 
-def _gguf_path() -> str:
-    """로컬 빌드 산출물이 있으면 사용, 없으면 HF에서 다운로드."""
-    if LOCAL_GGUF.exists():
-        return str(LOCAL_GGUF)
-    return hf_hub_download(SLLM_REPO, GGUF_FILENAME, token=HF_TOKEN)
+def _get_http() -> httpx.Client:
+    global _http
+    if _http is None:
+        _http = httpx.Client(base_url=MODEL_SERVER_URL, timeout=60.0)
+    return _http
 
 
-def _get_sllm() -> Llama:
-    global _sllm
-    if _sllm is None:
-        _sllm = Llama(
-            model_path=_gguf_path(),
-            n_ctx=4096,
-            n_threads=os.cpu_count(),
-            verbose=False,
-        )
-    return _sllm
+def _embed(text: str) -> list[float]:
+    resp = _get_http().post("/embed", json={"texts": [text]})
+    resp.raise_for_status()
+    return resp.json()["vectors"][0]
+
+
+def _retrieve(question: str) -> list[dict]:
+    """질문 임베딩(모델 서버) → OpenSearch KNN top-K."""
+    vector = _embed(question)
+    res = _get_os().search(
+        index=INDEX_NAME,
+        body={
+            "size": TOP_K,
+            "query": {"knn": {"description_vector": {"vector": vector, "k": TOP_K}}},
+            "_source": ["title", "description"],
+        },
+    )
+    hits = res["hits"]["hits"]
+    return [
+        {"rank": i + 1, "title": h["_source"]["title"], "description": h["_source"]["description"]}
+        for i, h in enumerate(hits)
+    ]
+
+
+def _select_rule(question: str, candidates: list[dict]) -> str:
+    resp = _get_http().post(
+        "/select_rule", json={"question": question, "candidates": candidates}
+    )
+    resp.raise_for_status()
+    return resp.json()["title"]
 
 
 def _fetch_keywords_from_os(title: str) -> dict:
-    _, client = _get_retriever()
-    res = client.search(
+    res = _get_os().search(
         index=INDEX_NAME,
         body={
             "query": {"term": {"title": title}},
@@ -64,29 +76,6 @@ def _fetch_keywords_from_os(title: str) -> dict:
     )
     hits = res["hits"]["hits"]
     return hits[0]["_source"] if hits else {}
-
-
-def _retrieve(question: str) -> list[dict]:
-    model, client = _get_retriever()
-    results = search(question, client, model, TOP_K)
-    return [
-        {"rank": i + 1, "title": r["title"], "description": r["description"]}
-        for i, r in enumerate(results)
-    ]
-
-
-def _select_rule(question: str, candidates: list[dict]) -> str:
-    llm = _get_sllm()
-    resp = llm.create_chat_completion(
-        messages=[
-            {"role": "system", "content": RULE_SELECT_SYSTEM},
-            {"role": "user", "content": build_rule_select_user(question, candidates)},
-        ],
-        max_tokens=32,
-        temperature=0.0,
-        repeat_penalty=1.1,
-    )
-    return resp["choices"][0]["message"]["content"].strip()
 
 
 @observe()
