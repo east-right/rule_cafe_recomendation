@@ -1,0 +1,23 @@
+# 빌드 컨텍스트에서 제외 (이미지에 들어갈 필요 없는 큰 파일/시크릿)
+.venv/
+**/__pycache__/
+*.pyc
+
+# 모델 산출물 (런타임 HF 다운로드)
+keyword_selection/merged/
+keyword_selection/*.gguf
+
+# 데이터/DB/시크릿
+data/
+*.db
+.env
+.env.*
+
+# Soar 바이너리 (모델 서버와 무관)
+soar/
+
+# git / 문서 / IDE
+.git/
+docs/
+.vscode/
+.idea/
