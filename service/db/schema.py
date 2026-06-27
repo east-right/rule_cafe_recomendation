@@ -34,6 +34,22 @@ def init_db() -> None:
 
             CREATE INDEX IF NOT EXISTS idx_cafe_keywords_keyword
                 ON cafe_keywords(keyword);
+
+            CREATE TABLE IF NOT EXISTS menus (
+                id   INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT UNIQUE NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS cafe_menus (
+                id         INTEGER PRIMARY KEY AUTOINCREMENT,
+                cafe_name  TEXT NOT NULL,
+                menu_name  TEXT NOT NULL,
+                sentiment  TEXT NOT NULL,
+                FOREIGN KEY (cafe_name) REFERENCES cafes(name)
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_cafe_menus_name
+                ON cafe_menus(cafe_name);
         """)
     print(f"[INFO] DB 초기화 완료: {DB_PATH}")
 
