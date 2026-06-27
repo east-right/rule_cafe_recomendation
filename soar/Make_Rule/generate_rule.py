@@ -92,6 +92,10 @@ def make_sn_judge(title: str, keyword: str, depth: int) -> str:
 """
 
 
+# negative는 Soar 룰로 표현하지 않는다. 실제 추론(soar_recommend.run)에서 부정 매장을
+# 후보 단계 필터(_filter_negative)로 거르므로, 참고용 .soar에는 operator/positive judge만 둔다.
+
+
 def make_llm_fallback(title: str, depth: int) -> str:
     superstate_chain = ""
     for i in range(1, depth + 1):
@@ -123,36 +127,44 @@ def generate_soar_rule(rule: dict) -> str:
     operator_keywords = rule["operator_keywords"]
     tiebreak_keywords = rule["tiebreak_keywords"]
 
-    parts = [BOILERPLATE]
-    parts.append(make_operator(title, operator_keywords))
+    parts = [BOILERPLATE, make_operator(title, operator_keywords)]
 
-    if tiebreak_keywords:
-        parts.append(make_s1_judge(title, tiebreak_keywords[0]))
-        for i, kw in enumerate(tiebreak_keywords[1:], start=2):
-            parts.append(make_sn_judge(title, kw, i))
-        llm_depth = len(tiebreak_keywords) + 1
-    else:
-        llm_depth = 1
+    # negative는 Soar 룰 아님 (run()의 _filter_negative가 후보 단계에서 처리)
+    # positive judge(impasse 단계) → LLM fallback
+    depth = 0
+    for kw in tiebreak_keywords:
+        depth += 1
+        parts.append(make_s1_judge(title, kw) if depth == 1
+                     else make_sn_judge(title, kw, depth))
 
-    parts.append(make_llm_fallback(title, llm_depth))
+    parts.append(make_llm_fallback(title, depth + 1))
 
     return "\n".join(parts)
 
 
 def main():
+    import sys
+
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         rules = json.load(f)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    for rule in rules:
-        title = rule["title"].replace(" ", "_")
-        soar_content = generate_soar_rule(rule)
-        output_path = OUTPUT_DIR / f"{title}.soar"
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write(soar_content)
+    # .soar는 추론 로직 시각화/검증용 참고 산출물이라 대표 1개만 생성한다.
+    # 인자로 title 지정 가능, 없으면 첫 rule.
+    target = sys.argv[1] if len(sys.argv) > 1 else rules[0]["title"]
+    rule = next((r for r in rules if r["title"] == target), None)
+    if rule is None:
+        print(f"[ERROR] '{target}' rule 없음. 사용 가능: {[r['title'] for r in rules[:5]]} ...")
+        return
 
-    print(f"완료: {len(rules)}개 .soar 파일 생성 → {OUTPUT_DIR}")
+    title = rule["title"].replace(" ", "_")
+    soar_content = generate_soar_rule(rule)
+    output_path = OUTPUT_DIR / f"{title}.soar"
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(soar_content)
+
+    print(f"완료: 대표 .soar 1개 생성 → {output_path}")
 
 
 if __name__ == "__main__":

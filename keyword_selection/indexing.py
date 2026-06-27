@@ -2,9 +2,10 @@ import json
 import os
 from pathlib import Path
 
+import numpy as np
 from dotenv import load_dotenv
+from FlagEmbedding import BGEM3FlagModel
 from opensearchpy import OpenSearch
-from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
 # ── 환경변수 로드 ───────────────────────────────────────────
@@ -77,16 +78,12 @@ def load_rules() -> list[dict]:
     return rules
 
 
-def index_rules(client: OpenSearch, rules: list[dict], model: SentenceTransformer) -> None:
+def index_rules(client: OpenSearch, rules: list[dict], model: BGEM3FlagModel) -> None:
     descriptions = [rule["description"] for rule in rules]
 
     print("[INFO] description 임베딩 중...")
-    embeddings = model.encode(
-        descriptions,
-        batch_size=16,
-        show_progress_bar=True,
-        normalize_embeddings=True,
-    )
+    vecs = model.encode(descriptions, batch_size=16, max_length=512)["dense_vecs"]
+    embeddings = vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
 
     print("[INFO] OpenSearch에 업로드 중...")
     for i, rule in enumerate(tqdm(rules)):
@@ -101,14 +98,15 @@ def index_rules(client: OpenSearch, rules: list[dict], model: SentenceTransforme
 
 
 def main():
-    print("[INFO] BGE 모델 로드 중...")
-    model = SentenceTransformer(MODEL_NAME, token=HF_TOKEN)
+    print("[INFO] BGE-M3 파인튜닝 모델 로드 중...")
+    model = BGEM3FlagModel(MODEL_NAME, use_fp16=True)
 
     client = get_client()
     create_index(client)
     rules = load_rules()
     index_rules(client, rules, model)
 
+    client.indices.refresh(index=INDEX_NAME)
     count = client.count(index=INDEX_NAME)["count"]
     print(f"[INFO] 인덱스 내 문서 수: {count}")
 
