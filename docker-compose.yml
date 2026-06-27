@@ -1,0 +1,26 @@
+# OpenSearch (rule 벡터 인덱스 저장/검색) 로컬 실행용.
+#   docker compose up -d        # 띄우기  (.env의 OPENSEARCH_PASSWORD 사용)
+#   docker compose down         # 내리기
+#
+# 모델서버(:8001)·앱서버(:8000)는 컨테이너가 아니라 호스트 프로세스(uvicorn)로 띄운다.
+# (모델/앱은 README Quick Start 참고)
+
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.13.0
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=${OPENSEARCH_PASSWORD}
+    ports:
+      - "9200:9200"
+      - "9600:9600"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+
+volumes:
+  opensearch-data:
