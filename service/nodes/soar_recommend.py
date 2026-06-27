@@ -2,6 +2,7 @@ import sqlite3
 from pathlib import Path
 
 from dotenv import load_dotenv
+from langfuse import get_client, observe
 
 from service.state import AgentState
 
@@ -13,10 +14,20 @@ DB_PATH = ROOT / "data" / "cafe.db"
 
 # ── SQLite 로드 ────────────────────────────────────────────────
 
-def _load_cafe_items() -> dict[str, list[str]]:
+def _load_cafe_items(menu_cafe_names: list[str] | None = None) -> dict[str, list[str]]:
+    """매장별 키워드 로드 (긍정 operator/tiebreak 매칭 + 부정 narrowing 모두 포함)."""
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
-    rows = conn.execute("SELECT cafe_name, keyword FROM cafe_keywords").fetchall()
+
+    if menu_cafe_names:
+        placeholders = ",".join("?" * len(menu_cafe_names))
+        rows = conn.execute(
+            f"SELECT cafe_name, keyword FROM cafe_keywords WHERE cafe_name IN ({placeholders})",
+            menu_cafe_names,
+        ).fetchall()
+    else:
+        rows = conn.execute("SELECT cafe_name, keyword FROM cafe_keywords").fetchall()
+
     conn.close()
 
     result: dict[str, list[str]] = {}
@@ -35,9 +46,14 @@ def _trace_tiebreak(
     tiebreak_keywords: list[str],
     negative_keywords: list[str],
     cafe_items: dict[str, list[str]],
+    menu_mode: bool = False,
 ) -> list[dict]:
-    op_set = set(operator_keywords)
-    candidates = {c for c, kws in cafe_items.items() if op_set & set(kws)}
+    if menu_mode:
+        # 메뉴 매장 전체가 후보 (operator는 menu 매칭으로 이미 좁혀짐)
+        candidates = set(cafe_items.keys())
+    else:
+        op_set = set(operator_keywords)
+        candidates = {c for c, kws in cafe_items.items() if op_set & set(kws)}
 
     traces = [{"step": "operator", "keyword": None, "remaining": sorted(candidates)}]
     depth = 0
@@ -73,13 +89,18 @@ def _trace_tiebreak(
 
 # ── 노드 진입점 ────────────────────────────────────────────────
 
+@observe()
 def run(state: AgentState) -> AgentState:
+    title = state.get("selected_rule")
     operator_keywords = state["operator_keywords"]
     tiebreak_keywords = state["tiebreak_keywords"]
     negative_keywords = state.get("negative_keywords", []) or []
+    menu_mode = bool(state.get("menu_cafe_names"))
 
-    cafe_items = _load_cafe_items()
-    trace = _trace_tiebreak(operator_keywords, tiebreak_keywords, negative_keywords, cafe_items)
+    cafe_items = _load_cafe_items(state.get("menu_cafe_names"))
+    trace = _trace_tiebreak(
+        operator_keywords, tiebreak_keywords, negative_keywords, cafe_items, menu_mode=menu_mode
+    )
 
     # 마지막 단계의 remaining으로 결정:
     #   1곳 → 추천 / 2곳 이상 못 가름 → impasse(LLM 해소) / 0곳 → no_output
@@ -92,4 +113,13 @@ def run(state: AgentState) -> AgentState:
         result["type"] = "impasse"
         result["candidates"] = remaining[:2]
 
+    get_client().update_current_span(
+        input={
+            "title": title,
+            "operator_keywords": operator_keywords,
+            "tiebreak_keywords": tiebreak_keywords,
+            "negative_keywords": negative_keywords,
+        },
+        output=result,
+    )
     return {"soar_result": result}
