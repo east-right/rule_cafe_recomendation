@@ -130,6 +130,7 @@ def run(state: AgentState) -> AgentState:
             "selected_rule": "none",
             "operator_keywords": [],
             "tiebreak_keywords": [],
+            "negative_keywords": [],
         }
 
     keywords = _load_rule_keywords().get(selected, {})
@@ -138,4 +139,5 @@ def run(state: AgentState) -> AgentState:
         "selected_rule": selected,
         "operator_keywords": keywords.get("operator_keywords", []),
         "tiebreak_keywords": keywords.get("tiebreak_keywords", []),
+        "negative_keywords": keywords.get("negative_keywords", []),
     }

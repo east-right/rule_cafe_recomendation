@@ -33,6 +33,7 @@ for hit in tqdm(hits):
                 "doc": {
                     "operator_keywords": soar_rules[title]['operator_keywords'],
                     "tiebreak_keywords": soar_rules[title]['tiebreak_keywords'],
+                    "negative_keywords": soar_rules[title].get('negative_keywords', []),
                 }
             }
         )
