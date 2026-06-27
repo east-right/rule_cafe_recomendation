@@ -85,7 +85,7 @@ def _fetch_keywords_from_os(title: str) -> dict:
         index=INDEX_NAME,
         body={
             "query": {"term": {"title": title}},
-            "_source": ["operator_keywords", "tiebreak_keywords"],
+            "_source": ["operator_keywords", "tiebreak_keywords", "negative_keywords"],
         },
     )
     hits = res["hits"]["hits"]
