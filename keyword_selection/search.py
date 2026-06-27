@@ -3,7 +3,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from opensearchpy import OpenSearch
-from sentence_transformers import SentenceTransformer
+# sentence_transformers(torch)는 load_model에서 lazy import.
+# get_client/INDEX_NAME만 쓰는 app(모델서버에 임베딩 위임)이 torch를 안 끌게 하기 위함.
 
 # ── 환경변수 로드 ───────────────────────────────────────────
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,14 +32,15 @@ def get_client() -> OpenSearch:
     )
 
 
-def load_model() -> SentenceTransformer:
+def load_model():
+    from sentence_transformers import SentenceTransformer  # lazy: torch는 여기서만
     return SentenceTransformer(MODEL_NAME, token=HF_TOKEN)
 
 
 def search(
     query: str,
     client: OpenSearch,
-    model: SentenceTransformer,
+    model,
     top_k: int = TOP_K,
 ) -> list[dict]:
     """
