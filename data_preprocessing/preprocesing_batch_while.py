@@ -438,7 +438,14 @@ def run_pipeline(df: pd.DataFrame) -> None:
             print("Pass1 배치 실패. 파이프라인 중단.")
             return
 
+        prev_done = len(pass1_results)
         pass1_results = collect_pass1_results(chunks, pass1_results)
+
+        # 무한루프 방지: 이번 라운드에 새로 처리된 청크가 0개면
+        # (반복적으로 API/파싱 에러가 나는 청크만 남은 것) 중단한다.
+        if len(pass1_results) == prev_done:
+            print(f"[!] Pass1 진전 없음 — 반복 실패 청크 {count}건을 건너뛰고 중단합니다.")
+            break
 
         if TEST_MODE:
             print(f"\n[TEST_MODE] {BATCH_SIZE}건 완료. 결과 확인 후 TEST_MODE=False로 전환하세요.")
@@ -468,7 +475,14 @@ def run_pipeline(df: pd.DataFrame) -> None:
             print("Pass2 배치 실패. 파이프라인 중단.")
             return
 
+        prev_done = len(pass2_results)
         pass2_results = collect_pass2_results(pass2_results)
+
+        # 무한루프 방지: 이번 라운드에 새로 처리된 청크가 0개면
+        # (반복적으로 API/파싱 에러가 나는 청크만 남은 것) 중단한다.
+        if len(pass2_results) == prev_done:
+            print(f"[!] Pass2 진전 없음 — 반복 실패 청크 {count}건을 건너뛰고 중단합니다.")
+            break
 
         if TEST_MODE:
             print(f"\n[TEST_MODE] {BATCH_SIZE}건 완료. 결과 확인 후 TEST_MODE=False로 전환하세요.")
