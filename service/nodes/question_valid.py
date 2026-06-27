@@ -3,6 +3,7 @@ import re
 from pathlib import Path
 
 from dotenv import load_dotenv
+from langfuse import get_client, observe
 from transformers import pipeline
 
 from service.state import AgentState
@@ -44,17 +45,23 @@ def _is_korean_enough(text: str) -> bool:
     return (korean / len(non_ws)) >= KOREAN_THRESHOLD
 
 
+@observe()
 def run(state: AgentState) -> AgentState:
     question = state["question"]
 
     if not _is_korean_enough(question):
+        get_client().update_current_span(input=question, output="fallback")
         return {"question_type": "fallback"}
 
     result = _get_classifier()(question)[0]
-    label = result["label"]
-    label = _LABEL_MAP.get(label, label)
+    label = _LABEL_MAP.get(result["label"], result["label"])
 
     if label == "invalid":
-        return {"question_type": "fallback"}
+        label = "fallback"
 
+    get_client().update_current_span(
+        input=question,
+        output=label,
+        metadata={"score": result["score"]},
+    )
     return {"question_type": label}

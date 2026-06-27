@@ -10,3 +10,7 @@ class AgentState(TypedDict, total=False):
     tiebreak_keywords: list[str]
     negative_keywords: list[str]
     soar_result: dict | None
+    impasse_iterations: int
+    impasse_exhausted: bool
+    extracted_menu: str | None
+    menu_cafe_names: list[str] | None
