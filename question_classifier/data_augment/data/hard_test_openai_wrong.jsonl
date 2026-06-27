@@ -1,0 +1,18 @@
+{"question": "커피 말고 힐링 되는 거 마실 수 있는 데 어딘가?", "label": "non-menu", "pred": "menu-only"}
+{"question": "뜨아 마시기 좋은 조용한 카페 있을까?", "label": "menu-only", "pred": "non-menu"}
+{"question": "아이스아메 맛있는 데 중에 분위기 조용한 곳 어디임?", "label": "menu-only", "pred": "menu-complex"}
+{"question": "크로플이랑 같이 먹기 좋은 음료 잘하는 카페 어디야?", "label": "menu-only", "pred": "menu-complex"}
+{"question": "크로플이랑 커피 같이 맛있게 하는 곳 있어?", "label": "menu-only", "pred": "menu-complex"}
+{"question": "잠깐 샌드위치랑 커피 먹으면서 업무 보기 좋은 곳 있으면 알려줘", "label": "menu-complex", "pred": "non-menu"}
+{"question": "간단히 샌드위치 먹으면서 와이파이 빠르고 좌석 편한 곳 있을까?", "label": "menu-complex", "pred": "non-menu"}
+{"question": "카페랑 영화관 같이 있는 곳 찾아줘.", "label": "invalid", "pred": "non-menu"}
+{"question": "카페 겸 꽃집 있는 데 알려줄래?", "label": "invalid", "pred": "non-menu"}
+{"question": "카페에서 파티할 만한 장소 추천해줘.", "label": "invalid", "pred": "non-menu"}
+{"question": "카페랑 도서관이 같이 있는 공간 있나?", "label": "invalid", "pred": "non-menu"}
+{"question": "카페에서 할 만한 데이트 코스 추천해줘", "label": "invalid", "pred": "non-menu"}
+{"question": "카페랑 꽃집이 같이 있는 곳 추천해줄래?", "label": "invalid", "pred": "non-menu"}
+{"question": "커피 말고 차 마시기 좋은 카페 말고 찻집 추천해줘", "label": "invalid", "pred": "non-menu"}
+{"question": "카페 겸 꽃집 있는 데 어디야?", "label": "invalid", "pred": "non-menu"}
+{"question": "커피 맛있는 편의점 추천해줄래?", "label": "invalid", "pred": "menu-only"}
+{"question": "카페랑 영화관 같이 있는 곳 있으면 알려줘.", "label": "invalid", "pred": "non-menu"}
+{"question": "근처에 카페 겸 꽃집 같은 복합 공간 추천해줘.", "label": "invalid", "pred": "non-menu"}
