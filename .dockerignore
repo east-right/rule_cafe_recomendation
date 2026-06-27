@@ -10,6 +10,8 @@ keyword_selection/*.gguf
 # 데이터/DB/시크릿
 data/
 *.db
+# 단, 시드 DB는 앱 이미지에 포함 (예외 — 인라인 주석 불가라 위에 둠)
+!data/cafe.db
 .env
 .env.*
 
