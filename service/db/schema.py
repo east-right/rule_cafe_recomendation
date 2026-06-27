@@ -45,11 +45,15 @@ def init_db() -> None:
                 cafe_name  TEXT NOT NULL,
                 menu_name  TEXT NOT NULL,
                 sentiment  TEXT NOT NULL,
+                menu_score REAL NOT NULL DEFAULT 0,
                 FOREIGN KEY (cafe_name) REFERENCES cafes(name)
             );
 
             CREATE INDEX IF NOT EXISTS idx_cafe_menus_name
                 ON cafe_menus(cafe_name);
+
+            CREATE INDEX IF NOT EXISTS idx_cafe_menus_menu
+                ON cafe_menus(menu_name);
         """)
     print(f"[INFO] DB 초기화 완료: {DB_PATH}")
 

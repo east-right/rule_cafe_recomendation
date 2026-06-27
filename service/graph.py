@@ -12,9 +12,18 @@ def _route_question(state: AgentState) -> str | list[str]:
     qt = state.get("question_type")
     if qt == "non-menu":
         return "rule_select"
-    if qt in MENU_TYPES:
+    if qt == "menu-only":
+        return "menu_extract"  # 비메뉴 조건 없음 → rule_select 불필요
+    if qt == "menu-complex":
         return ["menu_extract", "rule_select"]
     return END
+
+
+def _route_menu_extract(state: AgentState) -> str:
+    # menu-only는 맛집 2개를 그대로 추천 → soar 우회. menu-complex는 soar로.
+    if state.get("question_type") == "menu-only":
+        return END
+    return "soar_recommend"
 
 
 def _route_rule_select(state: AgentState) -> str:
@@ -58,8 +67,12 @@ def build_graph():
         _route_question,
         {"rule_select": "rule_select", "menu_extract": "menu_extract", END: END},
     )
-    # menu_extract는 항상 soar_recommend로 (join 포인트)
-    graph.add_edge("menu_extract", "soar_recommend")
+    # menu_extract: menu-complex는 soar_recommend(join), menu-only는 END(soar 우회)
+    graph.add_conditional_edges(
+        "menu_extract",
+        _route_menu_extract,
+        {"soar_recommend": "soar_recommend", END: END},
+    )
 
     graph.add_conditional_edges(
         "rule_select",

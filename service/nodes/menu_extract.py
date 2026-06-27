@@ -32,11 +32,33 @@ def _fetch_menu_list() -> list[str]:
 
 
 def _fetch_cafes_by_menu(menu_name: str) -> list[str]:
+    """menu-complex용: 해당 메뉴를 가진 매장 전부 (soar 후보로)."""
     conn = sqlite3.connect(str(DB_PATH))
     rows = conn.execute(
         "SELECT DISTINCT cafe_name FROM cafe_menus WHERE menu_name = ?",
         (menu_name,),
     ).fetchall()
+    conn.close()
+    return [r[0] for r in rows]
+
+
+def _fetch_top_menu_cafes(menu_name: str, limit: int = 2) -> list[str]:
+    """menu-only용: 해당 메뉴 맛집score 상위 N개 매장(긍정만).
+    정확 매칭이 없으면 LIKE '%메뉴%'로 fallback (예: 라떼 → 바닐라라떼)."""
+    conn = sqlite3.connect(str(DB_PATH))
+    rows = conn.execute(
+        """SELECT cafe_name FROM cafe_menus
+           WHERE menu_name = ? AND sentiment = '긍정'
+           ORDER BY menu_score DESC LIMIT ?""",
+        (menu_name, limit),
+    ).fetchall()
+    if not rows:
+        rows = conn.execute(
+            """SELECT cafe_name FROM cafe_menus
+               WHERE menu_name LIKE ? AND sentiment = '긍정'
+               ORDER BY menu_score DESC LIMIT ?""",
+            (f"%{menu_name}%", limit),
+        ).fetchall()
     conn.close()
     return [r[0] for r in rows]
 
@@ -74,7 +96,11 @@ def run(state: AgentState) -> AgentState:
         )
         return {"extracted_menu": None, "menu_cafe_names": None}
 
-    cafe_names = _fetch_cafes_by_menu(extracted)
+    # menu-only: 맛집score 상위 2개(LIKE fallback) / menu-complex: 메뉴 가진 매장 전부
+    if question_type == "menu-only":
+        cafe_names = _fetch_top_menu_cafes(extracted, limit=2)
+    else:  # menu-complex
+        cafe_names = _fetch_cafes_by_menu(extracted)
 
     get_client().update_current_span(
         input={"question": question},
