@@ -1,7 +1,7 @@
 """
 sLLM 파인튜닝 데이터 생성 스크립트
 
-입력: 사용자 질문 + OpenSearch로 검색한 10개 candidate rule (title + description)
+입력: 사용자 질문 + OpenSearch로 검색한 top-K candidate rule (title + description)
 출력: 정답 rule title 또는 "none" (정답이 candidates에 없는 경우)
 
 Usage:
@@ -15,9 +15,10 @@ import os
 import random
 from pathlib import Path
 
+import numpy as np
 from dotenv import load_dotenv
+from FlagEmbedding import BGEM3FlagModel
 from opensearchpy import OpenSearch
-from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
 # ── 환경변수 로드 ───────────────────────────────────────────
@@ -45,7 +46,7 @@ PATHS = {
 # ── 상수 ──────────────────────────────────────────────────
 INDEX_NAME = "cafe_rules"
 MODEL_NAME = "east-right/bge-m3-cafe-finetuned"
-TOP_K = 10
+TOP_K = 15  # R@15=0.930, R@10=0.888 대비 +4.2%p 헤드룸 회수
 SEED = 42
 
 
@@ -97,25 +98,21 @@ def main():
 
     random.seed(SEED)
 
-    print(f"[INFO] mode: {args.mode}")
+    print(f"[INFO] mode: {args.mode} | TOP_K: {TOP_K}")
     print("데이터 로드 중...")
     with open(question_path, encoding="utf-8") as f:
         questions = [json.loads(line) for line in f]
     print(f"  총 질문 수: {len(questions)}개")
 
-    print("\nBGE 모델 로드 중...")
-    model = SentenceTransformer(MODEL_NAME, token=HF_TOKEN)
+    print("\nBGE-M3 파인튜닝 모델 로드 중...")
+    model = BGEM3FlagModel(MODEL_NAME, use_fp16=True)
 
     client = get_client()
 
     print("\nquery 임베딩 중...")
     queries = [q["query"] for q in questions]
-    query_embeddings = model.encode(
-        queries,
-        batch_size=16,
-        normalize_embeddings=True,
-        show_progress_bar=True,
-    )
+    raw = model.encode(queries, batch_size=16, max_length=512)["dense_vecs"]
+    query_embeddings = raw / np.linalg.norm(raw, axis=1, keepdims=True)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -151,10 +148,11 @@ def main():
             }
             out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
+    total = count_match + count_none
     print(f"\n완료!")
-    print(f"  정답 있는 데이터: {count_match}개")
-    print(f"  정답 없는 데이터 (none): {count_none}개")
-    print(f"  총 생성: {count_match + count_none}개")
+    print(f"  정답 있는 데이터: {count_match}개 ({count_match/total:.1%})")
+    print(f"  정답 없는 데이터 (none): {count_none}개 ({count_none/total:.1%})")
+    print(f"  총 생성: {total}개")
     print(f"  저장 경로: {output_path}")
 
 
