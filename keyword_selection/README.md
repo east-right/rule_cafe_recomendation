@@ -98,6 +98,54 @@ uv run python upload.py    --config config/qwen_1.5b.yaml
 
 ---
 
+## 추론 최적화 — gguf (CPU 서빙)
+
+서비스 추론은 **CPU**에서 돈다. HF float32 어댑터 로딩은 **로드 14s + 추론 5.5s**로 파이프라인 최대 병목이었다. LoRA를 base에 병합 → q8_0 gguf로 양자화 → `llama-cpp-python`으로 추론하도록 교체했다.
+
+| | 로드 | 추론(평균) |
+|---|:-:|:-:|
+| HF float32 (PEFT) | 14.2s | ~5.5s |
+| **gguf q8_0 (llama.cpp)** | **1.1s** | **~1.9s** |
+
+- 결과 일치 4/4 (q8_0 양자화 손실로 인한 선택 변화 없음).
+- `service/nodes/rule_select.py`는 로컬 `*.gguf`가 있으면 그걸, 없으면 HF에서 받아 로드한다.
+
+### 재현
+
+```bash
+# 1) LoRA 병합 → keyword_selection/merged/  (HF float16)
+uv run python keyword_selection/merge_lora.py
+
+# 2) gguf 변환 (q8_0) — llama.cpp의 convert 스크립트 사용
+git clone --depth 1 https://github.com/ggml-org/llama.cpp /tmp/llama.cpp
+NO_LOCAL_GGUF=0 uv run python /tmp/llama.cpp/convert_hf_to_gguf.py \
+  keyword_selection/merged --outtype q8_0 \
+  --outfile keyword_selection/qwen1.5b-cafe-q8_0.gguf
+```
+
+> q8_0은 `convert_hf_to_gguf.py` 한 번으로 끝나 Windows에서 `llama-quantize.exe` 별도 빌드가 필요 없다. 더 작고 빠른 Q4_K_M이 필요하면 llama.cpp의 quantize 바이너리를 추가로 빌드.
+
+### llama-cpp-python 설치 (AVX2 빌드)
+
+12세대 Intel 등 **AVX512가 비활성**인 CPU에서는 prebuilt wheel(`--extra-index-url .../whl/cpu`)이 `illegal instruction`(0xc000001d)으로 죽는다. 소스에서 AVX2로 빌드해야 한다.
+
+```bash
+# 컴파일러: w64devkit (mingw-w64, 설치 불필요한 단일 패키지)
+#   https://github.com/skeeto/w64devkit/releases → C:\tools\w64devkit 에 추출
+export PATH="/c/tools/w64devkit/bin:$PATH"
+export CMAKE_GENERATOR="MinGW Makefiles"
+export CMAKE_ARGS="-DGGML_NATIVE=OFF -DGGML_AVX=ON -DGGML_AVX2=ON \
+  -DGGML_FMA=ON -DGGML_F16C=ON -DGGML_AVX512=OFF \
+  -DCMAKE_MAKE_PROGRAM=C:/tools/w64devkit/bin/mingw32-make.exe \
+  -DCMAKE_C_COMPILER=C:/tools/w64devkit/bin/gcc.exe \
+  -DCMAKE_CXX_COMPILER=C:/tools/w64devkit/bin/g++.exe"
+uv pip install llama-cpp-python --no-binary llama-cpp-python --force-reinstall --no-cache-dir
+```
+
+> AVX512가 있는 CPU/서버라면 prebuilt wheel로 충분하다. 배포 시 gguf 추론을 GPU로 올리려면 vLLM/bentoML 경로를 별도로 검토.
+
+---
+
 ## OpenSearch
 
 ```bash
@@ -133,6 +181,7 @@ keyword_selection/
 ├── split_data.py                      # train/val 분할
 ├── prompt.py                          # sLLM instruction 템플릿
 ├── train.py / evaluate.py / upload.py # 학습 / 평가 / HF 업로드
+├── merge_lora.py                      # LoRA 병합 → merged/ (gguf 변환 입력)
 └── pyproject.toml                     # Unsloth + TRL 환경
 
 # multi rule 생성은 data_collection/data_keyword_select/build_multi_rules.py
