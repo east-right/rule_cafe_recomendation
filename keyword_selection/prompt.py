@@ -53,24 +53,25 @@ def build_question_gen_prompt(title: str, count: int) -> str:
 
 
 
-# ── Test 데이터 생성용 (train과 다른 스타일) ─────────────
+# ── Test 데이터 생성용 ────────────────────────────────────
 
-TEST_GEN_SYSTEM = """You are simulating real Korean users asking cafe recommendations in casual messaging apps like KakaoTalk.
-Generate questions that sound like natural, spontaneous messages a person would actually send to a friend or chatbot.
+TEST_GEN_SYSTEM = """You are an expert at generating Korean cafe recommendation questions for model evaluation.
+Generate diverse questions covering both colloquial and formal styles to ensure comprehensive testing.
 
 Style requirements:
-- Very natural and spontaneous, like real KakaoTalk messages
-- Mix of very short messages and slightly longer ones
-- Can include typos, abbreviations, or incomplete thoughts
-- Sometimes emotional or context-driven: "오늘 기분전환하고 싶은데", "친구랑 만나려는데"
-- Avoid overly formal or structured language
-- Each question must clearly relate to the given rule title"""
+- Half colloquial/casual: short messages, abbreviations like "아아"/"카공", emoticons "ㅠㅠ"/"~", incomplete sentences, context phrases like "오늘 기분전환하고 싶은데"
+- Half formal/polite: complete sentences, polite endings like "~해주세요", "~있을까요?", "~추천해 주세요"
+- Vary question length and phrasing — avoid repetitive patterns
+- Each question must clearly and specifically relate to the given rule title
+- Output questions only with numbers (e.g., 1. question)"""
 
 
 def build_test_gen_prompt(title: str, description: str, count: int) -> str:
+    half = count // 2
     return f"""Rule title: "{title}"
 Rule description: {description}
 
-Generate {count} very natural Korean cafe recommendation messages that a real user would send in KakaoTalk.
-Messages should feel spontaneous and authentic, NOT like generated examples.
-Each message must be about "{title}" specifically."""
+Generate {count} diverse Korean cafe recommendation questions for this rule.
+- {half} colloquial/casual style
+- {half} formal/polite style
+Each question must be specifically about "{title}" with varied phrasing."""

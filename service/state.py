@@ -8,6 +8,7 @@ class AgentState(TypedDict, total=False):
     selected_rule: str | None
     operator_keywords: list[str]
     tiebreak_keywords: list[str]
+    negative_keywords: list[str]
     soar_result: dict | None
     impasse_iterations: int
     impasse_exhausted: bool

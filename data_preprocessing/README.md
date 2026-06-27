@@ -1,222 +1,190 @@
-# Data Preprocessing Branch — `data-preprocessing`
+# Data Preprocessing — `data-normalization-v2`
 
-카페 추천 시스템(SOAR + XAI)을 위한 매장 item 생성 전처리 파이프라인입니다.  
-리뷰 텍스트에서 NER 추출 → 키워드 정규화 → 매장별 대표 item 집계까지의 전 과정을 담고 있습니다.
+카페 리뷰에서 **매장 item**(특징·메뉴 평가)을 생성하는 전처리 파이프라인입니다.
+리뷰 텍스트 → NER → 키워드 정규화/클러스터링 → 매장별 item 집계까지의 전 과정을 담습니다.
 
----
-
-## 전체 파이프라인 개요
-
-```
-리뷰 CSV
-   ↓
-[STEP 1] LLM 기반 NER 추출 (preprocesing_batch.py)
-   ↓
-[STEP 2] 키워드 정규화 (item_preprocessing.ipynb)
-   ├── FACILITY / ATMOSPHERE / TARGET → 임베딩 클러스터링 + LLM 대표 키워드
-   └── MENU → LLM 기반 메뉴명 정규화
-   ↓
-[STEP 3] 매장별 긍정 item 집계 (TF-IDF)
-   ↓
-[STEP 4] 매장별 부정 item 집계
-   ↓
-[STEP 5] 최종 매장 item 산출물 저장
-```
+> v1 산출물·스크립트는 `archive/`, `../data/archive/`에 보관되어 있습니다.
 
 ---
 
-## STEP 1. LLM 기반 NER 추출
+## 전체 파이프라인
 
-**파일:** `preprocesing_batch.py`  
-**산출물:** `data/ner_result.json`
+```
+리뷰 CSV (../data/shinline_cafe_reviews_test.csv)
+   │
+[1] 2-pass NER 추출            preprocesing_batch_while.py  → ner_result_v2.json
+   │
+[2] 정규화 + 개념 클러스터링    normalize.py                 → ner_result_v3.json
+   │
+   ├─[3] 비메뉴 매장 item 집계   market_aggregate.py          → market_item.csv
+   └─[4] MENU 3계층 평가 테이블  menu_aggregate.py            → menu_item.csv
+```
 
-OpenAI Batch API를 활용해 카페 리뷰에서 4가지 카테고리의 개체명을 추출합니다.
+실행:
+```bash
+uv run python preprocesing_batch_while.py   # [1] OpenAI Batch API (장시간)
+uv run python normalize.py                  # [2] LLM 정규화/클러스터링
+uv run python market_aggregate.py           # [3] 계산만 (LLM 없음)
+uv run python menu_aggregate.py             # [4] LLM 분류 + 집계
+```
 
-| 카테고리 | 정의 |
+---
+
+## STEP 1. 2-pass NER 추출
+
+**파일:** `preprocesing_batch_while.py` · `prompt.py`
+**산출물:** `../data/ner_result_v2.json`
+
+리뷰를 2단계로 분석해 개체(entity)와 평가(descriptor)를 분리 추출합니다.
+
+- **Pass 1** — `entity` / `category` / `type` / `sentiment`
+- **Pass 2** — EVALUATIVE entity에만 `descriptor` 부여 (+ confidence)
+
+| 필드 | 설명 |
 |---|---|
-| MENU | 음식/음료 메뉴 |
-| FACILITY | 매장의 물리적 시설 |
-| ATMOSPHERE | 추상적 분위기/감성 |
-| TARGET | 방문 목적/동반자/타겟 |
+| category | MENU / FACILITY / ATMOSPHERE / TARGET |
+| type | EVALUATIVE(평가 대상) / FEATURE(존재 사실) |
+| sentiment | 긍정 / 부정 / 중립 |
+| descriptor | EVALUATIVE에만. 평가 표현(맛있다, 넓다 등) |
+| review_idx, source_review | 원본 리뷰 매핑 |
 
-각 entity는 `entity`, `descriptor`, `sentiment` 3가지 필드로 구성됩니다.
+**왜 2-pass인가:** v1은 `entity`에 형용사가 섞여("조용한 카페") 후속 정규화가 어려웠습니다. entity와 descriptor를 분리하면 정규화 단위가 명확해지고, EVALUATIVE에만 descriptor를 요청해 노이즈를 줄입니다. confidence="애매"는 후처리에서 None 처리.
 
-**Batch API를 사용한 이유:**  
-15,000개 리뷰를 실시간 API로 처리하면 약 24시간 이상 소요되고 비용도 높아집니다. OpenAI Batch API는 비동기로 처리되어 **비용 50% 절감** 및 rate limit 문제를 회피할 수 있습니다. 2,000건 단위 청크로 나눠 제출하고, 완료된 것은 재처리하지 않도록 멱등성을 보장했습니다.
+**Batch API:** gpt-4.1-mini Batch API로 비용 50%↓·rate limit 회피. 카페 단위 청킹(5리뷰/청크, 최대 150리뷰/카페)으로 매장 누락 방지. 할당량 초과 시 지수 백오프 재시도, 완료 청크는 재처리 안 함(멱등).
 
----
-
-## STEP 2. 키워드 정규화
-
-**파일:** `item_preprocessing.ipynb`  
-**산출물:** `data/keyword.csv`
-
-### 2-1. FACILITY / ATMOSPHERE / TARGET 정규화
-
-**문제:**  
-NER 결과에는 "조용하다", "조용한", "조용함", "조용한 카페" 등 동일한 의미의 키워드가 다양한 표현으로 존재합니다.
-
-**해결 방안:**  
-임베딩 기반 클러스터링 + LLM 대표 키워드 추출의 2단계 접근법을 사용했습니다.
-
-1. **BGE-M3-ko** 모델로 키워드를 임베딩합니다.  
-   단순 단어 임베딩보다 `"이 카페의 핵심 특징은 {kw}입니다."` 형태로 도메인 문장을 확장해 임베딩하면 카페 문맥이 반영되어 클러스터링 품질이 향상됩니다.
-2. **UMAP + HDBSCAN**으로 유사 키워드를 군집화합니다.
-3. 각 군집을 **GPT-4o-mini**에 전달해 대표 키워드를 선정합니다.
-4. 1차 클러스터링에서 노이즈(-1)로 분류된 키워드는 **재군집 후 2차 LLM 처리**합니다.
-5. 최종적으로 `원본_키워드 → 퍼지매칭_키워드` 매핑 딕셔너리(`df_fuzzy`)를 생성합니다.
-
-### 2-2. MENU 키워드 정규화
-
-**문제:**  
-메뉴는 카페마다 고유한 이름이 많아 임베딩 클러스터링으로는 정규화가 어렵습니다.  
-예: "수박파이"와 "수박주스"가 벡터 공간에서 가깝게 위치해 오분류될 수 있습니다.  
-또한 "아아", "얼죽아" 같은 한국 카페 문화 특유의 줄임말은 현실 세계 지식이 필요합니다.
-
-**해결 방안:**  
-**GPT-5.1**을 활용해 현실 세계 지식 기반으로 메뉴명을 정규화했습니다.
-
-```
-아아            → 아이스아메리카노  (줄임말 확장)
-아이스라떼       → 라떼             (온도 수식어 제거)
-인생베이글       → 베이글           (매장 고유 브랜딩 제거)
-밤티라미수       → 티라미수         (재료 수식어 제거)
-초코스콘        → 초코스콘          (재료가 메뉴 구분 → 유지)
-커피, 음료 등   → 원문 유지         (카테고리 포괄어)
-맛, 원두 등     → null             (비메뉴 키워드 필터링)
-```
-
-수식어 제거 기준은 **수식어 종류**로 판단합니다. 온도/강도/스타일/시즌 수식어는 제거하고, 재료 수식어는 메뉴를 구분짓는 경우에만 유지합니다.
+산출 규모: 201개 카페 / entity 23,825개 (descriptor 커버리지 94.4%).
 
 ---
 
-## STEP 3. 매장별 긍정 item 집계 (TF-IDF)
+## STEP 2. 정규화 + 개념 클러스터링
 
-**파일:** `item_preprocessing.ipynb`  
-**산출물:** `df_tfidf_all` → `data/market_item.csv` (긍정 파트)
+**파일:** `normalize.py`
+**산출물:** `../data/ner_result_v3.json`, `../data/norm_mapping/*.json`
 
-### 집계 방식
+표면형이 제각각인 키워드를 일관된 대표어로 통일합니다. 계층적으로 적용:
 
-**문제:**  
-단순 빈도(count)로 집계하면 리뷰 수가 많은 매장이 유리하고, 모든 카페에 공통적으로 나오는 "카페 분위기", "커피_맛있다" 같은 키워드가 상위를 독점합니다.
+```
+[1] 표기 정규화 (규칙)        공백/대소문자 — 비용 0
+[3] LLM 규칙 정규화           카테고리별 정책 (아이스아메리카노→아메리카노 등)
+[4] descriptor 정규화         동의어 병합 + 극성 보존(맛있다≠맛없다) + 복합→주형용사
+[4.5] 공백-무시 병합          수박주스/수박 주스 → 빈도 최다형으로 통일
+[4.7] 개념 클러스터링         비-MENU 한정. 잔챙이를 개념으로 (온라인 클러스터링)
+[5] 매핑 적용
+```
 
-**해결 방안:**  
-2가지 문제를 각각의 방법으로 해결했습니다.
+### 개념 클러스터링 (비-MENU)
 
-**리뷰 수 불균형 문제:**  
-매장별 긍정 키워드 수를 기준으로 threshold(10개)를 설정합니다.
-- 키워드 수 ≥ 10 → **비율(%)** 기준 Top 10
-- 키워드 수 < 10 → **count** 기준 Top 10
+FACILITY/ATMOSPHERE/TARGET의 롱테일(빈도 1~2 잔챙이)을 **일관된 개념**으로 묶습니다.
+빈도 높은 순으로 청크 처리하며, 빈출 특징이 먼저 anchor가 되고 잔챙이가 흡수됩니다.
 
-**공통 키워드 독점 문제:**  
-Top 10 키워드를 대상으로 **TF-IDF**를 적용해 타 매장 대비 차별적인 키워드를 선별합니다.
-- TF: 해당 매장 내 키워드 등장 비율
-- IDF: 전체 매장 중 해당 키워드가 등장한 매장 수의 역수
-- 결과: 키워드타입별 TF-IDF 상위 **5개** 선정
+```
+아침   ← 모닝커피, 아점, 아침에먹기      운동·산책 ← 산책, 등산, 따릉이, 다이어트
+서울대 ← 서울대내, 서울대안, 캠퍼스내    콘센트   ← 충전기, 플러그, 멀티탭
+```
 
-### item 생성 방식
+- **변별 특징은 분리 유지**: 콘센트≠와이파이, 1인좌석≠단체석, 통창≠창문
+- **추상 상위개념 금지**: '작업편의' 같은 뭉뚱그리기 X (구체적 개념만)
 
-키워드타입에 따라 item 생성 방식을 다르게 적용합니다.
+unique 감소: TARGET 415→66, ATMOSPHERE 167→79, FACILITY 391→140.
 
-| 키워드타입 | item 생성 방식 | 이유 |
+> **MENU는 클러스터링하지 않음.** 롱테일이 변형이 아니라 *고유 시그니처 메뉴*(체리블라썸, 말렌카 등)라, 유사도/개념 병합 시 시그니처가 파괴됨(수박파이/수박주스 오병합 위험). MENU는 STEP 1의 rule 정규화(온도 수식어 제거 등)까지만 적용.
+
+### 매핑 파일 (`../data/norm_mapping/`)
+
+| 파일 | 내용 |
+|---|---|
+| `entity_*.json` / `desc_*.json` | LLM 규칙 정규화 매핑 |
+| `cluster_*.json` / `vocab_*.json` | 개념 클러스터 매핑 / 대표어휘 |
+| `menu_class.json` | MENU specific → category/type 분류 |
+
+---
+
+## STEP 3. 비메뉴 매장 item 집계
+
+**파일:** `market_aggregate.py`
+**산출물:** `../data/market_item.csv`
+
+FACILITY/ATMOSPHERE/TARGET을 매장 추천 근거(character item)로 집계합니다.
+
+- **entity 단위 집계** + 대표 descriptor를 **metadata 컬럼**으로
+  - `분위기_차분하다`처럼 키에 붙이지 않음 → 같은 `분위기`가 descriptor별로 쪼개지는 것 방지
+- **긍정**: TF-IDF 상위 5개/카테고리 (흔한 `분위기`는 IDF로 자동 강등, count≥2 우선)
+- **부정**: count 상위 3개/카테고리 (TARGET 제외, 동점 시 global_count)
+
+TF-IDF를 쓰는 이유: 모든 카페에 흔한 키워드(분위기 좋다)를 누르고 **변별력 있는 특징**을 띄우기 위함.
+
+**컬럼:** `place_id, 사업장명, category, 키워드, sentiment, 대표descriptor, count, tfidf_score, global_count`
+
+---
+
+## STEP 4. MENU 3계층 평가 테이블
+
+**파일:** `menu_aggregate.py`
+**산출물:** `../data/menu_item.csv`
+
+MENU는 추천 파이프라인에서 **독립적으로 조회**되므로, 집계로 누르지 않고 **계층 테이블**로 보존합니다.
+(`ner_result_v2.json` 원본에서 specific을 살려 사용 — v3는 type 레벨로 합쳐져 있어 사용 안 함)
+
+| 레벨 | 예시 | 용도 |
 |---|---|---|
-| MENU | `키워드_descriptor` 결합 | descriptor(맛 표현)가 구체적인 정보를 담고 있음 |
-| FACILITY | `키워드_descriptor` 결합 | descriptor(상태 표현)가 시설의 특성을 설명함 |
-| ATMOSPHERE | 키워드 그대로 | 키워드 자체가 이미 형용사형으로 의미를 내포 |
-| TARGET | 키워드 그대로 | 방문 목적 자체가 명확한 의미 단위 |
+| category | 커피/음료/디저트/베이커리/술/푸드 | "디저트 맛집?" |
+| type | 아메리카노 / 케이크 / 빵 | "아메리카노 맛집?" |
+| specific | 아이스아메리카노 / 쑥치즈케이크 | "이 집 시그니처?" |
 
-같은 키워드에 descriptor가 여러 개인 경우, 가장 많이 등장한 descriptor 하나만 선택합니다.  
-MENU 포괄어(커피, 음료, 디저트, 빵, 푸드, 주류)는 집계에서 제외합니다.
+### 맛집 점수
 
----
+"판매중"(행 존재)과 "맛집"(잘함)을 구분하기 위한 지표:
 
-## STEP 4. 매장별 부정 item 집계
+```
+맛집_score = (긍정 - 부정) × IDF
+조건: 긍정비율 ≥ 0.6,  긍정 ≥ 2
+IDF  = log(전체매장수 / 그 메뉴를 파는 매장수)
+```
 
-**파일:** `item_preprocessing.ipynb`  
-**산출물:** `df_neg_final` → `data/market_item.csv` (부정 파트)
+- **흔한 메뉴(아메리카노)**: IDF 낮음 → 압도적 긍정량이어야 맛집
+- **희귀 시그니처(빨미까레)**: IDF 높음 → 긍정 몇 개로도 시그니처
+- **부정 반영**: `(긍정-부정)` + 긍정비율 게이트로 호불호 메뉴 컷
+- **약점 메뉴**: 부정 우세(`약점여부=Y`)로 별도 표시
 
-**부정 키워드에 TF-IDF를 사용하지 않은 이유:**  
-TF-IDF는 "희귀할수록 중요하다"는 가정에 기반합니다. 그러나 부정 정보는 차별점이 아니라 **있냐 없냐**가 중요합니다. 화장실 불결함은 1개 매장에만 있어도 중요한 경고이며, 희귀하다고 더 중요한 것이 아닙니다.
-
-**동점 처리 방식:**  
-부정 키워드는 수가 적어 count 동점이 많이 발생합니다. 동점 시 **전체 매장 기준 global_count**가 높은 키워드를 우선합니다. 더 많은 매장에서 공통적으로 지적된 단점이 더 공공연한 문제이기 때문입니다.
-
-**필터링 기준:**
-- 매장 내 count = 1 → 제외 (단발성 불만)
-- 전체 global_count = 1 → 제외 (매우 희귀한 불만)
-
-**집계 대상:** MENU, FACILITY, ATMOSPHERE (TARGET은 데이터 수가 너무 적어 제외)
+**컬럼:** `place_id, 사업장명, category, type, specific, 총언급, 긍정, 부정, 중립, 대표descriptor, 맛집score, 약점여부`
 
 ---
 
-## STEP 5. 최종 매장 item 저장
+## 검증 — 골든셋
 
-**파일:** `item_preprocessing.ipynb`  
-**산출물:** `data/market_item.csv`
+**파일:** `golden_set_gen.py` → `../data/golden_set.csv`
 
-긍정 item(df_tfidf_all)과 부정 item(df_neg_final)을 합쳐 최종 매장 item 데이터를 생성합니다.
+정규화 품질을 측정하기 위한 손라벨 샘플(빈도 계층 추출). `canonical` 컬럼을 채워 자동 매핑과 비교.
 
-**최종 컬럼 구성:**
-
-| 컬럼 | 설명 |
-|---|---|
-| 사업장명 | 매장명 |
-| 키워드타입 | MENU / FACILITY / ATMOSPHERE / TARGET |
-| sentiment | 긍정 / 부정 |
-| 최종_키워드 | 정규화된 대표 키워드 |
-| tfidf_score | TF-IDF 점수 (긍정만) |
-| count | 매장 내 등장 횟수 (부정만) |
-| global_count | 전체 매장 기준 등장 횟수 (부정만) |
-
-**매장당 item 구성:**
-- 긍정: 키워드타입별 최대 5개 × 4타입 = 최대 20개
-- 부정: 키워드타입별 최대 3개 × 3타입 = 최대 9개
-
----
-## 번외. gliner을 활용한 ner tagging
-- 한국어로 파인튜닝된 모델을 사용하였지만 결과가 매우 미흡
-- 기본적으로 파인튜닝에 사용된 데이터가 문어체 데이터에 한정되어 있어 결과가 아쉬움
-- 만약 실시간 성을 높혀 사용하고 싶으면 높은 수준의 파인튜닝이 함께 시행되어야 함
 ---
 
 ## 파일 구조
 
 ```
-data-preprocessing/
-├── __pycache__/
-├── gliner_test.ipynb           # GliNER 모델 테스트 (초기 실험)
-├── item_preprocessing.ipynb    # 키워드 정규화 + item 집계 (메인)
-├── preprocesing_batch_while.py # 배치 자동 반복 처리
-├── preprocesing_batch.py       # NER 배치 처리 (메인)
-├── preprocesing.py             # 단건 처리 버전
-├── prompt.py                   # system_prompt, cluter_system_prompt,
-│                               # MENU_NORMALIZE_SYSTEM_PROMPT
-└── README.md
+data_preprocessing/
+├── preprocesing_batch_while.py   # [1] 2-pass NER (Batch API)
+├── prompt.py                     #     Pass1/Pass2 프롬프트
+├── normalize.py                  # [2] 정규화 + 개념 클러스터링
+├── market_aggregate.py           # [3] 비메뉴 집계
+├── menu_aggregate.py             # [4] MENU 3계층 집계
+├── golden_set_gen.py             #     검증 골든셋 생성
+├── calc_cost.py / show_result.py #     비용 추정 / 결과 확인 헬퍼
+└── archive/                      # v1 스크립트 보관
 
 data/
-├── batch_id.txt                     # 배치 제출 ID 저장
-├── cafe_questions.json              # 카페 질문 데이터
-├── keyword.csv                      # 정규화된 키워드 (df_final)
-├── market_item.csv                  # 최종 매장 item (산출물) ★
-├── ner_keyword_sent_clt.csv         # 1차 클러스터링 결과
-├── ner_keyword_sent_re_clt.csv      # 재군집 결과
-├── ner_keyword_word_clt.csv         # 단어 기반 클러스터링 결과
-├── ner_result.json                  # NER 추출 결과
-├── seoul_restaurants_shinline.csv   # 원본 매장 데이터
-├── shinline_cafe_ids_v2.csv         # 카페 ID 목록
-└── shinline_cafe_reviews_test.csv   # 원본 리뷰 데이터 (입력)
+├── ner_result_v2.json            # [1] 산출물 (specific 보존)
+├── ner_result_v3.json            # [2] 정규화 산출물
+├── market_item.csv               # [3] 비메뉴 character item ★
+├── menu_item.csv                 # [4] MENU 평가 테이블 ★
+├── norm_mapping/                 # 정규화·클러스터·분류 매핑
+├── golden_set.csv                # 검증용
+└── archive/                      # v1 데이터 산출물 보관
 ```
 
----
-
-## 주요 기술 스택
+## 기술 스택
 
 | 항목 | 내용 |
 |---|---|
-| 임베딩 모델 | `dragonkue/BGE-m3-ko` (한국어 특화) |
-| 차원 축소 | UMAP |
-| 클러스터링 | HDBSCAN |
-| LLM (클러스터 대표) | GPT-4o-mini |
-| LLM (메뉴 정규화) | GPT-5.1 |
-| LLM (NER) | GPT-4o-mini (Batch API) |
-| 키워드 가중치 | 수동 구현 TF-IDF |
+| NER / 정규화 / 분류 | gpt-4.1-mini (Batch API + 일반 API) |
+| 구조화 출력 | json_schema / json_object |
+| 가중치 | TF-IDF (수동 구현), 맛집 score (IDF 기반) |
