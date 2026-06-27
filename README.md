@@ -69,9 +69,10 @@ cd cafe_recomendation
 uv sync
 cp .env.example .env          # OPENAI_API_KEY, HUGGINGFACE_TOKEN_READ 등 입력
 
-# 2) OpenSearch 띄우고 rule 인덱싱
+# 2) OpenSearch 띄우고 rule 인덱싱 (2단계 — 둘 다 필요!)
 docker compose up -d
-uv run python keyword_selection/indexing.py    # cafe_rules 인덱스 생성
+uv run python keyword_selection/indexing.py       # ① RAG 벡터(title/description)
+uv run python keyword_selection/uodate_index.py   # ② operator/tiebreak 키워드 (이거 빠지면 추천이 안 나옴)
 
 # 3) 모델 추론 서버 (BGE-M3 + sLLM gguf) — 별도 터미널
 uv run uvicorn inference.server:app --port 8001
