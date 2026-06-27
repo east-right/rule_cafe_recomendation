@@ -160,6 +160,35 @@ python evaluate.py --config ../config/koelectra_base.yaml
 
 ---
 
+## OpenAI 교체 (gpt-4.1-mini)
+
+서빙 단계에서 koelectra 파인튜닝 모델을 **OpenAI `gpt-4.1-mini`로 교체**했다.
+GPU 호스팅·재학습 부담 없이 더 높은 일반화 성능을 얻기 위함이며, 아래 **동일 hard_test(300개)·동일 라벨 기준** 비교로 교체 근거를 확인했다.
+
+### Hard Test 비교 (동일 300개, 동일 라벨)
+
+| 모델 | Accuracy | F1 (macro) | 추론 시간/건 |
+|---|---|---|---|
+| koelectra-base-v3 | 0.8000 | 0.8084 | 0.0066s |
+| **gpt-4.1-mini** | **0.9400** | **0.9402** | 0.118s |
+
+→ **Acc +14%p, F1 +13%p.** koelectra의 약점 클래스가 크게 개선됨:
+
+| 클래스 (F1) | koelectra | gpt-4.1-mini |
+|---|---|---|
+| non-menu | 0.70 | **0.91** |
+| menu-only | 0.88 | 0.96 |
+| menu-complex | 0.92 | 0.97 |
+| invalid | 0.74 | **0.92** |
+
+- **트레이드오프**: 추론 시간 0.0066s → 0.118s (약 18배). 챗봇 단건 응답엔 무방.
+- **비용**: 호출당 OpenAI API (gpt-4.1-mini, 프롬프트 짧아 건당 ≈ $0.0001).
+- **재현**: `uv run python question_classifier/evaluate_openai.py` (오답 18개 → `hard_test_openai_wrong.jsonl`).
+
+> 구현 `classify.py` · 평가 `evaluate_openai.py` — koelectra `finetune/evaluate.py`와 동일 데이터·라벨 기준.
+
+---
+
 ## HuggingFace
 
 | 항목 | 링크 |
