@@ -1,40 +1,16 @@
-import os
 import re
 from pathlib import Path
 
 from dotenv import load_dotenv
 from langfuse import get_client, observe
-from transformers import pipeline
 
+from question_classifier.classify import classify_question
 from service.state import AgentState
 
 ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
 
-HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN_READ")
-MODEL_REPO = "east-right/cafe-question-classifier-koelectra-base"
 KOREAN_THRESHOLD = 0.7
-
-_LABEL_MAP = {
-    "LABEL_0": "non-menu",
-    "LABEL_1": "menu-only",
-    "LABEL_2": "menu-complex",
-    "LABEL_3": "invalid",
-}
-
-_classifier = None
-
-
-def _get_classifier():
-    global _classifier
-    if _classifier is None:
-        _classifier = pipeline(
-            "text-classification",
-            model=MODEL_REPO,
-            token=HF_TOKEN,
-            device=-1,
-        )
-    return _classifier
 
 
 def _is_korean_enough(text: str) -> bool:
@@ -53,15 +29,11 @@ def run(state: AgentState) -> AgentState:
         get_client().update_current_span(input=question, output="fallback")
         return {"question_type": "fallback"}
 
-    result = _get_classifier()(question)[0]
-    label = _LABEL_MAP.get(result["label"], result["label"])
+    label = classify_question(question)
 
+    # invalid는 답변 불가 안내(fallback)로 처리
     if label == "invalid":
         label = "fallback"
 
-    get_client().update_current_span(
-        input=question,
-        output=label,
-        metadata={"score": result["score"]},
-    )
+    get_client().update_current_span(input=question, output=label)
     return {"question_type": label}
