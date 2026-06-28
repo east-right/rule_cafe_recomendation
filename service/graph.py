@@ -1,6 +1,13 @@
 from langgraph.graph import END, StateGraph
 
-from service.nodes import impasse_resolve, menu_extract, question_valid, rule_select, soar_recommend
+from service.nodes import (
+    impasse_resolve,
+    menu_extract,
+    question_valid,
+    rule_fallback,
+    rule_select,
+    soar_recommend,
+)
 from service.state import AgentState
 
 MAX_IMPASSE_ITER = 5
@@ -29,7 +36,16 @@ def _route_menu_extract(state: AgentState) -> str:
 def _route_rule_select(state: AgentState) -> str:
     if state.get("question_type") in MENU_TYPES:
         return "soar_recommend"
+    # 1차 sLLM이 none → 막다른 길 대신 LLM 폴백으로 가장 가까운 룰 선택
     if state.get("selected_rule") == "none" or not state.get("selected_rule"):
+        return "rule_fallback"
+    return "soar_recommend"
+
+
+def _route_rule_fallback(state: AgentState) -> str:
+    # 폴백도 룰을 못 고르면(후보 0개 등) 추천 불가 → END
+    sel = state.get("selected_rule")
+    if not sel or sel == "none":
         return END
     return "soar_recommend"
 
@@ -57,6 +73,7 @@ def build_graph():
     graph.add_node("question_valid", question_valid.run)
     graph.add_node("menu_extract", menu_extract.run)
     graph.add_node("rule_select", rule_select.run)
+    graph.add_node("rule_fallback", rule_fallback.run)
     graph.add_node("soar_recommend", soar_recommend.run)
     graph.add_node("impasse_resolve", impasse_resolve.run)
 
@@ -77,6 +94,11 @@ def build_graph():
     graph.add_conditional_edges(
         "rule_select",
         _route_rule_select,
+        {"soar_recommend": "soar_recommend", "rule_fallback": "rule_fallback", END: END},
+    )
+    graph.add_conditional_edges(
+        "rule_fallback",
+        _route_rule_fallback,
         {"soar_recommend": "soar_recommend", END: END},
     )
     graph.add_conditional_edges(
