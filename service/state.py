@@ -14,3 +14,5 @@ class AgentState(TypedDict, total=False):
     impasse_exhausted: bool
     extracted_menu: str | None
     menu_cafe_names: list[str] | None
+    rule_fallback_used: bool
+    fallback_rules: list[str]
