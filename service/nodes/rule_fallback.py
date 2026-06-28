@@ -42,8 +42,13 @@ def _get_client() -> OpenAI:
     return _client
 
 
-def _pick_rules(question: str, candidates: list[dict]) -> list[str]:
-    """후보 중 질문에 가장 가까운 룰 title을 중요도 순으로 1~MAX_RULES개 선택."""
+def _pick_rules(question: str, candidates: list[dict]) -> list[str] | None:
+    """후보 중 질문에 가장 가까운 룰 title을 1~MAX_RULES개 선택.
+
+    반환:
+        list[str] — 선택된 룰 (Tier 1)
+        None      — 맞는 룰이 전혀 없음(NONE_FIT) → 신규 룰 생성(Tier 2)으로
+    """
     cand_text = "\n".join(f"- {c['title']}: {c['description']}" for c in candidates)
     resp = _get_client().chat.completions.create(
         model=MODEL,
@@ -57,11 +62,13 @@ def _pick_rules(question: str, candidates: list[dict]) -> list[str]:
         temperature=0,
     )
     raw = resp.choices[0].message.content.strip()
-    titles = [t.strip() for t in raw.split(",") if t.strip()]
+    if "NONE_FIT" in raw:
+        return None
 
+    titles = [t.strip() for t in raw.split(",") if t.strip()]
     valid = {c["title"] for c in candidates}
     picked = [t for t in titles if t in valid][:MAX_RULES]
-    # LLM이 형식을 어겨 하나도 못 맞히면 RAG 1순위로 최종 폴백
+    # LLM이 형식을 어겨 하나도 못 맞히면(NONE_FIT도 아님) RAG 1순위로 안전 폴백
     if not picked:
         picked = [candidates[0]["title"]]
     return picked
@@ -73,11 +80,16 @@ def run(state: AgentState) -> AgentState:
     candidates = state.get("rule_candidates") or []
 
     if not candidates:
-        # 후보 자체가 없음 → 폴백 불가, none 유지 → END
+        # 후보 자체가 없음 → 신규 룰 생성으로 (RAG가 아무것도 못 찾은 경우)
         get_client().update_current_span(input=question, output="no_candidates")
-        return {"rule_fallback_used": True}
+        return {"rule_fallback_used": True, "needs_rule_creation": True}
 
     picked = _pick_rules(question, candidates)
+    if picked is None:
+        # 후보 전부 무관(NONE_FIT) → 티어2(신규 룰 생성)로
+        get_client().update_current_span(input=question, output="NONE_FIT")
+        return {"rule_fallback_used": True, "needs_rule_creation": True}
+
     primary, *secondary = picked
     primary_kw = _fetch_keywords_from_os(primary)
 
