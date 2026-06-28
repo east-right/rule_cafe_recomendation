@@ -89,7 +89,7 @@ def run(state: AgentState) -> AgentState:
         return {"impasse_exhausted": True}
 
     resp = _get_client().chat.completions.create(
-        model="gpt-4.1",
+        model="gpt-4.1-mini",
         messages=[
             {"role": "system", "content": IMPASSE_SYSTEM},
             {"role": "user", "content": IMPASSE_USER.format(
