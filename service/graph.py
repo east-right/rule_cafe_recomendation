@@ -1,6 +1,14 @@
 from langgraph.graph import END, StateGraph
 
-from service.nodes import impasse_resolve, menu_extract, question_valid, rule_select, soar_recommend
+from service.nodes import (
+    impasse_resolve,
+    menu_extract,
+    question_valid,
+    rule_create,
+    rule_fallback,
+    rule_select,
+    soar_recommend,
+)
 from service.state import AgentState
 
 MAX_IMPASSE_ITER = 5
@@ -29,7 +37,25 @@ def _route_menu_extract(state: AgentState) -> str:
 def _route_rule_select(state: AgentState) -> str:
     if state.get("question_type") in MENU_TYPES:
         return "soar_recommend"
+    # 1차 sLLM이 none → 막다른 길 대신 LLM 폴백으로 가장 가까운 룰 선택
     if state.get("selected_rule") == "none" or not state.get("selected_rule"):
+        return "rule_fallback"
+    return "soar_recommend"
+
+
+def _route_rule_fallback(state: AgentState) -> str:
+    # 후보가 전부 무관(NONE_FIT) → 티어2 신규 룰 생성
+    if state.get("needs_rule_creation"):
+        return "rule_create"
+    sel = state.get("selected_rule")
+    if not sel or sel == "none":
+        return END
+    return "soar_recommend"
+
+
+def _route_rule_create(state: AgentState) -> str:
+    # 룰 생성 실패(어휘 매칭 불가) → 정직하게 추천 없음으로 END
+    if not state.get("rule_created"):
         return END
     return "soar_recommend"
 
@@ -57,6 +83,8 @@ def build_graph():
     graph.add_node("question_valid", question_valid.run)
     graph.add_node("menu_extract", menu_extract.run)
     graph.add_node("rule_select", rule_select.run)
+    graph.add_node("rule_fallback", rule_fallback.run)
+    graph.add_node("rule_create", rule_create.run)
     graph.add_node("soar_recommend", soar_recommend.run)
     graph.add_node("impasse_resolve", impasse_resolve.run)
 
@@ -77,6 +105,16 @@ def build_graph():
     graph.add_conditional_edges(
         "rule_select",
         _route_rule_select,
+        {"soar_recommend": "soar_recommend", "rule_fallback": "rule_fallback", END: END},
+    )
+    graph.add_conditional_edges(
+        "rule_fallback",
+        _route_rule_fallback,
+        {"soar_recommend": "soar_recommend", "rule_create": "rule_create", END: END},
+    )
+    graph.add_conditional_edges(
+        "rule_create",
+        _route_rule_create,
         {"soar_recommend": "soar_recommend", END: END},
     )
     graph.add_conditional_edges(
