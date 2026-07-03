@@ -1,0 +1,8 @@
+# 모델 서버(inference.server) 전용 의존성.
+# llama-cpp-python은 CPU 명령셋 이슈로 Dockerfile에서 별도 빌드한다.
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+sentence-transformers
+huggingface-hub

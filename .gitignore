@@ -25,6 +25,8 @@ Desktop.ini
 
 CLAUDE.md
 *.db
+# 단, cafe.db는 재현용 시드 데이터로 커밋 (loader/summarize 재실행 없이 바로 사용)
+!data/cafe.db
 
 # Soar SML 바이너리 (로컬 설치 필요)
 soar/sml/
@@ -37,3 +39,6 @@ data/review_summary_batch_id.txt
 # sLLM gguf 산출물 (병합 모델 / 변환 gguf — 로컬 빌드 또는 HF에서 다운로드)
 keyword_selection/merged/
 keyword_selection/*.gguf
+
+# 개발 로그 / 학습 메모 (튜터 세션용, 로컬 전용)
+docs/

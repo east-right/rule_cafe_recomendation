@@ -1,0 +1,10 @@
+# 앱 서버(오케스트레이션) 전용 의존성 — 모델/torch 없음 (추론은 모델서버에 위임).
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+httpx
+langgraph
+openai
+opensearch-py
+langfuse

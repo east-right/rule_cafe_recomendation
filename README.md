@@ -53,4 +53,41 @@
 ## 4. WBS																													
 <img width="1450" height="463" alt="image" src="https://github.com/user-attachments/assets/729b771a-2159-4cff-ab3f-8d48c3092b5f" />
 
+---
+
+## 5. 실행 방법 (Quick Start — CPU)
+
+> 클론 후 로컬에서 추천 파이프라인을 띄우는 최소 절차. 3개가 떠야 한다:
+> **OpenSearch(:9200)** · **모델 추론 서버(:8001)** · **앱 서버(:8000)**
+
+**사전 준비**: Python 3.12, [uv](https://docs.astral.sh/uv/), Docker
+
+```bash
+# 1) 클론 + 의존성 + 환경
+git clone https://github.com/f-lab-edu/cafe_recomendation.git
+cd cafe_recomendation
+uv sync
+cp .env.example .env          # OPENAI_API_KEY, HUGGINGFACE_TOKEN_READ 등 입력
+
+# 2) OpenSearch 띄우고 rule 인덱싱 (2단계 — 둘 다 필요!)
+docker compose up -d
+uv run python keyword_selection/indexing.py       # ① RAG 벡터(title/description)
+uv run python keyword_selection/uodate_index.py   # ② operator/tiebreak 키워드 (이거 빠지면 추천이 안 나옴)
+
+# 3) 모델 추론 서버 (BGE-M3 + sLLM gguf) — 별도 터미널
+uv run uvicorn inference.server:app --port 8001
+
+# 4) 앱 서버 — 또 다른 터미널
+uv run uvicorn service.api:app --port 8000
+
+# 5) 호출
+curl -N -X POST http://localhost:8000/recommend \
+  -H "Content-Type: application/json" \
+  -d '{"question":"카공하기 좋은 카페 추천해줘"}'
+```
+
+**참고**
+- `data/cafe.db`는 **시드 데이터로 커밋**돼 있어 별도 적재 불필요. (재생성하려면 `uv run python service/db/loader.py`)
+- sLLM gguf(`east-right/cafe-keyword-selection-qwen-1.5b`)는 모델서버가 HF에서 자동 다운로드. 일부 CPU(AVX512 비활성)에서 illegal instruction이면 AVX2 소스 빌드 필요 → `keyword_selection/README.md` 참고.
+- 모델 서버는 인터페이스(`/embed`·`/select_rule`)가 고정돼 있어, GPU 배포 시 `MODEL_SERVER_URL`만 교체하면 된다.
 
