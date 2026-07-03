@@ -1,0 +1,59 @@
+# 전체 스택 로컬 실행:  docker compose up -d --build
+#   opensearch :9200  (rule 벡터 인덱스)
+#   model      :8001  (BGE-M3 임베딩 + sLLM gguf, HF에서 모델 런타임 다운로드)
+#   app        :8000  (LangGraph 오케스트레이션, 추론은 model에 위임)
+#
+# 키는 .env에서 읽는다 (cp .env.example .env).
+# 인덱스(cafe_rules)는 1회 부트스트랩 필요 — 아래 "인덱싱" 주석 참고.
+
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.13.0
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=${OPENSEARCH_PASSWORD}
+    ports:
+      - "9200:9200"
+      - "9600:9600"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+
+  model:
+    build:
+      context: .
+      dockerfile: inference/Dockerfile
+    container_name: cafe-model
+    env_file: .env
+    ports:
+      - "8001:8001"
+
+  app:
+    build:
+      context: .
+      dockerfile: service/Dockerfile
+    container_name: cafe-app
+    env_file: .env
+    environment:
+      # 컨테이너 간엔 localhost가 아니라 서비스 이름으로 통신
+      - OPENSEARCH_HOST=opensearch
+      - MODEL_SERVER_URL=http://model:8001
+    ports:
+      - "8000:8000"
+    depends_on:
+      - opensearch
+      - model
+
+volumes:
+  opensearch-data:
+
+# ── 인덱싱 (최초 1회) ────────────────────────────────────────
+# cafe_rules 인덱스는 stateful이라 compose 서비스로 안 띄우고 1회 부트스트랩한다.
+# OpenSearch가 뜬 뒤 호스트에서 2단계 모두 실행 (rule 임베딩 필요 → 루트 uv 환경):
+#   uv run python keyword_selection/indexing.py       # ① RAG 벡터
+#   uv run python keyword_selection/uodate_index.py   # ② operator/tiebreak 키워드 (필수)
+# ②가 빠지면 rule은 선택되지만 키워드가 없어 추천이 안 나온다.
