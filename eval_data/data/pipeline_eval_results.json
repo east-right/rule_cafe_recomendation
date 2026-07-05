@@ -1,0 +1,1706 @@
+{
+  "n_questions": 50,
+  "rel_threshold": 2,
+  "summary": {
+    "hit1": 0.6,
+    "hit3": 0.7,
+    "recall3": 0.0312,
+    "ndcg3": 0.4542,
+    "mrr": 0.6467
+  },
+  "none_count": 15,
+  "empty_count": 0,
+  "results": [
+    {
+      "qid": "q000",
+      "question": "신림동에 혼자 공부하기 좋은 데 어디 없을까?",
+      "selected_rule": "공부",
+      "top3": [
+        "커피니쉬(COFFEE NISHE)",
+        "파스쿠찌 서울대관정도서관점",
+        "이디야커피(신림대학동점)"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "이디야커피(신림대학동점)",
+          "score": 1,
+          "op": 1,
+          "tb": 2,
+          "neg": 1
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0462,
+      "ndcg3": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q008",
+      "question": "신림동에 분위기 좋은 데 있으면 알려줘~",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q012",
+      "question": "진짜 조용히 얘기할 수 있는 데 있을까?",
+      "selected_rule": "조용함",
+      "top3": [
+        "데니스커피 남강점",
+        "스타벅스 신림점",
+        "궁전다방"
+      ],
+      "top3_grades": [
+        1,
+        2,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "데니스커피 남강점",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "스타벅스 신림점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "궁전다방",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 0.0,
+      "hit3": 1.0,
+      "recall3": 0.0263,
+      "ndcg3": 0.4286,
+      "mrr": 0.5
+    },
+    {
+      "qid": "q014",
+      "question": "모임하기 좋은 넓은 곳 어디 있어?",
+      "selected_rule": "모임",
+      "top3": [
+        "탐앤탐스 삼모타워 신림역점",
+        "카페라움(CAFE RAUM)",
+        "플레이온 보드게임카페"
+      ],
+      "top3_grades": [
+        3,
+        2,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "탐앤탐스 삼모타워 신림역점",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "카페라움(CAFE RAUM)",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "플레이온 보드게임카페",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0462,
+      "ndcg3": 0.8308,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q018",
+      "question": "직장인들이 일 끝나고 혼자 쉰다 하면 어디로 가냐?",
+      "selected_rule": "직장인",
+      "top3": [
+        "파스쿠찌 서울대관정도서관점",
+        "빽다방 난곡세이브점",
+        "투썸플레이스 신림녹두거리점"
+      ],
+      "top3_grades": [
+        1,
+        1,
+        2
+      ],
+      "detail": [
+        {
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "빽다방 난곡세이브점",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "투썸플레이스 신림녹두거리점",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 0.0,
+      "hit3": 1.0,
+      "recall3": 0.0101,
+      "ndcg3": 0.2099,
+      "mrr": 0.3333
+    },
+    {
+      "qid": "q019",
+      "question": "사색하거나 생각 정리하기 좋았던 곳 있어?",
+      "selected_rule": "여유",
+      "top3": [
+        "301h(301에이치)",
+        "스타벅스 신림점",
+        "데니스커피 남강점"
+      ],
+      "top3_grades": [
+        3,
+        2,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "301h(301에이치)",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "스타벅스 신림점",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "데니스커피 남강점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0282,
+      "ndcg3": 0.6297,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q020",
+      "question": "요즘 신림에서 혼자 앉아서 조용히 커피 마실 만한 장소 찾는데 추천 좀.",
+      "selected_rule": "혼자",
+      "top3": [
+        "플랙",
+        "데니스커피 남강점",
+        "만랩커피 신림별빛거리점"
+      ],
+      "top3_grades": [
+        2,
+        1,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "플랙",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "데니스커피 남강점",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "만랩커피 신림별빛거리점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0099,
+      "ndcg3": 0.2769,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q024",
+      "question": "신림동에서 딸기 케이크 맛있는 데 있어?",
+      "selected_rule": "디저트",
+      "top3": [
+        "원브릿지",
+        "읍천리382 신림점",
+        "어반커피"
+      ],
+      "top3_grades": [
+        3,
+        1,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "원브릿지",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "읍천리382 신림점",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "어반커피",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0625,
+      "ndcg3": 0.5451,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q027",
+      "question": "내일 테이크아웃할 빵집 추천 좀 해줘",
+      "selected_rule": "포장+베이커리",
+      "top3": [
+        "디저트39 신림역점",
+        "빽다방 서원역점",
+        "Lee 집 coffee"
+      ],
+      "top3_grades": [
+        2,
+        1,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "디저트39 신림역점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "빽다방 서원역점",
+          "score": 0,
+          "op": 2,
+          "tb": 0,
+          "neg": 0
+        },
+        {
+          "cafe": "Lee 집 coffee",
+          "score": 0,
+          "op": 1,
+          "tb": 0,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0132,
+      "ndcg3": 0.2769,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q030",
+      "question": "카페인 없이 마실 거 좀 찾는데 어디가 괜찮아?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q032",
+      "question": "신림동 근처 인테리어 예쁜 데 있어?",
+      "selected_rule": "인테리어",
+      "top3": [
+        "데이굿(DAY GOOD)",
+        "원브릿지",
+        "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "데이굿(DAY GOOD)",
+          "score": 1,
+          "op": 3,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "원브릿지",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0349,
+      "ndcg3": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q033",
+      "question": "사진 찍기 좋은 감성 공간 아는데 알려줄래?",
+      "selected_rule": "사진",
+      "top3": [
+        "썰카페",
+        "데이굿(DAY GOOD)",
+        "원브릿지"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "썰카페",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "데이굿(DAY GOOD)",
+          "score": 1,
+          "op": 2,
+          "tb": 2,
+          "neg": 1
+        },
+        {
+          "cafe": "원브릿지",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0517,
+      "ndcg3": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q039",
+      "question": "편안하게 쉬면서 음악 듣기 좋은 곳 있으면 알려줘",
+      "selected_rule": "편안함",
+      "top3": [
+        "마티스커피",
+        "스타벅스 신림녹두거리점",
+        "컴포즈커피 신림녹두점"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        2
+      ],
+      "detail": [
+        {
+          "cafe": "마티스커피",
+          "score": 1,
+          "op": 3,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "스타벅스 신림녹두거리점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "컴포즈커피 신림녹두점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0294,
+      "ndcg3": 0.8659,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q043",
+      "question": "차 끌고 가도 주차할 곳 좀 있는지 궁금한데.",
+      "selected_rule": "주차",
+      "top3": [
+        "토마 화실",
+        "걸작커피",
+        "저스트 로맨틱"
+      ],
+      "top3_grades": [
+        2,
+        1,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "토마 화실",
+          "score": 1,
+          "op": 1,
+          "tb": 2,
+          "neg": 1
+        },
+        {
+          "cafe": "걸작커피",
+          "score": 0,
+          "op": 1,
+          "tb": 0,
+          "neg": 0
+        },
+        {
+          "cafe": "저스트 로맨틱",
+          "score": -1,
+          "op": 2,
+          "tb": 0,
+          "neg": 1
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0833,
+      "ndcg3": 0.3198,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q045",
+      "question": "여기 근처에 사람 많이 붐비지 않고 조용한 곳 있나?",
+      "selected_rule": "조용함",
+      "top3": [
+        "데니스커피 남강점",
+        "스타벅스 신림점",
+        "궁전다방"
+      ],
+      "top3_grades": [
+        1,
+        2,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "데니스커피 남강점",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "스타벅스 신림점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "궁전다방",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 0.0,
+      "hit3": 1.0,
+      "recall3": 0.0225,
+      "ndcg3": 0.4286,
+      "mrr": 0.5
+    },
+    {
+      "qid": "q052",
+      "question": "왠지 좀 분위기 괜찮고 착한 가격에 음료 맛도 괜찮은 데 어디가 있을까?",
+      "selected_rule": "가성비",
+      "top3": [
+        "더리터 신림중앙점",
+        "mug 공대"
+      ],
+      "top3_grades": [
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "더리터 신림중앙점",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "mug 공대",
+          "score": 0,
+          "op": 1,
+          "tb": 0,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0105,
+      "ndcg3": 0.7654,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q054",
+      "question": "책 읽기 좋은데 완전 조용하진 않고 가끔 잡담 소리 나서 편안한 곳 어디야?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q060",
+      "question": "빵 종류 진짜 많은 큰 데 아냐? 신림에서?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q062",
+      "question": "근처에 앉아서 일하기 좋은 조명 괜찮은 데 있나?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q063",
+      "question": "서울대 근처 대형 베이커리 어디 괜찮은지 아는 사람?",
+      "selected_rule": "학생+베이커리",
+      "top3": [
+        "엔제리너스 구로디지털역점",
+        "엔제리너스 대학점",
+        "플레이온 보드게임카페"
+      ],
+      "top3_grades": [
+        2,
+        3,
+        0
+      ],
+      "detail": [
+        {
+          "cafe": "엔제리너스 구로디지털역점",
+          "score": 0,
+          "op": 1,
+          "tb": 1,
+          "neg": 1
+        },
+        {
+          "cafe": "엔제리너스 대학점",
+          "score": 0,
+          "op": 1,
+          "tb": 1,
+          "neg": 1
+        },
+        {
+          "cafe": "플레이온 보드게임카페",
+          "score": 0,
+          "op": 1,
+          "tb": 0,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.025,
+      "ndcg3": 0.4972,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q065",
+      "question": "여기 근처 조용히 혼자 공부하기 좋은 곳 어디야?",
+      "selected_rule": "독서",
+      "top3": [
+        "스타벅스 신림점",
+        "마티스커피",
+        "페이브 베이커리 서울대점"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        2
+      ],
+      "detail": [
+        {
+          "cafe": "스타벅스 신림점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "마티스커피",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "페이브 베이커리 서울대점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0455,
+      "ndcg3": 0.8659,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q067",
+      "question": "노트북 쓰기 좋은 카페 자리 상황 알려줄 수 있어?",
+      "selected_rule": "작업",
+      "top3": [
+        "커피니쉬(COFFEE NISHE)",
+        "파스쿠찌 서울대관정도서관점",
+        "진서의 정원"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        2
+      ],
+      "detail": [
+        {
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "score": 1,
+          "op": 3,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "진서의 정원",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0492,
+      "ndcg3": 0.8659,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q070",
+      "question": "쉬는 시간 없이 계속 공부 가능할 만한 데 있으면 알려줘!",
+      "selected_rule": "공부",
+      "top3": [
+        "커피니쉬(COFFEE NISHE)",
+        "파스쿠찌 서울대관정도서관점",
+        "이디야커피(신림대학동점)"
+      ],
+      "top3_grades": [
+        2,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "이디야커피(신림대학동점)",
+          "score": 1,
+          "op": 1,
+          "tb": 2,
+          "neg": 1
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0625,
+      "ndcg3": 0.7318,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q072",
+      "question": "밤 10시 이후에도 편하게 앉아서 작업할 데 있어?",
+      "selected_rule": "작업",
+      "top3": [
+        "커피니쉬(COFFEE NISHE)",
+        "파스쿠찌 서울대관정도서관점",
+        "진서의 정원"
+      ],
+      "top3_grades": [
+        2,
+        1,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "score": 1,
+          "op": 3,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "진서의 정원",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0417,
+      "ndcg3": 0.2769,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q074",
+      "question": "콘센트랑 와이파이 빠른 데로 좀 알려줄래?",
+      "selected_rule": "콘센트",
+      "top3": [
+        "할리스 신림점",
+        "엔제리너스 구로디지털역점",
+        "인더숲"
+      ],
+      "top3_grades": [
+        2,
+        2,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "할리스 신림점",
+          "score": -1,
+          "op": 1,
+          "tb": 0,
+          "neg": 1
+        },
+        {
+          "cafe": "엔제리너스 구로디지털역점",
+          "score": -1,
+          "op": 1,
+          "tb": 0,
+          "neg": 1
+        },
+        {
+          "cafe": "인더숲",
+          "score": -1,
+          "op": 1,
+          "tb": 0,
+          "neg": 1
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0714,
+      "ndcg3": 0.3615,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q079",
+      "question": "신림역 근처에 새로 생긴 핫플 있나?",
+      "selected_rule": "핫플",
+      "top3": [
+        "썰카페",
+        "궁전다방",
+        "데이굿(DAY GOOD)"
+      ],
+      "top3_grades": [
+        2,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "썰카페",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "궁전다방",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "데이굿(DAY GOOD)",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.03,
+      "ndcg3": 0.7318,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q082",
+      "question": "친구랑 사진도 좀 찍고 싶은데 예쁜 인테리어 있는 데 있어?",
+      "selected_rule": "사진",
+      "top3": [
+        "썰카페",
+        "데이굿(DAY GOOD)",
+        "원브릿지"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "썰카페",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "데이굿(DAY GOOD)",
+          "score": 1,
+          "op": 2,
+          "tb": 2,
+          "neg": 1
+        },
+        {
+          "cafe": "원브릿지",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0484,
+      "ndcg3": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q084",
+      "question": "분위기 너무 시끄럽지 않고 담소 나누기 좋은 곳 뭐 있지?",
+      "selected_rule": "대화",
+      "top3": [
+        "진서의 정원",
+        "스타벅스 신림점",
+        "마티스커피"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "진서의 정원",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "스타벅스 신림점",
+          "score": 0,
+          "op": 2,
+          "tb": 0,
+          "neg": 0
+        },
+        {
+          "cafe": "마티스커피",
+          "score": 0,
+          "op": 2,
+          "tb": 0,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.028,
+      "ndcg3": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q086",
+      "question": "책 읽으면서 멍 때리기 좋은 곳 알려줘",
+      "selected_rule": "독서",
+      "top3": [
+        "스타벅스 신림점",
+        "마티스커피",
+        "페이브 베이커리 서울대점"
+      ],
+      "top3_grades": [
+        2,
+        2,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "스타벅스 신림점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "마티스커피",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "페이브 베이커리 서울대점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0278,
+      "ndcg3": 0.3615,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q089",
+      "question": "쉬면서 혼자 힐링할 수 있는 장소 있으면 알려줘",
+      "selected_rule": "혼자",
+      "top3": [
+        "플랙",
+        "데니스커피 남강점",
+        "만랩커피 신림별빛거리점"
+      ],
+      "top3_grades": [
+        3,
+        1,
+        2
+      ],
+      "detail": [
+        {
+          "cafe": "플랙",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "데니스커피 남강점",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "만랩커피 신림별빛거리점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0147,
+      "ndcg3": 0.6121,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q094",
+      "question": "책상 넓고 공간 여유 있는 데 있나?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q099",
+      "question": "디카페인 마실 만한 데 어디 있을까?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q100",
+      "question": "빵 진짜 맛있는 카페 좀 알려줘",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q102",
+      "question": "아메리카노랑 잘 어울리는 디저트 뭐 먹지?",
+      "selected_rule": "디저트",
+      "top3": [
+        "원브릿지",
+        "읍천리382 신림점",
+        "어반커피"
+      ],
+      "top3_grades": [
+        3,
+        2,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "원브릿지",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "읍천리382 신림점",
+          "score": 2,
+          "op": 1,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "어반커피",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0231,
+      "ndcg3": 0.8308,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q104",
+      "question": "서울대 근처에 라떼 맛있게 하는 곳 있을까?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q109",
+      "question": "신림동 근처 분위기 좋은 데 중에서 인테리어 감성 끝내주는 데 있을까?",
+      "selected_rule": "감성",
+      "top3": [
+        "엔제리너스 구로디지털역점",
+        "진서의 정원",
+        "프롬 카페(from. cafe)"
+      ],
+      "top3_grades": [
+        1,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "엔제리너스 구로디지털역점",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "진서의 정원",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "프롬 카페(from. cafe)",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 0.0,
+      "hit3": 1.0,
+      "recall3": 0.0235,
+      "ndcg3": 0.5978,
+      "mrr": 0.5
+    },
+    {
+      "qid": "q111",
+      "question": "신림 안에서 조용하고 아늑한 데 어디 있을까?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q112",
+      "question": "서울대 근처인데 음악 감성 좋은 곳 찾아볼 수 있어?",
+      "selected_rule": "감성",
+      "top3": [
+        "엔제리너스 구로디지털역점",
+        "진서의 정원",
+        "프롬 카페(from. cafe)"
+      ],
+      "top3_grades": [
+        1,
+        2,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "엔제리너스 구로디지털역점",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "진서의 정원",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "프롬 카페(from. cafe)",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 0.0,
+      "hit3": 1.0,
+      "recall3": 0.0303,
+      "ndcg3": 0.2275,
+      "mrr": 0.5
+    },
+    {
+      "qid": "q114",
+      "question": "신림 쪽에 인테리어 예쁘고 사진 잘 나오는 곳 좀 알려줘",
+      "selected_rule": "인테리어",
+      "top3": [
+        "데이굿(DAY GOOD)",
+        "원브릿지",
+        "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "데이굿(DAY GOOD)",
+          "score": 1,
+          "op": 3,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "원브릿지",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "score": 1,
+          "op": 2,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0435,
+      "ndcg3": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q122",
+      "question": "저녁 늦게도 문 여는 곳 있나?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q125",
+      "question": "학생 할인해주는 곳 있어?",
+      "selected_rule": "학생",
+      "top3": [
+        "블루포트 서울대점",
+        "컴포즈커피 서울대신양학술정보관3점",
+        "카페느티나무도서관점"
+      ],
+      "top3_grades": [
+        2,
+        0,
+        1
+      ],
+      "detail": [
+        {
+          "cafe": "블루포트 서울대점",
+          "score": 1,
+          "op": 1,
+          "tb": 2,
+          "neg": 1
+        },
+        {
+          "cafe": "컴포즈커피 서울대신양학술정보관3점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "카페느티나무도서관점",
+          "score": 0,
+          "op": 2,
+          "tb": 0,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.3333,
+      "ndcg3": 0.5475,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q126",
+      "question": "요즘 신림동에 인기 많은 커피숍 있나?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q130",
+      "question": "포장 주문하기 편리한 곳 어디가 좋아?",
+      "selected_rule": "포장",
+      "top3": [
+        "빽다방 난곡세이브점",
+        "컴포즈커피 신림중앙점",
+        "디저트39 신림역점"
+      ],
+      "top3_grades": [
+        2,
+        2,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "빽다방 난곡세이브점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "컴포즈커피 신림중앙점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "디저트39 신림역점",
+          "score": 0,
+          "op": 2,
+          "tb": 0,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0517,
+      "ndcg3": 0.5627,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q133",
+      "question": "시끄럽진 않은데 너무 썰렁하지 않은 분위기 원해",
+      "selected_rule": "편안함",
+      "top3": [
+        "마티스커피",
+        "스타벅스 신림녹두거리점",
+        "컴포즈커피 신림녹두점"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        2
+      ],
+      "detail": [
+        {
+          "cafe": "마티스커피",
+          "score": 1,
+          "op": 3,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "스타벅스 신림녹두거리점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "컴포즈커피 신림녹두점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0246,
+      "ndcg3": 0.8659,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q135",
+      "question": "노트북 작업하기 좋으면서 말소리는 좀 들어도 될 데 없어?",
+      "selected_rule": "작업",
+      "top3": [
+        "커피니쉬(COFFEE NISHE)",
+        "파스쿠찌 서울대관정도서관점",
+        "진서의 정원"
+      ],
+      "top3_grades": [
+        3,
+        3,
+        2
+      ],
+      "detail": [
+        {
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "score": 2,
+          "op": 2,
+          "tb": 2,
+          "neg": 0
+        },
+        {
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "score": 1,
+          "op": 3,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "진서의 정원",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0469,
+      "ndcg3": 0.8659,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q139",
+      "question": "커피 맛 괜찮으면서 공부도 잘 될 만한 데 추천 좀",
+      "selected_rule": "독서",
+      "top3": [
+        "스타벅스 신림점",
+        "마티스커피",
+        "페이브 베이커리 서울대점"
+      ],
+      "top3_grades": [
+        2,
+        3,
+        3
+      ],
+      "detail": [
+        {
+          "cafe": "스타벅스 신림점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "마티스커피",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "페이브 베이커리 서울대점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0236,
+      "ndcg3": 0.7318,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q140",
+      "question": "사람도 좀 있어서 외롭지 않은데 집중도 잘 돼?",
+      "selected_rule": "독서",
+      "top3": [
+        "스타벅스 신림점",
+        "마티스커피",
+        "페이브 베이커리 서울대점"
+      ],
+      "top3_grades": [
+        2,
+        3,
+        2
+      ],
+      "detail": [
+        {
+          "cafe": "스타벅스 신림점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "마티스커피",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        },
+        {
+          "cafe": "페이브 베이커리 서울대점",
+          "score": 1,
+          "op": 1,
+          "tb": 1,
+          "neg": 0
+        }
+      ],
+      "hit1": 1.0,
+      "hit3": 1.0,
+      "recall3": 0.0405,
+      "ndcg3": 0.5978,
+      "mrr": 1.0
+    },
+    {
+      "qid": "q150",
+      "question": "회식하기 좋은 깊은 밤까지 열려있는 카페 추천해줘",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q151",
+      "question": "신림에서 베지테리언 메뉴 먹는 곳 있나?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    },
+    {
+      "qid": "q152",
+      "question": "밖에서 한강 뷰 보면서 쉬고 싶은데 가능해?",
+      "selected_rule": "none(raw=none)",
+      "top3": [],
+      "top3_grades": [],
+      "detail": [],
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "recall3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    }
+  ]
+}

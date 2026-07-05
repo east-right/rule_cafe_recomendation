@@ -1,0 +1,767 @@
+[
+  {
+    "qid": "q000",
+    "question": "신림동에 혼자 공부하기 좋은 데 어디 없을까?",
+    "src": "study"
+  },
+  {
+    "qid": "q001",
+    "question": "콘센트 많이 꽂을 수 있는 데 있으면 알려줘.",
+    "src": "study"
+  },
+  {
+    "qid": "q002",
+    "question": "시험기간이라 조용한 곳 찾는데 밤 늦게까지 하는 데 있을까?",
+    "src": "study"
+  },
+  {
+    "qid": "q003",
+    "question": "노트북 작업하기 편한 자리 많은 데 아냐?",
+    "src": "study"
+  },
+  {
+    "qid": "q004",
+    "question": "친구, 신림 쪽에 집중 잘 되는 카페 아는 데 있어?",
+    "src": "study"
+  },
+  {
+    "qid": "q005",
+    "question": "자취생들이 혼자 와서 공부 많이 하는 곳 추천 좀.",
+    "src": "study"
+  },
+  {
+    "qid": "q006",
+    "question": "근처에 밤에도 쉴 수 있는 공간 있나?",
+    "src": "study"
+  },
+  {
+    "qid": "q007",
+    "question": "앉을 자리 항상 넉넉한 데 있으면 소개해줘.",
+    "src": "study"
+  },
+  {
+    "qid": "q008",
+    "question": "신림동에 분위기 좋은 데 있으면 알려줘~",
+    "src": "meet"
+  },
+  {
+    "qid": "q009",
+    "question": "친구랑 수다 떨기 괜찮은 곳 어디야?",
+    "src": "meet"
+  },
+  {
+    "qid": "q010",
+    "question": "소개팅인데 너무 시끄럽지 않은 곳 있나?",
+    "src": "meet"
+  },
+  {
+    "qid": "q011",
+    "question": "오랜만에 만날 건데 자리가 편한 데 찾고 있어",
+    "src": "meet"
+  },
+  {
+    "qid": "q012",
+    "question": "진짜 조용히 얘기할 수 있는 데 있을까?",
+    "src": "meet"
+  },
+  {
+    "qid": "q013",
+    "question": "신림역 근처에서 디저트 괜찮은 데 추천해줘",
+    "src": "meet"
+  },
+  {
+    "qid": "q014",
+    "question": "모임하기 좋은 넓은 곳 어디 있어?",
+    "src": "meet"
+  },
+  {
+    "qid": "q015",
+    "question": "뭐 마시면서 편하게 앉아있기 좋은 데 없나?",
+    "src": "meet"
+  },
+  {
+    "qid": "q016",
+    "question": "신림동 근처에 혼자 가서 멍 때리기 좋은 곳 있을까?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q017",
+    "question": "조용하게 책 읽을 수 있는 스터디룸 말고 괜찮은 데 없나?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q018",
+    "question": "직장인들이 일 끝나고 혼자 쉰다 하면 어디로 가냐?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q019",
+    "question": "사색하거나 생각 정리하기 좋았던 곳 있어?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q020",
+    "question": "요즘 신림에서 혼자 앉아서 조용히 커피 마실 만한 장소 찾는데 추천 좀.",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q021",
+    "question": "소음 적고 자리 넉넉한 데 어디가 괜찮을까?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q022",
+    "question": "집근처에 앉아서 혼자만의 시간 보내기 좋은 장소 아는 사람?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q023",
+    "question": "잠깐 머리 식힐 곳 찾고 있는데 신림에서 분위기 좋은 데 있나?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q024",
+    "question": "신림동에서 딸기 케이크 맛있는 데 있어?",
+    "src": "menu"
+  },
+  {
+    "qid": "q025",
+    "question": "여기 근처 리프레시 하기 좋은 차집 어디야?",
+    "src": "menu"
+  },
+  {
+    "qid": "q026",
+    "question": "커피 쓴맛 별로 없이 부드럽게 먹을 수 있는 곳이 있을까?",
+    "src": "menu"
+  },
+  {
+    "qid": "q027",
+    "question": "내일 테이크아웃할 빵집 추천 좀 해줘",
+    "src": "menu"
+  },
+  {
+    "qid": "q028",
+    "question": "요즘 신림동에 찐 맛집 논커피 음료집 있냐?",
+    "src": "menu"
+  },
+  {
+    "qid": "q029",
+    "question": "아침에 가볍게 먹을 수 있는 디저트랑 음료 뭐가 좋아?",
+    "src": "menu"
+  },
+  {
+    "qid": "q030",
+    "question": "카페인 없이 마실 거 좀 찾는데 어디가 괜찮아?",
+    "src": "menu"
+  },
+  {
+    "qid": "q031",
+    "question": "빵이랑 잘 어울리는 핸드드립 커피 마실만한 데?",
+    "src": "menu"
+  },
+  {
+    "qid": "q032",
+    "question": "신림동 근처 인테리어 예쁜 데 있어?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q033",
+    "question": "사진 찍기 좋은 감성 공간 아는데 알려줄래?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q034",
+    "question": "음악 분위기 좋은 곳 찾아보고 있는데 괜찮은 데 있어?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q035",
+    "question": "혼자 앉아있기 편한 곳 있냐?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q036",
+    "question": "신림 쪽에 아늑해서 공부하기 좋은 데 추천 좀!",
+    "src": "vibe"
+  },
+  {
+    "qid": "q037",
+    "question": "여기 근처에서 조용하고 분위기 살리는 데 어딜 가야 할까?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q038",
+    "question": "분위기 내기 좋은 조명이나 소품 있는 데 알아?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q039",
+    "question": "편안하게 쉬면서 음악 듣기 좋은 곳 있으면 알려줘",
+    "src": "vibe"
+  },
+  {
+    "qid": "q040",
+    "question": "신림동에서 자리 편하게 앉을 수 있는 데 어디 있을까?",
+    "src": "practical"
+  },
+  {
+    "qid": "q041",
+    "question": "늦게까지 하는 데 있냐? 공부하기 좋은 곳 말고 그냥 오래 앉아도 눈치 안 보이는 곳.",
+    "src": "practical"
+  },
+  {
+    "qid": "q042",
+    "question": "저렴한 음료랑 간식 같이 파는 곳 알아?",
+    "src": "practical"
+  },
+  {
+    "qid": "q043",
+    "question": "차 끌고 가도 주차할 곳 좀 있는지 궁금한데.",
+    "src": "practical"
+  },
+  {
+    "qid": "q044",
+    "question": "테이크아웃 가능하고 빠르게 주문할 수 있는 데 어디임?",
+    "src": "practical"
+  },
+  {
+    "qid": "q045",
+    "question": "여기 근처에 사람 많이 붐비지 않고 조용한 곳 있나?",
+    "src": "practical"
+  },
+  {
+    "qid": "q046",
+    "question": "이 근처 자리 넓고 콘센트 많은 데 어디가 좋아?",
+    "src": "practical"
+  },
+  {
+    "qid": "q047",
+    "question": "혼자 가서 부담 없는 분위기인 데 찾고 있는데 추천 좀 해줘.",
+    "src": "practical"
+  },
+  {
+    "qid": "q048",
+    "question": "신림동에서 공부하기 좋은데 너무 조용한 곳 말고 적당히 사람도 있어서 딴짓하기도 괜찮은 데 있어?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q049",
+    "question": "근처에 혼자 와서 노트북 좀 켜기 좋은 분위기 조용한 데 있을까?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q050",
+    "question": "밥 먹고 나서 가볍게 앉아있기 좋은 데 없나? 너무 썰렁하지 않은 곳이면 좋겠어.",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q051",
+    "question": "혹시 신림역 근처에 집중은 잘 되는데 답답하거나 너무 시끄럽지 않은 데 추천해줘.",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q052",
+    "question": "왠지 좀 분위기 괜찮고 착한 가격에 음료 맛도 괜찮은 데 어디가 있을까?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q053",
+    "question": "사람들 많아서 활기찬데 공부나 작업하기 괜찮은 곳 있나? 너무 붐비는 건 싫고.",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q054",
+    "question": "책 읽기 좋은데 완전 조용하진 않고 가끔 잡담 소리 나서 편안한 곳 어디야?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q055",
+    "question": "퇴근 후에 담배 피울 수 있는 데 중에 너무 가볍지 않은 분위기 있는 곳이면 좋겠다.",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q056",
+    "question": "신림동 근처에 루프탑 있나? 분위기 괜찮은 데 어딨을까?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q057",
+    "question": "서울대 근처에 반려동물 데려가도 되는 데 있냐?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q058",
+    "question": "요즘 비건 메뉴 파는 데 찾아볼 수 있을까?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q059",
+    "question": "신림동에 뷰 좋은 데 없나? 강 보이는 그런 곳 찾아요.",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q060",
+    "question": "빵 종류 진짜 많은 큰 데 아냐? 신림에서?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q061",
+    "question": "자취하는 사람들 좋아할 만한 조용한 데 없을까?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q062",
+    "question": "근처에 앉아서 일하기 좋은 조명 괜찮은 데 있나?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q063",
+    "question": "서울대 근처 대형 베이커리 어디 괜찮은지 아는 사람?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q064",
+    "question": "콘센트 빵빵한 데 추천 좀 해줄래?",
+    "src": "study"
+  },
+  {
+    "qid": "q065",
+    "question": "여기 근처 조용히 혼자 공부하기 좋은 곳 어디야?",
+    "src": "study"
+  },
+  {
+    "qid": "q066",
+    "question": "시험기간이라 계속 앉아 있을 만한 곳 찾고 있는데 뭔가 있나?",
+    "src": "study"
+  },
+  {
+    "qid": "q067",
+    "question": "노트북 쓰기 좋은 카페 자리 상황 알려줄 수 있어?",
+    "src": "study"
+  },
+  {
+    "qid": "q068",
+    "question": "신림동 쪽에 장시간 있어도 눈치 안 보이는 데 있나?",
+    "src": "study"
+  },
+  {
+    "qid": "q069",
+    "question": "학생들이 많이 가는데 집중 잘 되는 데 뭐가 있어?",
+    "src": "study"
+  },
+  {
+    "qid": "q070",
+    "question": "쉬는 시간 없이 계속 공부 가능할 만한 데 있으면 알려줘!",
+    "src": "study"
+  },
+  {
+    "qid": "q071",
+    "question": "근처에서 조용하게 작업할 곳 찾고 있는데 어디가 낫지?",
+    "src": "study"
+  },
+  {
+    "qid": "q072",
+    "question": "밤 10시 이후에도 편하게 앉아서 작업할 데 있어?",
+    "src": "study"
+  },
+  {
+    "qid": "q073",
+    "question": "자리가 빡세지 않고 오래 앉아도 부담 없는 곳 어디야?",
+    "src": "study"
+  },
+  {
+    "qid": "q074",
+    "question": "콘센트랑 와이파이 빠른 데로 좀 알려줄래?",
+    "src": "study"
+  },
+  {
+    "qid": "q075",
+    "question": "신림동에 괜찮은 데 없나? 조용한 곳 있으면 추천 좀!",
+    "src": "meet"
+  },
+  {
+    "qid": "q076",
+    "question": "요즘 신림에 모임하기 편한 공간 있을까?",
+    "src": "meet"
+  },
+  {
+    "qid": "q077",
+    "question": "커피 맛 괜찮고 앉기 편한 데 원해",
+    "src": "meet"
+  },
+  {
+    "qid": "q078",
+    "question": "맛있는 디저트 같이 파는 곳 어디야?",
+    "src": "meet"
+  },
+  {
+    "qid": "q079",
+    "question": "신림역 근처에 새로 생긴 핫플 있나?",
+    "src": "meet"
+  },
+  {
+    "qid": "q080",
+    "question": "밤에도 이용 가능한 데 있으면 알려줘",
+    "src": "meet"
+  },
+  {
+    "qid": "q081",
+    "question": "서울대생들 자주 가는 곳 있으면 궁금해",
+    "src": "meet"
+  },
+  {
+    "qid": "q082",
+    "question": "친구랑 사진도 좀 찍고 싶은데 예쁜 인테리어 있는 데 있어?",
+    "src": "meet"
+  },
+  {
+    "qid": "q083",
+    "question": "일 좀 하면서 대화하기 좋은 데 없을까?",
+    "src": "meet"
+  },
+  {
+    "qid": "q084",
+    "question": "분위기 너무 시끄럽지 않고 담소 나누기 좋은 곳 뭐 있지?",
+    "src": "meet"
+  },
+  {
+    "qid": "q085",
+    "question": "신림동 조용히 혼자 있기도 괜찮은 데 있어?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q086",
+    "question": "책 읽으면서 멍 때리기 좋은 곳 알려줘",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q087",
+    "question": "혼자 앉아서 생각 좀 정리할만한 카페 같은 데 없나?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q088",
+    "question": "서울대 근처에서 분위기 차분한 데 좀 추천해줄래?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q089",
+    "question": "쉬면서 혼자 힐링할 수 있는 장소 있으면 알려줘",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q090",
+    "question": "사람 적고 조용해서 집중할 수 있는 데 어디 있을까?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q091",
+    "question": "음악 소리 너무 크지 않은 곳 있나?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q092",
+    "question": "밤늦게도 혼자 조용히 시간 보내기 좋은 곳 알아?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q093",
+    "question": "주변에 오래 앉아도 눈치 안 주는 데 있으면 좋겠어",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q094",
+    "question": "책상 넓고 공간 여유 있는 데 있나?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q095",
+    "question": "신림동에서 커피 맛 괜찮고 혼자 편하게 있는 데 추천 좀",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q096",
+    "question": "테이블 간격 넓고 소음 적당한 곳 어디야?",
+    "src": "solo_mood"
+  },
+  {
+    "qid": "q097",
+    "question": "신림동에 달달한 케이크 맛집 있어?",
+    "src": "menu"
+  },
+  {
+    "qid": "q098",
+    "question": "요즘 신림에서 커피 맛 제대로 하는 데 어디야?",
+    "src": "menu"
+  },
+  {
+    "qid": "q099",
+    "question": "디카페인 마실 만한 데 어디 있을까?",
+    "src": "menu"
+  },
+  {
+    "qid": "q100",
+    "question": "빵 진짜 맛있는 카페 좀 알려줘",
+    "src": "menu"
+  },
+  {
+    "qid": "q101",
+    "question": "신림 근처에서 차 마시기 좋은 조용한 곳 있을까?",
+    "src": "menu"
+  },
+  {
+    "qid": "q102",
+    "question": "아메리카노랑 잘 어울리는 디저트 뭐 먹지?",
+    "src": "menu"
+  },
+  {
+    "qid": "q103",
+    "question": "신림동에서 밤에도 가기 좋은 음료집 추천해줘",
+    "src": "menu"
+  },
+  {
+    "qid": "q104",
+    "question": "서울대 근처에 라떼 맛있게 하는 곳 있을까?",
+    "src": "menu"
+  },
+  {
+    "qid": "q105",
+    "question": "달콤한 음료 마시고 싶은데 어디로 가야 하나요?",
+    "src": "menu"
+  },
+  {
+    "qid": "q106",
+    "question": "신림에 스콘이 맛있는 집 있나?",
+    "src": "menu"
+  },
+  {
+    "qid": "q107",
+    "question": "자취생이 공부하기 딱 좋은 차 마실 곳 있을까?",
+    "src": "menu"
+  },
+  {
+    "qid": "q108",
+    "question": "커피 말고 다른 음료 맛집 좀 알려줘",
+    "src": "menu"
+  },
+  {
+    "qid": "q109",
+    "question": "신림동 근처 분위기 좋은 데 중에서 인테리어 감성 끝내주는 데 있을까?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q110",
+    "question": "요즘 신림에서 사진 찍기 딱 좋은 곳이나 추천 좀 해줘봐",
+    "src": "vibe"
+  },
+  {
+    "qid": "q111",
+    "question": "신림 안에서 조용하고 아늑한 데 어디 있을까?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q112",
+    "question": "서울대 근처인데 음악 감성 좋은 곳 찾아볼 수 있어?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q113",
+    "question": "스터디보다 그냥 편히 앉아서 음악 듣고 싶을 때 갈만한 곳 아냐?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q114",
+    "question": "신림 쪽에 인테리어 예쁘고 사진 잘 나오는 곳 좀 알려줘",
+    "src": "vibe"
+  },
+  {
+    "qid": "q115",
+    "question": "조명 예쁘고 감성적인 공간 찾고 있는데 신림 쪽에 있을까?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q116",
+    "question": "혼자 가서 음료도 마시고 가만히 있을 만한 그런 데 어디 없을까?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q117",
+    "question": "거기 분위기 괜찮고 인스타 감성 뿜뿜하는 곳 있으면 알려줘",
+    "src": "vibe"
+  },
+  {
+    "qid": "q118",
+    "question": "신림 근처에서 좋아하는 노래 틀어주는 그런 데 아는 사람?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q119",
+    "question": "편하게 앉아서 노트북 쓸 수 있는데 분위기도 좋은 데 찾고 있는데",
+    "src": "vibe"
+  },
+  {
+    "qid": "q120",
+    "question": "신림동 안에서 친구들이랑 사진도 많이 찍고 뭔가 느낌 있는 데 없을까?",
+    "src": "vibe"
+  },
+  {
+    "qid": "q121",
+    "question": "가성비 좋은 커피집 어디 없을까?",
+    "src": "practical"
+  },
+  {
+    "qid": "q122",
+    "question": "저녁 늦게도 문 여는 곳 있나?",
+    "src": "practical"
+  },
+  {
+    "qid": "q123",
+    "question": "차 가지고 가도 주차 편한 데가 있으면 알려줘",
+    "src": "practical"
+  },
+  {
+    "qid": "q124",
+    "question": "공부하기 좋은 조용한 데 추천 좀",
+    "src": "practical"
+  },
+  {
+    "qid": "q125",
+    "question": "학생 할인해주는 곳 있어?",
+    "src": "practical"
+  },
+  {
+    "qid": "q126",
+    "question": "요즘 신림동에 인기 많은 커피숍 있나?",
+    "src": "practical"
+  },
+  {
+    "qid": "q127",
+    "question": "좌석이 너무 꽉 찬 곳 말고 좀 널널한 데 없을까?",
+    "src": "practical"
+  },
+  {
+    "qid": "q128",
+    "question": "간단하게 마실 수 있으면서 가격 부담 적은 데 어딜까?",
+    "src": "practical"
+  },
+  {
+    "qid": "q129",
+    "question": "일찍 문 닫는 곳 말고, 오전부터 늦게까지 열려 있는 곳 있냐?",
+    "src": "practical"
+  },
+  {
+    "qid": "q130",
+    "question": "포장 주문하기 편리한 곳 어디가 좋아?",
+    "src": "practical"
+  },
+  {
+    "qid": "q131",
+    "question": "서울대 근처에 자리 넓은 조용한 데 아는데?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q132",
+    "question": "사람 적당히 오가면서 집중하기 괜찮은 곳 뭐 없나?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q133",
+    "question": "시끄럽진 않은데 너무 썰렁하지 않은 분위기 원해",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q134",
+    "question": "자취생도 편하게 와서 앉아있기 좋은 곳 찾아",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q135",
+    "question": "노트북 작업하기 좋으면서 말소리는 좀 들어도 될 데 없어?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q136",
+    "question": "친구 말고 혼자 와도 부담 없는 공간 있냐?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q137",
+    "question": "시험기간인데 너무 북적이지 않으면서 카페인도 잘 되는 곳 뭐 있을까?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q138",
+    "question": "한적한데 너무 조용해서 무서운 느낌 안 드는 데 어디야?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q139",
+    "question": "커피 맛 괜찮으면서 공부도 잘 될 만한 데 추천 좀",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q140",
+    "question": "사람도 좀 있어서 외롭지 않은데 집중도 잘 돼?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q141",
+    "question": "배달 음식 시켜먹어도 문제 없는 자리 많은 곳 어딘지 알아?",
+    "src": "tradeoff"
+  },
+  {
+    "qid": "q142",
+    "question": "신림동 근처에 야외 테라스 있는 데 있나?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q143",
+    "question": "한강 보면서 커피 마실 수 있는 데 알아?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q144",
+    "question": "여기 24시간 하는 데 있으면 좋겠다",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q145",
+    "question": "애완동물 데리고 갈 만한 곳 있어?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q146",
+    "question": "여기서 비건 디저트 파는 데 없으려나?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q147",
+    "question": "인테리어 감성 좋은 루프탑 장소 아냐?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q148",
+    "question": "빵집 규모 큰 데 신림에 있는지 궁금해",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q149",
+    "question": "신림 쪽에 분위기 독특한 커피집 어디야?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q150",
+    "question": "회식하기 좋은 깊은 밤까지 열려있는 카페 추천해줘",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q151",
+    "question": "신림에서 베지테리언 메뉴 먹는 곳 있나?",
+    "src": "maybe_absent"
+  },
+  {
+    "qid": "q152",
+    "question": "밖에서 한강 뷰 보면서 쉬고 싶은데 가능해?",
+    "src": "maybe_absent"
+  }
+]
