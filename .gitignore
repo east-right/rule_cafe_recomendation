@@ -42,3 +42,13 @@ keyword_selection/*.gguf
 
 # 개발 로그 / 학습 메모 (튜터 세션용, 로컬 전용)
 docs/
+
+# 임베딩 캐시 (재생성 가능)
+*.npy
+
+# eval_data 배치 실행 산출물 (재생성 가능)
+eval_data/*_input.jsonl
+eval_data/*_output.jsonl
+eval_data/*_batch_id.txt
+eval_data/*_errors.jsonl
+eval_data/judge_batch_ids.json
