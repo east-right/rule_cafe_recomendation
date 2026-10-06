@@ -44,19 +44,12 @@
 3.3 백엔드 엔지니어  
 
     3.3.1 fastapi+python을 활용한 백엔드 구축      
-    3.3.2 파인튜닝 모델 vLLM 기반 서빙 인프라 구축     
-    3.3.3 Redis 세션별 채팅 캐싱  
-    3.3.4 Mem0를 활용한 유저 메모리 캐싱  
-    3.3.5 langfuze를 활용한 LLMops  
-    3.3.6 MVP 데모 화면 구축  
-    3.3.7 기능별 레포지토리 정의  
----
-## 4. WBS																													
-<img width="1450" height="463" alt="image" src="https://github.com/user-attachments/assets/729b771a-2159-4cff-ab3f-8d48c3092b5f" />
-
+    3.3.2 파인튜닝 모델 vLLM 기반 서빙 인프라 구축
+    3.3.3 docker의 docker compose를 활용한 패키지화
+    3.3.3 기능별 레포지토리 정의  
 ---
 
-## 5. 실행 방법 (Quick Start — CPU)
+## 4. 실행 방법 (Quick Start — CPU)
 
 > 클론 후 로컬에서 추천 파이프라인을 띄우는 최소 절차. 3개가 떠야 한다:
 > **OpenSearch(:9200)** · **모델 추론 서버(:8001)** · **앱 서버(:8000)**
