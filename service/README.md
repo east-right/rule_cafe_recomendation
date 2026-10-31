@@ -22,7 +22,7 @@ uv run python -m service.main "조용하고 넓은 카페 추천해줘"
 ## 파이프라인 흐름 (`graph.py`)
 
 ```
-question_valid  (koelectra 분류 + 한국어 게이트)
+question_valid  (OpenAI gpt-4.1-mini 분류 + 한국어 게이트)
   ├ non-menu ─────────────▶ rule_select
   ├ menu-only ────────────▶ menu_extract ──▶ END (맛집 2곳 바로 답변)
   ├ menu-complex ─────────▶ [menu_extract ∥ rule_select] (병렬 join)
@@ -67,7 +67,7 @@ impasse_resolve  (LLM이 남은 후보 가를 tiebreak 키워드 추가, OS 갱�
 
 | 파일 | 역할 |
 |---|---|
-| `question_valid.py` | koelectra 분류(non-menu/menu-only/menu-complex/invalid) + 한국어 비율 게이트 |
+| `question_valid.py` | OpenAI gpt-4.1-mini 분류(non-menu/menu-only/menu-complex/invalid) + 한국어 비율 게이트. *koelectra 파인튜닝본을 서빙에서 대체 — `question_classifier/classify.py`* |
 | `menu_extract.py` | 질문에서 메뉴 추출(LLM). menu-only=맛집 상위 2곳 / menu-complex=해당 메뉴 매장 전부 |
 | `rule_select.py` | BGE-M3 임베딩(모델서버) → OpenSearch KNN top-10 → sLLM 룰 선택 + 키워드 조회 |
 | `rule_fallback.py` | 티어1. 후보 중 근접 룰 1~3개, 2순위 operator를 tiebreak로 흡수 |
