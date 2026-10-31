@@ -81,15 +81,21 @@ def load_rule_keywords() -> dict[str, dict]:
     }
 
 
-def load_cafe_items() -> dict[str, list[str]]:
-    """soar_recommend._load_cafe_items 재현: 매장별 키워드 전부(긍/부정 무관) 평탄 리스트."""
+def load_cafe_items() -> dict[str, dict[str, set[str]]]:
+    """Match service: keep positive/negative keywords in separate sets."""
     conn = sqlite3.connect(str(CAFE_DB))
     conn.row_factory = sqlite3.Row
-    rows = conn.execute("SELECT cafe_name, keyword FROM cafe_keywords").fetchall()
-    conn.close()
-    items: dict[str, list[str]] = {}
-    for r in rows:
-        items.setdefault(r["cafe_name"], []).append(r["keyword"])
+    try:
+        rows = conn.execute(
+            "SELECT cafe_name, keyword, sentiment FROM cafe_keywords"
+        ).fetchall()
+    finally:
+        conn.close()
+    items: dict[str, dict[str, set[str]]] = {}
+    for row in rows:
+        sentiments = items.setdefault(row["cafe_name"], {"긍정": set(), "부정": set()})
+        if row["sentiment"] in sentiments:
+            sentiments[row["sentiment"]].add(row["keyword"])
     return items
 
 
@@ -154,8 +160,8 @@ def resolve_title(raw: str, kw_map: dict, candidates: list[dict]) -> str | None:
 
 # ── [3] 룰기반 추천 (soar 트레이스 재현 + top-3 랭킹) ──────────
 
-def recommend(kw: dict, cafe_items: dict[str, list[str]]) -> tuple[list[str], list[dict]]:
-    """operator 후보 → negative 감점 → tiebreak 가점 순으로 랭킹, top-3 반환.
+def recommend(kw: dict, cafe_items: dict[str, dict[str, set[str]]]) -> tuple[list[str], list[dict]]:
+    """Positive operator 후보 → observed-negative 감점 → positive tiebreak 가점, top-3.
 
     soar_recommend 의 좁혀가기(operator→negative→tiebreak)와 순서가 일치:
       - operator 키워드 매칭 = 후보 자격(전제)
@@ -168,13 +174,14 @@ def recommend(kw: dict, cafe_items: dict[str, list[str]]) -> tuple[list[str], li
     neg = set(kw["negative"])
 
     scored = []
-    for cafe, kws in cafe_items.items():
-        ks = set(kws)
-        op_hit = len(op & ks)
+    for cafe, keyword_sets in cafe_items.items():
+        positive = keyword_sets["긍정"]
+        negative = keyword_sets["부정"]
+        op_hit = len(op & positive)
         if op_hit == 0:
             continue  # operator 매칭 없으면 후보 아님
-        tb_hit = len(tb & ks)
-        neg_hit = len(neg & ks)
+        tb_hit = len(tb & positive)
+        neg_hit = len(neg & negative)
         score = tb_hit - neg_hit
         scored.append((score, op_hit, tb_hit, neg_hit, cafe))
 

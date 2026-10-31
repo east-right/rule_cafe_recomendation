@@ -14,25 +14,29 @@ DB_PATH = ROOT / "data" / "cafe.db"
 
 # ── SQLite 로드 ────────────────────────────────────────────────
 
-def _load_cafe_items(menu_cafe_names: list[str] | None = None) -> dict[str, list[str]]:
-    """매장별 키워드 로드 (긍정 operator/tiebreak 매칭 + 부정 narrowing 모두 포함)."""
+def _load_cafe_items(menu_cafe_names: list[str] | None = None) -> dict[str, dict[str, set[str]]]:
+    """Keep observed positive and negative keywords separate per cafe."""
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
+    try:
+        if menu_cafe_names:
+            placeholders = ",".join("?" * len(menu_cafe_names))
+            rows = conn.execute(
+                f"SELECT cafe_name, keyword, sentiment FROM cafe_keywords WHERE cafe_name IN ({placeholders})",
+                menu_cafe_names,
+            ).fetchall()
+        else:
+            rows = conn.execute(
+                "SELECT cafe_name, keyword, sentiment FROM cafe_keywords"
+            ).fetchall()
+    finally:
+        conn.close()
 
-    if menu_cafe_names:
-        placeholders = ",".join("?" * len(menu_cafe_names))
-        rows = conn.execute(
-            f"SELECT cafe_name, keyword FROM cafe_keywords WHERE cafe_name IN ({placeholders})",
-            menu_cafe_names,
-        ).fetchall()
-    else:
-        rows = conn.execute("SELECT cafe_name, keyword FROM cafe_keywords").fetchall()
-
-    conn.close()
-
-    result: dict[str, list[str]] = {}
+    result: dict[str, dict[str, set[str]]] = {}
     for row in rows:
-        result.setdefault(row["cafe_name"], []).append(row["keyword"])
+        sentiments = result.setdefault(row["cafe_name"], {"긍정": set(), "부정": set()})
+        if row["sentiment"] in sentiments:
+            sentiments[row["sentiment"]].add(row["keyword"])
     return result
 
 
@@ -45,7 +49,7 @@ def _trace_tiebreak(
     operator_keywords: list[str],
     tiebreak_keywords: list[str],
     negative_keywords: list[str],
-    cafe_items: dict[str, list[str]],
+    cafe_items: dict[str, dict[str, set[str]]],
     menu_mode: bool = False,
 ) -> list[dict]:
     if menu_mode:
@@ -53,7 +57,7 @@ def _trace_tiebreak(
         candidates = set(cafe_items.keys())
     else:
         op_set = set(operator_keywords)
-        candidates = {c for c, kws in cafe_items.items() if op_set & set(kws)}
+        candidates = {c for c, kws in cafe_items.items() if op_set & kws["긍정"]}
 
     traces = [{"step": "operator", "keyword": None, "remaining": sorted(candidates)}]
     depth = 0
@@ -61,7 +65,7 @@ def _trace_tiebreak(
     # negative 먼저: 부정 없는 매장 우선
     for neg_kw in negative_keywords:
         depth += 1
-        clean = {c for c in candidates if neg_kw not in set(cafe_items.get(c, []))}
+        clean = {c for c in candidates if neg_kw not in cafe_items[c]["부정"]}
         if 0 < len(clean) < len(candidates):
             candidates = clean
             traces.append({"step": f"S{depth}_neg_narrowed", "keyword": neg_kw, "remaining": sorted(candidates)})
@@ -73,7 +77,7 @@ def _trace_tiebreak(
     # positive: 긍정 세부로 우열
     for tb_kw in tiebreak_keywords:
         depth += 1
-        filtered = {c for c in candidates if tb_kw in set(cafe_items.get(c, []))}
+        filtered = {c for c in candidates if tb_kw in cafe_items[c]["긍정"]}
         if len(filtered) == 1:
             candidates = filtered
             traces.append({"step": f"S{depth}_resolved", "keyword": tb_kw, "remaining": sorted(candidates)})
