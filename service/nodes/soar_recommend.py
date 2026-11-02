@@ -115,7 +115,7 @@ def run(state: AgentState) -> AgentState:
         result["cafe"] = remaining[0]
     elif len(remaining) >= 2:
         result["type"] = "impasse"
-        result["candidates"] = remaining[:2]
+        result["candidates"] = remaining  # B3: 동점 후보 전체 전달(기존 앞 2곳만 → 전부)
 
     get_client().update_current_span(
         input={
