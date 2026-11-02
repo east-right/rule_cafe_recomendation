@@ -1,0 +1,300 @@
+{
+  "task": "B3",
+  "commit": "d22b7dcd141098f837abc96974b5bdb81ca3939d",
+  "baseline": "results/M0/baseline.json",
+  "rerun": "results/B3/rerun.json",
+  "n_rerun": 11,
+  "method": "impasse 발동 11문항만 B3 코드로 재실행 → M0와 Rule·Trace·최종매장 비교. 나머지 39문항은 B3 코드범위상 불변(impasse 미발동).",
+  "summary": {
+    "rule_changed": 0,
+    "cafe_changed": 6
+  },
+  "detail": [
+    {
+      "qid": "q008",
+      "question": "신림동에 분위기 좋은 데 있으면 알려줘~",
+      "rule": {
+        "M0": "데이트",
+        "B3": "데이트",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "저스트 로맨틱",
+        "B3": "저스트 로맨틱",
+        "changed": false
+      },
+      "impasse_iter": {
+        "M0": 1,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 17,
+        "B3": 17
+      }
+    },
+    {
+      "qid": "q014",
+      "question": "모임하기 좋은 넓은 곳 어디 있어?",
+      "rule": {
+        "M0": "모임",
+        "B3": "모임",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "카페라움(CAFE RAUM)",
+        "B3": "코아르(coar)",
+        "changed": true
+      },
+      "impasse_iter": {
+        "M0": 1,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 10,
+        "B3": 10
+      }
+    },
+    {
+      "qid": "q018",
+      "question": "직장인들이 일 끝나고 혼자 쉰다 하면 어디로 가냐?",
+      "rule": {
+        "M0": "직장인",
+        "B3": "직장인",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "attendo(아텐도)",
+        "B3": "attendo(아텐도)",
+        "changed": false
+      },
+      "impasse_iter": {
+        "M0": 1,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 10,
+        "B3": 10
+      }
+    },
+    {
+      "qid": "q043",
+      "question": "차 끌고 가도 주차할 곳 좀 있는지 궁금한데.",
+      "rule": {
+        "M0": "주차",
+        "B3": "주차",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "궁전다방",
+        "B3": "이디야",
+        "changed": true
+      },
+      "impasse_iter": {
+        "M0": 1,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 6,
+        "B3": 6
+      }
+    },
+    {
+      "qid": "q063",
+      "question": "서울대 근처 대형 베이커리 어디 괜찮은지 아는 사람?",
+      "rule": {
+        "M0": "학생+베이커리",
+        "B3": "학생+베이커리",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "플레이온 보드게임카페",
+        "B3": "플레이온 보드게임카페",
+        "changed": false
+      },
+      "impasse_iter": {
+        "M0": 1,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 9,
+        "B3": 9
+      }
+    },
+    {
+      "qid": "q074",
+      "question": "콘센트랑 와이파이 빠른 데로 좀 알려줄래?",
+      "rule": {
+        "M0": "콘센트",
+        "B3": "콘센트",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "impasse",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": null,
+        "B3": "파스쿠찌 서울대관정도서관점",
+        "changed": true
+      },
+      "impasse_iter": {
+        "M0": 5,
+        "B3": 2
+      },
+      "trace_steps": {
+        "M0": 7,
+        "B3": 4
+      }
+    },
+    {
+      "qid": "q086",
+      "question": "책 읽으면서 멍 때리기 좋은 곳 알려줘",
+      "rule": {
+        "M0": "독서",
+        "B3": "독서",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "301h(301에이치)",
+        "B3": "스타벅스 신림점",
+        "changed": true
+      },
+      "impasse_iter": {
+        "M0": 1,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 10,
+        "B3": 10
+      }
+    },
+    {
+      "qid": "q094",
+      "question": "책상 넓고 공간 여유 있는 데 있나?",
+      "rule": {
+        "M0": "넉넉한테이블",
+        "B3": "넉넉한테이블",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+        "B3": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+        "changed": false
+      },
+      "impasse_iter": {
+        "M0": 2,
+        "B3": 2
+      },
+      "trace_steps": {
+        "M0": 15,
+        "B3": 15
+      }
+    },
+    {
+      "qid": "q104",
+      "question": "서울대 근처에 라떼 맛있게 하는 곳 있을까?",
+      "rule": {
+        "M0": "none",
+        "B3": "none",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "커피니쉬(COFFEE NISHE)",
+        "B3": "카페 아래로 ARERO",
+        "changed": true
+      },
+      "impasse_iter": {
+        "M0": 2,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 3,
+        "B3": 2
+      }
+    },
+    {
+      "qid": "q133",
+      "question": "시끄럽진 않은데 너무 썰렁하지 않은 분위기 원해",
+      "rule": {
+        "M0": "편안함",
+        "B3": "편안함",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "마티스커피",
+        "B3": "마티스커피",
+        "changed": false
+      },
+      "impasse_iter": {
+        "M0": 1,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 10,
+        "B3": 10
+      }
+    },
+    {
+      "qid": "q140",
+      "question": "사람도 좀 있어서 외롭지 않은데 집중도 잘 돼?",
+      "rule": {
+        "M0": "독서",
+        "B3": "독서",
+        "changed": false
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B3": "recommendation"
+      },
+      "cafe": {
+        "M0": "301h(301에이치)",
+        "B3": "파스쿠찌 서울대관정도서관점",
+        "changed": true
+      },
+      "impasse_iter": {
+        "M0": 1,
+        "B3": 1
+      },
+      "trace_steps": {
+        "M0": 10,
+        "B3": 10
+      }
+    }
+  ]
+}

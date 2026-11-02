@@ -1,0 +1,79 @@
+{
+  "task": "B4",
+  "commit": "487a4d7e1adb5493473078a25c14ab87bf94c45e",
+  "baseline": "results/M0/baseline.json",
+  "rerun": "results/B4/rerun.json",
+  "method": "menu-complex 3문항(q052·q104·q139) B4 코드로 재실행 → M0 비교. 비menu-complex 47문항은 B4 라우팅 변경 범위 밖 → 불변. q104 는 impasse 도 발동하여 B3 효과 중첩.",
+  "summary": {
+    "cafe_changed": 2,
+    "n": 3
+  },
+  "detail": [
+    {
+      "qid": "q052",
+      "question": "왠지 좀 분위기 괜찮고 착한 가격에 음료 맛도 괜찮은 데 어디가 있을까?",
+      "question_type": "menu-complex",
+      "rule": {
+        "M0": "none",
+        "B4": "맛집"
+      },
+      "soar_type": {
+        "M0": "no_output",
+        "B4": "recommendation"
+      },
+      "cafe": {
+        "M0": null,
+        "B4": "홍카페 HONG CAFE",
+        "changed": true
+      },
+      "rule_fallback_used": {
+        "M0": false,
+        "B4": true
+      }
+    },
+    {
+      "qid": "q104",
+      "question": "서울대 근처에 라떼 맛있게 하는 곳 있을까?",
+      "question_type": "menu-complex",
+      "rule": {
+        "M0": "none",
+        "B4": "맛집"
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B4": "recommendation"
+      },
+      "cafe": {
+        "M0": "커피니쉬(COFFEE NISHE)",
+        "B4": "미남커피",
+        "changed": true
+      },
+      "rule_fallback_used": {
+        "M0": false,
+        "B4": true
+      }
+    },
+    {
+      "qid": "q139",
+      "question": "커피 맛 괜찮으면서 공부도 잘 될 만한 데 추천 좀",
+      "question_type": "menu-complex",
+      "rule": {
+        "M0": "공부",
+        "B4": "공부"
+      },
+      "soar_type": {
+        "M0": "recommendation",
+        "B4": "recommendation"
+      },
+      "cafe": {
+        "M0": "카페라움(CAFE RAUM)",
+        "B4": "카페라움(CAFE RAUM)",
+        "changed": false
+      },
+      "rule_fallback_used": {
+        "M0": false,
+        "B4": false
+      }
+    }
+  ]
+}

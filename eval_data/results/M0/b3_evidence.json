@@ -1,0 +1,132 @@
+{
+  "bug": "B3",
+  "summary": "impasse_resolve.run() 이 LLM이 고른 tiebreak 키워드를 검증 없이 OpenSearch cafe_rules 룰에 영구 append (threading.Thread→_update_os_tiebreak, painless _APPEND_SCRIPT). 요청 단위가 아니라 전역·영구라 측정 재현성과 룰 정의를 오염시킴.",
+  "mechanism": "service/nodes/impasse_resolve.py: _update_os_tiebreak(rule_name, new_kw) → update_by_query, tiebreak_keywords 배열에 append (중복 아니면).",
+  "observed_pollution_during_dry10": [
+    {
+      "qid": "q014",
+      "question": "모임하기 좋은 넓은 곳 어디 있어?",
+      "rule": "모임",
+      "keyword_written_to_opensearch": [
+        "약속장소"
+      ],
+      "impasse_iterations": 1
+    },
+    {
+      "qid": "q018",
+      "question": "직장인들이 일 끝나고 혼자 쉰다 하면 어디로 가냐?",
+      "rule": "직장인",
+      "keyword_written_to_opensearch": [
+        "시간보내기"
+      ],
+      "impasse_iterations": 1
+    }
+  ],
+  "note_observed": "위 2건은 dry-10 중 실제로 OpenSearch에 써졌음(로그 [OS update] updated=1). 이후 keyword_selection/indexing.py→uodate_index.py 재인덱싱으로 원복, index tiebreak == soar_rule_keywords.json(canonical) 검증 완료.",
+  "blocked_during_full_m0": [
+    {
+      "qid": "q008",
+      "rule": "데이트",
+      "would_have_written": [
+        "감성",
+        "청결 상태",
+        "채광",
+        "뷰_좋다",
+        "조명_따뜻하다",
+        "인테리어"
+      ],
+      "impasse_iterations": 1
+    },
+    {
+      "qid": "q014",
+      "rule": "모임",
+      "would_have_written": [
+        "약속장소"
+      ],
+      "impasse_iterations": 1
+    },
+    {
+      "qid": "q018",
+      "rule": "직장인",
+      "would_have_written": [
+        "시간보내기"
+      ],
+      "impasse_iterations": 1
+    },
+    {
+      "qid": "q043",
+      "rule": "주차",
+      "would_have_written": [
+        "공간_조용하다"
+      ],
+      "impasse_iterations": 1
+    },
+    {
+      "qid": "q063",
+      "rule": "학생+베이커리",
+      "would_have_written": [
+        "매장_깔끔하다"
+      ],
+      "impasse_iterations": 1
+    },
+    {
+      "qid": "q074",
+      "rule": "콘센트",
+      "would_have_written": [
+        "와이파이_빠르다",
+        "와이파이_속도",
+        "와이파이_안정성",
+        "좌석_넓다",
+        "와이파이_안정성"
+      ],
+      "impasse_iterations": 5
+    },
+    {
+      "qid": "q086",
+      "rule": "독서",
+      "would_have_written": [
+        "운치"
+      ],
+      "impasse_iterations": 1
+    },
+    {
+      "qid": "q094",
+      "rule": "넉넉한테이블",
+      "would_have_written": [
+        "핫플레이스",
+        "공간_크다",
+        "매장_넓다",
+        "좌석_넓다"
+      ],
+      "impasse_iterations": 2
+    },
+    {
+      "qid": "q104",
+      "rule": "none",
+      "would_have_written": [
+        "커피향_향이 좋다",
+        "가성비_가깝다"
+      ],
+      "impasse_iterations": 2
+    },
+    {
+      "qid": "q133",
+      "rule": "편안함",
+      "would_have_written": [
+        "음악_차분하다"
+      ],
+      "impasse_iterations": 1
+    },
+    {
+      "qid": "q140",
+      "rule": "독서",
+      "would_have_written": [
+        "좌석_공부하기 좋다"
+      ],
+      "impasse_iterations": 1
+    }
+  ],
+  "note_blocked": "full M0 에서는 하네스가 _update_os_tiebreak 를 no-op 으로 패치 → 아래 impasse 문항들의 영구쓰기가 차단됨. 미수정 프로덕션이었다면 이만큼(문항당 1건씩, 반복 포함)의 무검증 영구쓰기가 발생했을 것.",
+  "impasse_count_full_m0": 11,
+  "service_code_unmodified": true
+}

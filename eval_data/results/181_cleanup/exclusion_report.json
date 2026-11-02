@@ -1,0 +1,394 @@
+{
+  "commit": "48c67e1e64e53e5dae00005f05edfad448061c0a",
+  "keep_181": 181,
+  "exclude_24": 24,
+  "market_item_distinct": 181,
+  "reason_counts": {
+    "미수집": 10,
+    "클러스터링 누락": 11,
+    "중복": 3
+  },
+  "qrels_rows": {
+    "before": 10250,
+    "after_181": 9050
+  },
+  "cafes_json": {
+    "before": 205,
+    "after_181": 181
+  },
+  "metrics_frozen_top3": {
+    "qrels_full_205": {
+      "hit1": 0.6,
+      "hit3": 0.7,
+      "ndcg3": 0.4542,
+      "mrr": 0.6467,
+      "n": 50
+    },
+    "qrels_181": {
+      "hit1": 0.6,
+      "hit3": 0.7,
+      "ndcg3": 0.4542,
+      "mrr": 0.6467,
+      "n": 50
+    },
+    "delta": {
+      "hit1": 0.0,
+      "hit3": 0.0,
+      "ndcg3": 0.0,
+      "mrr": 0.0
+    }
+  },
+  "excluded_relevant_pairs_gradeGE2": 108,
+  "excluded_relevant_detail": [
+    {
+      "qid": "q000",
+      "cafe": "에놀라 톤",
+      "grade": 2
+    },
+    {
+      "qid": "q008",
+      "cafe": "에놀라 톤",
+      "grade": 3
+    },
+    {
+      "qid": "q008",
+      "cafe": "컴포즈커피",
+      "grade": 2
+    },
+    {
+      "qid": "q012",
+      "cafe": "에놀라 톤",
+      "grade": 2
+    },
+    {
+      "qid": "q014",
+      "cafe": "카페느티나무 음대점",
+      "grade": 2
+    },
+    {
+      "qid": "q018",
+      "cafe": "에놀라 톤",
+      "grade": 3
+    },
+    {
+      "qid": "q018",
+      "cafe": "컴포즈커피",
+      "grade": 2
+    },
+    {
+      "qid": "q019",
+      "cafe": "에놀라 톤",
+      "grade": 3
+    },
+    {
+      "qid": "q020",
+      "cafe": "에놀라 톤",
+      "grade": 3
+    },
+    {
+      "qid": "q027",
+      "cafe": "그리니",
+      "grade": 3
+    },
+    {
+      "qid": "q027",
+      "cafe": "노와드코코 베이커리",
+      "grade": 3
+    },
+    {
+      "qid": "q027",
+      "cafe": "로플봉봉",
+      "grade": 3
+    },
+    {
+      "qid": "q027",
+      "cafe": "카페봉봉",
+      "grade": 3
+    },
+    {
+      "qid": "q027",
+      "cafe": "맨날커피",
+      "grade": 2
+    },
+    {
+      "qid": "q027",
+      "cafe": "엄마 커피",
+      "grade": 2
+    },
+    {
+      "qid": "q027",
+      "cafe": "플러스82 관악남부점",
+      "grade": 2
+    },
+    {
+      "qid": "q032",
+      "cafe": "에놀라 톤",
+      "grade": 2
+    },
+    {
+      "qid": "q033",
+      "cafe": "에놀라 톤",
+      "grade": 2
+    },
+    {
+      "qid": "q039",
+      "cafe": "에놀라 톤",
+      "grade": 3
+    },
+    {
+      "qid": "q045",
+      "cafe": "에놀라 톤",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "노와드코코 베이커리",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "로플봉봉",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "백억커피 구로점",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "아마스빈버블티",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "엄마 커피",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "에놀라 톤",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "카페느티나무 동원관점",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "카페느티나무 음대점",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "카페봉봉",
+      "grade": 3
+    },
+    {
+      "qid": "q052",
+      "cafe": "카페스토어",
+      "grade": 3
+    }
+  ],
+  "excluded_detail": [
+    {
+      "name": "김빙수",
+      "place_id": "1212964012",
+      "reviews": 4,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "엄마 커피",
+      "place_id": "1294072724",
+      "reviews": 4,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "음매점 신림점",
+      "place_id": "1613052572",
+      "reviews": 3,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "더벤티 신림점",
+      "place_id": "2075541493",
+      "reviews": 2,
+      "has_ner": false,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "플러스82 관악남부점",
+      "place_id": "1208615576",
+      "reviews": 2,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "매머드커피 익스프레스 구로kt점",
+      "place_id": "2098871957",
+      "reviews": 1,
+      "has_ner": false,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "슈크렘 타로카페",
+      "place_id": "1531326127",
+      "reviews": 1,
+      "has_ner": false,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "스트릿캔 신림점",
+      "place_id": "1729254454",
+      "reviews": 1,
+      "has_ner": false,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "엣홈",
+      "place_id": "102241347",
+      "reviews": 1,
+      "has_ner": false,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "카페뉴욕 신림점",
+      "place_id": "1540298496",
+      "reviews": 1,
+      "has_ner": false,
+      "dup_of_kept": [],
+      "reason": "미수집"
+    },
+    {
+      "name": "노와드코코 베이커리",
+      "place_id": "1890485523",
+      "reviews": 134,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "아마스빈버블티",
+      "place_id": "36476370",
+      "reviews": 104,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "1.5도씨",
+      "place_id": "1962810174",
+      "reviews": 45,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "그리니",
+      "place_id": "1727180045",
+      "reviews": 30,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "카페스토어",
+      "place_id": "647777309",
+      "reviews": 18,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "카페느티나무 음대점",
+      "place_id": "1999335528",
+      "reviews": 13,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "로플봉봉",
+      "place_id": "1416781494",
+      "reviews": 11,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "맨날커피",
+      "place_id": "1533266829",
+      "reviews": 11,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "카페봉봉",
+      "place_id": "1416781494",
+      "reviews": 11,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "커피마마",
+      "place_id": "1254208217",
+      "reviews": 9,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "카페느티나무 동원관점",
+      "place_id": "1144559476",
+      "reviews": 7,
+      "has_ner": true,
+      "dup_of_kept": [],
+      "reason": "클러스터링 누락"
+    },
+    {
+      "name": "컴포즈커피",
+      "place_id": "1643031984",
+      "reviews": 150,
+      "has_ner": true,
+      "dup_of_kept": [
+        "밀크커피"
+      ],
+      "reason": "중복"
+    },
+    {
+      "name": "에놀라 톤",
+      "place_id": "1056333393",
+      "reviews": 82,
+      "has_ner": true,
+      "dup_of_kept": [
+        "커피 브륄레"
+      ],
+      "reason": "중복"
+    },
+    {
+      "name": "백억커피 구로점",
+      "place_id": "1097023072",
+      "reviews": 80,
+      "has_ner": true,
+      "dup_of_kept": [
+        "백억커피"
+      ],
+      "reason": "중복"
+    }
+  ]
+}
