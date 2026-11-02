@@ -1,0 +1,68 @@
+[M1] groups=10 names=181
+  [공부/카공         ] g1_base  rule=공부 cafe=커피니쉬(COFFEE NISHE) | llm=스타벅스 신림점
+  [공부/카공         ] g1_v1    rule=신림 cafe=None | llm=(목록밖:카페 느티나무도서관점)
+  [공부/카공         ] g1_v2*   rule=작업 cafe=커피니쉬(COFFEE NISHE) | llm=Mono Hertz(모노헤르쯔)
+  [공부/카공         ] g1_v3    rule=독서 cafe=301h(301에이치) | llm=카페느티나무도서관점
+  [공부/카공         ] g1_v4*   rule=시간보내기 cafe=플랙 | llm=(목록밖:카페 느티나무도서관점)
+  [모임/단체         ] g2_base  rule=모임 cafe=코아르(coar) | llm=Label Board Cafe(레이블 보드게임 카페)
+  [모임/단체         ] g2_v1    rule=모임 cafe=플레이온 보드게임카페 | llm=Label Board Cafe(레이블 보드게임 카페)
+  [모임/단체         ] g2_v2*   rule=넉넉한테이블 cafe=투썸플레이스 신림로점 | llm=스타벅스 신림점
+  [모임/단체         ] g2_v3    rule=모임 cafe=코아르(coar) | llm=스타벅스 신림점
+  [모임/단체         ] g2_v4    rule=넉넉한테이블 cafe=UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스) | llm=Label Board Cafe(레이블 보드게임 카페)
+  [혼자/조용         ] g3_base  rule=혼자 cafe=플랙 | llm=Mono Hertz(모노헤르쯔)
+  [혼자/조용         ] g3_v1    rule=조용함 cafe=데니스커피 남강점 | llm=Mono Hertz(모노헤르쯔)
+  [혼자/조용         ] g3_v2*   rule=혼자 cafe=플랙 | llm=Mono Hertz(모노헤르쯔)
+  [혼자/조용         ] g3_v3    rule=혼자 cafe=플랙 | llm=Mono Hertz(모노헤르쯔)
+  [혼자/조용         ] g3_v4    rule=혼자 cafe=플랙 | llm=Mono Hertz(모노헤르쯔)
+  [빵/베이커리 맛집     ] g4_base  rule=None cafe=None | llm=페이브 베이커리 서울대점
+  [빵/베이커리 맛집     ] g4_v1    rule=None cafe=None | llm=페이브 베이커리 서울대점
+  [빵/베이커리 맛집     ] g4_v2    rule=None cafe=None | llm=쉼표브레드
+  [빵/베이커리 맛집     ] g4_v3*   rule=None cafe=None | llm=굽다방
+  [빵/베이커리 맛집     ] g4_v4*   rule=None cafe=None | llm=크로플집
+  [인테리어/감성       ] g5_base  rule=인테리어 cafe=UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스) | llm=POPO archive(포포 아카이브)
+  [인테리어/감성       ] g5_v1    rule=감성 cafe=진서의 정원 | llm=POPO archive(포포 아카이브)
+  [인테리어/감성       ] g5_v2*   rule=사진 cafe=썰카페 | llm=POPO archive(포포 아카이브)
+  [인테리어/감성       ] g5_v3    rule=인테리어 cafe=UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스) | llm=POPO archive(포포 아카이브)
+  [인테리어/감성       ] g5_v4*   rule=눈맛집 cafe=읍천리382 신림점 | llm=POPO archive(포포 아카이브)
+  [주차            ] g6_base  rule=주차 cafe=이디야 | llm=THE ROASTER 59(더 로스터 59)
+  [주차            ] g6_v1    rule=주차 cafe=블루포트 서울대점 | llm=벨라벨로카페(Bella-Bello cafe)
+  [주차            ] g6_v2*   rule=주차 cafe=미남커피 | llm=THE ROASTER 59(더 로스터 59)
+  [주차            ] g6_v3    rule=주차 cafe=블루포트 서울대점 | llm=THE ROASTER 59(더 로스터 59)
+  [주차            ] g6_v4    rule=주차 cafe=이디야 | llm=THE ROASTER 59(더 로스터 59)
+  [복합(커피맛+공부)    ] g7_base  rule=공부 cafe=카페라움(CAFE RAUM) | llm=UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)
+  [복합(커피맛+공부)    ] g7_v1    rule=공부 cafe=커피니쉬(COFFEE NISHE) | llm=(목록밖:카페 느티나무도서관점)
+  [복합(커피맛+공부)    ] g7_v2    rule=맛집 cafe=미남커피 | llm=UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)
+  [복합(커피맛+공부)    ] g7_v3    rule=공부 cafe=카페라움(CAFE RAUM) | llm=UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)
+  [복합(커피맛+공부)    ] g7_v4*   rule=작업 cafe=원브릿지 | llm=UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)
+  [뷰/전망          ] g8_base  rule=뷰맛집 cafe=301h(301에이치) | llm=카페 리버스(Cafe Reverse)
+  [뷰/전망          ] g8_v1    rule=뷰맛집 cafe=301h(301에이치) | llm=카페 오름
+  [뷰/전망          ] g8_v2*   rule=창가자리 cafe=카페 플롬 | llm=카페 오름
+  [뷰/전망          ] g8_v3    rule=뷰맛집 cafe=301h(301에이치) | llm=카페 오름
+  [뷰/전망          ] g8_v4    rule=뷰맛집 cafe=301h(301에이치) | llm=카페 오름
+  [콘센트/와이파이      ] g9_base  rule=콘센트 cafe=파스쿠찌 서울대관정도서관점 | llm=스타벅스 신림점
+  [콘센트/와이파이      ] g9_v1    rule=콘센트 cafe=파스쿠찌 서울대관정도서관점 | llm=스타벅스 신림점
+  [콘센트/와이파이      ] g9_v2*   rule=작업 cafe=커피니쉬(COFFEE NISHE) | llm=스타벅스 신림점
+  [콘센트/와이파이      ] g9_v3    rule=콘센트 cafe=파스쿠찌 서울대관정도서관점 | llm=스타벅스 신림점
+  [콘센트/와이파이      ] g9_v4    rule=콘센트 cafe=파스쿠찌 서울대관정도서관점 | llm=스타벅스 신림점
+  [음악/휴식         ] g10_base rule=휴식 cafe=스타벅스 신림점 | llm=Mono Hertz(모노헤르쯔)
+  [음악/휴식         ] g10_v1   rule=CCM카페 cafe=UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스) | llm=Mono Hertz(모노헤르쯔)
+  [음악/휴식         ] g10_v2*  rule=휴식 cafe=스타벅스 신림점 | llm=Mono Hertz(모노헤르쯔)
+  [음악/휴식         ] g10_v3   rule=편안함 cafe=마티스커피 | llm=Mono Hertz(모노헤르쯔)
+  [음악/휴식         ] g10_v4   rule=여유 cafe=301h(301에이치) | llm=Mono Hertz(모노헤르쯔)
+  [repeat 공부/카공         ] rule_same=True cafe_same=True
+  [repeat 모임/단체         ] rule_same=True cafe_same=True
+  [repeat 혼자/조용         ] rule_same=True cafe_same=True
+  [repeat 빵/베이커리 맛집     ] rule_same=True cafe_same=True
+  [repeat 인테리어/감성       ] rule_same=True cafe_same=True
+  [repeat 주차            ] rule_same=True cafe_same=True
+  [repeat 복합(커피맛+공부)    ] rule_same=True cafe_same=True
+  [repeat 뷰/전망          ] rule_same=True cafe_same=True
+  [repeat 콘센트/와이파이      ] rule_same=True cafe_same=True
+  [repeat 음악/휴식         ] rule_same=True cafe_same=True
+
+==== M1 요약 ====
+  규칙기반 같은의도 Rule 일치율: 0.660
+  규칙기반 같은의도 매장 일치율: 0.580
+  LLM직접  같은의도 매장 일치율: 0.780
+  반복(3회) Rule 완전일치율: 1.000  매장: 1.000
+  저장: C:\VSCode\cafe_recomendation\eval_data\results\M1\consistency.json (commit b6b51e3)

@@ -1,0 +1,636 @@
+{
+  "task": "M6",
+  "commit": "b6b51e34d8d4fcd8454e8db63f582e0024555f4b",
+  "compare": "M0(pre-B2) vs M4(post-B2)",
+  "note": "근거 충실도=프롬프트에 투입된 근거 중 추천매장 긍정관측에 실제 있는 비율. 부정혼입=부정 키워드가 근거로 투입된 수. 답변텍스트는 부정어 root 등장(프록시).",
+  "M0_pre_B2": {
+    "n_reco": 37,
+    "fed_total": 295,
+    "satisfied": 111,
+    "faithfulness": 0.3763,
+    "neg_in_fed_total": 74,
+    "questions_with_neg_mix": 33,
+    "answers_with_neg_root": 32
+  },
+  "M4_post_B2": {
+    "n_reco": 39,
+    "fed_total": 123,
+    "satisfied": 123,
+    "faithfulness": 1.0,
+    "neg_in_fed_total": 2,
+    "questions_with_neg_mix": 2,
+    "answers_with_neg_root": 32
+  },
+  "detail_M0": [
+    {
+      "qid": "q000",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 10,
+      "satisfied": 3,
+      "neg_in_fed": 3,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q008",
+      "cafe": "저스트 로맨틱",
+      "fed": 11,
+      "satisfied": 5,
+      "neg_in_fed": 4,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q012",
+      "cafe": "진서의 정원",
+      "fed": 9,
+      "satisfied": 2,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q014",
+      "cafe": "카페라움(CAFE RAUM)",
+      "fed": 10,
+      "satisfied": 5,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q018",
+      "cafe": "attendo(아텐도)",
+      "fed": 9,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q019",
+      "cafe": "301h(301에이치)",
+      "fed": 8,
+      "satisfied": 3,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q020",
+      "cafe": "플랙",
+      "fed": 7,
+      "satisfied": 2,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q032",
+      "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+      "fed": 7,
+      "satisfied": 3,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q033",
+      "cafe": "진서의 정원",
+      "fed": 8,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q039",
+      "cafe": "스타벅스 신림점",
+      "fed": 7,
+      "satisfied": 2,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q043",
+      "cafe": "궁전다방",
+      "fed": 5,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q045",
+      "cafe": "데니스커피 남강점",
+      "fed": 7,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q054",
+      "cafe": "데니스커피 남강점",
+      "fed": 7,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q060",
+      "cafe": "엔제리너스 구로디지털역점",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q062",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 10,
+      "satisfied": 4,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q063",
+      "cafe": "플레이온 보드게임카페",
+      "fed": 5,
+      "satisfied": 2,
+      "neg_in_fed": 2,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q065",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 10,
+      "satisfied": 3,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q067",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 10,
+      "satisfied": 4,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q070",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 10,
+      "satisfied": 3,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q072",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 10,
+      "satisfied": 4,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q082",
+      "cafe": "썰카페",
+      "fed": 8,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q084",
+      "cafe": "진서의 정원",
+      "fed": 9,
+      "satisfied": 2,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q086",
+      "cafe": "301h(301에이치)",
+      "fed": 10,
+      "satisfied": 3,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q089",
+      "cafe": "301h(301에이치)",
+      "fed": 8,
+      "satisfied": 3,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q094",
+      "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+      "fed": 8,
+      "satisfied": 3,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q104",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q109",
+      "cafe": "진서의 정원",
+      "fed": 8,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q111",
+      "cafe": "데니스커피 남강점",
+      "fed": 7,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q112",
+      "cafe": "진서의 정원",
+      "fed": 8,
+      "satisfied": 3,
+      "neg_in_fed": 2,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q114",
+      "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+      "fed": 7,
+      "satisfied": 3,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q126",
+      "cafe": "썰카페",
+      "fed": 9,
+      "satisfied": 3,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q130",
+      "cafe": "컴포즈커피 신림중앙점",
+      "fed": 6,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q133",
+      "cafe": "마티스커피",
+      "fed": 8,
+      "satisfied": 5,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q135",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 10,
+      "satisfied": 4,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q139",
+      "cafe": "카페라움(CAFE RAUM)",
+      "fed": 5,
+      "satisfied": 0,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q140",
+      "cafe": "301h(301에이치)",
+      "fed": 10,
+      "satisfied": 3,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q152",
+      "cafe": "301h(301에이치)",
+      "fed": 10,
+      "satisfied": 4,
+      "neg_in_fed": 3,
+      "answer_neg_root": true
+    }
+  ],
+  "detail_M4": [
+    {
+      "qid": "q000",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q008",
+      "cafe": "저스트 로맨틱",
+      "fed": 5,
+      "satisfied": 5,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q012",
+      "cafe": "진서의 정원",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q014",
+      "cafe": "코아르(coar)",
+      "fed": 4,
+      "satisfied": 4,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q018",
+      "cafe": "attendo(아텐도)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q019",
+      "cafe": "301h(301에이치)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q020",
+      "cafe": "플랙",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q032",
+      "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q033",
+      "cafe": "진서의 정원",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q039",
+      "cafe": "스타벅스 신림점",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q043",
+      "cafe": "이디야",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q045",
+      "cafe": "데니스커피 남강점",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q052",
+      "cafe": "홍카페 HONG CAFE",
+      "fed": 4,
+      "satisfied": 4,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q054",
+      "cafe": "데니스커피 남강점",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q060",
+      "cafe": "엔제리너스 구로디지털역점",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q062",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 5,
+      "satisfied": 5,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q063",
+      "cafe": "플레이온 보드게임카페",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q065",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q067",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 4,
+      "satisfied": 4,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q070",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q072",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 4,
+      "satisfied": 4,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q074",
+      "cafe": "파스쿠찌 서울대관정도서관점",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 1,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q082",
+      "cafe": "썰카페",
+      "fed": 4,
+      "satisfied": 4,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q084",
+      "cafe": "진서의 정원",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q086",
+      "cafe": "히포커피 신림점",
+      "fed": 4,
+      "satisfied": 4,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q089",
+      "cafe": "301h(301에이치)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q094",
+      "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q104",
+      "cafe": "미남커피",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q109",
+      "cafe": "진서의 정원",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q111",
+      "cafe": "데니스커피 남강점",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q112",
+      "cafe": "진서의 정원",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q114",
+      "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q126",
+      "cafe": "썰카페",
+      "fed": 4,
+      "satisfied": 4,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q130",
+      "cafe": "컴포즈커피 신림중앙점",
+      "fed": 2,
+      "satisfied": 2,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q133",
+      "cafe": "마티스커피",
+      "fed": 5,
+      "satisfied": 5,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q135",
+      "cafe": "커피니쉬(COFFEE NISHE)",
+      "fed": 4,
+      "satisfied": 4,
+      "neg_in_fed": 0,
+      "answer_neg_root": false
+    },
+    {
+      "qid": "q139",
+      "cafe": "카페라움(CAFE RAUM)",
+      "fed": 1,
+      "satisfied": 1,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q140",
+      "cafe": "파스쿠찌 서울대관정도서관점",
+      "fed": 3,
+      "satisfied": 3,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    },
+    {
+      "qid": "q152",
+      "cafe": "301h(301에이치)",
+      "fed": 5,
+      "satisfied": 5,
+      "neg_in_fed": 0,
+      "answer_neg_root": true
+    }
+  ]
+}

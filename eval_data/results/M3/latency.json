@@ -1,0 +1,58 @@
+{
+  "task": "M3",
+  "source_run": "results/M0/baseline.json",
+  "source_commit": "48c67e1e64e53e5dae00005f05edfad448061c0a",
+  "analysis_commit": "b6b51e34d8d4fcd8454e8db63f582e0024555f4b",
+  "n_questions": 50,
+  "langfuse": "off",
+  "note": "M0(48c67e1) 실측 재집계. 모델서버 HTTP(embed+GGUF select) 포함.",
+  "end_to_end_s": {
+    "mean": 5.0192,
+    "p50": 5.625,
+    "p95": 7.9554
+  },
+  "graph_total_s": {
+    "mean": 4.2085,
+    "p50": 4.689,
+    "p95": 7.1574
+  },
+  "answer_first_token_s": {
+    "mean": 0.4398,
+    "p50": 0.4843,
+    "p95": 0.7976
+  },
+  "by_node_mean_s": {
+    "question_valid": 0.5826,
+    "rule_select": 3.9041,
+    "soar_recommend": 0.0066,
+    "rule_fallback": 0.9214,
+    "impasse_resolve": 1.1093,
+    "menu_extract": 0.7286
+  },
+  "bottleneck_rank": [
+    [
+      "rule_select",
+      3.9041
+    ],
+    [
+      "impasse_resolve",
+      1.1093
+    ],
+    [
+      "rule_fallback",
+      0.9214
+    ],
+    [
+      "menu_extract",
+      0.7286
+    ],
+    [
+      "question_valid",
+      0.5826
+    ],
+    [
+      "soar_recommend",
+      0.0066
+    ]
+  ]
+}

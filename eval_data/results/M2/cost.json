@@ -1,0 +1,115 @@
+{
+  "task": "M2",
+  "source_run": "results/M0/baseline.json",
+  "source_commit": "48c67e1e64e53e5dae00005f05edfad448061c0a",
+  "analysis_commit": "b6b51e34d8d4fcd8454e8db63f582e0024555f4b",
+  "n_questions": 50,
+  "note": "M0(48c67e1) 계측 실측 재집계. 토큰은 실측(비스트리밍 usage+스트리밍 tiktoken). 단가는 공개가 추정(확인필요).",
+  "by_node": {
+    "question_valid": {
+      "calls": 50,
+      "in_tok": 23665,
+      "out_tok": 96,
+      "exact_calls": 50
+    },
+    "answer_generate": {
+      "calls": 39,
+      "in_tok": 18547,
+      "out_tok": 3917,
+      "exact_calls": 0
+    },
+    "rule_fallback": {
+      "calls": 9,
+      "in_tok": 6563,
+      "out_tok": 92,
+      "exact_calls": 9
+    },
+    "impasse_resolve": {
+      "calls": 17,
+      "in_tok": 5470,
+      "out_tok": 105,
+      "exact_calls": 17
+    },
+    "menu_extract": {
+      "calls": 6,
+      "in_tok": 131808,
+      "out_tok": 20,
+      "exact_calls": 6
+    }
+  },
+  "by_model": {
+    "gpt-4.1-mini": {
+      "calls": 82,
+      "in_tok": 167506,
+      "out_tok": 313,
+      "exact_calls": 82
+    },
+    "gpt-4.1": {
+      "calls": 39,
+      "in_tok": 18547,
+      "out_tok": 3917,
+      "exact_calls": 0
+    }
+  },
+  "total": {
+    "calls": 121,
+    "in_tok": 186053,
+    "out_tok": 4230
+  },
+  "by_path": {
+    "normal": {
+      "n": 20,
+      "avg_calls": 1.95,
+      "avg_in_tok": 926.0,
+      "avg_out_tok": 95.7
+    },
+    "rule_fallback": {
+      "n": 9,
+      "avg_calls": 3.33,
+      "avg_in_tok": 1784.6,
+      "avg_out_tok": 114.9
+    },
+    "impasse": {
+      "n": 8,
+      "avg_calls": 3.38,
+      "avg_in_tok": 1357.1,
+      "avg_out_tok": 91.1
+    },
+    "menu_only": {
+      "n": 3,
+      "avg_calls": 2.67,
+      "avg_in_tok": 22818,
+      "avg_out_tok": 114.7
+    },
+    "invalid_fallback": {
+      "n": 7,
+      "avg_calls": 1,
+      "avg_in_tok": 471.1,
+      "avg_out_tok": 1
+    },
+    "menu_complex": {
+      "n": 3,
+      "avg_calls": 3.33,
+      "avg_in_tok": 22954.7,
+      "avg_out_tok": 67.7
+    }
+  },
+  "cost_usd_estimate": {
+    "rates_per_1M_USD": {
+      "gpt-4.1": [
+        2.0,
+        8.0
+      ],
+      "gpt-4.1-mini": [
+        0.4,
+        1.6
+      ]
+    },
+    "by_model": {
+      "gpt-4.1-mini": 0.0675,
+      "gpt-4.1": 0.0684
+    },
+    "total": 0.1359,
+    "per_request": 0.00272
+  }
+}

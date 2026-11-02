@@ -1,0 +1,938 @@
+{
+  "task": "M1",
+  "commit": "b6b51e34d8d4fcd8454e8db63f582e0024555f4b",
+  "n_groups": 10,
+  "n_questions": 50,
+  "note": "그룹=같은 의도(base+변형4). majority_frac=그룹 5개 중 최빈 Rule/매장 비율(1.0=완전일치). 반복=base 3회 모두 동일 여부. LLM직접=gpt-4.1이 181곳에서 1곳.",
+  "summary": {
+    "rule_based_same_rule_rate": 0.66,
+    "rule_based_same_cafe_rate": 0.58,
+    "llm_direct_same_cafe_rate": 0.78,
+    "repeat_rule_all_same_rate": 1.0,
+    "repeat_cafe_all_same_rate": 1.0
+  },
+  "groups": [
+    {
+      "intent": "공부/카공",
+      "base_qid": "q000",
+      "rule_based": {
+        "rules": [
+          "공부",
+          "신림",
+          "작업",
+          "독서",
+          "시간보내기"
+        ],
+        "cafes": [
+          "커피니쉬(COFFEE NISHE)",
+          null,
+          "커피니쉬(COFFEE NISHE)",
+          "301h(301에이치)",
+          "플랙"
+        ],
+        "rule_majority_frac": 0.2,
+        "cafe_majority_frac": 0.4,
+        "unique_rules": 5,
+        "unique_cafes": 4
+      },
+      "llm_direct": {
+        "cafes": [
+          "스타벅스 신림점",
+          "(목록밖:카페 느티나무도서관점)",
+          "Mono Hertz(모노헤르쯔)",
+          "카페느티나무도서관점",
+          "(목록밖:카페 느티나무도서관점)"
+        ],
+        "cafe_majority_frac": 0.4,
+        "unique_cafes": 4
+      },
+      "items": [
+        {
+          "id": "g1_base",
+          "q": "신림동에 혼자 공부하기 좋은 데 어디 없을까?",
+          "rule": "공부",
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "llm_direct": "스타벅스 신림점"
+        },
+        {
+          "id": "g1_v1",
+          "q": "신림 카공하기 괜찮은 카페 어디 있음?",
+          "rule": "신림",
+          "cafe": null,
+          "llm_direct": "(목록밖:카페 느티나무도서관점)"
+        },
+        {
+          "id": "g1_v2*",
+          "q": "혼자 노트북 켜고 작업 몰입할 만한 데 추천해줘",
+          "rule": "작업",
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g1_v3",
+          "q": "나 공부 좀 해야 되는데 신림에 조용히 집중되는 곳 어디야?",
+          "rule": "독서",
+          "cafe": "301h(301에이치)",
+          "llm_direct": "카페느티나무도서관점"
+        },
+        {
+          "id": "g1_v4*",
+          "q": "방해 안 받고 오래 앉아서 뭐 좀 할 수 있는 신림 카페 없을까?",
+          "rule": "시간보내기",
+          "cafe": "플랙",
+          "llm_direct": "(목록밖:카페 느티나무도서관점)"
+        }
+      ]
+    },
+    {
+      "intent": "모임/단체",
+      "base_qid": "q014",
+      "rule_based": {
+        "rules": [
+          "모임",
+          "모임",
+          "넉넉한테이블",
+          "모임",
+          "넉넉한테이블"
+        ],
+        "cafes": [
+          "코아르(coar)",
+          "플레이온 보드게임카페",
+          "투썸플레이스 신림로점",
+          "코아르(coar)",
+          "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        ],
+        "rule_majority_frac": 0.6,
+        "cafe_majority_frac": 0.4,
+        "unique_rules": 2,
+        "unique_cafes": 4
+      },
+      "llm_direct": {
+        "cafes": [
+          "Label Board Cafe(레이블 보드게임 카페)",
+          "Label Board Cafe(레이블 보드게임 카페)",
+          "스타벅스 신림점",
+          "스타벅스 신림점",
+          "Label Board Cafe(레이블 보드게임 카페)"
+        ],
+        "cafe_majority_frac": 0.6,
+        "unique_cafes": 2
+      },
+      "items": [
+        {
+          "id": "g2_base",
+          "q": "모임하기 좋은 넓은 곳 어디 있어?",
+          "rule": "모임",
+          "cafe": "코아르(coar)",
+          "llm_direct": "Label Board Cafe(레이블 보드게임 카페)"
+        },
+        {
+          "id": "g2_v1",
+          "q": "여럿이 모여서 얘기할 넓은 카페 추천 좀",
+          "rule": "모임",
+          "cafe": "플레이온 보드게임카페",
+          "llm_direct": "Label Board Cafe(레이블 보드게임 카페)"
+        },
+        {
+          "id": "g2_v2*",
+          "q": "사람 많이 와도 다 앉을 수 있는 자리 넉넉한 데 어디야?",
+          "rule": "넉넉한테이블",
+          "cafe": "투썸플레이스 신림로점",
+          "llm_direct": "스타벅스 신림점"
+        },
+        {
+          "id": "g2_v3",
+          "q": "우리 동아리 다같이 갈 건데 넓은 카페 어디가 좋음?",
+          "rule": "모임",
+          "cafe": "코아르(coar)",
+          "llm_direct": "스타벅스 신림점"
+        },
+        {
+          "id": "g2_v4",
+          "q": "좌석 넉넉하고 단체로 모이기 좋은 곳 신림에 있나?",
+          "rule": "넉넉한테이블",
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "llm_direct": "Label Board Cafe(레이블 보드게임 카페)"
+        }
+      ]
+    },
+    {
+      "intent": "혼자/조용",
+      "base_qid": "q020",
+      "rule_based": {
+        "rules": [
+          "혼자",
+          "조용함",
+          "혼자",
+          "혼자",
+          "혼자"
+        ],
+        "cafes": [
+          "플랙",
+          "데니스커피 남강점",
+          "플랙",
+          "플랙",
+          "플랙"
+        ],
+        "rule_majority_frac": 0.8,
+        "cafe_majority_frac": 0.8,
+        "unique_rules": 2,
+        "unique_cafes": 2
+      },
+      "llm_direct": {
+        "cafes": [
+          "Mono Hertz(모노헤르쯔)",
+          "Mono Hertz(모노헤르쯔)",
+          "Mono Hertz(모노헤르쯔)",
+          "Mono Hertz(모노헤르쯔)",
+          "Mono Hertz(모노헤르쯔)"
+        ],
+        "cafe_majority_frac": 1.0,
+        "unique_cafes": 1
+      },
+      "items": [
+        {
+          "id": "g3_base",
+          "q": "요즘 신림에서 혼자 앉아서 조용히 커피 마실 만한 장소 찾는데 추천 좀.",
+          "rule": "혼자",
+          "cafe": "플랙",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g3_v1",
+          "q": "혼카페 조용한 데 어디 괜찮음?",
+          "rule": "조용함",
+          "cafe": "데니스커피 남강점",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g3_v2*",
+          "q": "시끄럽지 않게 혼자 커피 한잔 하기 좋은 곳 있어?",
+          "rule": "혼자",
+          "cafe": "플랙",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g3_v3",
+          "q": "나 혼자 조용히 멍때리면서 커피 마실 데 찾는데",
+          "rule": "혼자",
+          "cafe": "플랙",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g3_v4",
+          "q": "한적하게 혼자 있기 좋은 카페 신림에 뭐 있지?",
+          "rule": "혼자",
+          "cafe": "플랙",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        }
+      ]
+    },
+    {
+      "intent": "빵/베이커리 맛집",
+      "base_qid": "q100",
+      "rule_based": {
+        "rules": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "cafes": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "rule_majority_frac": 1.0,
+        "cafe_majority_frac": 1.0,
+        "unique_rules": 1,
+        "unique_cafes": 1
+      },
+      "llm_direct": {
+        "cafes": [
+          "페이브 베이커리 서울대점",
+          "페이브 베이커리 서울대점",
+          "쉼표브레드",
+          "굽다방",
+          "크로플집"
+        ],
+        "cafe_majority_frac": 0.4,
+        "unique_cafes": 4
+      },
+      "items": [
+        {
+          "id": "g4_base",
+          "q": "빵 진짜 맛있는 카페 좀 알려줘",
+          "rule": null,
+          "cafe": null,
+          "llm_direct": "페이브 베이커리 서울대점"
+        },
+        {
+          "id": "g4_v1",
+          "q": "신림에 베이커리 맛있는 곳 어디야?",
+          "rule": null,
+          "cafe": null,
+          "llm_direct": "페이브 베이커리 서울대점"
+        },
+        {
+          "id": "g4_v2",
+          "q": "빵 맛집 카페 추천 좀!",
+          "rule": null,
+          "cafe": null,
+          "llm_direct": "쉼표브레드"
+        },
+        {
+          "id": "g4_v3*",
+          "q": "갓 구운 거 맛있게 하는 카페 어디 있을까?",
+          "rule": null,
+          "cafe": null,
+          "llm_direct": "굽다방"
+        },
+        {
+          "id": "g4_v4*",
+          "q": "크로플이나 소금빵 맛있는 데 알려줘",
+          "rule": null,
+          "cafe": null,
+          "llm_direct": "크로플집"
+        }
+      ]
+    },
+    {
+      "intent": "인테리어/감성",
+      "base_qid": "q032",
+      "rule_based": {
+        "rules": [
+          "인테리어",
+          "감성",
+          "사진",
+          "인테리어",
+          "눈맛집"
+        ],
+        "cafes": [
+          "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "진서의 정원",
+          "썰카페",
+          "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "읍천리382 신림점"
+        ],
+        "rule_majority_frac": 0.4,
+        "cafe_majority_frac": 0.4,
+        "unique_rules": 4,
+        "unique_cafes": 4
+      },
+      "llm_direct": {
+        "cafes": [
+          "POPO archive(포포 아카이브)",
+          "POPO archive(포포 아카이브)",
+          "POPO archive(포포 아카이브)",
+          "POPO archive(포포 아카이브)",
+          "POPO archive(포포 아카이브)"
+        ],
+        "cafe_majority_frac": 1.0,
+        "unique_cafes": 1
+      },
+      "items": [
+        {
+          "id": "g5_base",
+          "q": "신림동 근처 인테리어 예쁜 데 있어?",
+          "rule": "인테리어",
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "llm_direct": "POPO archive(포포 아카이브)"
+        },
+        {
+          "id": "g5_v1",
+          "q": "신림동 인테리어 감성 예쁜 카페 어디 있음?",
+          "rule": "감성",
+          "cafe": "진서의 정원",
+          "llm_direct": "POPO archive(포포 아카이브)"
+        },
+        {
+          "id": "g5_v2*",
+          "q": "사진 찍으면 잘 나오는 예쁜 공간 추천해줘",
+          "rule": "사진",
+          "cafe": "썰카페",
+          "llm_direct": "POPO archive(포포 아카이브)"
+        },
+        {
+          "id": "g5_v3",
+          "q": "분위기 인테리어 좀 예쁜 데 가고 싶은데 어디가 좋아?",
+          "rule": "인테리어",
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "llm_direct": "POPO archive(포포 아카이브)"
+        },
+        {
+          "id": "g5_v4*",
+          "q": "예쁘게 꾸며놔서 눈 호강하는 카페 신림에 있나?",
+          "rule": "눈맛집",
+          "cafe": "읍천리382 신림점",
+          "llm_direct": "POPO archive(포포 아카이브)"
+        }
+      ]
+    },
+    {
+      "intent": "주차",
+      "base_qid": "q043",
+      "rule_based": {
+        "rules": [
+          "주차",
+          "주차",
+          "주차",
+          "주차",
+          "주차"
+        ],
+        "cafes": [
+          "이디야",
+          "블루포트 서울대점",
+          "미남커피",
+          "블루포트 서울대점",
+          "이디야"
+        ],
+        "rule_majority_frac": 1.0,
+        "cafe_majority_frac": 0.4,
+        "unique_rules": 1,
+        "unique_cafes": 3
+      },
+      "llm_direct": {
+        "cafes": [
+          "THE ROASTER 59(더 로스터 59)",
+          "벨라벨로카페(Bella-Bello cafe)",
+          "THE ROASTER 59(더 로스터 59)",
+          "THE ROASTER 59(더 로스터 59)",
+          "THE ROASTER 59(더 로스터 59)"
+        ],
+        "cafe_majority_frac": 0.8,
+        "unique_cafes": 2
+      },
+      "items": [
+        {
+          "id": "g6_base",
+          "q": "차 끌고 가도 주차할 곳 좀 있는지 궁금한데.",
+          "rule": "주차",
+          "cafe": "이디야",
+          "llm_direct": "THE ROASTER 59(더 로스터 59)"
+        },
+        {
+          "id": "g6_v1",
+          "q": "주차되는 카페 어디 있음?",
+          "rule": "주차",
+          "cafe": "블루포트 서울대점",
+          "llm_direct": "벨라벨로카페(Bella-Bello cafe)"
+        },
+        {
+          "id": "g6_v2*",
+          "q": "차 가져가도 세울 데 있는 카페 추천 좀",
+          "rule": "주차",
+          "cafe": "미남커피",
+          "llm_direct": "THE ROASTER 59(더 로스터 59)"
+        },
+        {
+          "id": "g6_v3",
+          "q": "나 차 끌고 갈 건데 주차 편한 데 어디야?",
+          "rule": "주차",
+          "cafe": "블루포트 서울대점",
+          "llm_direct": "THE ROASTER 59(더 로스터 59)"
+        },
+        {
+          "id": "g6_v4",
+          "q": "신림에 주차 가능한 카페 좀 알려줘",
+          "rule": "주차",
+          "cafe": "이디야",
+          "llm_direct": "THE ROASTER 59(더 로스터 59)"
+        }
+      ]
+    },
+    {
+      "intent": "복합(커피맛+공부)",
+      "base_qid": "q139",
+      "rule_based": {
+        "rules": [
+          "공부",
+          "공부",
+          "맛집",
+          "공부",
+          "작업"
+        ],
+        "cafes": [
+          "카페라움(CAFE RAUM)",
+          "커피니쉬(COFFEE NISHE)",
+          "미남커피",
+          "카페라움(CAFE RAUM)",
+          "원브릿지"
+        ],
+        "rule_majority_frac": 0.6,
+        "cafe_majority_frac": 0.4,
+        "unique_rules": 3,
+        "unique_cafes": 4
+      },
+      "llm_direct": {
+        "cafes": [
+          "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "(목록밖:카페 느티나무도서관점)",
+          "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        ],
+        "cafe_majority_frac": 0.8,
+        "unique_cafes": 2
+      },
+      "items": [
+        {
+          "id": "g7_base",
+          "q": "커피 맛 괜찮으면서 공부도 잘 될 만한 데 추천 좀",
+          "rule": "공부",
+          "cafe": "카페라움(CAFE RAUM)",
+          "llm_direct": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        },
+        {
+          "id": "g7_v1",
+          "q": "커피도 맛있고 공부도 되는 카페 추천 좀",
+          "rule": "공부",
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "llm_direct": "(목록밖:카페 느티나무도서관점)"
+        },
+        {
+          "id": "g7_v2",
+          "q": "맛있는 커피에 카공까지 되는 데 어디?",
+          "rule": "맛집",
+          "cafe": "미남커피",
+          "llm_direct": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        },
+        {
+          "id": "g7_v3",
+          "q": "공부하기 좋은데 커피 맛도 포기 못 하겠어, 그런 데 있어?",
+          "rule": "공부",
+          "cafe": "카페라움(CAFE RAUM)",
+          "llm_direct": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        },
+        {
+          "id": "g7_v4*",
+          "q": "원두 괜찮으면서 오래 앉아 작업하기도 좋은 곳 있을까?",
+          "rule": "작업",
+          "cafe": "원브릿지",
+          "llm_direct": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        }
+      ]
+    },
+    {
+      "intent": "뷰/전망",
+      "base_qid": "q152",
+      "rule_based": {
+        "rules": [
+          "뷰맛집",
+          "뷰맛집",
+          "창가자리",
+          "뷰맛집",
+          "뷰맛집"
+        ],
+        "cafes": [
+          "301h(301에이치)",
+          "301h(301에이치)",
+          "카페 플롬",
+          "301h(301에이치)",
+          "301h(301에이치)"
+        ],
+        "rule_majority_frac": 0.8,
+        "cafe_majority_frac": 0.8,
+        "unique_rules": 2,
+        "unique_cafes": 2
+      },
+      "llm_direct": {
+        "cafes": [
+          "카페 리버스(Cafe Reverse)",
+          "카페 오름",
+          "카페 오름",
+          "카페 오름",
+          "카페 오름"
+        ],
+        "cafe_majority_frac": 0.8,
+        "unique_cafes": 2
+      },
+      "items": [
+        {
+          "id": "g8_base",
+          "q": "밖에서 한강 뷰 보면서 쉬고 싶은데 가능해?",
+          "rule": "뷰맛집",
+          "cafe": "301h(301에이치)",
+          "llm_direct": "카페 리버스(Cafe Reverse)"
+        },
+        {
+          "id": "g8_v1",
+          "q": "뷰 좋은 카페 신림에 있어?",
+          "rule": "뷰맛집",
+          "cafe": "301h(301에이치)",
+          "llm_direct": "카페 오름"
+        },
+        {
+          "id": "g8_v2*",
+          "q": "창밖 경치 보면서 쉴 만한 데 추천해줘",
+          "rule": "창가자리",
+          "cafe": "카페 플롬",
+          "llm_direct": "카페 오름"
+        },
+        {
+          "id": "g8_v3",
+          "q": "전망 좋은 카페 가고 싶은데 어디가 괜찮음?",
+          "rule": "뷰맛집",
+          "cafe": "301h(301에이치)",
+          "llm_direct": "카페 오름"
+        },
+        {
+          "id": "g8_v4",
+          "q": "경치 예쁜 뷰맛집 카페 신림 근처에 있나?",
+          "rule": "뷰맛집",
+          "cafe": "301h(301에이치)",
+          "llm_direct": "카페 오름"
+        }
+      ]
+    },
+    {
+      "intent": "콘센트/와이파이",
+      "base_qid": "q074",
+      "rule_based": {
+        "rules": [
+          "콘센트",
+          "콘센트",
+          "작업",
+          "콘센트",
+          "콘센트"
+        ],
+        "cafes": [
+          "파스쿠찌 서울대관정도서관점",
+          "파스쿠찌 서울대관정도서관점",
+          "커피니쉬(COFFEE NISHE)",
+          "파스쿠찌 서울대관정도서관점",
+          "파스쿠찌 서울대관정도서관점"
+        ],
+        "rule_majority_frac": 0.8,
+        "cafe_majority_frac": 0.8,
+        "unique_rules": 2,
+        "unique_cafes": 2
+      },
+      "llm_direct": {
+        "cafes": [
+          "스타벅스 신림점",
+          "스타벅스 신림점",
+          "스타벅스 신림점",
+          "스타벅스 신림점",
+          "스타벅스 신림점"
+        ],
+        "cafe_majority_frac": 1.0,
+        "unique_cafes": 1
+      },
+      "items": [
+        {
+          "id": "g9_base",
+          "q": "콘센트랑 와이파이 빠른 데로 좀 알려줄래?",
+          "rule": "콘센트",
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "llm_direct": "스타벅스 신림점"
+        },
+        {
+          "id": "g9_v1",
+          "q": "콘센트 많고 와이파이 빵빵한 카페 어디?",
+          "rule": "콘센트",
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "llm_direct": "스타벅스 신림점"
+        },
+        {
+          "id": "g9_v2*",
+          "q": "노트북 충전하면서 인터넷 쓰기 좋은 데 있어?",
+          "rule": "작업",
+          "cafe": "커피니쉬(COFFEE NISHE)",
+          "llm_direct": "스타벅스 신림점"
+        },
+        {
+          "id": "g9_v3",
+          "q": "폰이랑 노트북 충전해야 되는데 콘센트 자리 많은 데 알려줘",
+          "rule": "콘센트",
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "llm_direct": "스타벅스 신림점"
+        },
+        {
+          "id": "g9_v4",
+          "q": "와이파이 빠르고 콘센트 있는 카페 추천 좀",
+          "rule": "콘센트",
+          "cafe": "파스쿠찌 서울대관정도서관점",
+          "llm_direct": "스타벅스 신림점"
+        }
+      ]
+    },
+    {
+      "intent": "음악/휴식",
+      "base_qid": "q039",
+      "rule_based": {
+        "rules": [
+          "휴식",
+          "CCM카페",
+          "휴식",
+          "편안함",
+          "여유"
+        ],
+        "cafes": [
+          "스타벅스 신림점",
+          "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "스타벅스 신림점",
+          "마티스커피",
+          "301h(301에이치)"
+        ],
+        "rule_majority_frac": 0.4,
+        "cafe_majority_frac": 0.4,
+        "unique_rules": 4,
+        "unique_cafes": 4
+      },
+      "llm_direct": {
+        "cafes": [
+          "Mono Hertz(모노헤르쯔)",
+          "Mono Hertz(모노헤르쯔)",
+          "Mono Hertz(모노헤르쯔)",
+          "Mono Hertz(모노헤르쯔)",
+          "Mono Hertz(모노헤르쯔)"
+        ],
+        "cafe_majority_frac": 1.0,
+        "unique_cafes": 1
+      },
+      "items": [
+        {
+          "id": "g10_base",
+          "q": "편안하게 쉬면서 음악 듣기 좋은 곳 있으면 알려줘",
+          "rule": "휴식",
+          "cafe": "스타벅스 신림점",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g10_v1",
+          "q": "음악 좋고 편하게 쉴 수 있는 카페 어디 있어?",
+          "rule": "CCM카페",
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g10_v2*",
+          "q": "노래 잔잔하게 나오는 데서 좀 쉬고 싶은데 추천해줘",
+          "rule": "휴식",
+          "cafe": "스타벅스 신림점",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g10_v3",
+          "q": "편하게 음악 들으면서 쉴 데 어디 없나?",
+          "rule": "편안함",
+          "cafe": "마티스커피",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        },
+        {
+          "id": "g10_v4",
+          "q": "쉬기 좋고 음악 분위기 괜찮은 카페 신림에 있을까?",
+          "rule": "여유",
+          "cafe": "301h(301에이치)",
+          "llm_direct": "Mono Hertz(모노헤르쯔)"
+        }
+      ]
+    }
+  ],
+  "repeat": [
+    {
+      "intent": "공부/카공",
+      "base_q": "신림동에 혼자 공부하기 좋은 데 어디 없을까?",
+      "runs": [
+        {
+          "rule": "공부",
+          "cafe": "커피니쉬(COFFEE NISHE)"
+        },
+        {
+          "rule": "공부",
+          "cafe": "커피니쉬(COFFEE NISHE)"
+        },
+        {
+          "rule": "공부",
+          "cafe": "커피니쉬(COFFEE NISHE)"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "모임/단체",
+      "base_q": "모임하기 좋은 넓은 곳 어디 있어?",
+      "runs": [
+        {
+          "rule": "모임",
+          "cafe": "코아르(coar)"
+        },
+        {
+          "rule": "모임",
+          "cafe": "코아르(coar)"
+        },
+        {
+          "rule": "모임",
+          "cafe": "코아르(coar)"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "혼자/조용",
+      "base_q": "요즘 신림에서 혼자 앉아서 조용히 커피 마실 만한 장소 찾는데 추천 좀.",
+      "runs": [
+        {
+          "rule": "혼자",
+          "cafe": "플랙"
+        },
+        {
+          "rule": "혼자",
+          "cafe": "플랙"
+        },
+        {
+          "rule": "혼자",
+          "cafe": "플랙"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "빵/베이커리 맛집",
+      "base_q": "빵 진짜 맛있는 카페 좀 알려줘",
+      "runs": [
+        {
+          "rule": null,
+          "cafe": null
+        },
+        {
+          "rule": null,
+          "cafe": null
+        },
+        {
+          "rule": null,
+          "cafe": null
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "인테리어/감성",
+      "base_q": "신림동 근처 인테리어 예쁜 데 있어?",
+      "runs": [
+        {
+          "rule": "인테리어",
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        },
+        {
+          "rule": "인테리어",
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        },
+        {
+          "rule": "인테리어",
+          "cafe": "UNSIDE COFFEE ROASTERS(언사이드 커피 로스터스)"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "주차",
+      "base_q": "차 끌고 가도 주차할 곳 좀 있는지 궁금한데.",
+      "runs": [
+        {
+          "rule": "주차",
+          "cafe": "이디야"
+        },
+        {
+          "rule": "주차",
+          "cafe": "이디야"
+        },
+        {
+          "rule": "주차",
+          "cafe": "이디야"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "복합(커피맛+공부)",
+      "base_q": "커피 맛 괜찮으면서 공부도 잘 될 만한 데 추천 좀",
+      "runs": [
+        {
+          "rule": "공부",
+          "cafe": "카페라움(CAFE RAUM)"
+        },
+        {
+          "rule": "공부",
+          "cafe": "카페라움(CAFE RAUM)"
+        },
+        {
+          "rule": "공부",
+          "cafe": "카페라움(CAFE RAUM)"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "뷰/전망",
+      "base_q": "밖에서 한강 뷰 보면서 쉬고 싶은데 가능해?",
+      "runs": [
+        {
+          "rule": "뷰맛집",
+          "cafe": "301h(301에이치)"
+        },
+        {
+          "rule": "뷰맛집",
+          "cafe": "301h(301에이치)"
+        },
+        {
+          "rule": "뷰맛집",
+          "cafe": "301h(301에이치)"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "콘센트/와이파이",
+      "base_q": "콘센트랑 와이파이 빠른 데로 좀 알려줄래?",
+      "runs": [
+        {
+          "rule": "콘센트",
+          "cafe": "파스쿠찌 서울대관정도서관점"
+        },
+        {
+          "rule": "콘센트",
+          "cafe": "파스쿠찌 서울대관정도서관점"
+        },
+        {
+          "rule": "콘센트",
+          "cafe": "파스쿠찌 서울대관정도서관점"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    },
+    {
+      "intent": "음악/휴식",
+      "base_q": "편안하게 쉬면서 음악 듣기 좋은 곳 있으면 알려줘",
+      "runs": [
+        {
+          "rule": "휴식",
+          "cafe": "스타벅스 신림점"
+        },
+        {
+          "rule": "휴식",
+          "cafe": "스타벅스 신림점"
+        },
+        {
+          "rule": "휴식",
+          "cafe": "스타벅스 신림점"
+        }
+      ],
+      "rule_all_same": true,
+      "cafe_all_same": true
+    }
+  ]
+}

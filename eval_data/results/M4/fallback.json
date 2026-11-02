@@ -1,0 +1,41 @@
+{
+  "task": "M4",
+  "commit": "b6b51e34d8d4fcd8454e8db63f582e0024555f4b",
+  "run": "results/M4/run.json",
+  "qrels": "qrels_181.csv",
+  "tier_counts": {
+    "tier0_normal": 29,
+    "tier1_fallback": 11,
+    "menu_only": 3,
+    "invalid": 7
+  },
+  "rule_path_total": 40,
+  "hit1_by_tier": {
+    "tier0_normal": {
+      "n_reco": 28,
+      "hit1": 0.8571
+    },
+    "tier1_fallback": {
+      "n_reco": 11,
+      "hit1": 0.7273
+    }
+  },
+  "impasse": {
+    "questions": 12,
+    "total_iterations": 17,
+    "M0_questions": 11
+  },
+  "final_none_rule_path": {
+    "count": 1,
+    "qids": [
+      "q150"
+    ],
+    "M0_count": 3,
+    "M0_qids": [
+      "q052",
+      "q074",
+      "q150"
+    ]
+  },
+  "note": "현 B2~B4 코드. Tier0=1차 sLLM 성공, Tier1=Rule Fallback, Tier2=rule_create. Hit@1=최종 추천 1곳이 qrels_181 grade>=2. menu-only/invalid는 룰tier 아님."
+}
