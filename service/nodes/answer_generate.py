@@ -36,16 +36,44 @@ def _fetch_cafe_info(cafe_name: str) -> dict:
     return dict(row) if row else {}
 
 
-def _extract_effective_keywords(state: AgentState) -> list[str]:
-    operator_keywords = state.get("operator_keywords", [])
-    trace = (state.get("soar_result") or {}).get("trace", [])
+def _fetch_cafe_sentiment_keywords(cafe_name: str) -> dict[str, set[str]]:
+    """추천 매장의 긍정/부정 관측 키워드를 분리해서 로드."""
+    conn = sqlite3.connect(str(DB_PATH))
+    rows = conn.execute(
+        "SELECT keyword, sentiment FROM cafe_keywords WHERE cafe_name = ?",
+        (cafe_name,),
+    ).fetchall()
+    conn.close()
+    pos: set[str] = set()
+    neg: set[str] = set()
+    for kw, sentiment in rows:
+        if sentiment == "긍정":
+            pos.add(kw)
+        elif sentiment == "부정":
+            neg.add(kw)
+    return {"긍정": pos, "부정": neg}
 
-    effective_tiebreak = [
-        t["keyword"]
-        for t in trace
-        if t.get("keyword") and "no_effect" not in t["step"]
-    ]
-    return operator_keywords + effective_tiebreak
+
+def _extract_grounds(state: AgentState, cafe_name: str) -> dict:
+    """추천 매장 기준으로 답변 근거를 감성·충족 여부로 분리한다 (B2).
+
+    - satisfied_operator : 룰 operator 중 이 매장이 '실제 보유'한 긍정 키워드 (미충족 operator 제외)
+    - used_tiebreak      : 룰 tiebreak 중 이 매장이 '실제 보유'한 긍정 키워드
+    - unobserved_negative: 룰 negative 중 이 매장 부정 리뷰에서 '확인되지 않은' 것
+    기존 로직이 부정 키워드(neg_narrowed)와 미충족 operator를 근거로 혼입하던 문제를 제거한다.
+    """
+    operator_keywords = state.get("operator_keywords", []) or []
+    tiebreak_keywords = state.get("tiebreak_keywords", []) or []
+    negative_keywords = state.get("negative_keywords", []) or []
+
+    kws = _fetch_cafe_sentiment_keywords(cafe_name)
+    pos, neg = kws["긍정"], kws["부정"]
+
+    return {
+        "satisfied_operator": [k for k in operator_keywords if k in pos],
+        "used_tiebreak": [k for k in tiebreak_keywords if k in pos],
+        "unobserved_negative": [k for k in negative_keywords if k not in neg],
+    }
 
 
 def _stream_menu_only(state: AgentState) -> Iterator[str]:
@@ -110,7 +138,13 @@ def stream(state: AgentState) -> Iterator[str]:
         return
 
     cafe_info = _fetch_cafe_info(cafe_name)
-    keywords = _extract_effective_keywords(state)
+    grounds = _extract_grounds(state, cafe_name)
+
+    # 긍정 근거: 만족한 operator + 사용된 tiebreak (중복 제거, 순서 보존)
+    seen: set[str] = set()
+    positive = [k for k in grounds["satisfied_operator"] + grounds["used_tiebreak"]
+                if not (k in seen or seen.add(k))]
+    unobserved = grounds["unobserved_negative"]
 
     user_prompt = ANSWER_USER.format(
         question=state["question"],
@@ -118,11 +152,12 @@ def stream(state: AgentState) -> Iterator[str]:
         address=cafe_info.get("address") or "정보 없음",
         status=cafe_info.get("status") or "정보 없음",
         review_summary=cafe_info.get("review_summary") or "정보 없음",
-        keywords=", ".join(keywords) if keywords else "정보 없음",
+        positive_grounds=", ".join(positive) if positive else "정보 없음",
+        unobserved_negative=", ".join(unobserved) if unobserved else "없음",
     )
 
     get_client().update_current_span(
-        input={"question": state["question"], "cafe_name": cafe_name, "keywords": keywords},
+        input={"question": state["question"], "cafe_name": cafe_name, "grounds": grounds},
         metadata={"cafe_info": cafe_info},
     )
 
