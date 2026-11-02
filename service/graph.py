@@ -13,8 +13,6 @@ from service.state import AgentState
 
 MAX_IMPASSE_ITER = 5
 
-MENU_TYPES = ("menu-only", "menu-complex")
-
 
 def _route_question(state: AgentState) -> str | list[str]:
     qt = state.get("question_type")
@@ -35,9 +33,9 @@ def _route_menu_extract(state: AgentState) -> str:
 
 
 def _route_rule_select(state: AgentState) -> str:
-    if state.get("question_type") in MENU_TYPES:
-        return "soar_recommend"
-    # 1차 sLLM이 none → 막다른 길 대신 LLM 폴백으로 가장 가까운 룰 선택
+    # B4: none 이면 질문 유형과 무관하게 Rule Fallback 으로.
+    #   (기존엔 menu-complex 가 none 이어도 soar 로 직행 → 비메뉴 조건 없이 메뉴만으로 추천되던 버그)
+    #   menu-complex 는 menu_extract 와 병렬이라, 폴백이 비메뉴 조건을 채워 soar 합류 시점에 함께 쓰인다.
     if state.get("selected_rule") == "none" or not state.get("selected_rule"):
         return "rule_fallback"
     return "soar_recommend"
