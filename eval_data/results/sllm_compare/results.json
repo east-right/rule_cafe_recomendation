@@ -1,0 +1,44 @@
+{
+  "task": "sllm_compare",
+  "commit": "1d7db10785ebe5f77e90c8468b3a719c867394a9",
+  "data": "keyword_selection/data/test_with_candidates.jsonl (389)",
+  "prompt": "keyword_selection/prompt.py SYSTEM_PROMPT + build_user_prompt",
+  "summary": [
+    {
+      "model_key": "base",
+      "model": "Qwen2.5-1.5B-Instruct (원본, transformers CPU)",
+      "n": 389,
+      "accuracy": 0.4267,
+      "none_accuracy": 0.0,
+      "match_accuracy": 0.4301,
+      "out_of_candidates": 60,
+      "avg_latency_s": 5.6051,
+      "cost_usd_total": null,
+      "cost_usd_per_req": null
+    },
+    {
+      "model_key": "gpt",
+      "model": "gpt-4.1-mini",
+      "n": 389,
+      "accuracy": 0.7661,
+      "none_accuracy": 0.3333,
+      "match_accuracy": 0.7694,
+      "out_of_candidates": 71,
+      "avg_latency_s": 0.7368,
+      "cost_usd_total": 0.11378,
+      "cost_usd_per_req": 0.0002925
+    },
+    {
+      "model_key": "gguf",
+      "model": "qwen1.5b-cafe-q8_0.gguf (llama.cpp CPU)",
+      "n": 389,
+      "accuracy": 0.8766,
+      "none_accuracy": 1.0,
+      "match_accuracy": 0.8756,
+      "out_of_candidates": 2,
+      "avg_latency_s": 5.9843,
+      "cost_usd_total": null,
+      "cost_usd_per_req": null
+    }
+  ]
+}
