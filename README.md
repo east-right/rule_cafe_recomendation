@@ -92,3 +92,39 @@ curl -N -X POST http://localhost:8000/recommend \
 - sLLM gguf(`east-right/cafe-keyword-selection-qwen-1.5b`)는 모델서버가 HF에서 자동 다운로드. 일부 CPU(AVX512 비활성)에서 illegal instruction이면 AVX2 소스 빌드 필요 → `keyword_selection/README.md` 참고.
 - 모델 서버는 인터페이스(`/embed`·`/select_rule`)가 고정돼 있어, GPU 배포 시 `MODEL_SERVER_URL`만 교체하면 된다.
 
+---
+
+## 6. 측정 결과 (Measurement Summary)
+
+> 평가셋: 신림동 카페 **181곳** · 리뷰 기반 LLM-judge gold qrels(50문항) + Rule 선택 테스트(389문항). 모두 **오프라인 지표**(실사용 클릭 아님). 상세·재현 코드는 `eval_data/results/`.
+
+### 6.1 Rule 선택 정확도 (389문항, 동일 프롬프트·모델만 교체)
+
+| 모델 | Accuracy | 후보밖 출력 |
+|---|---|---|
+| gpt-4.1-mini (Structured Output, enum 강제) | **0.931** | 0 |
+| **파인튜닝 sLLM** (Qwen2.5-1.5B QLoRA, gguf) | **0.877** | 2 |
+| gpt-4.1-mini (일반) | 0.766 | 71 |
+| Qwen2.5-1.5B 원본 (파인튜닝 X) | 0.427 | 60 |
+
+→ 파인튜닝으로 **0.43 → 0.88**(약 2배). 범용 GPT는 출력 형식을 강제(Structured Output)해야 0.93이고, 일반 호출은 형식 미준수(후보밖 71건)로 0.77. 작은 로컬 sLLM이 **제약 없이도** 일반 GPT를 앞섬.
+
+### 6.2 추천 품질 (50문항, vs 무작위 기준선)
+
+| 지표 | 시스템 (Rule 선택 시) | 무작위 |
+|---|---|---|
+| Hit@1 | **0.89** | 0.40 |
+| NDCG@3 | **0.65** | 0.33 |
+
+### 6.3 설명 가능성 · 안정성 · 비용 · 지연
+
+| 항목 | 값 |
+|---|---|
+| 답변 근거 충실도 (Trace 실제 만족 조건과 일치) | 0.38 → **1.00** (근거 분리 수정 후) |
+| 같은 질문 반복 재현성 (Rule·매장) | **100%** (Rule 같으면 Trace 결정적) |
+| 요청당 비용 | **~$0.003** (정상 경로는 로컬 sLLM+규칙, LLM은 분류·답변에만) |
+| 지연 — sLLM Rule 선택 | **~3초** (CPU, 후보 10개) · GPU/vLLM 전환 시 단축 |
+| 지연 — 규칙기반 추론(Soar trace) | **0.007초** (XAI 추론 자체는 사실상 무비용) |
+
+> 한계: 오프라인 리뷰기반 judge 기준이며 실사용 반응은 미측정. 표현 변형 강건성(의미 같은 다른 표현)은 Rule 0.66 수준으로 개선 과제. 데이터 최신성(폐업 반영)은 설계 단계.
+
