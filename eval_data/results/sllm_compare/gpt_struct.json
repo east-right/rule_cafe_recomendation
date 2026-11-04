@@ -1,0 +1,3137 @@
+{
+  "model_key": "gpt_struct",
+  "model": "gpt-4.1-mini (Structured Output, enum 강제)",
+  "commit": "9a00e059aeae4add3d5c936a1e4a378c74c97623",
+  "n": 389,
+  "accuracy": 0.9306,
+  "correct": 362,
+  "none_total": 3,
+  "none_correct": 1,
+  "none_accuracy": 0.3333,
+  "match_total": 386,
+  "match_correct": 361,
+  "match_accuracy": 0.9352,
+  "out_of_candidates": 0,
+  "avg_latency_s": 0.724,
+  "total_latency_s": 281.64,
+  "details": [
+    {
+      "query": "오늘 기분전환하고 싶은데, 활기찬 곳 어디 없나? 😄",
+      "answer": "활기",
+      "pred": "활기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.7721
+    },
+    {
+      "query": "인테리어가 예쁘고 활기 넘치는 카페 추천해 주세요.",
+      "answer": "활기",
+      "pred": "활기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.316
+    },
+    {
+      "query": "활기 가득한 분위기에서 사진 찍기 좋은 카페 없을까요?",
+      "answer": "활기",
+      "pred": "활기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8984
+    },
+    {
+      "query": "눈맛집 카페 어디 아는 데 없어? 😎",
+      "answer": "눈맛집",
+      "pred": "눈맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.3268
+    },
+    {
+      "query": "채광 좋은 감성 카페 좀 추천해 주실 수 있나요?",
+      "answer": "눈맛집",
+      "pred": "채광",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.7722
+    },
+    {
+      "query": "분위기 좋고 눈이 시원한 카페 어디 있을까요?",
+      "answer": "눈맛집",
+      "pred": "눈맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8339
+    },
+    {
+      "query": "커피향 좋은 곳 어디 추천? 힐링 필요함 ㅠㅠ",
+      "answer": "향기",
+      "pred": "향기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8899
+    },
+    {
+      "query": "대화를 즐기기 좋은 향기로운 카페가 있을까요?",
+      "answer": "향기",
+      "pred": "향기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6585
+    },
+    {
+      "query": "편안하게 쉴 수 있는 향기로운 카페 추천해 주세요.",
+      "answer": "향기",
+      "pred": "향기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9074
+    },
+    {
+      "query": "냄새 이상한 데 말고 쾌적한 카페 추천 좀!",
+      "answer": "쾌적함",
+      "pred": "쾌적함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6698
+    },
+    {
+      "query": "청결한 곳에서 커피 마실 수 있는 카페 추천해 주시겠어요?",
+      "answer": "쾌적함",
+      "pred": "청결",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.5344
+    },
+    {
+      "query": "쾌적한 공기를 느낄 수 있는 카페는 어디일까요?",
+      "answer": "쾌적함",
+      "pred": "쾌적함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8706
+    },
+    {
+      "query": "넓고 개방감 있는 카페 있나? 답답해...",
+      "answer": "개방감",
+      "pred": "개방감",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7274
+    },
+    {
+      "query": "좋은 채광에 시원한 공간감 있는 카페를 추천해 주세요.",
+      "answer": "개방감",
+      "pred": "개방감",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7007
+    },
+    {
+      "query": "답답하지 않고 개방적인 분위기의 카페 어디 있을까요?",
+      "answer": "개방감",
+      "pred": "개방감",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.5081
+    },
+    {
+      "query": "요즘 스트레스 받아서 한적한 카페 가고 싶어~ 여유롭게 앉아서 커피 마실 데 어디일까?",
+      "answer": "여유",
+      "pred": "여유",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8598
+    },
+    {
+      "query": "한가로운 분위기에서 시간을 보낼 수 있는 여유로운 카페를 추천해 주세요.",
+      "answer": "여유",
+      "pred": "여유",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7308
+    },
+    {
+      "query": "빈티지 feel 느껴지는 카페 없을까? 아지트처럼 즐기고 싶어~",
+      "answer": "빈티지",
+      "pred": "빈티지",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.4722
+    },
+    {
+      "query": "빈티지한 인테리어와 낭만적인 분위기를 갖춘 카페가 있을까요? 추천 부탁드립니다.",
+      "answer": "빈티지",
+      "pred": "빈티지",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.752
+    },
+    {
+      "query": "기분 전환하려고 해~ 감성 카페 찾는 중이야. 추천 좀!",
+      "answer": "감성",
+      "pred": "감성",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9154
+    },
+    {
+      "query": "청결하고 감성적인 분위기가 있는 카페를 추천해 주세요. 그런 곳을 찾고 있습니다.",
+      "answer": "감성",
+      "pred": "감성",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7777
+    },
+    {
+      "query": "오늘 좀 깔끔한데서 커피 마시고 싶은데, 청결한 카페 어디 있을까?",
+      "answer": "청결",
+      "pred": "청결",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5853
+    },
+    {
+      "query": "깨끗하고 쾌적한 환경을 가진 카페를 추천해 주세요. 청결이 중요한데 그런 곳이 있을까요?",
+      "answer": "청결",
+      "pred": "청결",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6972
+    },
+    {
+      "query": "인스타 핫플처럼 요즘 뜨는 카페 소개 좀~ 사진 찍기 좋은 데!",
+      "answer": "핫플",
+      "pred": "핫플",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6799
+    },
+    {
+      "query": "최근 인스타그래머블하고 핫한 카페를 추천해 주세요. 그런 곳을 찾고 싶어요.",
+      "answer": "핫플",
+      "pred": "핫플",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4884
+    },
+    {
+      "query": "\"오늘 감성샷 찍고 싶은데, 인테리어 예쁜 카페 없을까? 🌸\"",
+      "answer": "사진",
+      "pred": "인테리어",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.8051
+    },
+    {
+      "query": "\"사진 찍기에 좋은 아름다운 인테리어가 있는 카페를 추천해 주세요.\"",
+      "answer": "사진",
+      "pred": "사진",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8444
+    },
+    {
+      "query": "\"독서하기 좋은, 조용한 카페 어딘지 아는 사람? ㅠㅠ\"",
+      "answer": "독서",
+      "pred": "독서",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5634
+    },
+    {
+      "query": "\"책 읽기에 집중할 수 있는 조용한 카페를 추천해 주세요.\"",
+      "answer": "독서",
+      "pred": "독서",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6909
+    },
+    {
+      "query": "\"아침에 차 한잔 하며 힐링할 수 있는 곳 알려줘~\"",
+      "answer": "아침차",
+      "pred": "아침차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5627
+    },
+    {
+      "query": "\"아침 시간에 여유롭게 차를 즐길 수 있는 카페가 있을까요?\"",
+      "answer": "아침차",
+      "pred": "아침차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4629
+    },
+    {
+      "query": "\"아침인데, 상쾌하게 시작할 수 있는 카페 있어? 😊\"",
+      "answer": "아침",
+      "pred": "아침",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7169
+    },
+    {
+      "query": "\"아침에 산뜻한 분위기의 카페 추천해 주실 수 있나요?\"",
+      "answer": "아침",
+      "pred": "아침",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6357
+    },
+    {
+      "query": "\"완전 아늑한 카페서 커피 마시고 내일 아무생각 없이 싶다~~\"",
+      "answer": "아늑함",
+      "pred": "아늑함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6014
+    },
+    {
+      "query": "\"편안하고 아늑한 분위기를 갖춘 카페를 추천해 주세요.\"",
+      "answer": "아늑함",
+      "pred": "아늑함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.713
+    },
+    {
+      "query": "오늘 기분전환하고 싶은데~ 편히 쉴 카페 추천 좀! 😊",
+      "answer": "none",
+      "pred": "여유",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.4766
+    },
+    {
+      "query": "편안하고 차분한 분위기에서 휴식을 취할 수 있는 카페 추천해 주세요.",
+      "answer": "휴식",
+      "pred": "휴식",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5212
+    },
+    {
+      "query": "자연 속 힐링 카페 어디가 좋을까? 요즘 필요해~ 🍃",
+      "answer": "힐링",
+      "pred": "힐링",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5201
+    },
+    {
+      "query": "숲속에서 편안한 힐링 시간을 보낼 수 있는 카페가 있을까요?",
+      "answer": "힐링",
+      "pred": "숲속산장",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.72
+    },
+    {
+      "query": "산장 느낌 물씬 나는 카페 알고 싶어! 요즘 감성이야~ 🌲",
+      "answer": "산장분위기",
+      "pred": "산장분위기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6427
+    },
+    {
+      "query": "아늑하고 감성적인 산장분위기의 카페 한 군데 추천해 주세요.",
+      "answer": "산장분위기",
+      "pred": "산장분위기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7462
+    },
+    {
+      "query": "채광 좋은 카페에서 커피 마시고 싶다! 어디가 좋을까? ☀️",
+      "answer": "채광",
+      "pred": "채광",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7802
+    },
+    {
+      "query": "밝고 화사한 분위기로 햇살이 잘 들어오는 카페를 추천해 주세요.",
+      "answer": "채광",
+      "pred": "채광",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8126
+    },
+    {
+      "query": "독특한 컨셉 카페에서 사진 찍고 싶어! 어디가 좋을까? 📸",
+      "answer": "컨셉",
+      "pred": "컨셉",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6242
+    },
+    {
+      "query": "특별한 분위기와 감각적인 인테리어를 가진 카페 추천해 주세요.",
+      "answer": "컨셉",
+      "pred": "인테리어",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.6114
+    },
+    {
+      "query": "요새 뷰가 끝내주는 카페 어디 없나욤? 힐링 좀 하고파요~",
+      "answer": "뷰맛집",
+      "pred": "뷰맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9293
+    },
+    {
+      "query": "아름다운 도시 전경을 감상할 수 있는 멋진 뷰가 있는 카페 추천해 주세요.",
+      "answer": "뷰맛집",
+      "pred": "뷰맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4897
+    },
+    {
+      "query": "오늘 자연과 함께 여유 즐길 수 있는 조경 좋은 카페 어디야?",
+      "answer": "조경",
+      "pred": "조경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7966
+    },
+    {
+      "query": "조경이 잘 되어 있는 분위기 좋은 카페가 근처에 있을까요?",
+      "answer": "조경",
+      "pred": "조경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6783
+    },
+    {
+      "query": "요즘 더워서 시원한 느낌 드는 카페 갈만한데? 바람 많이 부는 곳!",
+      "answer": "시원함",
+      "pred": "시원함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5316
+    },
+    {
+      "query": "개방감 있는 시원한 바람을 느낄 수 있는 카페가 있으면 추천해 주세요.",
+      "answer": "시원함",
+      "pred": "시원함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6463
+    },
+    {
+      "query": "비밀 다락방 같은 카페 추천 좀! 조용히 쉴만한 곳 필요해ㅠㅠ",
+      "answer": "다락방",
+      "pred": "다락방",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.465
+    },
+    {
+      "query": "다락방처럼 아늑한 분위기를 느낄 수 있는 카페가 있을까요?",
+      "answer": "다락방",
+      "pred": "다락방",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0639
+    },
+    {
+      "query": "요즘 오두막 스타일 카페 유행인 듯? 어디로 가야 해?",
+      "answer": "오두막",
+      "pred": "오두막",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7731
+    },
+    {
+      "query": "따뜻하고 아늑한 오두막 분위기의 카페 추천해 주세요.",
+      "answer": "오두막",
+      "pred": "오두막",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8307
+    },
+    {
+      "query": "친구랑 기분전환할 수 있는 분위기 좋고 맛있는 카페 없을까? 🍰",
+      "answer": "맛집",
+      "pred": "맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5433
+    },
+    {
+      "query": "분위기가 좋고 음식 맛이 뛰어난 카페를 추천해 주세요.",
+      "answer": "맛집",
+      "pred": "맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6877
+    },
+    {
+      "query": "요즘 핫한 맛집 어디 있어요?",
+      "answer": "맛집",
+      "pred": "맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6042
+    },
+    {
+      "query": "감성적인 인테리어가 멋진 카페 추천 좀~ 🙌",
+      "answer": "인테리어",
+      "pred": "인테리어",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7455
+    },
+    {
+      "query": "내부 인테리어가 특별한 카페를 추천해 주실 수 있을까요?",
+      "answer": "인테리어",
+      "pred": "인테리어",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9208
+    },
+    {
+      "query": "인테리어 멋진 카페, 어디 갈까 고민 중이야~",
+      "answer": "인테리어",
+      "pred": "인테리어",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5581
+    },
+    {
+      "query": "CCM 음악 들리는 카페 어디가 좋지? 🎶",
+      "answer": "CCM카페",
+      "pred": "CCM카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9639
+    },
+    {
+      "query": "CCM 음악과 감성적인 인테리어가 있는 카페 추천 부탁드립니다.",
+      "answer": "CCM카페",
+      "pred": "CCM카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7958
+    },
+    {
+      "query": "조용한 CCM 카페 추천해줘~",
+      "answer": "CCM카페",
+      "pred": "CCM카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8109
+    },
+    {
+      "query": "식기류 잘 갖춰진 카페 아나?",
+      "answer": "식기류",
+      "pred": "식기류",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6474
+    },
+    {
+      "query": "식기류가 잘 마련된 쾌적한 카페를 소개해 주세요.",
+      "answer": "식기류",
+      "pred": "식기류",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8706
+    },
+    {
+      "query": "접시랑 컵 같은 거 잘 갖춰진 곳 어디야?",
+      "answer": "식기류",
+      "pred": "식기류",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4673
+    },
+    {
+      "query": "식물카페에서 힐링할 수 있는 곳 어디야? 🌿",
+      "answer": "식물카페",
+      "pred": "식물카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7296
+    },
+    {
+      "query": "식물로 꾸며져 자연 친화적인 분위기의 카페를 추천해 주세요.",
+      "answer": "식물카페",
+      "pred": "식물카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5539
+    },
+    {
+      "query": "식물 많은 카페 없을까? 힐링 필요해ㅠㅠ",
+      "answer": "식물카페",
+      "pred": "식물카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.726
+    },
+    {
+      "query": "아아 테이크아웃 하려고 하는데 손에 들고 다니기 편한 트레이 잘 돼있는 카페 있을까?",
+      "answer": "포장",
+      "pred": "포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8676
+    },
+    {
+      "query": "들고 다니기 좋은 음료 트레이를 제공하는 테이크아웃 카페 추천해 주세요.",
+      "answer": "포장",
+      "pred": "포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8241
+    },
+    {
+      "query": "카공하기 좋은 조용한 카페? 칸막이 있는 곳으로!",
+      "answer": "칸막이",
+      "pred": "칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6832
+    },
+    {
+      "query": "사적인 공간을 제공하는 칸막이가 잘 설치된 카페를 추천해 주세요.",
+      "answer": "칸막이",
+      "pred": "칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4868
+    },
+    {
+      "query": "오늘 기분전환하고 싶은데 칸막이로 나뉜 편안한 카페 어디 있나?",
+      "answer": "편안함",
+      "pred": "칸막이",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.7057
+    },
+    {
+      "query": "프라이빗한 무드를 지원하는 칸막이 좌석이 있는 카페를 추천해 주세요.",
+      "answer": "편안함",
+      "pred": "편안함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7953
+    },
+    {
+      "query": "여유 있게 흡연실 있는 카페 알려줘 ㅠㅠ",
+      "answer": "흡연실",
+      "pred": "흡연실",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7954
+    },
+    {
+      "query": "쾌적한 흡연실을 갖춘 카페 추천해 주실 수 있나요?",
+      "answer": "흡연실",
+      "pred": "흡연실",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7605
+    },
+    {
+      "query": "좌식 카페 알아? 신발 벗고 편하게!",
+      "answer": "좌식",
+      "pred": "좌식",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8848
+    },
+    {
+      "query": "신발을 벗고 편하게 앉을 수 있는 좌식 공간이 마련된 카페를 추천해 주세요.",
+      "answer": "좌식",
+      "pred": "좌식",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5093
+    },
+    {
+      "query": "오늘 기분전환하고 싶은데 에스프레소 바 좋은 카페 있음? ㅠㅠ",
+      "answer": "에스프레소",
+      "pred": "에스프레소",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5996
+    },
+    {
+      "query": "에스프레소 바가 잘 갖춰진 카페를 추천해 주실 수 있을까요?",
+      "answer": "에스프레소",
+      "pred": "에스프레소",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5376
+    },
+    {
+      "query": "여러 층 있어서 새로운 경험할 수 있는 카페 어디야? ㅎㅎ",
+      "answer": "층수",
+      "pred": "층수",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5317
+    },
+    {
+      "query": "각 층마다 다른 매력을 느낄 수 있는 카페 추천해 주세요.",
+      "answer": "층수",
+      "pred": "층수",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.1166
+    },
+    {
+      "query": "주말에 애들이랑 놀고 싶은데 놀이터 있는 카페 없어?",
+      "answer": "아이동반",
+      "pred": "아이동반",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9368
+    },
+    {
+      "query": "아이들이 안전하게 놀 수 있는 공간이 있는 카페를 추천해 주시겠어요?",
+      "answer": "아이동반",
+      "pred": "아이동반",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4896
+    },
+    {
+      "query": "요즘 일 많은데 노트북 들고 작업하기 좋은 카페 어디야?",
+      "answer": "작업",
+      "pred": "작업",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.82
+    },
+    {
+      "query": "노트북 작업하기에 편리한 시설이 갖춰진 카페 추천 부탁드립니다.",
+      "answer": "작업",
+      "pred": "작업",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7613
+    },
+    {
+      "query": "친구랑 차 마실 건데, 예쁜 티포트 있는 카페 추천 좀~",
+      "answer": "티포트",
+      "pred": "티포트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5533
+    },
+    {
+      "query": "감성적인 분위기에서 티포트를 이용할 수 있는 카페를 추천해 주실 수 있나요?",
+      "answer": "티포트",
+      "pred": "티포트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6553
+    },
+    {
+      "query": "오늘 게임카페 갈까 하는데, 편하게 앉아서 놀 수 있는 곳 어디 좋아?",
+      "answer": "게임카페",
+      "pred": "편안함+게임",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.5161
+    },
+    {
+      "query": "친구들과 다녀오기 좋은 게임카페 추천해 주세요. 시설이 잘 갖춰진 곳이면 좋겠습니다.",
+      "answer": "게임카페",
+      "pred": "게임카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7871
+    },
+    {
+      "query": "오늘 공부해야 하는데, 조용한 독서실 카페 있을까?",
+      "answer": "독서실",
+      "pred": "독서실",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8929
+    },
+    {
+      "query": "독서실 좌석이 잘 마련된 차분한 분위기의 카페 추천해 주세요.",
+      "answer": "독서실",
+      "pred": "독서실",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6161
+    },
+    {
+      "query": "충전할 곳 급하다 ㅠㅠ 콘센트 많은 카페 어디야?",
+      "answer": "콘센트",
+      "pred": "콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7717
+    },
+    {
+      "query": "콘센트가 충분히 준비된 카페 추천해 주세요. 충전하기 편리한 곳으로 부탁드립니다.",
+      "answer": "콘센트",
+      "pred": "콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9834
+    },
+    {
+      "query": "소파에서 여유롭게 쉬고 싶어~ 좋은 카페 어디야?",
+      "answer": "소파",
+      "pred": "소파",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7356
+    },
+    {
+      "query": "소파 좌석이 넉넉하고 분위기 좋은 카페 추천해 주세요.",
+      "answer": "소파",
+      "pred": "소파",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5542
+    },
+    {
+      "query": "대기하면서 편하게 있을 수 있는 카페 알아?",
+      "answer": "대기좌석",
+      "pred": "대기좌석",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5738
+    },
+    {
+      "query": "대기 좌석이 쾌적하게 마련된 카페 추천해 주세요. 여유로운 공간이면 좋겠습니다.",
+      "answer": "대기좌석",
+      "pred": "대기좌석",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.513
+    },
+    {
+      "query": "오늘 친구랑 갈만한 쾌적한 카페 없을까? 분위기 좋은 데로~",
+      "answer": "친구",
+      "pred": "친구",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.735
+    },
+    {
+      "query": "친구와 함께 대화하기에 좋은 분위기 있는 카페 추천해 주세요.",
+      "answer": "친구",
+      "pred": "친구",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5032
+    },
+    {
+      "query": "조용히 얘기 나누기 좋은 카페 어디 있냐? ㅠㅠ",
+      "answer": "대화",
+      "pred": "대화",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8866
+    },
+    {
+      "query": "대화를 편하게 나눌 수 있는 한적한 카페 추천 부탁드립니다.",
+      "answer": "대화",
+      "pred": "대화",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6034
+    },
+    {
+      "query": "넉넉한 테이블 있는 카페 어디야? 아님 자리 좁아서 불편해~",
+      "answer": "넉넉한테이블",
+      "pred": "넉넉한테이블",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.744
+    },
+    {
+      "query": "테이블이 넓고 앉기에 편안한 카페가 있을까요? 추천해주세요.",
+      "answer": "넉넉한테이블",
+      "pred": "넉넉한테이블",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6323
+    },
+    {
+      "query": "오랜 시간 편히 있을 카페 추천 좀~ 요새 피곤한데ㅎㅎ",
+      "answer": "시간보내기",
+      "pred": "시간보내기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5201
+    },
+    {
+      "query": "여유롭게 시간 보낼 수 있는 조용한 카페가 있을지요? 알려주세요.",
+      "answer": "시간보내기",
+      "pred": "시간보내기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6839
+    },
+    {
+      "query": "모임하기 좋은 카페 어디 없나? 애들 다 같이 갈 건데!",
+      "answer": "모임",
+      "pred": "모임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8354
+    },
+    {
+      "query": "친구들과 함께 모임하기에 편안하고 공간이 잘 갖춰진 카페를 추천해 주실 수 있을까요?",
+      "answer": "모임",
+      "pred": "모임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7506
+    },
+    {
+      "query": "오늘 데이트 가는데 분위기 좋은 카페 어디야? 사진도 잘 나와야 하는데~",
+      "answer": "데이트",
+      "pred": "데이트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5942
+    },
+    {
+      "query": "낭만적인 분위기에서 사진 찍기에도 좋은 데이트용 카페 추천해 주세요.",
+      "answer": "데이트",
+      "pred": "데이트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6668
+    },
+    {
+      "query": "출근길에 잠깐 들를 만한 카페 어디? 아침에 가고 싶어~",
+      "answer": "출근길",
+      "pred": "출근길",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7936
+    },
+    {
+      "query": "출근할 때 편안하게 잠시 머물 수 있는 카페가 있을까요? 추천 부탁드립니다.",
+      "answer": "출근길",
+      "pred": "출근길",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5492
+    },
+    {
+      "query": "아침에 직장인이 가기 좋은 조용한 카페 있음? 출근 전 잠깐 가려구.",
+      "answer": "직장인",
+      "pred": "아침식사+조용함",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.8186
+    },
+    {
+      "query": "직장인이 출근 시간에 이용하기 편안한 카페 추천해 주세요.",
+      "answer": "직장인",
+      "pred": "직장인",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4858
+    },
+    {
+      "query": "24시간 카페 중에 분위기 괜찮은 곳 있어? 밤에도 갈 수 있는 데로!",
+      "answer": "24시간",
+      "pred": "24시간",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5773
+    },
+    {
+      "query": "언제든 방문할 수 있는 편안한 24시간 카페가 있을까요? 추천 부탁드립니다.",
+      "answer": "24시간",
+      "pred": "24시간",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.96
+    },
+    {
+      "query": "학교 근처에서 편하게 있을 수 있는 카페 좀 알려줘! 과제하기 좋은 곳~",
+      "answer": "학생",
+      "pred": "작업",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.8498
+    },
+    {
+      "query": "학생이 학교 주변에서 편안하게 대화할 수 있는 카페 추천해 주세요.",
+      "answer": "학생",
+      "pred": "대화",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.8193
+    },
+    {
+      "query": "오늘 도서관 대신 커피샵? 조용한데 어디 없을까~",
+      "answer": "공부",
+      "pred": "조용함",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.8218
+    },
+    {
+      "query": "학교 근처에서 집중하기 좋은 조용한 카페 추천해 주세요.",
+      "answer": "공부",
+      "pred": "공부",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5936
+    },
+    {
+      "query": "대중교통 편한 곳에 있는 카페 어디야? 가기 편한데!",
+      "answer": "교통편",
+      "pred": "교통편",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5161
+    },
+    {
+      "query": "출퇴근길에 들르기 좋은 교통편리한 카페가 있을까요?",
+      "answer": "교통편",
+      "pred": "교통편",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5841
+    },
+    {
+      "query": "한강 따라 산책하다가 잠시 쉴 카페 알려주라~ 힐링 spot!",
+      "answer": "산책",
+      "pred": "산책",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6471
+    },
+    {
+      "query": "산책 중에 들르기 좋은 자연과 어우러진 분위기 좋은 카페 추천해 주세요.",
+      "answer": "산책",
+      "pred": "산책",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7239
+    },
+    {
+      "query": "집근처 편히 갈 수 있는 카페 어디 없나요? 요즘 날씨 좋잖아~",
+      "answer": "집근처",
+      "pred": "집근처",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7909
+    },
+    {
+      "query": "우리 집 근처에서 아늑하고 힐링할 수 있는 카페 추천해 주세요.",
+      "answer": "집근처",
+      "pred": "집근처",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8061
+    },
+    {
+      "query": "집 주변 인기 짱인 카페 없어? 자주 가고 싶어ㅎㅎ",
+      "answer": "인기",
+      "pred": "단골",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.6642
+    },
+    {
+      "query": "내 집 주변에서 사람들이 많이 찾는 인기 있는 카페 추천 부탁드립니다.",
+      "answer": "인기",
+      "pred": "인기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7317
+    },
+    {
+      "query": "브런치 괜찮은데 어디 없을까? 감성적이면 더 좋고!",
+      "answer": "브런치",
+      "pred": "브런치+감성",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.5245
+    },
+    {
+      "query": "브런치를 즐기기에 적합한 카페를 추천해 주세요. 여유롭게 시간을 보낼 수 있는 곳이면 좋겠습니다.",
+      "answer": "브런치",
+      "pred": "브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9884
+    },
+    {
+      "query": "달다구리 먹고 싶움~ 디저트 좋은 곳!",
+      "answer": "디저트",
+      "pred": "디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7472
+    },
+    {
+      "query": "사진도 찍고 달콤한 디저트도 맛볼 수 있는 카페가 있을까요? 이왕이면 분위기 좋은 곳으로 추천 부탁드립니다.",
+      "answer": "디저트",
+      "pred": "디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.648
+    },
+    {
+      "query": "그림 그릴 수 있는 조용한 카페 아는 곳?",
+      "answer": "그림그리기",
+      "pred": "그림그리기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7796
+    },
+    {
+      "query": "그림 그리기에 적합한 넓고 편안한 카페 추천해 주세요. 작업하기 좋은 곳이면 좋겠습니다.",
+      "answer": "그림그리기",
+      "pred": "그림그리기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8143
+    },
+    {
+      "query": "원데이클래스 할만한 카페 있어?",
+      "answer": "원데이클래스",
+      "pred": "원데이클래스",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7373
+    },
+    {
+      "query": "원데이클래스를 진행하기에 적합한 카페를 추천해 주시겠어요? 쾌적한 공간이 주요 포인트입니다.",
+      "answer": "원데이클래스",
+      "pred": "원데이클래스",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5734
+    },
+    {
+      "query": "인스타 감성 사진 찍기 좋은데 없어? 소품 예쁜 곳!",
+      "answer": "사진찍기",
+      "pred": "사진찍기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9336
+    },
+    {
+      "query": "사진 촬영하기에 최고인 카페를 추천해 주세요. 감성적이고 인테리어가 독특한 곳이면 좋겠습니다.",
+      "answer": "사진찍기",
+      "pred": "사진찍기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9591
+    },
+    {
+      "query": "오늘 기분전환하고 싶은데, 티타임 즐기기 좋은 카페 있을까?",
+      "answer": "티타임",
+      "pred": "티타임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4697
+    },
+    {
+      "query": "편안한 분위기에서 차분하게 티타임을 즐길 수 있는 카페 추천해 주세요.",
+      "answer": "티타임",
+      "pred": "티타임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6039
+    },
+    {
+      "query": "주말에 힐링할 카페~ 어디 추천?",
+      "answer": "주말",
+      "pred": "주말",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5504
+    },
+    {
+      "query": "주말에 방문하기 좋은 힐링과 여유를 즐길 수 있는 카페가 있을까요?",
+      "answer": "주말",
+      "pred": "주말",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4776
+    },
+    {
+      "query": "점심에 가기 좋은 카페 추천 좀!",
+      "answer": "점심",
+      "pred": "점심",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5354
+    },
+    {
+      "query": "점심 시간에 편안하게 식사할 수 있는 카페 추천해 주세요.",
+      "answer": "점심",
+      "pred": "점심",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7935
+    },
+    {
+      "query": "반지 만들기 체험할 만한 곳 알아?",
+      "answer": "반지공방",
+      "pred": "반지공방",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5827
+    },
+    {
+      "query": "반지 만들 수 있는 공방형 카페 추천해 주세요.",
+      "answer": "반지공방",
+      "pred": "반지공방",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5159
+    },
+    {
+      "query": "비올 때 비멍하기 좋은 카페?",
+      "answer": "비멍",
+      "pred": "비멍",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.745
+    },
+    {
+      "query": "비 오는 날 차분하게 비멍을 즐길 수 있는 카페 추천해 주세요.",
+      "answer": "비멍",
+      "pred": "비멍",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8212
+    },
+    {
+      "query": "대화하고 놀기 좋은 사람 많은 카페 어디야? ㅎㅎ",
+      "answer": "사람많음",
+      "pred": "사람많음",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5305
+    },
+    {
+      "query": "사람이 많고 활기차게 즐길 수 있는 카페를 알려주세요.",
+      "answer": "사람많음",
+      "pred": "사람많음",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7214
+    },
+    {
+      "query": "오늘 모임 있어서 떠들썩한 분위기 카페 찾고 있어. 추천 좀?",
+      "answer": "사람많음",
+      "pred": "모임",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.7969
+    },
+    {
+      "query": "친구한테 줄 선물로 좋은 카페 음료 뭐가 있을까? ☕️",
+      "answer": "선물",
+      "pred": "선물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7558
+    },
+    {
+      "query": "선물용으로 인기가 많은 카페를 추천해 주실 수 있나요?",
+      "answer": "선물",
+      "pred": "선물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6532
+    },
+    {
+      "query": "선물할 커피 사기 좋은 데 어디야? ㅠㅠ",
+      "answer": "선물",
+      "pred": "선물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6494
+    },
+    {
+      "query": "혼자서 가기 편한 조용한 카페 어디 있어?",
+      "answer": "혼자",
+      "pred": "혼자",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7524
+    },
+    {
+      "query": "혼자 힐링하기 좋은 아늑한 카페를 추천해 주세요.",
+      "answer": "혼자",
+      "pred": "혼자",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4715
+    },
+    {
+      "query": "오늘 혼자 책 읽을 조용한 곳 찾고 있는데 추천 좀 해줘~",
+      "answer": "혼자",
+      "pred": "독서",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.4914
+    },
+    {
+      "query": "주차 편한 카페 어디 추천해줘~",
+      "answer": "주차",
+      "pred": "주차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5351
+    },
+    {
+      "query": "주차장이 잘 되어 있는 카페를 소개해 주시면 좋겠습니다.",
+      "answer": "주차",
+      "pred": "주차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.601
+    },
+    {
+      "query": "주차 고민 없는 카페 있나? 차 타고 가거든.",
+      "answer": "주차",
+      "pred": "주차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4674
+    },
+    {
+      "query": "반려견 데리고 갈 수 있는 카페 있을까?",
+      "answer": "반려동물",
+      "pred": "반려동물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5256
+    },
+    {
+      "query": "반려동물과 함께 갈 수 있는 카페를 추천해 주세요.",
+      "answer": "반려동물",
+      "pred": "반려동물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6595
+    },
+    {
+      "query": "강아지랑 갈 수 있는 힐링 카페 찾는 중이야~",
+      "answer": "반려동물",
+      "pred": "반려동물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9171
+    },
+    {
+      "query": "아침에 가서 조용히 커피 마시기 좋은 카페 어디 있나요? ㅠㅠ",
+      "answer": "아침식사",
+      "pred": "조용함",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.5453
+    },
+    {
+      "query": "아침 시간에 방문하여 여유롭게 식사와 커피를 즐길 수 있는 카페 추천해 주세요.",
+      "answer": "아침식사",
+      "pred": "아침식사",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.776
+    },
+    {
+      "query": "커피 온도 내 맘대로 바꿀 수 있는 곳 있음? 아침 첫 잔 중요해서~",
+      "answer": "온도조절",
+      "pred": "온도조절",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5306
+    },
+    {
+      "query": "개인의 취향에 맞게 커피 음료의 온도를 조절할 수 있는 카페가 있을까요?",
+      "answer": "온도조절",
+      "pred": "온도조절",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7055
+    },
+    {
+      "query": "친구들이랑 조용히 얘기할 수 있는 비밀스러운 카페 추천 좀!",
+      "answer": "아지트",
+      "pred": "아지트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6584
+    },
+    {
+      "query": "조용하고 아늑한 분위기의 은신처 같은 카페를 추천해 주실 수 있을까요?",
+      "answer": "아지트",
+      "pred": "아지트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6153
+    },
+    {
+      "query": "가족이랑 갈만한 카페 좀 알려주라~ 아이들도 좋아하는 곳으로!",
+      "answer": "가족",
+      "pred": "아이동반",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.7203
+    },
+    {
+      "query": "가족 단위로 방문하기 좋은, 여유로운 분위기의 카페 추천해 주세요.",
+      "answer": "가족",
+      "pred": "가족",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.562
+    },
+    {
+      "query": "자주 가도 질리지 않는 편안한 카페 좀 추천해줘~",
+      "answer": "단골",
+      "pred": "단골",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8164
+    },
+    {
+      "query": "단골로 삼기 좋은 분위기와 시설이 잘 갖춰진 카페를 추천해 주실 수 있나요?",
+      "answer": "단골",
+      "pred": "단골",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.587
+    },
+    {
+      "query": "오늘 기분전환하고 싶은데~ 화사한 카페 추천 좀!",
+      "answer": "화사함",
+      "pred": "화사함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7761
+    },
+    {
+      "query": "밝고 산뜻한 분위기의 화사한 카페 어디 있나요? 추천 부탁드려요.",
+      "answer": "화사함",
+      "pred": "화사함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6075
+    },
+    {
+      "query": "요즘 조용한 카페에서 일하고 싶어ㅠㅠ 좀 추천해줘.",
+      "answer": "조용함",
+      "pred": "조용함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7658
+    },
+    {
+      "query": "시끄럽지 않은 조용한 카페를 추천해 주실 수 있나요?",
+      "answer": "조용함",
+      "pred": "조용함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7275
+    },
+    {
+      "query": "나 가성비 좋은 카페 찾고 있는데! 좀 도와줘~",
+      "answer": "가성비",
+      "pred": "가성비",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8683
+    },
+    {
+      "query": "합리적 가격으로 만족할 수 있는 카페가 있을까요? 추천 부탁드립니다.",
+      "answer": "가성비",
+      "pred": "가성비",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7799
+    },
+    {
+      "query": "숲속에 있는 힐링 카페 추천 좀~ 산장 스타일!",
+      "answer": "숲속산장",
+      "pred": "숲속산장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5292
+    },
+    {
+      "query": "숲속에 위치한 조용한 산장형 카페를 추천해 주실 수 있을까요?",
+      "answer": "숲속산장",
+      "pred": "숲속산장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0199
+    },
+    {
+      "query": "건물 분위기 쩌는 카페 알려줘! 공간감 좋은 데로~",
+      "answer": "건물분위기",
+      "pred": "개방감",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.5631
+    },
+    {
+      "query": "건물 인테리어와 분위기가 멋진 카페를 추천해 주시겠어요?",
+      "answer": "건물분위기",
+      "pred": "건물분위기",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5894
+    },
+    {
+      "query": "요즘 카공족인데 와이파이 빠른 카페 있음? ㅠㅠ",
+      "answer": "와이파이",
+      "pred": "와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7085
+    },
+    {
+      "query": "와이파이 잘 터지는 카페 어디 있을까요? 인터넷 사용하기 좋은 곳 추천해 주세요.",
+      "answer": "와이파이",
+      "pred": "와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7018
+    },
+    {
+      "query": "빨래하는 동안 쉴 수 있는 카페 어디야?",
+      "answer": "빨래방카페",
+      "pred": "빨래방카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7519
+    },
+    {
+      "query": "빨래방카페 중에서 분위기 좋은 곳 추천해 주실 수 있을까요?",
+      "answer": "none",
+      "pred": "none",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7874
+    },
+    {
+      "query": "오늘 기분전환하고 싶은데 루프탑이 있는 카페 가고 싶어~",
+      "answer": "루프탑",
+      "pred": "루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5068
+    },
+    {
+      "query": "서울에서 루프탑 있는 카페를 추천해 주실 수 있을까요?",
+      "answer": "루프탑",
+      "pred": "루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5295
+    },
+    {
+      "query": "요리 배우면서 힐링할 수 있는 곳 알아?",
+      "answer": "요리체험",
+      "pred": "요리체험",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7
+    },
+    {
+      "query": "요리 체험할 수 있는 카페 추천해 주세요. 특히 대화 나누기 좋은 공간이면 좋겠어요.",
+      "answer": "요리체험",
+      "pred": "요리체험",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7881
+    },
+    {
+      "query": "매장 앞에 좌석 있는 카페 추천 좀!",
+      "answer": "매장앞좌석",
+      "pred": "매장앞좌석",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7848
+    },
+    {
+      "query": "가게 앞에서 여유롭게 앉을 수 있는 카페가 있을까요? 추천 부탁드립니다.",
+      "answer": "매장앞좌석",
+      "pred": "매장앞좌석",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4917
+    },
+    {
+      "query": "텀블러 가져갈 수 있는 그런 카페 있을까? 요새 친환경에 꽂혀서ㅠㅠ",
+      "answer": "친환경",
+      "pred": "친환경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4497
+    },
+    {
+      "query": "텀블러 사용이 가능한 친환경 카페를 추천해 주세요. 깨끗하고 쾌적한 분위기의 장소였으면 좋겠습니다.",
+      "answer": "친환경",
+      "pred": "친환경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5572
+    },
+    {
+      "query": "차 맛있는 카페 있나~? 요즘 핫한 데 어디?",
+      "answer": "차맛집",
+      "pred": "핫플",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.4861
+    },
+    {
+      "query": "차 맛이 뛰어난 카페를 추천해 주실 수 있을까요? 티타임을 즐기기에 좋은 곳이면 좋겠습니다.",
+      "answer": "차맛집",
+      "pred": "차맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.597
+    },
+    {
+      "query": "저녁에 분위기 좋은 곳 어디? 3층뷰 보구 싶어~",
+      "answer": "3층뷰",
+      "pred": "3층뷰",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6883
+    },
+    {
+      "query": "해 질 무렵의 멋진 뷰를 감상할 수 있는 카페를 추천해 주시면 감사하겠습니다. 로맨틱한 분위기를 느끼고 싶습니다.",
+      "answer": "3층뷰",
+      "pred": "3층뷰",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8122
+    },
+    {
+      "query": "피규어 많이 있는 카페 아는 데 있어? 피규어 덕후들 모임장소로 딱일 것 같아서요~",
+      "answer": "피규어",
+      "pred": "피규어",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.604
+    },
+    {
+      "query": "피규어 전시가 잘 되어 있는 카페를 추천해 주실 수 있을까요? 관련 시설이 잘 갖춰진 곳이면 좋겠습니다.",
+      "answer": "피규어",
+      "pred": "피규어",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5623
+    },
+    {
+      "query": "창가자리 좋은 카페 있어? 빛 잘 들어오면 좋겠는데~",
+      "answer": "창가자리",
+      "pred": "창가자리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8511
+    },
+    {
+      "query": "창문 쪽 자리가 편안하고 채광이 좋은 카페를 추천해 주세요. 뷰가 좋고 여유로운 분위기를 갖춘 곳이면 좋겠습니다.",
+      "answer": "창가자리",
+      "pred": "창가자리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.553
+    },
+    {
+      "query": "빵 맛있는 카페 알아? 베이커리 대박인 곳 ~ 알려줘!",
+      "answer": "베이커리",
+      "pred": "베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.1979
+    },
+    {
+      "query": "베이커리가 유명하고, 커피와 함께 즐길 수 있는 쾌적한 카페를 추천해 주세요.",
+      "answer": "베이커리",
+      "pred": "베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6277
+    },
+    {
+      "query": "학생할인 되는 카페 어디? 가성비 좋고 조용한 곳이면 완전 최고!",
+      "answer": "학생할인",
+      "pred": "학생할인",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7093
+    },
+    {
+      "query": "학생할인 혜택이 있고 공부하기에도 적합한 카페가 있을까요?",
+      "answer": "학생할인",
+      "pred": "학생할인",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5799
+    },
+    {
+      "query": "주차 편한 카페에서 공부하고 싶은데 어디가 좋아? ㅠㅠ",
+      "answer": "주차+공부",
+      "pred": "주차+공부",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4673
+    },
+    {
+      "query": "주차장이 잘 마련되어 있고, 조용히 공부할 수 있는 카페를 추천해 주세요.",
+      "answer": "주차+공부",
+      "pred": "주차+공부",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5278
+    },
+    {
+      "query": "디저트 맛있고 강아지랑 갈 수 있는 곳 있어? 함께 힐링하기 좋은 곳!",
+      "answer": "반려동물+디저트",
+      "pred": "반려동물+디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7781
+    },
+    {
+      "query": "반려동물과 함께 방문할 수 있으며, 디저트가 맛있는 카페를 추천해 주세요.",
+      "answer": "반려동물+디저트",
+      "pred": "반려동물+디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7692
+    },
+    {
+      "query": "루프탑에서 가족이랑 놀고 싶어~ 분위기 좋은 카페 있을까?",
+      "answer": "루프탑+가족",
+      "pred": "루프탑+가족",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.827
+    },
+    {
+      "query": "루프탑 공간이 마련되어 있고 가족과 함께 시간을 보낼 수 있는 카페 추천해 주세요.",
+      "answer": "루프탑+가족",
+      "pred": "루프탑+가족",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6055
+    },
+    {
+      "query": "작업할 카페 아나요? 브런치 맛있는 곳이면 더 좋고요~",
+      "answer": "작업+브런치",
+      "pred": "작업+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6643
+    },
+    {
+      "query": "노트북으로 일하면서 브런치도 함께 즐길 수 있는 카페를 추천해 주세요.",
+      "answer": "작업+브런치",
+      "pred": "작업+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7498
+    },
+    {
+      "query": "콘센트 잘 되는 곳 알아요? 에프프레소 맛도 좋은 데로~",
+      "answer": "콘센트+에스프레소",
+      "pred": "콘센트+에스프레소",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7613
+    },
+    {
+      "query": "에스프레소 바가 있고 콘센트 사용이 편리한 카페가 있을까요? 추천 부탁드립니다.",
+      "answer": "콘센트+에스프레소",
+      "pred": "콘센트+에스프레소",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.791
+    },
+    {
+      "query": "친환경 디자인에 좌식 가능한 카페 없어? 요즘 찾기 힘들어ㅠㅠ",
+      "answer": "좌식+친환경",
+      "pred": "좌식+친환경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6078
+    },
+    {
+      "query": "좌식 공간이 마련되어 있고 친환경적인 분위기를 가진 카페를 추천해 주세요.",
+      "answer": "좌식+친환경",
+      "pred": "좌식+친환경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5866
+    },
+    {
+      "query": "24시간 카페 중에 빨래방 있는 곳 알아? 늦게까지 열어있어야 해~",
+      "answer": "빨래방+24시간",
+      "pred": "빨래방+24시간",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5378
+    },
+    {
+      "query": "빨래방 시설을 갖추고 있으면서 24시간 운영하는 카페가 있을까요? 추천 부탁드립니다.",
+      "answer": "빨래방+24시간",
+      "pred": "빨래방+24시간",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.833
+    },
+    {
+      "query": "베이커리 맛난 데서 포장 쉽게 되는 카페 어디? 알려줘~",
+      "answer": "포장+베이커리",
+      "pred": "포장+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6123
+    },
+    {
+      "query": "테이크아웃이 편리하고 베이커리가 맛있는 카페를 추천해 주세요.",
+      "answer": "포장+베이커리",
+      "pred": "포장+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8791
+    },
+    {
+      "query": "오늘 기분전환하고 싶은데, 뷰도 좋고 대화하기 좋은 카페 어디 없을까?",
+      "answer": "대화+뷰맛집",
+      "pred": "대화+뷰맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6189
+    },
+    {
+      "query": "경치가 아름답고 대화하기에 적합한 카페를 추천해 주세요.",
+      "answer": "대화+뷰맛집",
+      "pred": "대화+뷰맛집",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8548
+    },
+    {
+      "query": "학생 할인되면서 칸막이 있는 데 있음? 카공하기 좋은 곳으로~",
+      "answer": "학생할인+칸막이",
+      "pred": "학생할인+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7218
+    },
+    {
+      "query": "학생 할인이 가능한 칸막이 카페 있을까요? 공부하기 좋은 곳으로 부탁드립니다.",
+      "answer": "학생할인+칸막이",
+      "pred": "학생할인+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5689
+    },
+    {
+      "query": "친구들이랑 요리하면서 놀고 싶은데, 그런 카페 어디 있어?",
+      "answer": "요리체험+모임",
+      "pred": "요리체험+모임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5888
+    },
+    {
+      "query": "단체 모임에 적합하고 요리 체험도 가능한 카페를 추천해 주세요.",
+      "answer": "요리체험+모임",
+      "pred": "요리체험+모임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7171
+    },
+    {
+      "query": "게임도 하고 밥도 먹을 수 있는 카페 찾고 있어! 추천 좀ㅎㅎ",
+      "answer": "식기류+게임카페",
+      "pred": "게임카페",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.6205
+    },
+    {
+      "query": "다양한 식기류가 마련되어 있고 게임도 즐길 수 있는 카페 있을까요? 추천 부탁드립니다.",
+      "answer": "식기류+게임카페",
+      "pred": "식기류+게임카페",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5921
+    },
+    {
+      "query": "요즘 작업하기 좋은 카페 알아? 예쁜 티포트도 나오고~",
+      "answer": "티포트+작업",
+      "pred": "티포트+작업",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9149
+    },
+    {
+      "query": "예쁜 티포트가 제공되며 작업하기에 좋은 카페를 추천해 주세요.",
+      "answer": "티포트+작업",
+      "pred": "티포트+작업",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8084
+    },
+    {
+      "query": "우리 집 근처에서 아침 먹을 수 있는 카페 있을까? 아침은 꼭 먹어야 돼서!",
+      "answer": "집근처+아침식사",
+      "pred": "집근처+아침식사",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8353
+    },
+    {
+      "query": "집 주변에서 아침식사 가능한 카페 추천해 주세요. 여유롭게 시작하고 싶어요.",
+      "answer": "집근처+아침식사",
+      "pred": "집근처+아침식사",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.826
+    },
+    {
+      "query": "오늘 아침 어디서 먹지? 근처 맛있는 카페 있을까~?",
+      "answer": "집근처+아침식사",
+      "pred": "아침식사",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.71
+    },
+    {
+      "query": "산책하다가 잠시 쉬고 싶은데 소파 있는 카페 어디로 가지?",
+      "answer": "산책+소파",
+      "pred": "산책+소파",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7181
+    },
+    {
+      "query": "산책 중에 들를 만한 소파 넉넉한 카페 있으면 추천해 주세요.",
+      "answer": "산책+소파",
+      "pred": "산책+소파",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.74
+    },
+    {
+      "query": "강아지랑 산책하고 있는데, 쉴 수 있는 소파 카페 혹시 알아?",
+      "answer": "산책+소파",
+      "pred": "반려+소파",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.6505
+    },
+    {
+      "query": "피규어 전시하는 와이파이 잘 터지는 카페 없을까?",
+      "answer": "피규어+와이파이",
+      "pred": "피규어+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8447
+    },
+    {
+      "query": "피규어가 전시되어 있고 와이파이 이용이 편리한 카페 추천해 주세요.",
+      "answer": "피규어+와이파이",
+      "pred": "피규어+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7269
+    },
+    {
+      "query": "와, 피규어도 보고 싶고 와이파이 잘 돼야 하는데 그런 카페 어딨을까?",
+      "answer": "피규어+와이파이",
+      "pred": "피규어+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7992
+    },
+    {
+      "query": "브런치도 먹고 반지도 만들 수 있는 그런 카페 아는 사람~?",
+      "answer": "반지공방+브런치",
+      "pred": "반지공방+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6962
+    },
+    {
+      "query": "반지 만들고 브런치 즐길 수 있는 카페 추천해 주세요.",
+      "answer": "반지공방+브런치",
+      "pred": "반지공방+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5107
+    },
+    {
+      "query": "반지 공방 체험하고 브런치 먹기 좋은 데 있나요?",
+      "answer": "반지공방+브런치",
+      "pred": "반지공방+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.594
+    },
+    {
+      "query": "기다릴 때 앉아있을 수도 있고 음료 온도 조절도 가능하면 좋은데 어디 없나?",
+      "answer": "대기좌석+온도조절",
+      "pred": "대기좌석+온도조절",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7401
+    },
+    {
+      "query": "대기 좌석이 마련되어 있고 음료의 온도 조절이 가능한 카페 추천 부탁드립니다.",
+      "answer": "대기좌석+온도조절",
+      "pred": "대기좌석+온도조절",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6477
+    },
+    {
+      "query": "앉을 수 있는 기다리는 자리 있으면서 음료도 내 맘대로 조절할 수 있는 곳 있어?",
+      "answer": "대기좌석+온도조절",
+      "pred": "대기좌석+온도조절",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7861
+    },
+    {
+      "query": "아지트 카페에서 점심 먹고 싶어! 조용한 곳 추천 좀~",
+      "answer": "아지트+점심",
+      "pred": "아지트+점심",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9538
+    },
+    {
+      "query": "은밀한 분위기를 갖춘 아지트형 카페에서 점심 식사를 즐길 수 있는 곳을 추천해 주실 수 있나요?",
+      "answer": "아지트+점심",
+      "pred": "아지트+점심",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5271
+    },
+    {
+      "query": "오늘 친구랑 3층뷰 멋진 카페 갈까 하는데, 어디가 좋아? ㅎㅎ",
+      "answer": "3층뷰+친구",
+      "pred": "3층뷰+친구",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8467
+    },
+    {
+      "query": "3층에서 멋진 풍경을 보며 친구와 좋은 시간을 보낼 수 있는 카페를 추천해 주실 수 있을까요?",
+      "answer": "3층뷰+친구",
+      "pred": "3층뷰+친구",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.704
+    },
+    {
+      "query": "댕댕이랑 사진 찍기 좋은 카페 어디 있나? 🐶",
+      "answer": "반려동물+사진",
+      "pred": "반려동물+사진",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6954
+    },
+    {
+      "query": "반려동물과 함께 방문 가능하며 사진 찍기에 적합한 감성적인 카페를 소개해 주세요.",
+      "answer": "반려동물+사진",
+      "pred": "반려동물+사진",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6018
+    },
+    {
+      "query": "주차 편하고 브런치 맛있는 곳 어디야?~",
+      "answer": "주차+브런치",
+      "pred": "주차+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5977
+    },
+    {
+      "query": "주차장이 잘 갖춰져 있고 브런치를 즐길 수 있는 쾌적한 카페를 추천해 주세요.",
+      "answer": "주차+브런치",
+      "pred": "주차+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9787
+    },
+    {
+      "query": "자연 속에서 책 읽기 좋은 카페 어디일까? 힐링 필요해ㅠㅠ",
+      "answer": "힐링+독서",
+      "pred": "힐링+독서",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5023
+    },
+    {
+      "query": "자연 속에서 힐링하며 조용히 독서할 수 있는 카페를 추천해 주실 수 있나요?",
+      "answer": "힐링+독서",
+      "pred": "힐링+독서",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7743
+    },
+    {
+      "query": "학생들 가기 좋은 콘센트 많은 카페 어딘가요? ㅠㅠ",
+      "answer": "학생+콘센트",
+      "pred": "학생+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4913
+    },
+    {
+      "query": "학생들이 공부하기 편하고 콘센트가 많이 있는 카페 추천해 주세요.",
+      "answer": "학생+콘센트",
+      "pred": "학생+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5143
+    },
+    {
+      "query": "오늘은 프라이버시 중요~ 칸막이 있는 에스프레소 바 추천?",
+      "answer": "칸막이+에스프레소",
+      "pred": "칸막이+에스프레소",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.758
+    },
+    {
+      "query": "칸막이 공간이 잘 된 에스프레소 바 있는 카페 추천해 주실 수 있나요?",
+      "answer": "칸막이+에스프레소",
+      "pred": "칸막이+에스프레소",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7894
+    },
+    {
+      "query": "창가 자리에서 디저트 먹고 싶은 날! 어디가 좋을까? :)",
+      "answer": "창가+디저트",
+      "pred": "창가+디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6078
+    },
+    {
+      "query": "창가 자리가 편안하고 디저트가 맛있는 카페가 있을까요?",
+      "answer": "창가+디저트",
+      "pred": "창가+디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7457
+    },
+    {
+      "query": "가성비 좋은데 요리도 해볼 수 있는 카페 어디야? ㅎㅎ",
+      "answer": "가성비+요리체험",
+      "pred": "가성비+요리체험",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5748
+    },
+    {
+      "query": "요리체험을 할 수 있는 가성비 좋은 카페 추천해 주세요.",
+      "answer": "가성비+요리체험",
+      "pred": "가성비+요리체험",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.706
+    },
+    {
+      "query": "출근길에 포장 편한 카페 하나만 알려줘~",
+      "answer": "출근길+포장",
+      "pred": "출근길+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9693
+    },
+    {
+      "query": "출근길에 들르기 좋고 포장 서비스가 좋은 카페 있나요?",
+      "answer": "출근길+포장",
+      "pred": "출근길+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8333
+    },
+    {
+      "query": "흡연실 있구, 밤새 가서 커피 마실 카페 어디 없나염?",
+      "answer": "24시간+흡연실",
+      "pred": "24시간+흡연실",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7423
+    },
+    {
+      "query": "24시간 운영하면서 흡연실도 있는 카페 추천 부탁드립니다.",
+      "answer": "24시간+흡연실",
+      "pred": "24시간+흡연실",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6747
+    },
+    {
+      "query": "루프탑 뷰 죽이는 맛집 카페 아는 사람~?",
+      "answer": "맛집+루프탑",
+      "pred": "뷰맛집",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.7863
+    },
+    {
+      "query": "음식이 맛있고 루프탑 공간이 있는 카페 추천해 주세요.",
+      "answer": "맛집+루프탑",
+      "pred": "맛집+루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7025
+    },
+    {
+      "query": "와이파이 짱이고 점심 먹기 좋은 카페 있음?",
+      "answer": "점심+와이파이",
+      "pred": "점심+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7234
+    },
+    {
+      "query": "점심식사와 와이파이가 잘 되는 카페 추천 부탁드려요.",
+      "answer": "점심+와이파이",
+      "pred": "점심+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6307
+    },
+    {
+      "query": "인기 많고 테이블 넓은 곳 어디~? 자리 걱정 없는 카페 찾고 싶어!",
+      "answer": "인기+넓은테이블",
+      "pred": "인기+넓은테이블",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8406
+    },
+    {
+      "query": "사람들 많이 찾는 데, 테이블 공간도 넉넉한 카페가 있을까요? 추천 바랍니다.",
+      "answer": "인기+넓은테이블",
+      "pred": "인기+넓은테이블",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9092
+    },
+    {
+      "query": "브런치랑 같이 게임할 수 있는 곳 추천 좀~~",
+      "answer": "브런치+게임",
+      "pred": "브런치+게임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.726
+    },
+    {
+      "query": "게임도 즐길 수 있고 브런치 메뉴도 있는 카페 추천해 주세요.",
+      "answer": "브런치+게임",
+      "pred": "브런치+게임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5082
+    },
+    {
+      "query": "이번 주말에 조경 예쁜 카페 가고 싶은데 추천 좀! 🙏",
+      "answer": "주말+조경",
+      "pred": "주말+조경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8452
+    },
+    {
+      "query": "주말에 방문하기 좋은 조경이 잘 되어 있는 카페 추천해 주세요.",
+      "answer": "주말+조경",
+      "pred": "주말+조경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7133
+    },
+    {
+      "query": "요즘 티타임하면서 베이커리 먹을 카페 어디 좋을까? 🤔",
+      "answer": "티타임+베이커리",
+      "pred": "티타임+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9011
+    },
+    {
+      "query": "안녕하세요, 맛있는 베이커리를 즐길 수 있는 티타임 카페 추천해 주세요.",
+      "answer": "티타임+베이커리",
+      "pred": "티타임+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5129
+    },
+    {
+      "query": "오두막 분위기 카페에서 얘기할 곳 없어? ㅠㅠ",
+      "answer": "대화+오두막",
+      "pred": "오두막",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.5236
+    },
+    {
+      "query": "편안한 대화를 나눌 수 있고 오두막 같은 분위기가 있는 카페가 있을까요?",
+      "answer": "대화+오두막",
+      "pred": "대화+오두막",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5353
+    },
+    {
+      "query": "오늘 혼자 식물 많은 데 가고 싶어~ 추천해줘!",
+      "answer": "식물+혼자",
+      "pred": "식물+혼자",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.4079
+    },
+    {
+      "query": "혼자 시간을 보내기 좋은 식물이 많은 카페를 추천해 주세요.",
+      "answer": "식물+혼자",
+      "pred": "식물+혼자",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6323
+    },
+    {
+      "query": "출근길에 아침 차 한 잔 마실 곳 추천해줘! 🍵",
+      "answer": "출근길+아침차",
+      "pred": "출근길+아침차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8703
+    },
+    {
+      "query": "아침에 출근길에 들르기 좋은 카페가 있을까요?",
+      "answer": "출근길+아침차",
+      "pred": "출근길",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.6269
+    },
+    {
+      "query": "오늘 친구랑 뭐 배우고 놀고 싶은데, 넓은 테이블 있고 클래스 여는 카페 어디야?",
+      "answer": "넓은테이블+클래스",
+      "pred": "넓은테이블+클래스",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9483
+    },
+    {
+      "query": "넓은 테이블이 있고 원데이 클래스를 열고 있는 카페 좀 추천해 주세요.",
+      "answer": "넓은테이블+클래스",
+      "pred": "넓은테이블+클래스",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.988
+    },
+    {
+      "query": "게임하고 루프탑에서 놀고 싶은데, 그런 카페 어딨지? ㅋㅋ",
+      "answer": "게임+루프탑",
+      "pred": "게임+루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.3218
+    },
+    {
+      "query": "게임도 즐길 수 있고 루프탑이 있는 카페 있을까요? 추천 부탁드립니다.",
+      "answer": "게임+루프탑",
+      "pred": "게임+루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8818
+    },
+    {
+      "query": "반려동물 데리고 갈 수 있고 주차 쉬운 곳 아는 사람?",
+      "answer": "주차+반려",
+      "pred": "주차+반려",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9412
+    },
+    {
+      "query": "주차장이 잘 되어있고 반려동물 환영하는 카페 추천해 주세요.",
+      "answer": "주차+반려",
+      "pred": "주차+반려",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7783
+    },
+    {
+      "query": "오늘 데이트인데 베이커리 맛있는 카페 갈래! 어디가 좋을까?",
+      "answer": "데이트+베이커리",
+      "pred": "데이트+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7781
+    },
+    {
+      "query": "분위기 좋은 데이트 장소로 베이커리가 맛있는 카페 추천해 주세요.",
+      "answer": "데이트+베이커리",
+      "pred": "데이트+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6283
+    },
+    {
+      "query": "오늘 카공해야 하는데, 콘센트 많은 카페 어디야? 칸막이도 있으면 좋고!",
+      "answer": "콘센트+칸막이",
+      "pred": "콘센트+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8876
+    },
+    {
+      "query": "칸막이로 분리된 좌석과 콘센트가 잘 구비된 카페 있을까요? 추천해 주세요.",
+      "answer": "콘센트+칸막이",
+      "pred": "콘센트+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9249
+    },
+    {
+      "query": "강아지랑 산책하다가 들릴 카페 추천 좀~ 반려동물 출입 가능한 곳!",
+      "answer": "산책+반려",
+      "pred": "산책+반려",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5938
+    },
+    {
+      "query": "반려견과 함께 산책하다가 갈 수 있는 카페 추천해 주세요.",
+      "answer": "산책+반려",
+      "pred": "산책+반려",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9818
+    },
+    {
+      "query": "오늘 강아지랑 산책 나왔는데, 근처에 같이 갈 수 있는 카페 있을까요?",
+      "answer": "산책+반려",
+      "pred": "산책+반려",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7104
+    },
+    {
+      "query": "모임 장소 찾는데, 3층 뷰 좋은 카페 있을까? 단체로 가려구!",
+      "answer": "모임+3층뷰",
+      "pred": "모임+3층뷰",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7506
+    },
+    {
+      "query": "단체 모임을 하기에 적합하면서 3층에서 멋진 전망을 감상할 수 있는 카페를 추천해 주세요.",
+      "answer": "모임+3층뷰",
+      "pred": "모임+3층뷰",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5741
+    },
+    {
+      "query": "우리 모임에 3층 뷰 좋은 카페 추천해줘~ 단체 예약 가능하면!",
+      "answer": "모임+3층뷰",
+      "pred": "모임+3층뷰",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8488
+    },
+    {
+      "query": "작업할 카페 찾는 중인데, 칸막이 좌석 있는 곳 있을까? 노트북 하려구~",
+      "answer": "작업+칸막이",
+      "pred": "작업+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5764
+    },
+    {
+      "query": "노트북 작업을 하기 편리하고 칸막이로 구분된 좌석이 있는 카페 추천해 주세요.",
+      "answer": "작업+칸막이",
+      "pred": "작업+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7443
+    },
+    {
+      "query": "오늘은 작업 집중하면서 하고 싶은데, 칸막이 좌석 있는 카페 있을까요?",
+      "answer": "작업+칸막이",
+      "pred": "작업+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9006
+    },
+    {
+      "query": "가족이랑 베이커리 맛있는 카페 가고 싶은데 어디가 좋아?",
+      "answer": "가족+베이커리",
+      "pred": "가족+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9486
+    },
+    {
+      "query": "가족과 함께 방문하기 좋고 맛있는 베이커리가 있는 카페를 추천해 주세요.",
+      "answer": "가족+베이커리",
+      "pred": "가족+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5132
+    },
+    {
+      "query": "주말에 가족이랑 갈 베이커리 맛있는 카페 추천 좀 해줘~",
+      "answer": "가족+베이커리",
+      "pred": "가족+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6021
+    },
+    {
+      "query": "집 근처 반려동물 가능한 카페 알면 추천 부탁~!",
+      "answer": "집근처+반려동물",
+      "pred": "집근처+반려동물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6984
+    },
+    {
+      "query": "집 가까이에 반려동물과 함께 방문할 수 있는 카페를 추천해 주세요.",
+      "answer": "집근처+반려동물",
+      "pred": "집근처+반려동물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5901
+    },
+    {
+      "query": "다음 주 집 주변 돌아다니면서 반려동물이랑 갈 카페 찾고 있어요, 조언 부탁드려요.",
+      "answer": "집근처+반려동물",
+      "pred": "집근처+반려동물",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5362
+    },
+    {
+      "query": "\"소파 넉넉하고 와이파이 빵빵한 카페 어디야? ㅎㅎ\"",
+      "answer": "소파+와이파이",
+      "pred": "소파+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7771
+    },
+    {
+      "query": "\"소파가 넉넉하고 와이파이가 잘 되는 카페를 추천해 주세요.\"",
+      "answer": "소파+와이파이",
+      "pred": "소파+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5747
+    },
+    {
+      "query": "\"오늘 와이파이 잘 터지는 소파 카페 가고 싶어~ 추천 있음?\"",
+      "answer": "소파+와이파이",
+      "pred": "소파+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9641
+    },
+    {
+      "query": "\"힐링되는 곳에서 음료 포장하는 카페 알려줘~\"",
+      "answer": "힐링+포장",
+      "pred": "힐링+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6852
+    },
+    {
+      "query": "\"자연 속에서 힐링이 가능하고 음료 포장도 가능한 카페가 있을까요?\"",
+      "answer": "힐링+포장",
+      "pred": "힐링+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7786
+    },
+    {
+      "query": "\"힐링할 수 있으면서 포장도 되는 카페 좀 추천해 줘 ㅠㅠ\"",
+      "answer": "힐링+포장",
+      "pred": "힐링+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.939
+    },
+    {
+      "query": "\"출근길에 들릴 수 있는 와이파이 좋은 카페 없어?\"",
+      "answer": "출근+와이파이",
+      "pred": "출근+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7161
+    },
+    {
+      "query": "\"출근할 때 편하게 들를 수 있고 와이파이가 잘 되는 카페를 추천해 주시겠어요?\"",
+      "answer": "출근+와이파이",
+      "pred": "출근+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6699
+    },
+    {
+      "query": "\"출근길 카페! 와이파이 잘되는 곳 추천!\"",
+      "answer": "출근+와이파이",
+      "pred": "출근+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5611
+    },
+    {
+      "query": "\"주말에 브런치 먹기 좋은 카페 찾아줘~\"",
+      "answer": "브런치+주말",
+      "pred": "브런치+주말",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6688
+    },
+    {
+      "query": "\"주말에 브런치를 즐기기 좋은 분위기의 카페를 추천해 주세요.\"",
+      "answer": "브런치+주말",
+      "pred": "브런치+주말",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6322
+    },
+    {
+      "query": "\"브런치할 카페 좀! 주말 분위기 좋은데!\"",
+      "answer": "브런치+주말",
+      "pred": "브런치+주말",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7603
+    },
+    {
+      "query": "\"조경 예쁜데 베이커리 맛집 추천해~\"",
+      "answer": "조경+베이커리",
+      "pred": "조경+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5278
+    },
+    {
+      "query": "\"조경이 아름답고 베이커리가 맛있는 카페를 추천해 주세요.\"",
+      "answer": "조경+베이커리",
+      "pred": "조경+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7567
+    },
+    {
+      "query": "\"맛있는 베이커리랑 아름다운 조경 있는 카페 어디 있어? 알려줘!\"",
+      "answer": "조경+베이커리",
+      "pred": "조경+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.73
+    },
+    {
+      "query": "루프탑에서 아아 마시며 콘센트 쓸 수 있는 곳 있어? 🎧",
+      "answer": "루프탑+콘센트",
+      "pred": "루프탑+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6058
+    },
+    {
+      "query": "루프탑 공간이 있고 콘센트 사용이 편리한 카페를 추천해 주세요.",
+      "answer": "루프탑+콘센트",
+      "pred": "루프탑+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0555
+    },
+    {
+      "query": "나 티포트 좋아하는데, 혼자 조용히 있을 수 있는 카페 어디?",
+      "answer": "혼자+티포트",
+      "pred": "혼자+티포트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8449
+    },
+    {
+      "query": "혼자서 예쁜 티포트를 사용하며 차를 즐길 수 있는 카페가 있을까요?",
+      "answer": "혼자+티포트",
+      "pred": "혼자+티포트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.128
+    },
+    {
+      "query": "친구들이랑 베이커리 카페 갈랭~ 학생들이 가기 좋은데 추천 좀!",
+      "answer": "학생+베이커리",
+      "pred": "학생+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7783
+    },
+    {
+      "query": "학생들이 방문하기 편리하고 맛있는 베이커리가 있는 카페를 추천해 주세요.",
+      "answer": "학생+베이커리",
+      "pred": "학생+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7023
+    },
+    {
+      "query": "오늘 데이트! 조경 좋은 카페 갈까? 🌿",
+      "answer": "데이트+조경",
+      "pred": "데이트+조경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.644
+    },
+    {
+      "query": "데이트 장소로 조경이 아름다운 카페를 추천해 주실 수 있을까요?",
+      "answer": "데이트+조경",
+      "pred": "데이트+조경",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6758
+    },
+    {
+      "query": "반려동물이랑 편히 쉴 수 있는 소파 카페 있나욤? 🐶",
+      "answer": "반려+소파",
+      "pred": "반려+소파",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5055
+    },
+    {
+      "query": "반려동물과 함께 넉넉한 소파에서 쉴 수 있는 카페를 추천해 주시겠어요?",
+      "answer": "반려+소파",
+      "pred": "반려+소파",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6633
+    },
+    {
+      "query": "큰 모임 하려는데 주차 편한 카페 추천 좀! 친구들이랑 갈 건데 차가 많아서 ㅎㅎ",
+      "answer": "주차+모임",
+      "pred": "주차+모임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8176
+    },
+    {
+      "query": "단체로 모임을 계획하고 있는데, 주차장이 잘 마련된 카페를 추천해 주실 수 있을까요?",
+      "answer": "주차+모임",
+      "pred": "주차+모임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5865
+    },
+    {
+      "query": "오늘 기분전환하고 싶은데, 주차 편한 숨겨진 아지트 같은 카페 어디 없을까?",
+      "answer": "none",
+      "pred": "다락방",
+      "correct": false,
+      "in_candidates": true,
+      "latency": 0.6377
+    },
+    {
+      "query": "비밀스러운 모임을 가지기에 적합하면서 주차 시설이 잘 갖춰진 카페를 추천해 주세요.",
+      "answer": "아지트+주차",
+      "pred": "아지트+주차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6912
+    },
+    {
+      "query": "데이트할 때 반지 만들어 볼까 하는데, 괜찮은 카페 알아?",
+      "answer": "반지공방+데이트",
+      "pred": "반지공방+데이트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8396
+    },
+    {
+      "query": "반지 만들기 체험을 하면서 데이트 분위기를 느낄 수 있는 카페가 있을까요?",
+      "answer": "반지공방+데이트",
+      "pred": "반지공방+데이트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0791
+    },
+    {
+      "query": "텀블러 들고 가면 할인해주는 브런치 카페 어디야?",
+      "answer": "친환경+브런치",
+      "pred": "친환경+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.762
+    },
+    {
+      "query": "친환경을 고려하면서 브런치를 즐길 수 있는 카페를 추천해 주실 수 있나요?",
+      "answer": "친환경+브런치",
+      "pred": "친환경+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5389
+    },
+    {
+      "query": "공원 산책 후에 빵 맛있게 먹을 카페 어디 갈까?",
+      "answer": "산책+베이커리",
+      "pred": "산책+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9235
+    },
+    {
+      "query": "산책을 하다가 들르기 좋으면서 베이커리가 맛있는 카페가 있을까요?",
+      "answer": "산책+베이커리",
+      "pred": "산책+베이커리",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8159
+    },
+    {
+      "query": "원데이클래스 하면서 커피 포장도 할 수 있는 데 어디 없나?",
+      "answer": "클래스+포장",
+      "pred": "클래스+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6431
+    },
+    {
+      "query": "원데이클래스를 즐길 수 있고 테이크아웃이 편리한 카페 추천해 주세요.",
+      "answer": "클래스+포장",
+      "pred": "클래스+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7076
+    },
+    {
+      "query": "게임하면서 주차도 걱정 없는 카페 없어?",
+      "answer": "게임+주차",
+      "pred": "게임+주차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6763
+    },
+    {
+      "query": "게임도 할 수 있고 주차장이 편리한 카페가 있을까요?",
+      "answer": "게임+주차",
+      "pred": "게임+주차",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6363
+    },
+    {
+      "query": "아침 먹고 싶기도 하고 조용한 곳 찾는데 괜찮은 카페 있어?",
+      "answer": "아침식사+조용함",
+      "pred": "아침식사+조용함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9416
+    },
+    {
+      "query": "조용하게 아침을 즐길 수 있는 카페가 있을까요?",
+      "answer": "아침식사+조용함",
+      "pred": "아침식사+조용함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5609
+    },
+    {
+      "query": "CCM 들으면서 일할 수 있게 콘센트 충분한 카페?",
+      "answer": "CCM+콘센트",
+      "pred": "CCM+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0044
+    },
+    {
+      "query": "CCM을 감상할 수 있고 콘센트가 잘 마련된 카페를 추천해 주세요.",
+      "answer": "CCM+콘센트",
+      "pred": "CCM+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6294
+    },
+    {
+      "query": "소파 편한 데에 포장도 쉽게 할 수 있는 카페 있어?",
+      "answer": "소파+포장",
+      "pred": "소파+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5321
+    },
+    {
+      "query": "소파 자리 많고 포장이 편리한 카페 있으면 추천해 주세요.",
+      "answer": "소파+포장",
+      "pred": "소파+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.959
+    },
+    {
+      "query": "오늘 요리 체험도 하고 포장도 쉽게 할 수 있는 카페 찾고 있어~ 추천 좀!",
+      "answer": "요리체험+포장",
+      "pred": "요리체험+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5516
+    },
+    {
+      "query": "요리 체험을 할 수 있으며 포장이 편리한 카페를 추천해 주세요.",
+      "answer": "요리체험+포장",
+      "pred": "요리체험+포장",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9971
+    },
+    {
+      "query": "사진 잘 나오는 가성비 좋은 카페 추천 좀 ㅠㅠ 어떤 곳이 괜찮아?",
+      "answer": "가성비+사진",
+      "pred": "가성비+사진",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7076
+    },
+    {
+      "query": "가격 대비 만족도가 높고 사진 찍기 좋은 카페가 있을까요? 추천 부탁드립니다.",
+      "answer": "가성비+사진",
+      "pred": "가성비+사진",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.744
+    },
+    {
+      "query": "차 마시면서 조용히 쉬고 싶은데, 티포트 예쁜 카페 알려줘!",
+      "answer": "티포트+조용함",
+      "pred": "티포트+조용함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8201
+    },
+    {
+      "query": "조용한 분위기에서 예쁜 티포트로 차를 즐길 수 있는 카페를 추천해 주세요.",
+      "answer": "티포트+조용함",
+      "pred": "티포트+조용함",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5448
+    },
+    {
+      "query": "식물도 많고 칸막이도 잘 돼있는 카페 없을까? 오늘 완전 피곤...",
+      "answer": "식물+칸막이",
+      "pred": "식물+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7266
+    },
+    {
+      "query": "식물로 꾸며져 있고 칸막이가 잘 마련된 카페가 있을까요? 추천해 주세요.",
+      "answer": "식물+칸막이",
+      "pred": "식물+칸막이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8077
+    },
+    {
+      "query": "아지트 같은 느낌에 와이파이 빵빵한 카페 어디야? ㅎㅎ",
+      "answer": "아지트+와이파이",
+      "pred": "아지트+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0435
+    },
+    {
+      "query": "아늑한 분위기의 아지트 같으면서 와이파이 사용이 편리한 카페를 추천해 주세요.",
+      "answer": "아지트+와이파이",
+      "pred": "아지트+와이파이",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5732
+    },
+    {
+      "query": "오늘 가게 앞에서 브런치할 수 있는 곳 있을까? 야외 좌석 중요해~",
+      "answer": "매장앞+브런치",
+      "pred": "매장앞+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7365
+    },
+    {
+      "query": "매장 앞에 야외 좌석이 있는 브런치 카페 추천해 주세요.",
+      "answer": "매장앞+브런치",
+      "pred": "매장앞+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.745
+    },
+    {
+      "query": "매장 앞에서 편하게 브런치를 즐길 수 있는 카페가 어디인지 알 수 있을까요?",
+      "answer": "매장앞+브런치",
+      "pred": "매장앞+브런치",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9895
+    },
+    {
+      "query": "루프탑 있는 카페 중에 식기류 괜찮은 곳 있어? 디저트 맛집이면 더 좋고~",
+      "answer": "식기류+루프탑",
+      "pred": "식기류+루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.4997
+    },
+    {
+      "query": "루프탑 공간이 잘 되어 있고 식기류가 잘 갖춰진 카페를 추천해 주세요.",
+      "answer": "식기류+루프탑",
+      "pred": "식기류+루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.8419
+    },
+    {
+      "query": "식기류 깔끔하고 루프탑 있는 카페 어디가 좋을까요?",
+      "answer": "식기류+루프탑",
+      "pred": "식기류+루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7798
+    },
+    {
+      "query": "아침 먹으면서 콘센트 쓸 수 있는 카페 없어? 노트북 충전...",
+      "answer": "아침식사+콘센트",
+      "pred": "아침식사+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7278
+    },
+    {
+      "query": "아침식사를 제공하면서 콘센트를 사용할 수 있는 카페 있으면 추천해 주세요.",
+      "answer": "아침식사+콘센트",
+      "pred": "아침식사+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0166
+    },
+    {
+      "query": "아침을 먹을 수 있고, 콘센트가 충분한 카페 어디 있을까요?",
+      "answer": "아침식사+콘센트",
+      "pred": "아침식사+콘센트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0736
+    },
+    {
+      "query": "선물용 디저트 맛있는 카페 추천 좀! 특별한 날이야~",
+      "answer": "선물+디저트",
+      "pred": "선물+디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7342
+    },
+    {
+      "query": "선물로 적당한 달콤한 디저트가 있는 카페를 추천해 주세요.",
+      "answer": "선물+디저트",
+      "pred": "선물+디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7502
+    },
+    {
+      "query": "특별한 디저트를 맛볼 수 있으면서 선물하기 좋은 카페가 어디일까요?",
+      "answer": "선물+디저트",
+      "pred": "선물+디저트",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7337
+    },
+    {
+      "query": "게임하면서 편안하게 놀기 좋은 카페 아는 사람? 프라이빗한 곳이면 최고!",
+      "answer": "편안함+게임",
+      "pred": "편안함+게임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7101
+    },
+    {
+      "query": "편안한 분위기에서 게임을 즐길 수 있는 프라이빗 카페 추천해 주세요.",
+      "answer": "편안함+게임",
+      "pred": "편안함+게임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5569
+    },
+    {
+      "query": "프라이빗한 공간에서 편안하게 게임할 수 있는 카페가 어디 있을까요?",
+      "answer": "편안함+게임",
+      "pred": "편안함+게임",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.7556
+    },
+    {
+      "query": "서울에서 주차 편하고 루프탑 자리가 좋은 카페 알고 있어? 분위기 좋은 곳이면 좋겠어~ ㅠㅠ",
+      "answer": "주차+루프탑",
+      "pred": "주차+루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 1.0646
+    },
+    {
+      "query": "주차가 편리하게 가능한 곳 중에서 루프탑에서 힐링할 수 있는 카페 추천해 주세요.",
+      "answer": "주차+루프탑",
+      "pred": "주차+루프탑",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.5248
+    },
+    {
+      "query": "브런치하면서 감성 느낄 수 있는 카페 추천 좀! 오늘 기분전환하고 싶은데~",
+      "answer": "브런치+감성",
+      "pred": "브런치+감성",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.9238
+    },
+    {
+      "query": "감성적인 분위기에서 브런치를 즐길 수 있는 카페가 있을까요? 조용한 곳으로 추천해 주세요.",
+      "answer": "브런치+감성",
+      "pred": "브런치+감성",
+      "correct": true,
+      "in_candidates": true,
+      "latency": 0.6949
+    }
+  ],
+  "tokens": {
+    "in": 361898,
+    "out": 3361
+  },
+  "cost_usd_total": 0.15014,
+  "cost_usd_per_req": 0.000386
+}

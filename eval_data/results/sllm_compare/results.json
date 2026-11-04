@@ -1,6 +1,6 @@
 {
   "task": "sllm_compare",
-  "commit": "1d7db10785ebe5f77e90c8468b3a719c867394a9",
+  "commit": "9a00e059aeae4add3d5c936a1e4a378c74c97623",
   "data": "keyword_selection/data/test_with_candidates.jsonl (389)",
   "prompt": "keyword_selection/prompt.py SYSTEM_PROMPT + build_user_prompt",
   "summary": [
@@ -27,6 +27,18 @@
       "avg_latency_s": 0.7368,
       "cost_usd_total": 0.11378,
       "cost_usd_per_req": 0.0002925
+    },
+    {
+      "model_key": "gpt_struct",
+      "model": "gpt-4.1-mini (Structured Output, enum 강제)",
+      "n": 389,
+      "accuracy": 0.9306,
+      "none_accuracy": 0.3333,
+      "match_accuracy": 0.9352,
+      "out_of_candidates": 0,
+      "avg_latency_s": 0.724,
+      "cost_usd_total": 0.15014,
+      "cost_usd_per_req": 0.000386
     },
     {
       "model_key": "gguf",

@@ -73,6 +73,37 @@ def predictor_gpt():
     return predict, {"model": "gpt-4.1-mini", "usage": usage}
 
 
+def predictor_gpt_struct():
+    """gpt-4.1-mini + Structured Output. 문항별 후보 title + "none"을 enum으로 강제."""
+    from dotenv import load_dotenv
+    from openai import OpenAI
+    load_dotenv(ROOT / ".env")
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    usage = {"in": 0, "out": 0}
+
+    def predict(query, candidates):
+        enum_vals = list(dict.fromkeys([c["title"] for c in candidates] + ["none"]))
+        schema = {"type": "object", "additionalProperties": False,
+                  "required": ["title"],
+                  "properties": {"title": {"type": "string", "enum": enum_vals}}}
+        msgs = [{"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": build_user_prompt(query, candidates)}]
+        t = time.time()
+        r = client.chat.completions.create(
+            model="gpt-4.1-mini", messages=msgs, max_tokens=50, temperature=0,
+            response_format={"type": "json_schema", "json_schema":
+                             {"name": "rule_selection", "strict": True, "schema": schema}})
+        dt = time.time() - t
+        usage["in"] += r.usage.prompt_tokens
+        usage["out"] += r.usage.completion_tokens
+        try:
+            pred = json.loads(r.choices[0].message.content)["title"]
+        except Exception:
+            pred = (r.choices[0].message.content or "").strip()
+        return pred, dt
+    return predict, {"model": "gpt-4.1-mini (Structured Output, enum 강제)", "usage": usage}
+
+
 def predictor_gguf():
     from llama_cpp import Llama
     llm = Llama(model_path=str(GGUF), n_ctx=4096, n_threads=os.cpu_count(), verbose=False)
@@ -125,6 +156,8 @@ def run_model(model_key, limit):
     data = load_data(limit)
     if model_key == "gpt":
         predict, meta = predictor_gpt()
+    elif model_key == "gpt_struct":
+        predict, meta = predictor_gpt_struct()
     elif model_key == "gguf":
         predict, meta = predictor_gguf()
     elif model_key == "base":
@@ -168,7 +201,7 @@ def run_model(model_key, limit):
         "avg_latency_s": round(mean(times), 4), "total_latency_s": round(sum(times), 2),
         "details": details,
     }
-    if model_key == "gpt":
+    if model_key in ("gpt", "gpt_struct"):
         u = meta["usage"]
         cost = u["in"] * GPT_IN_RATE / 1e6 + u["out"] * GPT_OUT_RATE / 1e6
         res["tokens"] = u
@@ -181,9 +214,39 @@ def run_model(model_key, limit):
           + (f" cost=${res.get('cost_usd_total')}" if model_key == "gpt" else ""))
 
 
+def latency_probe(n=20):
+    """GGUF 지연의 후보 수 의존성: 후보 10개(서비스) vs 15개(평가) 각 n건 재측정."""
+    from llama_cpp import Llama
+    llm = Llama(model_path=str(GGUF), n_ctx=4096, n_threads=os.cpu_count(), verbose=False)
+    data = load_data(n)
+
+    def one(cands):
+        msgs = [{"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": build_user_prompt("질문", cands)}]
+        t = time.time()
+        llm.create_chat_completion(messages=msgs, max_tokens=MAX_NEW,
+                                   temperature=0.0, repeat_penalty=1.1)
+        return time.time() - t
+
+    # 워밍업 1회(콜드스타트 제외)
+    one(data[0]["candidates"][:10])
+    out = {}
+    for k in (10, 15):
+        ts = [one(d["candidates"][:k]) for d in data]
+        out[f"cand{k}"] = {"n": len(ts), "avg_latency_s": round(mean(ts), 4),
+                           "min": round(min(ts), 4), "max": round(max(ts), 4)}
+        print(f"  [gguf cand={k}] avg={out[f'cand{k}']['avg_latency_s']}s (n={len(ts)})", flush=True)
+    out["note"] = ("GGUF llama.cpp CPU. 후보 수(프롬프트 길이)가 지연에 미치는 영향 측정. "
+                   "서비스=10후보(TOP_K), 이번 평가=15후보. 문서 '1.9s'와 비교.")
+    out["commit"] = git_head()
+    OUTDIR.mkdir(parents=True, exist_ok=True)
+    (OUTDIR / "latency_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps({k: v for k, v in out.items() if k.startswith("cand")}, ensure_ascii=False, indent=2))
+
+
 def summarize():
     rows = []
-    for k in ("base", "gpt", "adapter", "gguf"):
+    for k in ("base", "gpt", "gpt_struct", "gguf"):
         p = OUTDIR / f"{k}.json"
         if p.exists():
             rows.append(json.loads(p.read_text(encoding="utf-8")))
@@ -201,11 +264,14 @@ def summarize():
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", choices=["gpt", "gguf", "base", "adapter"])
+    ap.add_argument("--model", choices=["gpt", "gpt_struct", "gguf", "base", "adapter"])
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--summarize", action="store_true")
+    ap.add_argument("--latency-probe", action="store_true")
     a = ap.parse_args()
     if a.summarize:
         summarize()
+    elif a.latency_probe:
+        latency_probe()
     else:
         run_model(a.model, a.limit)
